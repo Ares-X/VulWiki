@@ -56,7 +56,7 @@ IBM 已发布针对 z/OS 1.1 和 1.2 版数据虚拟化管理器的修复包，�
 中提供了有关如何下载这些修复包的说明  
 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rTibWNx9ARWnMRtw9H882WEsR9txEkK1R7yKiaVTwl836h8CfFf8prghMVVKrsQ2TfmnhfWGPEK9cj6q60QrqCpQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e521d2d54331df4b97cf137a00c19af30cea8b084cea3befc4308cdedd179426.png "")  
   
 该安全 SOAR 缺陷的编号为 CVE-2024-45801（CVSS 评分为 7.3），被描述为深度检查中的原型污染缺陷，导致通过用户界面的 DOMPurify 组件进行 RCE。  
   

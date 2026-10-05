@@ -61,7 +61,7 @@ source_status: "unknown"
   
 D-Link NAS设备是一类专门设计用于家庭和小型企业的网络存储设备。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVL22sXWZReVaj95PAsCUQ05d3XdU3CN5kXZhAwz2DjmftLBG3yia12APCtOg5gvdEtXrr0AvdKRRA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/84661184697c09c35575f532d74095c92c4128e38d8be6d5338e828543fd0ce9.png "")  
   
 **0x03 漏洞详情**  
 ###   

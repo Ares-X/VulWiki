@@ -106,14 +106,14 @@ Connection: Keep-Alive
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bgaTz1LRndYnxls3CX2euzxEgEsNG75OBL0BJ1oDddicp7AMAxDzibibAeVlVwmZ7MjphQjPXw6VHQA/640?wx_fmt=jpeg)
+![](../../.resource/remote/1e87dcd83fc9f4f5c9b43f59e6d3dfc39c68627a897022a076e64f7e1187ff1c.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号  南风漏洞复现文库 并回复  漏洞复现 45  即可获得该 POC 工具下载地址： 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bgaTz1LRndYnxls3CX2euzGcpQVAlhibgsDO2udZ0mZ71DTokswphDypvkgr6q3jewt4rBbIpnluA/640?wx_fmt=jpeg)
+![](../../.resource/remote/f03f38ff7f0107db611c0329a1f6d5e3e095bc802b2bf6e1fc9934c0349d31ef.jpg)
 
 7. 整改意见
 -------

@@ -57,7 +57,7 @@ source_status: "unknown"
 ，影响Lantronix **EDS5000**  
 系列串口转IP（Serial-to-IP）设备服务器，攻击者无需身份认证即可通过命令注入漏洞，以Root权限执行任意系统命令，从而完全控制设备。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hfjKPyxBDjoRoX21GTWBIMJibaTSj86mnsNqRyotYDclMqHY2VTtdO7qvUZbYAickHwiaicoLlhgJtrrvJIiccAtHdqOS2HcvbhIsO58YuQs94QM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d5c7cba5608d5fd534f945b7b47e7a6f6a82f9e680649669d43baa2cd682dc3b.png "")  
   
 此次事件源于Forescout Vedere Labs今年4月发布的**BRIDGE**  
 研究。研究人员共披露了**22个此前未知的安全漏洞**  

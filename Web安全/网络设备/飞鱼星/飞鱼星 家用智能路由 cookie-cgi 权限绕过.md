@@ -58,7 +58,7 @@ fofa: "title=\"飞鱼星家用智能路由\""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ARCZIR2C40KSu8SjLMYHSw)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -76,7 +76,7 @@ FOFA: title="飞鱼星家用智能路由"
 
 **登录页面如下**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4WtnXiaQtWgfvq4DhHUTibj484RcaUOxKDvlibmk1VqexnNicBUBPQliakPFJEB74IhKzFicTANOWE7DVw/640?wx_fmt=png)
+![](../../.resource/remote/5fefdc6f33185da8ae628555bd6aecca719a589dbc8264fa9895e2be9071c8a6.png)
 
 **访问 index.html 时会请求 cookie.cgi**
 
@@ -86,11 +86,11 @@ http://xxx.xxx.xxx.xxx/index.html
 
 **页面抓包 Drop 掉 cookie.cgi**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4WtnXiaQtWgfvq4DhHUTibj4prNV6Vj4RhT5r2qfSKmRPFWArUibAsNsvXiaOXr6yPdo2oWtUWT9rqtg/640?wx_fmt=png)
+![](../../.resource/remote/e34f0c07c03ab62808cdeec97cf7880022e5ef9453fccf14b94e19dbd41fef47.png)
 
 ****跳转后台获取了权限****
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4WtnXiaQtWgfvq4DhHUTibj4kOIF82AAjs8UMJfzagxxL6PA0jTyp1uXJdReyicpeQFHDxeGeePsGzg/640?wx_fmt=png)
+![](../../.resource/remote/fb95488db0775c52d64e1a3bcf7061a6f58d3dcd79a1bb8c50c66c93e89541e1.png)
 
 ```
 其中很多产品都存在请求 cookie.cgi，同样的方法可以绕过  
@@ -123,7 +123,7 @@ http://xxx.xxx.xxx.xxx/index.html
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4WtnXiaQtWgfvq4DhHUTibj4kdCIpibz3T8kWS3Tt3RJWPGnvRI4fWu3xSSMIruSyl76vbyXTWDM4icA/640?wx_fmt=png)
+![](../../.resource/remote/3f3ef8e9e90f1c35d9e35f06d6b8ffa1464c889021ef1905e886cd429333ff8a.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

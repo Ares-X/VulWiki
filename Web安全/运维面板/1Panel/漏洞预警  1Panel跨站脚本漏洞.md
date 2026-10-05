@@ -53,7 +53,7 @@ schema_version: "1"
   
 1Panel是一个开源的Linux服务器运维管理面板。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWsN6KIoRxfjrjYVaNKXichqNRia479jyefJq6qBKoduTMIaSjkIK7CoGEt5Auko2jibaEEn4iaxLicbbA/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=qrma8hlx&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/1d61624aaf077a222fcd9f9561b6fc90a09b949605ebb29f3d6dc4f8edc5922f.png "")  
   
 **0x03 漏洞详情**  
 ###   

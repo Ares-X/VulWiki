@@ -68,7 +68,7 @@ CVE-2022-23816 已由 CNA 标记为未使用并撤销。本次仅将这一编号
   
 微软在本月的补丁星期二发布延续了自2022年6月以来修复零日漏洞的趋势。3月14日的补丁星期二共修复了85个漏洞，其中9个是关键漏洞。其中两个被积极利用的零日漏洞尤其显眼，一个（CVE-2023-23397）在几乎无处不在的Outlook应用程序中，允许攻击者在窃取用户的Net-NTLMv2哈希。另一个（CVE-2023-24880）是绕过Windows SmartScreen中的另一个安全功能。在尚未被利用的关键漏洞中，还有一个影响互联网控制消息协议(ICMP)中大多数Windows操作系统的关键远程代码执行漏洞CVE-2023-23415。网络安全专家建议组织在24小时内修补上述两个已被利用的零日漏洞。   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ss7c5mF5JlSiaYjHO8oa2Ixatl4ichibkMFiawh4xLsuzLjWbOxYsPsfOFaUH9vvLP1zl7icpLribdgIAGrFUCMuak7A/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/71a822e1ad5cbe447cbb3b3181c02a5fc1ad1d4fd7932e1c5661da3ca2c1019d.png "")  
   
 微软近一年来补丁日公告和修复漏洞（最严重和被利用）的数量  
   
@@ -78,7 +78,7 @@ CVE-2022-23816 已由 CNA 标记为未使用并撤销。本次仅将这一编号
   
 编号为CVE-2023-23397的零日漏洞，是Microsoft Outlook中的严重权限提升漏洞，它允许攻击者访问受害者的Net-NTLMv2质询-响应身份验证哈希，然后冒充用户。   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ss7c5mF5JlSiaYjHO8oa2Ixatl4ichibkMFsrlU7iaiaxPNwbXn48Pq75KpHEibbwDm12SibTHJdfmT8PaiaKqe9jmPTQQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/ae3e3292b9cad1de8254424a3d094940c72a03bded5d6a80dbc6131011e4b34a.png "")  
   
 该错误之所以危险，是因为攻击者只需发送一封特制的电子邮件即可触发它，Outlook会在用户甚至在预览窗格中查看它之前检索并处理该电子邮件。  
   
@@ -94,7 +94,7 @@ Automox公司的研究人员表示，无法立即修补CVE-2023-23397的组织�
   
 第二个零日漏洞，CVE-2023-24880，这是一个Windows SmartScreen安全功能绕过问题，攻击者可以利用该问题绕过微软用来识别用户可能从Internet下载的文件的Web标记。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ss7c5mF5JlSiaYjHO8oa2Ixatl4ichibkMFMQDUy4icrtiaB5xEuR3VrvMIgLVYFJFU4iaWUbFr37CvdkjgO4Fic7arJQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f44789f6665428b265752378c83362550077a041f14e90880e088c4993ec2fb1.png "")  
   
 该功能旨在警告用户潜在的不安全内容。CVE-2023-24880影响所有运行Windows 10及更高版本的桌面系统以及运行Windows Server 2016、2019和2022的服务器系统。  
   
@@ -106,7 +106,7 @@ Ivanti安全产品副总裁Chris Goettl告诫管理员不要被微软相对较�
   
 需要特别注意的RCE漏洞之一是CVE-2023-23415，它存在于网络设备用于诊断通信问题的互联网控制消息协议(ICMP)中。   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ss7c5mF5JlSiaYjHO8oa2Ixatl4ichibkMFuUXZcSlf9IrkMZ34qp6BE4tEF4OAUkf8s3YQ8IziaveIfkkDLXDiaoSQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/c2e2abd0a96f28e3a4d16998aef2d6ee80abba8a04ff1fd75df7f8aaa2b1f392.png "")  
   
 微软表示：“攻击者可以通过使用在发送到目标机器的标头中包含分段IP数据包的低级协议错误来远程利用此漏洞。” 该漏洞影响多个微软产品，包括Windows 10、Windows 11、Windows Server 2008、2012、2016、2019和2022。  
   
@@ -114,11 +114,11 @@ ZDI、Automox和Action1都将这个RCE漏洞确定为组织可能希望优先考
   
 CVE-2023-23392允许未经身份验证的攻击者向使用导致RCE的HTTP协议栈的服务器发送特制数据包。“该漏洞影响Windows Server 2022和 Windows 11，并且具有不需要特权或用户交互的低复杂性攻击向量，”Action1警告说。因此，Microsoft将该漏洞评估为威胁行为者比其他漏洞更有可能利用的漏洞。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ss7c5mF5JlSiaYjHO8oa2Ixatl4ichibkMFbHzp7ibtcL8lDqjr9JxdSiba7CVh9PSibnEeNLFJ6je8NT6O14vztdEMQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3bba75c85adbbecd19880f7aa94d197895e739ed7d70ff3d9b928cef1893e64b.png "")  
   
 Automox还建议组织在72小时内解决CVE-2023-23416，这是Windows加密服务协议中的一个RCE错误。这是因为，除其他外，它会影响Windows 10及更高版本的所有桌面版本，以及Server 2012以上的所有Windows服务器版本。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ss7c5mF5JlSiaYjHO8oa2Ixatl4ichibkMF5UoW5TnPYLzJibyj5MKHlxPRulSjr47AJr7Yl5ettTI8aBdibITIQBOA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/cea1a9848b8ca7246c8fa4245fda0c3b5b15bae13b6bf814045e787c098aaa27.png "")  
   
 除了针对新漏洞的补丁外，微软还在其3月的补丁周期中发布了针对四个旧漏洞的更新——全部来自2022年。Ivanti表示，此次更新扩大了受漏洞影响的微软软件和应用程序的数量，并为它们提供了补丁。安全供应商将这四个漏洞CVE-2022-43552、CVE-2022-23257、CVE-2022-23825和CVE-2022-23816尽快打上补丁。  
   
@@ -138,7 +138,7 @@ Automox还建议组织在72小时内解决CVE-2023-23416，这是Windows加密�
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
   
 
 

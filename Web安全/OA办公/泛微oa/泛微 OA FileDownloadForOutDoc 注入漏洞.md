@@ -46,7 +46,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/8L9QdtBiEKTSFuZJHEtPNg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0ostOF4gwmLZKYL7bO4USVIB94mTLjt2JVANofXUyb4Dc4nswEMC6efsn0qdnR5uZaKJhGEPErZ06IL2KJvADQ/640?wx_fmt=png)
+![](../../.resource/remote/abe4603055b4fa1f1508388001d0243f93efa4c918a7d5ca7c43d93f7462da59.png)
 
 <table><tbody><tr><td width="269" valign="middle" rowspan="2" colspan="1" align="center"><p><strong>影响版本</strong><br></p></td><td width="269" valign="middle" align="center"><p>Ecology 9.x 补丁版本 &lt; 10.58.0</p></td></tr><tr><td width="269" valign="middle" align="center"><p>Ecology 8.x 补丁版本 &lt; 10.58.0</p></td></tr></tbody></table>
 
@@ -66,13 +66,13 @@ fileid=2+WAITFOR+DELAY+'0:0:10'&isFromOutImg=1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0ostOF4gwmLZKYL7bO4USVIB94mTLjt2oaROBG6qJxy9dJcbROVcBMiaJy9vQ5IuS1AcgibD42PZBOdbk5iaUsIxA/640?wx_fmt=png)
+![](../../.resource/remote/5b1c00ae6ed09492430ca6d9c85f8077d6b685935e6eaaf7c8e2dd17ccec9a3a.png)
 
 免责声明由于传播、利用本公众号 MaLoSec 所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，公众号 MaLoSec 及作者不为此承担任何责任，一旦造成后果请自行承担！如有侵权烦请告知，我们会立即删除并致歉。谢谢！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0ostOF4gwmLGoiaHMOw9kHugI1LV8V9RIX5utaFBbLQm5YazuicqGh5MKare8wXqKl58KPaKkZIwvialtJibbr6yXw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/84008961cd7ad804c994411fa89d94c6d9e0088aee27883f91c83523404fbdae.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0ostOF4gwmLGoiaHMOw9kHugI1LV8V9RIhXRNd6ECVRiaGPibgObCrRvPDQI2czuUcYxNmOibYHkrU0zlknrgGwZYg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/23c0d660aff702b22717cde0e8c182c5a867cfd8470f014913a5899052682ce9.png)
 
 ---
 

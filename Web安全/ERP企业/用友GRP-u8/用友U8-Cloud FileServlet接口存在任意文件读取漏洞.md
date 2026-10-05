@@ -64,7 +64,7 @@ CNVD编号:
   
 用友U8-Cloud  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLdcEd6ibXmY33FreFQbiceO22wHndU3STxibvLgT3bEauA3OSgs2a159cg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/c1f3b059211faeba57ea2eedcf60a66d2e9f09670d66757928b4ae4001a4027a.jpg "null")  
   
 用友U8-Cloud FileServlet接口存在任意文件读取漏洞  
 ### 4.fofa查询语句  
@@ -85,27 +85,27 @@ Connection: Keep-Alive
   
 QzovL3dpbmRvd3Mvd2luLmluaQ== 是C://windows/win.ini 的base64编码  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLIIejOu6yk0pSaxZHWaomxibByrFfldkFibwvB9cu6HibjHE2iaiaO9SwIeA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/059a9267a8ed023e5855f578d11175a5b1f90cc7f9c54ff4e6ee876686d74320.jpg "null")  
 ### 6.POC&EXP  
   
 关注公众号 南风漏洞复现文库 并回复 漏洞复现112 即可获得该POC工具下载地址：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICL4bQk63DDAg0IbpYCWQHk3KCuQH6IgibpMVyuHCoGqIX6lsRJc6ysSQg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/cd132c9f20a9cbc6e579a37b160ffe7de7b4ebceee261cde859c9e121984e8fb.jpg "null")  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLXzP4nK0ia0oa3xRh2EdfhLIGjqjl9e7YHKycwxS8JhiaxvUDprX1JCFQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/d318b64d376d9c51c10d0cfdc6fa5f48e2dcffcf0c8edbd77925fc5e825fee89.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICL7myklJsNWEB6Y7569ox5o8FDgs6bYpPKopUyXYJU9aQ8IgkTHQ47vQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/a09d1facffa772ff95cff7ff232c9219b88f3bf36e79872928fc8f1ba7c4ba2b.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLr61RuKTkOwicwX4S3jJgGpX9SS62dFD1RfGd95klPdIu6zhITDZMkuA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/97c98b18f439a868d8cfa64cedce8533e0b3e047aea351c40ee5c9c04548f442.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLo0J6cyWYepX6QxnFYxrymcxsQU9moQrA130sFXvNukic0o3JcAU790A/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/52cf49b8035e39b0d88a3b1ebd2a90cc2530c6d361f456979640567457456ded.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLkesicx57puCwGtenUDMUNhwVEVJWT4JpwKjhk691Bll35CRxH5ibb0Ng/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/cee40f310988c352b2dcd7342d7c204003b81cef9dc7e043db5b852ffdc43cc7.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a6jsr6gWbK7LibLibibET6ICLQgNp9odzpWEDKjLFF0jxiajXBXv67SE04ibeOCeDaqiaoa2KpFlj9ZlTQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ### 7.整改意见  
   
 打补丁  

@@ -48,13 +48,13 @@ schema_version: "1"
 
  FreeBuf   2025-04-29 10:09  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
 Apache 软件基金会发布了重要安全更新，修复了广泛使用的开源 Java Servlet 容器 Apache Tomcat 多个版本中存在的两个漏洞。这两个漏洞编号为 CVE-2025-31650 和 CVE-2025-31651，若不及时修补，可能导致拒绝服务状态和安全规则绕过。  
   
   
-![Apache Tomcat CVE-2025-31650](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ib3cI3rSKhHgo0AibkqJVvkHLgShMceBLS2tVhzhQWtQia6aasYaIUv7JU0gXdeazianIs5rT1AYJiabw/640?wx_fmt=jpeg&from=appmsg "")  
+![Apache Tomcat CVE-2025-31650](../../.resource/remote/f38a8841f005552c214b35690b35c9c4a3acec395807e63f040c3de338aa28e5.jpg "")  
   
   
 **01**  
@@ -111,7 +111,7 @@ Apache 软件基金会发布了重要安全更新，修复了广泛使用的开�
 公告同样指出，虽然 9.0.103 版本中实现了修复，但"9.0.103 候选版本的发布投票未通过"。用户必须直接升级到 9.0.104 或更高版本。  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR39ibFdyjP3Qp8CEJxFWljbW1y91mvSZuxibf3Q3g2rJ32FNzoYfx4yaBmWbfwcRaNicuMo3AxIck2bCw/640?wx_fmt=gif&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/a4bdb73b149760c05df68a24d74e5e2e7d1edb7994fd5d90eda7924ca82de869.gif "")  
   
   
   
@@ -126,7 +126,7 @@ Apache 软件基金会发布了重要安全更新，修复了广泛使用的开�
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR39ibFdyjP3Qp8CEJxFWljbW1uEIoRxNoqa17tBBrodHPbOERbZXdjFvNZC5uz0HtCfKbKx3o3XarGQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/550c384107beaf189c3fc4790e360c6fe7bc2da72b731e0458273c873e3e9555.webp "")  
   
   
   
@@ -139,15 +139,15 @@ Apache 软件基金会发布了重要安全更新，修复了广泛使用的开�
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icFibibPIGEfXsibI0C3or4BS5KDnCKUfVLVQGsc9BiaQTUsrwzfcianumzeLVcmibOmm2FzUqef2V6WPQQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/981365866a94035a34752886cd7a7c235ec84f18847a37ab0951538fd4e575fe.webp "")  
   
   
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38mFMbqsUOVbBDicib7jSu7FfibBxO3LTiafGpMPic7a01jnxbnwOtajXvq5j2piaII2Knau7Av5Kxvp2wA/640?wx_fmt=gif&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/5e4d54b044fb826685ec27bda761f26af19fd1d70e42dd17676f8926389a2c26.gif "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
 
 

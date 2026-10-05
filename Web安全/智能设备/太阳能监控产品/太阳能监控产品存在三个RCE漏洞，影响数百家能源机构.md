@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Eduard Kovacs  代码卫士   2023-07-06 17:56  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -60,7 +60,7 @@ Eduard Kovacs  代码卫士   2023-07-06 17:56
 **漏洞情报公司 VulnCheck 在本周三提醒称，日本公司 Contec 制造的太阳能监控产品受一个已遭活跃利用漏洞 (CVE-2022-29303) 的影响，导致数百家能源组织机构受牵连。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMSvDCKy8rt8vgibMNvUDduKjTspL57fG7OTFDNoA0nic3pWpO17jficu7uS8kiaaRbic0RPhyxZ8ogblvQ/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
   
 Contec 公司专注于定制化嵌入式计算、工业自动化和IoT通信技术。该公司的 SolarView 太阳能监控和可视化产品用于3万多个发电站。  
@@ -124,15 +124,15 @@ https://www.securityweek.com/exploited-solar-power-product-vulnerability-could-e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

@@ -48,7 +48,7 @@ schema_version: "1"
 
 **https://www.secquan.org/BugWarning/1071470**
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkJbH7OvXcj5aG3mibfyicthqUIxtCP8zz52rjcRv1fVj9gymtVAESLJRw/640?wx_fmt=png)**
+**![](../../.resource/remote/cfda77f46f58bae90d6608eaee0b2ad92b37b5545fbef944c48446bebcaa0aeb.png)**
 
 **1. 环境搭建**
 ===========
@@ -62,7 +62,7 @@ schema_version: "1"
 **宝塔选择：MySQL + PHP-5.4+ IIS 8.5**
 ---------------------------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkJdia19VibNO9XyXjU53s7RtHUUfnpH3BicORXPH3aOF5Xaf0VX4Nr9Ldw/640?wx_fmt=png)**
+**![](../../.resource/remote/4fdf66c77f9183f2be99766625be0ef6d9f51df95329ee579b886f7b8e593b26.png)**
 
 **源码使用公开的 PHP 上传源码:**
 =====================
@@ -73,8 +73,8 @@ schema_version: "1"
 **已做白名单限制，仅允许上传 .gif、.jpeg、.jpg、.png 文件，文件大小必须小于 200 kB**
 ---------------------------------------------------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkHlS1cJbsxfTpZelJDaT4EBBLBBaeAiaVlE8Zysn08ibFlUyA312U1ApA/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkz8X5jOicuaaLUguRnAaGpo64ib9qpicOemQQmwD4P7G0kaAicjXKWYic4Lg/640?wx_fmt=png)**
+**![](../../.resource/remote/efdd15fdfa2c3b7d21cd2bd0e006bc2b6cc0773b70aabb7fd369f54829c442f5.png)  
+![](../../.resource/remote/86a8f3fac816288af46d8ceacba17c6d22550e089ad0de8d9dc23b90dd6b8da5.png)**
 
 **2. 漏洞复现**
 ===========
@@ -82,7 +82,7 @@ schema_version: "1"
 **配置好网站以后：**
 ------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOk9qb7iasKZMaq0o4pCPuATicNiaiaaPib59tvB4RfEicWrnP9DMxXIaXMkjrA/640?wx_fmt=png)**
+**![](../../.resource/remote/a8b23656a8b7afcc96ce9571af39e730cabe63e55eae5aa5bb7c6602f5ad3f0c.png)**
 
 **本地写一个**
 ---------
@@ -90,36 +90,36 @@ schema_version: "1"
 **<?php  
 phpinfo();**
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkIBLjFD9WzWTbdic1rrVRATOUEcQ2fGyN38AvibA6lFuR5Lk8IDlLal0A/640?wx_fmt=png)**
+**![](../../.resource/remote/9be88e5b39bf081ae1a48840b39112e0591432db813ec11dad880d1f24f11ec6.png)**
 
 **另存为. jpg 格式**
 ---------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkXGCWia1ibWlpexfQp4ico6Bn0NfJqLLEaInsA2gxHmHa0SvnHtic4x79TQ/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkt7JToPtnfOqlRkucBx9VmHzdeZPVRuS1D6SBjlt6OfgwU2ZZ1I5H3A/640?wx_fmt=png)**
+**![](../../.resource/remote/90a549330f55b8f1d0d13299259c7c94d482b9e0366d8aac25a5a7ace132a29f.png)  
+![](../../.resource/remote/a15a76417eb49df7c3eae77bfc34b8f62aa7c7f0957ab8c95dcd7611f8eda5b5.png)**
 
 **直接上传文件，不需要做任何修改：**
 --------------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkFp3WSMqmu0mS8cJ2qeBPWHmkzaZUvrXdW11Wgj2iaF9QDTP2otXa8tQ/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkRO1gicQWp7xT8cGRibF296EUEbibpxQD1IrIYfDN1X32niaVEEuehZckQA/640?wx_fmt=png)**
+**![](../../.resource/remote/d0102641ee16612dd32dbee0988fb6b7f7f77e044dc8140f78992b03f061080b.png)  
+![](../../.resource/remote/4cfb3c97fe2e8dc8d99a75683b75e030d47c3e6df90d17d69b23571306eb5f36.png)**
 
 **访问上传文件地址：**
 -------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkJSz26EsNibrWH1yNjS1OicGsmth34QCO2KXbib7IouNEEA82QjLO1TzrA/640?wx_fmt=png)**
+**![](../../.resource/remote/5c5dedccf7aff4915cbdba27dd4665a4ee471244aa423f634636847f26d1a472.png)**
 
 **在 upload/1.jpg 后面加 /.php**
 ----------------------------
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ORwL8p4cVxRNGJLVK7DFg6MGr6diahKOkRKnjRXh0soVnONNdsYqGN2FZwHoa5eBuXhqmp0ajhvAx4hKsWnBfibg/640?wx_fmt=png)**
+**![](../../.resource/remote/3e88a1fb147956a0232f73c1429cc9354b238a05728942594a087f83a304935f.png)**
 
 **成功验证存在任意文件上传漏洞！**
 -------------------
 
 **（特此声明，本篇文章为原创文章！如要转载请标明来源！）**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/ORwL8p4cVxSlLTvUjLjuQUR6y6W6pLDulwBQClNzPtc9iayZO0lVTJHM8flTL0SKTbx3mLaTbzjUWMc8EFFsLFA/640?wx_fmt=jpeg)
+![](../../.resource/remote/df3e6301d2fea4dc71a963db90c1f69a12d33fcf30fe3c6cdfd6d64d772c15c0.jpg)
 
   
 

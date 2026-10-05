@@ -59,7 +59,7 @@ source_status: "recorded"
 
 对前一段时间发现的几个命令注入漏洞做下记录：CVE-2022-28571 && CVE-2022-28572 CVE-2022-28571 这个漏洞的产生是因为Telnetd参数过滤不完整导致的,由于需要知道密码所以比较鸡肋，类似于授权后的命令注入，发现的过程很有意思，这篇文章主要介绍这个漏洞。CVE-2022-28572 这个漏洞是Tenda AX18 系列的一个命令注入漏洞，其实应该还有两个点可以触发这个漏洞，这里我交了一个比较好构造的一个。CVE-2022-28573 是一个没水平Dlink 823 pro的命令注入（太经典了）
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBSRiabVYz8RVO0ovnrUBNt8b4aL0Zk7rcp54DmrozBoJVia0VKGk3bwQLZdtgiaick9VkQsESmaIHOJBA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/959707157056f4bc4c6644a9286a6e7a1063d4a1bc2e702599552692b6009273.png)
 
 0x20 漏洞分析 (28571)
 -----------------
@@ -73,11 +73,11 @@ telnetd -l /bin/sh -p 2333
 
 来反弹shell的时候，发现反弹不回来，然后我就想，是不是DIR882的Telnet实现有点不太一样，于是我找了一下DIR882的Telnet
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBSRiabVYz8RVO0ovnrUBNt8bLiak4of6ia98j4QRjjW8RwRaOYJeeDP8mvYYwEmmGxucSJ4ejYGvzaWQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/6d848b4c8a79b0257e12369970bb38718cfd2d5dbf49ef6252b1420c64b6950d.png)
 
 发现Telnet存在lighttpd中，这就意味着他可以开启Telnetd（通过HTTP请求），我们在`lighttpd` 中找一下这个字符串
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBSRiabVYz8RVO0ovnrUBNt8bWWV5KDHeCMCPACPwUutUtIfErlyC2bS6ZweicQFuRbRicQsmSjoxO3qA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/cb08375fad667cbfac4e5e399736f8590d2af38d0029049319d3ac30136ff638.png)
 
 我们可以发现`/start_telnet` 这个路径，以及貌似是开启参数的`telnetd -b 0.0.0.0`
 

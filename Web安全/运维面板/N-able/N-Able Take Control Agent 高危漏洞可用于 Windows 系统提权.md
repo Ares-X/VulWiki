@@ -48,7 +48,7 @@ schema_version: "1"
 
 THN  代码卫士   2023-09-15 17:24  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -57,7 +57,7 @@ THN  代码卫士   2023-09-15 17:24
   
 **N-Able 的 Take Control Agent 中存在一个高危漏洞 (CVE-2023-27470)，可被本地低权限攻击者用于获得Windows 系统权限。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ4WvWKdMGAUJsFrO8wzyP7jPmGCq3aNWcFT2niaHac5wOWebKxRGticRvCNCvbib1dsncLVg6VzdUlw/640?wx_fmt=gif "")  
+![](../../.resource/remote/c406ad961414c01c5b8a7f8d8d0231b1ccb0730299a3d0d1b07e18fb05605931.gif "")  
   
   
 该漏洞的CVSS评分为8.8，与TOCTOU 条件竞争漏洞有关。如遭成功利用，可用于删除Windows 系统上的任意文件。该漏洞影响7.0.41.1141及以下版本，已于2023年3月15日在7.0.43中修复。  
@@ -125,15 +125,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

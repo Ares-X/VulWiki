@@ -88,7 +88,7 @@ Kyan 网络监控设备 存在账号密码泄露漏洞，攻击者通过漏洞�
 
 *   ✅登陆页面如下
 
-[![](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220405201942548.png)](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220405201942548.png)
+[![](../../.resource/remote/06b63a6a50c5f6d798ad1e515a95b574ffe1cfa0dfcf703fcd9cb9da05622406.png)](../../.resource/remote/06b63a6a50c5f6d798ad1e515a95b574ffe1cfa0dfcf703fcd9cb9da05622406.png)
 
 *   漏洞 url
 
@@ -96,9 +96,9 @@ Kyan 网络监控设备 存在账号密码泄露漏洞，攻击者通过漏洞�
 http://127.0.0.1/hosts
 ```
 
-[![](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220405202024751.png)](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220405202024751.png)
+[![](../../.resource/remote/e32c95ac97d70aa9164e7cc2db45e29a77c3a1764799c703aa552a0ecd631ee8.png)](../../.resource/remote/e32c95ac97d70aa9164e7cc2db45e29a77c3a1764799c703aa552a0ecd631ee8.png)
 
-[![](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220405202237293.png)](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220405202237293.png)
+[![](../../.resource/remote/36efae436347c72852dc8d4a711a16f681eb3440ef2a08f4c5a59447eb926db7.png)](../../.resource/remote/36efae436347c72852dc8d4a711a16f681eb3440ef2a08f4c5a59447eb926db7.png)
 
 > [](#孤桜懶契：https-gylq-gitee-io-time "孤桜懶契：https://gylq.gitee.io/time")孤桜懶契：[https://gylq.gitee.io/time](https://gylq.gitee.io/time)
 > ---------------------------------------------------------------------------------------------------------------------------------

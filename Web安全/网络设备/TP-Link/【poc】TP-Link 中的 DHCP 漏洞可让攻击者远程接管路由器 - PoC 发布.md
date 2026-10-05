@@ -51,7 +51,7 @@ source_status: "unknown"
 
  独眼情报   2024-11-18 08:20  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/KgxDGkACWnRgwGibBzMGHIzX1hyt9P2m6Eotqw3tQdxTbyQtheRfl2lEPLftJjtSravocdQUxmXXReaGGugiaNGg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/73c5c34d108a1e119947fad6072a12136436607bac7ea82da8a7a8b579e649f6.jpg "")  
   
 TP-Link VN020-F3v(T)路由器固件版本为 TT_V6.2.1021，发现一个严重的安全漏洞，攻击者可以远程接管设备，导致 DoS 攻击甚至 RCE 攻击。  
   

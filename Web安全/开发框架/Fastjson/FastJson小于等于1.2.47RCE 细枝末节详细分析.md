@@ -45,7 +45,7 @@ previous_version: "package person;"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/qRbfZK0UX4v2YwdfWDlSeA)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnduf2BObl6T3vhjJLelYTb5yHDr9CaCKJtBZRDgOm82RaeWJ7iaE2Mlg/640?wx_fmt=jpeg)
+![](../../.resource/remote/4630223e3e4eae53171cbad99527a5fd1451e82d9b571aa15a43d5ef39637619.jpg)
 
   
 
@@ -129,77 +129,77 @@ java -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C calc -A 127.0.0.1
 
 运行代码，触发 poc
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnDwqyhjckE3ODcp4MuxCFk8dO5KKpeBY5IWYR3qYoqo8tpa1RBn7g6A/640?wx_fmt=png)
+![](../../.resource/remote/73c553b559a272938ee63fb2f42986e5cd8fff372d8ac5a1e6a3272538f25542.png)
 
 ### **动态分析**
 
 首先在 JSON.parse(payload); 下断点后调试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnzkPjw2j5j4tNrer1icTdwIIHn3x85VrbLynP31VSBMhh1Aed6jH5tibg/640?wx_fmt=png)
+![](../../.resource/remote/ec6684968527f9d33c059c83053c99cebf395c6a05a76921d9096d8d41d19b23.png)
 
 之后单步步入，过程类似于上篇文章中的调用过程，我们直到 DefaultJSONParser.java 的 parseObject() 函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnAIXeXXKbASAhLTathZooZj0GsUkE3z8nEoezK7fBP2rsvRVyvSpJ5A/640?wx_fmt=png)
+![](../../.resource/remote/e86e73e36fa4079c9285df9a9a3bb0d4379ccafaba34df8b848a023399c7f69f.png)
 
 下面就进入一个 for 循环获取并处理我们的 payload，我们跟进到如图所示位置，从这里开始就和 1.2.24 的调用不同了。可以看到我们获取了第一段 key 为 a，由于不是 @type 属性，我们会跳过这个 if（里面有 checkAutoType() 和 deserializer.deserialze()，我们一会就会回来），继续跟进
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnB4MrRVdMbwu6rsxic55Ooa5iawUGodiaicy3ia54pjISDHFm7FVBuicDApkQ/640?wx_fmt=png)
+![](../../.resource/remote/5caa65638dee7751e55e1149df37abffe5931f6c990a3501b10c03b0fa2bdc84.png)
 
 我们跟进到这里，开始处理 a 内 {里面的内容
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnrK6rW4HVNtzHT7eibNXeVbSIMbzeAQ5K2GT3OuYQKm1Jbn29AHYnBzA/640?wx_fmt=png)
+![](../../.resource/remote/e486647be6c734bebe158cae77015c621e15ed6b84c4331d2e08c794078a5500.png)
 
 接下来调用 this.parseObject()，正式进入嵌套，获取处理 key 为 a 的内部内容，单步步入后，我们发现又进入了上面进入过的 for 循环，并且获取的 key 为 @type，进入上面说的 if 段
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnckxw3NTGYl1rtOrdGN0YbIgAzKBKJfnUVIicyYVlb9EpHaU2OdztpSg/640?wx_fmt=png)
+![](../../.resource/remote/484caa0735d6c3a3e79a7e6ed6cb46fb2eaf8923e097a814d32ad8183f95782c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrn1YYXBl4Po5qp75tUBuCBJMdsv1f0khw8pu33fBS2Rgofc8icoEAVLWA/640?wx_fmt=png)
+![](../../.resource/remote/d4c4154ff93f979f296a39cde034d329d7609f2bed505e2e76996321b89028ba.png)
 
 调用了 checkAutoType() 来检查目标类是否符合要求，这里我们不跟进去看了，在分析 b 段的时候再跟进去。这里我们只要知道，我们利用的 java.lang.Class 是可以通过校验的就可以了，所以我们单步步过
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnZGSTzB9l0PMSXGmiaNZ1lnTwGtooJmWxtxw9BicqKX6GHapNmW3Nh0Kw/640?wx_fmt=png)
+![](../../.resource/remote/8274cb823e1838b1ba407960bf2e4279b268688d3d6b8b2a4ada1854f980de4e.png)
 
 通过 checkAutoType() 后获取到 clazz 为 java.lang.Class，之后调用了对应的序列化处理类 com.alibaba.fastjson.serializer.MiscCodec()，这里就是核心，我们单步步入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnxKMXyibTXe35rIZIl8udlXxZqMEvlULTJ9G26Qgk9icRtnt6CVaNGbGQ/640?wx_fmt=png)
+![](../../.resource/remote/f13c7b2623033a1b7937e0ba45bfa59cad8acf20e6238bd9d0e51c8617401fca.png)
 
 可以看到我们进入到 MiscCodec.java 的 deserialze() 中，首先调用 parser.parse() 从 payload 中获取 val 对应的键值，也就是 JdbcRowSetImpl 类，并赋值给 strVal，我们继续跟进
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnPaQTXvpw0Un3w0IYpibYS61nJ4BdSwHaqt8YLcYKzicG2JNE1eq5ALpg/640?wx_fmt=png)
+![](../../.resource/remote/3a68ba1ee8fdca3824db8beec24569d23475cf87fe33b87aeb0af69d111d5305.png)
 
 接下来有一堆 if 判断，会对我们要反序列化的类进行一个类型的判断，直到如图位置，我们进入 TypeUtils.loadClass() 函数，这里默认 cache 为 true
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnf41pvPLBElXaI1GFNzDbk3gvLurpibxFt5RUhF316bmbRNbb7YekGBg/640?wx_fmt=png)
+![](../../.resource/remote/b401d7ec4e528b86c481ac0f9b572ed1b4cb375ad54f61267c456faaab3631aa.png)
 
 在 TypeUtils.loadClass() 中，cache 为 true 时，将键值对应的类名放到 mappings 中
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnnU6cibYpicEnNJtlO1pRsOlRGym4Eqz8vZqyLQLgVNuWGYVeDoak52Pg/640?wx_fmt=png)
+![](../../.resource/remote/2dcab601cb9c0f884c30ae9ae7b8f8dcd1850dad70de6cb52d4fce3701ed9556.png)
 
 （到目前为止我们已经成功将恶意类 com.sun.rowset.JdbcRowSetImpl 加载到 mappings 中，接下来我们继续跟进解析传入的第二个键值 b 的内容，实现恶意类的 jdni 注入利用）
 
 在完成 loadClass() 后会向上层返回，如图，继续跟进后回到 for 循环正式开始解析键值 b 的内容，获取到 bkey 为 b 后，类似于 a 那里，会跳过这个 if 段，在下面再次调用 parseObject() 来处理 b 内部内容，我们直接跟进下面的 parseObject()
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnCGNAjryQbeBfBhpT3nbdChnB4Tfqzq6mC4Sf9G4pE3VBH18wR7NicjA/640?wx_fmt=png)
+![](../../.resource/remote/3c15be98f003108bc5ac85242f104e9f91e17249cebea8e59669c7837328620f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnWT62b12Q8Zz71QqSSicNKPezDJUYKJZUgaLta3TXarRG7GY9d4D3iafg/640?wx_fmt=png)
+![](../../.resource/remote/e5053bf3da1b31266be8fde4e29f3474e6d5444ea9e3be864f59b56829a9e33e.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnFQk1XLh6HXzhdOuGvWJU1M0GG3Z7HuYsl532XYg7eibqPzhtYS76waQ/640?wx_fmt=png)
+![](../../.resource/remote/e7552704f7f45948cd892e10ce4793002b3de0c8ef2a2a55da19fdb8105fb9f6.png)
 
 在 parseObject() 中继续跟进到入 checkAutoType()，这次我们进入 checkAutoType() 看一下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrn3ZVk0CDIY2ANicicjqM8SJTkYmzdL7VicbkTjsiaBbyDf5IQcU6KfnC13w/640?wx_fmt=png)
+![](../../.resource/remote/bbf99de4f50468d3d1ffc2393820e3ded15bb12fdc2f132a30b6e4a049678d63.png)
 
 在 checkAutoType 内部，没有开启 autotype，直接从 mappings 中获取，然后返回，一气呵成，黑白名单完全没用
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrn36dAHic1FGYgQlZgDgLiaHpib2T0pK0FuvHggJibAcHguP6RUdZDOdf7xw/640?wx_fmt=png)
+![](../../.resource/remote/2c7d887ffe7af4f25de6ed1b60f9bf1a1c124551fb1e819ce5d1d790611f08f5.png)
 
 接下来会调用 deserializer.deserialze() 和 1.2.24 一样，造成 rce
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrnibSGiaUf10R3pZ4Djicj4lnXG6sWaic2B0XygvN5bjJnUEJkzuUFVG7F0Q/640?wx_fmt=png)
+![](../../.resource/remote/0737d6117dc1af8211f49711f63f1c267f3c2751a52c3d2685415dbc9ea21964.png)
 
 完整调用链：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb4LVlcaUUZQM1mPzFmJXhrn6JKVWhvsSib2BQcqlZlKRILU4UnbZwtc8e3cJC0Jy85P1a5H910ibHoA/640?wx_fmt=png)
+![](../../.resource/remote/735de199f8d55cdeb9f884cfcf584493ff1e6115e2a5d629dcc649c489af31c1.png)
 
   
 
@@ -223,9 +223,9 @@ java -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C calc -A 127.0.0.1
 
 上面首先讲述了 1.2.41-1.2.43 的愚蠢问题，之后跟踪了 <=1.2.47 的 RCE，相信已经非常清楚了，在之后 FastJson 又曝出了其他问题，下篇文章继续学习。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png)
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ok4fxxCpBb5ZMeq0JBK8AOH3CVMApDrPvnibHjxDDT1mY2ic8ABv6zWUDq0VxcQ128rL7lxiaQrE1oTmjqInO89xA/640?wx_fmt=gif)  
+![](../../.resource/remote/632fd46fd9c5c81461bba0234f0d689bcd5e3937d9af2d92ada6ef08375280b1.gif)  
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 

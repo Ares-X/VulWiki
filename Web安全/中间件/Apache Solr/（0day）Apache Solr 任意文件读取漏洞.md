@@ -55,11 +55,11 @@ fofa 语法如下：
 
 app="Apache-Solr"
 
-![](https://mmbiz.qpic.cn/mmbiz_png/NOwiaSy3Kbv3Yia0BblwjsvJ8Fp8YSsl0GRYWDRFITar2CMia2IqZ6nfGdSuSX79tU1NlTULFod1BymFfgO8aAFsg/640?wx_fmt=png)
+![](../../.resource/remote/b0d2b18d0ec311c3842a87e13741f62d9084558216b0b6c06f9001884f8b0cbc.png)
 
 我们随便点一个进去  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/NOwiaSy3Kbv3Yia0BblwjsvJ8Fp8YSsl0Gu3NYHLIywGAkFyACAoiasomiboYTCyTheuAfpJxGX2ibcvmKZZgO5uKbg/640?wx_fmt=png)
+![](../../.resource/remote/6c013acad76ce973907dfcbbeb4a2a124ebec94d865412476f09f1c7e1c28f21.png)
 
 POC 如下：  
 
@@ -165,7 +165,7 @@ if __name__ == '__main__':
 
 我们把脚本复制到一个 test.py 里，然后开始运行  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/NOwiaSy3Kbv3Yia0BblwjsvJ8Fp8YSsl0GZqbSsVfAr6CCCiaNc8r9u6dqg18iapdDbnbNr6u8BVqAhtIP2PVsHRKQ/640?wx_fmt=png)
+![](../../.resource/remote/2eef762bc16d9ac5978cad68f5cd6d56fc4b388eb8d7cbc82af13cb01d081fbb.png)
 
 发现成功读取到 / etc/passwd  
 

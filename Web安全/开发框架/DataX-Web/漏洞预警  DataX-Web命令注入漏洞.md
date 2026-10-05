@@ -48,7 +48,7 @@ schema_version: "1"
   
 DataX Web是在DataX之上开发的分布式数据同步工具，提供简单易用的 操作界面，降低用户使用DataX的学习成本，缩短任务配置时间，避免配置过程中出错。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWFYbCV6ahalqIbmBpqPtSenLibKvdjkzULLddByVvPDIcGAnibk4MWcnxa5a1cJR3rQos2jU4FaQLg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6ac47000fc65301e0cc42b572ab69e9ff6cbd2a6e916a525aa1f6d0be026fc7f.png "")  
   
 **0x03 漏洞详情**  
 ###   

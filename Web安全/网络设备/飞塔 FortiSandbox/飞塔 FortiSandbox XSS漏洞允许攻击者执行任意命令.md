@@ -53,7 +53,7 @@ source_status: "unknown"
   
 Fortinet 披露了其 FortiSandbox 平台中一个高危跨站脚本 (XSS) 漏洞，编号为 CVE-2025-52436 (FG-IR-25-093)，该漏洞允许未经身份验证的攻击者在受影响的系统上执行任意命令。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zdwoicOrrJb0o2RayGJr8tqphXDoGZCH8zWfeOUkcs6Pbnyiakx9Gl4nhrMOUBSxNMhicYGNm1KJBONKzibeLiaOYj3iaNua9GTx0sqF4oZBF4gWI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4b1373f87ec4a9032d8949db7f85a9d32d647d190074a9f592074efbe7a84c4a.png "")  
   
   
 该缺陷被称为“网页生成过程中输入的不当中和”问题（CWE-79），存在于图形用户界面（GUI）组件中，得分为 7.9。  

@@ -48,7 +48,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/HeJSZKFaVmMbZIn0EmWLMA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -113,7 +113,7 @@ exit();
   }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibt0x7OTicibVmiczUYPicuzjkDl1iaelk5IdwWGr17DAlfc5fcpnh7qEIiacQ/640?wx_fmt=png)
+![](../../.resource/remote/8f68be34f629f8bba7820a2eecac6f99dcaa3afccee30f5527764c3feda1ca78.png)
 
 在这里参数 **$USER_ID** 是可控的，并且无过滤危险符号就拼接进去了，那我们传入 **../../../** 我们就可以任意文件上传了
 
@@ -162,11 +162,11 @@ Content-Disposition: form-data;
 **v11.6 的此接口无过滤  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibeMcor9zVXepaNyac30r5FXhm31yIQPYcqkib7O01bfnRvbJJQaeZvuQ/640?wx_fmt=png)
+![](../../.resource/remote/b97c14599ef9c7dc673e18b7920a0b0a423cf80ef4dd30c68efd47bc0aa6714a.png)
 
 **v11.6 以上版本则规定了这个接口上传的路径必须包含 webroot 和 attachment**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibw61vNVHPoD4L06wvETtXlC1RsZaUZ4DNJK82womWxmfJeOic4OOAxkg/640?wx_fmt=png)
+![](../../.resource/remote/b83f01741acb60e8bf396a8fda4399fa5ffdac8f57e67ae0d2e6323a712554a3.png)
 
 ```
 if ((strpos($source, "webroot") !== false) && (strpos($source, "attachment") === false)) {
@@ -210,7 +210,7 @@ Content-Disposition: form-data;
 
 > 请求长度说明：原资料 Content-Length 为 365；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibC975FOsSFic8SZQiazB4abibjoZn3y7Std6xk2ldQu3t4IJ3MF4Vf1UuA/640?wx_fmt=png)
+![](../../.resource/remote/31338ce66081bf0e8a4cd5f8bcef9177a78990ecc4c12013c5027528469925bb.png)
 
 **再上传 peiqi.log 文件到此目录下，其中含有 XSS 语句**
 
@@ -241,15 +241,15 @@ Content-Disposition: form-data;
 
 > 请求长度说明：原资料 Content-Length 为 374；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXib19NbkZDic0s6LLAUqf130Oiciaicrjc7gZAJKvfIgaSr2yKibibXhU382bCg/640?wx_fmt=png)
+![](../../.resource/remote/ffa10f801a366a5035fb48a6b5cec7bbc0e3bff82ec32ab22fbe999baeafe810.png)
 
 **当管理员登录时就会触发 peiqi.log 中的 XSS 语句**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibyNib8U8VWBiaHxoKe9FkzgNEbOrusc4vA1dR80KSicV4lmzuXT5wOjlbQ/640?wx_fmt=png)
+![](../../.resource/remote/1aaf47c1beeb5fe696f8ad9b8171b3006f548d5c5246ec87a69c6c456756921f.png)
 
 **刚刚我们说到版本的不同利用点不同，我们只能在 webroot 目录下查找带有 **attachment** 的目录**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibEpB7ia8icO9hW6VFs3QVXaqHYlVxT1BHHW3hDoZ8jDFlqQgwrVGVlrTg/640?wx_fmt=png)
+![](../../.resource/remote/58a78d981c32ab58472e1dd9efb20b3759ae687cf2bb53c06e0c410296214302.png)
 
 这里 XSS 的利用点有 4 个文件夹，其中最有几率 XSS 的为**存储目录管理的文件夹**
 
@@ -257,7 +257,7 @@ Content-Disposition: form-data;
 
 使用同 v11.6 的方法上传恶意文件，当管理员使用此模块时就会打回一个 Cookie  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibyb6I5u5j7L2JlHDeCdgpOgjZNB0RXibkwALL2aHzpMPBujlEkJttZSw/640?wx_fmt=png)
+![](../../.resource/remote/90e7e52c6c657fb1e0400cf3318213fde26598a9c331b0bc80362cab24b33d29.png)
 
 因为后续版本限制，v11.6 以上版本 xss 也受到限制，而 v11.6 版本任意路径可以 XSS, 可以在部分补丁打的情况下进行钓鱼管理员
 
@@ -268,7 +268,7 @@ Content-Disposition: form-data;
 这里上传的位置是一个不常用模块用于验证漏洞
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibBfSDCtqApzlKrbjKibpEaxBpyIeVahLAHdBFia2gHjtCt7wVQDyibsiaYQ/640?wx_fmt=png)
+![](../../.resource/remote/e3409aeb802f1f52c314e751d86ad7815a1215abbe9d3a1a784eaa5f39b7b4a9.png)
 
 就像刚刚上面的方法， 11.6 -11.8 版本中都有这个上传的漏洞
 
@@ -290,17 +290,17 @@ echo $stroutput;
 
 **上传思路与 XSS 漏洞一致，只不过文件包含的变成 PHP 代码**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibG1qfqQe5xJKPib5iaUuTaJkrKYFWucQLpHWficnhBb0sRrUCWVyXQZFsQ/640?wx_fmt=png)
+![](../../.resource/remote/6339fa5c30a95e0fadd64a1aadf65069f53093d8a226c58763587ad3399ecd9a.png)
 
 现在已经成功上传了恶意文件
 
 访问 http://xxx.xxx.xxx.xxx/general/reportshop/workshop/report/attachment-remark/form.inc.php?peiqi=ipconfig
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibQgicRGQgRs8htPrwVOloHb9tuxOl6AUyw1BkKtuKzbSRTnpmfB18lYg/640?wx_fmt=png)
+![](../../.resource/remote/a9eb19723d3c4c352a8957d41def28d749efd69a02587faf24463d233e86f5b8.png)
 
 利用的 POC 效果 (文末获取)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXib41hzPoxB8x2IPp9Jakw95qTFcfZOgcNXt0zbp5ZQhrttb3kZhQ3NEQ/640?wx_fmt=png)
+![](../../.resource/remote/db06a2ac2c48ab7213a7606bc7e91031a5a3c52e5866df7c8cd99b028f35f6b6.png)
 
 ```
 Tips
@@ -424,7 +424,7 @@ if __name__ == '__main__':
     POC_1(target_url, Cookie)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibH8w8bcmQR1vh8ibtvVBNQOloYlGiaG6SynocmVe9t73LZud0J805cwwQ/640?wx_fmt=png)
+![](../../.resource/remote/3eb6e2efa827615df2f725506df596865279310547d1f8a4880e3a4552f99bef.png)
 
 **通达 OA 命令执行 POC  
 **
@@ -543,7 +543,7 @@ if __name__ == '__main__':
     POC_1(target_url, Cookie)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXib5PtafyGPEicesKbMSsolqCKHemWAfWhC4zTaoft0ajGJQ72SENSJgbg/640?wx_fmt=png)
+![](../../.resource/remote/df718f6806deb5a0367ee0f75d490742f9db2073ea5b428977931f7a45bd6f83.png)
 
 顺便招下 HW 人员啦~  
 
@@ -564,7 +564,7 @@ if __name__ == '__main__':
   
 招聘的二维码放在下面啦，有兴趣的师傅扫码就好啦
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibREWH010p1mj6gn55F4ZpxMGVaFh7GricmWPchhZGTAJiaXYajUa3dYOw/640?wx_fmt=png)
+![](../../.resource/remote/c5298c39abeb206ab3d11593bb240e913e59fcbc5265e515f1c8729c9b56e586.png)
 
 最后
 --
@@ -573,7 +573,7 @@ if __name__ == '__main__':
 > 
 > 别忘了 Github 下载完给个小星星⭐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6wnKTQvK0n8sFOQEEFQro75IHato7k7WJakCwObVtic8kOiagRSTylHIhHxg4DVKOhBFDazKkCMgvw/640?wx_fmt=png)
+![](../../.resource/remote/db24e7036c6033b3096cc6bcf3daa42f7778b91d944c595acd55b7a1b0302046.png)
 
 ---
 

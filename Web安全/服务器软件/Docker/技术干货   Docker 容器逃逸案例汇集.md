@@ -109,7 +109,7 @@ Docker 容器逃逸案例：
 `检查/.dockerenv文件是否存在``检查/proc/1/cgroup内是否包含"docker"等字符串。`
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ia0LvkyJzB4lJibPwBiaaXRzOpJjuXx4QaibhGmv027RuAB3tjE6DxN6Tr7GTkprrCKP0KfmmLibicb0xJNs9ib82tLhg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/e61f06fa671f7950cc4110007050a87e0f76c9758f18ed8da578438a81bfe452.png)
 
 目前来说，这两种检测方式还是比较有效的，其他检测方式，如检测mount、fdisk -l查看硬盘 、判断PID 1的进程名等也可用来辅助判断。
 
@@ -163,7 +163,7 @@ docker -H unix:///var/run/docker.sock run -it -v /:/test ubuntu /bin/bash
 
 ls -al /test
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ia0LvkyJzB4lJibPwBiaaXRzOpJjuXx4QaibHdYh8kIElTnibnQIUu2BibndVrfbYhtOVTz8njyqOwdERR8iaibdU3pwfA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/f58d2e3aec4b16a50085dcf572145cbd1c1109bfb3cde3cb7f1322d29322e0ba.png)
 
 * * *
 

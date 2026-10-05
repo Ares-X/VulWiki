@@ -76,7 +76,7 @@ source_status: "recorded"
 
 华硕已经确认了该漏洞，不过该漏洞已经进行了修复，回复如下图：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTydMq9bXzjiaia7zMcuYGKHg3fnVnznRhiar657mMKePEQZaYjhaicSv5BdvpBLjunVT779Af6yTOrfw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/38f83aa0926b792dd0c54c331e0349638d805506ac12479b521ce34319aa6c6b.png)
 
   
 
@@ -92,7 +92,7 @@ source_status: "recorded"
 
 此漏洞影响很多型号，具体型号暂未统计，官方2020年8-9月份修复的RCE漏洞（如下图）似乎就是这个
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTydMq9bXzjiaia7zMcuYGKHgx9ZPlobbB8m1welnD3ibvasjyibVPJQhWHlpNvz3EibgKIu5CdmIK8oAQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/54f2c5bd9a01e8615e293719105b36b83949c2415fb3077235673903861aa01a.png)
 
 0x2 前期准备
 ========
@@ -121,7 +121,7 @@ struct mime_handler {
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTydMq9bXzjiaia7zMcuYGKHghpyebasAJBf33l4BRojG0c26MXlskm9DMCCaQxykYZYnKAfochFiaTQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/bbe6186c46a8e570258f984cddb627597bd8f8e2651b2000d99edd2c4af527f5.png)
 
   
 
@@ -131,7 +131,7 @@ struct mime_handler {
 
 ②blocking.cg i接口处理函数会进行权限校验
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTydMq9bXzjiaia7zMcuYGKHg9ztaCrGmicC2zFM7nF5IQ2NUic0MnkkIuGHh2QIDmtapBYK2ZaNUG1Fg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e0ea9608a8a0fd780b897e02229cbe46b4eec05e310b3569f7c7ab992e17c5bc.png)
 
   
 

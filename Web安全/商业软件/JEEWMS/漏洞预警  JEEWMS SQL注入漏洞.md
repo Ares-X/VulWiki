@@ -59,7 +59,7 @@ schema_version: "1"
   
 JEEWMS基于JAVA的仓库管理系统，包含PDA端和WEB端，功能涵盖WMS、OMS、BMS、TMS。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SV5c5fjMPRA8L7bFrkibpMUW5zfvTx0EzgSfXq1p3JdQsULDGic38X1VvEEenMmdEscsTfP1p4HXujA/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/fa8b4bdfaf6e85cca6e0d05d74359f4f27ba73d85b7c1395aa116b654850be60.png "")  
   
 **0x03 漏洞详情**  
   

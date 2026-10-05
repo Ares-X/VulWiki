@@ -48,7 +48,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rEWSwg0I22Vw9g77x6kGWA)
 
- ![](http://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuZq5sEo9xMfOVGAKuZWic3dSmVcRnYRDwbJdF39kiaGOrw5ofgicOs4WUH5PBiaq1MXpYDVbfSlCKJ00g/0?wx_fmt=png&wx_head=1) ** Z2O 安全攻防 ** From zero to one 25 篇原创内容  公众号
+ ![](../../.resource/remote/a7b03ba99d57ca6f39f67c7e7bd9a7a413205400cdbf36677255f75286bb8ed3.png) ** Z2O 安全攻防 ** From zero to one 25 篇原创内容  公众号
 
 免责声明
 
@@ -60,7 +60,7 @@ schema_version: "1"
 
 **只供对已授权的目标使用测试，对未授权目标的测试作者不承担责任，均由使用本人自行承担。**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0x3kGZxwKTkyY7BrNkUwicjIkq3F2xlCIgGz7pBpnEMh3rvpbyH2DE2kIKVste0B2yP8TiavoOsuo9sMQKSj9uxQ/640?wx_fmt=png)
+![](../../.resource/remote/d425dd4117d2bf7b86293036b75ee00bde68d5bd8a276f59eebf183a614abcd3.png)
 
 文章正文
 
@@ -128,7 +128,7 @@ ncDecode--- 用友 nc 数据库密码解密
 http://x.x.x.x/NCFindWeb?service=IPreAlertConfigService&filename=/
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeI2MaoURl1GP3KtRTO83kxofoIoMr1fH5KVmgQB89sfk1vXO1dvOeew/640?wx_fmt=png)
+![](../../.resource/remote/3f6a4194661fd8655120265594d4aa987c2568e1e5a7b62b668fd55a87027e32.png)
 
 #### 3.2 `bsh.servlet.BshServlet` 远程命令执行漏洞
 
@@ -201,7 +201,7 @@ http://x.x.x.x/service/~aim/bsh.servlet.BshServlet
  http://x.x.x.x/service/~yer/bsh.servlet.BshServlet
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leevmpKwziaIf5yHOfDhF2BD2wF73zIk1uw7smsGPzQxNACsciawYN0yMfw/640?wx_fmt=png)
+![](../../.resource/remote/887165af56448c27e0802e539a05d23bec24f7c1993a8ae72b2de85284d6fa65.png)
 
 #### 3.3 用友 `NCCloud FS` 文件管理 `SQL` 注入
 
@@ -215,7 +215,7 @@ Fofa:
 
 `nccloud` 登录界面：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0lee4nvDtyWjXWHIHtpkY797LLNuleyfeFh4wJxDW7kX7icmp5hoMnl8RDA/640?wx_fmt=png)
+![](../../.resource/remote/39eac4e7b82188974444a3ceea9cee7e76a5a0a9a6ae4c6859e32f7bbe0cd569.png)
 
 文件服务器管理登录页面：
 
@@ -223,7 +223,7 @@ Fofa:
  http://x.x.x.x/fs/
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeA9e3cC8VX1c7ibibYpyX3EnttYJHRf5shXiaBdv8ISibzM7vkw9kZg7uWQ/640?wx_fmt=png)
+![](../../.resource/remote/8021b0a51571cc4aa18da5bc5ef3d36e21dec50fc1ce0a4536909c01992ab2d0.png)
 
 username 参数存在注入，抓取登录数据包：  
 
@@ -246,7 +246,7 @@ GET /fs/console?username=1&password=00PGRLxSTe3VroI21qJNymCrZfPX1UQ4ij0gIWn2Gc4%
 sqlmap -r text.txt -p username
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeQfxetgkkFZdF4ChaoBibz3KgPU1PzBiaN39ibTnc4JcK6MZguw3SF8qiaw/640?wx_fmt=png)
+![](../../.resource/remote/1a78cf94ed0215f9386baa57b472d2cef0d2ad5dc24fc2ead1cfd69cc5245939.png)
 
 #### 3.4 用友 `NC 6.5` 未授权文件上传漏洞
 
@@ -376,11 +376,11 @@ POC:
 /yyoa/common/js/menu/test.jsp?doType=101&S1=(SELECT%20MD5(1))
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeCQ7O6aZRevYicBmibwKGZgBunqyI6Mr8RsyFbTbCgH27T4OYMvbSkpLw/640?wx_fmt=png)
+![](../../.resource/remote/befcb1f144cfbf1d9eea1762b137476e5cf8b5345426a9eff00bb9cc14f31fa2.png)
 
 `sqlmap`跑一下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeS9sicfsbbWojxoXkWVde6c0LHPf1ySkqfdKvxP2cLibDQZ63X76zcUVA/640?wx_fmt=png)
+![](../../.resource/remote/a229df344a16de7c0a5e1de14de690c7fb5840fb1a4651dcaaef56134fc404cd.png)
 
 #### 3.7 xxe 漏洞
 
@@ -392,7 +392,7 @@ POC:
 /uapws/service/nc.uap.oba.update.IUpdateService?wsdl
 ```
 
-#### ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0lee9MkI1uNiccwdhzXs26nLqluHuAAibvvQiaNZ8TP1gErepetWibmJ2RxHZw/640?wx_fmt=png)
+#### ![](../../.resource/remote/b839334e0dcd870758f56c074c8efda72dd43a1d27421352ad86cbcbaf85597c.png)
 
 #### 3.8 接口信息泄露
 
@@ -402,7 +402,7 @@ POC:
 /uapws/service
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leegkNz0hHoVwcRrkR4pbbDpS2F3fjKP1E0VSQey1XxRLrdsR9kxbmpgw/640?wx_fmt=png)
+![](../../.resource/remote/bad98f2e0625e2cdc4e0f222cd451a6fc44af6880791d7a4ca5721b2b77945c7.png)
 
 #### 3.9 控制台密码绕过
 
@@ -412,7 +412,7 @@ POC:
 
 账户密码随便填，抓包将返回包 0 改为 1, 即可任意用户登录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0lee0UKjAspjmqTyr4T1IjXqqGFK4MB2Oa5RU58778P5Y5SH1ldYGPfdBg/640?wx_fmt=png)
+![](../../.resource/remote/78a85e1b73eb94a171902946d5f217f768b05c4465818ae28a80078cc1ab2f36.png)
 
 0x04 参考
 -------
@@ -423,7 +423,7 @@ POC:
 
 [用友 NC 历史漏洞 (含 POC)](https://mp.weixin.qq.com/s?__biz=MzUzNDMyNjI3Mg==&mid=2247484813&idx=1&sn=dd541cffa96e106260b1974ddc941d16&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0x3kGZxwKTkyY7BrNkUwicjIkq3F2xlCIgGz7pBpnEMh3rvpbyH2DE2kIKVste0B2yP8TiavoOsuo9sMQKSj9uxQ/640?wx_fmt=png)
+![](../../.resource/remote/d425dd4117d2bf7b86293036b75ee00bde68d5bd8a276f59eebf183a614abcd3.png)
 
 技术交流
 
@@ -443,7 +443,7 @@ POC:
 
 关注公众号回复 “**加群**”，添加 Z2OBot 小 K 自动拉你加入 **Z2O 安全攻防交流群**分享更多好东西。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuY9E2LvIlswNljP9IyicCzPZxkOfzs2Dtuex992CbtUiabzNmISZ4m55KFcNAs6DaibVTCzMiatIQ1m5Q/640?wx_fmt=png)
+![](../../.resource/remote/a80714d5b3a54394a9e975e07a7d121911c7cf5bf66e6349b0d2e485b02002d2.png)
 
   
 
@@ -457,7 +457,7 @@ POC:
 
 **星球不定时更新最新漏洞复现，手把手教你，同时不定时更新 POC、内外网渗透测试骚操作。****涉及方向包括 Web 渗透、免杀绕过、内网攻防、代码审计、应急响应、云安全等**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/h8P1KUHOKubjVXO2QVicEtHJzDDzl0EuY7WCibgib7IWAkx4fpYSAibSRBkDQI0ian07gYbZSPO89P9nAX0cuCuQXQw/640?wx_fmt=jpeg)
+![](../../.resource/remote/5d4e56acd7e6f76a2068788c1528ca4c4295f3481198be13ca2594c7b84e922e.jpg)
 
   
 
@@ -469,7 +469,7 @@ POC:
 
   
 
- ![](http://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuZq5sEo9xMfOVGAKuZWic3dSmVcRnYRDwbJdF39kiaGOrw5ofgicOs4WUH5PBiaq1MXpYDVbfSlCKJ00g/0?wx_fmt=png&wx_head=1) ** Z2O 安全攻防 ** From zero to one 25 篇原创内容  公众号
+ ![](../../.resource/remote/a7b03ba99d57ca6f39f67c7e7bd9a7a413205400cdbf36677255f75286bb8ed3.png) ** Z2O 安全攻防 ** From zero to one 25 篇原创内容  公众号
 
 **关注福利：**  
 

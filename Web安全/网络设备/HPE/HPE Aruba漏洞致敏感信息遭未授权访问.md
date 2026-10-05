@@ -50,11 +50,11 @@ source_status: "unknown"
 
  嘶吼专业版   2026-01-16 06:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 HPE已发布安全补丁，修复其Networking Instant On设备中存在的多个高危漏洞。这些漏洞可能泄露内部VLAN配置数据，允许远程攻击者破坏无线网络或未授权获取敏感网络信息。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wpkib3J60o29YDcBxoBic8tXFTf7aHeZ3DFDqialCESGASZFQ0b3BSaIHiafvycoflJTAl8CMXynqA2OiaibVLddrL1w/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/93fb3580ffb436b62518242bfb1f08b0c144327289979372cbe836e705db428f.jpg "")  
   
 上述缺陷影响运行3.3.1.0及以下版本软件的Instant On接入点和1930交换机，3.3.2.0及更高版本已包含对应修复程序。  
   
@@ -62,7 +62,7 @@ HPE已发布安全补丁，修复其Networking Instant On设备中存在的多�
   
 当设备以路由器模式运行时，精心构造的流量会使内部网络配置细节（如VLAN标识符及分段设计）通过数据包外泄，而此类数据包本不应包含此类信息。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/wpkib3J60o287jwk8LWD9icmgWlahS21WB8lECGmeJOXSiafEcxpJYOHrph36wNX7lyjD7jckJk6EMZ4bGp59RNrA/640?wx_fmt=png "")  
+![](../../.resource/remote/8cf29923aecf253f283bbf72e013e921c67f52767b31cf2a04747d32e7c66482.png "")  
   
 HPE Aruba Instant On缺陷泄露网络细节  
   
@@ -91,9 +91,9 @@ HPE建议受影响的Aruba Instant On 1930交换机系列及Instant On接入点�
 参考及来源：  
 https://gbhackers.com/nissan-motor-breach/  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/wpkib3J60o287jwk8LWD9icmgWlahS21WBibH0Iz3x2kLShrmHpicmyoLLZjhkG6s61yDMgXpJ74WhrDYlWupFxzKg/640?wx_fmt=png "")  
+![](../../.resource/remote/96138f55660ddac887ee1f08aeb91402c73b11dc0ff5612eca8486560a08ec82.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icEjy5ZrpCcgr4BicXicPv08DSsrgibDcJQpvwkZoO4OqdIpJNhj6TO5xV0ic0AnVf7f2kcPnNevQlTtQ/640?wx_fmt=png "")  
+![](../../.resource/remote/e3ceafd722522b1d33a4c6672786bddb148c5ad46649aad117bf1e82c6ce5e1f.png "")  
   
   
 

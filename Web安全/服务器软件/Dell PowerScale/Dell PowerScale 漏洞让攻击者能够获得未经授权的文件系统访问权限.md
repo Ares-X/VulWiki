@@ -50,7 +50,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8vHnxES3zOsICyoOJl7Bu3Q5PVU7CEh5VmztRo8j2jlj6JAvpGEldNvgFEV4OlTk536BIpQXLln0A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c764c35e50ecb51015cd6d56f2b9dbef96f04d53d9b862f9f2a81787b82c838f.png "")  
   
 影响 Dell PowerScale OneFS 存储作系统的两个重大安全漏洞，其中最严重的缺陷可能允许未经身份验证的攻击者获得对企业文件系统数据的完全未经授权的访问。  
   
@@ -107,7 +107,7 @@ https://cybersecuritynews.com/dell-powerscale-vulnerability/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

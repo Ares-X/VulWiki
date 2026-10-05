@@ -43,7 +43,7 @@ schema_version: "1"
 
 DO SON  代码卫士   2024-09-23 18:15  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -53,7 +53,7 @@ DO SON  代码卫士   2024-09-23 18:15
 **FreeBSD 发布安全公告称，bhyve 管理程序的USB仿真功能中存在严重漏洞CVE-2024-41721，CVSS评分为9.8。具体而言，当该USB仿真功能配置为仿真虚拟USB控制器 (XHCI) 上的设备时，就会触发该漏洞。它可导致恶意代码执行后果，从而对运行易受攻击 FreeBSD版本的系统造成严重威胁。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMT5Hh4Tiao2micCO7wrtDhBPRfF47s6l2s8GJKeJ2WtiaT20PGYHIdRgeuUkQHhcFTLibfCEAWu1jletQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f06e2f5274cab008783f77e65bebe04443c456536ad86c5e57464501ce34c984.png "")  
   
   
 Bhyve 是一款管理程序，旨在在虚拟机中运行 guest 操作系统，由 USB 仿真代码中的边界验证不足导致。具有权限的 guest 操作系统可在堆上触发界外读问题，从而可能升级到任意写权限。该漏洞可引发多种攻击，如导致管理程序崩溃或在通常以 root 权限运行的主机的 bhyve 用户空间进程中实现代码执行。  
@@ -116,15 +116,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

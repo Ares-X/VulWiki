@@ -62,7 +62,7 @@ source_status: "unknown"
   
 Netgear R6850是美国网件公司推出的一款家用无线路由器的具体型号。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SXQicr1SmcXN0f6rTGxaG3iaKVgxXxOcicvWUmwE65miaeoeggxe9xD1aKfeuHj84YZAp7Loic0OcGKxOA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1 "")  
+![图片](../../.resource/remote/d466d74bc668fb74e00b584c8c2a3975704c2a7242e2aeece802de6d5cb07698.png "")  
   
 **0x03 漏洞详情**  
 ###   

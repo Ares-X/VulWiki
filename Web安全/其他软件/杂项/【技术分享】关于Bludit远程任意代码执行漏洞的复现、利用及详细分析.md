@@ -58,7 +58,7 @@ schema_version: "1"
 
 原创 neroqi  安全客   2022-06-22 16:50  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7IHM2QK1ahibYbVHfO15U04mkPicibhUR261EoxVeVoiaVNiadByhtLI3r7A/640?wx_fmt=png "")  
+![](../../.resource/remote/2ba31b584b86ba2d0ffa14a56cfa421fd85d38b1f2cfe166892761706a8ac5a4.png "")  
   
 **1**  
   
@@ -83,15 +83,15 @@ Bludit是一款多语言轻量级的网站CMS系统，它能够让你简单快�
   
 2.利用test/test123登录Bludit，打开“撰写新文章”栏目，点击“图片”按钮，进行图片的上传：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7h1s4k7SE38cgOYUaKexbuziceLYxwMEVqAIWcpGzp7NaoHdud9jEia5A/640?wx_fmt=png "")  
+![](../../.resource/remote/3f7c4d198f9f2d0c5d9cfdb43723f45a2a42f733e4548162c9ada5901b9baf1b.png "")  
   
 2.1尝试上传一个常规图片文件，图片上传成功，如下图所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7ZTW67RhHbGlPknhMUB6t0O7gqdzHzj8ob4s0PZg0UDKp4Tb63ASkWA/640?wx_fmt=png "")  
+![](../../.resource/remote/a0e863ce2c844dfcb5cb3df38b2b3cf4e8dbe9b225fc9a449d2664b80b15c8f3.png "")  
   
 2.2尝试上传一个任意的php文件，上传未成功，应当是系统对用户上传的文件进行了筛查和过滤，如下图所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7NvNovvxhgThebQicm7RcLXmyjZicAD8KiaW39hYBxNCRTM0W3T43mBAKQ/640?wx_fmt=png "")  
+![](../../.resource/remote/1e97c079a65d8eab05a69b395dd768e9ef00fddbf78f7dcc63a0476115dd620c.png "")  
   
 3.通过Burpsuite截取上传图片的http数据包，在Repeater模块中将文件名修改为”test.jpg”，内容修改为  
 > 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
@@ -99,11 +99,11 @@ Bludit是一款多语言轻量级的网站CMS系统，它能够让你简单快�
 uuid值修改为../../tmp  
 ，然后发送数据包给Bludit，如下图所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7icZRKmwx9FTJYxibCfl4wb1Hib4ytMEACiadJ0Kzx5nSp7GXl3EE7pxDvw/640?wx_fmt=png "")  
+![](../../.resource/remote/47973a5e59c69f2b152658dc598b7ff6e7e4ddf665d33d00eddf2846fdc278f1.png "")  
   
 4.再次在Repeater模块中作如下修改，上传.htaccess到指定路径，若不上传.htaccess文件，那么将无法执行恶意图片生成后门php文件，如下图所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7jn07SBrMf5YfzLsM4ZCiav4iaulJWTflxKBguiaLvEb0MicNb0ibO5DuVgw/640?wx_fmt=png "")  
+![](../../.resource/remote/95699de4fc5b785050b52b0f00419b849f9fc5ab1bc9f1527ec3737f11ea5137.png "")  
   
 5.在浏览器中输入如下url，访问之前上传的恶意图片，以使php代码执行并且生成后门文件shell.php：  
   
@@ -111,13 +111,13 @@ http://192.168.110.133/bludit/bl-content/tmp/test.jpg
   
 6.使用中国菜刀连接后门文件shell.php，成功连接到Bludit服务器，可以利用菜刀对服务器文件进行新建、修改、上传以及删除等等操作，如下图所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7w7n5Qz9lLibWOnNESg3nbTqP8qSaPloPMTiciaJznZic4Gn4rfuVK3sZUA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f2d1985d6c084ac8dacd5d382a7a296e86a5155f079cf30c3572ab65eb1fad4.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW7iaIldcdqNs8X87XkyGAenCoupC6xngkhPqSfiaGGfTVCxQzl5icKIHPGw/640?wx_fmt=png "")  
+![](../../.resource/remote/6dfb433c6664451166d3bcdffb5baf274f710020c8561d8762b5f894dfb8ed86.png "")  
   
 7.通过进一步尝试，发现可以在Repeater模块中直接上传php后门文件，并不需要刻意使用图片文件的后缀名，这里虽然服务器返回错误信息，但是后门文件确实是上传成功的，可以用菜刀去连接（菜刀的连接过程这里不再赘述），如下图所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5POCFDdZtI1yJNb5650xW77Cn64tRbib3eV0xQR1u1Q8MjibeSf6fz4I4f5bY5UTibusGcbgLXPSQtQ/640?wx_fmt=png "")  
+![](../../.resource/remote/4ccb2e2935d91eba1dcbdc1ec354226461d31cbb1feade3673ef5a7f5c17502a.png "")  
 ## 漏洞分析  
   
 1.问题源码具体如下：  
@@ -172,7 +172,7 @@ Filesystem::rmfile(PATH_TMP.$filename);
   
 所有的用户输入都是不可信的，就算在前端对用户输入做了过滤，也可能被攻击者利用多种方式绕过，因此后端的筛查与过滤就极其重要。关于Bludit中的文件上传导致任意代码执行漏洞的分析就到这里。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png "虚线阴影分割线")  
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png "虚线阴影分割线")  
 > 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
 
 

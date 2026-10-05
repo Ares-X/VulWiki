@@ -56,7 +56,7 @@ schema_version: "1"
 
  关键基础设施安全应急响应中心   2024-08-29 15:27  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iaz5iaQYxGogs6TibDytX0iaBjw9aSGGiaPiasKSibvgPpn8dMjqnOQNOZR47yALCsnkO58HWYlsmPDsCPQAa8DlwQLEQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2036c67d978504c94b4b5ed85bbbe46d6c768ae9d281308d86bcaf78bc420ee0.png "")  
   
 8月27日，外媒BleepingComputer报道，黑客组织Volt Typhoon（伏特台风）利用Versa Director零日漏洞上传自定义Webshell，窃取凭据并破坏美国公司网络。  
   
@@ -70,7 +70,7 @@ Versa表示Director版本21.2.3、22.1.2和22.1.3受到该漏洞的影响。升�
   
 此WebShell用于拦截和收集凭据，以及在受感染的服务器上执行任意恶意代码，同时避免被发现。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/QmbJGbR2j6zggdhuQFn2ibDcvfdhOPR3UOJxuaTsrclF7St4Q2FZiaB4JicbBdCwZVgoc69MlLHHDpxFpOBydahYg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/13a6c577e3ac89138b89f2144846d66ccd9d63402081797723c4076e1798cf31.png "")  
   
 Versa Directo上的Volt Typhoon攻击流程  
   
@@ -98,7 +98,7 @@ VirusTotal
   
 “投稿联系方式：sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogvC8qicuLNlkT5ibJnwu1leQiabRVqFk4Sb3q1fqrDhicLBNAqVY4REuTetY1zBYuUdic0nVhZR4FHpAfg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/4ee926918a01b41e6eb8b00ff473dfe6a11ee91a5f8d7e7b0e58cf6962b20514.webp "")  
   
   
 

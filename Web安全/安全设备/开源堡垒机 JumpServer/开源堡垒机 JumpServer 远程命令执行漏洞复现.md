@@ -112,7 +112,7 @@ curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quic
 ```
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicSvZicibV55FJFFoDd75kQriaOhdGAv1XggxAWpPgicu1vyKkLJ6x0ZwWZg/640?wx_fmt=png)
+![](../../.resource/remote/9c5a37e2e648c943bcaec6c10ef53b421dbdad44752850705a7b4b04be18f4ff.png)
 
 2、配置好之后，解压缩包，运行
 
@@ -122,7 +122,7 @@ curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quic
 
 一路回车即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicMMQiajy4pxLhCuGyazXqytpkZgLrl9f3BTphjvWdvZuoKaUkW35KCCw/640?wx_fmt=png)
+![](../../.resource/remote/d6ef958d10b5388e579d77e68250fb19e70936ff76240dbc14496599d7eb6788.png)
 
 3、进入目录下执行：
 
@@ -131,7 +131,7 @@ cd /opt/jumpserver-installer-v2.6.2
 ./jmsctl.sh start
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicKDniaMTaOmxl2fDrMdDblcNPWbia9zVR7IicRmyoXbwIGdUia6ZTnuW7RA/640?wx_fmt=png)
+![](../../.resource/remote/4c3662770f2f99ed44649211e18dd5ebdc08a20fcb21aece5ade394e45fe4a65.png)
 
 4、如果发现安装的版本不是 v2.6.1，执行
 
@@ -147,31 +147,31 @@ http://192.168.217.159:8080
 
 初始账号密码为 admin/admin
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGiciaZibQSVzicCphGeIHB67bsqYic0ZRW3Tv9I4AjpTllYPUH3jScSibSQsHw/640?wx_fmt=png)
+![](../../.resource/remote/b6339bf47bada53eba2d191a6139f61fb3022bd00c6d68484100965c65b064a9.png)
 
 6、更新用户列表里的用户名为 root，后面 ssh 连接时的用户是 root
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGic327O1g63L7ZfAMJbKEusoVxs8qd3KhH3mg2srdg2iaU9n6tpxragFvA/640?wx_fmt=png)
+![](../../.resource/remote/dc6036790b495d87cb5ed929104ffc1cddb96a77310d0c2f087562d72b53f5a1.png)
 
 7、创建一个系统用户
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicHgDuo6enMW8kAKWQp6o7x0KcQDiaIHzibeogInKTgeQ4Mkez7fOFB1aw/640?wx_fmt=png)
+![](../../.resource/remote/980ef8709fbcd43153683a047dbf1123c0f2685fc5c94ac7d190faa1bea077e6.png)
 
 8、更新管理用户
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGiccjyXO8b8HWpwFic3v9sCVpo69mtmM7tfCbEgPW8h4byOgtkO7T3w8lQ/640?wx_fmt=png)
+![](../../.resource/remote/4254dbe5da9d578448f14a2f25bfa0f9586fa641c30831d29b2091d6528bea02.png)
 
 9、新建一个资产
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicyYpTF4kVE86WTFPEEkKibMfJOy3HBu7PaPl1caia1Crr8LsQokwrR6EA/640?wx_fmt=png)
+![](../../.resource/remote/3ed2083aca7d78efaf8d791cd262597a0e484a4edd29807795df17a0cb686337.png)
 
 10、资产授权，否则控制台没有机器
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicdxSBGy5r3gdDAAhjqolosuXDbVnnz5zTo95OJ6vIuOqGfpcvqJhuBQ/640?wx_fmt=png)
+![](../../.resource/remote/b1aa09de9020dc25ced0553b6286eaad164392e684331b4890bdf3bf97be457e.png)
 
 11、成功连接机器
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGic0EiaOk07Kr5ica6eSgeDhibqgE2mLfqzdVMa8Hkweoy3jf0dtD2RJljFA/640?wx_fmt=png)  
+![](../../.resource/remote/efe58bbd6efd48e2295be56efb6d2cd20492e0ead7f1248f51737a5c4d5eb8cf.png)  
 
 **0x05 漏洞复现**  
 
@@ -205,7 +205,7 @@ if __name__ == "__main__":
    asyncio.get_event_loop().run_until_complete(main_logic(target))
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicDMBh6UXkl4FFjAibGfC6paQiaJxpqUudd5XMxLtY3DicHtuS5F83qw78Q/640?wx_fmt=png)
+![](../../.resource/remote/6e12f91915277e375acb3dbd0c96d9217703a4149fbabaa6e249595188abdf7d.png)
 
 2、将 asset，system_user，user 三个 ID 值  
 
@@ -302,7 +302,7 @@ if __name__ == "__main__":
    asyncio.get_event_loop().run_until_complete(main_logic())
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicyRsWrenlic318JrSFyCIxjEkOib4j12DQ9fm9lVzKzG8md42KEfBUibrA/640?wx_fmt=png)
+![](../../.resource/remote/e25aa9fd919d6a74a7ae828a956248e322176a2ec7d1d410ae20d1244a4f439e.png)
 
 **0x06 修复方式**  
 
@@ -404,7 +404,7 @@ JumpServer 日志
 
 在 / opt/jumpserver/core/logs 路径下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjqpoq0ib9pTPTrx1WTO9XGicmKibDbFJ1Gyw0GlgAaVtDPXeM5hUWXDDzgVKxKFTaedxous7qv2OWPQ/640?wx_fmt=png)
+![](../../.resource/remote/f0514351b073a74888134ddade7d1ae6fb336902176e7463d92c6d0fbf810ae6.png)
 
 ‍websocket 进行日志读取时  
 以下路径没有找到 asset，system_user，user 三个 ID  
@@ -421,11 +421,11 @@ ws://192.168.217.159:8080/ws/ops/tasks/log/
 {"task":"/opt/jumpserver/logs/gunicorn"}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章  
 **

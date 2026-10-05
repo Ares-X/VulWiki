@@ -93,7 +93,7 @@ solr.cmd -e dih
 
 访问：http://IP:8983/solr/#/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjVRVRKZv8CmdpA4FQUgQiafXXk6zqPdoKFOBjmXTVLQNrz9jK74liauW2eVIDtt6wyhjnL9pGEIlVA/640?wx_fmt=png)  
+![](../../.resource/remote/d216942d92f6859585f06fa3cab2a4e15f31c8204fcc2230e8f07208efeb845e.png)  
 
 **0x05 漏洞复现**  
 
@@ -101,7 +101,7 @@ solr.cmd -e dih
 
 1、在 C:\Windows\Temp \ 下新建一个 test.txt，图有误  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiabuEhl0icoxN421uKDib6s5fGONtFhaNAyTCyrPvoUXwzDp5Xjtgiba9oib29RFVicLCaWPib7btkSnUag/640?wx_fmt=png)
+![](../../.resource/remote/45def4f74d9a8dfda14a04e5a0611449b503d0c757bcdfd592cc3f8dddb8de85.png)
 
 2、向任意 core 的 config API 发送一个 POST 包, 例如 /solr/db/config 或者 /solr/solr/config 之类的  
 
@@ -115,7 +115,7 @@ solr.cmd -e dih
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiabuEhl0icoxN421uKDib6s5fUBR0FnIXYMe4onvY5QUQlG6gOmBGek5UK9P1fwAbYdyOWIef2bM9vg/640?wx_fmt=png)
+![](../../.resource/remote/ea1354d27f16bb34cfd5aaaffcbb156f4391ebceaa243db0183d6c074797c759.png)
 
 2、访问  
 
@@ -125,11 +125,11 @@ http://172.16.255.2:8983/solr/db/config/overlay?omitHeader=true
 
 检查是否创建成功  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiabuEhl0icoxN421uKDib6s5fOIdJB4lLsiby187drgPa8Nkvey1hleC3ovbsHNWLMmeKe1KzSaskw0Q/640?wx_fmt=png)
+![](../../.resource/remote/877df817e53530039a77a063410b9955eca907d917896a1a7afc8adaad9eef9f.png)
 
 3、向之前发送包的 config API 发送一个 GET 请求, 参数为 action=DISABLE 例如：/solr/db/test1?action=DISABLE  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiabuEhl0icoxN421uKDib6s5fOjcwYTI4qHEIIPMsnib5q0HnrOiaE8xPus1R0BvJhoFH3CtWt260ck8w/640?wx_fmt=png)
+![](../../.resource/remote/2ffb99c96d11fa6189fff5ef1e3247d4b511701c83759227300c0fb3e4a8f333.png)
 
 这时会删除之前设置的文件, 同理 action=ENABLE 会生成之前设置的同名文件, 里面写的是一串 healthcheck 信息. 注意 /test 是之前设置过的路径
 
@@ -186,11 +186,11 @@ protected void handleEnable(boolean enable) throws SolrException {
 
 https://mp.weixin.qq.com/s/dECH74n5qjrWT9lok8IkPQ
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章  
 **

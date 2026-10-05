@@ -57,21 +57,21 @@ source_status: "recorded"
 型号： TP-Link TL-WR840N EU v5  
 易受攻击的固件版本： TL-WR840N(EU)_V5_171211 / 0.9.1 3.16 v0001.0 Build 171211 Rel.58800n
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A38a672qqh6cC0IqeDXjyfLLGk53GK5WdeXJYMM9tPMD1Fpib2fJw6z8A/640?wx_fmt=png)
+![](../../.resource/remote/88fa2953330d508ff67a7625bdca7df80b2ac061f604be4527ca6cebc95912b6.png)
 
 通过 UART 轻松 root
 ---------------
 
         使用 FT232 设备来获取对设备的 root 访问权限，这个控制台在漏洞利用开发过程中非常有用。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3358ZVzym9EyQCc7y5LmX6tcakFkmnI7yXChOf3dhU9zibVCQnrJibibjw/640?wx_fmt=png)
+![](../../.resource/remote/579e60befd2c0e16bed6e67b87a96a409e28fbc7dc3d5f883885dc70ce09d215.png)
 
 ```
 # check serial port
 screen /dev/tty.usbserial-AB0LR7NH 115200
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3xiaOWK0UUGNtcqmITq2TSJlrmoyRibEayssqibkNibHARnMlCwUpeayJSA/640?wx_fmt=png)
+![](../../.resource/remote/bc046e560111f250536a91eac9481a9186224cdc364d0b58e3224caa71c3b089.png)
 
 使用 UART 控制台仅用于调试
 
@@ -79,15 +79,15 @@ screen /dev/tty.usbserial-AB0LR7NH 115200
 
 注意： WAN 线必须插好，路由器 IP 地址为 192.168.1.1。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3prvykltGQ5HDq4uv7ia0K1W3XCMCFy1RayjRCuLsC9tHXUmedxuWyGA/640?wx_fmt=png)
+![](../../.resource/remote/f68466aa8428d9431a9465ecc15032af190895ed12d5d04892f5a056bba43cc7.png)
 
 供应商使用客户端 JavaScript 保护，但可以通过代理轻松绕过。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3WwnCeDhExEH9qsKiaXVpUBwe3GNkKtHmicknA8ypVHzYNrgQqnEw4ibFA/640?wx_fmt=png)
+![](../../.resource/remote/739dbb09736f2890a79215815da8a290ee2ff4f2888dbc3a95b89cf0f3371309.png)
 
 执行命令时，可以在串行控制台上看到确切的命令。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3jpHjIHjXOk6mjMYnMjb3GtCjrc9BwFITah79QkwfLSIOYKibX1Ph2gQ/640?wx_fmt=png)
+![](../../.resource/remote/9ed79795f2236f67f4adc45af517c48f4fb30dda0acbe982ec1bee4c0245aada.png)
 
 我使用了 ghidra 和其他逆向工程工具来检查发生了什么，但是现在在服务器端没有清理参数就足够了。
 
@@ -95,29 +95,29 @@ screen /dev/tty.usbserial-AB0LR7NH 115200
 
 注意：还有其他请求，但它们不是实现代码执行所必需的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3j6icLqibGHHnEfDBuCC0Rh4XMZqEVQEMbAX7usxxia6c5Bxq98GauKicyQ/640?wx_fmt=png)
+![](../../.resource/remote/75e31073a7e85d359477e5e185a2e6005a593029435694417a11facde7df2f5c.png)
 
 简单的代码执行
 -------
 
 下图包含 /var/tmp 文件夹的内容（通过 UART）该文件夹是可写的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3NhZibybXMK6psIsrQwt9py4HhzricIudxHG2nOH4fKOPKsbZd7NSGX9A/640?wx_fmt=png)
+![](../../.resource/remote/40ff7a699f9c933f9a0236400002ae0c3458873624a22b1b02c38bd78e533964.png)
 
 修改 host 参数创建文件：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3mK9xRhiamNUUpUvuFJ5ibRkFywB59pJabX2RjfibfGeqaUicXO5AL3AnIQ/640?wx_fmt=png)
+![](../../.resource/remote/eb456b8ebbe9a132363278a58d19ea301031aadf5f85ac3d5dbd6da98a2e804c.png)
 
 /var/tmp/k44 文件内容如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3ZXUrbMY2hbswZF0pDKkwI4LziceicwcJpsdghwcDlnicPgh6QJicYH84Hg/640?wx_fmt=png)
+![](../../.resource/remote/15af0e8504c880cb5b874bb53303c43c91b64049173ba22e296e5a336d391f1d.png)
 
 反壳
 --
 
 供应商提供的程序是有限的。成功的攻击需要多个步骤。TFTP 客户端可用于将文件从攻击者复制到路由器。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A38P3Vq0ZYCWNA90hfqHYf8hZSMvFxGm7vtWMIYqLD1ISk8QanJ3QcrQ/640?wx_fmt=png)
+![](../../.resource/remote/c0ca63a2445099fccc7de77b93fe0e3c27ecd3a0f43fb3e2d7a116ccfd8c698f.png)
 
 注意：用户名和密码是必需的。
 
@@ -145,7 +145,7 @@ screen /dev/tty.usbserial-AB0LR7NH 115200
 3.  执行外壳
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A36ww65kL35VDWT8qWnFOibicbzqLsicU6PGlqZZcvDzknulAxFbUMmibiasg/640?wx_fmt=png)
+![](../../.resource/remote/ab086191cfae53117d1a9b7746a6d939ba5191ce8073ad10e48a6ad4795aa364.png)
 
 POC + 演示
 --------
@@ -159,15 +159,15 @@ POC + 演示
 
 使用多处理程序：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3icjYsr9tKw8mOiceR95BJfHZDH3FPOMK6qXNnbja2HZ7bar3uholSypA/640?wx_fmt=png)
+![](../../.resource/remote/b011a76a5fa5e0a9f364bf52b0381ad8dd669901f69a4e9b41b67d3e79c37cad.png)
 
 执行脚本：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3ibKL7gICUpHdzHNicCyg9o7K1NjEvjk4Tb4FMYCNMGJQfQUFaG7FCvGQ/640?wx_fmt=png)
+![](../../.resource/remote/fe49b69f234dd554fd3e8609ad2661c336bec3b123002136d51dec10105a40f2.png)
 
 反壳：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3l6fVWLibS4vviabmvtWYf0relvIsPBbqrNrhTiaUTeZFuHVxicyKEEyMzQ/640?wx_fmt=png)
+![](../../.resource/remote/a757f555208a1f5af981f7d4d56bc101259b440fb63fec4c8847915fb1b4b37b.png)
 
 POC
 

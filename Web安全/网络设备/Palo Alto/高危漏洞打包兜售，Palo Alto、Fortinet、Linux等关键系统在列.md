@@ -57,7 +57,7 @@ source_status: "unknown"
   
 尽管该事件当前被监测平台定级为“低严重性”，但其潜在影响不容忽视。建议各组织立即评估是否存在相关服务和插件暴露，尽快部署厂商补丁，并重点监控暗网通道中与该漏洞包相关的传播和交易活动。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/0KRmt3K30icWxr8tLfoD1kib3XibAA9oQwKel65m6hTXEYDzicWOP2vIFcDY8ARcclF3ejBJUeicmYvZa1pK1iaOTRLQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/51362338b25134ec833552c6f528992eb61251ec484dbeeb9caa0a49d276571e.png "")  
   
 经整理评估， 这批漏洞中还是有一些重磅级的，CVSS评分9分（有5个）以上。可能对相关设备造成重大危害。  
   

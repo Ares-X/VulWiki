@@ -54,16 +54,16 @@ schema_version: "1"
   
 想想看，Spinnaker是干什么的？它是部署应用的。攻击者拿下它，就等于拿到了通往源代码仓库和生产云环境的万能钥匙。这个杀伤力，已经不能用“严重”来形容了。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibeYcM00yGrR0ibdJD6M91iaYJXBcrLqhm1dwS0x6bmXFAK7C1Riag5XpCicbJWuHGojj49caJd0OWW8JosglYsy8tbl475hvUrBqBw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b71b5947319f5451984c60d06a2db84d0e25c8b7bfaabb7c9bc22e1ed3640be0.png "")  
 ## 谁在用Spinnaker？  
   
 Spinnaker是Netflix搞出来的开源云原生部署平台，后来交给了持续交付基金会。现在用它的，都是些不差钱的大公司，Google、思科都在列。它的特点就是能处理极其复杂的部署流程，比如一个应用可能包含十几个微服务，每个又有多个副本，依赖关系像蜘蛛网。Spinnaker用“管道”这个概念来抽象这些流程，也正是这些复杂的功能，埋下了隐患。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibdsnKtfhfzMkOhpzYxz3EuMSRNWmIBcwaKuxS9vxbx3ou7ic8P9EQyJTVGuXSy1q4W77obV3eStpnQZNcQuU7GtT8OeW40LfR20/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b62270cd60e2ac839a0ac14b04da67d0b84f2b74c9a61549a7da141aac91a695.png "")  
   
 虽然官方推荐内网部署，但在公网上还是能找到不少实例。用Shodan随便搜搜，就能发现94个暴露在外的Spinnaker。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibfT3xur6RmiaepluXp3pZFmrlLLeVoNnFFZk8c3CcicApiat3YpwsS69M6sk8DKF6O18hLS99WQuuq1YOWiaic8lq0rLbUibWLp7Cmrs/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3e815e80694fa69e59a16786ecfec92fa7174e9e1e2108832555ff9aba1ca889.png "")  
 ## 看懂它的软肋：边界信任模型  
   
 要明白漏洞为啥这么厉害，得先看懂Spinnaker是怎么“想当然”的。  
@@ -93,9 +93,9 @@ Clouddriver是“肥肉”，因为它手里攥着访问生产环境的云凭证
   
 只要攻击者知道一个有效的凭证名（通过另一个公开接口就能拿到列表），他就能让Clouddriver执行任意命令。拿到shell后，第一件事就是去读 /opt/spinnaker/config/clouddriver.yml，里面往往明文存着各种密钥。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6Tibd9jzJrLXFDea3lq7kLGMc20PH3SJFEyua0VJZTVYplSWoBoQKj055rSbDH36YWzpONXmaWvQpdhYuB5Q7EibePrwwxDwXYaLDM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9f047d4aa70d72ec533ff9caa698ac00b6cad04335f16b0d3641328556af4d63.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibfWVwV91NuIU9MbiaGog27z9TjR6srauRkuUSKHBVibzP6h7ADLs24pKrIHmicibS3qlfYr00qzzStob45r9h5CkRKf0O5ia5bHQj6M/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a95364fffdcc25569318118976593382785ca3076e416df1013f1e8adba97f7b.png "")  
 ## 第二个洞：Echo服务器Spring表达式注入  
   
 **CVE-2026-32613，从事件中枢下手。**  
@@ -110,7 +110,7 @@ Echo服务会在触发管道时，负责解析这些表达式。问题来了：�
   
 一旦管道被触发，代码就在Echo服务器上跑起来了。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibeCVn1wXVT0HIiaUcaYNC2G17MxcUXwiaCN17icyP18312RVbDrTicOJ4wuXHdibAGSkKjgxPj1q0URxafibKq80pC5KiaOKPZlyj2WEM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ea2f3a326a63f9770c35187908714036c00eb1527472317043b51e07d6ca4d22.png "")  
 ## 从得手到横扫：可怕的内部提权  
   
 拿到Echo的shell可能觉得不过瘾？别急，Spinnaker的“无内网认证”特性来帮忙了。  
@@ -123,7 +123,7 @@ Echo服务会在触发管道时，负责解析这些表达式。问题来了：�
 >   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibcGuHibSC443DK3Vc7iaRCE8258CREp30sfHK4AuL6HPJ7WnCmQJQoiamibqQQVxJrLLFwt7k0b0EJFDRoN24en5WqzA70VVyqRibgc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b8d2c088efa9626becf7e8e0e0a69d87e179807d73e04ab68ffc58c1ebc4ea95.png "")  
 ## 修补和防御，光升级不够  
   
 漏洞已在Spinnaker 2026.0.1, 2025.4.2, 2025.3.2版本中修复。赶紧升级是第一步。  

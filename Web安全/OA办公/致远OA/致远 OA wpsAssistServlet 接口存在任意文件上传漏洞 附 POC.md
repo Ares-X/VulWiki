@@ -75,7 +75,7 @@ CNVD 编号:
 
 致远互联 - OA
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2eJbCLDGbknKQxGjM1GFJDO9Cdl6iboPwJuN4RU0YA7BvdicUwqfo6QAQ/640?wx_fmt=jpeg)致远 OA 存在任意文件上传漏洞
+![](../../.resource/remote/d085c561b420b8eb85159ebbbf42fbaa306de445fbdfee6101eefd0622b1524c.jpg)致远 OA 存在任意文件上传漏洞
 
 4.fofa 查询语句
 -----------
@@ -111,22 +111,22 @@ Content-Type: application/vnd.ms-excel
 
 > 请求长度说明：原资料 Content-Length 为 217；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2pLA9rcbdBMU71iavkdSzGQfK70S8wdkiawenGDEg3juWYHpKMf1HzAaQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/6368cdc457e02b4dae496907f5441cb2070197e1d504c2bab164113ad6bf08e6.jpg)
 
 拼接上传的文件路径：https://127.0.0.1/01014.jsp
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE26EuVMe8EcRjicDsJpU5L7JY9Eb4G5ua9ladfHWSkAQQIC4lXiaagcJeg/640?wx_fmt=jpeg)
+![](../../.resource/remote/1ea994607af78dd070c580381141f222b11706067317935765fde450ca1ea97d.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号 南风漏洞复现文库 并回复 漏洞复现 66 即可获得该 POC 工具下载地址：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2gq8AiaXdeVpRWno3hltEIC4sBXp6W53cXrmSHdy8crU3nXhLiceVSyibg/640?wx_fmt=jpeg)
+![](../../.resource/remote/29923e4b0c625c737df200c1986dd3cf5c5d46f08cd4342ffa65ee52ebe84f0c.jpg)
 
 本期漏洞及往期漏洞的批量扫描 POC 及 POC 工具箱已经上传知识星球：南风网络安全
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2CgR7iasbqR2YoBGVeicH5a4aCn91iamFfKVGqWbdt4gNWrpjsMphFTlGA/640?wx_fmt=jpeg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE22ke9ZIbocIeJiasMPgsa6afkVzKufsyJHM3Fu2ncGrtRT5bmuB64fvw/640?wx_fmt=jpeg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2T782pM3mNhzctd0cYzoBDPl36fbFQVNh6NxMOz5lZa2ABSeKyBRQpw/640?wx_fmt=jpeg)
+![](../../.resource/remote/f71e24ffe40d0984ccc4d7d0971878d5b013ad64f6cbc8d6d27713a1abbb0120.jpg)![](../../.resource/remote/bed21df3e4c6b30b5e3e765749d89d85299fc615934444b9fbae51aa5cb11dc6.jpg)![](../../.resource/remote/60edce5f69691f2dd9e2149ac02fae513695a58c7a68b13d3a8b737b35d64f02.jpg)
 
 7. 整改意见
 -------

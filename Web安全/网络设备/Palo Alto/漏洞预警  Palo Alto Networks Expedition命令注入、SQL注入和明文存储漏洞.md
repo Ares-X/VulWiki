@@ -67,7 +67,7 @@ source_status: "unknown"
   
 Palo Alto Networks Expedition是Palo Alto Networks提供的一款迁移工具，旨在帮助网络安全团队进行防火墙规则的迁移、优化和管理。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVbXfJt6LWcEicwqvnut0jr8XVD0wCugFtw6lXdGKibsSscyqIhLDBnhNibWsz1YjeLGqGGHb3pyKN0Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e320023d2700383b5f03e6ec1779c6242ada883f565a8716cd3787d6b31a5118.png "")  
   
 **0x03 漏洞详情**  
 ###   

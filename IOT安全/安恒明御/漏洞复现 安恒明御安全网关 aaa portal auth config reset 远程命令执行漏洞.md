@@ -81,7 +81,7 @@ fofa: "title=\"明御安全网关\""
 
 安恒明御安全网关
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BP9roYEGZbVybeFsQmOuk4bRNpG05bWiaQtCibVYv2oRhIXEj60fmTjMMMlrDicvTvNA1jtstqkS4T3A/640?wx_fmt=png&from=appmsg)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/7170737b2ad582a98786f746c94510bd10461cda68a22ce18be1fdc748908577.png)
 
 03
 
@@ -104,7 +104,7 @@ title="明御安全网关"
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BP9roYEGZbVybeFsQmOuk4bicgWhbE3R8Xibqbxmqjrola5kaVFbiaYcJOHLJqSl9HjppjFy6yibib1fGQ/640?wx_fmt=png&from=appmsg)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8d49266295508d54f116b2dfc255325f7472af045737aff8dd42ec8d24abb4a1.png)
 
 05
 
@@ -132,7 +132,7 @@ http://x.x.x.x/astdfkhl.php
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BP9roYEGZbVybeFsQmOuk4b1LLibC5RwSXBknH6fic4JiaxCrIodkzDR1HDlUwKoEIXhKXIibqgAULrDA/640?wx_fmt=png&from=appmsg)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4c08d6436dc40e7edecab0c7b86fa866ba9b63422b2d63338750d0258452c4d5.png)
 
 漏洞复现成功
 
@@ -187,7 +187,7 @@ nuclei.exe -t mypoc/安恒/dbapp-mingyu-aaa_portal_auth_config_reset-rce.yaml -u
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BP9roYEGZbVybeFsQmOuk4b6kL7WibJp4rL6SX1T3dlabTk5Gl65C6fnXfMgG89ticVf1liaTjV2JXZg/640?wx_fmt=png&from=appmsg)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/76a554488182148871a2b55ab4a02b3de1be2165484bc01121f6ae9c64579a50.png)
 
 07
 
@@ -207,11 +207,11 @@ nuclei.exe -t mypoc/安恒/dbapp-mingyu-aaa_portal_auth_config_reset-rce.yaml -u
 
 后台发送【**工具**】获取渗透工具包
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BO3VtNCUQ6Bllhiag7ljEfRGYUNjiaPbSgc1bgPKxIibrYjsbZiaLcWPec8Gd6zLBlODFOCCAbDDvicEAw/640?wx_fmt=png&from=appmsg)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a6ca4f7b5f40e03a13963c25483940067a6a76f6194d579c575e19085d7b1637.png)
 
 后台发送【**电子书**】获取电子书资源包
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BO3VtNCUQ6Bllhiag7ljEfRGfkkQLABlhLdFkF5eAv8Jm1yF2wpq7zdFbw0slibDtK4H1Rbm0wuSDBA/640?wx_fmt=png&from=appmsg)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/7a1cc03df13235817d0d3681f1a9e4fb9850d1138e66b444c0cf47d125aa8c86.png)
 
 ---
 

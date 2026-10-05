@@ -161,7 +161,7 @@ https://ubuntu.com/security/CVE-2024-5290
   
 **Part 1：CVE-2024-35235**  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/00GYaClAoOqqtuNmB7L4EHr0jFjRyyCu0TDDqtE2SfvmTYvEYJpC4yJPxpqW3fShf1EibJCOOgb5n8PCJm5gYRrIncvep5Cp0/640?wx_fmt=svg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c224329003ecb289f4c6e42cdd47f267e3937927282886286d07ef1e58527f4b.svg "")  
   
 **利用Dbus设置Listen参数**  
   
@@ -173,24 +173,24 @@ DBus总线上有很多内置的安全控制机制，用于限制哪些用户或�
 org.opensuse.CupsPkHelper.Mechanism。这是一个与打印系统（CUPS）相关的服务，提供了一些方法，涉及参数设置，打印机创建等操作。这里可以使用  
 busctl introspect命令来查看该服务的详细信息。通过introspect命令，我们可以查看特定服务暴露的方法以及对应的参数类型等信息。如下是该命令的输出：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV14UhpV3lw2Su5xXP87p3y4KkmMPcaaaze9ALdU5XE1zbTdGaxhNxLfQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/976099434aa4c8de3e984cb35d8c7dc9c8921788684e7f7138808583e2e14c16.png "")  
   
 这里描述了每个接口对应的参数类型。当然，这里使用命令  
 gdbus introspect--system--destorg.opensuse.CupsPkHelper.Mechanism--object-path /可以看到更为详细的描述信息：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1EyxlW22IdbViaZyXVu4NrFPTQeggnYia8nJVA91wWAxZETpczappSyQQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9dc729b22d277157b5a0996ad515a8eff92423161dd23090aba71ec710696a1f.png "")  
   
 其中的接口ServerGetSettings，ServerSetSettings分别用来查看以及设置CUPS的运行参数。在每次设置参数（即调用ServerSetSettings）后，CUPS都会进行一次重启以加载新的配置。（在后文中，我们将多次调用该方法。）  
   
 我们可以先简单使用busctl调用一下Dbus方法，例如调用ServerGetSettings方法：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1ECxjFicML0jfOodZajhSYricEN2crkxKVSqYGwia9MQSuNDJUTnq4gWwg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2aece68b8b0ecf4cebb5e13a0ca7e2a1f0aa8ab88d60a8d9b1e23133b430b11d.png "")  
   
 这里返回的类型类似于字典，15指代长度，第一个key为  
 _debug_logging，value为0。相应的，可以通过ServerSetSettings设置参数，例如，这里的  
 IdleExitTimeout已经被修改为了61（原先为60）。实际上，这里的配置信息和文件/etc/cups/cupsd.conf是对应的：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1iah8gHaAicjOYmVKiaYTpM5icpQegwibBlIqq167lsTPwFibI5hn3IR91gsQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/18c24fdb2c7a1d6994b8bc250841a3f381ab48010c8fa6772c36bd40f2cb083c.png "")  
   
 接下来，我们就要设置Listen参数，将其设置为一个软链接路径。  
   
@@ -228,7 +228,7 @@ EACCES(Permission denied)。这个操作尝试删除软链接/tmp/stage/passwd�
 chmod("/tmp/stage/passwd", 0140777)失败，同样返回了EACCES (Permission denied)错误。这一调用试图将/tmp/stage/passwd的权限更改为777，即对所有用户可读、可写、可执行。与unlink操作类似，chmod失败的根本原因也是AppArmor限制。cupsd无法对  
 /etc/passwd文件进行更改。  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/00GYaClAoOqqtuNmB7L4EHr0jFjRyyCu0TDDqtE2SfvmTYvEYJpC4yJPxpqW3fShf1EibJCOOgb5n8PCJm5gYRrIncvep5Cp0/640?wx_fmt=svg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c224329003ecb289f4c6e42cdd47f267e3937927282886286d07ef1e58527f4b.svg "")  
   
 **修改cups的配置文件属性**  
   
@@ -241,7 +241,7 @@ $ busctl call org.opensuse.CupsPkHelper.Mechanism / org.opensuse.CupsPkHelper.Me
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1hXYaq5scu8B4zJKcqjJuOLMpemKUBmxtFFOVE8G2Bg87ArQesj9iapQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5a98772713f404fda480b7079b85a98e40d62649b4f738ab2902b39b4360f988.png "")  
   
 结果成功修改了文件的属性。  
   
@@ -251,9 +251,9 @@ $ echo "Listen /tmp/stage/cups-files.conf" | tee -a /etc/cups/cupsd.conf > /dev/
 $ busctl call org.opensuse.CupsPkHelper.Mechanism / org.opensuse.CupsPkHelper.Mechanism ServerSetSettings a{ss} 1 "IdleExitTimeout" "61"
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1eYNAs0F807icPvSuxxy8gSycrU1iacG4GjLDbmYdBianmeTKA1fsCWgRw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e9a95dd7d1ff9507a53efc811ebcc517b2b91bcd2721dd1d1655fce4b4b1c8a1.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/00GYaClAoOqqtuNmB7L4EHr0jFjRyyCu0TDDqtE2SfvmTYvEYJpC4yJPxpqW3fShf1EibJCOOgb5n8PCJm5gYRrIncvep5Cp0/640?wx_fmt=svg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c224329003ecb289f4c6e42cdd47f267e3937927282886286d07ef1e58527f4b.svg "")  
   
 **以任何非root用户权限的方式运行命令**  
   
@@ -324,7 +324,7 @@ busctl call org.opensuse.CupsPkHelper.Mechanism / org.opensuse.CupsPkHelper.Mech
   
 **Part 2：CVE-2024-5290**  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/00GYaClAoOqqtuNmB7L4EHr0jFjRyyCu0TDDqtE2SfvmTYvEYJpC4yJPxpqW3fShf1EibJCOOgb5n8PCJm5gYRrIncvep5Cp0/640?wx_fmt=svg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c224329003ecb289f4c6e42cdd47f267e3937927282886286d07ef1e58527f4b.svg "")  
   
 **利用Dbus加载动态链接库**  
   
@@ -337,7 +337,7 @@ gdbus introspect --system --dest fi.w1.wpa_supplicant1 --object-path /fi/w1/wpa_
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1Kg4GdEaZ5GjOQY433yMMER23by3icEn4DW60WKcjHW0IWhyCXQptyuw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f978bbb5b9856a45c39854374baddcc6abdbebd4e601d478660f9653bc257c78.png "")  
   
 这里我们需要用到的接口是CreateInterface，其参数类型为a{sv}，表示一个字典（数组类型a）的键值对，其中：  
 - key是字符串类型(s)。  
@@ -400,9 +400,9 @@ Call failed: wpa_supplicant couldn't grab this interface.
 尽管会显示执行失败，但此时动态链接库已经被加载了，查看一下是否生成了  
 /tmp/stage/getroot：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1jqibfq3wgErrW4TVicAYiaj1JGFn5odiaCicHoBufx1bUbzYjx0bCHibUUQg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/de8d920f36d274a69d586a0dc15eb57bf3fcae6541f9934aedd2cee17ff08f26.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/00GYaClAoOqqtuNmB7L4EHr0jFjRyyCu0TDDqtE2SfvmTYvEYJpC4yJPxpqW3fShf1EibJCOOgb5n8PCJm5gYRrIncvep5Cp0/640?wx_fmt=svg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c224329003ecb289f4c6e42cdd47f267e3937927282886286d07ef1e58527f4b.svg "")  
   
 **以netdev组身份执行Dbus命令**  
   
@@ -436,7 +436,7 @@ Call failed: wpa_supplicant couldn't grab this interface.
   
 可以发现除了root用户可以调用接口外，用户组netdev也同样可以。但是，真的可以吗？把当前用户添加到组netdev中，然后执行一下命令：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1nHNexxel9DbqPeLXdRPSRWWd5DcMazk8IDG46FD5vVHicRDUcFjD3sQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2ff36d2946430ccc65c070d0a51d5bc84fb983284aebcd8184e633e9fabacc71.png "")  
   
 无法执行。  
   
@@ -522,7 +522,7 @@ Alias=dbus-fi.w1.wpa_supplicant1.service
   
 果然，在ubuntu24.04上是支持使用以netdev组的身份进行调用的。测试一下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1GM3Yj4oyj7o68gG8KHu2cO7jdmoswA7ruMW9JWUvmQluwV3ibQ565Eg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c0732ec0a507052f1b55d60f517a0d81bb43bef582c5541a3da75e4ce72e99ca.png "")  
   
 成功调用。  
   
@@ -531,7 +531,7 @@ Alias=dbus-fi.w1.wpa_supplicant1.service
   
 这里使用原作者制作的利用链流程图，比较直观清晰：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1WO94jqqbMKA3E7SRVnibdMG65vqSavr0PVCSYu5biaaYq6lUlGT1RPKA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/91e72418189c5907f809acf5c1648071493037edd88497f3d1bce80b6a8fbbeb.png "")  
   
 图片来源：  
 https://snyk.io/blog/abusing-ubuntu-root-privilege-escalation/  
@@ -557,7 +557,7 @@ Group netdev，使得后续的外部调用将携带netdev组权限。
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Pf9eicDVDMxGEzDKtVnqYIQfGdNvx3aV1mzJxibqQlg7hFI7vFeKkZhfy6xZGEcqBJQmjs0rcfKTOHEutfCwxmlA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c6e3efdd5c599ea9807bfd250fe81af6dd12b139f95077f05098cf5348704341.png "")  
   
   
   
@@ -594,7 +594,7 @@ https://w1.fi/wpa_supplicant/devel/dbus.html
   
   
   
-点这里![](https://mmbiz.qpic.cn/mmbiz_gif/MfTd6rd9CyvNRMW8I9cvI1CK5gKiaYqg2veTn9t9dAe1GxYic7pAvgvRIKNFickConFyX8AvW2reAq8GchJI6aBpA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+点这里![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/fcfe0ed2fad7409a4ffe6651c11322cf760ca7b79bdbea0b0be15be965718f1e.gif "")  
 关注我们，一键三连～  
   
   

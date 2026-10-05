@@ -77,13 +77,13 @@ Apache Spark RPC 协议中的反序列化漏洞分析
 `Spark RPC` 是一个自定义的协议。底层是基于`netty4`开发的，相关的实现封装在`spark-network-common.jar`和`spark-core.jar`中，其中前者使用的`JAVA`开发的后者使用的是`scala`语言。  
 协议内部结构由两部分构成`header`和`body`，`header`中的内容包括: 整个 frame 的长度（8 个字节），message 的类型（1 个字节），以及 requestID（8 个字节）还有 body 的长度（4 个字节）  
 body 根据协议定义的数据类型不同略有差异.  
-![](https://blog.riskivy.com/wp-content/uploads/2018/12/c380f49dfcc8116c68a46f8cddc5288c.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2018/12/c380f49dfcc8116c68a46f8cddc5288c.png) `）
 
 `RpcRequest`消息类型的 body 大致由两部分构造，前半部分包含通信双方的地址和端口以及名字信息，接下来就是 java 序列化后的内容`ac ed 00 05`开头。  
-![](https://blog.riskivy.com/wp-content/uploads/2018/12/596d1d0bd759bd000e8ba84cbcd430f1.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2018/12/596d1d0bd759bd000e8ba84cbcd430f1.png) `）
 
 消息类型为 RpcResponse 的 body 就直接是 java 反序列后的内容。  
-![](https://blog.riskivy.com/wp-content/uploads/2018/12/03db15ecbf7e462d44449682fa60674e.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2018/12/03db15ecbf7e462d44449682fa60674e.png) `）
 
 3\. 搭建 Spark 单独集群服务器  
 从官网下载，然后通过 - h 指定 IP 地址，让端口监听在所有的网卡上  
@@ -148,7 +148,7 @@ print >>sys.stderr, 'received "%s"' % data
 
 ```
 
-![](https://blog.riskivy.com/wp-content/uploads/2018/12/39c92f0a9a4175bd3a227dd0d5d5e236.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2018/12/39c92f0a9a4175bd3a227dd0d5d5e236.png) `）
 
 5\. 反向操作客户端
 -----------
@@ -216,7 +216,7 @@ spark-shell --master spark://127.0.0.1:1234
 
 ```
 
-![](https://blog.riskivy.com/wp-content/uploads/2018/12/389ac184e438f5289aeafc490c60e2e9.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2018/12/389ac184e438f5289aeafc490c60e2e9.png) `）
 
 6\. 总结
 ------

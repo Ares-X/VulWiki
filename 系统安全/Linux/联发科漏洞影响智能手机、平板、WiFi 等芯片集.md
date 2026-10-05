@@ -64,7 +64,7 @@ schema_version: "1"
 
 Guru Baran  代码卫士   2023-07-05 17:23  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -74,10 +74,10 @@ Guru Baran  代码卫士   2023-07-05 17:23
 **联发科在2023年7月产品安全公告中披露了24个漏洞，影响适用于智能手机、平板、AIoT、智能展示、OTT和 WiFi 的芯片集。其中，CVE-2023-20754和CVE-2023-20755被评级为“高危”漏洞。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQwrJ1yUOO5At5u4pYVA56sgSJpM0AdvjicUicMJHCEfQ3bxc3w8DOKZLZe2fBu5ibS2EDYhLGUaleZw/640?wx_fmt=png "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQwrJ1yUOO5At5u4pYVA56sgSJpM0AdvjicUicMJHCEfQ3bxc3w8DOKZLZe2fBu5ibS2EDYhLGUaleZw/640?wx_fmt=png "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
 **高危漏洞**  
   
@@ -90,7 +90,7 @@ CVE-2023-20754是位于 keyinstall 中的整数溢出漏洞，可能会导致界
 CVE-2023-20755是位于 keyinstall 中的输入验证不当漏洞，可能导致界外读，从而造成本地提权。利用该漏洞要求系统执行权限，无需用户交互。受影响芯片集包括：MT6580、MT6731、MT6735、MT6737、MT6739、MT6753、MT6757、MT6757C、MT6757CD、MT6757CH、MT6761、MT6762、MT6763、MT6765、MT6768、MT6769、MT6771、MT6779、MT6781、MT6785、MT6789、MT6833、MT6835、MT6853、MT6853T、MT6855、MT6873、MT6875、MT6877、MT6879、MT6883、MT6885、MT6886、MT6889、MT6891、MT6893、MT6895、MT6983、MT6985、MT8185、MT8321、MT8385、MT8666、MT8667、MT8765、MT8766、MT8768、MT8781、MT8786、MT8788、MT8789、MT8791、MT8791T和MT8797。受影响软件版本包括安卓11.0、12.0和13.0。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQwrJ1yUOO5At5u4pYVA56sgSJpM0AdvjicUicMJHCEfQ3bxc3w8DOKZLZe2fBu5ibS2EDYhLGUaleZw/640?wx_fmt=png "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
 **中危漏洞**  
   
@@ -206,15 +206,15 @@ https://gbhackers.com/mediatek-security-flaws/
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

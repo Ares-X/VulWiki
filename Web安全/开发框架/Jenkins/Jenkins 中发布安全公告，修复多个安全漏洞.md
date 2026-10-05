@@ -37,7 +37,7 @@ schema_version: "1"
 #  Jenkins 中发布安全公告，修复多个安全漏洞   
  独眼情报   2024-10-04 09:58  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/KgxDGkACWnQ0UL7gborIjpet3fLGB2ibbt23xO93gP6FFcpN4KFUUPww2EYlgY102DEjePibYZCibMrjcU4Roq43Q/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/75ea1e92a8b1263fc541ea54a3439b08a8e548636d95d771574eccf1716660b3.jpg "")  
   
 Jenkins 项目发布了安全公告，敦促用户立即更新其安装，因为发现了多个漏洞。这些漏洞可能允许攻击者窃取敏感数据、绕过安全限制，甚至完全控制 Jenkins 服务器。  
   

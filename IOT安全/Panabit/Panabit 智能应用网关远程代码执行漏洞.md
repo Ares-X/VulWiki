@@ -64,7 +64,7 @@ source_status: "recorded"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -74,7 +74,7 @@ source_status: "recorded"
 
 **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -84,7 +84,7 @@ panabit 是一款用于流量控制的实用软件工具，panabit 缓存加速�
 
 panabit iXCache 系统 **date_config 存在命令执行漏洞**，攻击者在获取 Web 权限的情况下，可通过构造 payload 进行远程命令注入，获取设备 root 权限。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -94,7 +94,7 @@ panabit iXCache 系统 **date_config 存在命令执行漏洞**，攻击者在�
 
 影响版本 SHANGHAI r3 [11.1]
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -104,7 +104,7 @@ panabit iXCache 系统 **date_config 存在命令执行漏洞**，攻击者在�
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hA8803KxcQScEShwxphsvibHQ2kEzbtR42qTrOBowRV5WBzicc95OoRI3TCRMhBL2eWVFZk3XcqRllw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/bf314a0e5b7edb43c1ac112a9263e50507adeec68e4bfce57d08b5f9a8abc227.png)
 
 **利用此漏洞需要高权限（****默认账号 admin 密码 ixcache****）**
 
@@ -125,13 +125,13 @@ ntpserver=0.0.0.0;id&year=2021&month=08&day=14&hour=17&minute=04&second=50&tz=As
 
 POST 请求，响应存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hA8803KxcQScEShwxphsvibHB9J19osM2lospcNqRe0FbPAOwZclglibUxXxGR7TI8KXAImu57DV5uw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/11ad7411811dfd69dca4636ac1ab3aa0de1381f23e5968825af52fddf8c184db.png)
 
         执行 id 命令，前端页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hA8803KxcQScEShwxphsvibHmzyhElHyWtXEx7ghdIhey4MUIicmxqT25dF7gEtWB4CQgUxNCFwDdeQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0a9c97ec9439a9e0695de241b7350ca60b67225d61e3f0f6fa24189b27a13e37.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -154,7 +154,7 @@ https://www.panabit.com
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -170,7 +170,7 @@ https://www.panabit.com
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

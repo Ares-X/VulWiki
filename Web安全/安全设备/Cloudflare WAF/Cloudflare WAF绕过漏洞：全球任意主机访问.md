@@ -159,7 +159,7 @@ ACME 是证书颁发机构（CA）用来验证域名控制权的协议。在 HTT
  主机名的自定义规则。接下来三张显示每个演示主机在请求 ACME 路径时返回源站生成的 404。  
 #### 阻止页面（正常请求）  
   
-![阻止页面](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7EgP9nqCnSdBicEJQ39MqX64AQ43duUJA0jOsibGnyTQwfP0Oiaj6wQjug/640?wx_fmt=webp&from=appmsg "null")  
+![阻止页面](../../.resource/remote/2af16dff4ea3ec2183d9a9d1e6ffa42d566487cfc9d36d1fba18d77478183862.jpg "null")  
   
 阻止页面  
 #### 自定义规则 - 阻止 cf-* 主机名  
@@ -167,22 +167,22 @@ ACME 是证书颁发机构（CA）用来验证域名控制权的协议。在 HTT
 在演示中，我们创建了一条规则来阻止任何包含 cf-  
  的主机名。在生产环境中，许多团队会阻止公共互联网，仅允许企业 VPN 出口。这条规则模拟了我们演示中的这种安全策略。  
   
-![自定义规则](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7wtL4IZrTeh86YiaWejicJwgPk4nLibLYZMcvXD2ooJ4rH4TV23Q2zpfsw/640?wx_fmt=webp&from=appmsg "null")  
+![自定义规则](../../.resource/remote/154576994ce9a2236a336eb218c9a6ccce1754cd8326df2253f9859d140fab80.jpg "null")  
   
 自定义规则  
 #### 源站 404（Next.js）  
   
-![Next.js 404](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7eDFseVswJmuGve4DibprjrctZmzIEsrUlIcian1qenS06rFnmleUriaOA/640?wx_fmt=webp&from=appmsg "null")  
+![Next.js 404](../../.resource/remote/6c5ebb4b3e95c3fc033a2ef280ba783f4931483f92e564a7f05bea5affad817c.jpg "null")  
   
 Next.js 404  
 #### 源站 404（Spring）  
   
-![Spring 404](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7CSEXoy4kkMibwcP2UrsFqkGoFj0IicSPWGzCcILVjukfb7GrmdEGWSQw/640?wx_fmt=webp&from=appmsg "null")  
+![Spring 404](../../.resource/remote/01883c0ba02418307a9c99d9cc5569225713adb8a1fceab516435569e774ccf9.jpg "null")  
   
 Spring 404  
 #### 源站 404（PHP）  
   
-![PHP 404](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7A8icbvtZorHhUGQibzuJBk7x8KfQGbqw7HKMLV2FAITc97IwIp8Vr7Xw/640?wx_fmt=webp&from=appmsg "null")  
+![PHP 404](../../.resource/remote/0163b147335d0ce5cb5dafe53a7642d29039b8c2faf09b761b515f98c9985b71.jpg "null")  
   
 PHP 404  
 ## 如何获取稳定的挑战令牌  
@@ -191,12 +191,12 @@ PHP 404
  功能允许你为 CNAME 到你域名的第三方管理主机名和证书。我们添加了一个名为 cf-well-known.fearsoff.org  
  的自定义主机名，并明确选择了 HTTP 验证。下面的截图显示了添加流程和生成的待验证状态。  
   
-![添加自定义主机名](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7vSvIF7wdkHUiciaIje9cIUHutrAFnoDUPItQDsDaibS8ET4RMrZdqeicsA/640?wx_fmt=webp&from=appmsg "null")  
+![添加自定义主机名](../../.resource/remote/6a37f027a3d8229d471010d86fe8d179fb2f1ec1f496da7e2e650a698e6eec8e.jpg "null")  
   
 添加自定义主机名  
   
   
-![待验证状态](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7CKQUYXb7vUMQ6IhMwz1vUfbOdk4K2ZIRrGib8d1H9g7ia8ZEzW8Pazow/640?wx_fmt=webp&from=appmsg "null")  
+![待验证状态](../../.resource/remote/9565627d581e8eebd2a189e294150c0f8e369679b91ced5eee7a00f261f5f06b.jpg "null")  
   
 待验证状态  
   
@@ -220,14 +220,14 @@ WAF 控制本应是前门守卫。当单个维护路径绕过这道门时，"内
 ），请求可以到达 /actuator/env  
  并返回进程环境和配置信息。这些数据通常包含敏感值——数据库 URL、API 令牌、云密钥——这大大扩大了源站任何错误的影响范围。  
   
-![Spring actuator 泄露](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7gPmYaGPgv82zTMcFyHGmbibPstr7k2kze47sXqK63U90We616moyGRw/640?wx_fmt=webp&from=appmsg "null")  
+![Spring actuator 泄露](../../.resource/remote/ce46e4ceac02cda6b3f4e2a5757afa56dcc8ad0603545c87739189b0a5a0bc76.jpg "null")  
   
 Spring actuator 泄露  
 #### Next.js  
   
 服务器端渲染框架通常会将服务器派生的值传递给客户端以水合页面。当 WAF 控制前门时这没问题。但当源站直接响应时，同一页面可能会暴露从未打算从公共互联网访问的操作细节。  
   
-![Next.js 信息泄露](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7eHqNtFpsWmKbWBLwxzJNRAzgmAqlmDTjJT3uWYZ5ltclbcdsZ6aFKA/640?wx_fmt=webp&from=appmsg "null")  
+![Next.js 信息泄露](../../.resource/remote/113e345eb82fad8976b1281e787866b34bfc2e832c7586f48d9d68e5c4b6340f.jpg "null")  
   
 Next.js 信息泄露  
 #### PHP 路由  
@@ -237,12 +237,12 @@ Next.js 信息泄露
  足以证明影响。在我们的演示中，即使是 404 流程也通过 index.php  
  路由，这就是为什么一旦源站开始直接响应，它就会暴露额外的页面。  
   
-![PHP LFI 演示 1](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7fExicWxBKRLfrRpjiaIkEspPl2VkrCxichPC4fSPTs8PoW11ANuhibIoqg/640?wx_fmt=webp&from=appmsg "null")  
+![PHP LFI 演示 1](../../.resource/remote/6d9bed40026e6ae8ef2109e7a7ed4df20bbeca536ecbf716ce7553c5331a803a.jpg "null")  
   
 PHP LFI 演示 1  
   
   
-![PHP LFI 演示 2](https://mmbiz.qpic.cn/mmbiz_jpg/MuPQsYZPics7jtx4hTW4yTdpyyhCyU2t7jicNoCODFHTwEOGQYViaNmMnES9epjPfoItMLSONribXAlVAXiba1TNDzg/640?wx_fmt=webp&from=appmsg "null")  
+![PHP LFI 演示 2](../../.resource/remote/0dea15307578e75a1e25e349bbcf1896946f4d5042d3811eb7d3599506cc0a6c.jpg "null")  
   
 PHP LFI 演示 2  
   

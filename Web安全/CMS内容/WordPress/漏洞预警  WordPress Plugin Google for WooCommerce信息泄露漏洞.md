@@ -48,7 +48,7 @@ schema_version: "1"
   
 Google for WooCommerce是一款WordPress插件，能将WooCommerce商店与Google Merchant Center无缝对接，自动同步产品信息，通过Google平台展示产品，利用Google AI优化广告，并提供分析与跟踪功能以助力电商业务增长。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUlKyAEbo36eib9nc0VoS9h2YUlepDAXnXj2CW0qYr23ia2KByOYKJQX0De99la7tfTBXRwyMbbzavg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1e4fb5613b546aeed9c198bba6dfdac0e054035c459a70d03221430f66ec0f48.png "")  
   
   
 **0x03 漏洞详情**  

@@ -53,9 +53,9 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/84_fqaXnRCix1S09f7CfuQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -74,11 +74,11 @@ title="platform - Login"
 
 **登录页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4ZtwUTIlboZYRXjrRmK33ZSvQU3vPVZcgZqqA3oz7dNcVpticFO3Vd0TYD8aoicv8rkYUX4FTqoWDA/640?wx_fmt=png)
+![](../../.resource/remote/44f2c1fa177ccd9f6affec235c2f22b077aeff85546d0e4efc89c61e73e7e0a3.png)
 
 **使用 Gobuster 扫描文件**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4ZtwUTIlboZYRXjrRmK33ZhGhzPzTLsogOkw2MuzZkpJKW30j4fqeWfvicbgsNQtf5NSwhWwhTibOQ/640?wx_fmt=png)
+![](../../.resource/remote/36b4d9a64d3e608406c5591e683179c1199575ea94604e70cd1f404949b842ce.png)
 
 **其中 run.php 文件内容为**  
 
@@ -126,7 +126,7 @@ print_html_end();
 ?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4ZtwUTIlboZYRXjrRmK33ZNp7mnxTEc8KOZ6C0BYpWW7bjKsY5WbZTYTXZuZR37skEfOu2dXUOrw/640?wx_fmt=png)
+![](../../.resource/remote/5c028b19603325257e9fad7878f39e35bfbfb17f5d66e07566dd897c795d879d.png)
 
  ****四:  关于文库🦉****
 
@@ -138,7 +138,7 @@ print_html_end();
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -155,7 +155,7 @@ print_html_end();
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

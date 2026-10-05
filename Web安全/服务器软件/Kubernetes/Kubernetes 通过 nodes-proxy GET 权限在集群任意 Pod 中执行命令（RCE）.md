@@ -61,7 +61,7 @@ grahamhelton
 在本文中，我将介绍当服务账户具有 nodes/proxy GET  
 权限时，如何在许多 Kubernetes 集群中的每个 Pod 中执行代码。这个问题最初通过 Kubernetes 安全披露流程报告，但被认定为设计目的而关闭。  
   
-![Executing Commands In Another Pod](https://mmbiz.qpic.cn/mmbiz_gif/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEP9frgGxOROyne23opiazy7bhOVCSJLlb4utcsnTFfQ9ESmRCB69GI7Q/640?wx_fmt=gif&from=appmsg "")  
+![Executing Commands In Another Pod](../../.resource/remote/55d7387c4d8db20eba4ff7b1034c5e0b3a460897f1db53db6e287fcbd5e9e5f8.gif "")  
   
 Executing Commands In Another Pod  
   
@@ -127,7 +127,7 @@ websocat --insecure \  --header "Authorization: Bearer $TOKEN"\  --protocol v4.c
   
 如果您想自己动手，我已经发布了一个实验室，用于演练如何在其他 Pod 中执行命令：https://labs.iximiuz.com/tutorials/nodes-proxy-rce-c9e436a9  
   
-![演示环境](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEdJV8Sa3rutsJL8wotnPo4sNFfjseCAm4R48HKv06AxKkb2C1fMWopA/640?wx_fmt=png&from=appmsg "")  
+![演示环境](../../.resource/remote/f4cbf0b8a200b0632e703bb9d43b3c443d962730f19de1285df549434c189124.png "")  
   
 演示环境  
   
@@ -258,7 +258,7 @@ nodes/proxy CREATE
 或 nodes CREATE  
 组合使用时会出现问题：  
   
-![Security Audit - kubernetes/kubernetes#119270](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEnibtbCLPbG7FHXFUEHC2TMtRUUGYSSxEPVFic82fpNiar0wOI7EkWEQqQ/640?wx_fmt=png&from=appmsg "")  
+![Security Audit - kubernetes/kubernetes#119270](../../.resource/remote/4270bf7f2129ddd6b714053b9b1bdfc6fd3dee56f86f333e494d3b7e74315cd1.png "")  
   
 Security Audit - `kubernetes/kubernetes#119270`  
   
@@ -277,7 +277,7 @@ Security Audit - `kubernetes/kubernetes#119270`
   
 Kubernetes 文档给出了 HTTP 动词到 RBAC 动词的映射：  
   
-![HTTP to RBAC Verbs](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEricWts0piaF5N8uoLc6z9D0c9ZmpAGtOcCljEJpOfFjFQcGI88RaHj1g/640?wx_fmt=png&from=appmsg "")  
+![HTTP to RBAC Verbs](../../.resource/remote/c00422a7bfa7e499de1c67fa6587145ac3720773d44f001c336b362d424a5e58.png "")  
   
 HTTP to RBAC Verbs  
   
@@ -571,7 +571,7 @@ authorizer.AttributesRecord{    User:            system:serviceaccount:default:a
 最终结果是从看起来像是只读权限的权限进行完整的集群妥协。  
 ## 概念验证  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEP9frgGxOROyne23opiazy7bhOVCSJLlb4utcsnTFfQ9ESmRCB69GI7Q/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/55d7387c4d8db20eba4ff7b1034c5e0b3a460897f1db53db6e287fcbd5e9e5f8.gif "")  
   
 这是一个快速概念验证脚本，可以用来尝试。  
 
@@ -581,7 +581,7 @@ authorizer.AttributesRecord{    User:            system:serviceaccount:default:a
   
 如果您想在线尝试，我已发布一个实验室来演示如何在其他 Pod 中执行命令  
   
-![Online walkthrough](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEdJV8Sa3rutsJL8wotnPo4sNFfjseCAm4R48HKv06AxKkb2C1fMWopA/640?wx_fmt=png&from=appmsg "")  
+![Online walkthrough](../../.resource/remote/f4cbf0b8a200b0632e703bb9d43b3c443d962730f19de1285df549434c189124.png "")  
   
 Online walkthrough  
   

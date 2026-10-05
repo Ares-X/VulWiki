@@ -50,7 +50,7 @@ source_status: "unknown"
 
  关键基础设施安全应急响应中心   2022-11-07 15:37  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iaz5iaQYxGogtmNfR7YdBmqP64HNLiagwzpwV6XdriaYRkibF37R7w6suqokKVnb6Owria5ZvcTnTlZWwXybI3G8zxNg/640?wx_fmt=png "")  
+![](../../.resource/remote/3c2f12a4567d66e7ba7fb1d06d004f5c0af3bc8f373d63d5b1118459a1ef020e.png "")  
   
 近日，美国网络安全和基础设施安全局（CISA）发布了三份工业控制系统（ICS）公告，涉及ETIC电信、诺基亚和Delta工业自动化的软件中的多个漏洞。其中最突出的是影响ETIC电信公司远程访问服务器（RAS）的一组三个缺陷，它 "可能允许攻击者获得敏感信息，并控制有漏洞的设备和其他连接的机器"，CISA说。  
   
@@ -76,7 +76,7 @@ CISA的第二个公告涉及诺基亚ASIK AirScale 5G通用系统模块的三个
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/6a85bd81b6c759a0832fee43a3d96c383ae032b5f74f300eaf04a904e924eab8.jpg "")  
   
 
 

@@ -65,9 +65,9 @@ CRMEB开源电商系统SQL注入漏洞
 影响版本  
   
 CRMEB v5.2.2版本  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhJyLoQ2TobeEXuUIwfOCfaR3n6kVFiciamgIlBrLAX8nibusqdPqazRVbyOnZY7RibrZfJia4lHdmH94LA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1e75157443f67e78826d53db60cce315d2eaab524da44dacedd1a8e44cb56695.png "")  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhLTxND8mIPwiaca3HjpxsgMOHJiaPmELuHYPfCHgM308zZYsdRqhJOMrG4SCgMxibX5h14xETWictrwTg/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/c2619a896c3642d184108127205db048a7af1de6c947198de6a3a30df79a5732.webp "")  
   
 03  
   
@@ -98,7 +98,7 @@ AS模式扩展能
 body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhJyLoQ2TobeEXuUIwfOCfaR9q0F5MZLKbx4ibZK2nf0eus7V3JjjgibrB9APnFJiay7iaibQgDz0H1iaficA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4c689d86d368d0114bf4713c163261fd4abb9baa5bbc722db6bdad9ab785ee3b.png "")  
   
   
 05  
@@ -123,7 +123,7 @@ Pragma: no-cache
 Cache-Control: no-cache
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhJyLoQ2TobeEXuUIwfOCfaR1h3gUmblAyiaaGJGEic6KQtU8LbxQgy0qZ9XUZLDEMcaibUibz1NQtiaRSw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/13c68efe4935b816a196a10b46bd5a372694958b6eacdc6c10da44a279640032.png "")  
   
   
 06  

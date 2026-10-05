@@ -38,7 +38,7 @@ schema_version: "1"
 
 https://pivotal.io/security/cve-2019-3799
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224755-c8ec71d6-611f-1.png)
+![](../../.resource/remote/0b8f3100e5933134b01500bb4b08eb89fbd3ec71bad7985914a9d0b090c73fe7.png)
 
 # 漏洞复现
 
@@ -49,7 +49,7 @@ GET /foo/default/master/..%252F..%252F..%252F..%252Fetc%252fpasswd HTTP/1.1
 Host: localhost:8888
 ```
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224820-d7bb29b4-611f-1.gif)
+![](../../.resource/remote/02e92d7f04c2310753cd7f8f2eadf29a47d82462e6ee33dd6127bf6646711951.gif)
 
 # 漏洞分析
 
@@ -61,11 +61,11 @@ Spring Cloud Config是Spirng Cloud下用于分布式配置管理的组件，分�
 GET http://127.0.0.1:8888/foo/label/master/test.json
 ```
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224828-dc743d10-611f-1.png)
+![](../../.resource/remote/10db5d626e59e0c606fd9c802362f5dd99ba281b4c738b85d9491803766e9900.png)
 
 根据请求格式可以在 `org/springframework/cloud/config/server/resource/ResourceController.java:54` 中找到对应的处理 `@RequestMapping("/{name}/{profile}/{label}/**")`：
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224833-dfb766c8-611f-1.png)
+![](../../.resource/remote/ee7f96d365182c587549fb108bf2aece662491b19756d2c1f97a915b7c49c6b6.png)
 
 其中`path`值即为payload:`..%2F..%2F..%2F..%2Fetc%2fpasswd`
 
@@ -83,19 +83,19 @@ synchronized String retrieve(ServletWebRequest request, String name, String prof
 
 这里会根据前面所传条件获取到resource。文档中提到`only the first one to match is returned`，所以继续跟入`findOne`:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224838-e2d0b1ac-611f-1.png)
+![](../../.resource/remote/5d8ce30f908137083da9c8892474f0a7ef24424ad41a2ba47c07b5d97f78497c.png)
 
 可以看到这里`locations`的值为`file:/tmp/config-repo-7168113927339570935/`，这是`Config-Server`从后端拉取到配置文件时临时存放，正常情况下将会在该文件夹下进行文件的查找，比如`test.json`：
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224844-e6079124-611f-1.png)
+![](../../.resource/remote/e8da1b713fac0c61a91f6d58ce1b0eef144452313154f1f43cd2dd5d7a88f59b.png)
 
 不过我们传入的却是`..%2F..%2F..%2F..%2Fetc%2fpasswd`，最终拼接出来的文件url即为：
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224850-e97ab386-611f-1.png)
+![](../../.resource/remote/2e4e0b1ad06206c0ab9fa3791aa76b22188545122392dce6c4edd0dfe366e095.png)
 
 返回后获取到的`resource`即为`/etc/passwd`，调用`StreamUtils.copyToString(is, Charset.forName("UTF-8")`读取到文件内容：
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20190417224854-ebf9be0e-611f-1.png)
+![](../../.resource/remote/6fcd120568b76d01c621cec4f5e233ff6f3fc44e7eb57aa74072d9e4a74c91cb.png)
 
 # 漏洞补丁
 

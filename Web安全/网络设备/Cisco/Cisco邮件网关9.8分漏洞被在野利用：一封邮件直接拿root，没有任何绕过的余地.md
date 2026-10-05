@@ -125,7 +125,7 @@ Cisco给的排查思路：检查邮件网关的mail_logs日志，搜索可疑SQL
   
 安全团队应该趁这个机会重新审视所有边界设备的状态：固件版本是不是最新的，有没有开启不必要的功能，管理接口有没有暴露在互联网上，日志有没有集中收集和分析。这些基础工作平时看着不起眼，关键时候能救命。  
   
-![](https://mmecoa.qpic.cn/sz_mmecoa_gif/7icMUAtu929BicOey7hH4zGDEsqp2BibkEghfEZTEeedfg3ZDXLj8aiaNjuficqssNXdQvSzooGqUtQa78bwIW2pMu11kBHyzTy2wGrTfozSZk3Y/640?from=appmsg "")  
+![](../../.resource/remote/0408c85e05e9ab696f284a0e2201545ab8cb42029006f9686e49a2e7035ea439.gif "")  
   
 END  
   

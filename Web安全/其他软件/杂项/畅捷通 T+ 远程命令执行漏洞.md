@@ -84,7 +84,7 @@ ysoserial.exe -g ObjectDataProvider -f JavaScriptSerializer -c "ping dnslog" -ra
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtCRVicfIHBeUs5aDpSfwPWFrcy4R0wICYZxhHszRlpZMAnObibY7TYiafyNaIibZKN3cn348IiakTtNK3Q/640?wx_fmt=png)
+![](../../.resource/remote/abcc7808688e434ee3e5633cdcf5fabfdd17f3274087629912c32c78608c7b79.png)
 
 使用 yakit 发送 payload，响应 "actorId 或 archivesId 不能为空" 说明利用成功  
 
@@ -115,17 +115,17 @@ Content-Length: 553
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtCRVicfIHBeUs5aDpSfwPWFr5tTIUoQtjMkTTPGcaic1XXibcDHHr8CoicjfY2KTQ1lpUAemScwhnzo5A/640?wx_fmt=png)
+![](../../.resource/remote/426d67079243a626d5f8d1be14fe08805c24a7c3be0be2ca61c4ac5886dae58b.png)
 
-查看 dnslog，收到请求![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtCRVicfIHBeUs5aDpSfwPWFrjqNCvSDhDZavhicMjU0dl1fpH1HGECxf3vkAvr3DyJIBkTWwicr8AsfA/640?wx_fmt=png)
+查看 dnslog，收到请求![](../../.resource/remote/332f4c15097fd79e45027628238590daba177b610d3f973ba2a451efd65e28bf.png)
 
 **工具自动化利用**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtCRVicfIHBeUs5aDpSfwPWFr1Cg8MeBLl8hbiarpdkqiaCwc3L5wcM4wy9neTzzniciaOYlD7kwmxHQcbA/640?wx_fmt=png)
+![](../../.resource/remote/a9cc3aee27c889457bf1a89f74abf825fb5095653acdba939a1ae9b4a07b88bf.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtCRVicfIHBeUs5aDpSfwPWFrKyticSaZthNnGYubWcDrUrwKnpSKyW1cmxXA3Qn6xsEibHHafEGrbkvg/640?wx_fmt=png)
+![](../../.resource/remote/7acee4643f76a23b725d56f744d8fdfe5b630850d5e021388cb34205ae629ffe.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtCRVicfIHBeUs5aDpSfwPWFrhL26n03h5icQR1Tzqgl8B60SXNreFTtjKcyJuLBedvqLdwJXia6XK5rw/640?wx_fmt=png)
+![](../../.resource/remote/c45af0a568592307ac68c14cf6bf0b220659baab3ecac5c3afb9c26269a28872.png)
 
 **漏洞修复建议**
 

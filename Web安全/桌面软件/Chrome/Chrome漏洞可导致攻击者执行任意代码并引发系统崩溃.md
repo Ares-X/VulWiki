@@ -57,9 +57,9 @@ schema_version: "1"
 
  FreeBuf   2026-02-05 10:05  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/icBE3OpK1IX0ZdatEiaoqNKbciaKdIFY9OawRNY3oK8eCNmoJBCDXDa8iaNl9xIeMWjXhtPNWhxoRzRWKIpD6emm4ibWIsxKYBMgmy5icic85muhicY/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b762f24682e70dda4a3e717048b56137b6582d58ab1610aae182c4b961b6af4a.jpg "")  
   
   
 Google 已针对 Chrome 稳定版发布关键安全更新，修复了两个高危漏洞，这些漏洞可能导致用户遭受任意代码执行（ACE）和拒绝服务（DoS）攻击。  
@@ -97,7 +97,7 @@ CVE-2026-1861：libvpx 堆缓冲区溢出漏洞
 ## 漏洞信息表  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icBE3OpK1IX3sHjl7MCiarPh2O0CQ1dFB3OOOuCvtSq3c9l4fX0sWgDribCwJb1cianesTOP9ribZxrHDXLKQp9VcamiaoMtX2XV3dhONwnHIG3hA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/491ae717d9116516a4f3d2e36e215c7582c0ef34784273da1b05e9fb4e0aac2d.png "")  
   
   
 **Part03**  
@@ -132,7 +132,7 @@ https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/
 ### 电台讨论  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

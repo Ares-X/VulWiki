@@ -44,7 +44,7 @@ schema_version: "1"
 fastjson漏洞批量检测工具，根据现有payload，检测目标是否存在fastjson或jackson漏洞（工具仅用于检测漏洞），若存在漏洞，可根据对应payload进行后渗透利用，若出现新的漏洞时，可将最新的payload新增至txt中（需修改格式），工具完全替代手工检测，作为辅助工具使用  
 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq6QfQ4YjEIW66GHjSqQEpYAAnjpvIm0Q1UHtCHv80CykfR7nFfJ45dEGryouC9Mib0wH8CG7AFW4yw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0b5af1091c5c9600bce9f6e25f938b63bd5dbc1125290aadb9f2ccddd2f31ed3.png "")  
   
 **下载地址在末尾**  
   
@@ -109,7 +109,7 @@ fastjson漏洞批量检测工具，根据现有payload，检测目标是否存�
   
 扫码关注 了解更多  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq6qFFAxdkV2tgPPqL76yNTw38UJ9vr5QJQE48ff1I4Gichw7adAcHQx8ePBPmwvouAhs4ArJFVdKkw/640?wx_fmt=png "二维码")  
+![](../../.resource/remote/c4a818ade8c58afccf6644c128060056407e18fb3167e8a6d9e7f73dce8a478d.png "二维码")  
   
   
   

@@ -53,7 +53,7 @@ source_status: "recorded"
 
 THN  代码卫士   2024-05-24 17:24  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -77,7 +77,7 @@ Ivanti 公司还修复了位于 Avalanche 6.4.3.602中的高危漏洞 (CVE-2024-
 Ivanti 公司强调称目前尚未有证据表明这些漏洞已遭在野利用或通过供应链攻击“被恶意引入到我们的代码开发流程”。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMRWyjibjcoF9UM0DrochwkhSzfXpNsSe8z7Kvb1f6tcWW1GvOCCMEPqBqv7HYZUFgpqQ4bd92xhlCw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ed6900abdba2a30dca136cd98f5d106dc8e400a38e4554d706105dd0526e1e1d.gif "")  
   
 **其它相关漏洞**  
   
@@ -142,15 +142,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

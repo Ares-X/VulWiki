@@ -66,7 +66,7 @@ schema_version: "1"
   
 Google Chrome是由Google开发的免费网页浏览器。Chrome代码是基于其他开放源代码软件所编写，包括Apple WebKit和Mozilla Firefox。  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/7stTqD182SXxjX8p8WklXuc23v1DKPW7yY83Sic75o0z0rlPgZHmmCPxBNvutPR92HthYPDsg7ia0ODDgsgQYjBQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=gigpt6px&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/7297aee5a682510836f64794705754bddd20a943359b4718ccddd4066ae543b8.webp "")  
   
 **0x03 漏洞详情**  
 ###   

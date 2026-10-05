@@ -48,7 +48,7 @@ schema_version: "1"
   
 KiviCare是一个专为WordPress网站设计的诊所和患者管理系统插件，主要功能是帮助医疗服务提供者、诊所、医院及独立医生管理预约、患者记录和相关的医疗业务流程。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SXagGVrjeAQBZvUPrDzGLkxhgqj2UXQDuRbol8SiaOjstLFOarapISRsrT0CmO0q7xFyNZ3R3aUJTA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1ca1fe66268480360bae24a1571b3039cb88083e2dddab3390824a173b171aa3.png "")  
   
 **0x03 漏洞详情**  
 ###   

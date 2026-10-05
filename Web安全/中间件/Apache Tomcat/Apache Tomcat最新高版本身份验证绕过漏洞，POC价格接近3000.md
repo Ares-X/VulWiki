@@ -56,11 +56,11 @@ SecHaven  赛哈文   2024-11-20 03:10
 e Tomcat公布了最新漏洞，其中CVE-2024-52316 Apache Tomcat身份验证绕过值得大家关注。具体涉及到使用Jakarta身份  
 验证API时的身份验证绕过问题。该漏洞的存在可能允许攻击者在未经授权的情况下访问受保护的资源，从而对系统安全构成威胁。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/R3h5SuP8QnKGnsQ99DPfbUcjLkRomSPgQGadIic6lNM3k9hPeKicCgGWWvibQUQXs00pkNJYG2xd2ibG2OZBm5OvNQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b247181c466f3cdf0858b84a72918c83389af927e2c6144026fa74c13a04b0a2.png "")  
   
 据信息显示，其POC在海外平台售卖，价格接近3000人民币：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/R3h5SuP8QnKGnsQ99DPfbUcjLkRomSPgD8zwknLJWicqqOgdRy40epoWP2KVUuffiayAM3fem2Z9EyYAzicSAIElQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cc86f7a2da28f26f81350e417710770c6063228e84ef1a884092ca43d919f3f7.png "")  
 ## 漏洞详细信息  
 - 漏洞类型：身份验证绕过  
   

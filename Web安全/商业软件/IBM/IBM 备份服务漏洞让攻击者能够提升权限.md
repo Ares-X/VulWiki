@@ -48,7 +48,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8vMlQicGDibZXZLarrZLBK1DLdMEzGjMk1dxsI1vu5uktAOugVMhNI0OaRKEdfUulb0ou29hYicyGCicA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/99f62c18cb88249843e94dca9677b269bd26d1b52182aba30e58d6fcf0ba41e0.png "")  
   
 IBM Backup， Recovery， and Media Services for the i 平台中存在一个严重安全漏洞，可能允许攻击者获得提升的权限，并通过对主机作系统的组件级访问权限执行恶意代码。  
   
@@ -99,7 +99,7 @@ https://cybersecuritynews.com/ibm-backup-services-vulnerability/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

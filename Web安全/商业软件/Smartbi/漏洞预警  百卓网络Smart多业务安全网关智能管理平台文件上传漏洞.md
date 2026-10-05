@@ -56,7 +56,7 @@ schema_version: "1"
   
 Smart多业务安全网关智能管理平台是一种网络设备，它可以帮助企业规范员工上网行为、提升网络带宽利用率、避免企业信息泄露、增强网络稳定性和安全性。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SW3eNBxibiblSHibkReZNZXTktjsEDvxa0OYw8D8aMcI3MXTzhnayIZ38WFic9H9JmktXN6Ymz8kWaQmQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/0e78832bc7b3b2792e2e0f3989e2adfff354b85bb5fcb1bd17c60cc4b3e8305c.png "")  
   
 **0x03 漏洞详情**  
   

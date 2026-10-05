@@ -51,41 +51,41 @@ fofa: "app=\"金和网络-金和OA\""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ZZU-A9dCqxia1eAvKALmSA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZcbkPzbbzL0u8YfnxxDicUbg1G9MQHvibjeC6zx3TVGq2hoGcCrz2iaKwTTteKRJq7z29iaTM0GJ3UFQg/640)
+![](../../.resource/remote/5991569f5e7a132c2af98b44ce5bba0926d5a2f468b6eabdc4f95d8fff0bc65f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6RaZ4vPeOmSVjiaqZGLNX4d3vWbaxFZJvfRGwaibvubSsH0Z8ZYFOBuLwIuicrggnMBcgnaA5ssdXZo2Nv9EQgJibQ/640?wx_fmt=png)
+![](../../.resource/remote/e17f8f7083c5a469b1e6962d9c1a1b6c906142561fa22cddec23bfc9b4d224a6.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/J9ribgc84yUiak32pdP7Plz4nGLCA6g3Sr5VEpxpqJxHjVhzfUiayqqSznhsz9X2MjJGrfibn8pwhic0tRicVA6MWHaw/640?wx_fmt=png)
+![](../../.resource/remote/cd7eb7908e159df89790969538cc4b9d09ac008e8ec172d32b50f79a16057093.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/r067acKJkcgvrLCvF4XYBMB0taDTJUJzUhxiaicqaZCzp76unGS5APGLMcbrnSkXgxKOpaZulmDzQTia0ongdJ0uQ/640?wx_fmt=png)
+![](../../.resource/remote/cd7eb7908e159df89790969538cc4b9d09ac008e8ec172d32b50f79a16057093.png)
 
 漏洞简介
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hibxrQoTBwtW59vnGianzS0wGxzU1N1CicAk4u8vCDJMTYsYicpib6icd1nLhMDdaicvbktrz0ia0TQ4LAhBTnINyjnu2w/640?wx_fmt=png)
+![](../../.resource/remote/1591b115795b3cacb8b6dcc3903a9e0ba059fc0cef3f499fa30ab4c3af5f18d3.png)
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/f99C5hg1oLNDZJenq13YIYzsCMJkEL7ChzaKl0OIpkKGx0ibsjDMsPSbQHSk8SYgseTcDpDNCvwq7G5Wuxs2oyQ/640?wx_fmt=png)
+![](../../.resource/remote/1591b115795b3cacb8b6dcc3903a9e0ba059fc0cef3f499fa30ab4c3af5f18d3.png)
 
         金和网络是专业信息化服务商，为城市监管部门提供了互联网 + 监管解决方案，为企事业单位提供组织协同 OA 系统升开发平台，电子政务一体化平台智慧电商平台等服务。金和 OA C6 GetHomeInfo 接口处存在 SQL 注入漏洞，攻击者除了可以利用 SQL 注入漏洞获取数据库中的信息（例如，管理员后台密码、站点的用户个人信息）之外，甚至在高权限的情况可向服务器中写入木马，进一步获取服务器系统权限。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6RaZ4vPeOmSVjiaqZGLNX4d3vWbaxFZJvfRGwaibvubSsH0Z8ZYFOBuLwIuicrggnMBcgnaA5ssdXZo2Nv9EQgJibQ/640?wx_fmt=png)
+![](../../.resource/remote/e17f8f7083c5a469b1e6962d9c1a1b6c906142561fa22cddec23bfc9b4d224a6.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/J9ribgc84yUiak32pdP7Plz4nGLCA6g3Sr5VEpxpqJxHjVhzfUiayqqSznhsz9X2MjJGrfibn8pwhic0tRicVA6MWHaw/640?wx_fmt=png)
+![](../../.resource/remote/cd7eb7908e159df89790969538cc4b9d09ac008e8ec172d32b50f79a16057093.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/r067acKJkcgvrLCvF4XYBMB0taDTJUJzUhxiaicqaZCzp76unGS5APGLMcbrnSkXgxKOpaZulmDzQTia0ongdJ0uQ/640?wx_fmt=png)
+![](../../.resource/remote/cd7eb7908e159df89790969538cc4b9d09ac008e8ec172d32b50f79a16057093.png)
 
 漏洞复现
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hibxrQoTBwtW59vnGianzS0wGxzU1N1CicAk4u8vCDJMTYsYicpib6icd1nLhMDdaicvbktrz0ia0TQ4LAhBTnINyjnu2w/640?wx_fmt=png)
+![](../../.resource/remote/1591b115795b3cacb8b6dcc3903a9e0ba059fc0cef3f499fa30ab4c3af5f18d3.png)
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/f99C5hg1oLNDZJenq13YIYzsCMJkEL7ChzaKl0OIpkKGx0ibsjDMsPSbQHSk8SYgseTcDpDNCvwq7G5Wuxs2oyQ/640?wx_fmt=png)
+![](../../.resource/remote/1591b115795b3cacb8b6dcc3903a9e0ba059fc0cef3f499fa30ab4c3af5f18d3.png)
 
 **第一步、使用下面 fofa 语句进行资产收集... 确认测试目标**
 
@@ -97,27 +97,27 @@ app="金和网络-金和OA"
 
 **第二步、访问漏洞首页**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZcbkPzbbzL0u8YfnxxDicUbge3VDSrlaibpSadNlWibZaaEskxZqY2fJwN90gkVv7xDw1hDiazExia4C3Q/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/1bf9fde2fb507d23b8b313587be870007535ead663cacf57db4b8422d70ccf0f.png)
 
 **第三步、拼接 POC 进行访问，拼接 POC 使用 burp 进行抓包... 发送到 Repeater 中进行测试**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZcbkPzbbzL0u8YfnxxDicUbgbdtDGNkvsDX5BMC9mobSBPyRfxojEKiaxgziax2PCGfIRcHG0OAhG5IQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/04968cd17887f96c7baea3f6d8451d698e232d01600b5699ea66c891d0bd067f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6RaZ4vPeOmSVjiaqZGLNX4d3vWbaxFZJvfRGwaibvubSsH0Z8ZYFOBuLwIuicrggnMBcgnaA5ssdXZo2Nv9EQgJibQ/640?wx_fmt=png)
+![](../../.resource/remote/e17f8f7083c5a469b1e6962d9c1a1b6c906142561fa22cddec23bfc9b4d224a6.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/J9ribgc84yUiak32pdP7Plz4nGLCA6g3Sr5VEpxpqJxHjVhzfUiayqqSznhsz9X2MjJGrfibn8pwhic0tRicVA6MWHaw/640?wx_fmt=png)
+![](../../.resource/remote/cd7eb7908e159df89790969538cc4b9d09ac008e8ec172d32b50f79a16057093.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/r067acKJkcgvrLCvF4XYBMB0taDTJUJzUhxiaicqaZCzp76unGS5APGLMcbrnSkXgxKOpaZulmDzQTia0ongdJ0uQ/640?wx_fmt=png)
+![](../../.resource/remote/cd7eb7908e159df89790969538cc4b9d09ac008e8ec172d32b50f79a16057093.png)
 
 批量脚本
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hibxrQoTBwtW59vnGianzS0wGxzU1N1CicAk4u8vCDJMTYsYicpib6icd1nLhMDdaicvbktrz0ia0TQ4LAhBTnINyjnu2w/640?wx_fmt=png)
+![](../../.resource/remote/1591b115795b3cacb8b6dcc3903a9e0ba059fc0cef3f499fa30ab4c3af5f18d3.png)
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/f99C5hg1oLNDZJenq13YIYzsCMJkEL7ChzaKl0OIpkKGx0ibsjDMsPSbQHSk8SYgseTcDpDNCvwq7G5Wuxs2oyQ/640?wx_fmt=png)
+![](../../.resource/remote/1591b115795b3cacb8b6dcc3903a9e0ba059fc0cef3f499fa30ab4c3af5f18d3.png)
 
 ```
 id: jinhe-jc6-GetHomeInfo-sqlij

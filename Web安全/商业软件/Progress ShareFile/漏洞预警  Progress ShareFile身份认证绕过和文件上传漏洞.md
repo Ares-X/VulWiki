@@ -60,7 +60,7 @@ schema_version: "1"
   
 Progress ShareFile是一款企业级安全文件传输与协作平台，支持文件共享、数据收集、电子签名及任务管理等功能。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/NQlfTO30MhzhBLedKmL4fZ88W0rwxhw8EOQGPynNqIHhKr7uyUX6H3vIpohkxcsBa37WYzwIdic6RgnKaibQ2MPlI2ZLNPR2IyCR1X98iafAicg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d5e7ce6c2ca1a3cb51a48911c4a7ac7e3e650458a0b9dad1bf0711b2cd4337ae.png "")  
   
 **0x03 漏洞详情**  
   

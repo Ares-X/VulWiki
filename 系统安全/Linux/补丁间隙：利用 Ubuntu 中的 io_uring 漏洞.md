@@ -58,7 +58,7 @@ schema_version: "1"
 
  Ots安全   2024-04-26 10:47  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 **概述**  
   
@@ -269,19 +269,19 @@ IORING_UNREGISTER_PBUF_RING系统调用的操作码的处理程序io_uring_regis
   
 - 使用操作码和标志进行io_uring_register()系统调用，以便内核本身为提供的缓冲区环分配内存。IORING_REGISTER_PBUF_RINGIOU_PBUF_RING_MMAP  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGfXPoEr8Ay4wCh23jSIExC1u2uhbNb3HDiaVlibCf8BZ48gGF8XxFMcZA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4e8df19cdb9201aab117c604fd22bcf5771ef2853b2a9a98767d4cb38f48af93.png "")  
   
 注册提供的缓冲环  
   
 mmap()io_uring使用文件描述符和偏移量对所提供的缓冲区环的内存进行读写权限IORING_OFF_PBUF_RING。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGz1P3X10gMhEjIiaXRelYtxETgtu7ueZLhTPfm7oiaVVQC0uG6We8xPhw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ed61a00b583efbe7a908cf40b03262ad29fee4a34cbf84c2bf628b991193bed7.png "")  
   
 MMap 缓冲环  
   
 io_uring_register()通过使用 opcode进行系统调用来取消注册提供的缓冲区环IORING_UNREGISTER_PBUF_RING。   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGpjMk2f243gk1sDDia0ltXbfPYWeh1HgI0odKu9lMEAjH48g6FQs4mYQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a532144592c0c95ae604eeb0e24b50b6df6bab3313464a801c84a44c54b96edc.png "")  
   
 取消注册缓冲环  
   
@@ -291,19 +291,19 @@ io_uring_register()通过使用 opcode进行系统调用来取消注册提供的
   
 下一步是生成大量子进程，每个子进程/etc/passwd以只读权限多次打开文件。这会强制file在内核中分配相应的结构。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGJp08C066gza2JJ8JZEcO9F2X3yBJbOvU5VkWZ93pBxpicGswU8uNdIQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/627a18d367ea8fdb4a4523c807e89fa2bc2d6a58e482fa7b9d797e8170620150.png "")  
   
 喷涂文件结构  
   
 通过打开大量文件，攻击者可以强制耗尽filp缓存中的slab。之后，将通过向页面分配器请求空闲页面来分配新的slab。在某些时候，页面分配器将返回先前与所提供的缓冲区环相对应且攻击者仍具有读写访问权限的页面。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGY4jqDy5mVnZw8ZJHbU8Qefkic50u1tZzxgMhLfkUpNopGxuZkelicURA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/18536de250964b4da0185ecb8900bc2c18c14e20f4150c0d9a95431a522763cb.png "")  
   
 从页面分配器请求空闲页面  
   
 因此，在此之后创建的所有file结构都将分配在攻击者控制的内存区域中，使他们有可能修改结构。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGHqkmNSAz27kEZLg53aXhlDbSMT8E3UotY9zaGHObqT4m0YsQoQDZ8g/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5f4745d51637e11a92db65e87cd4473f72cfa82713a36305cacc5fcb134fcc10.png "")  
   
 在受控页面内分配文件结构  
   
@@ -339,19 +339,19 @@ https://blog.exodusintel.com/2024/03/27/mind-the-patch-gap-exploiting-an-io_urin
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

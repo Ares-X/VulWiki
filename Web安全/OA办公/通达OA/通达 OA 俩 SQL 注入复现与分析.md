@@ -64,15 +64,15 @@ _声明：__** 文章中涉及的内容可能带有攻击性，仅供安全研�
 
 下载地址：https://cdndown.tongda2000.com/oa/2019/TDOA11.9.exe
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCv2gv4h86xgfK8ibiaQhwcU4KSALaeps3sfOeibGPA1kiaI2iaABQFVXSgQSg/640?wx_fmt=png)
+![](../../.resource/remote/9c64094265266114b4ccbb0f69064ff061345e4ff45f98c47e69172192646230.png)
 
 服务启动
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvdPFlq02TG0BrGhTyBLiclFb0o32s7K3FkUdauDFkoI5zPAtAv1lV3Ew/640?wx_fmt=png)
+![](../../.resource/remote/739d8631b6bd7a9fff1670ca463feb6ce55d31f6007dbcb0600723a3bbc57bab.png)
 
 利用 admin 账号成功登录，密码默认为空
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvjJBhj7licE5ema20a0ecsnxKm0FQ67RW85pYyGTb1ADNbgYGIUn6E9A/640?wx_fmt=png)
+![](../../.resource/remote/074bbcb7b53941c9ada08fa8669f65bc319e992ca9adc4853a65d22e1d606e3f.png)
 
 漏洞分析（**CVE-2023-4165**）
 -----------------------
@@ -97,7 +97,7 @@ header("location:manage.php?start=$start");
 
 实现的功能是从数据库中删除指定的记录。前面三句是包含其它文件进来。然后第四句开始是创建了一个名为 的变量，保存当前时间。当前时间可能是为了记录删除操作的时间戳。对 DELETE_STR 变量进行处理，使用 rtrim()  函数去掉末尾的逗号（,）。然后是构造了一个 SQL 查询语句，使用 $DELETE_STR 中的值作为 ID 列的筛选条件。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvr7RMI7Hla4chP2ibxExDV7DepP7mluwPAIeuicEbUpufUdf0e2QickICA/640?wx_fmt=png)
+![](../../.resource/remote/69136364fe4ac23b61b68a3418574c4a8ca4d38a9212768c01086fca05fb337d.png)
 
 调用 exequery() 函数执行 SQL 查询；使用 header() 函数将请求重定向到另一个页面。
 
@@ -112,15 +112,15 @@ header("location:manage.php?start=$start");
 
 但是我们看到前面是把 inc/auth.inc.php 包含进来了的，也就是说需要有登录后的权限才能执行下面的删除操作。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvV4neIqOObJflPodsPrttWtBqFbaWgnYzDtUOCSwTf1YnawqlkqpJXg/640?wx_fmt=png)
+![](../../.resource/remote/581f0dc82cde9268a8bcf1bbad27b37d80ace01b4776fad084602c3a4c7d5903.png)
 
 没登录的时候，直接访问则会显示 “用户未登录，请重新登录!”
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvZBNvJicWbO2xJwBA4vICJjOxM0eQnHiabibntb3zHlGqrH2AaeRrducicQ/640?wx_fmt=png)
+![](../../.resource/remote/ab85e034af5fef47ad29afcbf73bb2f43f9b1f7505d8cda92ad3d9c2b25bb5b2.png)
 
 我们登录之后进行测试。发现是印章日志查询的功能。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCv33ZnA9grquL6EKEVC6bMcEdiadjhugrmR89ia993fXckCRm9UPdnQ7MQ/640?wx_fmt=png)
+![](../../.resource/remote/2760ab6a7c5890402cc04928d34bd2e914b9139d4eaca5b58be30d2344b8d294.png)
 
 尝试进行注入，试一下有没有过滤 sleep
 
@@ -130,7 +130,7 @@ http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php?DELETE_ST
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvpH1jpbGvd3eAeBF05ibepGJoCcGicjVkIPNzLTwaAib5XicN76gEpicDHrg/640?wx_fmt=png)
+![](../../.resource/remote/dc3688aebd1af91c08303e4b56219a94778fa2fba7671748e4d70a4be2af0d30.png)
 
 分析一下看到在 inc/conn.php 中做了过滤。
 
@@ -144,7 +144,7 @@ inc/auth.inc.php(3)--->inc/session.php(77)--->inc/conn.php---(sql_injection)
 
 在 inc/conn.php 的 sql_injection 方法过滤了常用的 SQL 注入函数
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvKn11hlZhAJNm8zPbSBlDoGWaInAddRfXE1V5gAQVYxUDXlH5LIJBTw/640?wx_fmt=png)
+![](../../.resource/remote/69c986d6b877cea2ab4e97b2effeac2739ffbefa30ba3fdff91a3af30bbad8ed.png)
 
 尝试使用网传的 poc 进行请求
 
@@ -165,11 +165,11 @@ Cache-Control: max-age=0
 
 使用 DATABASE 获取当前数据库名称，char(84) 是 ASCII 码的 T，看到有稍微延迟（推测是 SQL 语句匹配运行造成的）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvWHNfZaicqX4oKPZGkYBOY8gZaB63vI8DeHAibicPISsbaUlZiavMJUVM6A/640?wx_fmt=png)
+![](../../.resource/remote/daad9c09ef7af3cc7efcc5996d967079d298db54a982fd5d83169e9db3fd2aea.png)
 
 char(83) 未延迟
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvsNURia685gPjFQibEegpDqy3oomTUXtMP1pPw6xQXcOicXQbOWqrgoWyQ/640?wx_fmt=png)
+![](../../.resource/remote/f297fdf3596e3cd577ffe928fd44321144a07fc6d34621fd40c7d6375c634752.png)
 
   
 
@@ -197,7 +197,7 @@ header("location:log.php?start=$start");
 
 简单分析看了下，大概功能是从 "SEAL_LOG" 表中删除指定的日志。根据传入的参数 $DELETE_STR，该脚本构建了一个 DELETE 语句，并使用 exequery() 函数执行该查询。最后还来了个重定向，和上面的那段代码也是非常相似的。也包含了 inc/auth.inc.php
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvH5kDxNQfPpTkwS4pHny0wgsIcdlHbrHClXxCMLtFylOSGybSgm0JqQ/640?wx_fmt=png)
+![](../../.resource/remote/4fddd72d29f8ed21c4db743d169d41c9b8afa2d3b3932d109a5ca4bd29011105.png)
 
 我们就直接上 POC 了，POC 和上面一模一样。
 
@@ -218,11 +218,11 @@ Cache-Control: max-age=0
 
 延迟两秒多
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvYeAXyBnGrGwZyk8oLI00XH5RibjLFEgJwibJAiago0kKEm9iaZDQtdKOoA/640?wx_fmt=png)
+![](../../.resource/remote/2a76b72a6fbdde7d36c4720f3e39224bd33959b78bd9e20ab1d390901bd0a350.png)
 
 延迟一秒左右
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvujPs0Jxt3A2ZwqsmvQ6YicRXAFQ7SdJia2SdRu1cSr3ibw84TMtU11S8g/640?wx_fmt=png)
+![](../../.resource/remote/fc570c42080afd6b8799faf29bae3fd6be70d0f6cd44e9e164fd906474ad3752.png)
 
 工具编写
 ----
@@ -308,15 +308,15 @@ func main() {
 
 **CVE-2023-4166 获取当前数据库名称**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvMbYbEoBia37h1yJZ8vW5xz8ufZoB7zibHatnWToReZUEHkW6HdUIrnfQ/640?wx_fmt=png)
+![](../../.resource/remote/a0928063e5332d751eb0b4aab849d17b84a336574adf58e08954ec29166f26f0.png)
 
 **CVE-2023-4165 获取当前数据库名称**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvuWRgc8bpPrcSQlgsm4sGMtfOrbhOCvSibP7uaqzuveZu0PWCCwW8E2Q/640?wx_fmt=png)
+![](../../.resource/remote/f31a5bc5024ae1409da947067c9588e49fd37fd9345a9c6e14554e2b9f490fd6.png)
 
 查看数据库的配置，结果正确
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvKZ1faImX87gIarWcdZNXLLj5QQeEUsGyRro9DMAMg8O8aQZZKbXKRQ/640?wx_fmt=png)
+![](../../.resource/remote/d0eacaa94db2672522e5332bfa1852b4041388e87969ae1713af8df848b6e49d.png)
 
 总结
 --

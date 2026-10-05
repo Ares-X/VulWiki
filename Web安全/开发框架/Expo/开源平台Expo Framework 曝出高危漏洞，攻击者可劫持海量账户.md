@@ -44,7 +44,7 @@ schema_version: "1"
   
 Expo 类似于 Electron，是一个开源平台，用于开发在 Android、iOS 和 Web 上运行的通用原生应用程序。Expo使开发人员能够使用单一代码库创建原生 iOS、Android 和 Web 应用程序。该平台具有一系列旨在简化和加快开发过程的工具、库和服务。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb69E3NPQ5e4RV4BnhmpqKXapTLYt2vibibpqJ8VgEeys4ElTibx6ZbO7HM6gOksg4rweHWwicWIebYQXw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/914b29f591752f3c7aa369e85b7e8f0e3d20149bc26d7db958ea751f7faf4168.jpg "")  
   
 换句话说，可以利用该漏洞将与登录提供商（例如 Facebook）关联的秘密令牌发送到参与者控制的域，并使用它来夺取对受害者帐户的控制权。  
   
@@ -54,7 +54,7 @@ Expo 类似于 Electron，是一个开源平台，用于开发在 Android、iOS 
   
 Salt Security 的研究机构 Salt Labs 解释说，在发现该漏洞后，它立即将其披露给 Expo，Expo迅速修复了该漏洞。  
   
-Expo 在一份公告中表示，它在 2023 年 2 月 18 日负责任地披露后数小时内部署了一个修补程序。还建议用户从使用AuthSession API 代理迁移到直接向第三方身份验证提供商注册深层链接 URL 方案以启用 SSO 功能.![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb69E3NPQ5e4RV4BnhmpqKXaRQ2cNhNtbo5b0ocOHSB700fok3GYWE82kUG6EpLPTqFv9kDvoDboiaw/640?wx_fmt=jpeg "")  
+Expo 在一份公告中表示，它在 2023 年 2 月 18 日负责任地披露后数小时内部署了一个修补程序。还建议用户从使用AuthSession API 代理迁移到直接向第三方身份验证提供商注册深层链接 URL 方案以启用 SSO 功能.![](../../.resource/remote/57105a922a4c3786fd5d300810c8c1012eec179067d1d082b734b3c825116119.jpg "")  
   
   
 值得一提的是，该漏洞是在 Expo 的开放授权 (OAuth) 社交登录功能的实施方式中发现的。 安全专家表示，随着 OAuth 迅速成为行业常态，恶意人士不断寻找其中的安全漏洞。  

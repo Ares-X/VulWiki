@@ -63,7 +63,7 @@ _**简介**_
 
 锐捷网络 RG-EW1200G 是一款有线无线全千兆双频无线路由器，适合平层家居、别墅、小型店铺、SOHO 办公等场景使用。设备性能卓越，足以满足千兆上网需求；信号强劲，信号功率功率提升 3 倍，覆盖距离提升近 1 倍覆盖能力强 。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfg81LLkuvs0WktpohRjamtR1xYNEdbiaEMbspsoCAzKb0amCs4P15P9NBfJWVJcbL2lqqmaX9qwAIA/640?wx_fmt=png)
+![](../../.resource/remote/af50fb7b6c309d201dd0d56c328bca9eeaea9d3dcb819356e282f8d40582943f.png)
 
 _**CVE-2023-4169 未授权任意密码修改**_
 
@@ -96,11 +96,11 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfg81LLkuvs0WktpohRjamtRH97ygLSGsueGotJfc0aduVxwkDctx5en1kicpAGQKqE97xKhtYmk9Ig/640?wx_fmt=png)
+![](../../.resource/remote/845ae4a1ecf0e71ded8cf0ec97b5f44b94e65f5e192e8a017cd30667c60fe930.png)
 
 使用修改后的密码能成功登录  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfg81LLkuvs0WktpohRjamtREDAKGQhH188zoVIU6CRMS5LqcE3sAgJ17xt7KsJo5YTuGGWHCgPrQg/640?wx_fmt=png)
+![](../../.resource/remote/fb807d26578610b29eb2561a0efb2d37e075eec7914b0acfddc929ad79687558.png)
 
 _**CVE-2023-3306 远程命令执行**_
 
@@ -138,15 +138,15 @@ Connection: close
 
 1. 登录管理界面，更多功能中的网络工具
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfg81LLkuvs0WktpohRjamtRRbDDmA1doSoAq2WiaiaNHibLSXuYibLFu6LEsibjp7XgLl9SrocEojUdWFg/640?wx_fmt=png)
+![](../../.resource/remote/1eb4195a91b095a25196ef436027d4a91f4e0c81edc5acfe70484610afb14fbb.png)
 
 2. 设置检测地址 “||echo `ls`”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfg81LLkuvs0WktpohRjamtRJdnSUic8F24Hicz37dTo6mWsfb5n76t1Km47utEbbZX5KnH8Jp1QHxicw/640?wx_fmt=png)
+![](../../.resource/remote/8069e32153f87580ad843f9284a14fa54fb819d06c68711eb41b19fb44f89cb3.png)
 
 数据包如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfg81LLkuvs0WktpohRjamtRAVDmIlS7vmh1nxicClycOoNG27icdpQaN8kreS4yARC035IRN92o3mlA/640?wx_fmt=png)
+![](../../.resource/remote/a9ab6e30f6fbc6e3a11746547b806d2527b9cac1a8b63fccb59f21095ad9f975.png)
 
 _**参考链接**_  
 

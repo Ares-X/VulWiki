@@ -79,21 +79,21 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 说 SMTP 走私漏洞前先提下 HTTP 走私漏洞，利用 HTTP 协议中请求和响应的解析和处理方式的不一致性。攻击者通过构造特定的恶意请求，以欺骗服务器和代理服务器，从而绕过安全机制，执行未经授权的操作。HTTP 请求走私漏洞通常涉及两个或多个 HTTP 请求的组合，攻击者可以利用 HTTP 报文中的头部或其他元数据来混淆和欺骗服务器或代理服务器的解析逻辑。如下图是 PortSwigger 对 http 请求走私的简单例子（https://portswigger.net/web-security/request-smuggling）：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyGf05TZfpF8p48f2X4m5Nj9J9o9nQJ1X5GlibJO0DCsNwa8reobRianOQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c42ebfda78a4a3d3e13d3614e75e04002ecca51e14c2cbc52b10f44cde69aef8.png)
 
 再说 SMTP 走私，SMTP 会话一般如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tywGldzjCt6g1Zn0Hudm4npFnGVBjxOhFMzxHcZoa4EN23GbGg8GhGIg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5cb03ad0e8ff74af5f4be44d15d1979e9d098199f62d3261a619b732b7adade9.png)
 
 同 HTTP 请求走私一样，SMTP 走私的基本思想就是：
 
 当 SMTP 对数据结束部分数据（`<CR><LF><CR><LF>`）有不同解释时，就会发生 SMTP 走私，如果 SMTP 服务器对消息数据结束的位置有不同的理解，攻击者可能会破坏消息数据。还可能执行指定任意 SMTP 命令，甚至发送单独的电子邮件。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyTwRlusJDiaUHckdKXMtkehNUCIkyDshyicIgtkrbAgzaLWnXDDjQBPibg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2f91b6cd3e7f11a8e179c515267541f49e55d531a4322cf9b1ce5113e6244839.png)
 
 如下是用于分析出站 SMTP 服务器的 SMTP 分析设置  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyqWrKOX4QJTUmFCJouXRYGbHSj8qtUqKiabYAubiarJ8qyPKvXJlaHJLw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/dea41d94efe5361a7f09817406c7982e00b89708960cd24f3c354518d53d8653.png)
 
 我们在支持通过 SMTP 提交邮件的各电子邮件提供商注册电子邮件帐户（与 Tutanota 和 ProtonMail 不同），这个研究项目使用了以下提供商:
 
@@ -146,17 +146,17 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 因此，我们试着使用 `<LF>.<LF>` 来结束电子邮件的消息数据，如下
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyCa2gOBcgq9wEsZaibZxEs9A1bumKuEqFgdgaf0iaydtgQiaPkMUic24ctg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/3ae3dbe8cb1fecab7b2dc27647a379a3fd8a4eaa13bfbb293190074880e1cdbe.png)
 
 所以每当入站 SMTP 服务器支持 `<LF><LF>` 作为数据序列结束时，只有 “lorem ipsum” 将成为消息数据的一部分，否则消息还包括“此服务器将换行符视为数据序列结束”。
 
 但是，我们实际上可以用它实现什么？来看看如果没有结束数据部分，消息传输会是什么样子，如图：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyzRtnqaQM3ibIAkyJibJfiadWPUWGUgibBO6qmHJl4MP4ZKAia7fAqKTCfLg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9d8dfc6a23b3018a3774d3035b7e5e4ba3be936135f1418693d542259ab40593.png)
 
 因此，对于这种情况，我们将需要确保在数据发送完毕后发送正确的结束序列，根据接收入站 SMTP 服务器的不同，这可能是完全无害的。但是，如果入站 SMTP 服务器将 `<LF><LF >` 解释为数据序列结束呢？
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyu00ibDtFh33fUdxBJTldU6YcV7kyDJR70zNPxzIB5pfuNmYsfja7zyQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/86ff1185a9ef8149f4cce5b4456dae706de0de08a7d9a42080da32ff9f201fa0.png)
 
 在这种情况下，就会破坏消息数据，而 “此服务器将换行视为数据结束序列” 现在可能被解释为 SMTP 命令。请注意，这要求入站服务器接受批量中的多个 SMTP 命令，即所谓的 SMTP 流水线。幸运的是，现在大多数服务器都支持这一点。
 
@@ -183,22 +183,22 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 GMX 成立于 1997 年，是 DACH 地区的老牌电子邮件提供商之一，拥有大约 2000 万用户。当向 GMX SMTP 服务器发送序列时，它会被未经筛选地传递到入站 SMTP 服务器，如下图
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyEicujVg4HI3vhP2ibax4JsuvVoHbcXaqvaEl1JUUKUDon03qhLdVqRsA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0db0ca754556e253daa5a913fd7d5b2b2ab7893d80786522052ac8e429a46761.png)
 
 因此，如果 `<LF><CR><LF >` 被解释为数据结束序列，我们现在可以在入站 SMTP 服务器上解析消息数据。
 
 我们继续向所有已注册的电子邮件地址发送一封包含以下消息数据的电子邮件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyWkVwVfengYL83riaq0aAariaJpadicicg7RLJARmS8bGSicveZec5TKrN0w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/39859334b2f46a3408e290e339769f3c1c81d6c40699b24097070a3d72186eef.png)
 
 测试结果发现，很多中招的，我们收到了下面这种邮件，也说明并没有结束邮件数据，是存在 SMTP 走私漏洞的。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyAaRQBiaDTXYJ8xA7TeyrnDg2Y2DSppvLb7ushhkKFc81ct5Fa8YBY8w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/422da264686f9c753ef1759e51f6b3e2bd9fea454534d8478f14e32b5bc26ec4.png)
 
 ****甚至发现了更严重的情况，从 GMX 到 Fastmail 的 SMTP 走私漏洞成功后，接管了管理员，如下：  
 ****
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyxicwUvqHouSA00Trm0y2icicriasT7HYjOOaNNGglablEp6PmTOTy0ic4Rw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/e9443054ee60221655f1376921ca3451bdfba1596fac0b5d02f0296d80b2d0bd.png)
 
 通过检查邮件头部，我们可以看到 SPF 检查与 gmx.net 的域名对齐的, 这是因为走私的邮件实际上来自合法的 GMX SMTP 服务器。
 
@@ -219,15 +219,15 @@ v=spf1 ip4:212.227.126.128/25 ip4:212.227.15.0/25 ip4:212.227.17.0/27 ip4:217.72
 
 现在，我们可以相应地更改 SMTP 走私消息数据，实现跨域走私，如下
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyLLD6gk1rhJmbd4vo0jkYKBXmkHOVicfmEYcTpZt7XAK9k1dNffGriaPQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c1ccad64c787349c8e81252ad09cab04d9f07131e8316e643c660257b4082e7c.png)
 
 将消息指定了一个不同的接收方电子邮件地址，并只向目标发送走私的消息。使用 web.de 作为发件人域成功地将跨域 SMTP 从 GMX 走私到 Fastmail。如下
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3ty7pGkkgrc5c6ia6ibznjQl6z9ZwelkldHH0PPlYOvjica1NGYzQnPORDaA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0932ef73adfb74e4c40444590eab6ad1156b0ceb8023c295dfd2db8c4e9589f5.png)
 
 在这种情况下，我们的目标甚至获取相关管理员的个人资料图片，如下为 admin@web.de 真实的个人资源：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tymZ0jZoYIO1rfKqZSIRLBcwAiabjibaUib0FKDHVOgddAnicS5c9ibJmr6pA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/bfe2b4f51a39d681eb8ce16fffbcc88604d5d739fa2802bd4b7a9d3a513dfbcf.png)
 
 SPF 验证结果也出来了：
 
@@ -267,7 +267,7 @@ $dig _spf-eu.ionos.com TXT
 
 不过，与 GMX 一样，无法向相同的接收者（例如 Fastmail）走私。原因是 Outlook 使用了可选的 BDAT SMTP 命令。BDAT 是 DATA 命令的替代方案，用于传输消息数据。它的工作原理是使用 BDAT 命令指定消息长度，而不是依赖于数据结束序列。例如，要传输 72 个字节的消息数据，如下图为通过 BDAT 发送消息数据。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyOhkqv6uZgrUr9qcs7s8vVs6rMlThBqnzPbcnecVtaxFXxvAbcxucKg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6b64d32e13648ac72d680a7c97179f38e021d8d2ca098f59cd75e99ebf85d377.png)
 
 即使这阻止了我们向某些入站 SMTP 服务器进行走私，但如果入站 SMTP 服务器支持 BDAT 命令，则 BDAT 命令只能由 Outlook 使用。如果入站 SMTP 服务器没有通过返回 CHUNKING 扩展来表明支持 BDAT（原文误写为 POOLING），则使用 DATA 作为后备。
 
@@ -275,15 +275,15 @@ $dig _spf-eu.ionos.com TXT
 
 有趣的是，sec-consult.com SMTP 服务器支持这一点。而且请注意，互联网上有很多服务器支持这一点，但既然我们必须确保我们自己的系统是安全的，所以选择使用 sec-consult.com 来测试，向同事发送欺骗性电子邮件，如下为通过 SMTP 走私从 admin@outlook.com 发送钓鱼邮件。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyESrl9icicRIpgYAt3W7ntxyrtcMnIGFJzlaH24F31DSaAGNwlYmutHlw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/36309920f9f77ae7c90cc35dc979122ec0695d11b57f08770e518935a52ec4ca.png)
 
 来自 admin（at）outlook.com 的消息确实被送达了，并没有被当作垃圾邮件，并且还回复了我哈哈。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyzic3vIGic2CfqTABwcIIIcTzvjpSUvIkRfTQskkvFTFv5Gdfrag2yqLg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b5c7a08dde886d21e54d7aa0da918080373abff252410543cdf694ab77d764d6.png)
 
 邮件显示如下：  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyOIvZdOTq9Yr1PpiaLt2G6EqFxKH4YLmDj3Hkic7286m0qyBSQh5vXBibQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/d4b59c9ba0cb21e4186d2a35a413c3e845b0cba2ccbc6e49df569cbea40518f9.png)
 
 我们可以通过查看消息头再次确认 SPF 对齐情况：
 
@@ -302,13 +302,13 @@ Received-SPF: Pass (mx3.atos.net: domain of admin(at)outlook.com designates 40.9
 
 由于之前的例子都是基于文本的，攻击者还可以使用 HTML，制作一些更具说服力的钓鱼邮件：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyhWKYl6YgyTABlTklicJic7eVSZ1TwXMqqv0GUGW2GfbbapoGe05fk25Q/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c70c6e0523de5f194397366f856ffc07a00bfeef8d9d5b3c35649ba325d24fa4.png)
 
 由于出站 Outlook SMTP 服务器不仅用于 outlook.com 的电子邮件，还用于整个 Exchange Online，我们现在可以从使用 Exchange Online 的每个域发送电子邮件！
 
 由于这会影响许多公司（如稍后在 SMTP 走私影响部分中讨论的那样），我们可以自由选择我们的发件人域。我们甚至可以使用 sec-consult.com 本身！
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyVMmzeqpLeBC3m2CMxp046nh2Tic6c5RUfgmTyFficfL00P4AXToKeWlg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/8a4da4d0bdd2b0e632b0ebf258bc642e36ba1d315ea55f565ab8b107de3a465b.png)
 
 与之前一样，SPF 检查在域对齐方面成功，因为 sec-consult.com 正在使用 Exchange Online，并且 SPF 记录中包含各自的 Exchange Online SPF 域 spf.protection.outlook.com。
 
@@ -344,7 +344,7 @@ payloda 的可以用：
 
 比如利用空字节结尾数据如下：  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3ty0H0gKBu4nrScGOIdYlP6KzLkrdk64pUgICKncTIlQk8e7ca5OdmLAg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c4de9b50daeb496bed65d571cc1dfe77a010c3b190dac51dcb4e68cf432f2c46.png)
 
 现在，通过扫描前 Alexa Top 1000，识别出了接受此类序列的各种入站 SMTP 服务器！但是，这些序列中似乎只有一个对许多 SMTP 服务器有效：`<CR><CR>`
 
@@ -366,11 +366,11 @@ payloda 的可以用：
 
 ，们现在可以从 admin(at)icloud.com 向我们的目标 sec-consult.com 发送电子邮件，因为与许多其他出站 SMTP 服务器一样（在 SMTP 走私影响中进一步讨论），`<CR><CR >` 不会被过滤，POC 如下（结尾使用 < CR>.`<CR>`）：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tytZsAlvxL8AtgzlRObRDqicaWCulicUe0icW8wEzibu72rqZPIX3WWdlvPg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2829628bb210d051cf9e09cc15f4a93c4afdf873237d17f57cdbcebd070509b3.png)
 
 效果有多好呢，如下为伪造为 admin@icloud.com 发邮件：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyOPyxWkibBw26aj8NYxoJZkZKxDVYSmK6bibia0AOxUwLwzTvMVW1EeBTA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5cff4bbd6fd527edd35dfdd91294fb8df7c0be5fc43e82a5c323827a991b79ea.png)
 
 当然，SPF 检查在域对齐方面没有任何问题
 
@@ -407,17 +407,17 @@ Authentication-Results-Original: mx4.atos.net; dkim=none (message not signed)
 
 通过 **GMX 和 Ionos** 电子邮件服务进行 SMTP 走私允许来自大约 135 万个不同域的 SMTP 走私，且 MX 记录到 Ionos，以下这些 SPF 记录都允许_spf-eu.ionos.com 发送电子邮件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3ty4oqBBDFfwoPqttSfaojpyHP9s0Sk2EW3NEetCJSsPczOlPicX7q9wlg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6f2af3d7c9652ad9688375cff35a8ed59e3067fa29978dc14de5972ac09531fa.png)
 
 支持入站 SMTP 服务：**Fastmail , Runbox**，不过在对一些流行的电子邮件软件的默认配置进行测试后，发现 Postfix 和 Sendmail 可以走私。从全球来看涉及到很多很多。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyO6wiajOvLQYN58KkNCGJAiaS1kOmQLtDnhtMjXBSbWibsoQUj0EksypSA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/98df4650d0d55cc19d3447809a01bb0999fc10db23586f151361e45c8e4e0f3b.png)
 
 **微软 Exchange：**
 
 这两个巨头影响就更大了，涉及域名过百万，还有些价值非常高的目标，如 microsoft .com、msn.com、github.com、outlook.com、office365.com、openai.com 等，还有客户的域，如 tesla.com、mastercard.com、nike.com 等，在 shodan 上简单搜了下设计 postifix 的，如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3typlIv2PPKPv1FibUQWKd0HzKmcZNJuCKn7ltSOufFtgJ2cSxjfb1qicNA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/cd1125fb7fa55231a1c73c391dde0cad65c7778c674c6a4276113bea0a4e9cbe.png)
 
 **CISCO 思科电子邮件网关 / 云网关：**
 

@@ -43,10 +43,10 @@ schema_version: "1"
 
  FreeBuf   2025-07-08 11:03  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icIpibI5JhZ4XkIZu1PaHMxHzycL6ffHKRDSPGDrtKZCgGXA8XyOJCFrvGalvZDON7ggymT13s4jXQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/39b42f1b99489596b1c78940a79c470d243218488a23e6342492e668cc9269f9.png "")  
   
   
 现代Linux发行版存在一个重大漏洞，攻击者通过短暂物理接触即可利用initramfs（初始内存文件系统）操控绕过安全启动（Secure Boot）保护机制。  
@@ -87,7 +87,7 @@ schema_version: "1"
 Moch研究中展示的关键脚本如下：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icIpibI5JhZ4XkIZu1PaHMxHq71LJS8yml0DJ78Xr5IM0iaE1yQ8vLaaaC0V59H9JsAmr1s5yaWperg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/a2ade0407f43e71be67ac02747b27c01d15556e03e601bbeca2ea1e9879ab83e.jpg "")  
   
   
 该恶意钩子会在根分区解密后执行，将文件系统重新挂载为可写状态并建立持久性访问。由于攻击遵循常规启动流程且未修改已签名的内核组件，因此能规避传统防护机制。  
@@ -153,7 +153,7 @@ https://cybersecuritynews.com/linux-boot-vulnerability-allows-bypass-of-secure-b
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
    
   

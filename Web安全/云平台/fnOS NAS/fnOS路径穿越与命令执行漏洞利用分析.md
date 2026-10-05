@@ -56,19 +56,19 @@ schema_version: "1"
   
 # 下载历史版本镜像，以1.1.11为例，向https://fnnas.com/api/download-sign post 如下请求获得下载地址。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjZ6XN6LJlBiaM3KSic1yct2OF4eicBoVeIRRngOvvvgwuL7UXzOhMOujMw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dcc3a08edec30e46e32c162f01f066bc6e0bb78401be99e064fa8ad5e038a180.png "")  
   
   
   
 安装完成之后即可访问web页面  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjDkTUIDuL9uV7jfZTZ2lJClkyFMK4iah1hv9TxtMkvef14KWllftgmyw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/41f4c38b9d0dfc53daba2e42efe1e0a67036284413b6dcabd604cfbb026d1338.png "")  
   
   
   
 初始化之后成功进入桌面  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjRFUHHSgeqAZKmY82hicVayiclics6cia6uyZdlHaicQCjDibricm40C49RMCw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ab0bf8d21e4c217381ad550ce5e67ee0b10428f788633d5222704de4f385a08d.png "")  
   
 #   
   
@@ -80,24 +80,24 @@ schema_version: "1"
   
 链接后加入``/app-center-static/serviceicon/myapp/%7B0%7D?size=../../../../``可以直接遍历文件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjB89AFT6KsJrvibUCwxrzjQ61jQ2XFapZicG82vtPG3NG12gImyBvyoNA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/33a6f093e3fc8ef0ba9f99431e837cf9bc8571e28ba3d70a4f9ee82986fd819a.png "")  
   
   
 抓包验证一下websocket开头的校验信息计算方式，正常的websocket请求：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjLiboPneXV3WECBY81e4evXicFz8WGYLBnQEVhBibOJbFNbicr3UkYXxkwg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/38ffac0c65cdde7ec4e33f25d97ad76f331bee6719ab37aa85a4782a5fd61486.png "")  
   
   
   
 浏览器中存储的fnos-Secret：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfj0uFWBvicLzSk3gRDHoUvFDKh8wibp47Jc624JXLlBfhaV21BpKuCKVPg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/52eef90514e88659ce9c90123899f0c2b06a17c029eda811f49a1cd63d8c8b66.png "")  
   
   
   
 尝试构造校验信息，成功  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjibwRb1iaH7NMPBTPtYOPCLdLsXD2WicCSHEBHhwy2dxdvl0OZia3zSSTXg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/babf58aec5391fd6531373c1481e227c532b776663472c0d3f980bbc2cff432d.png "")  
   
   
   
@@ -114,13 +114,13 @@ schema_version: "1"
   
 前面构造校验信息尝试命令执行  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjpblPdCGwEGVp7C9Cs2gDTibia8384bXRxYRqUwia8oSgG3IpVuicibme0Ww/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8c12b0b331cafa407b43b3125faf0c87fd783f28bde25a0ced15ee587bc57d52.png "")  
   
   
   
 执行成功  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjibOo6hq1mhtlmyzoCKK196icuol811bz8xJeRc7hs8ticr8ZibQAerOkSg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/54277a3e8e0a642374e23d8ca64f0b7e0d01914db7d8f0800d5994df7a2f652f.png "")  
   
   
   
@@ -131,19 +131,19 @@ schema_version: "1"
   
 # 在/var/log/accountsrv/info.log中有账号登录相关的日志，存储了fnos-token  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjBqhEIc0lfoBu2mwgWyOAibOfVKrWibF4IoEf6Ucj7P1dfDEkicMOpBvicQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/545a8b9b5921ee94c76a78e9ab6f615727b247cdd3ec6b4b433bff5fa46cde83.png "")  
   
   
   
 查看登录的websocket请求，发送：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjUmc0LDJYpzic4CBA1GZEpk2icibicRROmOpMnic6HYVic787kDRUXdhzR7pQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2c94edb01e7b752cd5e6d9f93bc0f7a0f0ccf73d70cb66174e3bad5c3334ede4.png "")  
   
   
   
 返回：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjNzQuZ6l8fvM7jBqOiagnHaJ4eYv1nicw8YuVVxxRd49YBYXWvLk21SGA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4697ba602d27860aea2d99302cb646b430ca052a1a150a16a17872ba15378de2.png "")  
   
   
   
@@ -161,7 +161,7 @@ import base64import jsonfrom Crypto.PublicKey import RSAfrom Crypto.Cipher impor
   
 验证成功  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfj5oA3WXoo2NDQEzM1ELaQo8mFmaqvsib628Ha0Ttsl2Vzibdyz7xS66JA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/973e04e167f7bcdf5aa7678d29a457157ae0d2ddf8bd03d26733462f7e2dd615.png "")  
   
   
   
@@ -175,29 +175,29 @@ import base64import jsonfrom Crypto.PublicKey import RSAfrom Crypto.Cipher impor
   
 验证成功  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjpkMjoH13niby8hHG42HQy9nAJFbY1OQ0JhUJFUvCia1QVZwlXuQ1dURw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4b01931a6c1ad79b0f492075bf7548d302a5bc6ff4f20f28c6c80fd563d0e0d8.png "")  
   
   
   
 接下来寻找服务端的逻辑，通过websocket返回的字段找出来二进制文件/usr/trim/bin/handlers/user.hdl  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfj1sl88JAwlU4uibADl4xV8LReSDolJ7ZGozADzgTMiaoKh3d3SeLlBdrA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fb94bc5ec232ea37eabaad348bad9a7fe37be303537cb739ccf7d7f89f54363a.png "")  
   
   
   
 逆向找到关键逻辑，找到secret生成逻辑，是随机数  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfj2HbicP0GdO0IRqvq5l4eM3YAx85Z9eSibwq3gfewFnMdpD5LKLZt4vFA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8b97d416515bee3a7ed4a4eed9c0f37c57748758dabbbde1b9823d02763827f1.png "")  
   
   
   
 然后用生成的token前16字节当iv，用某个key加密，结果存到token后16字节里。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjYMbsicC2xC1dcVTxOTa1u2WT5Q70ILARTWz93BWJhKEg60hM9fHeu4g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4248cdd9973d31de16087c592bdf3b9046820598c7abee3ae9bbb1807bb8cf9c.png "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfjrYsrRqQia6klFpSPjFE2M0pWp5ic93pAAsa1tqyiahrlhJCmqmQmia30sA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/84fced566f2c7e068607cc93042b4689a9ba1c27371d7d72491da6bd07d55d40.png "")  
   
   
   
@@ -210,7 +210,7 @@ import base64from Crypto.Cipher import AESTARGET_TOKEN_B64 = "19FkFWR+gGmeVTtvK0
   
 ##   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GUZnDjic4zBBiaj30Pib5FSfj1pXvcslPkRIjBFON1nFS1NqHSKvyk4ZTWNVI9xoiaibqAd2Z1q77IjDA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/27e31dd94d76455c37af45977cb74db3a94dcf06af641be68cd842d2068d5b33.png "")  
   
   
 看雪ID：  
@@ -243,23 +243,23 @@ https://bbs.kanxue.com/user-home-929564.htm
 [APP风控参数分析&Frida绕过](https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458608753&idx=1&sn=df2711ac0d706281b8d43a466004fa88&scene=21#wechat_redirect)  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/3bda3987c64417397ab972d267f862449372e82b23178eaa23dde40354644cb5.webp "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpvJW9icibkZBj9PNBzyQ4d4JFoAKxdnPqHWpMPQfNysVmcL1dtRqU7VyQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpvJW9icibkZBj9PNBzyQ4d4JFoAKxdnPqHWpMPQfNysVmcL1dtRqU7VyQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpvJW9icibkZBj9PNBzyQ4d4JFoAKxdnPqHWpMPQfNysVmcL1dtRqU7VyQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球在看**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpUHZDmkBpJ4khdIdVhiaSyOkxtAWuxJuTAs8aXISicVVUbxX09b1IWK0g/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/bc51e60a1ab9953f98cd0a2143c252c867072663f41e9d1e7cb32951a0a00487.gif "")  
   
 点击阅读原文查看更多  
   

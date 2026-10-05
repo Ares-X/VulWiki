@@ -86,7 +86,7 @@ Nighthawk RAX30 | WiFi 6 Router | NETGEAR Support
   
 默认情况下，设备上有四个用户帐户。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgE96l3c6N1BhxlO04Bmtuscu1REJfWWvvXOyic09gBNaGNRDPUtJSN5yQ/640?wx_fmt=png "")  
+![](../../.resource/remote/47fd8d786f1abd50b7a50115347c4fa09bc31939e2501b6e3fea4e9f1a3578bb.png "")  
   
 admin -> 常规用户，通常为web服务和其他服务  
   
@@ -104,7 +104,7 @@ support->后台技术支持后门账户
   
 查看命令注入危险函数，发现获取User-Agent参数没有进行过滤，导致命令注入。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgEflUFpatgVN8TBYaxlJLwahaphtbJRogyRjicic4wWVH0iaPCwiba4zzOJQ/640?wx_fmt=png "")  
+![](../../.resource/remote/8fca89b795365e257c135a9602151cd61e5a7204e20931569e0e6da9c30a22f0.png "")  
 ### 漏洞利用条件  
   
 伪造User-Agent  
@@ -122,7 +122,7 @@ nobody:$1$OWpQjger$j7CFLUn8yoD8agVf6x5gA0:0:0:nobody for ftp:/:/bin/sh
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgErmqCHJXrc47icKWicibLHAQAXdrRQeWgvMaTibbP0TscoemgGotwGN9pow/640?wx_fmt=png "")  
+![](../../.resource/remote/3355e23b7821064e3dbb9627115612fa8434c222ec17ccfcebaf578bacc26a26.png "")  
   
 ### 2.3 pucfu 引发的命令注入  
 #### 漏洞原理  
@@ -141,22 +141,22 @@ A[pucfu] -->B(fwcheck.so) -->C(fw_check_api) -->D(curl_post) -->E(libpu_tuil.so)
 ```  
 #### 2.3.1 pucfu  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgE7smmBJn4f1yCHOTT5yZ4IPfapm63m8s6ybbs3ogFaZHa2YtpttkkkQ/640?wx_fmt=png "")  
+![](../../.resource/remote/ef3ee534c4d375e9524716b48db524ebcf73b6b101639c891546e99a26b1ffca.png "")  
   
 将获取得到的json数据存储到v29变量中，最后将v29数据传递给SetFileValue函数。  
 #### 2.3.2 get_check_fw  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgEaEoNyOlq6u7mmYWnNPibT4NXIaOO2LRSXB1qW0cXuibM5vSBMLwU2sRA/640?wx_fmt=png "")  
+![](../../.resource/remote/fc1e57812e69bcfd3f37593fd555072cbf38615f8c9b48b204e56397cee21a9a.png "")  
   
 从D2数据库中获取UpBaseURL,调用Netgear API 将从服务器端获取的数据进行保存。  
 #### 2.3.3 fw_check_api  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgEKVSynEc946q0IXnmAFLVLGoZEIT57AFJV48iatfZAUMaNMOhCxfss7A/640?wx_fmt=png "")  
+![](../../.resource/remote/263e9c93bc92e8f472aceeadea18ab437705ee3044bb6c0ed3085fea063c77f9.png "")  
   
 最终pucfu bufferA获取到的数据就是url对应的数据内容，strcpy(bufferB,bufferA)  
 #### 2.3.4 SetFileValue  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgErxzHelV5TMfehwnEhx1DmXUab3VF2ibvW2FafAkuLdNu83FstmsTpWg/640?wx_fmt=png "")  
+![](../../.resource/remote/92488738f3a32ab26f64dbd0183538e6674858ad071177669292d2f376243b70.png "")  
   
 判断是否有'/'  
 ```
@@ -168,7 +168,7 @@ sed -i 's|^lastURL=.*|lastURL=|'可控数据;# |'/tmp/fw/cfu_url_cache
   
 pegaPopen  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgEmczuBZOgLL9F7Yz8PotnZjfBxoo0NWMiaq0zWSmdmbELoiax8lAZbVAA/640?wx_fmt=png "")  
+![](../../.resource/remote/50329fdd957742ba9c9e94f6460ddbb113949aecccec5313d902218c2ad398e8.png "")  
   
 构造数据，实现命令执行  
 ```
@@ -188,12 +188,12 @@ pegaPopen
 1.0.9.90  
 ### 3.1 puhttpsniff 漏洞修复  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgEa6libU2crWKQbeTfRcjWAeLxYU1q18IRz8za9AGN8IFVtO82HptxibhQ/640?wx_fmt=png "")  
+![](../../.resource/remote/180f0cac43ccb27ae919cafc3df8e011be9dda34905a6f64277881ef64effd42.png "")  
   
 使用带参数的调用而不是直接命令调用。  
 ### 3.2 pucfu漏洞修复  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgEQ3uia53PDe4GVlibttRB57RkhXLEKNA1DQbnPpaLthv2kxNEGPjicgeBg/640?wx_fmt=png "")  
+![](../../.resource/remote/d163509e6d5362fda59f9337d65768f4b0a9d0e63c7725ea161b6bad5effb4df.png "")  
   
 使用带参数的调用而不是直接命令调用。  
   

@@ -54,7 +54,7 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/5nNKGRl7pFgrNicMticDTWVCUWbOwRuWcrYSpAlwDRibKNLbe3KialEfR0Y2PlPAvS4MN50asXETicAviaRy1gRicI2Dw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/50dfab609e6952eca936b60f99e696edd370931ab37e7e52fec4d22c5424b656.gif "")  
   
   
 llama.cpp 曝出 RPC 服务零点击远程代码执行漏洞（CVE-2026-34159，CVSS 3.1：9.8），攻击者无需任何交互，仅需向开启 RPC 服务的后端发送构造的张量数据包，即可通过绕过内存边界校验实现任意地址读写，最终获取服务器系统权限。  
@@ -147,11 +147,11 @@ return result;
   
 360 漏洞研究院已成功复现 llama.cpp RPC 服务零点击远程代码执行漏洞（CVE-2026-34159）。在开启 PIE + Full RELRO + NX 的 Ubuntu 环境下完成 EXP 验证。通过构造多级张量计算图，成功突破内存防护限制，拿到 RPC 进程的反弹 Shell。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/dZ7ia5iaWFzzic7ic9a3FvmrRcTAKSFSprgq8ZUdX2gs6S41vbkU7wHFmYmqNbZXn3eDUSETljrCmmVPanuWcXd7LZ30NAjbAbUuMunKm6TicKqE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7b928fb781bdbc1c072eec6c48501fe8ab58d236d8521ea247fe7ad8200bfb1f.png "")  
   
 发送反弹 Shell 数据包到服务器  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/dZ7ia5iaWFzz9ibbAdnoTQicBXZpC0a9PQvGX0HxWPAfJY2ypSz7I5ALNDQ8ibJ0rFngw5ZuN3IH2IDHBBsQGPQrvy6Gz8Iy8p5xXxIWicovTFx5s/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bee4a0fc08185997cdbd1d82ecebad3f36a9528470949bb162ebe2cd29f647c2.png "")  
   
 CVE-2026-34159 llama.cpp RPC 服务零点击远程代码执行漏洞复现  
   

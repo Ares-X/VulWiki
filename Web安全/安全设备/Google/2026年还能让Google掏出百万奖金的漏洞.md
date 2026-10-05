@@ -82,7 +82,7 @@ CVE-2026-2031
   
 再细看，这个 API 上挂着好几个公开的调试端点。  
   
-![API explorer screenshot](https://mmbiz.qpic.cn/mmbiz_png/VugQCN2riaR2xRSuIOlv3jBDqnrSrZvQHclyEPAk4eb55ibIA3LDzJKVqBvpH1ibFrqwKbkVaZtB1vxO7UB9LIZJTicyoE6hiaANuqJNoXpWlKWg/640?wx_fmt=png&from=appmsg "")  
+![API explorer screenshot](../../.resource/remote/39779323d0522c9ade48133f7247ad1e8557fdeb02252da2d55520a9a030b938.png "")  
   
   
 我用来自测 Google 内部 API 的内部 API 探索工具截图，数据来自一份 discovery document  
@@ -188,7 +188,7 @@ schema 泄露不是信息泄露的边角料，它把黑盒测试直接抬成白�
 三  
 泄露内部工作流执行队列  
   
-![listQuotaQueue endpoint screenshot](https://mmbiz.qpic.cn/mmbiz_jpg/VugQCN2riaR1qnfQTpvALbg8TCia2jm0TOMnicQFZiaEDy6QoekY4u9d0ibKy3NqpgicQSlLXUDkhH7j9icNl5QwUXEiaQyUkbNUx0l22sGtBD1e5icU/640?wx_fmt=jpeg&from=appmsg "")  
+![listQuotaQueue endpoint screenshot](../../.resource/remote/7d591fec098d5aac3c43da18a3e7ef456277f00565cc24694198574bf7092dc7.jpg "")  
   
   
 API 探索工具里的 listQuotaQueue 端点  
@@ -788,7 +788,7 @@ Content-Type: application/json
 五  
 那条改变一切的私信：第一轮 RCE  
   
-![Discord DM screenshot](https://mmbiz.qpic.cn/mmbiz_jpg/VugQCN2riaR0Z2D156bYUB9mKpzqb688rABQbHz6ywUibZjPkLjrR59iaRx4FBribMlmFXDf5sumNp0wh2dcnOLvQJUJ6q0ctibdk1w6SZxBxTFE/640?wx_fmt=jpeg&from=appmsg "")  
+![Discord DM screenshot](../../.resource/remote/98bfee8fae5cfcc4f3f8e4469c02d6e2cae09895bc32637c57548970789f56d9.jpg "")  
   
   
 那条私信：我随口提到自己有一个能泄露 Google 内部 protobuf 定义的 bug  
@@ -984,7 +984,7 @@ GenericStubbyTypedTask 很可能属于底层的 ASIS_TEMPLATE：
   
 回头看 Application Integration 的 JS 代码：  
   
-![Application Integration JS snippet](https://mmbiz.qpic.cn/mmbiz_jpg/VugQCN2riaR0l3TRT1Gy9PsSU17yZuOTMiaXddTWJAVib1PwXbicuteo10ibaiceWzs3t43ic3IiaicvX2cA7eyX0Vib1OIs2FXEpInCVCYLWej0iaQ768/640?wx_fmt=jpeg&from=appmsg "")  
+![Application Integration JS snippet](../../.resource/remote/cb29610f328fddbcbeb61235fe5518fc4160904ef9fc5952e755223e7ecd95be.jpg "")  
   
   
 从 Cloud Console 里拿到的 Application Integration JS 片段  
@@ -1004,7 +1004,7 @@ JS 里的任务清单（节选）
   
 确切的任务名是 GenericStubbyTypedTaskV2，还自带图标。  
   
-![stubby icon](https://mmbiz.qpic.cn/mmbiz_svg/Q3auHgzwzM6PrRowJvUxPX1F1RLDLqBCwJlZTWa3QndMLrAgRGrhM5QxnwmjJmh7XQvYmxd4MCeDk1F7BUibLib3Jx3w13ppPyfu3icKzorVJq2KlnGticv0icg/640?wx_fmt=svg&from=appmsg "")  
+![stubby icon](../../.resource/remote/2d5a0e5acc5a19ce56c0560601a69b18758fb1f0ba7d52c1a20a4848f647429b.svg "")  
   
   
 GenericStubbyTypedTaskV2 的图标，出自 Google 内部静态资源  
@@ -1075,7 +1075,7 @@ Alkali 是 Google 内部的一个框架，Googler 可以用极少的样板代码
   
 内部 UI 大概长得很像 Application Integration 的可视化工作流编辑器，我们实质上是在给任务设置坐标：  
   
-![Application Integration workflow editor](https://mmbiz.qpic.cn/mmbiz_jpg/VugQCN2riaR1G4angjMnTaO68ic6KnIHkiaZRLlMEFQQBpoGdqe9Z7rBOo06Vz6JNHA1jqDia6yXp70eFEM4h31oQMzKhq5Z1uFlFA9Dd3YkQs0/640?wx_fmt=jpeg&from=appmsg "")  
+![Application Integration workflow editor](../../.resource/remote/e7961766dd6f309b846877a28be958d9fe4f259838e0f9568f1676340b31d64f.jpg "")  
   
   
 Application Integration 的可视化工作流编辑器：与内部 UI 的结构一致  

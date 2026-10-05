@@ -117,21 +117,21 @@ Content-Length: 365
 
 首先访问复现环境。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/UpWGe2KIPmprZhKaxroGkLxbgq5wW3sqXBeV0KoYKwZ8JMCzgX2Ha285kkicsHzepbgYyVibe6brUawWygfyJLYQ/640?wx_fmt=png)
+![](../../.resource/remote/201d894dec7cf87dd4ffca6a9158b771cf6d31c71e001abaa1846302ab2896fd.png)
 
 如果复现环境是自己搭建的，环境启动后，访问 `http://your-ip:8080` 即可查看到管理端（admin），访问 `http://your-ip:9999` 可以查看到客户端（executor）。默认登录账号口令是：“admin/123456”
 
 访问环境后，接着使用 hackbar 发送 post 数据，进行反弹 shell 操作。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/UpWGe2KIPmprZhKaxroGkLxbgq5wW3sqVsf9mfNyoZxAfQzeqmnO6wPQicJysSZpV6ebdlMrbkgiaK4AHH59FQfw/640?wx_fmt=png)
+![](../../.resource/remote/8a5e6931ce2ad55202cd630cddaf67923d104f5ff16191bcf01b59eedda8e71f.png)
 
 点击执行后数据包发送成功，并成功反弹 shell。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/UpWGe2KIPmprZhKaxroGkLxbgq5wW3sqNcmw9XBgic3SYzQwCIa7VZun6srJyGdfwMkq0ZtZH5ibERqdjzicnuCBw/640?wx_fmt=png)
+![](../../.resource/remote/adb81cc03645a35483a32bcfcf3d3126b6efc7a9319e2cdba3e8b19dbe7def0d.png)
 
 至此漏洞复现完毕。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/UpWGe2KIPmprZhKaxroGkLxbgq5wW3sqiaAnZ3O0nK1Led1URrZ6LucwS43eicjpyWDiciavENz75VL0ZEgPvKVjdw/640?wx_fmt=png)
+![](../../.resource/remote/76c678f2a290423366d2ae8c324396aaef24ccc11bea99dddf899495624d0d39.png)
 
 **免责声明：  
 **

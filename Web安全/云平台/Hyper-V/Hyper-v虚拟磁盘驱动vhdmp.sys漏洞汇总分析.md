@@ -575,7 +575,7 @@ PrevousMode位可以重置为KernelMode=0，从而导致可能的特权提升漏
 笔者漏洞poc采用.net程序复现,出于安全原因笔者不能提供完整的poc代码，下图是笔者在的Win11 24h2物理机上成功复现了CVE的利用效果。  
   
   
-![pic](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1UG7KPNHN8GFNYQwyWra9j7Tjys29yn4Ga6UDI8NYSwVY4Y9Fr8tGYt5ZiceF4YoL2yRIPsHrGrAf4ZDx1PjPqg/640?wx_fmt=other&from=appmsg "")  
+![pic](../../.resource/remote/e42437ba2d8a9bccd4d7311506c880f4c3a94b6bdc594e79cdd012feb3ee9d60.jpg "")  
 ##   
 ## 结论  
   
@@ -596,7 +596,7 @@ CVE-2023-36408致谢
   
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GFNYQwyWra9j7Tjys29yn4LU84MzMiadMIKFlZSFB73Fy7kBAqfRGUpHjAGxoDKjibEyEROaMxY5RQ/640?wx_fmt=png&from=appmsg "")  
+![图片](../../.resource/remote/ef02ff9452fb85770922aa7dfabbe7b902390f9597d1cd30f42a4038b82364f7.png "")  
   
   
 看雪ID：王cb  
@@ -626,26 +626,26 @@ https://bbs.kanxue.com/user-home-609565.htm
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/3bda3987c64417397ab972d267f862449372e82b23178eaa23dde40354644cb5.webp "")  
   
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8GFNYQwyWra9j7Tjys29yn4J1HoOVGGBVaicCribicylsF2PCqgdicp3xqhRNQGGE0fcibicjkGesdA1QzQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8GFNYQwyWra9j7Tjys29yn4J1HoOVGGBVaicCribicylsF2PCqgdicp3xqhRNQGGE0fcibicjkGesdA1QzQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8GFNYQwyWra9j7Tjys29yn4J1HoOVGGBVaicCribicylsF2PCqgdicp3xqhRNQGGE0fcibicjkGesdA1QzQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球在看**  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8GFNYQwyWra9j7Tjys29yn40XKIGUKog2EZ8UTMepiaoicOYhXlQUH9ajrGDQzugmY6w66HgrZ7mhFg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/bc51e60a1ab9953f98cd0a2143c252c867072663f41e9d1e7cb32951a0a00487.gif "")  
   
 点击阅读原文查看更多  
   

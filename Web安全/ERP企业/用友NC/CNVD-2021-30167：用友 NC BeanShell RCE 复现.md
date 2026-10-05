@@ -85,7 +85,7 @@ schema_version: "1"
 title=="YONYOU NC" && country="SG"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsgfo1p5qOx5JjUPyM1mkBb2VRMbLFNeDG86EHTTlKfdLpUbAUKBoln77qNJoc9uBtVXGpyEBgY0cw/640?wx_fmt=png)  
+![](../../.resource/remote/7150359224fa29f2f495b3c869abbc369f7344303c5247c306e302fec18cfe58.png)  
 
 **0x05 漏洞复现**  
 
@@ -97,11 +97,11 @@ title=="YONYOU NC" && country="SG"
 
 得到如图：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVsgfo1p5qOx5JjUPyM1mkBb2x5APTG0WEmJ81DGbqbcnXQlsGCBxWrWzN8dYDqab0fxsibejKEPdokw/640?wx_fmt=jpeg)  
+![](../../.resource/remote/3ad7936310b466c5fb627ed832563863e7f3bcae00f553a410b3b949a2c629cd.jpg)  
 
 2、我们发现这里有执行代码的接口我们输入 payload 如：`exec("whoami");`即可看到命令执行成功  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsgfo1p5qOx5JjUPyM1mkBb2q5GKyO5XbchHJnmLBb9TpBQI5OIfuwicKL87PGlnCVrYJL0JkWBwu7w/640?wx_fmt=png)  
+![](../../.resource/remote/b1e3d9097edb396acd318e61230cda3c5269c7048bbc633dadd6ae1412120356.png)  
 
 **0x06 修复方式**  
 
@@ -115,11 +115,11 @@ title=="YONYOU NC" && country="SG"
 http://umc.yonyou.com/ump/querypatchdetailedmng? PK=18981c7af483007db179a236016f594d37c01f22aa5f5d19
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章**
 

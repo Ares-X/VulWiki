@@ -78,15 +78,15 @@ schema_version: "1"
 
 但在AX18系列虽然接口存在，但这个密码已经登录不了路由器了。因此我们需要找到他更新过的密码或者验证流程 这里我们先全局搜索一下字符串
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTAJ7DLvz8J0aJgVCwn3Xjk0jIBQy8xBicXibz8CWeEVgoV2b5PexQ6UeqHsNXcbPJbqZt1jm4CNvJg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/ee19f1072c1679fc2ff1cbba903413eb566cb53a5000dddc17637bfb046b49b8.png)
 
 发现需要重点关注的文件是这几个 而当我们尝试连接这款路由器的Telnet的时候,我们发现 不同于我们连接其他设备的Telnet， Tenda 会有一个 `BCM9%x Broadband Router\n` 类似于这样的信息打印出来，我们尝试后全局搜索 `Broadband Router` 发现只有 `libcms_cli.so` 调用了他
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTAJ7DLvz8J0aJgVCwn3XjkniaEY1D17uibia1A7ysMg278d0yea8ACr5VzFIyefJib3wZo63nPlhIJlg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/feffdc8bbf8c84e3bd23d5c05b0a85d5b7c689e04cf3adbb82c3b59b2de87666.png)
 
 我们尝试去找到这个函数
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBTAJ7DLvz8J0aJgVCwn3XjkY718eGFnGSYXeXlpNYHHzgWDz1gIOt6VgCcUUIEgobpXb1VyZoHDZA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/2fb38f8f8f9c02dfdca3184b33f9bfe4c8a6245239a8e4ac66a1c64a5214026c.png)
 
 我们发现`cmsCli_printWelcomeBanner` 这个函数名，我们尝试去找哪个文件调用了他
 

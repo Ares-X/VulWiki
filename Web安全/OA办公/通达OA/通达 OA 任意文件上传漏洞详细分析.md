@@ -64,7 +64,7 @@ V11 版 2017 版 2016 版 2015 版 2013 增强版 2013 版。
 
 SeayDzend, 可以自行百度下载
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1K2gkhibjEeNAlyz7klBOIR1v3ofbKlibKEVwAxoq7AIiaQgWESicbkcglYA/640?wx_fmt=png)
+![](../../.resource/remote/bd421a31117c49339237f7240d40a393ffc1ed2b94735ab49dc24ef1a8a6ca09.png)
 
 在线解密
 
@@ -76,21 +76,21 @@ webroot\\ispirit\\im\\upload.php
 
 代码分析:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KzO5fGtp8YvVUstD6vtmkicdjsia0K9CzNoJGQ5VJic2SoWFOe8S8VsFpA/640?wx_fmt=png)
+![](../../.resource/remote/6fef23e3a0c4089f891587b2f7a8f8cdc8c14c5c1336a190329959102a41792c.png)
 
 可以看到只要判断 P 参数是否不为空，就开启了 session
 
 没有 P 参数时候
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KYqgZuibPC7s8CG9GOPtoj5Wibvb7CzCR0TnOsKENJicPLiclt2JB3Yjc6g/640?wx_fmt=png)
+![](../../.resource/remote/7ec4a5d43506547fb3490dc4a883a0e94d336a6f37e11b00b5c0c02f4874f06e.png)
 
 有的时候
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1Kyw4pyWbCb5gibIUsDNxMm9xbZP7oCtXfBgKrIb9RCZtK2D226gD9qFw/640?wx_fmt=png)
+![](../../.resource/remote/bf73c6d214ebebb92a7d1f31ee9e8739e612545fba623a280083fc80861aab2d.png)
 
 继续往下走
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KFaiaVhUIXjBa1OicKwicAzfr78KuHRh5xjk5S5JxER4mIuntDudLnTQgw/640?wx_fmt=png)
+![](../../.resource/remote/bbfb7551c874bed36d162c2edb9ab3ad52b26c885dd80ad7ae0af125a9b28ff7.png)
 
 判断 DEST\_UID 是否不为空，否则就会退出
 
@@ -100,67 +100,67 @@ webroot\\ispirit\\im\\upload.php
 
 这里可以是第二个情况，DEST\_UID=0，UPLOAD\_MODE=2 进行下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1K3btFKuIfo52YJSicrpmQKX0gnDGBTCXKxgHrNibMROicFUQ0wAa3o1FibQ/640?wx_fmt=png)
+![](../../.resource/remote/6567684cb6b81f3308f26e05954401cc63ae303acc2aee48a965784a34beb9c7.png)
 
 也可以是 DEST\_UID 不为 0 进入下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KvHa1gibguhAYhhGoSYBpZqdZiczuqsZ2ffuHWlkBkBc6iaRmvdRxEaD6A/640?wx_fmt=png)
+![](../../.resource/remote/ffc6bc43980e715848bf3ebc43efff6e125abae8fc3a7352c0b71c497d7ac78f.png)
 
 继续往下走
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KOHBUluMkPeFqDApPgLAmCoFPtV7KnSt9BkT7vQfghHl5YoF5yZcyLg/640?wx_fmt=png)
+![](../../.resource/remote/6268d2e32318a04c9841fe386644471bf99fa2b7a43cbee4fd6f63006f9a62d2.png)
 
 可以这里又 if 语判断上传的模式，我们来看看上传的模式有哪几种，可以看到总共有 1,2,3，其中 1,2,3 如果成功了是有回显的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KCfzgzJkb8z5dPVLssZXdb9nP5iaYcT2DEz29ibibycJdOcXf3hJXYaCMQ/640?wx_fmt=png)
+![](../../.resource/remote/4b64607d46e9296e670fcaf274c47446bf377f62f5f62af738890dc2328dd370.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1Kkj5H75Jc4JwevhHboJeH7rLByWWIQ38Uz8Q0vOibpEHD7MuueDsoxUg/640?wx_fmt=png)
+![](../../.resource/remote/a3a0ae95f3cc2c8f46f9b6de92687f7221f6fdcbe3d7db969d7d44edfb65eb14.png)
 
 这里设置 upload\_mode 为 1，进入 upload 函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KlUVia5SCxZlgVN0upcianMSLnhwgNxt0rXf56n11HxtIor2uOVFPc1Vg/640?wx_fmt=png)
+![](../../.resource/remote/88d7976b836b96de24e8f729767945b9dc84b1f286f65209c799ae82c9fd306e.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KR9GOEG9wTwTMP9bFVrtW5gtlFy0TqfiaibegOt5iazNjff0ZyuajpibibQw/640?wx_fmt=png)
+![](../../.resource/remote/bd40d3768bc3df68b42c6831cdcf380f74c058bd5d30af7e07fc4baa80fcdfc4.png)
 
 会判断是否 / 字符，然后判断上传的文件是否符合可上传的格式，我们继续走 is\_uploadable
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KJTYaUJ0sglzTm9vmvLfv6ObNhFEUGJm6sD2mgUiaMCbI9oXu6xuiagcg/640?wx_fmt=png)
+![](../../.resource/remote/2ea9cb040177632ff7fa1805509f304942ef5d474b976446313e49c6c4867b1f.png)
 
 可以看到如果上传的格式是 php，会返回 false, 这里用 xxx.php. 绕过
 
 回过头来看 upload 函数，最终会返回一个 $ATTACHMENTS 的数组，包含了 ID，和 NAME
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KZDkEic7BLbScfricXNmsV5c65BpwD9LfuskYlhcvKpY3xdjuw9Pxbwdw/640?wx_fmt=png)
+![](../../.resource/remote/4eaab346102951b4ed2ff007c0569424327908a499c4dfc012a9d68a1cf50dbc.png)
 
 继续跟进，发现 ATTACHMENTS 是由 add\_attach 函数生成的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KDWDfWb7Pia9kVnVAgoqKvr1F1UfFh6xOAMSLed2metiaibrNedSqbM1LA/640?wx_fmt=png)
+![](../../.resource/remote/4663c6742858666d9d7cf813bda53ecd10a71c4f47ea17bca2b652df159af57a.png)
 
 继续跟进
 
 发现 $FILENAME 的拼成
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KyIibHunwFX3fFHCM4zPSU9VxpymwMuMesTyqdOFCnJqgQMsOYlTbs3g/640?wx_fmt=png)
+![](../../.resource/remote/5b8fb61bea00acd3632f8385ebb3a8b70416a2e73968e7f003eba5a68658ec3e.png)
 
 继续往下走的时候发现 $path，和文件名的最终结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KYjHe3lfbu6OKFSUysMAR1T22bU1JofmA48lmeiaUbUl0kwcE5ibKOYAA/640?wx_fmt=png)
+![](../../.resource/remote/6912578b80337bf167ab659c496fe2a1fe3d4062cf4197e3d3c657b89db19813.png)
 
 各种追踪发现就是 attch/im/$YM / 文件夹下面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KLfgHRoofx2vPlxtJO2PWeMibQGL9EcwH9bIWWu7hGfxziaQDMB1xvgKw/640?wx_fmt=png)
+![](../../.resource/remote/00050495ba9244fc58921ebfadb2034c10e6cd23feed3a3c4a73ca8527709a37.png)
 
 其实不用这么复杂，就直接上传文件，然后搜索那个文件最终放在哪不就完事了吗？或者使用火绒剑分析行为和 D 盾进行文件监控
 
 上传结合前面的分析需要的参数有
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1K5RwkeicfpolemKsVA40TBghrdN1hia2bKm9KFKjQB4DiaqpEye1Ybvsqg/640?wx_fmt=png)
+![](../../.resource/remote/03c4d284d626650b85cae86f56612b74e820896fdb5f58e7c6d835785e4d4f08.png)
 
 这里不同的上传模式，回显的格式不一样，这里的 2 格式舒服点，目录就是 2003, 文件名对应后面的 ID
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KwtsibX5WguhcSIwR7drsu7KstJz5GYequXZ2I0qzdT3ic7hTBA1ibYcdQ/640?wx_fmt=png)
+![](../../.resource/remote/12ec2db419ffb78c481b29e82d6577614a3e89e21748eed67fd638dd0e6e2c61.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KGJoejQIQhCWIJWQUhLkxyic0D8E3th9eDBBuupbTORrqatCvKDpTzFA/640?wx_fmt=png)
+![](../../.resource/remote/abef76ea8e8a200b0607eaa6615fcebf527638c5b1520ad7d514f0af1a7b3a4d.png)
 
 由于这里的关键上传了文件后 OA 系统有个文件包含漏洞，结合文件包含漏洞就可以实现 RCE
 
@@ -168,13 +168,13 @@ webroot\\ispirit\\im\\upload.php
 
 /ispirit/interface/gateway.php  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KoNLw5dFALsiaTp2IETwaibfVxStvLTzOKEK5gMzMv4YZyzzG93popxiag/640?wx_fmt=png)
+![](../../.resource/remote/bab6933ebfdba60b35f126e62ff59c76ba4f070247d76cbeaefba27f53f88343.png)
 
 首先会接受一个 json 数据，然后转换为数组，然后遍历这个数据，如果 key 是 url，url 就对应值
 
 然后继续走
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KSEeQt4nxZsccVhEx7gSNJSaCATpo0blrHKDcDibiae9hspWd23ES70AA/640?wx_fmt=png)
+![](../../.resource/remote/d0a6fefc1023858c81fc6a38de16ff488200686fde55aa528be1eb0b58b7efa3.png)
 
 然后走到 strpos，可以看到如果出现 general/，ispirit，module / 就会触发文件包含构造 payload
 
@@ -182,15 +182,15 @@ webroot\\ispirit\\im\\upload.php
 
 由于我上传的时候是 phpinfo 函数，是禁用了这个函数的和危险函数，这里可以使用写入一个 webshell 在当前执行的 / ispirit/interface / 目录下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KpkYHkZt52VESy4MTtQdcFqD1HkOSk7az0G6DysEoUUt4uLbFqnN03Q/640?wx_fmt=png)
+![](../../.resource/remote/b31466a8298cfbc5426078d2a39adaefc362b01200247e396a77bb37df0c3e2a.png)
 
 记得这里文件名前面要加个 \\
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KcTktoFnJ6UecFnHkxqVImlRIqL7bAkjcWicvIrMF3oxwibBJoibkS1Oqw/640?wx_fmt=png)
+![](../../.resource/remote/deea201613a7e6c9d816e7292c649202b7ee59bc43157576d0c20519c858dd30.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1KxdpV8EHiby8dcR4nzRhdAmbyiaNKVo3K00eyUatLC0UUSwV1atVblxLA/640?wx_fmt=png)
+![](../../.resource/remote/5fc11aedcde5b34d10654bdcf38fc5b389fa67e7dd063d47537c7bf15d8ae81c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1Kq9iclLBdO0I8cpQQxQKYTgt1eayHI9iavnnHsKv9rUibBbxq1VCjr0S5Q/640?wx_fmt=png)
+![](../../.resource/remote/fc1cffc0060eee80d40662dee0da27e2b5a54e923670453ab9ccd1df5e60e8d7.png)
 
 当然也可以使用 COM 组件 bypass 危险函数
 
@@ -263,7 +263,7 @@ if \_\_name\_\_ == '\_\_main\_\_':
                     break
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1Kg3ltoBQQXGmfHOc0iacicD69uljTdvxJcOdx8mQ0MOono72KGTAvH2qQ/640?wx_fmt=png)
+![](../../.resource/remote/2f5b557ee870733370408088af23f60f9408861bc6355c5df66e3eadc24ee672.png)
 
 脚本用的是 COM 绕过
 
@@ -271,7 +271,7 @@ end
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ0icbKibHNV56rFruqeicHDHx1Kn8mdhbFm6BxHUfLJ7JO53MdMVJgqwJMC1cPRRwDod9Cy3pRPP2Wsyg/640?wx_fmt=png)
+![](../../.resource/remote/83105b48d66471ec0ef98b3f0199f74f3811bd83cc21a78d5198e9800ab54316.png)
 
 ---
 

@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Ionut Arghire  代码卫士   2023-09-19 17:47  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -60,7 +60,7 @@ Ionut Arghire  代码卫士   2023-09-19 17:47
 **Fortinet公司修复了影响多个 FortiOS 和 FortiProxy 版本中的一个高危XSS 漏洞 (CVE-2023-29183)。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMTap9prq49883yN1Ee9PdaictnAyk7fD3owREA6a9WVlV3Yg3icyrQq2uDzrO8j4ztt5D4JfoBDmoBQ/640?wx_fmt=png "")  
+![](../../.resource/remote/069e71dd2598622aec068a8356a7fde20fbe3212af64e16563691ce2ac11aa83.png "")  
   
   
 该漏洞是“在网页生成过程中的处理不当”问题，CVSS 评分为7.3分，如遭成功利用，可导致认证攻击者使用构造的guest 管理设置触发恶意JavaScript 代码执行。  
@@ -121,15 +121,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

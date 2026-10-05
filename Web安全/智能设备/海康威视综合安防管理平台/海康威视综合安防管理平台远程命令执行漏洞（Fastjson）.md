@@ -64,7 +64,7 @@ source_status: "recorded"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -74,7 +74,7 @@ source_status: "recorded"
 
 **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -85,7 +85,7 @@ source_status: "recorded"
 
 该平台存在 **Fastjson** 远程命令执行漏洞，攻击者可通过构造恶意 Payload 执行并获取服务器系统权限以及敏感数据信息。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -95,7 +95,7 @@ source_status: "recorded"
 
 V2.0.0 <= iVMS-8700 <= V2.9.2      V1.0.0 <= iSecure Center <= V1.7.0
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -105,7 +105,7 @@ V2.0.0 <= iVMS-8700 <= V2.9.2      V1.0.0 <= iSecure Center <= V1.7.0
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBnHyLw2NRtyfdglib2BRw4m72bXCBgWFo8EOHJf8hnQ5jXUQoWfwOgNiaDp0EQyEc0UttVza3zV1qA/640?wx_fmt=png)
+![](../../.resource/remote/21f479ec880cc3cf02f91a4e4054b1255987537d6047c88484c887fb6f650349.png)
 
 2. 对漏洞进行复现
 
@@ -131,17 +131,17 @@ Content-Length: 204
 
 POST 请求，响应存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBnHyLw2NRtyfdglib2BRw4mHibib9fVVXI5GRvibEsx1XnlACPzhB4AmVZWu5chO58vUz5ib1Zo0gbMQw/640?wx_fmt=png)
+![](../../.resource/remote/0ec045f55ceea458010c3c21c14ef74ba835a11bf8f7fd30e74f35daba445f8d.png)
 
         burp 生成测试域名
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBnHyLw2NRtyfdglib2BRw4mIr0TIuzXkZBr1LX9DgwoEGTVT4ibET2tzJtkiauyCwPKM762S5O7jRjw/640?wx_fmt=png)
+![](../../.resource/remote/a19695b3d90a563246ce049fcdf30b80d256a9ea208557850163a9ed9f165e3e.png)
 
 3. 反弹 shell 参考这篇文章。
 
 [https://mp.weixin.qq.com/s/0pNLJZXFTPSbXy4TLWZxKQ](http://mp.weixin.qq.com/s?__biz=MzU2NDgzOTQzNw==&mid=2247497068&idx=1&sn=fff335b0aa2427588270a7168625f07c&chksm=fc46600ecb31e9183201a681432a36a6576ed39c5c5e24aef26fb775e7abccbdbd90ca74d92d&scene=21#wechat_redirect)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -162,7 +162,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](../../.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -178,7 +178,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

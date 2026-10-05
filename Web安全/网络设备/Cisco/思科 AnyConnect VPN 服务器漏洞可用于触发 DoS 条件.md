@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Guru Baran  代码卫士   2025-06-20 10:34  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -58,7 +58,7 @@ Guru Baran  代码卫士   2025-06-20 10:34
   
 **思科披露了影响Cisco Meraki MX 和 Z 系列设备的一个严重漏洞CVE-2025-20212，可对企业网络造成重大风险。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQvzqYOjR8q6tB3cgvRRcuQyLpRXqkcdPDOxGia5IJibwkzxWwCvmjxcuv106VTljrCPjPT2YozjQ8Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/36b36005e60183d3603e8c2d5f0b55ab066f22ab6e7dafe7c44c0fa65d02a936.png "")  
   
   
 该漏洞可导致认证的远程攻击者通过操纵 SSL VPN 会话属性来触发拒绝服务 (DoS) 条件。该高危漏洞的CVSS评分为7.7，影响依赖 Cisco AnyConnect VPN 保护远程访问解决方案的组织机构。  
@@ -66,7 +66,7 @@ Guru Baran  代码卫士   2025-06-20 10:34
 思科在安全公告中提到，该漏洞是由 SSL VPN会话建立过程中的一个未初始化变量造成的。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQvzqYOjR8q6tB3cgvRRcuQPndUvOX9D6oPC79KKib5B2oDCBW6dUVs5DvAWAH9l4BMq1QiaG2Lr7GA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dff0a6c796bf1648b54735f19a0523d54fd53a99f1e3a297926759deb34793fe.png "")  
   
 **Cisco AnyConnect VPN 服务器漏洞**  
   
@@ -79,7 +79,7 @@ Guru Baran  代码卫士   2025-06-20 10:34
 该系统旨在当攻击流量停止时，无需手动干预就自动恢复，但利用过程中对业务造成的影响仍然重大，可能导致关键操作中断。网络管理员可通过查看 Cisco AnyConnect VPN是否启用来验证系统是否易遭攻击。Meraki MX设备可登录到主板，导航至“安全和SD-WAN＞配置＞客户端VPN”并选择 AnyConnect Settings 标签。对于Z系列设备，管理员应当检查“Teleworker Gateway＞配置＞Client VPN”，如“启用”按钮已开启，则需要立即行动。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQvzqYOjR8q6tB3cgvRRcuQPndUvOX9D6oPC79KKib5B2oDCBW6dUVs5DvAWAH9l4BMq1QiaG2Lr7GA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dff0a6c796bf1648b54735f19a0523d54fd53a99f1e3a297926759deb34793fe.png "")  
   
 **影响设备**  
   
@@ -88,7 +88,7 @@ Guru Baran  代码卫士   2025-06-20 10:34
 该漏洞影响的设备是已启用 AnyConnect VPN的思科 Meraki MX/Z 系列设备：MX64/MX65 （仅固件版本≥17.6）MX67/MX68/MX75/MX84/MX95/MX100/MX250- Z3/Z4 series- vMX。攻击者需要具有有效的VPN用户凭据、对易受攻击设备的网络访问权限并启用目标设备上的 AnyConnect VPN。尤其易受攻击的 Meraki 机型包括：MX64、MX65、MX67、MX68、MX75、MX84、MX85、MX95、MX100、MX105、MX250、MX400、MX450、MX600、vMX和 Z 系列设备 (Z3、Z3C、Z4、Z4C)。不过MX64和MX65仅在运行固件版本17.6及后续版本时才受影响。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQvzqYOjR8q6tB3cgvRRcuQPndUvOX9D6oPC79KKib5B2oDCBW6dUVs5DvAWAH9l4BMq1QiaG2Lr7GA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dff0a6c796bf1648b54735f19a0523d54fd53a99f1e3a297926759deb34793fe.png "")  
   
 **缓解措施和已修复版本**  
   
@@ -156,15 +156,15 @@ se
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

@@ -37,16 +37,16 @@ schema_version: "1"
 #  新Shiro反序列化漏洞一站式综合利用工具  
  黑白之道   2026-01-25 01:19  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicwgPqvK8QgwnCr09iaSllrsXJLMkThiaHibEntZKkJiaicEd4ibWQxyn3gtAWbyGqtHVb0qqsHFC9jW3oQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/54e6aa533c71207faa872ac7dd6fc7f1f67c8202e18fd82865cee6d560192712.gif "")  
   
 ## 工具介绍  
   
 ShiroExploit，是一款Shiro反序列化漏洞一站式综合利用工具。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5ccT3v8Bn03ZOnwHWNiaANM5cBYn7QaHCYpiaPbaym6N75zl4yONRb54Q/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/cc410b7029132f1b2844ee6c3368e3fbeb2b31453af63b736dd4d3bbc124048d.png "")  
 ## 工具功能  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5VhbfAwB2HfwibTgXCahWIYONvPaCNE3pcWhniav1yxxpJ2RNRdzl0QXQ/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/1592cc3c01608b0e31203be7ab6ecba4689e78b6ff7637694e94cd77a5b6decb.png "")  
   
 1、区分ShiroAttack2，采用分块传输内存马，每块大小不超过4000。  
   
@@ -69,31 +69,31 @@ ShiroExploit，是一款Shiro反序列化漏洞一站式综合利用工具。
   
 JDK18场景下实现命令执行和打入多种内存马。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5eSlnbicS32XibzadGULDib0r23Mw7N33OdKbcCnGLUazgtiaMAXmw8MP8A/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/05c578ce308c660bc8a956a8d91ecfe3e8b29cd8bb7bd78a47f860973268d3c4.png "")  
   
 跑key。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5ccT3v8Bn03ZOnwHWNiaANM5cBYn7QaHCYpiaPbaym6N75zl4yONRb54Q/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/cc410b7029132f1b2844ee6c3368e3fbeb2b31453af63b736dd4d3bbc124048d.png "")  
   
 探测利用链。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5dQdASUCB5xemSpk9CCsicvfmhO7hu4yAINuSczaS1icUFqVccSP2icZIw/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/ebd951b41d2e8639346f5eec0a5439ce8af0433c06c44d0bc36b10d327ca4c18.png "")  
   
 命令执行。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5eicI8Uj6CULiandtlOpM23GuLPYjur5hErDUtweqKic2EK1m1ByD1sPfA/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/a0d1a9ef3278fb71ab329eef81e82500e962a4701d0e642f8c57d8bc49422f28.png "")  
   
 打入Godzilla内存马（支持Behinder内存马）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5GicHUEp8DzNz0YQGv98EIAzyeOoJwrP36UnxDVF1ylvqUG63Xfjl7ibg/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/bec6c5d9f2253dadf129ff53f2c87fb8586b15e0bebb60b65f0d741ff69bb9a9.png "")  
   
 打入SUO5V2内存马。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5qtjVVALWmHvuy7hANTdTD4sdUYPIickpic2N9ZEia4CrxOZOJ2Xz1icI3g/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/6be969776e1729ef74b4b354a7c1d52e3ac6f731499a5fc68c82239df927c330.png "")  
   
 支持Tomcat10及以上的内存马。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2UIRDCPwyvn1Vg58IfWQ0s5sE6Izn96Xd8nBpfXEHTJT4Wty6RxXVX0icCFWJvV2B7VB3VI8Vicicl6g/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/4866dfdb63aa93d0bd21ad8a0a0cdd0eaed6402783f75b37f3baa22ec0e1b93d.png "")  
   
   
 ## 工具获取  

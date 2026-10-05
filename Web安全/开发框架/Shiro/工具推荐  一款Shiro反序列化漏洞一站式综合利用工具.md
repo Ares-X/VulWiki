@@ -38,13 +38,13 @@ schema_version: "1"
 FightingLzn9
                     FightingLzn9  星落安全团队   2026-01-25 16:00  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/spc4mP9cfo75FXwfFhKxbGU93Z4H0tgt4O9libYH9mKfZdHgvke0CeibvXDtNcdaqamRk3dEEcRQiaWbGiacZ2waVw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/dda377b12aa4a6d821e10f3c42d41384482d49c270b5eeeb4cdb3aeee776819b.webp "")  
   
 点击上方  
 蓝字  
 关注我们  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/WN0ZdfFXY80dA2Z4y8cq7zy2dicHmWOIib5sIn8xAxRIzJibo2fwVZ3aicVBM8RnAqRPH5Libr4f02Zs5YnMLBcREnA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=1 "")  
+![图片](../../.resource/remote/9c4ec2c94d5e4d98829253be4833244ad3b3b26dafcdffd247ba20bbd1a30ee3.webp "")  
   
   
 现在只对常读和星标的公众号才展示大图推送，建议大家能把  
@@ -59,7 +59,7 @@ FightingLzn9
 声明  
 】本文所涉及的技术、思路和工具仅用于安全测试和防御研究，切勿将其用于非法入侵或攻击他人系统以及盈利等目的，一切后果由操作者自行承担！！！  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllkXnsUODwVWmlxAHuHu4dBuwIlu707ZfPdbNTYyibYzQHA0xn0p2hTbQAiba04SOnDiadxVExZ53nfog/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4592ecd310f5ef954c4d668bfc517947ab557276d355a062af4fd6c57f5c377f.png "")  
   
 **工具介绍**  
   
@@ -89,37 +89,37 @@ ShiroExploit，是一款Shiro反序列化漏洞一站式综合利用工具。
   
 JDK18场景下实现命令执行和打入多种内存马。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5YibnRliaSMiaBSLQV6XtQ2C9uXOMNXfrGjAN8ns4tcagzEViaUBDUKEDO4Q/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/d3a05bb9d5ec73ae31daf1c2c56514f788d0398f616b57f5a21693e2280b364b.png "")  
   
   
 跑key。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5YhbBK64biacRmXFSibF7aK82LqDp7f4UWYXeibzUu98HRK8dSGdbtibfE1A/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/06aa038ac3fd7a8389bcfd6665a97f08a554dc79a3f1c9460436247975d85909.png "")  
   
   
 探测利用链。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5Yp8f3f0wiayl1K21oDEvRvrPdXFOuf4EIeWYaC7IOic3qlzDibk3wDGLicg/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/4207396d6459d71c6c97b462552406b0c1c37703dfd03d2660c3b1085f2ad776.png "")  
   
   
 命令执行。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5Yok6lrEbhPFqEia3WB4rbQDXba0payV0e0Q6BEJycnSUJoIALFhAvNDQ/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/4a251966c46a922b952502b986942e61058e227e628fd5a790d1e59c64180ef5.png "")  
   
   
 打入Godzilla内存马（支持Behinder内存马）。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5YuZ5z15KNArzThHevc2X4EXH7lSkora6AIyDibosaodsszYuQKasaQRg/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/51187d07b2eec4d10e9927246095b79ab6a252c77fecd197a2a15f4183e791e6.png "")  
   
   
 打入SUO5V2内存马。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5YUCRPEePV8lO6qFaWuUI6eYnQ5GJS2lXUwZh4c4WjtssB2cIm03NiarQ/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/41a65087b16ef3c4fcdf3a594633119df472644fc793f1d9fad2ddd2033f6334.png "")  
   
   
 支持Tomcat10及以上的内存马。  
   
-![image](https://mmbiz.qpic.cn/mmbiz_png/rlSBJ0flllmqrNVbz86ybF0FBw7RAj5YAfiaBy4eXu5cwcdFWsicnhicMec5j8kyHiaz5KzRqzfoQRIHlVUoAkRO0A/640?wx_fmt=png&from=appmsg "")  
+![image](../../.resource/remote/ad3210e8e7b5b18e5963ff826a4a6eb801d29f1a86748ef81065d4a5e385ff96.png "")  
   
   
 **相关地址**  
@@ -186,7 +186,7 @@ XlByPassGodzilla
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/DWntM1sE7icZvkNdicBYEs6uicWp0yXACpt25KZIiciaY7ceKVwuzibYLSoup8ib3Aghm4KviaLyknWsYwTHv3euItxyCQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=9 "")  
+![图片](../../.resource/remote/6071084a4a4eeef91c1746cebff5b43a80eebad29eb778a17ae9437de6947813.webp "")  
   
   
 目前星球已满1000人，价格由208元  
@@ -195,10 +195,10 @@ XlByPassGodzilla
 交个朋友啦  
 )，1100名以后涨价至268元。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/rlSBJ0flllk2esLaDRsI4yjB0HkCibHzialJBFBfcyeib4RRsQTOiamqSvAfZogia7pIcSY9lvfTicWXuTcCgtu3NP1w/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/ad74f14c7f83ccf618e36928927ad8c6891e400d289fac9999d0ae7bd1f603e8.jpg "")  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/MuoJjD4x9x3siaaGcOb598S56dSGAkNBwpF7IKjfj1vFmfagbF6iaiceKY4RGibdwBzJyeLS59NlowRF39EPwSCbeQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=11 "")  
+![图片](../../.resource/remote/0d9bd1de7c356c9e8a45f6c7ff2ae19893eac014033a7da371f3f4ff984d2b7d.webp "")  
   
      
 往期推荐  
@@ -220,7 +220,7 @@ XlByPassGodzilla
 4.[【免杀】原来SQL注入也可以绕过杀软执行shellcode上线CoblatStrike](http://mp.weixin.qq.com/s?__biz=MzkwNjczOTQwOA==&mid=2247489950&idx=1&sn=a54e05e31a2970950ad47800606c80ff&chksm=c0e2b221f7953b37b5d7b1a8e259a440c1ee7127d535b2c24a5c6c2f2e773ac2a4df43a55696&scene=21&token=458856676&lang=zh_CN#wechat_redirect)  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/DWntM1sE7icZvkNdicBYEs6uicWp0yXACpt25KZIiciaY7ceKVwuzibYLSoup8ib3Aghm4KviaLyknWsYwTHv3euItxyCQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=12 "")  
+![图片](../../.resource/remote/6071084a4a4eeef91c1746cebff5b43a80eebad29eb778a17ae9437de6947813.webp "")  
   
   
 

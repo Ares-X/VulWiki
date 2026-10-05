@@ -68,9 +68,9 @@ schema_version: "1"
 - **CVE-2026-22766 (7.2)**：高权限远程攻击者利用此漏洞可实现远程代码执行。  
 但真正的杀伤力来自组合拳。最终我构建了一条完整的攻击链，可以在 Dell Wyse Management Suite（私有云版）上实现**无需身份验证的远程代码执行**。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibdjM4fZ2s2mpniaSpLYlwibOjDGsWib9fRUbcg9jevJjibj7LZU50pYED82CriclPVgL5mib7GHSDzWfdf4qY56NsqJyy5dm7t8jMhJU/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4ba0777a22f87499f2cb7ea5fb6378ccfe3e61cfd8e746ae6bd7be051da75fc0.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibcwJL4RlWX5j8IwFAlE9guZQ1tgGVDs8sD1WbY4l8tbozs40n3T3joXDQj3JJtibqMwvCxibTTiaeficaAyUgJTP7XYzvmfHtdicswo/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1de7f42d70406f2e2d80be920446b6f633152a6eafb80b780eca41752e813b94.png "")  
 ## 起手式：设备注册的默认漏洞  
   
 WMS 用设备组来管理大量的瘦客户端。想要注册设备到特定组，你得提供组令牌。  
@@ -81,7 +81,7 @@ WMS 用设备组来管理大量的瘦客户端。想要注册设备到特定组�
   
 这步操作很简单，直接发个空令牌的注册请求就行。成功之后，你会收到一个wyseIdentifier和一个authenticationCode。这两个值可以用来生成合法的请求签名，意味着你可以**以这台注册设备的名义调用 WMS 的大量接口**。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6Tibf8nRkj6SVpxrp2N6xUXE8RkIbfqlXKykTricvKFoFDQSA3pS5NrmyfLTgeMPichTRDicSicdlSpuqXYWFsmTKvKy4ic8HASEuDicdR4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fc7a1dd6aebcbd0be040786cc98ff0b5650baede7c951dcabf03d27395989069.png "")  
 ## 逻辑突破口：被遗忘的AD导入接口  
   
 当我拿着设备签名去扫 API 接口时，importADUsers这个端点立刻引起了我的注意。官方文档写得明明白白：Active Directory 功能只在付费的 Pro 版提供，且私有云版本（On-Prem）不应该出现这个路由。  
@@ -96,7 +96,7 @@ WMS 用设备组来管理大量的瘦客户端。想要注册设备到特定组�
 - 最后再用 importADUsers 导入一个 AD 用户，并指定刚创建的那个拥有 Admin 角色的组。  
 恭喜，系统里现在多了一个拥有完全管理权限的账户。但问题是，密码是在导入过程中随机生成的，不会返回给调用者——我们登不进去。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibertJNhBLNLmp49SlB8m7AfuXAIQESYciaoPzBB6pqyfEGhxlmnzkKQAmTGxvgibPvy1QTwG83N1cDiayZ81YsujHicczeibmibicmqoA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/aab71a0d9fbfecf2173d6aea80834f7f1bda421b882f18659b07fd2959bce5ba.png "")  
 ## 绕开登录壁垒的两个技巧  
   
 到这里，我们手头有个管理员账户但没密码。别急着放弃，看看有没有小漏洞能让我们钻过去。  
@@ -111,11 +111,11 @@ WMS 用设备组来管理大量的瘦客户端。想要注册设备到特定组�
   
 通过importADUserGroups导入时，我们可以将这个值留空。这样一来，检查函数就会返回false，系统会认为这不是个 AD 用户，从而允许密码重置。**一个空值，就让整个防护机制形同虚设。**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6Tibf4szqsCChib7ZG6eI0ItPb14JehFhagibMf4bqMbNAWYKwIZSzeaAYAndjB7iaWdE4c4TvwcnGEJz9DC5ANYgUQiaMckCCmKGOVKw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a538bd8b79c3a162c46c5ea6d6ed4aa067146ea14d677a2f79fd116bf3a0a8d3.png "")  
   
 我照此操作，创建了一个AdUPN为空的管理员账户，设置好外部邮箱，然后触发重置。新密码果然发到了我的邮箱。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6Tibf8vuPNGHT3mVdvrxTxaIiaS5r3glRtYgqoRxRFNHO9Eyclpfpz9LLNBprCDQH4GaebBwhrkVJA6f6neuytzDJY5JT4OsPG6E8M/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d5ce4516d8eee85419638f08f0c026a4a388044867dbf4f0288a048ecd004c1f.png "")  
   
 **方法二：绑定已入侵的域账户（仅限 Pro 版）**  
   
@@ -140,7 +140,7 @@ WMS 用设备组来管理大量的瘦客户端。想要注册设备到特定组�
   
 等服务恢复，缓存清空，我再次上传 JSP 文件，这次它被顺利写入了 Tomcat 的 Web 根目录。最终，我成功在服务器上执行了任意系统命令。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibeY4a95icOHlVibYmqKFtqn6Kle3J8cm004J4BMm2aVgj4Tje1qhXCKCU5zKpOia8e5NseNPwV9lw1xaXnBzicA026gXOclicU2mzlA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/60de37f7a758567b1e44111f15f63f54bc6fbf7a87d14b2931af66b4ce33ac29.png "")  
 ## 完整的攻击链条  
   
 我们来复盘一下这条攻击链：  

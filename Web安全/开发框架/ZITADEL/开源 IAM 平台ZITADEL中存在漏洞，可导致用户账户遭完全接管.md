@@ -40,7 +40,7 @@ schema_version: "1"
 Ddos
                     Ddos  代码卫士   2026-03-09 09:31  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -72,12 +72,12 @@ ZITADEL 广泛用于管理复杂的身份验证需求，能够以开箱即用的
 未经身份验证的远程攻击者能够利用这些漏洞，以 ZITADEL 用户的名义执行 JavaScript。一旦恶意脚本运行，攻击者就可以“重置受害者的密码，并接管他们的账户”。值得注意的是，ZITADEL 在“默认的开箱即用配置”下即存在该漏洞，意味着即使管理员没有显式配置 SAML 身份提供商，风险依然存在。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/t5z0xV2OYfX0ScEI6Fy6zhCAzX5FWV3B1ENovFh4SzNUTa2bdA0UdzZkk0cYvng84QvagIUMwEbtWfu47aCIBhlicdtaZOSZQo4ZibGdb6iaQ8/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **缓解措施**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfUDuac9qAEuVPOYiaWiaA094JiaAbMZKyDyXnHASf2QENgxmTqyibdknP2o77IJtkniaxFwmAiccXb7oJZicN7ajaticW8tHI9DwQeHOV8/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -135,15 +135,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

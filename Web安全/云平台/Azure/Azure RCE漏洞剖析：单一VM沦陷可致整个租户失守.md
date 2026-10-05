@@ -111,11 +111,11 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
 当在 Azure 中设置虚拟机或使用 Azure Arc 服务加入现有的 Windows 服务器时，该机器的 Azure 门户页面会提供几种不同的管理连接方法。其中一种就是 **Windows Admin Center**  
 。当用户首次访问该页面时，会看到一个选项，可以直接从门户自动安装管理软件：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ2orMZorzibKYlw4qOWGnKUajIGqibKBhf8ibWvStibHY8CDoWnOPFyexUA/640?from=appmsg "null")  
+![](../../.resource/remote/8d71e16547712f70c9f928974c1faf6aa7d52db033a8d0465db75db1471c6839.png "null")  
   
 点击安装按钮后，Azure 会自动下载并在机器上部署 WAC 软件，从而允许通过门户直接连接：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQCgIVwnG2vZjTRygvg6vET95ib5ibohgxYhnxbFqxXzsMFFdibzuOpYfFA/640?from=appmsg "null")  
+![](../../.resource/remote/e426bfcb5fff16d30819a213d54b527c93811638524856f08c1375c62c0ff0fa.png "null")  
   
 连接选项卡有一个先决条件检查。Azure 会验证用户是否拥有 **WAC管理员登录（Windows Admin Center Administrator Login）**  
  Azure 角色，通过 Just In Time (JIT) 机制打开 WAC API 端口（6516），并允许通过网关 URL `<Unique DNS>.<location>.waconazure.com:6516`  
@@ -166,11 +166,11 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
   
 这种行为意味着令牌不是按请求或按资源动态限定作用域或重新生成的，从而降低了持有证明机制的有效性：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQhspKeibgkCS74KqUKaqO4gFevbqrHzZlvqIiasy2icDYWhDTwtddUPicCw/640?from=appmsg "null")  
+![](../../.resource/remote/2b8d8344c0fb06aac1ec79814ac4aaa52b3ae35e62375178673ff631fca08ee2.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQaicMmA2RdvcURQ0rTScaG3YFjxEo6YR9LwldHUNxDd6FCS5KZz5sK9w/640?from=appmsg "null")  
+![](../../.resource/remote/301023d1c6459515be5263bad39b9806b2e357a544dd15827ca15ea6c6007ee4.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQQFGk5icDOIMt4GAyS1ciaicIqyymfSWDlA9KX7b5lPtpWVdSAN21ZIRHw/640?from=appmsg "null")  
+![](../../.resource/remote/892c93a7b68f5856a6d9deac7003b12ff4d3446c5dd26ded9b2963d6a4ac8b7b.png "null")  
 1. 1. API 服务器使用WAC.CheckAccess  
  令牌来验证用户是否有权访问该资源。如果用户无权访问该机器，访问将被拒绝。  
   
@@ -188,7 +188,7 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
 **甚至连来自不同租户的 PoP 令牌也会被接受**  
 。唯一被验证的字段——机器 ID（Machine ID）——是由客户端的浏览器控制的，并且可以被修改并有效签名（使用与 PoP 令牌的 KID 匹配的生成私钥）：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQQ1MAyhOtIvGr4mgC0p8o42a0Tp5ibvqPmYKOEWPdn7zIcpNwcY6iclOQ/640?from=appmsg "null")  
+![](../../.resource/remote/2268d426919e9f1163b523fe1e9587e4b7b8d3c798a0b8df78ba260b66858fdd.png "null")  
   
 VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端点和操作（包括本地管理员级别的远程命令执行）的完全访问权限之前，仅验证以下属性：  
 1. 1. 请求中的资源 ID 路径与 VM 的实际对象标识符匹配。  
@@ -204,7 +204,7 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
   
 如果机器有外部 IP 地址，JIT (Just-In-Time) 机制将允许外部连接直接访问该机器的 IP 地址：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQg5LNMlVz0IViaPPwTZhBVjfyHzRSApNJXnvWUDbkzzmEvurp60lCJ7w/640?from=appmsg "null")  
+![](../../.resource/remote/9ed38ed4acca57cb9febb4383147d20bcecfdccac2456bce6db9738218a6fbca.png "null")  
   
 能够直接访问机器的 WAC API 端口，再加上 PoP 令牌中的 URL 属性并未强制使用网关 DNS，这两点使得攻击者能够在**无需发现 DNS 地址**  
 的情况下，伪造一个有效的 PoP 令牌包装器。  
@@ -232,7 +232,7 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 **步骤 1**  
 ：作为准备工作并为了有效冒充服务，攻击者从机器的证书存储中转储 WAC API 服务器的证书：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ35etfJV6ecaA7sYpgXPccjnjW8ibm19OLpkDcYrsFBxh2SCGWG3yNbg/640?from=appmsg "null")  
+![](../../.resource/remote/d151d9515c3d0dbdfac22bfa3c6d9c611bdab342284464bcc51c2be7b7e80d30.png "null")  
   
 **步骤 2**  
 ：攻击者停止 Windows Admin Center 服务，并使用转储的证书运行一个冒充合法 API 的恶意应用程序服务器。  
@@ -243,22 +243,22 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 连接用户的 WAC.CheckAccess  
  令牌（该令牌未进行 PoP 绑定）随后可以被窃取：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQnvFWCDDxkDMticzwYVGo80R1Ev0wawic1yxtFe6RqAfpq75KfEZGSeFA/640?from=appmsg "null")  
+![](../../.resource/remote/02840ec111f8de8195edeed52c73bdb8643da5b8201f1a405be38f4172533558.png "null")  
   
 该令牌具有 WAC.CheckAccess  
  作用域，并包含一个管理员用户的 UPN：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQlichNG3XcfdkIrbP4PP1VYwrrcRSG9wgogvNVJpHnY9wb9M63pe6WZA/640?from=appmsg "null")  
+![](../../.resource/remote/7b0d4b088fef4b6850920a1ac62dcf125fb0df1e00036796f2b46e1f93156d4f.png "null")  
   
 在流程中接收到的另一个令牌（PoP 令牌），或从机器可访问的实例元数据，可以泄露额外的上下文信息，例如与目标虚拟机关联的订阅 ID 和资源组：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQdiamFtgZxOAUQ3uCibZEd4sM7Jicy4LEPU5flrByT696ibZGLNxvicaOvuQ/640?from=appmsg "null")  
+![](../../.resource/remote/e13b3681473d22f53a3c78400b676648f13354851c21e4e85ba5eee5d8bf064d.png "null")  
   
 攻击者现在可以通过利用网络或基于云的枚举技术，将租户内的另一台 WAC 管理的机器作为目标。在示例场景中，攻击者识别出另一台由 WAC 控制的虚拟机，并成功枚举了其主机名，为攻击的下一阶段铺平了道路（此步骤可能因组织的基础设施而异）：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ5h3OsOaCT4CFPXPSAYmQ8q3icMoLAUibo22o94Sy7813QVktDlRhClDA/640?from=appmsg "null")  
+![](../../.resource/remote/433469812cf66beeab6f8f51d63dce6b5fbc66196edf39eda587fa92f3cd8e58.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQBxCDWyLcIA1ANe6vfbe0by9M1Z9REyGBTdZUWIa3bGjoibmETkTAsYQ/640?from=appmsg "null")  
+![](../../.resource/remote/5cb54ae94a029732535c77a74264c06707d7d6972f7bd82ba8adb6e67aec83e3.png "null")  
   
 **步骤 4**  
 ：攻击者开始伪造 PoP 令牌。这可以通过利用**一个攻击者控制的租户**  
@@ -266,17 +266,17 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
  受众的访问令牌。由于 PoP 令牌内的许多字段（包括 PoP 访问令牌本身）都未经过验证，因此**即使该令牌源自不同的租户也会被接受**  
 。该令牌随后被用于未授权请求链中：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQnE5VJX4fQJtv5d6s0NhZdtHbhcfRmMiaUd5FKgcdXaOgecpXibKvzM0Q/640?from=appmsg "null")  
+![](../../.resource/remote/160e423bff0ed57bb686da9ec1169f589a81cdd774bb212c7cd3ae4554620f11.png "null")  
   
 **步骤 5**  
 ：攻击者接着生成一个密钥对，模仿合法浏览器会话的行为：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQMicWzDUnHvIN0xmooVTMYzpaZGbeQETpibRViceOAia3sdUncAvkgTxgJw/640?from=appmsg "null")  
+![](../../.resource/remote/103463ed5f6def8effc0b3fd81b9163dbb3232c1d1e17c1977be75f964a4d9f5.png "null")  
   
 接下来，攻击者计算对应的密钥 ID (KID)，并使用之前从**攻击者控制的租户**  
 获得的刷新令牌来请求一个绑定到所生成密钥的访问令牌。这样就产生了一个与攻击者自己的密钥 ID 加密绑定的 PoP 绑定令牌，使攻击者能够在下一阶段发起伪造请求：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQWNHROcxAnmMrEHmJIibYvbfxNrjcUfXuIIT3hfMUWQcHia3YibkhNVzCw/640?from=appmsg "null")  
+![](../../.resource/remote/b7d92187e7f25209eb96667bb1bdb05b8fdcd6f7bc92be349654921076605ae4.png "null")  
   
 **步骤 6**  
 ：攻击者伪造一个虚假的 PoP 令牌，其中插入以下属性：  
@@ -289,18 +289,18 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 1. 4. URL 属性应与host头相同（本例中为：20.46.269.55  
 ）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQicXD8QFMpEH2S8wKoBJqxHCib6QaicFwicD67MaLSG0gdGY1icxDJcAElgg/640?from=appmsg "null")  
+![](../../.resource/remote/b6eb82280df12410b3e487ba98222182959a6129a91cf8ec37f2f4aee7633980.png "null")  
   
 **步骤 7**  
 ：攻击者将伪造的 PoP 令牌与合法窃取的 WAC.CheckAccess  
  访问令牌组合起来，发送一个 InvokeCommand  
  API 请求，从而在目标机器上实现具有本地管理员权限的远程命令执行：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQUU6GTicXI4AEyFQ5G59icd8NbbpgI7w6Rqlbplu9icxSQVWAc0eSYLALA/640?from=appmsg "null")  
+![](../../.resource/remote/d9b9f652fbd01564ea377f6a3a34a7250a5ba5efeb2eeefc44442da5465cb192.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQoJcWJpBEUH4ic2rzJHopo5pcXUVOO7ica7dIwcQRpjQiclibSrF9bUp78g/640?from=appmsg "null")  
+![](../../.resource/remote/a36ba9835ab55294983119d64a8b3c3bf03f38bca7bc665f001df642f7aba718.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQjMQRyNn1C5AF9M0bev9RvhdUicXiavwmIQSMDj64qN391chf5k3buQOA/640?from=appmsg "null")  
+![](../../.resource/remote/25e6fff5347633dfc80b800ee12913482ebec7674b20a35aaba5b91e7fb0a135.png "null")  
   
 攻击者现在可以滥用被盗访问令牌的权限，访问该用户拥有 WAC 权限的任何机器。从每台新攻陷的机器上，攻击者可以重复该攻击，继续滥用其他管理用户的权限，从而在整个环境中扩大访问范围。  
   
@@ -365,9 +365,9 @@ Cymulate 通过持续调查新出现的风险和最新发现的弱点，然后�
 Cymulate 客户可以通过运行场景 “Azure – 扫描 Azure Windows Admin Center 令牌验证不当漏洞 (CVE-2026-20965)” 来验证其是否受此 CVE 影响。该场景能快速区分**易受攻击与非易受攻击的设备**  
 ，从而使团队能够在真正关键的地方优先进行修复。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ3ic9JUfywRL8Nay7VFtiaZ0tPqSKsXtkfxELYUEYiaRytdhkTQDhXIOJw/640?from=appmsg "null")  
+![](../../.resource/remote/3c35c8182ea08c473059b573efdc6cd43ac8c6d14039c88f2ef92bd16362f51e.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQDorJXSpwon0PzmhtpBTe52ibc34mGXl5bfwBkkmhn9D9UCTYkSGUknA/640?from=appmsg "null")  
+![](../../.resource/remote/340385d160ad19558ec3ad98c516d81b7cde4d7573562ffc2bced3cb68b8f245.png "null")  
 #### 引用链接  
   
 [1]  
@@ -380,14 +380,14 @@ Cymulate 客户可以通过运行场景 “Azure – 扫描 Azure Windows Admin 
    
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQmxyKn5K5iaoicneo6AeolKtqFELBOnmvMLhwdibBDLBKsoAK9XVJmLBEg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/cad7850d1297bc1081b791f6640032e46e91c8b7a55f439a51f7f42a118a6704.gif "")  
   
   
   
 **交流群**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQJH7oybackjFVKYtmbrhicE6V505KU56vjwA3j6FKuCvRLAuTaqjzCKQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f143ba51fa85bda43178bbd586b4f34b7cfaff613c5e1d20b6e707844a555ba.png "")  
   
   
   

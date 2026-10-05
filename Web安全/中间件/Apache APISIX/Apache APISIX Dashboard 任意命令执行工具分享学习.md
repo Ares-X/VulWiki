@@ -41,7 +41,7 @@ schema_version: "1"
 
 <meta name="referrer" content="no-referrer"/>
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gca1oz2QNVsWZtVZhwx6Lg) ![](https://mmbiz.qpic.cn/mmbiz_gif/T1Jp6CliawuOSBfLxuoaXrtq1l86wb8oEfuibYgRhkXcRH9uzic28Y4pa7icA1xibMia5hvjZ7CgB9fpgqZJLyImGJyQ/640?wx_fmt=gif)<table width="657"><tbody><tr><td valign="top" width="557" height="62"><section><strong>声明：</strong>该公众号大部分文章来自作者日常学习笔记，也有少部分文章是经过原作者授权和其他公众号白名单转载，未经授权，严禁转载，如需转载，联系开白。</section><section>请勿利用文章内的相关技术从事非法测试，如因此产生的一切不良后果与文章作者和本公众号无关。仅供学习研究</section></td></tr></tbody></table>
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gca1oz2QNVsWZtVZhwx6Lg) ![](../../.resource/remote/cd66395acfd1e64cc2969ccb4ca26bc39abf130eb76f03c3f420975e4348eaf2.gif)<table width="657"><tbody><tr><td valign="top" width="557" height="62"><section><strong>声明：</strong>该公众号大部分文章来自作者日常学习笔记，也有少部分文章是经过原作者授权和其他公众号白名单转载，未经授权，严禁转载，如需转载，联系开白。</section><section>请勿利用文章内的相关技术从事非法测试，如因此产生的一切不良后果与文章作者和本公众号无关。仅供学习研究</section></td></tr></tbody></table>
 
 文章来源：漏洞复现  
 
@@ -72,13 +72,13 @@ IP:PORT/apisix/admin/migrate/export
 
 编写与检测，脚本放在**「文末」**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8BlSCDfTSWELH7uyoToqgFcQtUeggx8VibJYkFjP7BMzLZcIicACpzzsnmhwlN3yJpA1jbr44TmQRSA/640?wx_fmt=png)  
+![](../../.resource/remote/5890e3f1d3d4e6f40a244cf1ef50d3e5c4607b49b80dd2c78b81851965c0751f.png)  
 
 ### 批量检测 EXP 下方公众号回复 “Apache APISIX RCE” 获取
 
 公众号
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ndicuTO22p6ibN1yF91ZicoggaJJZX3vQ77Vhx81O5GRyfuQoBRjpaUyLOErsSo8PwNYlT1XzZ6fbwQuXBRKf4j3Q/640?wx_fmt=png)
+![](../../.resource/remote/40aaad22af7f44171fc001f77fa3df3da580afe10e64b4cc679d75fa1c5f4216.png)
 
 **推荐阅读**
 

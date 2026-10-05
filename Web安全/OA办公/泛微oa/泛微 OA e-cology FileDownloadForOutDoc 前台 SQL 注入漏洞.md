@@ -63,7 +63,7 @@ schema_version: "1"
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbV81PXWiaokevaYtVIUE3dFKGpEib1Z8ibptFyRg3ibBo0LEMx8hOlgU8fSCcx3CHs49wTcszfX0PVOpg/640?wx_fmt=png)
+![](../../.resource/remote/2131b3168d137d7bd4c30ba06190efb15c6bffc014a2809869703f1c7007f43e.png)
 
 payload：  
 
@@ -108,7 +108,7 @@ Date: Tue, 11 Jul 2023 12:54:14 GMT
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbV81PXWiaokevaYtVIUE3dFKIuMdp7CDcO2YpprpVlibed6mX6AqasDA6q1ia2Dhcs3O7QB9TjU95fJg/640?wx_fmt=png)
+![](../../.resource/remote/912d5a18e45004de079627ddeb6fff3564f2bd45c2f889d0d08733d2d7ecb349.png)
 
 **修复建议**
 

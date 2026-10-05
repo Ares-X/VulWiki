@@ -49,7 +49,7 @@ Hai  知微守望   2025-07-07 08:21
 经常收到甲方的各种安全漏洞通知单，这次就是几年前部署的prometheus未授权访问漏洞。  
 # 漏洞现象  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibibESgfODJWoMsjqWCQ6sJoKA2Lmib8tOmnHq4bUV0ibogSM8gzmDeqZZg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9775862167383c32d3f531f845264cbb587c0047c34c60c51f19a289b948566a.png "")  
 # 分析  
   
 prometheus收集所有exporter的指标数据，汇总后通常由grafana去调用它，界面来展示，类似与kibana。当然也有可能是其他组件来调用，本项目主要只有grafana去调用它，且grafana也部署在本机，其实处理的办法也很简单，防火墙启动起来，只允许本机调用，对外接口不暴露，就能解决问题。但这不是解决问题的初衷。既然是未授权访问，那就加上身份的认证来解决问题。关键参数：Basic Auth。  
@@ -95,18 +95,18 @@ systemctl start prometheus
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibBotnm7wPsZVCQ3AdQ8BmHr8oKxAAu5HhJ9hyibfP3ftlDUnzWVwsVEA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/03b4f41fae7484ed0b224cc7cba59899b72227edc50fb1a13f042ef4479d2897.png "")  
   
 查看targets，收集的指标数据也都上来了（图略）  
 # 查阅官方文档  
   
 参考：https://prometheus.io/docs/prometheus/latest/configuration/https/  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibneKHLBOMbqBk7iawc6dWYZfvGlibG02DeviaCmF527xGaUexrs8G1XjpQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/72603ffd5fa193823dcf65b167c8db297d602f235ef57036ca5b014b22bea910.png "")  
 **意思是说，prometheus是支持这种基础的身份验证的方式和TLS,但这个将来将会改变。需要将配置写到yaml格式的文件里面，再通过--web.config.file来调用文件。**  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibGTbEHp6CiaUSxZvTLsIwJCrNYZlt3kibQsCHUtbcFLQGq54FK4ADaKHw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1742bb6b007a81672d168cf34f8ed2029517286a597c3556bc27cf9a85252f63.png "")  
   
 参考：https://prometheus.io/docs/prometheus/latest/command-line/prometheus/  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibLDj6O5H93K46Voa0icoxrjhjEQdCkQCd2IKLxysZ79M8Lv6IZpoicDAA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dbba57acc8a7f1c73277afef3700461865edbab31546f417dba5c9ddeb35954c.png "")  
   
 # 配置身份认证  
 ## 生成bcrypt哈希值  
@@ -117,7 +117,7 @@ htpasswd -nBC 12 ‘’ | tr -d ‘:\n’
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibnxqkPQe7O00ypIwib0VleB6wmZiaOibBE6GX1LSMa9U8OIYqic1JfDU0DQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/108da2d6cfcdc780948ebd2b0bf3c84c5d69072a0e3b0630f7b13df9b992eaf3.png "")  
 ## 配置密码配置文件  
 ```
 touchweb-auth.yml
@@ -127,14 +127,14 @@ admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibiaQoKia7YbBsoOb8BaglLfuBSsp4niaCheInIvqHicoa6j8EJP4B3rw8wA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2f9dcb05c3e280ec0db0ab9486494da1fb46f9e4559b9763df43263ea2c6f8e9.png "")  
 ## 验证文件语法是否正确  
 ```
 ./promtool check web-config web-auth.yml
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibKINVcx3VibhuAN5MohuibROKzVNE4AXayFqJTibTA4mzP1ViazEMt3sJFg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/289d7eeec5821fd1e1d007773153fbeb34b7a078a8524057ea4ab7b8cbc91079.png "")  
 ## 修改systemctl配置文件  
 ```
 vim /etc/systemd/system/multi-user.target.wants/prometheus.service
@@ -166,21 +166,21 @@ systemctl restart prometheus
 # 重启服务  
   
 服务启动正常  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibGyXfdYaP07x4Gib9GcFaV3ORkV0qZhchTUhVOXQsOAfDGspU73iadfDA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/79ea1d6676ef5793644951ea3ccbb144803bd42ea7cd5e3671dcba3788cc5fbc.png "")  
   
 # 验证  
   
 http://127.0.0.1:9090/metrics  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibnpribo9xhrToLkBf3qSTA3Qo7iaHL7JoG19PEYRFr8kGqBdcW56rWu4g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/da51e0ca48794b77e25f3a8327091a6d1972aea22afedd62cdf242e5ed8896ee.png "")  
   
 http://127.0.0.1:9090  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibHWTVB2KswtVqDG2YsLNZ3vkQuUqa8oWzS8A8NJr2YGHGQ29k5IicdeA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/725a7f88b3c6d67eafda99953e26be39fda183c168b0025677e8fa97d990fdd9.png "")  
   
 不输入密码提示  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibvetgmtsebjjmTLJvDTSr0XdQSEUf1ElPMNlCmaOkKTQrBjwnAjm13g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/eae8ad5da1eb97279a097e4dd78228744d642a39785c1ef95ef5371df541b778.png "")  
   
 输入密码后：  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibGSepc1pkibKUFOBUnfOtB7Nicm2e5BBRh9peOOaicb3AnstaMXQHh5CLw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/93b8fb43f08b7267e71d336a8b4d3cc209aa4101ba781680cbab40b6a9888330.png "")  
   
 # 适配grafana  
 ## 配置grafana-yum源  
@@ -194,16 +194,16 @@ systemctl restart grafana-server
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibtNEmBUOT7ic1UVIrou0DAtWx5ZPmbKjdCqzSeIq0oGYpaHbLiaqWARlg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a152196349483649c5b0517ebc65b2949920f68827f5ab85ebd4775380811a14.png "")  
 ## 登录grafana页面配置数据源  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjib2wZarTbfbFZ99ApvGLa5iaV5uia15soHf1FgBA9g4tRK3tG93tGLHaxQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f3cf7f281e63708649aaaf1c2b384f47aaad0d33649521bb554c101ee321e27f.png "")  
   
 点测试  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibkibeEGwFyfz7hcesQBaq8oia4Fxcekt6ZsuhichydHnXibAIxnjN7GBj3Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ae2a052230cfbb9499973f13897302221590596e50a113d5e1bd652a47d261ef.png "")  
   
 查看面板  
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVztXTktD2vHmIg4nLkLMKjibRbflYNTHyZOvjqXjz8l1ib3EWicsWBCt9wsDpetcpO8ulkibDupHna9tQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/473e83cce118be9d492a953e04f5c940ca1fcbb50a6b4d61e37ffb10391edf53.png "")  
   
   
 数据展示没问题，部分数据库无法正常显示，可能是是node_exporter也需要升级，可能是采集数据的字段有变化，或者grafana的json也需要改，这是后话了，有时间再折腾。  

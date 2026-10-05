@@ -96,7 +96,7 @@ http://192.168.14.128:7001/uddiexplorer/SearchPublicRegistries.jsp，在brupsuit
 http://192.168.14.128:7001/uddiexplorer/SearchPublicRegistries.jsp?rdoSearch=name&txtSearchname=sdf&txtSearchkey=&txtSearchfor=&selfor=Business+location&btnSubmit=Search&operator=http://127.0.0.1:7001
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JV8iadKt4KMnX7bttYqVX3gic2lzI7RBIODEyNebc7TLiafLEThg5r9CZFElfoGJsyjJtgQG2H1icQhoA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/cfac98748a70f6aab5c6eddfb766c95a534095f18dd68b5dc4069ead424f91f7.png)
 
 主要是通过operator这个参数来判断端口是否开放，例如访问开放的7001端口时页面会返回一个404。
 

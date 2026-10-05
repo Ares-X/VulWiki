@@ -45,7 +45,7 @@ schema_version: "1"
 
 长亭科技  天驿安全   2025-07-10 08:03  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FOh11C4BDicSXB81WckHL3UaDia8f7YSQADP0N5LceRr3X7gVmZX2MLQcN6Q1exGyhiaIlwMJscH8YQEPBXBuWwuw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2e63917c3bfefd0913c66a75cb64ac0933014b5ef3e1916a3a98eee40b51ea45.png "")  
   
   
 泛微e-cology是一款由泛微网络科技开发的协同管理平台，支持人力资源、财务、行政等多功能管理和移动办公。  

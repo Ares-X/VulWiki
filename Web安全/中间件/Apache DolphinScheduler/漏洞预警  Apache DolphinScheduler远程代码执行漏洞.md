@@ -52,7 +52,7 @@ schema_version: "1"
   
 Apache DolphinScheduler是一个分布式和可扩展的开源工作流编排平台，具有强大的DAG可视化界面，专注于解决数据流水线中的复杂任务依赖问题，并提供多种类型的任务可供"开箱即用"。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SXD4gT0JcKdQHScTiaP0Hm0kRewcOAkuzHIoEk08K1tIDDxqzo7iclRHflaJBiaxyQS3ichegBLibF5A9A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f79c69e99a8b24e5e4d0af811f52acd8386e8695eae891a2a0be9ed04a8a6281.png "")  
   
 **0x03 漏洞详情**  
 ###   

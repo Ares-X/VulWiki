@@ -64,7 +64,7 @@ CNVD编号:
   
 泛微 E-Office  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZtszLHYVrnhcXic0cCGXibD2OEGjaAyfSWSOpJhecoGeD4hXEhlALtRxkQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/52c852fda017eb65c1847ff15bbe49dac083f12aff7181d4b062cf7331d3495b.jpg "null")  
   
 泛微e-office系统UserSelect接口存在未授权访问漏洞  
 ### 4.fofa查询语句  
@@ -83,26 +83,26 @@ Accept: */*
 Connection: Keep-Alive
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZt47xsK2tsa1TIsvka5t6GusYfoOmYRFmme16ZID3S4T6d9GHGg3AWdw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/4a1f8e4654aa11113916923269d4201ee45d442ea469f6e7a4260e758dc469ba.jpg "null")  
 ### 6.POC&EXP  
   
 关注公众号 南风漏洞复现文库 并回复 漏洞复现129 即可获得该POC工具下载地址：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZtNBWA0LpOWbnGmiaQYIuZDWwoqQic35miaiae4AaABc4wWhyS0LPvnspeEA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/aca44ce3158f90af41f44474a6224cfbe85f737c1078d4dcaaa08f69124b3a5d.jpg "null")  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZtPdKHEmMoAgYySNia6B3Ksh5m0ibf3ms3bnLEzm5YMmFSxhrE862Y6Rcw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/6f1bc5fca3831d58bfa01bfb008c7e7e28df5882064d49ca77b8e097b80be1fc.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZtcsK0xRL7OgiaviciaDpI2mAbqpiboQdLYf7icX9P8bmPhOla0flJscPkicBg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/c625c01f9dc513bf1ca22f48113959d69c0ca7ee77fa4521fbc44e0a5ae6a6be.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZt0Ch7m0d1QPReibquoRtUBBWiapnwrsq5IhiaVgBZB1mOHbu6Guu8xC8ibw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/5d6a45f25899215706838d7d66ec7f80816d533f1878d3f33dd73027bef1b971.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZt1VXFPiaUX5nGkIaWl8k8ruWpXYK7gT6P9hQwNibnaNQaAXwNlfib4bMtQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/31d277a6fa41aea2b7fd0d593be57026d58b7876987c18d87a59ee8ba08134b9.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZtaUtXanLuXJ2ecSeFcBiabIrg0icicKFF62knk2XkUaQnI8uyPZgO1c6ibA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/65011a35c2836fc5571df8cee7426ebc5a17f6ba9ca67b14d3c7d9f48aadbf2f.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZtLsR4ylt6oybHA8zRb0bPrODC5L95SUKFkZVhbplS4ZksGIIDoa0Bfg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ### 7.整改意见  
   
 请关注官网更新补丁: https://www.e-office.cn/  

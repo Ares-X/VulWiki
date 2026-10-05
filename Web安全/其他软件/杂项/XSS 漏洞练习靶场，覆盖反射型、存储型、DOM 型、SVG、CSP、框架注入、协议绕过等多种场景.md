@@ -56,17 +56,17 @@ schema_version: "1"
 
  黑白之道   2026-01-24 01:18  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicwgPqvK8QgwnCr09iaSllrsXJLMkThiaHibEntZKkJiaicEd4ibWQxyn3gtAWbyGqtHVb0qqsHFC9jW3oQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/54e6aa533c71207faa872ac7dd6fc7f1f67c8202e18fd82865cee6d560192712.gif "")  
   
 ## 工具介绍  
   
 XSS-Sec 靶场项目是一个以“实战为导向”的 XSS 漏洞练习靶场，覆盖反射型、存储型、DOM 型、SVG、CSP、框架注入、协议绕过等多种场景。页面样式统一，逻辑清晰，适合系统化学习与教学演示。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2XXErq77fVGmdFe8daOm3SIsvZCCuCQ0ib8IsJCS3S2hKQlaoytomlHPc1ibmzlX7LVe6pdHMSGavKw/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/d9e94eec558af7e1e9c9aafc071364d8b555b6dab3786b765691a5ab179b5cce.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2XXErq77fVGmdFe8daOm3SI4LBTuibHfFzjoKSVicj3fSH6R6AUr0ePdmIpzZaRoiaZT0g0CsyrI9njg/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/7712e13bd0408bf78dbcb78e21ca49cf2e07bb8f7e7897b02d15191fb67c39e4.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2XXErq77fVGmdFe8daOm3SIkPfhRp0ldQkXfAUib6ia7kkrSYbuHBHChEGAPI2sWLaZib9Id27xzcFibA/640?wx_fmt=png&from=appmsg&watermark=1 "")  
+![](../../.resource/remote/13dc341da1020c78b415acd72fe64b064e0a1b541cd6a347d7c428388fc5a3e1.png "")  
 ## 关卡总览（名称与简介）  
 - Level 1: Reflected XSS — The basics.  
   

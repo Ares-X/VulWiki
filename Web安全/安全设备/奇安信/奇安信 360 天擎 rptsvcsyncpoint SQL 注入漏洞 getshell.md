@@ -57,28 +57,28 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/IYgP_sl4AhsAN0tENOF-nw)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZdJwRibhfOJMA5MLxOKZLmvCRI2aPiac0g7yIODGCB0UUBAiaib3LsI1crEAY3yicSsyG9hLExISUPtNiaQ/640)
+![](../../.resource/remote/6b4e70b9183c28697f241c39f8f680f421719a27c359ccb4843bf1c7294cdec3.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/NiaOqERrM1vZk9ptOvAicxibPMCq1BHPgM698D7vZleXSQyxRbKySUBdMtqoBuHhAFaia99SL54F3gII0PWyKfk6Hw/640)
+![](../../.resource/remote/81cf3f1469a88c77d0f19e4597a9e93ee48390f7c89f4ff0d720271b550cecc0.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Z11VZvDJFsKYvMlrDtnevxAT9XHX8H5xibrNJvmMZCB8xvR2KibJEEn8bT9TM6hLeAia0sNnpkPMicurpbbPmxXsAg/640)
+![](../../.resource/remote/8666f1c503edb7f6a7a29bf86590111be4c4505723aa16d523e23c62431b8cd1.png)
 
 漏洞描述
 
-![](https://mmbiz.qpic.cn/mmbiz_png/k11xXy6jfMedtktMHjz0aicVKh4ztLqmTkkVnjgvIZ36ylOkdhCQrIOEI9cSJdibzBIhq6biavm9AMkSSEdrm4m2w/640)
+![](../../.resource/remote/f5353c77d42b71b4550c174abf93ee1b4e1b399ff2c1f7bada97d69bb7b37029.png)
 
 ```
 360天擎官方版能够为用户精确检测已知病毒木马、未知恶意代码，有效防御APT攻击，360天擎存在SQL注入漏洞。
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/NiaOqERrM1vZk9ptOvAicxibPMCq1BHPgM698D7vZleXSQyxRbKySUBdMtqoBuHhAFaia99SL54F3gII0PWyKfk6Hw/640)
+![](../../.resource/remote/81cf3f1469a88c77d0f19e4597a9e93ee48390f7c89f4ff0d720271b550cecc0.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Z11VZvDJFsKYvMlrDtnevxAT9XHX8H5xibrNJvmMZCB8xvR2KibJEEn8bT9TM6hLeAia0sNnpkPMicurpbbPmxXsAg/640)
+![](../../.resource/remote/8666f1c503edb7f6a7a29bf86590111be4c4505723aa16d523e23c62431b8cd1.png)
 
 漏洞复现
 
-![](https://mmbiz.qpic.cn/mmbiz_png/k11xXy6jfMedtktMHjz0aicVKh4ztLqmTkkVnjgvIZ36ylOkdhCQrIOEI9cSJdibzBIhq6biavm9AMkSSEdrm4m2w/640)
+![](../../.resource/remote/f5353c77d42b71b4550c174abf93ee1b4e1b399ff2c1f7bada97d69bb7b37029.png)
 
 步骤一：在 Fofa 中搜索以下语法并随机确定要进行攻击测试的目标....
 
@@ -104,23 +104,23 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZdJwRibhfOJMA5MLxOKZLmvCF1ATGZsm77icuGEhaNfFMqdib31akuFvVezDepZAxn0VZJnffM8fI34A/640?wx_fmt=png)
+![](../../.resource/remote/0afc79a7d286180ddd054803f7a6871126307cf0d768142216a9b11bf8ee5165.png)
 
 步骤三：访问上传的文件，即可回显写入的文件内容。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZdJwRibhfOJMA5MLxOKZLmvCKs3WrD44OS3Dv7JiaNloPmmZs1a4JZxPN9x8VicB5o2DC183zTcRwzVA/640?wx_fmt=png)
+![](../../.resource/remote/13c5676b5ad3459345522de7d527ea618774fdb99b87c73dd379d30e334a8922.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/dMkBHvNs4ZdJwRibhfOJMA5MLxOKZLmvCEzN3D2BfR4YricDzluIKN34DHzbMCzUrIRpNzK88qQKZyuSJx20xrGw/640?wx_fmt=png)
+![](../../.resource/remote/955d407938bb0d1525a6d449668b5d4604ce3f748280e9a8817dad837c49acb0.png)
 
 步骤四：尝试上传 PHP 一句话木马，上传成功，并访问。蚁剑连接，成功 getshell。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/NiaOqERrM1vZk9ptOvAicxibPMCq1BHPgM698D7vZleXSQyxRbKySUBdMtqoBuHhAFaia99SL54F3gII0PWyKfk6Hw/640)
+![](../../.resource/remote/81cf3f1469a88c77d0f19e4597a9e93ee48390f7c89f4ff0d720271b550cecc0.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Z11VZvDJFsKYvMlrDtnevxAT9XHX8H5xibrNJvmMZCB8xvR2KibJEEn8bT9TM6hLeAia0sNnpkPMicurpbbPmxXsAg/640)
+![](../../.resource/remote/8666f1c503edb7f6a7a29bf86590111be4c4505723aa16d523e23c62431b8cd1.png)
 
 批量脚本
 
-![](https://mmbiz.qpic.cn/mmbiz_png/k11xXy6jfMedtktMHjz0aicVKh4ztLqmTkkVnjgvIZ36ylOkdhCQrIOEI9cSJdibzBIhq6biavm9AMkSSEdrm4m2w/640)
+![](../../.resource/remote/f5353c77d42b71b4550c174abf93ee1b4e1b399ff2c1f7bada97d69bb7b37029.png)
 
 ```
 id: qianxin-360-tianqing-rptsvcsyncpoint-sqli
@@ -154,7 +154,7 @@ http:
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/dMkBHvNs4ZdJwRibhfOJMA5MLxOKZLmvCMSsBVZJnWGfnfeexrVkTnblzCN3pNIXGA0pVl52Cjib6mricgnfGhBXQ/640)
+![](../../.resource/remote/a24f4ad6f6ce08ea478e5dbf7ded1edfdf0c9682d39761e1a99d1f67e291134e.jpg)
 
 扫码获取更多精彩
 

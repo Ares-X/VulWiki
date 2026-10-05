@@ -51,7 +51,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/2a5gwWyNN9HpInVUaE2MmQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV24qQxibPicOuBfeLkx687EVUqeJic7G6v19Eb06yeqyS3V0ic97gTkzJv4HZ2y97dIOYf9TlNmVqFWGw/640?wx_fmt=png)
+![](../../.resource/remote/3ac76814824869951c90e7f77beccaa6783c7bfae13fd58acbc14526d6ecbe9e.png)
 
 ```
 #!/usr/bin/python

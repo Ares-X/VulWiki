@@ -57,7 +57,7 @@ schema_version: "1"
 
 源码下载：https://down.easck.com/code/60244.html
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfu18MoibOZq6ibOYlUGkBzOibwb5fUjBUicuqeUsyHm3k6bKt4Mmk9pChIOQ/640?wx_fmt=png)
+![](../../.resource/remote/37716ecb1d473b8339838b9bbae922691894d426a225624f2dcc08f8f48db8d4.png)
 
 #### 漏洞寻找
 
@@ -67,26 +67,26 @@ schema_version: "1"
 http://127.0.0.1/yunyecms/admin.php?c=login&=
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuCsRlVD9iczKx7RgIuVGctNvpGIXVHEaHicvYEY0TzrAQaAyheIibwMib9A/640?wx_fmt=png)
+![](../../.resource/remote/6695e35fc193e37b231a123ad8b9aea43d99f8f2269a7b1a0bed2f9abf32e9ca.png)
 
 打开 Seay 源代码审计工具，分析代码。  
 
 经过一番寻找与 “提示”，发现 getip() 方法获取 ip 没有进行过滤，可能有戏。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfumNWesAvrvickibLaLeuNdK29iceDLIXOkxE9m7HGiaEtMZP1blVFUf1VqQ/640?wx_fmt=png)  
+![](../../.resource/remote/0911d87d1fddd58fb9c69e6306565ba7601c71076caa5bd692a64b79790803cb.png)  
   
 
 搜索 getip() 函数，发现 login.php 调用了该函数，变量为 $logiparr。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuic25akiaEHeNtShtlDrHtLAJ6gJB8WhyG9gSmLNqWnAEts83RCJNFm1A/640?wx_fmt=png)  
+![](../../.resource/remote/244196339ef9fecdf775faaf950904385c13f313349093118c01910f6c10da0c.png)  
 
 跟踪该变量，发现 CheckLoginTimes 函数调用该变量。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuz6ua20yaRSnOJIODvNKAEGu9Gcj8uv0nvCfHOZynZFias3OAUyuOBVg/640?wx_fmt=png)  
+![](../../.resource/remote/7c87a584b0453ab9129c3027f32b831cb5dd5a1362f29a9e2b16db98062e4560.png)  
 
 去到该函数定义处，发现我们的 ip 变量没有进行任何过滤直接由 GetCount 函数执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuY3Nfb3JiaIIcmk3ggVmz8ZWQsujLdzpqtx7oBdVIvWhQgvhlDdFLpMw/640?wx_fmt=png)
+![](../../.resource/remote/81ae417cef1d86d3fbabd2aad18052717dc1c3f800c1688bd720ed2d26238c77.png)
 
 #### 漏洞复现
 
@@ -96,21 +96,21 @@ $cnt=$this->db->GetCount("select count(*) as total from `#yunyecms_adminloginfai
 
 可以看出，我们可以构造该 ip 变量达到注入目的，打开 burp 抓包。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfut2Ahriag5obZ9ANfTMyDVrIFlJKrGfXkMMj1iaXTpgVEAsjoHFwTzk5A/640?wx_fmt=png)  
+![](../../.resource/remote/6e8288f9a3cb4b6c5d6aab057087e14d0a074f2910fa4832e7d15993edf88eed.png)  
 发送到 Repeater 模块，构造参数，可以看到 sql 报错。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuNccTtcibKlLpy2Kjh1U0sEbp0o2hasbWQwn6H6Rs8gOgKEZdJyHZ3sA/640?wx_fmt=png)  
+![](../../.resource/remote/663ee8315bece0f45e576a3c8f673e24635f1c163c46376df72035229f7d0b57.png)  
   
 
 进一步利用，得到数据库名称，漏洞存在。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfubdNhMoboOaj3EFG6h8ZKu5ghspegfcUbXr7TSXfP3fUVWYtrGbbicxA/640?wx_fmt=png)
+![](../../.resource/remote/61d91828377e6dbe14661525e577a3c392267d9640645ee31dbe78eb7739fbf8.png)
 
 #### 漏洞利用
 
 将数据包发送给 sqlmap 去跑可以拿到更多信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfu0INJCwkA0DxywqqNqda9M24sMKzSibtbWCiclibm2gaTiceSFIHaKUSRZg/640?wx_fmt=png)
+![](../../.resource/remote/757e62c5c905a8216b54a50e4976e8961bb161b580723bafdbb8606a6439f513.png)
 
 ### 二、yunyeCMS 前台注入漏洞 (二)
 
@@ -128,34 +128,34 @@ yunyecms cookie 参数存在 sql 注入漏洞，攻击者可以通过利用漏�
 
 1. 注册一个普通用户
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfufJibXT9NqfA3mwNsg801JpdR0e6pYcpcXVqibDoesGh8mnicXYCTJbFPA/640?wx_fmt=png)
+![](../../.resource/remote/f7ede34eec2b72dbc70d1c5e3c5f5173f5b5c98c5a69b022367d8866dc46359c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuy557dq8kkDKUuUia121Ohd4ODicHEvwYuia062hjXnxvjIzDH3EssELUw/640?wx_fmt=png)
+![](../../.resource/remote/f874a3b4a96138e8a8a0a253d7a0979bcfc4e8cf0b4deb5e06e7f0d89eabd07e.png)
 
 2. 然后直接进行抓包，抓任何页面的数据包都可行。
 
 在 cookie 处 YUNYECMS_userid 参数这里找到存在 SQL 注入漏洞。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuHFjsVujYnSAa8qqr12gur3RfWCMCFmbuPVIgGicfwia44rMNvvNL3z3Q/640?wx_fmt=png)  
+![](../../.resource/remote/411926da19fcaace55d93b60dbdfa3f4f1bf33f748a525c3e0c57271828c693a.png)  
 用最简单的方法，在这里手注一个单引号，返回包里的报错信息都是与数据库相关的，所以可以判断是存在 sql 注入。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfu61uRPLQgAtHicbmEOHVlK9fB3Xb7Ur53LhapIPQ383YEMx0GvUV9b0A/640?wx_fmt=png)  
+![](../../.resource/remote/70e87f4130e3d7775c73b0e92dbd88d91101300be5a8f80a6313b7719593c49b.png)  
 尝试手工注入找到数据库库名
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfubdNhMoboOaj3EFG6h8ZKu5ghspegfcUbXr7TSXfP3fUVWYtrGbbicxA/640?wx_fmt=png)  
+![](../../.resource/remote/61d91828377e6dbe14661525e577a3c392267d9640645ee31dbe78eb7739fbf8.png)  
   
 
 3. 也可以交给 sqlmap 跑一跑，把注入点的地方用 * 号标注
 
 这样也能跑到其他数据库
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuj7icS50oACnqI2YgyaJZfZyibHJWiar8UnLVic6pSJ2qgmKE3HKIz0tGzw/640?wx_fmt=png)
+![](../../.resource/remote/2591a161834d4b44d9cb13aeb18e47c18847721ae7ff92f72dba0a1d7281115c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfux2Z0OZKdbTiaaSkMMIwrBSOC2ZNonhgqnhF89UQEQxaaFTqFtPFq2WA/640?wx_fmt=png)
+![](../../.resource/remote/9236607d311a4d5df8f10c01b0501f8c0ee398bb001c15462138b6e40b46ed64.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfu8ynoGXbhyxOH1Jxtibmvib5vBibKY3sQIcJhaxh7GJBmJhTw9E6c5uU9Q/640?wx_fmt=png)
+![](../../.resource/remote/dbe8b8261588bbdcf842f26c9182f71f0a4cbec55c1437903c8f8da628ea0885.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfucpP7x4Z6YTBFGj3GmHabNfMcyT6beOgzIzp3SUDj3kccfWy7ic0ib9mg/640?wx_fmt=png)
+![](../../.resource/remote/0f63f9afd456e31323283af58757a2b222d645c5ce30285d8ef88b7203e46ca1.png)
 
 ### 三、yunyeCMS 后台注入漏洞 (一)
 
@@ -165,12 +165,12 @@ yunyecms cookie 参数存在 sql 注入漏洞，攻击者可以通过利用漏�
 
 然后被 edit_admin_department() 调用。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuj3Zb6HXjIhuNpEYQNeWztNHOYJtzKwibWXg4hOypoxCGn1Xia9OQictww/640?wx_fmt=png)  
+![](../../.resource/remote/e2274bab03927c0642e537c37a2483b4655bb2f9f3d924f3490c5a494462dbad.png)  
   
 
 去到 edit_admin_department() 函数定义处，发现过滤语句。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuz4uyBeNcSIJazNIZqb6z5P7snwKlAwdCHoyMW5dbf5iauH9QRAlyFPQ/640?wx_fmt=png)  
+![](../../.resource/remote/c77c6a4d897b81dbcb40e2fde03fbe0d405e929a375bb6321a901483e4232919.png)  
 
 但是仔细一看
 
@@ -191,16 +191,16 @@ if($num){ messagebox(Lan('department_already_exist'),url_admin('department_add',
 
 找到 core/admin/deparment.php 所在的页面，即后台的部门管理处。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfupmLA6mMGl5WpqpSjFXuCxy9ia438Dr6BKhL3ibmJE69PiaFZiaOPIj0zJQ/640?wx_fmt=png)  
+![](../../.resource/remote/6252150b1faf3aa380c108bf776f70657a8cf831b6193b83b0ab78774c4aab3b.png)  
 
 随意修改部门名字，只要前后名字不一致就行，然后抓取数据包。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuLGhEVibQQOSOrLhXak0YlJ5JMxdFUlHu24ZeCHezOkK18uBHHSnlK2A/640?wx_fmt=png)  
+![](../../.resource/remote/d0416ec4adeda0e3f86062df06117a496f93803e5d2aa94950bd09d8631f1851.png)  
   
 
 发送到 Repeater 模块，构造参数，可以看到 sql 报错。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfukDnQVzHheVY8A4QCZxjVvnIRPqX4hFJjJzicbiah7pzkjPMNG9clZnSQ/640?wx_fmt=png)
+![](../../.resource/remote/1dea4822038794c9f47b81c0765913a1b72170d51131ace91c0b7b1ea8aab357.png)
 
 ### 四、yunyeCMS 后台注入漏洞 (二)
 
@@ -210,14 +210,14 @@ if($num){ messagebox(Lan('department_already_exist'),url_admin('department_add',
 
 最终将传入的几个参数传给了 edit_admin_department。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuzyWruksmAW2sricxibjV67vl7ialMRKeibIUemkl0A0z5IDm0TZGaCHSeA/640?wx_fmt=png)  
+![](../../.resource/remote/bf179f0d8af4809da48151125e2745ae547415266bf4c6b2ffb2762fe6eb4670.png)  
   
 
 跟入 edit_admin_department，对参数依次进行了处理，
 
 但是发现只有 $departmentnam,$olddepartmentname 进行了 usafestr 安全过滤，漏网的 $id 拼接到了 sql 语句中执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfuOz9gjgQPNjyiaLJvxmH9AWx3IO10gYZanSfe8ezOAjjicwnaYoCBrxSg/640?wx_fmt=png)  
+![](../../.resource/remote/0007ddea4693bf3bf9b97ceee73c3f5cc88dfd396c3eaf63f4842dce2b930140.png)  
 
 最终导致了 sql 注入。
 
@@ -225,7 +225,7 @@ if($num){ messagebox(Lan('department_already_exist'),url_admin('department_add',
 
 这个和上述三种情况相同，直接交给 sqlmap 去跑。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcog4r439e2y5PJ7ia99qBTfu0INJCwkA0DxywqqNqda9M24sMKzSibtbWCiclibm2gaTiceSFIHaKUSRZg/640?wx_fmt=png)
+![](../../.resource/remote/757e62c5c905a8216b54a50e4976e8961bb161b580723bafdbb8606a6439f513.png)
 
   
 
@@ -244,13 +244,13 @@ if($num){ messagebox(Lan('department_already_exist'),url_admin('department_add',
  [代理池工具撰写 | 只有无尽的跳转，没有封禁的 IP！](http://mp.weixin.qq.com/s?__biz=MzUyODkwNDIyMg==&mid=2247503462&idx=1&sn=0b696f0cabab0a046385599a1683dfb2&chksm=fa6bb717cd1c3e01afc0d6126ea141bb9a39bf3b4123462528d37fb00f74ea525b83e948bc80&scene=21#wechat_redirect)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWaCD3pqD9SSJ3YMhuahjm3anU6mlEJaepA8qOwm3C4GVIETQZT6uHGQ/640?wx_fmt=gif)
+![](../../.resource/remote/553ceefc3b1479cc862f6f8900857ffa3da4352fd66ccb41e13c9b73baff07fa.gif)
 
 扫码白嫖视频 + 工具 + 进群 + 靶场等资料
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpx1Q3Jp9iazicHHqfQYT6J5613m7mUbljREbGolHHu6GXBfS2p4EZop2piaib8GgVdkYSPWaVcic6n5qg/640?wx_fmt=png)
+![](../../.resource/remote/cfe2acf01f76856e34009a3a3c80c59c96367595d7f9dcf72cf3031cd3ac7641.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWFyt1RHHuwgcQ5iat5ZXkETlp2icotQrCMuQk8HSaE9gopITwNa8hfI7A/640?wx_fmt=png)
+![](../../.resource/remote/cc23fa1d3e8157e15633c47bc376e29fa74b67c7beeba492c693ff51db3d83c5.png)
 
  **扫码白嫖****！**
 

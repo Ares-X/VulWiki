@@ -113,9 +113,9 @@ E-cology9 SQL注入漏洞(QVD-2025-26680)，该漏洞源于对用户传入的参
   
 以下为延迟注入3s  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4ibmsjHQsb5R3vDnMRluibOiaycWU7icUDB9JVN77ZH5cHGqHcu7g39ibh5G3HZsVhgsEHJgg7xicfNEn6Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/476052998df758281154dbac98308a6eb8368dc7e18f4f0b2151077185cff81a.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4ibmsjHQsb5R3vDnMRluibOiay1ODKxiawkhEUzicfNMIrzcEYTicYJhooibmK5j6z1QbxVuBpJhl7E5Z7rw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4f7fc149050a83ccba71ccc175cf664995eeeb2d0b60879e576faa5cc8fcb0ee.png "")  
   
   
   
@@ -135,7 +135,7 @@ E-cology9 SQL注入漏洞(QVD-2025-26680)，该漏洞源于对用户传入的参
 https://www.weaver.com.cn/cs/securityDownload.html  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4ibk4pC7wiaphWwfxZm5f4qGeovwBNvL5X1Y9BSXxDCefe5PyNUEf5vAKwkaNTsDiauxhBHjyu52Frvg/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/194c6b30367f434629b13896bbcaa8a4043fac8b1ee11620a84de6d5c3974f88.webp "")  
   
 **>**  
 **>**  
@@ -185,14 +185,14 @@ https://www.weaver.com.cn/cs/securityDownload.html
 A  
 威胁分析平台已支持漏洞情报订阅服务：  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4ibpFEkqfMZfO3smS6RKd9BY9IJ0MPzeiashvK2XLpdl3XtTtCD91h0jS26fqvuWpEMXgmXa85qLkoA/640?wxfrom=5&wx_lazy=1&wx_co=1&wx_fmt=other&tp=webp "漏洞订阅上线.png")  
+![图片](../../.resource/remote/ca0e216b921cdfb7834501e6b37d44a18cfae6094b7d61593e2caac18f9752dd.webp "漏洞订阅上线.png")  
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/3tG2LbK7WG3tezJEzJsicLSWCGsIggLbcfk4LB5WK7pdSwMksxPOAoHuibjQpBlEId4nyIIw52n2J8N8MowYZcjA/640?wxfrom=5&wx_lazy=1&wx_co=1&wx_fmt=other&tp=webp "")  
+![图片](../../.resource/remote/4da2ae667d6d9a862d94b3b680622be05384b9a54eeaa434e4de7096b4a8e125.webp "")  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4ibpFEkqfMZfO3smS6RKd9BYBVaibvBq1vXprZIc191LXKibdiaApA16q3UgmibQDv4yW09qT88J3jRUfA/640?wxfrom=5&wx_lazy=1&wx_co=1&wx_fmt=other&tp=webp "CERT LOGO.png")  
+![图片](../../.resource/remote/e616a06216d42af4d2d7caaa25a551032f5e8b4a64895cb935fc089a55e0842a.webp "CERT LOGO.png")  
   
 **奇安信 CERT**  
   

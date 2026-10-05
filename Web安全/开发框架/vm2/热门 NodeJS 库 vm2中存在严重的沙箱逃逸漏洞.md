@@ -40,7 +40,7 @@ schema_version: "1"
 Bill Toulas
                     Bill Toulas  代码卫士   2026-01-28 10:25  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -63,7 +63,7 @@ Bill Toulas
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQx0S45vPZK90d0XNJZ5yjIq2qrNB5B40WpOib6lYg2JMwSwv7k9TMk0HFeJ0e81M5ssO6xvSSBicVw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/14c6262b0581ed429b6f87f2c8d56924df46984745b1c6d0062a45c519e2a39b.gif "")  
   
   
 vm2作为一个开源库，旨在为用户执行无法访问文件系统的不可信JavaScript代码创建一个安全的执行环境。该库曾广泛应用于支持用户脚本执行的SaaS平台、在线代码运行器、聊天机器人及开源项目中，在GitHub上被超过20万个项目所使用。然而，由于反复出现沙箱逃逸漏洞，该项目已于2023年停止维护，官方认定其不再适合用于运行不可信代码。  
@@ -71,12 +71,12 @@ vm2作为一个开源库，旨在为用户执行无法访问文件系统的不�
 去年十月，项目维护者 Patrik Šimek 决定重启vm2项目，并发布了修复了当时已知所有漏洞的3.10.0版本，且"仍可向下兼容至Node 6版本"。该库在npm平台上依然广受欢迎，过去一年每周下载量持续保持在约一百万次左右。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQx0S45vPZK90d0XNJZ5yjI2IWOMDxJNRntMY3QYLeJCKMib0bnvc20qHqg2fKMp3vT4L3icjerIYbg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **净化机制缺陷**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQx0S45vPZK90d0XNJZ5yjI2IWOMDxJNRntMY3QYLeJCKMib0bnvc20qHqg2fKMp3vT4L3icjerIYbg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -141,15 +141,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

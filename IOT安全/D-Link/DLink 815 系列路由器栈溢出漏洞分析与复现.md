@@ -81,7 +81,7 @@ binwalk -e DIR-815 FW 1.01b14_1.01b14.bin
 
 得到文件系统如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhXcqXOexQRLZgLuSSuWn7wKKX9jbl00eT0QS1CibG2UoupKODZbqwlHw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/55fd7e2b0d566229c1c66cadaeead53d6ef171d0636afa5c9267f3ad8a5840c8.png)
 
 二、漏洞静态分析
 --------
@@ -89,15 +89,15 @@ binwalk -e DIR-815 FW 1.01b14_1.01b14.bin
 漏洞存在于 hedwig_cgi 函数中，当其处理前端的 HTTP 头中 Cookie 字段的 uid 值时，存在栈溢出漏洞。hedwig_cgi 是集成到 cgibin 文件中的，因此直接拖取 cgibin 文件进行分析，定位 hedwig_cgi 函数：  
 当程序获取 Cookie 字段中的 uid 值后，直接将内容复制到 v27 所在数组中，造成栈溢出。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhxEPTqj1iaia4QGx7yXdUR0GhWFW4auZKibNIaUXMjuryyefZuYiamWrjmQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/986351875cfd132104540308cbec51cc764697656e8017349a20214e0918d877.png)
 
 对应汇编代码如下:  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhR31icXcVgxfRNJgInE5WIvGHaNFUHWqjLGTq7nmcEKjqWuibxcACrGUw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a39894ad77bada6dca04a640a8dc51013099c2e042b87ce6e145b4447662408e.png)
 
 函数返回处汇编代码如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8Uh769Zqg7jJJKNrj6JksbbG26WvUXUbb7p30NNs4qjk2Hx1cVQGgRbAA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/eb0d461d484e092d8606f831c535c2de8a7b1c1ef5b916c8002834e91c47d2db.png)
 
 三、漏洞动态调试
 --------
@@ -152,7 +152,7 @@ route add default gw 192.168.100.254
 
 主机虚拟机互相 ping 通：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8Uhy9W0Ejib6Khmeflk2ic6iaowUWrMdeibEQY4iazX5mDAEM3L3wicuhVHF8QQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/42caf9adb5565ddb5a07b70b84e7406e66574a64cf0b4766956d32599deccc0b.png)
 
 为了方便调试，关闭地址随机化：  
 
@@ -180,11 +180,11 @@ Umask 026PIDFile /var/run/httpd.pidLogGMT On  #开启logErrorLog /log #log文件
 
 然后在 ubuntu 中访问 hedwig.cgi 服务：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8Uh1ZB2JowxxicpQDZY7FALOuV6MiaWtUPDkXjkdibnC44eG9Cic2fTjTUicbA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/964c07086a3c503e8c8e1b988467fc7434442c4371abc07997740a7fe4cb1b1f.png)
 
 在 qemu 中直接运行 hedwig.cgi 服务，显示 no REQUEST，说明 hedwig.cgi 服务没有收到请求  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhI0dAia0ibicyvtBciaJBRS7PFltuNtcEdIOYJ2UgC9FvmOW5gGXj0UCHTw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f9e91cfb749894c4e3d9a6fcfbadaef47f1560c56b4501530da3ada2ae98fe8e.png)
 
 因此需要提前配置 REQUEST_METHOD 等方法，这里通过环境变量进行设置：  
 
@@ -194,7 +194,7 @@ export CONTENT_LENGTH="100"export CONTENT_TYPE="application/x-www-form-urlencode
 
 此时再运行 hedwig.cgi 服务即可正常接收内容：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8Uhibe2b95JDLPdHUOOcdsqTibic3v5eMJFv4bKIhs0pTmEN3fBUaapOGichw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9421a3060c0207b12ae5d8fdeab2686499b7bdcb2c292327ad3b6213e0a5c8a6.png)
 
 **（2）调试确定栈溢出偏移**  
 下面利用 gdbserver 对 hedwig.cgi 服务进行调试，调试脚本如下：  
@@ -205,7 +205,7 @@ export CONTENT_LENGTH="100"export CONTENT_TYPE="application/x-www-form-urlencode
 
 qemu 中运行调试脚本，ubuntu 中进行 gdb 连接：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhZOiamlW8X1bfmCGzx1Fg36t5icpX89R7S8kYayq1uR2R9IIRk6hatLjQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d01eb3bd05f9fc82b85f936f11435eb9422282b2c7762ef1a56931ee8ee7d5fc.png)
 
 在 hedwig_cgi 函数的返回地址下断，然后查看此时栈空间：  
 
@@ -237,16 +237,16 @@ lrwxrwxrwx 1 root root 21 12月 26 22:03 libc.so.0 -> libuClibc-0.9.30.1.so
 根据 mipsrop 工具查找到的 gadgets，构造 ROP 链：  
 这里参考《揭秘家用路由器 0day 漏洞挖掘技术》一书的方法：先将 system 函数的地址 -1 传入某个寄存器中，之后找到对这个寄存器进行加 +1 的操作的 gadget 进行调用即可将 system 地址恢复，因此我们查找 “addiu $s0,1” 指令，选用 gadgets：158c8  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhBnibKj73mgJMZJoh4djG49t2O1SsibuwHbmaTOKuiaIynpTzsXic9OdxmQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d6e8b75e2ab7289d24ad125a6cf62d19d7172557e48c6721f3ba76b92914069f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhwTpZ24qYcHxo0y5LFFalSmv7dNYiaftialyFXhaQJT59oQribyvNfutIw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f2873c66bb4d36193af18d4dc8b45b8290933da57130d23f78700d14cf6339db.png)
 
 可知第一个 gadgets 可以将 s0 赋值为 system 函数地址。  
 现在我们还需要找到给 system 函数传参的 gadgets。利用 mipsrop.stackfinder，选用 gadgets：159cc。因为其既可以跳转至 system 函数，又可以通过 s5 给 system 函数传参。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8Uh1IGROHRJu2jicGOnlj2wuLTT7S5Lqa9OpovMpeSLEaGk5jqdDBAuG9g/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2b336924b2a36b191ed21d1f59c26b9708caab5222222d6329fd610c91fa742c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhicrQz0NkNHMyVcoTKHVrAT5D3icXFLibiasHibMictZXrY0pjhaIvxL0bB6w/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1ad0a856c2dd30e947308bda4d29ea38eacf675790c106ca89bb6c2e7c7e94dc.png)
 
 因此整体流程为：  
 
@@ -268,7 +268,7 @@ lrwxrwxrwx 1 root root 21 12月 26 22:03 libc.so.0 -> libuClibc-0.9.30.1.so
 
 主机端 nc 监听并反弹 shell 如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBT04135JA0opHoupoCoV8UhvTDbxKufVgBQMhUicB1Spfe9t8BVxBoCElcAjl6VTDND3iclvkb1jqkA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/400e5250956b46896fcbf8ce4f5f690ec7ac548449d6258fadcd540c55767f5a.png)
 
 以上就是整体的调试流程，当然也可以通过布置 shellcode 来实现 shell 的反弹，但是需要绕过 cache incoherency 机制，利用 sleep 函数进行 flush 操作。  
 
@@ -289,7 +289,7 @@ ChaMd5 Venom 招收大佬入圈
   
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PUubqXlrzBR8nk7RR7HefBINILy4PClwoEMzGCJovye9KIsEjCKwxlqcSFsGJSv3OtYIjmKpXzVyfzlqSicWwxQ/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b51fc20c55765c99e12c49e3173d04ec99a011140b3eee3c1d40c2259dbd9da4.jpg)
 
 ---
 

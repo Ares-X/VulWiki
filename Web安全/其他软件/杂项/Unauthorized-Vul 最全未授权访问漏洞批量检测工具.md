@@ -66,9 +66,9 @@ Unauthorized-Vul是一款由python语言编写，为安全从业人员设计的�
 **0x02 工具使用**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qGTEdaLg0HnSwsGTaCJayGiaPkDmUFmwiciaw8vNAicuKXic5Z01gqML6zyP5IlXLnzeEIcMG3gues9csozAXdzNjqg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/12abb499ed96549c2c75438e9c43ac12dfffa188ceadc23833bf6a59f824b83b.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qGTEdaLg0HnSwsGTaCJayGiaPkDmUFmwicXMSNDYfHDvnBLpB8iclAv9bklFU8fuDP6GcNDiawkWUzGrO335ib4wOLw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1673d4adaadf08c88a7a4f8cb02972ff4381503ef8916a4b9e724a337f0ac766.png "")  
   
 **0x03 工具下载**  
   
@@ -77,7 +77,7 @@ Unauthorized-Vul是一款由python语言编写，为安全从业人员设计的�
 链接：  
 https://pan.quark.cn/s/fdac0c5eb0e2  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qGTEdaLg0HnSwsGTaCJayGiaPkDmUFmwic06tdqpLbN1DhNF294lrJDGUdK7KpecJ5AOG21YGSCQ7klia7v66uszA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7b90de4e9b0e8aa147daefe7bfd8e9c8c13663c783c99a6fb68a0fcf10ee4b63.png "")  
   
 0x04 每日资源分享【 Nuclei Poc 20w+  
 】  
@@ -87,7 +87,7 @@ https://pan.quark.cn/s/fdac0c5eb0e2
 链接：  
 https://pan.quark.cn/s/02110b52f458  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/qGTEdaLg0HmtJdLjMFJbREfWeqjvGCQ3iaiaXiaua6Mylo4iaxvesxLRib9B4cPlgVFVBTBtzXV59mjKyuS2GbQrP5g/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=wxpic "")  
+![图片](../../.resource/remote/11494760fdc4742aff754823648a0a63f0eb3732300b1c63f98fa6ef9cf67cd7.png "")  
   
   
 

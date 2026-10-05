@@ -52,7 +52,7 @@ previous_fofa_unverified: "body="
 
 **fofa : body="Bitrix Virtual Appliance"** **影响: 3k**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBj5riawanvZDhH9hYEOQVoP8T5JicuDa2swBXQ3wwEDdbsQ5O1h2NERdCg/640?wx_fmt=png)
+![](../../.resource/remote/4d60ed964c0390902f517e5ea1b62daf6deac1ef7b7b9355f7314b6e1d6e6d78.png)
 
 **Bitrix 是俄罗斯的一套 cms 系统，在 <=7.5.0 版本时存在安装时任意文件上传漏洞.**
 
@@ -61,25 +61,25 @@ previous_fofa_unverified: "body="
 
 **首先点开左下角的链接 => Восстановить копию**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBjkG5BCVcR9ekdjmM0icLUCp9xDbzxEgqxxGs3UMPhLQDyagUKJqdBnWA/640?wx_fmt=png)
+![](../../.resource/remote/513dbdeea9d91a626b2b54ed0c97cc9abe2bfbd9de8d7f65cb7146c5fdf54bc1.png)
 
   
 点继续.  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBjiagdFsJibYQibqujLLTd19cus4ZHWV5HDibN1TXujozibdQ9wUNZicjVysFA/640?wx_fmt=png)
+![](../../.resource/remote/a0c76ccf0b66359bca00bc04fbc99360856bb6698546c75dcba2acba03449a37.png)
 
   
 选择第三个选项并上传 Webshell 文件  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBjWY9UZHUhr5GkmCUiaJsgOFFxoDfKx2ojYl4RW0XHY084onGr1Pf5lwA/640?wx_fmt=png)
+![](../../.resource/remote/e762cdbebefcc6963825d23f317c10656d45808dac252889666b976946e786d8.png)
 
   
 当出现红色字体时说明存在漏洞，shell 已经成功上传在根目录.  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBjUmTjqibevicIKeiannzfqFGr7TaM8tibcWibPbiaSaE33WVLopJzt8aiaGj2g/640?wx_fmt=png)
+![](../../.resource/remote/62e4a14b92de65f10287b42cfcb9f6aacf743263e59bcd38da190897a17de59f.png)
 
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBjhgZtYK0jrt4ibwzRrhoxWuHdCjGPqJN1W2BCdgEJKxiaUNUiatRwVWFPw/640?wx_fmt=png)
+![](../../.resource/remote/236a902b19dd78de825875c4142998735135bdd177d23c3461fc5934a96b2af0.png)
 
 **实际上就是 move_uploaded_file** **直接能传****.**
 

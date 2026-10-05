@@ -55,7 +55,7 @@ source_status: "unknown"
 近日，Zyxel 发布安全更新，以解决影响其多款商用路由器的关键漏洞，该漏洞可能允许未经认证的攻击者执行操作系统命令注入。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR39My17X1N4pYFbiaE33C9NXQ2kLGB4j1icLmjCZicTRXLCgX0s5ucXpHFEdKibtFJ5ByENerqt3p4lkGg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/6141437abfdd6af9aa75460874b2f1aefac7227f7dd135ee16bed04640561016.jpg "")  
   
   
 该漏洞被追踪为 CVE-2024-7261，CVSS v3 得分为 9.8，是一个输入验证故障，由用户提供的数据处理不当引起，允许远程攻击者在主机操作系统上执行任意命令。  
@@ -102,7 +102,7 @@ Zyxel 表示，运行 V2.00(ACIP.2)的安全路由器 USG LITE 60AX 也受影响
 利用漏洞所需的特定配置要求会降低其严重性，包括在基于用户的 PSK 身份验证模式下配置设备，以及用户的用户用户名长度超过 28 个字符。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR39My17X1N4pYFbiaE33C9NXQUASWmAVY2ujZf8zzJnvmic4cghv81zM0r7M7z0M7ntxia4DspveIvMaA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/28bed0263bc02a53c289a48a99cbd77afb4d472fc5359ae515e5798961fae859.jpg "")  
   
 图源：Zyxel 官网  
   
@@ -128,12 +128,12 @@ FreeBuf盲盒、大象公仔......
 扫码添加小蜜蜂微信回复「加群」，申请加入群聊  
 】  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ich6ibqlfxbwaJlDyErKpzvETedBHPS9tGHfSKMCEZcuGq1U1mylY7pCEvJD9w60pWp7NzDjmM2BlQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&retryload=2&tp=webp "")  
+![](../../.resource/remote/c756b5fb2e446e8a46aeb976861dc8502220a41de5fd7e545c0fa98a66cefe23.webp "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oQ6bDiaGhdyodyXHMOVT6w8DobNKYuiaE7OzFMbpar0icHmzxjMvI2ACxFql4Wbu2CfOZeadq1WicJbib6FqTyxEx6Q/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/af824128f3c655f23db4a009f5f2a753c9c7e209ababffdeaf5e18432c146adc.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ61icYlLmBLDpdYEZ7nIzpGovpHjtxITB6ibiaC3R5hoibVkQsVLQfdK57w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&retryload=2&tp=webp "")  
+![](../../.resource/remote/f6fba0392477c2656e3f6b5c30fa49b30de791784846cdb1161c166e4b14e541.webp "")  
 > https://www.bleepingcomputer.com/news/security/zyxel-warns-of-critical-os-command-injection-flaw-in-routers/  
   
 >   
@@ -141,7 +141,7 @@ FreeBuf盲盒、大象公仔......
 >   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ7JfyOicficFrgrD4BHnIMtgCpBbsSUBsQ0N7pHC7YpU8BrZWWwMMghoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/0bffd438af0f544d8aead12bdd40b183fc2d88caa433e43fbd4152d042609e5d.webp "")  
   
 [](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247494804&idx=1&sn=3f8abfd1c27c79f9a511cd9e9f3b8443&chksm=ce1f160bf9689f1d4d0102e41e9ebe4c36239bdf77ba1939742f917e9d839397af22b7d08896&token=1056323174&lang=zh_CN&scene=21#wechat_redirect)  
   
@@ -149,7 +149,7 @@ FreeBuf盲盒、大象公仔......
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect)  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
 
 

@@ -93,7 +93,7 @@ No RELRO        No canary found   NX disabled   No PIE
   
 我启动 Ghidra 对二进制文件进行反编译并探索其内部工作原理。通过交叉引用二进制文件中的日志输出 (在触发现有漏洞利用时) 和发现的字符串，我能够定位到一个似乎充当 HTTP dispatcher 的函数 (稍后会详细介绍具体的调试环境)。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb854iagJ669zAjY5sKY0qvk5u0oYoPGD2vNiavjnHmoSWuFN2ILOqiaCOFdg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b079931d4021d591b73707ba60ba006a5e53d76d28c3d6019cde8f7cb99fb82e.png "")  
   
 Sofia 二进制文件的反编译 HTTP dispatcher  
   
@@ -192,7 +192,7 @@ gef➤ gef-remote 192.168.2.2 8888
  8  
 :  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85NicKnBmdias0Mp6ibv2iarynw3pKvyXoe2nJiay63FiadwTsZgYE0ibn9qj8g/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b506c40b548e0f1486b5df12bb54d6f3cb34d3b06597d40fc566136437101a15.png "")  
   
 使用 GDB-Server 和 GEF-client 的 Raspberry Pi 调试环境  
   
@@ -222,7 +222,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
  之后。如下所示，寄存器 r4 到 r10 从栈中弹出，然后是 PC。使用上述 Python 脚本，这些寄存器被填充为字符 A，而 PC 被设置为 BBBB  
 ，标记了控制流劫持的入口点。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb858l4iayviciaqQUe9bcluUiaPJzZ1gr04xqbB2BmCTPD2yIM7l80m0MXY9g/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4a84aee629cfd2b919117528ceb80589b381797d8f68d0e815fd16856fd30562.png "")  
   
 触发缓冲区溢出漏洞  
 ## 构建 Exploit  
@@ -277,7 +277,7 @@ ARM 的一个独特方面是 Thumb 指令集。Thumb 是最常用的 32 位 ARM 
 要找到这些 gadgets，广泛使用的工具 Ropper13  
 非常方便。它专门用于从二进制文件中识别和提取 ROP gadgets。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85mhs9d7obIqHSxk77ZanuC5NibDOib3qxdbLaGJqq9QoUSZn5L99ia2eRA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8fd87d7820ea9459472ca264f185bc4bd275e2bec5ba6616155c2626664f241d.png "")  
   
 使用 Ropper 寻找 gadgets  
   
@@ -333,7 +333,7 @@ def main():
 命令实际作用有限，我改用telnetd  
 在 1337 端口启动本地 telnet 服务器。这使我能够连接并获取 shell。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85JuoyMaHY7t8jNeSVricM6hribJab22OtRFjY8uvia6ewgrwka4QS02Yicg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9657103a7c25f10ce9731dd59222ecd9ec08434d7b5f31d42144da0084223f6a.png "")  
   
 通过 telnetd 实现简单漏洞利用获取 shell  
   
@@ -401,14 +401,14 @@ system("/bin/sh")
 的第四个参数）中应该存有socket_stream  
 的引用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85EbRIibnN49MkBdD4EYlGCbknww2d7kluRA3Za5sricTZfqEaWro5JNog/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3674d055853db7dfd1d72d70e8fea3ce6b263110c1d598f6c21b75b908e5fe34.png "")  
   
 GDB 中在 fwrite 调用前查看 R3 寄存器  
   
 在第二个断点处，我们可以看到 R3 中仍然保持着相同的值，这证实了当 ROP 链触发时我们确实可以获取到socket_stream  
 的引用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85dcPa8Y5dJbPRuOWu63osGCPdM8w6JmQk5nsyiacRVSKBnpV5IIaiaYTg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0e2ef1fa4d3833c08ef5c93960a70f97ec96e0fd4018093adb8e23ddf822d8fd.png "")  
   
 ROP 链触发前在 GDB 中查看 R3 寄存器  
   
@@ -422,7 +422,7 @@ ROP 链触发前在 GDB 中查看 R3 寄存器
 的假设成立，但我仍无法简单串联调用。为什么？因为我忽略了函数序言（prologue）。以fileno  
 的函数序言为例，我们可以看到 R4-R8 寄存器被压入栈中。这确保了函数返回时寄存器状态可以恢复（被调用者保存寄存器）。但我们也注意到链接寄存器（LR）同样被压入栈中。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85XZTcicRPboQhHibYM0iaCYQnabaqM9gFb3wrVRveX6mJ39d1mTFGvmo7g/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/91e1965205eb64659a44290df10789bbdca6c71c647fee9bb21306635eaaca8e.png "")  
   
 查看 fileno 反汇编后的函数序言  
   
@@ -432,7 +432,7 @@ ROP 链触发前在 GDB 中查看 R3 寄存器
 然而对于构建 ROP 链来说，这似乎是个坏消息，因为我无法真正控制 LR 寄存器。我继续寻找能在跳转到函数前设置 LR 的 gadgets。尽管解决方法对你来说可能显而易见，但我还是花了一整晚才意识到：我们可以直接跳过函数序言。这样完全无需担心 LR 的值。于是我给每个函数符号简单添加了+0x4  
 偏移，问题迎刃而解。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85yVUyjJlzbUFz3a18VEfUHnD6F6gHiaibmy5opb4VV26WF7YibzwNrpnTg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9fcd88683e82c5c54bc055c7b0ba7075e6c9716c78e4132b65ddcb55d8c6732f.png "")  
   
 查看 fileno 反汇编后的函数尾声  
   
@@ -496,7 +496,7 @@ p += p32(libc_base + 0x368dc) # mov r0, sp; blx r3
   
 终于到了测试成果的时刻。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCMdNqtzMibt5ibQibbEYuUZb85fwS0SluqAHpCLuT6FlAaIibvQyBCbJksr5myIeIapre7DWYUtNYYjYA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a6193d424691eace84b66a25935d6a625d817cf6ca485b100ce1a11098b01ef1.png "")  
   
 通过连接复用实现 shell 的最终漏洞利用  
   

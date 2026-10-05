@@ -69,7 +69,7 @@ QDocs Smart School SQL 注入漏洞
 
 Smart School 6.4.1
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMrpUUYN1lAGLCtDBdPxd2qWQJ0VViaOrSQA0SNmYuEBAIveaoT9lzJyzZicL6ic9tcAM6iaO8OiaR0nMg/640?wx_fmt=png)
+![图片](../../.resource/remote/aa420b98f23f3a83541e6c2521e1e4c7773a6e74e8e86a21091e2f1b1d7c316c.png)
 
 03
 
@@ -92,7 +92,7 @@ body="close closebtnmodal"
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMrpUUYN1lAGLCtDBdPxd2qT8VlZbv9LWm30VtJhibTysNExffSBqzD9yvJh9uSyETA74FHBsTriaXA/640?wx_fmt=png)
+![图片](../../.resource/remote/1879a9da23b02af989b232a0d7dbd18131a1b2e036156b95a18add91e4be67e1.png)
 
 05
 
@@ -237,7 +237,7 @@ nuclei.exe -t mypoc/其他/smart-school-filterRecords-sqli.yaml -u http://192.16
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMrpUUYN1lAGLCtDBdPxd2qeCNWwJ1UJHDepnQYU3wxYxzEaLUPfKW6sjfib2g5Pky3G9D9jvNFbYw/640?wx_fmt=png)
+![图片](../../.resource/remote/ce8751b828617168fac3a0e5a4987abf07301dd24c2f0a4b6b8e353e2f1e2e0f.png)
 
 07
 

@@ -57,7 +57,7 @@ schema_version: "1"
 
 很近也很远  网络研究观   2024-12-12 15:59  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/yvLFKBRPQxNgnFUp5qCia4zmeweWvdHkTQfYUMlwXkSRibaGQv5r7RB5wT504JKIbHceN4KexvrsmialGc3pZLDnw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ee61242e584e02c1d0f89d2fc74f425d5202e0c329d2c2a383a0876c96715d0d.png "")  
   
 在安全研究人员 Talal Haj Bakry 和 Mysk Inc. 的 Tommy Mysk 报告之后，Apple 在发布 iOS 18.2 时解决了其密码应用程序中的一个重要安全漏洞。  
   

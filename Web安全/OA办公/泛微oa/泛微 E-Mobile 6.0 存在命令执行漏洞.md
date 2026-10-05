@@ -60,7 +60,7 @@ schema_version: "1"
 
 **影响版本：6.0 版本**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibjJlXvO9xs7DQbycciba9EIFzP8ncE8Njs2WdiaXbibyp8pyKa840G9pIA/640?wx_fmt=png)
+![](../../.resource/remote/df2cddedb3413694cdde41ef507c9b90385cc7afce7f497c1c40f1407a4b4023.png)
 
 ```http
 POST /client.do HTTP/1.1
@@ -82,7 +82,7 @@ Content-Disposition: form-data;
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibKKibQ66cd1R9Sx3Mib51kntVnNSaIK3LfB4Zd1dpQnN0GntibCUTicG3Ww/640?wx_fmt=png)
+![](../../.resource/remote/d2c54733623b001adbfa69c4f5c98e5b18fad0f3c55879fd547ad63f038697a7.png)
 
 零日 / 一日 漏洞探讨加 Seven_-0928 、banxor9  
 
@@ -90,9 +90,9 @@ Content-Disposition: form-data;
 
 同时欢迎各位师傅加入 HW 闲聊吹水群（2000 人群）
 
-**![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibbalVucuLZ76mxOCrOhTyhSu8Sru0DlwBYruQhnkIG8ia4shVDPd4VBg/640?wx_fmt=jpeg)**
+**![](../../.resource/remote/80c27e5ed3f67f52c7ec472a138de27988f1adc682a81c9e3dd7043ae63172fb.jpg)**
 
-****![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBssPEvyWSBIpUFH4FYbmxzwydudRibUP8icaLbZJQ5WmBNtmFzWU8x8avVw34FqSicxFsaQCSfveDUXibg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)****
+****![](../../.resource/remote/4acef8fe657897741824fa52426813dee86890dad62fabbad6b96ba1d1492501.jpg)****
 
 ---
 

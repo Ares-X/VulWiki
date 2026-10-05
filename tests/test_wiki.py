@@ -336,6 +336,16 @@ class WikiTests(unittest.TestCase):
         self.assertIn(('.resource/a.png', True), links)
         self.assertIn(('.resource/b.png', True), links)
 
+    def test_image_title_quotes_do_not_become_part_of_destination(self):
+        raw = '''![one](.resource/a.png "Ukraine's Entry 11")
+![two](.resource/b.png 'An "original" title')
+![three](https://example.invalid/raw.png?part=public-test "A \\"quoted\\" title")
+'''
+        self.assertEqual(wiki.markdown_links(raw), [
+            ('.resource/a.png', True), ('.resource/b.png', True),
+            ('https://example.invalid/raw.png?part=public-test', True),
+        ])
+
     def test_nested_image_description_checks_outer_destination(self):
         raw = '![[转存失败(img-public-1586504452408)(./images/0.png)]](附件/CVE-2020-10560.png)'
         self.article(body=raw + '\n')

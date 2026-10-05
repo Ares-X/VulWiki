@@ -103,9 +103,9 @@ VMware Horizon Cloud Connector
 
 找到一个 VM 服务，发送 payload
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgenMe36pZKCxSwwbibbrgVN1YribgMRItpveyGhuOF7NevQWoicOOzj9K5LZwWFib2oF5Rg2nPWDDnA0yA/640?wx_fmt=png)
+![图片](../../.resource/remote/2c33f16cb25ecdd61c4a9a011348e57440e51bbc958c17228d5943b45ce42f83.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgenMe36pZKCxSwwbibbrgVN1YlIOeFqRAtfaYrDIM6icibNTCwwYrzrXrKSK7jvO1UrCTvedaOVicaklZg/640?wx_fmt=png)
+![图片](../../.resource/remote/cb5b21a00aabf28d723e6f693c7c4084d2829bef896913594137092a212ec524.png)
 
 DNSLOG 收到回显
 
@@ -121,7 +121,7 @@ https://www.vmware.com/security/advisories/VMSA-2021-0028.html
 
 **EDI 安全**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/rJALXSMzgenMe36pZKCxSwwbibbrgVN1YK8ictr3oIeIVT9wUwjW9PdzS7dWDDaHBdQTeI73skSZJ5Vao8SF47Pg/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/e8b0568005557e1391f7eab5821ee0206ef88107813a1e6bcdb68d1269f259ea.jpg)
 
 **扫二维码｜关注我们**
 

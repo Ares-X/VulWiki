@@ -66,7 +66,7 @@ schema_version: "1"
 
 一般的编译过程如下图所示
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/05/def77df2aed03a84041a8955cb555a2a.png)
+![](../../.resource/remote/956b82ba51569dbae4fa307d3c401bdeef68daa2578246cdca84fe05dc8684bf.png)
 
 环境准备
 ----
@@ -123,13 +123,13 @@ Request Payload    Status Error  Timeout    Length Comment
 
 ```
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/05/a61568ab99d868e38e4ab247c6f42250.png)
+![](../../.resource/remote/72b9d9844f57ee70df2262d1960ca68dae118dea1ee25bce6445200d0be8e252.png)
 
 #### 获取 Resin 生成的 Servlet.java
 
 获取到 JSP 文件的访问权限列表的同时, 某知名 OA 的目录`D:\WEAVER\ecology\WEB-INF\work\_jsp`中也生成了对应的 JSP Servlet
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/05/96c07c92efb11cf493de36b1430a594e.png)
+![](../../.resource/remote/124236333c02886c2e2ff081f9da8f74ae2f23076ccf53e16cd85feea715da0a.png)
 
 然后把`_jsp`目录复制出来, 某知名 OA 的准备过程就到这里结束了
 
@@ -2392,13 +2392,13 @@ executeSql in java\_src/\_workflowcentertreedata\_\_jsp.java:105
 
 结合前台访问响应码为 200 的 jsp 文件列表, 且直接为注入点, 不包含`二次sink`注入的注入点, 一个文件多个注入点没有去重, 共计 **160 处注入点**
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/05/45f5b07f30d683053fd37324ce7ceba2.png)
+![](../../.resource/remote/18bc45d4143e6cdc20002773951ad1bf61f8bd6b6e0b01754c0d3e002bc8cf19.png)
 
 #### 手工构造注入 EXP
 
 经过手工构造注入, 去掉`某知名OA中表不存在`, `del语句注入`, `同一个文件不同注入点`, 剩余 **48 个成功 EXP**
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/05/1173238690ced8df35b69ef8ee4f32c0.png)
+![](../../.resource/remote/febf0fd99ad2a61f4b9ff65bc6f2a71fc2bea2dc4aeef40efdaa411dcab012cd.png)
 
 PS. 由于漏洞过多, /weaver / 接口下面映射 Servlet 就没有再继续分析, 欢迎一起研究自动化代码审计
 

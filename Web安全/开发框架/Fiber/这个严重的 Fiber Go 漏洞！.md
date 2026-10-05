@@ -39,7 +39,7 @@ schema_version: "1"
 #  开发人员注意：速修复这个严重的 Fiber Go 漏洞！   
 DO SON  代码卫士   2024-02-23 18:24  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -49,13 +49,13 @@ DO SON  代码卫士   2024-02-23 18:24
 **使用 Fiber Go web 框架的开发人员应立即修复位于中间件 CORS 中的一个严重漏洞CVE-2024-25124（CVSS评分9.4）。该漏洞是因为在同步启用凭据时允许CORS 配置中出现通配符Origin (“*”) 导致的。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQezqMGSrgdqc1eU7bXLtBxpeg2iaO8y9RXRSbjTnDs4XhlGWGxpRJlG4TsfrMMeqoWEOzweHu1dSA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/df3194ea7c3e4763910b6a0f3be363440f83021479df57f413f4dd7055f65fdf.png "")  
   
   
 Fiber 是基于 Go 语言开发的快速、灵活且高性能的 web 框架，基于快速的HTTP 路由器和高性能的HTTP处理程序。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQezqMGSrgdqc1eU7bXLtBxpeg2iaO8y9RXRSbjTnDs4XhlGWGxpRJlG4TsfrMMeqoWEOzweHu1dSA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/df3194ea7c3e4763910b6a0f3be363440f83021479df57f413f4dd7055f65fdf.png "")  
   
 **权限过度的CORS**  
   
@@ -74,7 +74,7 @@ CORS 是一种重要的机制，使 web 应用能够在不同域名之间安全�
 安全公告提到，“CORS 中间件可允许不安全的配置，从而可能将应用暴露到多个与CORS关联的漏洞。具体而言，该漏洞可为通配符（“*”）设置 Access-Control-Allow-Origin 标头，同时将 Access-Control-Allow-Credentials 设置为真，这与所建议的安全最佳实践相悖。”  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQezqMGSrgdqc1eU7bXLtBxpeg2iaO8y9RXRSbjTnDs4XhlGWGxpRJlG4TsfrMMeqoWEOzweHu1dSA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/df3194ea7c3e4763910b6a0f3be363440f83021479df57f413f4dd7055f65fdf.png "")  
   
 **受影响版本**  
   
@@ -137,15 +137,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

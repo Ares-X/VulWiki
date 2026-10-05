@@ -1,0 +1,75 @@
+{
+  "base_sha": "776641f2a3bc3c5d3e83766cf990c9d7bdc8eac5",
+  "articles": 5848,
+  "changed_articles": 2244,
+  "local_image_occurrences": 18348,
+  "new_resource_files": 14074,
+  "new_resource_bytes": 2050134180,
+  "unique_target_assets": 14190,
+  "unavailable_image_occurrences": 260,
+  "unavailable_image_unique_urls": 241,
+  "image_click_links_localized": 82,
+  "image_click_links_existing_local_fallback": 29,
+  "same_image_click_links_localized": 469,
+  "literal_html_example": 1,
+  "literal_html_code_example": 1,
+  "render": {
+    "result": "PASS",
+    "articles": 5848,
+    "changed_articles": 2244,
+    "before_images": 25034,
+    "after_images": 24781,
+    "expected_after_images": 24781,
+    "existing_code_preserved": true,
+    "active_remote_images": 0,
+    "missing_local_images": 0,
+    "errors": []
+  },
+  "resource_gate": {
+    "counts": {
+      "missing": 0,
+      "zero_byte": 0,
+      "html_error_page": 0,
+      "recognized_container": 20141,
+      "unknown": 32,
+      "extension_mismatch": 32,
+      "remote_images": 0
+    },
+    "reference_review": []
+  },
+  "code_fidelity": "Each exact source edit reverses to the frozen original SHA; all existing rendered code blocks and inline code preserved. Four PHP/console excerpts fenced without altering original bytes; two existing indented snippets become visible after ending the PHP HTML block.",
+  "asset_validation": {
+    "result": "PASS",
+    "planned_assets": 14190,
+    "all_sha256_match": true,
+    "prior_decode_report": "final-asset-validation.json",
+    "additional_decoded": [
+      {
+        "path": "Web安全/.resource/remote/92d78b4f7056a9bded352208da919e4bc6ad66f780817f03fd1237d0d783fc8f.png",
+        "sha256": "92d78b4f7056a9bded352208da919e4bc6ad66f780817f03fd1237d0d783fc8f",
+        "all_frames_loaded": true,
+        "frames": 1
+      },
+      {
+        "path": "Web安全/.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png",
+        "sha256": "ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4",
+        "all_frames_loaded": true,
+        "frames": 1
+      }
+    ],
+    "full_pixel_review": false
+  },
+  "known_wechat_notice_matches": 0,
+  "tests": {
+    "python": "89 PASS (Python 3.13)",
+    "node": "38 PASS"
+  },
+  "scope": "Public static image acquisition and Markdown presentation only; no PoC, scanner or example target executed/accessed. No redaction. Raster decoding and static SVG review do not mean visual review of every image.",
+  "limitations": [
+    "260 unavailable image positions retain the complete original reference as literal text; no remote loading.",
+    "29 unavailable full-image click targets explicitly point to the already archived local preview, not an unproven original.",
+    "Remote source/article links remain references. Existing blog JavaScript/CSS CDN dependencies are outside image localization scope.",
+    "15 pre-existing render candidates and historical quality warnings remain; this is not a claim that all technical material is correct or reproduced.",
+    "No-suffix full-image links different from their preview require source/MIME review; the offline gate cannot infer content type from an arbitrary URL."
+  ]
+}

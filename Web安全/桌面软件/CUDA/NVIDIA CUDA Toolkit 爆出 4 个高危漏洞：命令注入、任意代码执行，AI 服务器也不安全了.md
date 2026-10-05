@@ -57,7 +57,7 @@ schema_version: "1"
 云梦DC
                     云梦DC  云梦安全   2026-01-28 01:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ndxZsFvkmpyCb1oHMRHa5DXukXkNPj0hmKZqQXZR6vjHDDrZQtod7iaKxEDc3CiaRwrfAqxaiaD8ApBcmCiahmWqvg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6f284ebc85400318ca479dd8aae452ecc58eb0041dce03049bfc964bb66b0b3f.png "")  
   
   
 很多人对 CUDA 的认知是——**算力核心、AI 底座、GPU 世界的“水电煤”**  

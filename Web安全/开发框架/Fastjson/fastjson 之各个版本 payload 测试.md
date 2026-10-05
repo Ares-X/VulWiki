@@ -58,7 +58,7 @@ schema_version: "1"
 
 确定 fastjson 的版本是攻击 fastjson 的第一步，很多的文章只是一笔带过，如下面这种
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXQ6gicDoic0ibYvvuytg5WYHwn0qxnnmUZwtlDic9v2oric5nfsDk2xorm4g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/62484b5becbd6c52e668184722c975beab79da1d467533bf93b5dc5ba9387605.png)
 
 没有明确到某些版本，又或者是明确了版本，但是可能不是正确的，导致基础比较薄弱的师傅对 fastjson 的利用较为困难，实际上 fastjson 并不是只能命令执行，在某些版本中还可以文件读取、ssrf 等等。本篇文章记录下常见的 payload 对于一些版本的判断测试
 
@@ -77,7 +77,7 @@ find . -name "*.jar" -type f -exec cp  {} /Users/f0ng/xxxxxx/ \;
 
 测试涵盖 fastjson1 所有版本
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX0iaNWc5TRMNvY6bnngNakNUUI8wEA4xnmfwXzorbNoOBmGMq8MdTYfw/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXJZNKEWG4OGWANfNOfKNE8Yy7MWIoHRF5T8rdRop5Fv0PAz2icw4gX1A/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/fd85f48f0e311fdafbc3ccccd33703cc1945b03ba3bc6b5fe54d8f1af0b5b267.png)![](../../.resource/remote/75eff61ce50dba0da583df4ea086c2879f53803e8df422abfdffb1360b0de204.png)
 
 测试版本如下：
 
@@ -361,11 +361,11 @@ dnslog 的 payload 流程如上，其他类型，如报错、回显这种也类�
 
 测试的时候，在响应头可以看到相应的 fastjson 版本
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXpDjKxSnIjDAjic2ic186314P5op3XMZYmVicgic7KibQCdnwTx8btvG7kQQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/4e650e91bb2a8d76b3b127d4180934acfbb4b5cd1ae802dae9a679efa9a71adc.png)
 
 在响应平台获取到相应记录
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXfhz2zXnsiaWVnt93K1rRUZqMriblvw5M6ZRsUJibhWAaMGK741MuPwniaw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/12475d99033e426d3b8c48cc07abb1fc210fac588c1fe4dd088ea7c61f5b4463.png)
 
 0x03 判断版本 payload
 -----------------
@@ -382,7 +382,7 @@ dnslog 的 payload 流程如上，其他类型，如报错、回显这种也类�
 
 经测试，可用范围`1.2.37-1.2.83`，即 fastjson 版本 >=1.2.37
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXsFXBibicf0Wxd35oHIMe3bg2A0mdWAOEs9YibmznJnjb9dOibDVNSU7U9w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6380f2757e8bc4ccdd426aa4a208a6052f4cfb6364285d9f3da2ca9b509ae583.png)
 
 #### payload 2(dns 请求)【fastjson>=1.2.37】
 
@@ -394,7 +394,7 @@ dnslog 的 payload 流程如上，其他类型，如报错、回显这种也类�
 
 经测试，可用范围`1.2.37`-`1.2.83`，即 fastjson 版本 >=1.2.37
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXrTH995VZtrfDuaPxEmdyQygZHGHGLGePr4ZzD6n8XRicwDXvBUZNJrA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/434e671aa34a1cc1cffd2b9d8989492ee246a25683945463c2788561745c89a8.png)
 
 #### payload 3(dns 请求)【fastjson>=1.2.9】
 
@@ -406,7 +406,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}]
 
 经测试，可用范围`1.2.9`-`1.2.83`，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXdWial9MISQZtgmmn6z13ZCh3fnVOf3cibc6yL2Zzic1R3HzdJ33vHBfng/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0f3f3a1d6bf9c1ac7e08c95faa742456912dbc20db5e76a42bc6e66b5aa244e6.png)
 
 #### payload 4(dns 请求)【fastjson>=1.2.9】
 
@@ -418,7 +418,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`-`1.2.83`，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXcRLQ6v0OwMAPd7UDvzELlbQuW1etgamwWcSS2ubS5sadDUqHQyhs2w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/45904961527a178883b4440c49f281726d256f8655cd078228fb42e65c9c0ee0.png)
 
 #### payload 5(dns 请求)【1.2.9<=fastjson<=1.2.47】
 
@@ -430,7 +430,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.47`以下，`1.2.9`以上，即 1.2.9<=fastjson 版本 <=1.2.47
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX00WyrE0GMcibzxdlbiciaG94LZNbbv2oXAdEyMKwibz9mibL9zcm0KhFjGg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5a84841ff27eb715cfbb6cb0cf4ea3b224e5dd0cbe94d20ca6d0867699e71c4c.png)
 
 #### payload 6(dns 请求)【fastjson>=1.2.9】
 
@@ -442,7 +442,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`以上，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXcZ568picjNH4UCQmiaNjrVToXT6bgqBHXepg1AzRg2EwliaqTsD0CmVUQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/453352e28a6b1adf615155d8cd374776c19702b81cff97be709343ed6e75a008.png)
 
 #### payload 7(http 请求)【1.2.37<=fastjson<=1.2.68】
 
@@ -454,7 +454,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.68`以下，`1.2.37`以上，即 1.2.37<=fastjson 版本 <=1.2.68
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXVGE958A9YyX9deJCZ8rOkCRsYAR6ZEaDT2R38v4G927sicQibYqNfEPg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c38c1289f72de60d28a6a20f94def529a6bceaf74287d09823289f413f01bba1.png)
 
 #### payload 8(dns 请求)【fastjson>=1.2.9 以及 fastjson=1.2.83】
 
@@ -466,11 +466,11 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，带有 83 的 dnslog 记录只会在`fastjson 1.2.83`中出现
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX5gXlX6jOOfRVBXDBwZcdA2GWzphJvYk1Edj0ic10J7yRlmtrYCvSOTg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/72a700d274496f4b38d67b238a9edbbcb76c9faff3808ce02765f429c9dab638.png)
 
 带有 80 的 dnslog 记录，可用范围`1.2.9`以上
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXoPhkfmUaFRaEBVAKL7oRKiaxSZEXNyuxpiaoQGXDWNRO0lwzBfpDrkWQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a36df407f02e47d32b82c640c8154f44f5f81994000554e3ffcb1e4f74fe0d10.png)
 
 #### payload 9(dns 请求)【1.2.9<=fastjson<=1.2.68】
 
@@ -482,7 +482,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`以上，`1.2.68`以下，即 1.2.9<=fastjson 版本 <=1.2.68
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXQwSKgx5Q2OMg37OfHr9g2keGa0sJUCzRrcN9cmrIJpdvLzp9j57oIg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6d6e6f23d7a65d8098c1e3cd2e9105ce6b08333f7bad3d17cc629e27b6edda53.png)
 
 #### payload 10(dns 请求)【1.2.9<=fastjson<=1.2.47】
 
@@ -494,7 +494,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`以上，`1.2.47`以下，即 1.2.9<=fastjson 版本 <=1.2.47
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX6jrkTpV81arQqcdPM05fQL8zk4tevHXicPg3icYyb0foZGEQianZGHZMQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/e5427de83aa887505c420744fed88af9b027b3ccbdb0ec2cf7a0b81e23452b55.png)
 
 #### payload 11(dns 请求)【fastjson>=1.2.9】
 
@@ -510,7 +510,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`以上，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXL6bqciayibaa6cslk44Aj7uXPpBwnMOyLZ0aE8h01b8EY0kmy1V7y4lg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0ba335ae36973b578675c339c0fcf013789e2feda6020c4836200a9a44dc3f2b.png)
 
 #### payload 12(dns 请求)【fastjson>=1.2.9】
 
@@ -522,7 +522,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`以上，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXzjTg9Ynvznl2ib7c05PxISsXcLL5hX40IvrhT5usg5t163YVA26K1VQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/21b5d6841f0585b22b1656d823ed4f7398af0d2fac3f99fc8ad8e5285db57be0.png)
 
 #### payload 13(dns 请求)【1.2.9<=fastjson<=1.2.24 以及 1.2.40<=fastjson<=1.2.47】
 
@@ -534,7 +534,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，可用范围`1.2.9`以上，`1.2.24`以下或者`1.2.40`以上，`1.2.47`以下，即`1.2.9<=fastjson版本<=1.2.24`或者`1.2.40<=fastjson版本<=1.2.47`
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXuqGk3fibStibj2ajJwTAjDlhmic7AgYZrauh7ZMOIWrlIViaSPU7pxn02g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/55fe0b2b40cb99716ceb7eba33a1499df016c9df54a50f6215df46b4c54a90a9.png)
 
 #### payload 14(报错)【fastjson<=1.2.24 以及 fastjson=1.2.83】
 
@@ -546,7 +546,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，在 fastjson<=1.2.24 以及 fastjson=1.2.83 的时候不会报错，其余均报错
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXRHZwV1zCLQgCu6I1gzdxC76LJeMxQMiaP35Ww2SKlqWMdQC5kMcVP3w/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX6iczmko28SxSA08Q7Hl8lT4CRnPLXL5CykB53aZhs8vGqtsBAsY02cw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/bf2ba013fefc3db01e571d1d7ad91d011be310e3c029a05fd8d71dc07399f4ec.png)![](../../.resource/remote/fc67b35f0fda61b189c08c2c689510394d63d9c05b13fdf6b6fa202cb69fdc69.png)
 
 #### payload 15(报错)【fastjson<=1.2.68】
 
@@ -558,7 +558,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，在 fastjson<=1.2.68 的时候不会报错，其余均报错
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXNhkhHUE2ic9vsicRCvMtDcfzqjH9JePOOvZgCX84BhY8Ubpcia5iaGpYJw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/87ec09448394cdc35987026cb271efae48af08d2382d75f1397fa44cd699aac2.png)
 
 #### payload 16(报错) 【1.2.9<=fastjson<=1.2.47】
 
@@ -570,7 +570,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，在 1.2.9<=fastjson<=1.2.47 的时候不会报错，其余均报错
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXWqKcn4LEnoFVo58jC9Xpiap8pDZZsDribWWdmKg5m3iatRaCZZibiaZQUqA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/40becb9d2507794368497fa7a08bd8cd9cc900b30e7d297b17d186060843ce8a.png)
 
 #### payload 17(报错) 【fastjson<=1.2.47】
 
@@ -582,7 +582,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 经测试，在 fastjson<=1.2.47 的时候不会报错，其余均报错
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX4ltIH59UQaibA3k81uaVq6OicLIsrcxX7GlYTpPo3jBqJPib8anCdIBxQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c6abce8fa969eeb3ad0a03230fa8d81e97601a0ad3feab677201f08167cac0b5.png)
 
 0x04 判断 bypass 字符
 -----------------
@@ -595,7 +595,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 `com.alibaba.fastjson.parser.JSONLexerBase`代码
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsX2oaAmlfDHUKAK5To7BwEAiap3DWnq8y2rwYLLKJB2TsPPRq3fEVlyQg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/cc70930844496437eb7cc870185d3da28b3d945363d323f29982ef8b0f79e3d4.png)
 
 `\r`即为十六进制的 0x0d`\n`即为十六进制的 0x0a`\t`即为十六进制的 0x09`\a`即为十六进制的 0x07`\b`即为十六进制的 0x08`\f`即为十六进制的 0x0c 0x0b
 
@@ -603,11 +603,11 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 
 payload 如下
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXoXOlb4g7TUuCczENZibIQJSyFIqiabMb0765ADVWp7HOW6F1ymvcRk1g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/117755c878fe39b057619abd6833ae476a5f48be157ba582bc9176e3edf5e3ba.png)
 
 经测试，可用范围`1.2.9`以上，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXUeZvq9A6BlqUM7TZVqXMicLl6jwOowU7LRDZRAVd1oOpLOmibgvS47VA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/316a2c79e95de53861b2758debfef163ae6f097689e4979e472d9b4657c30bf9.png)
 
 特殊字符的 base64 编码为`DQoJDAsHDA==`
 
@@ -615,21 +615,21 @@ payload 如下
 
 这里经过测试，如果把字符串中的`0x07`以及`0x0b`去除，可以加在`"@type":"java.net.InetSocketAddress"`不影响 json 的解析，反之，则会造成 500 错误
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXhA1Yst7t4yF5yRftibMxVTMEyppEzEEDGqJkHDNSibGP4FwUKcrMXUOQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b851ca80c4a8335a91a5f1fc996679df97ed026738a5744358e6801471fe9b4d.png)
 
 即以下 payload 是可以发出请求的
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXFqgqHt48HhagcbcBBlmDIlf6KoL8vdQxrjBLFIT8SKMicibIttNMFW3g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/7ea22adfb213446e9cc5624f2ccf0b1de7e5b1f5a8a5b33fa60bfe325e8b4049.png)
 
 base64 编码为`ew0KCQwMIkB0eXBlIg0KCQwMOg0KCQwMImphdmEubmV0LkluZXRTb2NrZXRBZGRyZXNzIg0KCQwLBwx7DQoJDAsHDCJhZGRyZXNzIg0KCQwLBww6DQoJDAsHDCwNCgkMCwcMInZhbCINCgkMCwcMOg0KCQwLBwwiMjIyMjIubmxuMC5jYWxsYmFjay5yZWQifX0=`
 
 经测试，可用范围`1.2.9`以上，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXcgfNjMiacGicsmRIgYnJI2nktx82AlW4iamicYZuEsZoFbn4teJ8GMzbJA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/cee9343175a54915855f2fb8eee736d159a4af823d4c8c71be991451d9bf5970.png)
 
 另外也可以这样使用，每个字符加`\r\n`进行换行，其他字符不行
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXxPiayO6vGPE4K3ibm290vlszS6DhRl3gQibwkybhAicM5Jqqe96EUia7PKA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a52de2a821145e29e8354abd945a3113cf3454da4b19db5571f7a22d9cff3f9f.png)
 
 ##### 结论
 
@@ -660,7 +660,7 @@ base64 编码为`ew0KCQwMIkB0eXBlIg0KCQwMOg0KCQwMImphdmEubmV0LkluZXRTb2NrZXRBZGR
 
 经测试，可用范围`1.2.9`以上，即 fastjson 版本 >=1.2.9
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXW03437gQOsyterfaNu5V7AadAyKSA9QjMM3zibAsK9xsGeV1LelQ9zw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9e788766a714e69863c1ec80f78a3fbba905e1c5a2d278451186abe79224580e.png)
 
 使用另一个 payload
 
@@ -679,7 +679,7 @@ base64 编码为`ew0KCQwMIkB0eXBlIg0KCQwMOg0KCQwMImphdmEubmV0LkluZXRTb2NrZXRBZGR
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXd3A9pK6XfHIibiaCrne8SJAHkiaufHosaFDd0MD5HvSBnicVcJhVSvlCiaQ/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXoPhkfmUaFRaEBVAKL7oRKiaxSZEXNyuxpiaoQGXDWNRO0lwzBfpDrkWQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0dcf9ed0f754fd9ae7224e94a76e23fae03e9446a83512ed379e59d3dae60ec5.png)![](../../.resource/remote/a36df407f02e47d32b82c640c8154f44f5f81994000554e3ffcb1e4f74fe0d10.png)
 
 #### payload n
 
@@ -694,19 +694,19 @@ base64 编码为`ew0KCQwMIkB0eXBlIg0KCQwMOg0KCQwMImphdmEubmV0LkluZXRTb2NrZXRBZGR
 
 得益于以上 payload 的版本范围从而可以对工具进行版本的修改，这里简单修改了 a1phaboy 师傅的工具`https://github.com/a1phaboy/FastjsonScan`测试截图如下 (在无法报错获取版本号的前提下)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXVAU0sOUfBkKNictFZvibaaR9u2LhqUyGt5gx3E6RUxwylsY6SHYlB4Tw/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXbyJa64v8QQaNz0ibgqicfRzNFfYQ5zIYywSNnLbXicQ9UdR0dNxDF27Tg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/4d37146bd2ca26cf6bf3a639132b6e7d58e716aad27baa4ad26a11ba72e53cb6.png)![](../../.resource/remote/4ece8c32990dd58281e0cddff65fa88490b6fee7f78ab21a70afe8c061db9969.png)
 
 大于等于 1.2.47 小于等于 1.2.68，调用的为 1.2.68，满足条件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXeTvGyMSbF6elQmkDLrSv4kVsoVAlJaYQwthTOqnibOKY6UuE6vECaPA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/d2437b8b9c396e610e2970a2499e7b6ae80580e099e521fe58b8b06851c73d70.png)
 
 大于等于 1.2.9 小于等于 1.2.37，调用的为 1.2.28，满足条件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXXGNANKXwIXibdiaVhJGTWv2L2rOS0iaX2BVkupVGeST2aGmnabNwoBbCQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2de2bd0974f4a7c08ad1f5698b010af0c5a41f7ceee3f945c6f28be2b153e749.png)
 
 大于等于 1.2.68，调用的为 1.2.80，满足条件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXLqhxVpPzITWhL7FSzaEibjAhKGQLU0re5iak707BnmhbGicawDQJtgOCg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b4a1006ca0c17549cfadd87e379fb54abdacf68988bb1c9ab6ee53dc345d3ba5.png)
 
 调用的为 1.2.83，满足条件
 
@@ -716,15 +716,15 @@ base64 编码为`ew0KCQwMIkB0eXBlIg0KCQwMOg0KCQwMImphdmEubmV0LkluZXRTb2NrZXRBZGR
 
 poc2jar 中也集成了大致判断的判断
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXkqItd4ziaPbrLyo0iadLpxiaZothWickliadNhtWD246nibsJsKQo9veMJuA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5838f94bb02bb3ae5ed815fe670e27532b987c289a7b255cec0ee3a10461b838.png)
 
 复制 payload 到 intruder 中，进行爆破
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXRQS0McFf9mpdkicDJA3niamqEvaAeFT1pjXTXibjvDa6ictZ49Y5vaKqRw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/031c06cbada41b34c862a2462a3c0b5ab59ed3e2648679d32e6675a04c474e43.png)
 
 根据结果大致判断为大于 9 小于 47[`大于9小于24或者大于40小于47`]，发现结果中没有 dayu37xiaoyu68，故 fastjson 版本为大于 9 小于 24，排除 37-47 的可能，调用的版本为 1.2.24，满足条件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FYb6AdABfia3ByAa0zEAJLFpEfKvFSSsXljeXDiaXmHoFAoEKUODQicDUETW1HiclrEReOYBxyqaMcvsxlRTMfyqicA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9cd66547566077eabd1d9865aad832bebb8bca4a0e71c76009fdf384a051e143.png)
 
 0x06 总结
 -------

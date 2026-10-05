@@ -64,7 +64,7 @@ source_status: "recorded"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/c6ff40606cbd18af8a21e897fbb4d679ead807ada4a3086c860337a906fdac66.webp)
 
   
 
@@ -74,7 +74,7 @@ source_status: "recorded"
 
 **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/c6ff40606cbd18af8a21e897fbb4d679ead807ada4a3086c860337a906fdac66.webp)
 
   
 
@@ -85,7 +85,7 @@ source_status: "recorded"
 
 该平台存在 **Fastjson** 远程命令执行漏洞，攻击者可通过构造恶意 Payload 执行并获取服务器系统权限以及敏感数据信息。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/c6ff40606cbd18af8a21e897fbb4d679ead807ada4a3086c860337a906fdac66.webp)
 
   
 
@@ -95,7 +95,7 @@ source_status: "recorded"
 
 HIKVISION - 综合安防管理平台
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/c6ff40606cbd18af8a21e897fbb4d679ead807ada4a3086c860337a906fdac66.webp)
 
   
 
@@ -105,7 +105,7 @@ HIKVISION - 综合安防管理平台
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBnHyLw2NRtyfdglib2BRw4m72bXCBgWFo8EOHJf8hnQ5jXUQoWfwOgNiaDp0EQyEc0UttVza3zV1qA/640?wx_fmt=other&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/ace81546d17c43d9b9e1b77106a21a274d76a1189adae36b14b7fad1e6aac4b1.webp)
 
 2. 对漏洞进行复现
 
@@ -130,7 +130,7 @@ Connection: close
 
 POST 请求，测试 dnslog 漏洞存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDfkHu68PsRXVH2R7jUbAPcbyMRxzl2pTH6I9IfOTibwgHEbTDVK1d4RKPHiaf3t2EeEHPReWV67UeQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6daccd7fcfba33bba6f99ade7b931eea2afb35683e873e7938f4c662ee969823.png)
 
 3. 反弹 shell 参考这篇文章。
 
@@ -146,7 +146,7 @@ POST 请求，测试 dnslog 漏洞存在
 > 
 > 天幕安全实验室，公众号：弥天安全实验室[【优质软文】浅析 Fastjson 场景下 Java Bcel 字节码实践应用](https://mp.weixin.qq.com/s/WoXW2bz0rsN0vS2GNvujuQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/c6ff40606cbd18af8a21e897fbb4d679ead807ada4a3086c860337a906fdac66.webp)
 
   
 
@@ -167,7 +167,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp) 
+![](../../.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -183,7 +183,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/ca8612398fdf4cb384f817ebbd6cff35443d4ecd25aea6aac99e077498873a06.webp)
 
 ---
 

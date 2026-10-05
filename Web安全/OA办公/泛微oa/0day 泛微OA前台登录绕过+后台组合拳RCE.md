@@ -46,7 +46,7 @@ schema_version: "1"
 
 原创 XingYue404  星悦安全   2025-07-01 11:38  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/lSQtsngIibibSOeF8DNKNAC3a6kgvhmWqvoQdibCCk028HCpd5q1pEeFjIhicyia0IcY7f2G9fpqaUm6ATDQuZZ05yw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/a1e5fc8e9cb802709e046b5e5c431d484839d8ece47637b62553d23860ae50a9.webp "")  
   
 点击上方  
 蓝字  
@@ -60,7 +60,7 @@ POST /dwr/call/plaincall/?callCount=1&c0-id=1&c0-scriptName=WorkflowSubwfSetUtil
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5ceGLwibV7eibnrbLN1s9VOtTUMFUFw5wm7jEQPWogeciaf1KLHCTIGRUiaAeyDOQmIhQIrqMQ5JjyZ0A/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/85af2dd59941c97580fe829981963cfd513984c393d0026376c5391a6c63974c.jpg "")  
   
 其中security.key为 5f2f28dd-db4a-45  
 #### 调用aes加密函数  
@@ -70,7 +70,7 @@ import java.security.SecureRandom;import javax.crypto.Cipher;import javax.crypto
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5ceGLwibV7eibnrbLN1s9VOtTmMywj3iayQJ2T19WpBv1vMxXicuLMSnB8INMG1iaK11gEdxovtcCorDicw/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/a43e496449ecf946955fbdc76f377bdcb920bccc905300a9979987f82c9d102e.jpg "")  
   
 获取到密钥，即为下面需要用到的mToken  
   
@@ -127,7 +127,7 @@ POST /interface/outter/outter_encryptclassOperation.jsp?a=1.swf HTTP/1.1Host: xx
   
 ****  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5ceGLwibV7eibnrbLN1s9VOtT4NX6MHrjbWnvSExFrJ1gIXIquQhUx0besS8XoGU1l7vWDs0icUic3l2g/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/a800e46743eb369536deefc44268e3e729ebf4a6e52c1e6e0ce2d1e94dccfb70.jpg "")  
   
 ****  
 **免责声明:文章中涉及的程序(方法)可能带有攻击性，仅供安全研究与教学之用，读者将其信息做其他用途，由读者承担全部法律及连带责任，文章作者和本公众号不承担任何法律及连带责任，望周知！！!**  

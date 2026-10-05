@@ -51,7 +51,7 @@ source_status: "unknown"
 Lawrence Abrams
                     Lawrence Abrams  代码卫士   2026-01-23 10:36  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -83,13 +83,13 @@ Lawrence Abrams
   
 虽然该漏洞的CVSS 评分为8.2，但由于利用该漏洞可获得服务器的根访问权限，思科将其研判为“严重”级别。思科已发布软件更新和修复文件修复该漏洞，涵盖Unified CM、Unified CM SME、Unified CM IM & Presence、思科 Unity Connection和 Webex Calling Dedicated Instance。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMS78Rq3GiaAMZce95JhZO3ENaTAhrZpibWZwDo8fz9fcGqgYibdlUJIsNDb9JQaJxOR9eibX8mNzcdn0w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7856e2b06846cb183875a557e2a35ddbbb5e197039b0bd72afefe7c64671b8e3.png "")  
   
                                              
   
 Cisco Unity Connection 发布：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMS78Rq3GiaAMZce95JhZO3ENhL9kkCNUcypITcAK1uxOObicvHTnptdqibmIRvUd5FdPXN8gTf1Ngic6w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/03ede3e30db65694aed89bef87ba71ebb16f7e19c22ada87f936c25994201700.png "")  
   
   
 思科表示补丁对应不同的版本，因此在应用补丁前应先查看 README 文件。思科产品安全事件响应团队已证实称该漏洞已遭在野利用，因此督促客户尽快更新至最新软件版本。另外，思科提到不存在缓解该漏洞的应变措施，因此须立即安装更新。  
@@ -147,15 +147,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

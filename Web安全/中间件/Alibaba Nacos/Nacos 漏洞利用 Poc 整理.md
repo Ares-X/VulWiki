@@ -60,7 +60,7 @@ schema_version: "1"
 
 默认账号密码都是`nacos`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/FslaC6a9w4PPLPmd3CKGuF0YLxl1H6CEF3z7hIreRkbTTghPXWlPTeia8bkXCqPF0OeX56dn4BRpYCMY8KcdPxg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/f8c7c4261a6c2b718327a4104e8ad5211e4c70abb8189a8619c8a5a268937b52.png)
 
 未授权访问
 -----
@@ -89,7 +89,7 @@ nacos <=2.2.0
 
 JWT 设置 Header 为 HS256，payload 中 exp 为较大时间戳（比如当前时间 + 5 小时后的时间）unix 时间戳转换的结果，签名就是用前面的 key 并且 base64 编码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/FslaC6a9w4PPLPmd3CKGuF0YLxl1H6CEdRPjPFXSYlxbD8rZmf7qaDGEnFYF0FE63l9Tep9JfSJkuUf0uEVcyg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/81f92c2187ca6995c5f292cbb75260fb5f325844adaccb5073ba90ee3d66b28e.png)
 
 获得登录的 JSESSIONID：
 

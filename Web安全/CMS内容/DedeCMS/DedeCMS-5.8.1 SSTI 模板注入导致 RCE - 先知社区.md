@@ -65,14 +65,14 @@ SSTI RCE
 #### 环境搭建
 
 这里使用 phpstudy 来搭建环境  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112140741-d838e004-437e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112140741-d838e004-437e-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112140800-e388a78c-437e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112140800-e388a78c-437e-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112140813-eb968fa2-437e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112140813-eb968fa2-437e-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112140826-f2f8a834-437e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112140826-f2f8a834-437e-1.png)  
+[![](../../.resource/remote/c102920e5f1bc43723da94d828cabdef77f9ba6fab8fc8324d1713df2437fe20.png)](../../.resource/remote/c102920e5f1bc43723da94d828cabdef77f9ba6fab8fc8324d1713df2437fe20.png)  
+[![](../../.resource/remote/c6ecec0a2a7d2f65499299d942204fac805fd2080f12013e0a88335dc54de21e.png)](../../.resource/remote/c6ecec0a2a7d2f65499299d942204fac805fd2080f12013e0a88335dc54de21e.png)  
+[![](../../.resource/remote/d6d7007f3b1b15b6d804da94170cc96ea3fc139410a09e9b72f43003a08e033c.png)](../../.resource/remote/d6d7007f3b1b15b6d804da94170cc96ea3fc139410a09e9b72f43003a08e033c.png)  
+[![](../../.resource/remote/c8ca5128f17c47fe5b91e7a8851c2fc8f50e6551649ee32c6d814f8266ee1601.png)](../../.resource/remote/c8ca5128f17c47fe5b91e7a8851c2fc8f50e6551649ee32c6d814f8266ee1601.png)  
 网站前台：[http://192.168.59.1/index.php?upcache=1](http://192.168.59.1/index.php?upcache=1)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112140849-00eb8330-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112140849-00eb8330-437f-1.png)  
+[![](../../.resource/remote/c219c9f3672acd445ce14e93fc500a5db0177948c7e282414fb40873158ac665.png)](../../.resource/remote/c219c9f3672acd445ce14e93fc500a5db0177948c7e282414fb40873158ac665.png)  
 网站后台： [http://192.168.59.1/dede/login.php?gotopa](http://192.168.59.1/dede/login.php?gotopa)...  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112140911-0def0106-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112140911-0def0106-437f-1.png)
+[![](../../.resource/remote/a0c5dcfc6751e7c4d9eafaba7f2b4c47c8ad94e2a4a70d0131a721c0fd9a3b6d.png)](../../.resource/remote/a0c5dcfc6751e7c4d9eafaba7f2b4c47c8ad94e2a4a70d0131a721c0fd9a3b6d.png)
 
 #### 漏洞利用
 
@@ -89,7 +89,7 @@ Cookie: PHPSESSID=rh4vs9n0m1ihpuguuok4oinerr; _csrf_name_26859a31=736abb4d994bae
 Connection: close
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141007-2f127a8e-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141007-2f127a8e-437f-1.png)  
+[![](../../.resource/remote/d284e48030568cbffbd735710d93ea12cb0d5bcf76c5237e152cba91ddd1311d.png)](../../.resource/remote/d284e48030568cbffbd735710d93ea12cb0d5bcf76c5237e152cba91ddd1311d.png)  
 类似的 URL 还有：
 
 ```
@@ -102,12 +102,12 @@ Connection: close
 /plus/recommend.php
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141044-4546c33c-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141044-4546c33c-437f-1.png)
+[![](../../.resource/remote/56c4d9ff5553dbd068e3ac3bc31c51267645de436e6b19cfc823a5c98f8d4df2.png)](../../.resource/remote/56c4d9ff5553dbd068e3ac3bc31c51267645de436e6b19cfc823a5c98f8d4df2.png)
 
 ### 漏洞分析
 
 漏洞入口位于 plus/flink.php 文件中，在该文件中如果我们传入的 dopost 值为 save 且未传递验证码时，紧接着会去调用 ShowMsg 函数：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141127-5f36f8ac-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141127-5f36f8ac-437f-1.png)  
+[![](../../.resource/remote/8cf5127db9b8c6b020955a12656224ee12d61875620316b76359ad955f6b3a86.png)](../../.resource/remote/8cf5127db9b8c6b020955a12656224ee12d61875620316b76359ad955f6b3a86.png)  
 之后跟踪进入到 include/common.func.php 文件中的 ShowMsg() 函数内
 
 ```
@@ -210,7 +210,7 @@ function ShowMsg($msg, $gourl, $onlymsg = 0, $limittime = 0)
 ```
 
 在这里我们可以看到如果 $gourl 被设置为 - 1(间接可控)，则攻击者可以通过 HTTP_REFERER 控制 $gourl 处变量的值，而该变量未经过滤直接赋值给变量 $gourl，之后经过一系列的操作之后将 $gourl 与 html 代码拼接处理后转而调用 $tpl->LoadString 进行页面渲染操作，之后跟进 LoadString 可以看到此处的 sourceString 变量直接由 $str 赋值过来，该变量攻击者可控，之后将其进行一次 md5 计算，然后设置缓存文件和缓存配置文件名，缓存文件位于 data\tplcache 目录，之后调用 ParserTemplate 对文件进行解析：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141229-84372f96-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141229-84372f96-437f-1.png)  
+[![](../../.resource/remote/4f543a10c2064b7e8edbee34e893708d10a6d86856c38f0ce98f06c97a70079e.png)](../../.resource/remote/4f543a10c2064b7e8edbee34e893708d10a6d86856c38f0ce98f06c97a70079e.png)  
 ParserTemplate 如下：
 
 ```
@@ -379,13 +379,13 @@ ParserTemplate 如下：
 ```
 
 之后返回上一级，在这里会紧接着调用 Display 函数对解析结果进行展示，在这里会调用 WriteCache 函数  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141311-9d337180-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141311-9d337180-437f-1.png)  
+[![](../../.resource/remote/05df89e8ee9892b61e88d858b2ab1f865d3f8e309d4760ba57fc2e405fb88091.png)](../../.resource/remote/05df89e8ee9892b61e88d858b2ab1f865d3f8e309d4760ba57fc2e405fb88091.png)  
 在 WriteCache 函数中写入缓存文件：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141352-b592e76a-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141352-b592e76a-437f-1.png)  
+[![](../../.resource/remote/9e0661d317d79505b2f42dc71b9cfde16b475d9f92e9517976d17e6c773909fb.png)](../../.resource/remote/9e0661d317d79505b2f42dc71b9cfde16b475d9f92e9517976d17e6c773909fb.png)  
 在这里使用 GetResult 返回值 sourceString 来设置 $result 变量，该变量包含攻击者控制的输入数据：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141428-caf43604-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141428-caf43604-437f-1.png)  
+[![](../../.resource/remote/fc2d0a60e11a84435c84a7d761e9c481ea479863a1720b78857ef2cacf261291.png)](../../.resource/remote/fc2d0a60e11a84435c84a7d761e9c481ea479863a1720b78857ef2cacf261291.png)  
 之后调用 CheckDisabledFunctions 函数进行检查操作，该函数主要用于检查是否存在被禁止的函数，然后通过 token_get_all_nl 函数获取输入，然而处理时并没有过滤双引号，存在被绕过的风险，攻击者可以通过将恶意 PHP 写到临时文件，之后在 Display 函数处通过 include $tpl->CacheFile() 将恶意临时文件包含进来从而实现远程代码执行：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211112141523-ebb1a05c-437f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211112141523-ebb1a05c-437f-1.png)
+[![](../../.resource/remote/d120f9bbfb40cd27f0d8d74543d9510d6a07bbf12bc0bb7b8320b86078919e01.png)](../../.resource/remote/d120f9bbfb40cd27f0d8d74543d9510d6a07bbf12bc0bb7b8320b86078919e01.png)
 
 ### 安全建议
 

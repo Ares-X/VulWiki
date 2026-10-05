@@ -51,7 +51,7 @@ source_status: "unknown"
 胡金鱼
                     胡金鱼  嘶吼专业版   2026-02-28 06:04  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 思科发布安全预警，称其 Cisco Catalyst SD-WAN 存在一处编号为 CVE-2026-20127 的严重认证绕过漏洞，该漏洞已在零日攻击中被主动利用，攻击者可远程攻陷控制器，并在目标网络中添加恶意非法对等节点。  
   
@@ -151,9 +151,9 @@ CISA 排查指南要求机构收集取证数据（包括管理员核心转储、
 参考及来源：  
 https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fHEm7hZn9HLuMcYNy1JicgdJIabD2E7VK3CiaHMiapibwicrRicKeo6l3F6erhUfHFrTLic5pawLrYPCpVlFPZ0WWYicRgpGNMeh1FVg23KZSXkBeww/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/fHEm7hZn9HLypjI9eicgf8H4qB0G2vb9ib3icibXxKkjqBTKxShthCTXCHVFlTo5OrHpe3oMAuB2UAJk0whrTENfUIbYSldvAGwQMUiaQKAQiaK68/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
   
 

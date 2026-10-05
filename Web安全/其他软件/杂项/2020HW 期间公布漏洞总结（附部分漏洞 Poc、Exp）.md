@@ -68,7 +68,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/bz\_prNH6Y3LBd3Sj7V5uFQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GzdTGmQpRic0gagSDaL6Rd0CajicXciakNbHYicsIRicZqzk64QjHiaJvEEswTZBibupRze19j7jH8W1TDic2Ypzp9jGUg/640?wx_fmt=jpeg)
+![](../../.resource/remote/c78f6b7f7eddb87bbafcf856a8e99e51cecee9efc99a174d21463d34d34fc9e4.jpg)
 
 **2020 年 HW 已结束，小编汇总了 HW 期间公布的漏洞，供各位红蓝双方安全研究使用。来自公众号：HACK 之道。**  
 
@@ -297,15 +297,15 @@ br
 
 1\. 使用 ysoserial 工具生成 payload
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0Oicx8r0SrndlJW341WghcxY8mV5GJxQSpuZblHrlwXMCGjdS7iay2ZF4g/640?wx_fmt=png)
+![](../../.resource/remote/e8c61ad3b16f81f42ce699ffc1e02bd04ca05eb0cfe67f0efad71c9a9d5591cc.png)
 
 2\. 将生成的 payload 拼接到 poc
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0OTlfk0ftMWNbtcnzmYsJoo48mFDsxLnZrFHzrOicOPKJH0gQeXp8sFxA/640?wx_fmt=png)
+![](../../.resource/remote/9d9fa6ecfb973bbd8b2a3d74078b3260c0ad638157091239fa601672a4a4bf35.png)
 
 3\. 服务器 iis 主进程中启动了 calc.exe
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0Ou4dt8xTCWTTgIdr0BE0pZ94KU1EOmlQ7B8BDOIoX3EOibAmAtHFvicHw/640?wx_fmt=png)
+![](../../.resource/remote/d354161002cdd5c5c048419453dee2fc38bb3ceaa9ca7c0a2930f65c9f6e11d1.png)
 
 pox.xml
 
@@ -327,7 +327,7 @@ br
 
 来源: https://srcincite.io/pocs/zdi-20-1051.py.txt  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0OeuZD1XBC3HsaKBFGW9evkYDmFV8MD51gSpSzwYyXGg5lCdzmDM2Wuw/640?wx_fmt=png)
+![](../../.resource/remote/8300fdb9fc5d8b32c592e98b2cc6d586f3ca42e896012ab1ed08f37e4dae751e.png)
 
 #### **07\. 泛微云桥任意文件读取升级玩法**
 
@@ -337,7 +337,7 @@ br
 
 /wxjsapi/saveYZJFile?fileName=test&downloadUrl=file:///D:/&fileExt=txt
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0O1FYsORYsoPRjZOFJuRgdZiaZWualbO4lPmfo8hwojSVqF5DaQFGn2Mg/640?wx_fmt=png)
+![](../../.resource/remote/e36a4675c19984ec8a9eee39155400ea5a30ac8a89940efa1815e085f93fb185.png)
 
 3、目录遍历 + 文件读取, 我们能做的事情就很多了, 比如读取管理员在桌面留下的密码文件、数据库配置文件、nginx 代理配置、访问日志、D 盘迅雷下载。  
 
@@ -346,7 +346,7 @@ br
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0OnSZzXWwShOshMLHPuXdPgV32XteguNibZZnHb5MWKLTDwvTot8dDjLg/640?wx_fmt=png)
+![](../../.resource/remote/4a957e39dd9cf3ee92df8d5d2153b7e26b4e1cf1de0b10b96bdb17bcb9cf8ede.png)
 
 #### **08\. 某讯云 WAF 中修改 XFF 头会导致 IP 封禁策略失效**
 
@@ -361,14 +361,14 @@ br
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0OT6nGYwBgV3Opuk2fg2ju2xncu8PGSMSrs6WxZBoS2JPFMLtO0RtibFw/640?wx_fmt=png)  
+![](../../.resource/remote/379b55f35a2eb2b8236c3b21fe8f028b4827571cc00d27133d2df9aebd693a40.png)  
 
 ```
 br
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgBpJXPyh5lWzcAlXIc7jJ0OQh68zjrJCqtByJdRqibgib3zSsMrwHz4EOkOpe7P88bHcTTWz6C3ibS3Q/640?wx_fmt=png)
+![](../../.resource/remote/a26eb2223931ce0f3bb7dee9d3ca024d2f123f0de871daecf5352e5ba0382d3f.png)
 
 #### **10.Joomla! paGO Commerce 2.5.9.0 存在 SQL 注入**
 
@@ -410,7 +410,7 @@ br
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgAgzlIUru7cQk5JOHiaDBPGGCiaL9ORaibeSqHbNOFqctmicYgp3g8Vq40d5mGAhq5tLQhAv4AXjiaH1BA/640?wx_fmt=png)
+![](../../.resource/remote/913cd12630dc6e802315b881c5da6b656148ea0d7014af4df47bc11a01b57eca.png)
 
 #### **15.TP-Link 云摄像头 NCXXX 系列存在命令注入漏洞**
 
@@ -442,7 +442,7 @@ br
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/K9JoBxX2CgAgzlIUru7cQk5JOHiaDBPGGsuNHIsjHjvQ4G7SRHjVXoiac4KwTEhmX5KzPZTfe6gSntIaPVdWiak6A/640?wx_fmt=png)
+![](../../.resource/remote/542f045c2cf70ed19ab41eae9258d5270f2b3305b6d8ff5ffce7f7d8b8fb722b.png)
 
 #### **19.fastadmin 最新版前台 getshell**
 
@@ -489,9 +489,9 @@ xml如下：<!DOCTYPE x \[     <!ENTITY % aaa SYSTEM "file:///C:/Windows/win.ini
 **关注公众号: HACK 之道**  
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GzdTGmQpRic3qL1R1NCVbY1ElanNngBlMTUKUibAUoQNQuufs7QibuMXoBHX5ibneNiasMzdthUAficktvRzexoRTXuw/640?wx_fmt=jpeg)
+![](../../.resource/remote/b99edeed31d21a7e1f077b5f0a7b8cb6d33ab827ad75cac3f9ab724087e41e44.jpg)
 
-**觉得不错点个 **“赞”**、“在看” 哦****![](https://mmbiz.qpic.cn/mmbiz_png/3k9IT3oQhT1YhlAJOGvAaVRV0ZSSnX46ibouOHe05icukBYibdJOiaOpO06ic5eb0EMW1yhjMNRe1ibu5HuNibCcrGsqw/640?wx_fmt=png)**
+**觉得不错点个 **“赞”**、“在看” 哦****![](../../.resource/remote/e42f5c183a1d72cc9e3894614ede5b2e33fc66ab7f6068a8b2ceb6056cd6f828.png)**
 
 ---
 

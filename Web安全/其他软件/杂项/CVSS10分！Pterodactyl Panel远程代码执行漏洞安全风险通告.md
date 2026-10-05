@@ -59,7 +59,7 @@ schema_version: "1"
 
 应急响应中心  亚信安全   2025-06-26 03:49  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbH0ZVtiaicJYib933Zj5hlKa5icoOicK5pd2s0xIfKC7KCjKl3qGtYYmZGFphxLtRZGABA1iamjpdNbLO4g/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/910b335a6458065a123b5445f0459f4d8dc81af9c689989162e42cebb2e4cad3.jpg "")  
   
   
 近日，亚信安全CERT监控到安全社区研究人员发布安全通告，Pterodactyl Panel 存在一个远程代码执行漏洞，编号为 CVE-2025-49132。攻击者可通过对 /locales/locale.json 端点构造包含 locale 和 namespace 参数的恶意请求，在未经身份验证的情况下执行任意代码，进而完全控制面板服务器、读取凭据并窃取敏感数据。  
@@ -117,7 +117,7 @@ TDA产品在线更新方法：登录系统-》系统管理-》系统升级-》�
 TDA产品离线升级PTN包下载链接如下：  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iczzp36h0nbH0ZVtiaicJYib933Zj5hlKa5iciao0kZHv19ribjyMguVE1eX9ydjxtjbYSCCNjwUftxpJYclBicUKzaaqA/640?wx_fmt=png "")  
+![](../../.resource/remote/0a1dbd37d3df25fedf3e4ccc389ece67d81d776d1aa740f62c36343a78816dca.png "")  
   
 详细下载地址请后台咨询  
   

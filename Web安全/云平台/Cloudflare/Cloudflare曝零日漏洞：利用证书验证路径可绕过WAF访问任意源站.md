@@ -146,27 +146,27 @@ Cloudflare中，
 漏洞根源在于Cloudflare边缘网络处理ACME HTTP-01挑战路径的逻辑缺陷。当Cloudflare为其自身管理的证书订单提供挑战令牌时，系统会禁用WAF功能以防止干扰CA验证流程。  
 然而，当请求的令牌与Cloudflare管理的证书订单不匹配时，请求竟会完全跳过WAF评估，直接转发至客户源站。这一逻辑错误使得原本狭窄的证书验证例外情况，演变为影响所有受Cloudflare保护主机的广泛安全绕过。    
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlzcdiaGO3qGxBxHttt7P99ohUupPiaNxQwrxvO6ZgS1Wr22SphKhFE6OA/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/eae19f1e903d3eac42fca6615e49616ceafed9ba47ea31e5bdb7f7df4ce53cc0.png "")  
 ## 利用细节  
   
 如下是被wafl拦截的正常页面Block page (normal request)  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlLuVaKdTPYPiaich0ongegV3kmYHoomjFib81V3eRunn3oiaAxQsYsV7oFg/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/83fcdf39afe6b4129756cbe82d0ed8aff9c3643af23ead4c4f6e81c3787562ad.png "")  
   
 在实验中，在waf中配置了拒绝一切主机名包含cf的请求  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlSP2RLKu1ZBDHwgI3Ha2RYPWqJAcczPvPtSHAbS16XPvrmGbL6pJmyA/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/7eaa2ba2ac512e0616762dfafdea51604a41c5eefc31cec02dcdd6a8dcc3e243.png "")  
   
 但是通过 /.well-known 绕过了waf的限制而直接到了源站，按照策略应该是被block的  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlpZB1CM2iaqPEicnM5KicryuNibKJqKzLoUqnpHFBfZwSJyFjBK6VK66NUQ/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/ec4956d5c1dc5aa228e5988e211823f1f6e7829a6e8bfafe6aa0a1ed347ffd4c.png "")  
 ## 如何获取一个Challenge Token  
   
     Cloudflare的SSL/TLS自定义主机名功能允许您管理指向您域名的第三方CNAME记录及其证书。我们添加了名为cf-well-known.fearsoff.org的自定义主机名，并明确选择了HTTP验证方式。下图展示了添加流程及最终呈现的"验证待处理"状态。  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlQ6iaSeyj6aHDn1g3x0Fbkmib4RJJl9cibL9AdHEVTHqI8h1QJ3qh1tsrQ/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/d9365737ecc3afe7163ae203b36dce641cdfab21ce6b616f07b593a614164ad6.png "")  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqleTrYek4Y3lyudLrial07sv5x1Dd2YZFKeKZr8NjkyCNpJA7xG2hgcfg/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/1da284c58058198e362c0539d3054fb2c8ca62e1ec96d16cd838dd7636f0c7ab.png "")  
   
     未为 cf-well-known.fearsoff.org 创建 DNS 记录，因此证书签发状态将无限期保持待处理状态。在此待处理状态下，Cloudflare 会显示验证机器人最终将请求的 HTTP‑01 网址，例如：  
   
@@ -178,11 +178,11 @@ http://cf-well-known.fearsoff.org/.well-known/acme-challenge/yMnWOcR2yv0yW-...Jm
   
 1、通过 ../../../的方式可以绕过waf做一些探测  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlqfLBdo4JsPVPtM21S0kPIOhntL8RtEmsMPElLicr3eDggY9qFtz22Hg/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/cba0443304b4529197004c4764da2912db7adff4c1a2587026091c87a16ba68f.png "")  
   
 2、通过http header设置的waf规则将会失效  
   
-![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlUy9jFX5kgSqAtZ4QBw49GBH9dDiccmZqicQlvBxCwcw823unQrVvv2vQ/640?wx_fmt=png&from=appmsg "")  
+![0](../../.resource/remote/55ef3cd89c4c0f8319a9971038e6f773441a86910c6c7e2cbc2def13b70b7d77.png "")  
 ## 官方修复方式  
   
     为缓解此问题，已发布代码变更。该变更仅允许在请求匹配主机名的有效ACME HTTP-01挑战令牌时禁用安全功能集。此时，Cloudflare将返回相应的挑战响应。也就是不是随便一个token都可以让waf失效了  

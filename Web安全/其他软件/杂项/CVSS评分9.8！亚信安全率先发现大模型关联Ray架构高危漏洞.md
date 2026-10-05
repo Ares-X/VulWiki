@@ -56,7 +56,7 @@ schema_version: "1"
 
 亚信安全  亚信安全   2025-02-18 08:18  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbF0QvDzdzMDZyINtpH6LfXIXKH3GAK74ibX2R3M9uReSPiaYe25zGwMSBHiaHOEsMEbo4CribT3NchWpQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/afeb92313f029d074ca94164ebb409fadeae8ad4a48fc6ab13cb7aed969c19a1.jpg "")  
   
   
 近日，亚信安全人工智能实验室率先发现，广泛应用的大模型分布式部署的架构Ray，存在未授权命令执行漏洞，并第一时间上报国家信息安全漏洞共享平台（CNVD-2024-47463），及通用漏洞披露平台（CVE-2024-57000）。CVE官方对该漏洞进行了通用漏洞评分系统（CVSS）评分，高达9.8分，是近年来评分最高的漏洞之一。其危害程度极高，一旦被利用可能对企业和组织造成严重危害。  
@@ -64,7 +64,7 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbF0QvDzdzMDZyINtpH6LfXIGibp6MogDnYLsD3QveribWsSyXRe2BhCibibZib4SlL8oic80u1lFAOo4GLw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/70b0fe0b73ce1b284546da25d87b2233049789e2abe59f2df614961298d0a618.jpg "")  
   
   
 Ray是一款强大且易用的分布式计算框架，在大模型高性能计算与分布式部署中扮演着关键角色。其被深度集成到 TensorFlow、PyTorch、Scikit-learn 等主流机器学习和深度学习的框架中，广泛应用于数据预处理、分布式训练、超参数调优、模型服务和强化学习等领域。  

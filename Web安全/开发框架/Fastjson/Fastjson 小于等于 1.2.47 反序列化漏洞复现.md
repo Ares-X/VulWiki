@@ -50,7 +50,7 @@ schema_version: "1"
 
 Fastjson 是一个 Java 语言编写的高性能功能完善的 JSON 库，可以将 Java 对象转换为 JSON 格式，也可以将 JSON 字符串转换为 Java 对象，在中国和美国使用较为广泛。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/aTF2J8VCBPP2c7KLM3HBc1Eu8NfVqXN3rjAib44ibuicgF203KZs60FLYic4DJK0T4p6OhibHj4ZZVfK8PFNUdSHJ4g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/f5799cd04ebb580591bbd42887f23349df39d5517432100755d880231b240b14.png)
 
 0x02 漏洞成因
 =========

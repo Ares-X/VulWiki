@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Ravie Lakshmanan  代码卫士   2025-07-17 10:57  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -58,7 +58,7 @@ Ravie Lakshmanan  代码卫士   2025-07-17 10:57
   
 **思科披露了影响ISE和ISE-PIC的一个新的CVSS满分漏洞 CVE-2025-20337，可导致攻击者以提升后的权限在底层操作系统上执行任意代码，类似于思科在上个月修复的CVE-2025-20281。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMScOXNsaicK2wtahXibianJ73Hic5e2O9GFb20xPuFFD8tMvFiad0DZ3zx2kNunziaZ8Miclhic5z7ZvcSafw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/36b36005e60183d3603e8c2d5f0b55ab066f22ab6e7dafe7c44c0fa65d02a936.png "")  
   
   
 思科在安全公告中提到，“思科 ISE 和 ISE-PIC 的一个API中存在多个漏洞，可导致未认证远程攻击者以 root 权限在底层操作系统上执行任意代码。攻击者无需任何有效凭据即可利用这些漏洞。这些漏洞是因为对用户提供的输入验证不充分导致的。攻击者可提交一个构造的API请求，利用这些漏洞。成功利用可导致攻击者获得受影响设备上的 root 权限。”  
@@ -124,15 +124,15 @@ se
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

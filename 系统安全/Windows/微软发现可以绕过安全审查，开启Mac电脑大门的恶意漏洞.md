@@ -60,7 +60,7 @@ schema_version: "1"
 **摘要：**  
 微软发现编号CVE-2022-42821的“Achilles”漏洞，能让攻击者绕过苹果Gatekeeper安全机制，而在Mac电脑上执行恶意应用程序，建议Mac电脑用户更新作业系统至macOS Monterey 12.6.2、macOS Big Sur 11.7.2及macOS Ventura 13以完成修补。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/QmbJGbR2j6yrMqPsXuHEpfoGqvSKdg9jBia1hFzbkd8kRib9jMgJVZ4vzxdvWXYzJjL6XsXhtE4aTUSavzko9Esw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1ab07f53aecf4f600f33d17e1465e8bc04af3bea4bc9397aef25e7dbc5294a2b.png "")  
   
 微软安全威胁情报小组（Microsoft Security Threat Intelligence）发现macOS有项漏洞，能让攻击者绕过Gatekeeper安全机制，而在Mac电脑上执行恶意应用程序。苹果已经释出新版macOS作业系统予以修补。  
   
@@ -68,7 +68,7 @@ schema_version: "1"
   
 微软解释，Gatekeeper会检查所有从网络下载的应用程序，确认应用程序是否具备（苹果核准的）开发人员签章以及经过苹果公证，应用程序必须通过检查才能开启，否则Gatekeeper就会封锁应用程序执行并通知使用者（如下图所示）。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/QmbJGbR2j6yrMqPsXuHEpfoGqvSKdg9jS1bicdTic0GTrzHWWTmwvCDTznXITtYYTvSQMNwFrSkDUub7dCcDXRibA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/50e5f00b778ec1f6301902ca7d294ca9cae944e0ce342d23130181c18fd58797.png "")  
   
 Gatekeeper的作业原理是检查苹果浏览器Safari在应用程序下载时赋予的扩充属性，其中com.apple.quarantine储存下载档案来源资讯，以及提供Gatekeeper处理档案的指示。  
   
@@ -86,7 +86,7 @@ Gatekeeper的作业原理是检查苹果浏览器Safari在应用程序下载时�
   
 “投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
   
   
 

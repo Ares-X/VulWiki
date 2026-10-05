@@ -43,7 +43,7 @@ schema_version: "1"
 
 你信任的  亚信安全   2024-07-02 18:31  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbF2NfmHy98qZJYyzGcqFbibbMwxr0qgT4EScyqwuCaeZMWpAUuDMXgCvvg5iaqnvRmqZpxnSa2h35Vw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/910b335a6458065a123b5445f0459f4d8dc81af9c689989162e42cebb2e4cad3.jpg "")  
   
   
 今日，亚信安全CERT监控到安全社区研究人员发布安全通告，披露了OpenSSH远程代码执行漏洞(CVE-2024-6387)。该漏洞发生在OpenSSH < 4.4p1 且未安装CVE-2006-5051/CVE-2008-4109补丁或8.5p1<= OpenSSH < 9.8p1上。  

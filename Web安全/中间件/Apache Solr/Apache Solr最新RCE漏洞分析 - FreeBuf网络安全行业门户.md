@@ -57,7 +57,7 @@ schema_version: "1"
 
 实现RCE，需要分两步，首先确认，应用开启了某个core（可以在Core Admin中查看），实例中应用开启了mycore，
 
-![img1.jpg](https://image.3001.net/images/20191101/1572572078_5dbb8bae603bd.jpg!small)
+![img1.jpg](../../.resource/remote/6e239271d796d2c33aa693c1523453fab605e59edf1a95b023eadb9a7ceb320c.jpg)
 
 然后先向其config接口发送以下json数据，
 
@@ -74,7 +74,7 @@ schema_version: "1"
 } 
 ```
 
-![img2.jpg](https://image.3001.net/images/20191101/1572572088_5dbb8bb85ca05.jpg!small)
+![img2.jpg](../../.resource/remote/b8d85123acffecaf402567727898ec0cf8488af4fb8b155dffe943371cc9630b.jpg)
 
 接着访问如下url，即可实现RCE，
 
@@ -87,41 +87,41 @@ schema_version: "1"
 
 首先去分析第一个数据包，因为是对mycore的配置，所以我们先把断点打在处理配置请求的SolrConfigHandler的handleRequestBody函数上，
 
-![img3.jpg](https://image.3001.net/images/20191101/1572572098_5dbb8bc208e20.jpg!small)
+![img3.jpg](../../.resource/remote/a2f5256860a0d7e15e09120a83a007f32d4bfcacde6c6bf52aa6296945411f8d.jpg)
 
 因为是POST的请求，跟进handlePOST函数，
 
-![img4.jpg](https://image.3001.net/images/20191101/1572572106_5dbb8bcab93c7.jpg!small)
+![img4.jpg](../../.resource/remote/56531d123db34c817ebcec26e77012a8f99543001c31f917659a59e1fef66861.jpg)
 
 在handlePOST中，先取出mycore的当前配置，再和我们发送的配置同时带进handleCommands函数，并在后续的操作中，最终进到addNamedPlugin函数，创建了一个VelocityResponseWriter对象，该对象的 solr.resource.loader.enabled和params.resource.loader.enabled的值设置成了true，该对象的name为velocity。
 
-![img5.jpg](https://image.3001.net/images/20191101/1572572115_5dbb8bd3ccee9.jpg!small)
+![img5.jpg](../../.resource/remote/808e180787001349a1e41d731fd77fcb99dde7a0734985cabb51da77a121318a.jpg)
 
 然后在发送第二个数据包的时候，在HttpSolrCall.call中获取responseWriter的时候，会根据参数wt的值去获取reponseWriter对象，当wt为velocity时，获取的就是我们精心配置过的VelocityResponseWriter
 
-![img6.jpg](https://image.3001.net/images/20191101/1572572121_5dbb8bd97a4e2.jpg!small)
+![img6.jpg](../../.resource/remote/5f48cb4d0bb2aabc6e38a5ce152d142b7a82c07609eab87db5b10478fbef0af0.jpg)
 
-![img7.jpg](https://image.3001.net/images/20191101/1572572130_5dbb8be21929a.jpg!small)
+![img7.jpg](../../.resource/remote/528c9fe902d099d41c577861e8a89236cea2f636218e98aa407328026cbd6871.jpg)
 
 在后续一连串调用后最终进入我们本次漏洞中最重的的VelocityResponseWriter.write函数，首先调用createEngine函数，生成了包含custom.vrm->payload的恶意template的engine，
 
-![img8.jpg](https://image.3001.net/images/20191101/1572572163_5dbb8c038f7d9.jpg!small)
+![img8.jpg](../../.resource/remote/7a16724c14f5f097abc028e0c49d88e42b83e6ec110a3f3fcce32a9fbc130f89.jpg)
 
 恶意的template放在engine的overridingProperties的params.resource.loader.instance和solr.resource.loader.instance中
 
-![img9.jpg](https://image.3001.net/images/20191101/1572572153_5dbb8bf98791d.jpg!small)
+![img9.jpg](../../.resource/remote/f781cbd382b18ce5e8416102095de9509c0e72010012b2b8fd622c57c1fdb976.jpg)
 
 这里有一个很重要的点，要想让恶意template进入params.resource.loader.instance和solr.resource.loader.instance中，是需要保证paramsResourceLoaderEnabled和solrResourceLoaderEnabled为True的，这也就是我们第一个数据包做的事情，
 
-![img10.jpg](https://image.3001.net/images/20191101/1572572173_5dbb8c0d7b492.jpg!small)
+![img10.jpg](../../.resource/remote/4c1a07e9fdda05c890e9ce901331bda9899348e56dd123b680f5973f777198ba.jpg)
 
 然后再VelocityResponseWriter.getTemplate就会根据我们提交的v.template参数获取我们构造的恶意template
 
-![img11.jpg](https://image.3001.net/images/20191101/1572572170_5dbb8c0a6fcf4.jpg!small)
+![img11.jpg](../../.resource/remote/0c0dcfe8a86afb15e3b44ed34d367162f11851806039e16020d9c60c0b860396.jpg)
 
 最终取出了恶意的template，并调用了它的merge方法，
 
-![img12.jpg](https://image.3001.net/images/20191101/1572572178_5dbb8c123e92a.jpg!small)
+![img12.jpg](../../.resource/remote/73d4012fa049bc61128d0be3d558d691737f1283170ccce22771011e934a2dc6.jpg)
 
 要了解这个template就需要了解一下Velocity Java 模板引擎（因为这个tmplate是org.apache.velocity.Template类对象），官方说法翻译一下如下，
 
@@ -151,7 +151,7 @@ template.merge(context, writer);
 
 于是通过最后调用的恶意template的merge方法，成功造成了RCE，最后补上关键的调用链。
 
-![img13.jpg](https://image.3001.net/images/20191101/1572572181_5dbb8c15e6c82.jpg!small)
+![img13.jpg](../../.resource/remote/c793b93ac899a80aa6ecfc0a12d0c0b36e1f6b5a8cdab14ce6c04e930eac2c7b.jpg)
 
 修复方案
 ----

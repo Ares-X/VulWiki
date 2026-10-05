@@ -90,7 +90,7 @@ Looker 主要有两种部署模式：一种是 SaaS 版本的 Looker，实例完
 安全公告[3]  
 。  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Kric7mM9eA5AetDmwJMYhwppic08QbGqTwrkj0RHs8ib2ibEs5zyz9DZ9vFvcv8NZDlaQQGSQzMvnlkt3CE66sPVjXkXchM7prnwNm0iaf1Psg5Q/640?from=appmsg "null")  
+![](../../.resource/remote/fdd93f89585a3812dae3d0bf2593890ca1433ea9c30bfab47baec6d45d985f0b.gif "null")  
 ## 二、漏洞 #1：通过 Git Hooks 配置覆盖与路径穿越实现 RCE  
   
 第一个漏洞利用了 Looker 处理 LookML 项目中远程依赖的方式，导致任意代码执行。攻击者可以创建一个恶意的 LookML 项目，在 Looker 服务器上运行代码。  
@@ -119,7 +119,7 @@ LookML
 remote_dependency: public_project {  url: "https://github.com/llooker/google_ga360"  ref: "07a20007b6876d349ccbcacccdc400f668fd8147f1"}
 ```  
   
-![LookML 项目示例](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5BaicvVay2IjSe74icTvLyQKkqWtibBGlR0gB4KKicHao7MS54O92eYNxVGtRntR7ntmhM6h6Fe9DYduRwvH1Lenq1CndD9ObEhibo8/640?from=appmsg "null")  
+![LookML 项目示例](../../.resource/remote/69532e45aee4872ae4b4c3f0216038486b87dabc21274033e1895834dda3da87.png "null")  
   
 LookML 项目示例  
   
@@ -145,7 +145,7 @@ Git Hooks[4]
   
 我们看到的内容如下：  
   
-![Google LookML 项目代码截图](https://mmbiz.qpic.cn/sz_mmbiz_png/Kric7mM9eA5D0ZwBTyjSGiaTw6PQjwJVSr5jKtVfFrcuhmJeYZa4m76aCx7XhxiaMNEZUNSja6r0WDOs8FQaOSmyqptXk6wVyGzojFMX371EpM/640?from=appmsg "null")  
+![Google LookML 项目代码截图](../../.resource/remote/a1ba601b71dfc56b6de15a76338e255ff644838b2a0b511bcd115dfced9240d9.png "null")  
   
 Google LookML 项目代码截图  
   
@@ -191,7 +191,7 @@ remote_dependency: my_remote_project_name { ... }
 remote_dependency: ../../../../../../my_custom_hooks_folder {  url: "https://github.com/llooker/google_ga360"  ...}
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Kric7mM9eA5BguAa1M9emxGTzfahyhzWvDMib6Y8uZaZSPOGuS4d8ADNOrLnJ0B8GH54HFJ4hE6saJ6xwicGkNcbyrrOQItCYl0U7KBnzFHggQ/640?from=appmsg "null")  
+![](../../.resource/remote/a9f66039420415dbc53b1b80e8462b50ddf5f1d527157df02079ae2a5b746f11.png "null")  
   
 远程依赖名称被用作注入到 hooksPath  
  值的字符串，而 ref  
@@ -268,7 +268,7 @@ git update-index --chmod=+x hook
   
 1. 4. 我们将这个“武器化仓库”推送到了网络上。  
   
-![LookML 远程依赖](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5DOF04nib7R2LM2sUQfxTQNYI07Tp1ibwUQKTzXH3XtZibdw7NvShLKBIH3ubZykmrHd0SCm1938iaVmBLy2cFIyBInTYvy2wZqGkM/640?from=appmsg "null")  
+![LookML 远程依赖](../../.resource/remote/a193eed707832fb9d64654cf8050acc043c50545d187047004707f76a03449d0.png "null")  
   
 LookML 远程依赖  
   
@@ -330,7 +330,7 @@ git_auth_configured=true&git_application_server_http_scheme=&git_application_ser
 例如，我们在 /tmp  
  目录下放置了一个 txt 文件：  
   
-![Looker 实例上的 RCE](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5Dwicf2yHUlFQb5xzT1ATeP7St9lPpbNAib9tyXAKeCj9P5icLLmibzoaq4YvTlygCT2hG5nYick74sHd4iagTCyKtcHJr2BO3b3UnSU/640?from=appmsg "null")  
+![Looker 实例上的 RCE](../../.resource/remote/103cbd534ff75a16b52977f026b98e2a062a35f26cbcf2a4861da313e109dcad.png "null")  
   
 Looker 实例上的 RCE  
   
@@ -356,12 +356,12 @@ Looker 实例上的 RCE
   
 了解到内部连接和内部数据库用于管理 Looker 实例后，我们得以拦截 HTTP 请求并直接修改连接参数。这样，我们就能绕过 UI 验证，连接到内部连接。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Kric7mM9eA5Aj0dzpmaOTWjr7fibYwdaeRjredSD11qmichHCXiaF0U1McWz6pWUq1AP8ZzydG0KUGoib9PtRQFAyexDEXsxm7tS9Vh2Q4zUCrPU/640?from=appmsg "null")  
+![](../../.resource/remote/a68e81983b26f26af902324ba49409fd758321b0e7a47b3ad07005a1d726bf81.jpg "null")  
   
 我们简单地代理了请求，并将连接名称更改为 looker__ilooker  
 。Looker 接受了该请求，将我们用户控制的项目附加到了其高度敏感的内部数据库上。  
   
-![Looker 内部数据库入侵](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5CtUvfIBAJMM4sD75XbHNFDxBSPBJTYia2s7cFAT6xdlc20JFzWaK69WY7GpNS9yqxribZhPNnPn7xdB5buEI0JIA0dNA9oib5N6Y/640?from=appmsg "null")  
+![Looker 内部数据库入侵](../../.resource/remote/ded8c252d8667dcd9c6a01ea236c0dc1dc960343320a3bca894b50f1b3e1bfa4.png "null")  
   
 Looker 内部数据库入侵  
 ### 3.2 通过基于报错（error-based）的 SQL 注入外泄数据  
@@ -445,14 +445,14 @@ TRA-2025-43[7]
    
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Kric7mM9eA5BNJcnKL39ubLN0ricThJwJ7KhDhvMz9tzLrYkCPQqbgyTgB8oA34JrX8ubezStZyVg7nL3jtkj9P0aMmjXnUpYibbVtdYHrXEvQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/cad7850d1297bc1081b791f6640032e46e91c8b7a55f439a51f7f42a118a6704.gif "")  
   
   
   
 **交流群**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5CWtw90ljujtwFlF2wu0dNrV9aoB39Qibwb6WR1ocpicxQkyD0T8XjGZHLHjxQgGBAalvp0epeJ09jbib87kguVicic1TfBHVIO3rYk/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f143ba51fa85bda43178bbd586b4f34b7cfaff613c5e1d20b6e707844a555ba.png "")  
   
   
   

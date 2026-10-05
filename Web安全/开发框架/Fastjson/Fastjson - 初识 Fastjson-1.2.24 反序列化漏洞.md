@@ -491,7 +491,7 @@ if (key == JSON.DEFAULT_TYPE_KEY && !lexer.isEnabled(Feature.DisableSpecialKeyDe
 
 之后继续扫描解析，获取到 key（`@type`）的值为我们指定的类，随后通过`TypeUtils.loadClass`load 这个 class。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibq2PfPib58XXFR9X9wzc8ejLUEV3N28M2993r9ERjH0uCR56VibP41sZoliaud3jeicZJibRwDnb0x04cl81dzYcicrg/640?wx_fmt=png)
+![](../../.resource/remote/12c9fca6f7a17fde02fa300bb48abe711a87fce0c6a1a86f8e3d47466ed83776.png)
 
 loadclass 中，会先从 mappings 里面寻找类，最后再用 ClassLoader 加载类。
 

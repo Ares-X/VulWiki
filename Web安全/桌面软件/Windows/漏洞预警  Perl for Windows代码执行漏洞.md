@@ -67,7 +67,7 @@ schema_version: "1"
   
 Perl是一种功能丰富的计算机程序语言，可以运行在多种计算机平台上，适用广泛，可被用于各种任务，包括系统管理、Web开发、网络编程、GUI开发等。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVf4l3mQ5GChVwbuHwZJvIOF3odCq3AP3OlHoTz1JAAe2343nib9kk4knajuibAJY5LTAdJ8qp98iamg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b7b03a6ffc70b1d84c41db6752f90041373bdf8d33fba8262d70dc5a67a97210.png "")  
   
 **0x03 漏洞详情**  
 ###   

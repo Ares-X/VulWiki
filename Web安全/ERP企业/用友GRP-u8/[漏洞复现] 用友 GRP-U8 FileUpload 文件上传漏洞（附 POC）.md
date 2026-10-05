@@ -56,7 +56,7 @@ fofa: "app=\"用友-GRP-U8\""
 **有朋友说没收到推文，给公众号标星就能解决这个问题了。  
 **
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPTdEj05KUtX5HlWA9KhvLeic4aNV6OvsgA2VZ0vibx9R9ibZz0r0ylMCSMqnpiae3GMJCQYzUicI0icJgA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/a51e3f39cf834afa8d13be9ededcb80844d9e7fd05381463964fb26ebd8431de.png)
 
 **福利：小编整理了大量电子书和护网常用工具，在文末免费获取。**
 
@@ -76,7 +76,7 @@ fofa: "app=\"用友-GRP-U8\""
 
 用友 GRP-U8
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPTdEj05KUtX5HlWA9KhvLenIWKjOnLScZuypxp1Q8hsP229q9mFAYXW4sYnia6lCHbQ1TjNMddvSQ/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/90b1be6bde4c9ae1adacad663382175411d57fa01f4cef14207b2150180acf29.png)
 
 03
 
@@ -99,7 +99,7 @@ app="用友-GRP-U8"
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPTdEj05KUtX5HlWA9KhvLe2lLqGaUfbbYIaQCpXvNgQAq4H37etIY6Fbp093e3lS15GS9YoHbtLA/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/ae4e13a349fcc54a42cc5e8d9dc8120e6b15c9b385f8d7bc30486d28adc9f550.png)
 
 05
 
@@ -142,7 +142,7 @@ http://x.x.x.x/R9iPortal/upload/ccsxxzjx.jsp
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPTdEj05KUtX5HlWA9KhvLe06icicVsGgMIZnCy5edsF2cwoCTuLymra9zuSiaLBDAwRuGuyFxLwG9Ng/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/52af13e77de2f8ed5d5f931e6c1a5782355e73116de2e827baabd4c11796faf2.png)
 
 漏洞复现成功
 
@@ -198,7 +198,7 @@ nuclei.exe -t yonyou-grp-u8-fileupload-fileupload.yaml -u http://192.168.30.102:
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPTdEj05KUtX5HlWA9KhvLeCQJSgGLficouaBojGlYShKpyMIkia6ibGHPoEIQUvQlk4ibaddthL2MlmA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/b9bba600efeae7f60661aad3e7ff26ccf0a68cdcb11d853de7b961c5d3dcd2b7.png)
 
 07
 
@@ -218,11 +218,11 @@ nuclei.exe -t yonyou-grp-u8-fileupload-fileupload.yaml -u http://192.168.30.102:
 
 后台发送【**工具**】获取渗透工具包
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BO3VtNCUQ6Bllhiag7ljEfRGYUNjiaPbSgc1bgPKxIibrYjsbZiaLcWPec8Gd6zLBlODFOCCAbDDvicEAw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/a6ca4f7b5f40e03a13963c25483940067a6a76f6194d579c575e19085d7b1637.png)
 
 后台发送【**电子书**】获取电子书资源包
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BO3VtNCUQ6Bllhiag7ljEfRGfkkQLABlhLdFkF5eAv8Jm1yF2wpq7zdFbw0slibDtK4H1Rbm0wuSDBA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/7a1cc03df13235817d0d3681f1a9e4fb9850d1138e66b444c0cf47d125aa8c86.png)
 
 ---
 

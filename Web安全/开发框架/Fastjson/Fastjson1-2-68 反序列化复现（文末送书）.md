@@ -43,7 +43,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/lRyU_Qf1FhpzMH9TGqRnhQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHEwwQwobuPPhCtO42vwKXiarNLnic8vJErUXfpw5vmxdLztGSKJgUoDew/640?wx_fmt=png)
+![](../../.resource/remote/dd79dec1a58b641a729ff8240ec7967cbf3326b2e3e7a5ad0abbb746edb57a26.png)
 
 利用前提: fastjson <=1.2.68, 打开了 autotype
 
@@ -53,11 +53,11 @@ schema_version: "1"
 
 使用 vul-hub 搭建漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHxwpOLUfApT0Ro3ULAjyE2obOZrbaZwMfphZPg7EnT7HqiaSVKuXcIqA/640?wx_fmt=png)
+![](../../.resource/remote/d78596f0a7ea23f4f8ede298f7271a0887e4af54d53d973006c3e091872cb64c.png)
 
 访问搭好的环境看到 json 数据就表示搭建成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHfX3HCfLomdlykvglYibqAA2k78yDdkCGtdvY4rxTzA61CicyicNTnTtNQ/640?wx_fmt=png)
+![](../../.resource/remote/2aed6f0e08f33123a64493222deb7330a9963790cfe354b4ed56f59033387124.png)
 
 *   **搭建攻击方 web 环境  
     **
@@ -103,7 +103,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jarmarshalsec.jndi.RMIRefServer"http://19
 
 注: 恶意类的 class 文件前要加 #, 而且不需要加文件后缀
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHfUADckmBUeicdzWau4oibj2I26Aia1xS7qoShkMBJMMicq0pcUU35sEAicw/640?wx_fmt=png)
+![](../../.resource/remote/123a9c16b3e31a36bcbe2cb6c3d2724a38cc7b74bad78e04e453ecfccde81e37.png)
 
 *   **构造恶意请求  
     **
@@ -112,15 +112,15 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jarmarshalsec.jndi.RMIRefServer"http://19
 
 注意红色框重点  RMI 服务后面跟 A 主机开放的域名 (ip): 端口 / 恶意类名称
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHaFkKZVFBTaIISeduth1dFRgub157ZlkH0rialqEfGhzybXLcOTuVH2g/640?wx_fmt=png)
+![](../../.resource/remote/1061fe8ff3768607137fb46566e603c7e12436e128c9d1ec5a96927bec9c0316.png)
 
 发送恶意请求后, rmi 监听的口会收到 B 主机的连接并读取恶意类, 如果没有监听到就代表失败了
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHeUFnJib290flK5Yxboh1RtIrAQ17Ubn3iatuobmejYqrBN5jHxsTgnkg/640?wx_fmt=png)
+![](../../.resource/remote/f3363c769d7c63417ebb8d5083c6aa6ad218e78e12d887d795b2c52a5ecf198b.png)
 
 响应包如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHqzMQZoArfwUvpBGBfHAVbKEnRib0Z1iaKU6IvJoD9KNTJ33Ibn0oT8gQ/640?wx_fmt=png)
+![](../../.resource/remote/b7297965df9d40e7f29ed08675496b7579dcf495a55d4f967921d77b89d6fb66.png)
 
 *   **查看命令是否被执行  
     **
@@ -131,11 +131,11 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jarmarshalsec.jndi.RMIRefServer"http://19
 
 和 docker exec -it (镜像 id) /bin/bash 进入 docker 搭建好的虚拟机内
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPH6QT526MjQ8QymGE1XjxBD4rU0ZaLMpNAGdehiablkM7aLxibgZ3L7aLg/640?wx_fmt=png)
+![](../../.resource/remote/fa1f2c6bb14113fe16d0e6ef8c5a75248918318032633787e58980bbeff7b916.png)
 
 发现 / tmp/success 创建成功 代表恶意类中的代码被成功执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPH2TCGzc4Z2rtkMlcIv1icmXsdiaLUmKCN41zPMFIfVMOoDGk4O8tznCIQ/640?wx_fmt=png)
+![](../../.resource/remote/8d88d34dc94e074272410f873c51959a8908980a7aea617e327d5b65c2918feb.png)
 
 *   **反弹 shell  
     **
@@ -144,7 +144,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jarmarshalsec.jndi.RMIRefServer"http://19
 
 构建恶意类
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPH5FnbgnfdXb4Df8a3o5m2RJkL9qfh8Tp1lV0QiaudesS6k9FIAhU6cbA/640?wx_fmt=png)
+![](../../.resource/remote/c91eaaf65d97058162eb06c97dbc5661c9ab6928d6f898e7187e1790d46b95f3.png)
 
 代码如下:
 
@@ -168,27 +168,27 @@ public class ReConn{
 
 使用 nc 监听 7888 端口
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHWHOufjk1pJx398icj5kl8lSJGbk0xib02evEXjMt5D4v9IaKPgf7St8A/640?wx_fmt=png)
+![](../../.resource/remote/a57e05b8f161c2c9cd38066b13addf45425207f62b2752d33f037fe3bed183f1.png)
 
 开启 RMI 服务
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHwLoUib61Iwk5gZvicsMsU36PCAbj2jqAlBMvk0DHW4ribVlWicDfKbKrSA/640?wx_fmt=png)
+![](../../.resource/remote/e560ecacea1b2fbe180914924dee26eceea9d88ce423a564b38aa50044a70e43.png)
 
 恶意请求
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHMSPX6AcJXvhfR0mBqYICUhjcK9MSIxkcbfXTAsHVtW7FauoDxSkTFA/640?wx_fmt=png)
+![](../../.resource/remote/07acd7343d9da67f8f1c53c89a0f5618ef3e6e3ad624862e36e2b7bd6a3de1c4.png)
 
 结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHL0rpMcKOf6JbO16jvrOXC0UWwsSHozibe0CUzJNZhBTHmQScfnJPt3Q/640?wx_fmt=png)
+![](../../.resource/remote/53116d7cfa02cbf5a713978c2cbff7b010b5da413c6ad3ac38b3643218fd317f.png)
 
 *   **批量检测工具 fastjson scan**
     ========================
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHTjWV1kRqT60ufZw2dbjWojnm0e1icyWaVZ0zY2fgdcgQTG8kY1NzQtw/640?wx_fmt=png)
+![](../../.resource/remote/9fc5b02fba8d261bfae99c1bc9776cb5df843fab6f92f4a333dab5ff5c88d7ff.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHzPorJWXtaTzL1huicsHTevsfUzd1MhrrspK8v2iaBfQcTItsxm9WKusw/640?wx_fmt=png)
+![](../../.resource/remote/a660f6051b612eea74719ed6c952c1c35e3da699e8548f9263676bc2e213a19b.png)
 
 *   **修复建议**
     ========
@@ -206,7 +206,7 @@ public class ReConn{
 
 1.《从实践中学习 TCP/IP 协议》
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODtdrAu2oiamWGKYAvGMyNQrBLA9vGibTsgcA98M5tTgMDzyUn3HBP2jHZ9gaFVSaeia8nAHx3d3a4VicQ/640?wx_fmt=png)
+![](../../.resource/remote/2b9e68f71cd11f5fb35831b99a5d1b17846098b815e29099ec5e49c0a908fbfd.png)
 
 从理论、应用和实践三个维度讲 TCP/IP；通过 96 个实例带你从实践中学习；结合 Wireshark 和 netwox 工具讲解；详解 ARP、DHCP、DNS、SNMP、Telnet 和 WHOIS 等协议。
 
@@ -224,7 +224,7 @@ public class ReConn{
 
 上次抽奖的礼品，粉丝非常满意，感谢大家长久以来的支持！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHKE4E2ianU6vs3GEQ7GicF08EQpG96Yv3sPRbqia0vMs8XkDrlkG22vK8g/640?wx_fmt=png)
+![](../../.resource/remote/f376a12703ca5bef97d6533209750ea25b814c49d22fdc2d4851926e53151f94.png)
 
 ---
 

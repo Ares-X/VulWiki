@@ -58,7 +58,7 @@ canonical: "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程�
 
 **点击蓝字**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif)
+![](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -86,7 +86,7 @@ _**
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicX5ia0LBzadKWukhAXsxFFibCDSmvqYt9Zd1d5S94x4zunDFvg5TibBh3Ig/640?wx_fmt=gif)
+![](../../.resource/remote/d3ae686d3673e1c59bddb826d595e3acd083a0f09385b5c80594ac77f2bc1736.gif)
 
 一、
 
@@ -117,23 +117,23 @@ JumpServer = v1.5.9
 
 **资产管理 -->  系统用户**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXpbhicOvtlLjAopN4fFicaLibsdq0UrriaSBktXKOINBt79bDoE7tOeyxAg/640?wx_fmt=png)
+![](../../.resource/remote/bd9449c1560dfa5601fdbf797b9789d3ae05674caae5772d0a0816728cb48407.png)
 
 **资产管理 --> 管理用户**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXJKddlaPpDlVeAiassW7DuG3gnIBtwKkOMDHEp679FWpQl7O9PI222VQ/640?wx_fmt=png)
+![](../../.resource/remote/b019c8d60465f2c3115193693d5a3c21ce59a396dbd4d0899f36d7b5325bafd3.png)
 
 **用户管理 --> 用户列表**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicX2cMpAwbW6ibib3ibguBfrbKy29jBiaNRSRCsBb1xXzS0JibLNXUwo8RzNyw/640?wx_fmt=png)
+![](../../.resource/remote/02ad8949edfe9aa6cd502b3cfcb8d577651c49b7b14b1f6141f03cfe84d42749.png)
 
 **资产管理 --> 资产列表**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXxNAnCbQGJiaBXo02oIeL3ROhvHA8AqguBXgP8oZonicd9Gd5cQGUzicHg/640?wx_fmt=png)
+![](../../.resource/remote/c591cfa8b919118ee7a37d0d657aadd3a483c166efb08c4e93acdfaa081034a8.png)
 
 查看一下项目代码提交变动
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXewpnMI5KtwfZc1R0UDQOlc2k89GZeEBtiagBTyZIlQB3neHwrRbmEmA/640?wx_fmt=png)
+![](../../.resource/remote/ff6acf4ec223b1b44fab446ded30edd19fcf2b6c1ee02cc6598c6f7d7e0854bf.png)
 
 ```python
 import time
@@ -216,28 +216,28 @@ class CeleryLogWebsocket(JsonWebsocketConsumer):
 
 新版对用户进行了一个判断，可以使用 谷歌插件 WebSocket King 连接上这个 websocket 进行日志读取
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXyJF2Vs47TN67Rfqzib1MwCOE1RZicy1IkwLbQRoNISYKjKHWWg3ZWo6g/640?wx_fmt=png)
+![](../../.resource/remote/144e2def60a956389ba45121bc25e51d5b3f50f038e12f032920f3784a5ef73c.png)
 
 比如 send 这里获取的 Task id , 这里是可以获得一些敏感的信息的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXDZ56HSrZrYUYd0lXsUZiaa2CsWUA59MicG9FdtJLklY5EEglPoGNDQyg/640?wx_fmt=png)
+![](../../.resource/remote/ecceca118f8a2104319159e71a91b8604a7523b87ea86d9891478a370a690ad5.png)
 
 查看一下连接 Web 终端的后端 api 代码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicX77RYrt6GaUrGyl81LecP0ZxbmgBL71TCyibtnAKS34lElLJeudbnSqg/640?wx_fmt=png)
+![](../../.resource/remote/8ff76a6f48f4580e5991f2dd8c84a9f4d952100a25f596b1cdf7bca636b41c22.png)
 
 可以看到这里调用时必须需要 **user asset system_user** 这三个值，再获取一个 20 秒的 **token**
 
 访问 web 终端后查看日志的调用
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXdVmgNhdR7EoX5Utiayldw5yLgcWFQBBvvnVv2V6WqR20XSicA7AV7qHA/640?wx_fmt=png)
+![](../../.resource/remote/6d27911d921b8f84af4046e51ae41824d1cee01f15c617ad6f36ff8e234be0a9.png)
 
 ```shell
 docker exec -it (jumpserve/core的docker) /bin/bash
 cat gunicorn.log | grep /api/v1/perms/asset-permissions/user/validate/?
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicX3RtmBklsc3LPCyRtM7iaJCVqdib4VvDp0h9fScBLiaXKgDNZIPINGWOtw/640?wx_fmt=png)
+![](../../.resource/remote/03bee517eec3bb1eabb5e8cda35b68104aae1df0985f97ec28121e8b2292aebe.png)
 
 ```
 assset_id=ee7e7446-6df7-4f60-b551-40a241958451
@@ -247,31 +247,31 @@ user_id=efede3f4-8659-4daa-8e95-9a841dbe82a8
 
 可以看到在不同的时间访问这个接口的 asset_id 等都是一样的，所以只用在 **刚刚的未授权日志读取**里找到想要的这几个值就可以获得 token
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXibicg5VzdolcwNX5IZxQxIbicyUJDFsPHLzHDOTrlHZ9nUVYl5doPqAXw/640?wx_fmt=png)
+![](../../.resource/remote/ef5847da74028a1cd2b9d03ad23968a50451aa3d2329a2956fdf33cba285fa59.png)
 
 试过了很多，部分可获取，大部分日志中很难找到这些值，利用难度还是挺高的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXhs33Mws5tAGKLdhaAZXYNezgrDXrI1Kor4ibjPUNoGLQynlHY14BMHw/640?wx_fmt=png)
+![](../../.resource/remote/371f3c944bb19f53c33487a431b0b8ae5b1aee1da22bbcf0ec3cdf1a8e0acc6c.png)
 
 看一下 koko.js 这个前端文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXiaNrVrXJN2O36wrXKdcaibdEdAwWOiclfIqMw0x9Y2ibtIpLAXwGo8vY0w/640?wx_fmt=png)
+![](../../.resource/remote/2b252e507dfec7202314ca2a7e076aad368502deea2d5d9e874583695d904c7b.png)
 
 后端代码 https://github.com/jumpserver/koko/blob/e054394ffd13ac7c71a4ac980340749d9548f5e1/pkg/httpd/webserver.go
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXkghHNnwK3iaqvldvoG46S5QPsCUYPUonTK9W14hiaUedjeVdPNPfYjEg/640?wx_fmt=png)
+![](../../.resource/remote/4536cf4e9f65fee69a63006a37eb0585ef6b5b13af6553b8b07d893f0321e855.png)
 
 这里我们就可以通过 获得的 token 来模拟请求
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXo1XZw6Leic3o2cNqVm1VRKicZOicGTGOyT8mF4of6x8EqfNWgWuSNg0BA/640?wx_fmt=png)
+![](../../.resource/remote/fc6fb590cfc9e8dcd5939312c62c5927d7baa8e37ebce5a3de0813638bdd87f6.png)
 
 成功连接模拟了这个 token 的请求, 可以在 Network 看一下流量是怎么发送的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXxvUibMEFKibaLo73orQuqmYyyrJGibricwx7Lyc61cCY5L3Pj02K0IgLwQ/640?wx_fmt=png)
+![](../../.resource/remote/ae86942e92d0d29da1ef21a6fd7665241711df6293da6ae4522014e5e536761e.png)
 
 模拟连接发送和接发数据
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXSY6w7Cp39fdbDTFB1NbrZLrVE17zhDtAnVvSf2TVUOIYCiacibHMC4rw/640?wx_fmt=png)
+![](../../.resource/remote/043d7dae0ef91f690a8f512e541975bd4d1e66849f106064a17c0f732e39aef9.png)
 
 这里可以看到我们只要模拟了这个发送，返回的数据和 web 终端是一样的，那我们就可以通过这样的方法来进行命令执行了
 
@@ -409,11 +409,11 @@ if __name__ == '__main__':
     POC_2(target_url, user, asset, system_user)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicX6oIheGpHgdMCwniaYlGdNljl4ibWuwLE94UlM85u7dGE7kSgnadHxNzw/640?wx_fmt=png)
+![](../../.resource/remote/326f1b75072e60122a36134474a994eb6e5c43cdf639c1828febb913ad5cd52d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicX9MVxOaBLtSYiazzS54VNeDGFjzMFCRsHKls4hJ1UD8dVG3BjD7NeibbQ/640?wx_fmt=png)
+![](../../.resource/remote/bd18eecd1d4ce644c26c7d5d897a9326689e6324eb1b3360e351116856ad0a9b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXricKoGw8T9JDwUAslKA82NQFk28p9HuN0sqle8VVicj0PAicdW8lJqicHA/640?wx_fmt=png)
+![](../../.resource/remote/c2a11e0c8f923167a4984506825fc64b55fe796c0631a2ba2692d99b83580b29.png)
 
   
 
@@ -439,9 +439,9 @@ if __name__ == '__main__':
 
 Twitter：@wgpsec
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4LicHRMXdTzBhAsD8IU7jiccdSHt39PeyFafMeibktnt9icyS2D2fQrTSS7wdMicbrVlkqfmic6z6cCTlZVRyDicLTrqg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b9e1284285c5071573cdab2007195e695eb9d397834bf8ada6d0ffc6fb61d537.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/gdsKIbdQtWAicUIic1QVWzsMLB46NuRg1fbH0q4M7iam8o1oibXgDBNCpwDAmS3ibvRpRIVhHEJRmiaPS5KvACNB5WgQ/640?wx_fmt=gif)
+![](../../.resource/remote/bd8c348cdec726a3436db5005b7a9fce34d12de57cac8d2d94ac31a1c423b221.gif)
 
 ---
 

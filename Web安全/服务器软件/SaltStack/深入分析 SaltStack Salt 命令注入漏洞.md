@@ -56,7 +56,7 @@ previous_affected_versions: "rest_cherrypy:"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/dR-Nq-pi2R5Aqz73XibD3Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Ok4fxxCpBb6pibzrFGuA3YGTpC5daWCyn3wtp1Qyy6M3XjQfziaX1CZY9V2g82nqV4al8libavruzibh9jGWGASI8g/640?wx_fmt=jpeg)
+![](../../.resource/remote/be7a58dfe04a52a27a226651e0848306a219ed216ba5f7fdd92e126797506e5c.jpg)
 
 一、概述
 
@@ -447,9 +447,9 @@ CVE-2020-25592 的修复原理是添加对 eauth 和 token 参数的验证，以
 
 译文仅供参考，具体内容表达以及含义原文为准。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png)
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ok4fxxCpBb5ZMeq0JBK8AOH3CVMApDrPvnibHjxDDT1mY2ic8ABv6zWUDq0VxcQ128rL7lxiaQrE1oTmjqInO89xA/640?wx_fmt=gif)  
+![](../../.resource/remote/632fd46fd9c5c81461bba0234f0d689bcd5e3937d9af2d92ada6ef08375280b1.gif)  
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 

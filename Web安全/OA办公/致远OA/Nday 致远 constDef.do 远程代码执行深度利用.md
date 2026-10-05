@@ -51,13 +51,13 @@ schema_version: "1"
 
 大家可以把安全绘景设为星标，这样就可以及时看到我们最新发布内容啦！
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaGjEpwZia0LMcjzGKWu8D6NMLoSJoaI9lvBbI6toKhsYwgazQoRUBhp85WU4AQZuQ9sk7JtjcGHiaJA/640?wx_fmt=png)
+![](../../.resource/remote/fdd5cc36af6a26060283f6daa9c0c1d1a3873f93a2dbc8a353819f06b9272123.png)
 
 #### 前言
 
 最早致远官方是在 **2023-8-11** 号对 **constDef.do** 接口出了官方漏洞修复补丁。但目前该**漏洞点**是位于**后台**，所以目前还是有部分依然可以打。本文仅以安全研究为目的，请勿用做非法用途。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8Zp5kDxVOquwdzxI5ECibX2ySmZ0pNBtyicI331LreZgJ40awuMhZFO7Phw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ba61fbab483a58edafbc1968d3d1fc76f7e6d82a7dd535f4641ea435a3bc23d7.png)
 
 影响范围  
 
@@ -72,27 +72,27 @@ schema_version: "1"
 
 在`newConstDef`方法接受三个参数`constKey、constDefine`和`constDescription`判断是否为空，如果不为空传入到`insertConstDef()`方法，而这里就是导致为什么 **payload** 长度不能太长，就是因为这里插入到数据库，而数据 **varchar** 长度默认为 **255**。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpW62v84hmLZEyPGmk4Lg1rqDPca7G10o8qAXDTLJFclcuWxt877Lb9A/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/01145c4646b820b1e0f492d3be404dcc1913dbfc645c67de8e3c71e1303a2611.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpYgNmQA3RLWS6sgVEfmf0K6qEL6ia0oPYCuROpLusibicbtqVZpuYmxibsw/640?wx_fmt=png&from=appmsg)  
+![](../../.resource/remote/3781ee66b1e2a081a4d1ebafbcf03363a9a85dde84c979d87e8861b83f9f36d4.png)  
   
 
 漏洞触发点：**listConstDef**
 
 首先判断`_search`是否为空，如果为空进入到 else 语句，将`page`和`rows`两参数传入到`listPage`方法中。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8Zp3Q9oiax8dqhe0D7QQiaCFswBuz86Ug2PrvUPwZ3icib4LxFickOWZlVSvwg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/94228c362b19721ccd7cba6831b609a8080653f2a17736403163481b4e8de879.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpkLxohF55ZJictMxDmxU75To9fMicIeth2vWbJroK1vPXLNyrEKqvosLQ/640?wx_fmt=png&from=appmsg)  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpvZBvVHL3bOA8bSS1icfnhBLRQF7DibleRpx7lrIjnd1Y2tthWzt5L8tw/640?wx_fmt=png&from=appmsg)  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8Zp2lwIlJC1iafFj5TJhA5N5eR6CKlicsKpzraJG2ZyEElrETu98836nslA/640?wx_fmt=png&from=appmsg)  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpEz1v8u7PHmWmeckzEUphdNB1XiaaImhj28agPPpUn6lKZLry8tkD2kg/640?wx_fmt=png&from=appmsg)  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpbP8W6lAsNLNaOibHJeTYkbMDP9kDGg0ElffHqHHGA0vVJ2icNAbg4TMw/640?wx_fmt=png&from=appmsg)  
+![](../../.resource/remote/5bf05fd57523e762ae7ea3420b1a787a2237492e5da4f145a72ed485c419b6dd.png)  
+![](../../.resource/remote/e30103ea659454d78f013df600f2aba417ff86ec2b12644c9c0faf4dbfb2a56f.png)  
+![](../../.resource/remote/026f8653a6271c5b4600c77046abec1c2a155aed38edfa52f8913dda55960187.png)  
+![](../../.resource/remote/4c2b38b7b18413d863e296c7ae8e543663f4e7f8342241578867cb296ec45fdc.png)  
+![](../../.resource/remote/b439e4fb89b565ddbd58fb68faeacd6e776d0c48470d3f0598ac704a10985be6.png)  
 最后将之前插入到数据库内容进行判断是否以 **$** 开头，然后判断`ConstType`参数是否为 **3**, 如果是则调用`ScriptEvaluator.eval`方法执行 **groovy** 代码。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8Zp0ibalXY812MHaAxa6q5eWW1fvdhquyDyR3SOK45nkoAc4gXgFIma4FQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/d4487868b94e76e72d3845697c454f277c41b5f2b623cc4150595dadb8d7af67.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpMKAJQldgETiaGic0sFdJ9dicfzgskLoE0olQ0mag8PibeJHz5eiaSe29EVg/640?wx_fmt=png&from=appmsg)  
+![](../../.resource/remote/5d8a695389ccf4ecade1d81e9f304baf64fd07bdff6148d5e83ad3e77bf58f8e.png)  
 漏洞复现（Trick）  
 
 **目前给的 Payload 能够比较完美解决了该漏洞实战所遇到的任何情况。**
@@ -127,7 +127,7 @@ method=newConstDef&constKey=uddd1&constDefine=new+File('../webapps/ROOT/test.jsp
 
 > 请求长度说明：原资料 Content-Length 为 545；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpibtrFwGYhZKP4L7Y6JfBzRXHf7Qg0ncDiaU3lNlNpKA5avDoicpEzNaMA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0e7266d7d601024d8d311b4917a29732167696dfb80e22528e78f88b0a6924ef.png)
 
 _**> Step2：**_
 
@@ -150,7 +150,7 @@ method=newConstDef&constKey=runtime1c2345accaccc&constDefine=evaluate+$uddd1&con
 
 > 请求长度说明：原资料 Content-Length 为 89；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpjBsmE05FlabL4Ap3PnrvxGcuddtjibgibQRcj7S6tjZic5qGoCYXRrqfw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/07bc73fa5877ff88c3e92662fa3c793ab48a6e8b58b5400fc125b50a1dbe502a.png)
 
 _**> Step3：**_
 
@@ -173,7 +173,7 @@ method=listConstDef&page=1&rows=100
 
 > 请求长度说明：原资料 Content-Length 为 35；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8Zpjk6T4nyaZrbVs5XibyiaXywTeUfibhJiaRxrUicr2KcoRYicic4fV0D3H9jPA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a20a42d7022ba1726ed22cd41e6226bd64e792839800bfd30611d6dfe956a302.png)
 
 ##### 不出网情况
 
@@ -234,7 +234,7 @@ Content-Type: Image/x-zip-compressed
 
 > 请求长度说明：原资料 Content-Length 为 1172；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpHxzjftBlSwqfhichiaibunhxjCQWGAK5aVe8kJmwlqW1Kq0BtZu0GUMLg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a4f761b8559b41a0f6629b3bafaded980ad695741c10f23d02abd4d7801bfd78.png)
 
 _**> Step2：**_
 

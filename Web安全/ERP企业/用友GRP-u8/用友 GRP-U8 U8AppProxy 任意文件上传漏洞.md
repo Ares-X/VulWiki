@@ -65,11 +65,11 @@ title="用友GRP-U8行政事业内控管理软件"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyuUqp5rLJxfAkAuFyw8DHWCvj7sdngDlNwqXmY1s4icyq8Ogic1Lk8hHTkyw7ibCuLtDlgTX6hSayHg/640?wx_fmt=png)
+![](../../.resource/remote/6b2ded621155fd4ed009acdc6f6a5e57e909356be07bbb8cc884a9d00f6674eb.png)
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyuUqp5rLJxfAkAuFyw8DHWBZum7CcIXxNQsGQCmjBz7qtWR44ZbOWvwH3sDiaj7g8uEaYw3ZWBstQ/640?wx_fmt=png)
+![](../../.resource/remote/12c69f6ad9dcfa4ffbc8d3ec4c94c2da2734f696df8c307040d43afc2731e42c.png)
 
 burp 抓包，修改 POC，写入 jsp 到站点根目录，jsp 内容是输出 "yongyongU8"  
 
@@ -100,7 +100,7 @@ Content-Type: image/png
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyuUqp5rLJxfAkAuFyw8DHWiauVic3dQ6P3tZVoeg0d5iaLvAxRzmIo85ehrMdlF2ebfsShibN6blO9vQ/640?wx_fmt=png)
+![](../../.resource/remote/c200e14cf3483fa76bc5a7eaa403016c4769c30c97a307c5b7f41c1630264e91.png)
 
 访问 yongyouU8_test.jsp
 
@@ -113,7 +113,7 @@ http://your-ip:port/yongyouU8_test.jsp
 
 建议升级至安全版本
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVwm8c9xddClZDNW2s8GsicyO1NKrSWUc4JcSvkvKSEWNB0NEcsXj0SmRHgksoOiaLfmbib3icF8g9MMVw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)  
+![](../../.resource/remote/0fae810828196437a3e27f124232b818b08e90b4cef5743dc22904564cff7b5a.jpg)  
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

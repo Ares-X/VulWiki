@@ -43,7 +43,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/H545vVAq8rzJPtT6oAopog)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/aPmkR80bcV3SvApHycxcrBC24V3MkLtTg8Jaky4ZgPQvOEqcpiaq0DjibDXiaHezvyA7bNiaWCo1hefakxaGbkWg9g/640?wx_fmt=jpeg)
+![](../../.resource/remote/840d9aa17676869649c31bed7c843be7500cbaacc82a2dc8e8a42502d9008d51.jpg)
 
         Jenkins（连续集成服务器）默认安装允许未经身份验证访问 Jenkins 主服务器上的 API（默认行为）。允许未经身份验证访问 groovy 脚本控制台，允许攻击者执行 shell 命令和 / 或连接回反向 shell。
 

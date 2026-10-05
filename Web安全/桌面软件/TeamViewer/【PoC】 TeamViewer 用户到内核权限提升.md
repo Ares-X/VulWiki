@@ -65,7 +65,7 @@ schema_version: "1"
   
 此仓库包含 TeamViewer 中漏洞的利用概念证明，该漏洞允许非特权用户将任意内核驱动程序加载到系统中。我要感谢 Zero Day Initiative 在报告和负责任地披露该漏洞方面与他们的协调。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnQTqACGARdtXISOmchnQlxvouquYePn5Doc8USxE5NqiaaKgsEvXgLPrVn6VJ4EicLDI3ZnorBTov1A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e65de997bb1a9f5b5d2cb87e90ddad11ab959b9a5a19918f8908302bdf71d689.png "")  
 - https://www.cve.org/CVERecord?id=CVE-2024-7479  
   
 - https://www.cve.org/CVERecord?id=CVE-2024-7481  

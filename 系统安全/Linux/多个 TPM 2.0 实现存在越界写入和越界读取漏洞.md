@@ -138,21 +138,21 @@ Nuvoton为其NPCT65x TPM芯片发布了安全咨询SA-003。
   
 带有加密参数的TPM 2.0命令由基本命令标头、handleArea和sessionArea组成，最后是加密的参数parameterArea。结构如下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZ4w3NfjcJDQrtLq8w55jOiaXc4t9ebshCYaBwI6aOmh56nf8lIF6Mib7g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/65ff1f1c4da7d5acafb4ff28747c71d670e85f6c39636029c4eb73f4cdf1dc1b.png "")  
   
 如下图所示，在TPM 2.0参考实现中，ExecCommand.c中的ExecuteCommand函数检查sessionArea的authorizationSize字段是否至少为9（[1]）。之后，在[2]中，它计算parameterArea的开始（位于sessionArea之后），并将其保存到parmBufferStart变量中。在[3]中，它计算parameterArea的大小，并将其保存到parmBufferSize变量中。然后它调用ParseSessionBuffer() ([3])，传递parmBufferStart和parmBufferSize作为参数([5], [6])。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZJPpmjqRuyQxyMxMXjia8iby0ibRiaDyHzHr4uwyVA7QVhLWx2AHMruicE7g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e41adacf6fc8dbf4089b347314330a2517ed1eb7a4d7ee2a280c2b09b031057f.png "")  
   
 SessionProcess.c中的函数ParseSessionBuffer解析命令的sessionArea。如果会话具有Decrypt属性集（[1]），并且命令代码允许参数加密，则ParseSessionBuffer调用CryptParameterDecryption()([2])，传播parmBufferSize([3])和parmBufferStart([4])参数:  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZ6jVBibUsSONuJhefGo5o4sNhAbGCMeqRV83fsoXaXy3xOSjNHbiac6mg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cf701b9d0bf72eb628e7ed64d80b33f5a1bd59e7bc9c3fe856172477ed369f87.png "")  
   
 CryptParameterDecryption函数中存在的漏洞  
   
 CryptUtil.c中的函数CryptParameterDecryption对加密的命令参数执行就地解密。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZKgMr2QsYb3mqxj7LNSuJBPuU8kytjYrwanSDnpc76eVJQqZ9xXtRBQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4bf1b819304451625f0ae0a7cbd01501d9129b6358985c82293abb4bbbbc8726.png "")  
   
 此函数中出现的两个安全漏洞  
   
@@ -160,7 +160,7 @@ CryptUtil.c中的函数CryptParameterDecryption对加密的命令参数执行就
   
 请注意，BYTE_ARRAY_TO_INT16宏不执行任何边界检查：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZRpmkzJCBqmtySemI7euvjkx0m8nxVod2YRA2p6kYwA5eqffajDJHFw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9c9619bbfd0975454157602116ce04d2c466aa70b2e7fe409ca32bc0e4c0c721.png "")  
   
 应该使用UINT16_Unmarshal函数来代替，它在从给定的缓冲区读取之前执行适当的大小检查。  
   
@@ -214,7 +214,7 @@ https://blog.quarkslab.com/vulnerabilities-in-the-tpm-20-reference-implementatio
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/6a85bd81b6c759a0832fee43a3d96c383ae032b5f74f300eaf04a904e924eab8.jpg "")  
   
 
 

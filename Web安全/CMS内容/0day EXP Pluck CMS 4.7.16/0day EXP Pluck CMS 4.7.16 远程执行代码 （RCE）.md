@@ -223,9 +223,9 @@ print('Uploaded Webshell to: http://' + target_ip + ':' + target_port + pluckcms
 print('') 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz/yqP4lghX1JXRJibe2m9VF2NhPia9Myeoucwec9reDgGO2jtcUicOKInsHChZ8Duo44aTrcBtQvOd0orSCmbV7Dylg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/dbc12ea2c16fbb1243cde440271664ad4b084742e25e4752e4673b6c17127072.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz/yqP4lghX1JXRJibe2m9VF2NhPia9Myeouc5ccutRZtv69JpWSqDLa8j9nDclJ4LLXjAbZm4RZKrjp9UvHlriavtFw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/f10e0a321721fd223c04a48f3af4e1df0b3d6ed32f6d44de107361a6d3464b23.jpg)
 
 ---
 

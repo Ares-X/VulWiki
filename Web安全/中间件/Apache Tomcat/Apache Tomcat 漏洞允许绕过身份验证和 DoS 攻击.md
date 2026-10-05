@@ -61,7 +61,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8t626K3lVajT8t4nuvibrJ7UA04BKp0wXwS5zq9j6RYpqTW0HDsFK7PmOCA92GVfX2UcpeurgVVeNA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0ef403f77b6b75690d1bafde3cb64a99144f74c87d84ab21597d415bccf856c0.png "")  
   
 影响 Apache Tomcat Web 服务器的多个严重安全漏洞，包括两个支持拒绝服务 （DoS） 攻击的高严重性漏洞和一个允许绕过身份验证的中等严重性漏洞。  
   
@@ -118,7 +118,7 @@ https://cybersecuritynews.com/apache-tomcat-vulnerabilities/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

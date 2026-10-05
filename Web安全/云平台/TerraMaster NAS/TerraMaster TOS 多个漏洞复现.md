@@ -50,9 +50,9 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/GAOliqwEqXOsQ4LeNDCQaw)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -119,7 +119,7 @@ http://xxx.xxx.xxx.xxx/include/exportUser.php?type=3&cla=application&func=_exec&
 http://xxx.xxx.xxx.xxx/include/pq.txt
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhCZJ61uVD9RPbSyhIiatmaFvbqgkICelfMBJPKkgzPCnpuB3W3bEzarA/640?wx_fmt=png)
+![](../../.resource/remote/ad943f1fc41faa9ea4c6025e2f5f5c34e23766e57800978f8ae7c865fed25018.png)
 
 ```
 TerraMaster TOS 用户枚举漏洞 CVE-2020-28185
@@ -127,13 +127,13 @@ TerraMaster TOS 用户枚举漏洞 CVE-2020-28185
 
 **漏洞点来源于找回密码的用户存在校验**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhDwoHntoneY5stnm1laTqZf3d2uPibvZnHSkMBiaf3Jje55mnTRcBoxiaw/640?wx_fmt=png)
+![](../../.resource/remote/9f00c2f88f3b60a5f813d9f193ee11bf8e8f20e1c2ba39a5c9d53b6031214c7d.png)
 
 **输入用户名 admin 点击确定，查看 Burp 捕获的包**
 
 **其中有一个请求包用于确认用户 admin 是否存在**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhO6sWFcuGnhdh0DpDNEbj0LiaGuTJYSBcSAsGAuQ9wrcARDB3MEy9ezA/640?wx_fmt=png)
+![](../../.resource/remote/bc63abc19842b8cfe536c0bd8ecb67be9ddd83838dc2f7656ccae01b84a66d4b.png)
 
 **存在则返回用户的邮箱信息**
 
@@ -145,15 +145,15 @@ TerraMaster TOS 任意账号密码修改漏洞 CVE-2020-28186
 
 **重置页面输入获取的账号和邮箱**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhsyME9ib3E3UZIgEJwdryHH7QXXefzyicSnjJ7Aiaibj9OSBUKCbXS5ZI7Q/640?wx_fmt=png)
+![](../../.resource/remote/25ae91ebc5a6eab045c17a85467ff433782c98160bc523c4f18ba3c6262ba34f.png)
 
 **点击确定，抓包更换邮箱接收验证码**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhT0ichW2s2PRQCD9uhBx2SdzlmNm8dbSMpmrD68nxjfdPiaEDmON5UB1g/640?wx_fmt=png)
+![](../../.resource/remote/d9caafb2d41bc76c13bc88819c9b59629cc5d34865a99dfa6cfc28635d5be1b2.png)
 
 **通过接收的验证码即可更换账号密码登录后台**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhH62EHlAKlrAMRaSI1iaw0XKm5qKKnianCNYBdfozshhficfwGokwF8mzA/640?wx_fmt=png)
+![](../../.resource/remote/98e69bfa9d855d6bf0f2e4fd81977c24bcb1ca29e598e7f740413c6738e3a6c9.png)
 
 ```
 TerraMaster TOS 后台任意文件读取漏洞 CVE-2020-28187
@@ -165,7 +165,7 @@ TerraMaster TOS 后台任意文件读取漏洞 CVE-2020-28187
 /tos/index.php?editor/fileGet&filename=../../../../../../etc/passwd
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhWAEdGY8zzhQS5oOPaBBv87WbnD4NEGt5HnBSyTOftYJaEYxxax21BQ/640?wx_fmt=png)
+![](../../.resource/remote/99fca6e1af297a4f71511d2a73ff8d66a6aec24794fbf3c484aaca9f3dd959c1.png)
 
 ```
 TerraMaster TOS RCE CVE-2020-28188
@@ -175,7 +175,7 @@ TerraMaster TOS RCE CVE-2020-28188
 
 **使用 EXP 文件上传并执行命令**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6cEgwtboqU6UBiazhGbsaEhuOA6KcxjAfRx02KibOYibornPMibQIxaVKCsfDcsUGCPia4HHp1ExHJNvw/640?wx_fmt=png)
+![](../../.resource/remote/cc0bfe4fb6a9d26233d001c3662cef981a755804bca1e0de17d6006804ae9372.png)
 
  ****四:  漏洞 POC🦉****
 
@@ -252,7 +252,7 @@ except:
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -269,7 +269,7 @@ except:
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

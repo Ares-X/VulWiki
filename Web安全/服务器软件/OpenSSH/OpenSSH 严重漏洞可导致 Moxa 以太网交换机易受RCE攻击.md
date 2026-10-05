@@ -43,7 +43,7 @@ schema_version: "1"
 
 Abinaya  代码卫士   2026-01-14 10:48  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -69,7 +69,7 @@ Abinaya  代码卫士   2026-01-14 10:48
 ****  
 **该漏洞影响 Moxa 多个交换机系列：**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRGXnZrVJTjVicib7GpNlktRfoewhsOV5joAc3cuGgdwEa38P5quW3tM6sjASBtaXWRlRYjaicmNYQBQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c3bdc078c3ea601033a78dc8c5fbc952e5a428012e1375339da0ea4ebbc2e85a.png "")  
   
 **Moxa建议用户立即联系技术支持团队以获取最新的安全补丁。对于受影响EDS系列设备，用户应将固件升级至4.1.58版本；而RKS系列用户则应升级至5.0.4版本。**  
   
@@ -127,15 +127,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

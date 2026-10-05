@@ -37,7 +37,7 @@ schema_version: "1"
 #  重大供应链威胁！这个 Java 开源框架存在严重漏洞   
  关键基础设施安全应急响应中心   2023-03-03 14:37  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGoguJ86m5mDbJOo3oc8pib7tf1aAU0biabiaMHxVEleq0rpjwolMibb2ALLliaC2YszqS2o6sgMErm2xPic8Q/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/04669896b6e41b1a159d578ad67cd0de42a839c110165ae988f158f32f688cd2.jpg "")  
   
 美国网络安全和基础设施安全局（CISA）的安全研究人员报告称，一个受广泛使用的开源Java框架中存在严重漏洞并被攻击者利用，以向未打补丁的服务器部署后门。专家表示，这种情况可能会对未打补丁的软件构成重大供应链威胁。  
   
@@ -85,7 +85,7 @@ https://www.darkreading.com/risk/cisa-zk-java-framework-rce-flaw-under-active-ex
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/6a85bd81b6c759a0832fee43a3d96c383ae032b5f74f300eaf04a904e924eab8.jpg "")  
   
 
 

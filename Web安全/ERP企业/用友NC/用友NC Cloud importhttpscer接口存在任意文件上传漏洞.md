@@ -64,7 +64,7 @@ CNVD编号:
   
 用友NC Cloud  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBCic8YVXLxicsBJ5HGC7icicGgCpniauoD7OBcWCiauHDZ8387HYDsTChbPiag/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/4fd310dc87354a5f0aa981d441fa9afbab71ff46171646d3ff2a9e8e9c8716a9.jpg "null")  
   
 用友NC Cloud importhttpscer接口存在任意文件上传漏洞  
 ### 4.fofa查询语句  
@@ -96,30 +96,30 @@ Content-Disposition: form-data; name="file"; filename="./webapps/nc_web/141172.j
 
 > 请求长度说明：原资料 Content-Length 为 190；保留原始标头；其数值未据实际请求体重新计算或验证。
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBDdrEia1g5t2QNOicRpcgbyMg56dO7IngP8iaYHk8rz34LqFb1FY7TdgMg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/d3238c1aaa08f05e0d0d01d44af51c04b9f193a733a9d4f6e1586eab8b001852.jpg "null")  
   
 上传后的路径 http://127.0.0.1/141172.jsp  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBBxr8dfXOMAyWaxwsFtib8Ctljh1OvRWOA9jLdtUynfrVYVEIrTvOoiaQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/84932ffee1482458c64c110b63594c58d1694850bf64ceb60350f2acecbe7443.jpg "null")  
 ### 6.POC&EXP  
   
 关注公众号 南风漏洞复现文库 并回复 漏洞复现116 即可获得该POC工具下载地址：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBHXLTVnEUF3mwvTRKc6qGAyGp8SEPbZdpBL7ss4eW31QbKAJOZQ536w/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/f3f15be8085efc568607a0e5d7083759cc3d4a7779c1cab9bd74cdce110c216a.jpg "null")  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreB1jk67yku5ygoIBICnEW81421DK5ceFcGPqHxmmOwib0UfXMbAHzDTZA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/43a3289fed3e88ec5133751c163ef50cf0b863674e048ebf7b2963938c35b8ee.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBjczIvXnKqENVX9otRcWy7xAjdkJkPaS2Czyib71tZAiacpUhKgoNAYicA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/de0eb5b39dd447696653a50af00f9b78b920bb22ae37e3dd91b09dc7b2ff109f.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBeL7ud0Nhg9gfQDdib18m9GPrDR1HKTCyOr6P7dqdjO3yicEYqPab6YlQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/97c98b18f439a868d8cfa64cedce8533e0b3e047aea351c40ee5c9c04548f442.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreB8s8LTzmySLG7v2j8hUgdWiaCQJtR1FG0IEQ1Kc2UZ7OG8U7v6ia64HSg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/52cf49b8035e39b0d88a3b1ebd2a90cc2530c6d361f456979640567457456ded.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreB8gDl6afESVDRFpXX7Ic6jzvGq6TdeQzN22dcNB2R8XCxPicTPy4YoIQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/cee40f310988c352b2dcd7342d7c204003b81cef9dc7e043db5b852ffdc43cc7.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bHTFNUJ59XrHpomicH2hreBKib6mtJ1KKqW8ic1YWuMjibsiaYsr71x31ibE6qBvbnN9iciavAM9pfF7YcIQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ### 7.整改意见  
   
 厂商尚未提供漏洞修复方案，请关注厂商主页更新： https://www.yonyou.com/  

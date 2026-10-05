@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Bill Toulas  代码卫士   2023-06-25 17:51  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -60,7 +60,7 @@ Bill Toulas  代码卫士   2023-06-25 17:51
 **Fortinet 公司更新零信任访问解决方案 FortiNAC，修复可被用于执行代码和命令的严重漏洞CVE-2023-33299。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRhKmAekLpadfATw9IOQlnwiabZmyr8o4VibLCoT9KKafiaAaiaic9Ov84R8zsHVGCK2AtfjDoqHl41XaA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
   
 FortiNAC 可使组织机构管理网络访问策略、获得对设备和用户的可见性并保护网络免受越权访问和威胁。该漏洞的严重性评分是9.6，是一个不可信数据反序列化漏洞，可导致无需认证下的远程代码执行后果。  
@@ -104,7 +104,7 @@ Fortinet 并未提供任何缓解措施，因此建议应用可用的安全更�
 除了该严重的RCE漏洞外，Fortinet 还修复了一个中危漏洞CVE-2023-33300，它是一个访问控制不当漏洞，影响 FortiNAC 9.4.0至9.4.3以及 FortiNAC 7.2.0至 7.2.1版本。该漏洞评分更低的原因在于，具有足够高权限的攻击者可本地利用该漏洞访问复制的数据。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRhKmAekLpadfATw9IOQlnwiabZmyr8o4VibLCoT9KKafiaAaiaic9Ov84R8zsHVGCK2AtfjDoqHl41XaA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
 **马上更新**  
   
@@ -174,15 +174,15 @@ https://www.bleepingcomputer.com/news/security/fortinet-fixes-critical-fortinac-
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

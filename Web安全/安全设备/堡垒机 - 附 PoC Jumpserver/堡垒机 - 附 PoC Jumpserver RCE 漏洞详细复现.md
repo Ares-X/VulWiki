@@ -71,7 +71,7 @@ source_status: "recorded"
 
  JumpServer 开源堡垒机部署广泛, 遵循 GNU GPL v2.0 开源协议, 是符合 4A 的专业运维安全审计系统  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTGy4CIvwHiaRicbONMEpm570lDy9K02VnxqS0sTFN1u9ic6AsVYAuwx9jBRcS02QicCLe21qQFygXicbDg/640?wx_fmt=png)
+![](../../.resource/remote/303c94b2e5c8cf5af86e88cb54cc6edc567c7d36534185904bbc59e4b518fcde.png)
 
  网上公众号 && 大佬的分析文章已经很多了，参考了 360 安全忍者师傅的分析以后，替大家踩踩坑做一下复现。
 
@@ -207,13 +207,13 @@ python jumpserver_getlog.py 127.0.0.1：8080
 
 获取所用的三个 ID
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgekO6ICdFAPgKmop4RjjbHxibxDwfLf2gia9vxOtGs9xnd20hOz6gSOicH4OuwwRYNLOMia7IntfD3BvbQ/640?wx_fmt=png)
+![](../../.resource/remote/4ecd62391e597a41cbf82301c49dd0425b3abe4463c23806666164fdc29d1a73.png)
 
 **0x02**
 
 替换 RCE 脚本的 ID 53 行处
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgekO6ICdFAPgKmop4RjjbHxibEZ0ZHAK2rwsylUenNyiaO6TvS9fly5NW2885Yo2fcS1FL60AvEiaicWAQ/640?wx_fmt=png)
+![](../../.resource/remote/bc2f15569d013e9bd5c6b210f0a0ce31abd03d07dcd30b15bcaf6affe329a4b9.png)
 
 **0x03**
 
@@ -221,7 +221,7 @@ python jumpserver_getlog.py 127.0.0.1：8080
 python jumpserver_rce.py http://x.x.x.x:8080/  "ls -al"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgekO6ICdFAPgKmop4RjjbHxibEZ0ZHAK2rwsylUenNyiaO6TvS9fly5NW2885Yo2fcS1FL60AvEiaicWAQ/640?wx_fmt=png)
+![](../../.resource/remote/bc2f15569d013e9bd5c6b210f0a0ce31abd03d07dcd30b15bcaf6affe329a4b9.png)
 
 看到这个就执行成功啦
 
@@ -252,11 +252,11 @@ Tip
 [【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-_**走过路过的大佬们留个关注再走呗**_![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTEATexewVNVf8bbPg7wC3a3KR1oG1rokLzsfV9vUiaQK2nGDIbALKibe5yauhc4oxnzPXRp9cFsAg4Q/640?wx_fmt=png)
+_**走过路过的大佬们留个关注再走呗**_![](../../.resource/remote/8cc3570fa84e0214bd4882ca2284917bea9ec1c64bf458282dbf38fe60e6120e.png)
 
-**往期文章有彩蛋哦****![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTHtVfEjbedItbDdJTEQ3F7vY8yuszc8WLjN9RmkgOG0Jp7QAfTxBMWU8Xe4Rlu2M7WjY0xea012OQ/640?wx_fmt=png)**
+**往期文章有彩蛋哦****![](../../.resource/remote/9845d53d925abf99d219f962fd5b665cb348d43f21bae3b477bfa123261bc39f.png)**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTECbvcv6VpkwD7BV8iaiaWcXbahhsa7k8bo1PKkLXXGlsyC6CbAmE3hhSBW5dG65xYuMmR7PQWoLSFA/640?wx_fmt=png)
+![](../../.resource/remote/89e827312c8550f6340812bc85f707828b880d098fb9b95b9e398d9bd40326ed.png)
 
 ---
 

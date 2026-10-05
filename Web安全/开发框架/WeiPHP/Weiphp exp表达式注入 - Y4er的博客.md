@@ -57,7 +57,7 @@ http://php.local/public/index.php/home/index/bind_follow/?publicid=1&is_ajax=1&u
 
 \app\home\controller\Index::bind_follow()
 
-![20191211101117](https://y4er.com/img/uploads/20191211101117.png)
+![20191211101117](../../.resource/remote/8af1ebddbd63a6255252d5aac9de5f4bd9fff08830112eecc6c4c24dd78a19b4.png)
 
 uid直接通过`I()`获取
 
@@ -117,7 +117,7 @@ function wp_where($field)
 
 在elseif语句中，如果传入的字段是数组，并且下标为0的值为exp，那么会执行 `Db::raw()`来进行表达式查询
 
-![20191211102436](https://y4er.com/img/uploads/20191211102436.png)
+![20191211102436](../../.resource/remote/de96fcc966166dbf64c78999716dc7d671ee49fe49f25cc2619bb3b4fc92d9e3.png)
 
 跟进 `Db::raw()` 进入到 `\think\Db::__callStatic`，`$method`为 `raw()`
 
@@ -147,7 +147,7 @@ public static function connect($config = [], $name = false, $query = '')
 } 
 ```
 
-![20191211102708](https://y4er.com/img/uploads/20191211102708.png)
+![20191211102708](../../.resource/remote/eb1e7cc2fe233b980be245b9ebf23e07738dad93e9e3e89292189650a1e8f4e2.png)
 
 返回的是`\think\db\Query`类，那么call_user_func_array回调的就是`\think\db\Query`类下的 `raw()` 方法。
 
@@ -164,7 +164,7 @@ public function raw($value)
 
 发现返回的是一个表达式，最后`wp_where()`返回`res`
 
-![20191211103106](https://y4er.com/img/uploads/20191211103106.png)
+![20191211103106](../../.resource/remote/3d04c38be74ce1900ff376bf31a060a879178c1c5125caf3517efc5fd20fd345.png)
 
 进入到where()
 
@@ -322,15 +322,15 @@ public function find(Query $query)
 } 
 ```
 
-![20191211104045](https://y4er.com/img/uploads/20191211104045.png)
+![20191211104045](../../.resource/remote/a9fab6ac878dfe23f54afae48d1e4a4799b5fd6fb09e17b1e2018434bae07b64.png)
 
 在`$this->builder->select($query)`生成SQL语句，带入恶意SQL
 
-![20191211104703](https://y4er.com/img/uploads/20191211104703.png)
+![20191211104703](../../.resource/remote/62eec787fd3e1f6bb60f602c09cccec64d314acf35d6b2bed976b48a5fe678a4.png)
 
 造成注入。
 
-![20191211104738](https://y4er.com/img/uploads/20191211104738.png)
+![20191211104738](../../.resource/remote/20ccfc4d28facb598239c19133e505fc928e7e8d0273d7fb531e90e781230e5f.png)
 
 影响范围
 ----
@@ -339,7 +339,7 @@ public function find(Query $query)
 
 所有使用了 `wp_where()` 函数并且参数可控的SQL查询均受到影响，前台后台均存在注入。
 
-![20191211110406](https://y4er.com/img/uploads/20191211110406.png)
+![20191211110406](../../.resource/remote/86b01af2b309d47dbd0c7b512ed7a051f0452266d4acb747bc80531677014105.png)
 
 需要登录的点可以配合之前写的《weiphp多数模块存在未授权访问》来绕过登录进行注入。
 
@@ -350,7 +350,7 @@ http://php.local/public/index.php/weixin/message/_send_by_group
 POST:group_id[0]=exp&group_id[1]=) and updatexml(1,concat(0x7e,user(),0x7e),1) -- 
 ```
 
-![20191211105553](https://y4er.com/img/uploads/20191211105553.png)
+![20191211105553](../../.resource/remote/fa8ae158351dd179ad555f738a9729309950db2f09af66c8a18bdc43c0fd7cba.png)
 
 **文笔垃圾，措辞轻浮，内容浅显，操作生疏。不足之处欢迎大师傅们指点和纠正，感激不尽。**
 

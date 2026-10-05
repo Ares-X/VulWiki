@@ -55,7 +55,7 @@ schema_version: "1"
 
 > https://updatenew.dedecms.com/base-v57/package/DedeCMS-V5.7.110-UTF8.zip
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3mQ2386xLP3r3Yow1TsmrbhJtetz4yT66mhaYjeLVInXFpg4YKQYhgg/640?wx_fmt=other)
+![](../../.resource/remote/585d2ea26fd761a831a1f12d73ec36a4484badafd0bb2c16acaf8ddc13def71a.jpg)
 
 影响版本：
 
@@ -78,31 +78,31 @@ schema_version: "1"
 
 > 控制面板 >> 程序 >> 启用或关闭 windows 功能
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3ricdDthe6WNBianhgO4YiaPHLeC0XhG4CWWH6BxbQ3qHdYDvJWUReNUrw/640?wx_fmt=other)
+![](../../.resource/remote/bc5e9458c66edcc96b6d570d525a6b7623d88288616d7c906e9411eb9acfb965.jpg)
 
 完成更改
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3x1KVh6n6ovjM3b6Fd8pfLwtAH5u489MXlovmk9BrPPKOVQeqoCY7uQ/640?wx_fmt=other)
+![](../../.resource/remote/0ec71a865b42f0b11e22a877398a49aee39db610728c979dddac112a9ba99116.jpg)
 
 > 计算机管理
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3LibBbXzHC4qWyWsWePmZZv7eXWsTzDNjcuVtiaMdLGesXqgpGjJ2Gfiag/640?wx_fmt=other)
+![](../../.resource/remote/9bda62d30c9bce16f5758b5848706e17455577e511ee88d1600eeeaf725b265f.jpg)
 
 > 添加 FTP 站点
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3o2ibcptf4tNbkFcVby3VbUoOwiax1NRxw9vNgJZeo6jj8icxJXfSia9wPw/640?wx_fmt=other)
+![](../../.resource/remote/44eba93fa61c7b8cbc11a997eba85aa6ab409f14b4070d35d72027888c4eed5f.jpg)
 
 配置地址以及账号密码
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3JWOMj3RXbsib3FgLWSD9pjVVgQUuuicrCcCeDvuezxQBX3w1N9FxEcAw/640?wx_fmt=other)
+![](../../.resource/remote/dfe5a4742672ffa61bcaaa452f7f98d1f702c94a9ad97b4255189a4b6839932f.jpg)
 
 上面存放一句话木马
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3KeaPWthWsBhbqXcWpJj9bYgicYQabQK221iaQQUSMVMjyfVMVXRiaJzzQ/640?wx_fmt=other)
+![](../../.resource/remote/b688960a033a3edf1d04acbbccdd40753a3b71f324b9c064700a843f3e155a53.jpg)
 
 文件内容为
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3GkRqVAa5ibGQ7uR9ChqzKliaMgzN2HZDIAHQcF2AOwtrQ1IIIsrWXZFg/640?wx_fmt=other)
+![](../../.resource/remote/8db5f376c8b924cc1bc0eedf585bc6c63a55035de94979d2085083316b3b6130.jpg)
 
 payload 如下：
 
@@ -136,19 +136,19 @@ ftp_close($conn_id);
 
 代码中的”ftp_server” 为远程服务器地址，”ftp_username” 为远程 ftp 登录用户名，”ftp_password” 为 ftp 登录密码，”$file” 为远程服务器的 shell 文件名，”$local_file” 为从远程服务器下载木马文件到本地的重命名文件。通过利用 ftp_get 函数远程下载恶意代码文件，代码中的”ftp_server” 为远程服务器地址，”ftp_username” 为远程 ftp 登录用户名，”ftp_password” 为 ftp 登录密码，”$file” 为远程服务器的 shell 文件名，”$local_file” 为从远程服务器下载木马文件到本地的重命名文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3Ko3EGe49tSd1qVa66tGErWC9ryshMxAvoNBPDDxib7wEq8rGUrJHic8Q/640?wx_fmt=other)
+![](../../.resource/remote/f8ca6ed3798d1bd0e189d66d2ed9ebad99c75acad7bcd594363441dd670e8e7a.jpg)
 
 文件保存后，访问路径
 
 /uploads/data/template.rand.php
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3ZbuevpEpJx6W1wyPT9cVMyh4CtwbQA7j2VZurMWECicAF4lHLRFuG1A/640?wx_fmt=other)
+![](../../.resource/remote/a43fec07a3bbf0dbb9b9cd2a9ef56aff2869f76a92ed7143d1b04a2abc454d4e.jpg)
 
 提示已经成功下载一句话木马文件，查看当前目录已经生成名称为 shell2.php 的 shell 文件
 
 http://dedecms.xyz:8066/uploads/data/shell3.php
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3ibicb7kElqb12l2RJ1jg5zV409iaNbLyticBW79ex7JoxBMdbwfQrGNuWA/640?wx_fmt=other)
+![](../../.resource/remote/da47c9920638ef0df225ce890c0140276f7061424d777ade8b36572aa3cf4049.jpg)
 
 成功命令执行
 
@@ -163,7 +163,7 @@ DedeCMS-V5.7.109-UTF8\uploads\dede\media_add.php
 
 继续向下看，文件上传文件处理代码`DedeCMS-V5.7.109-UTF8\uploads\dede\file_manage_control.php`
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3jeiaAImALwQjhlD65Q8YnTzxludVFicIHFiaiaLfibP4pZCicA0cThiaH3G4A/640?wx_fmt=other)
+![](../../.resource/remote/1c22c0c988af403128af8e60e6bb33e5a6a90eff1467ddac93e70ae43fe8c91c.jpg)
 
 代码中定义了`disable_funs`, 但是禁用的函数涉及
 
@@ -175,7 +175,7 @@ $cfg_disable_funs = $cfg_disable_funs.',[$]GLOBALS,[$]_GET,[$]_POST,[$]_REQUEST,
 
 在上面的 payload 中，利用手法利用点儿在于
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3RhuVysG9LfNNB06nhtAY3qoKKMngwX3XIbq0p203OXN1pfxEWRmRUZdyUUpVCUcwn1NUQfBd6J0npxic9LUvGw/640?wx_fmt=other)
+![](../../.resource/remote/e5a2a22e64cc13c81ac52d1a37ce3a25c221454937f75bdf3468a26f8e680580.jpg)
 
 `ftp_get`函数是可以绕过`disable_funs`的，使用该函数实现 bypass 进行远程恶意代码调用，导致 RCE。
 
@@ -195,7 +195,7 @@ $cfg_disable_funs = $cfg_disable_funs.',[$]GLOBALS,[$]_GET,[$]_POST,[$]_REQUEST,
 
 [更多详情，点我查看！](http://mp.weixin.qq.com/s?__biz=MjM5MTYxNjQxOA==&mid=2652885477&idx=1&sn=39e97a60d7b68d19569284654e74ffa1&chksm=bd59ad288a2e243e4d89b7c456fbd44a93d241c881075b342af22431d93dca56e52076ed75ce&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC6iavic0tIJIoZCwKvUYnFFiaibgSm6mrFp1ZjAg4ITRicicuLN88YodIuqtF4DcUs9sruBa0bFLtX59lQQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif)
 
 靶场实操，戳 “阅读原文”
 

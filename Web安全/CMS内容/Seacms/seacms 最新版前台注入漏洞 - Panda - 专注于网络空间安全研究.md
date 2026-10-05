@@ -58,7 +58,7 @@ schema_version: "1"
 
 海洋影视管理系统（seacms，海洋 cms）是一套专为不同需求的站长而设计的视频点播系统，采用的是 php5.X+mysql 的架构，使用 fofa 搜索可以看到存在 400 + 的记录：
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/1956800292.png)
+![](../../.resource/remote/4f407474e040b11f454fc58d56deda077be08f1a1bf6ec6ff9f69f9889bc762b.png)
 
 0x03 漏洞分析
 ---------
@@ -552,7 +552,7 @@ function CheckSql($db\_string,$querytype='select')
 
 至此，整个漏洞挖掘的链就形成了，如下图所示：
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/1898956867.png)
+![](../../.resource/remote/bd3c2692b36e7ff6f5e70f7ff77310b146a09a9a0f619ba45ca19da5cea0f2aa.png)
 
 可以看到，其实该漏洞挖掘的关键点有两个：
 
@@ -576,9 +576,9 @@ UNION.+?SELECT\\s\*
 
 接下来就是第二个关键点，`CheckSql()`函数过滤了一大堆东西，这个函数原本是 80sec 写的，开发者对这个过滤函数进行了修改：
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/1992186737.png)
+![](../../.resource/remote/48858e1c158f9ae0d16bddc3ee1c861d464b115734f69c5db333f87c5bc8fbc7.png)
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/779418631.png)
+![](../../.resource/remote/9f5aa50af629a1a345cf777b9aff3709d6ba7ec732b04d1d7eece7b13a261595.png)
 
 可以看到，作者增加了对关键字符、关键字的过滤清空，但也正是这些多此一举的内容导致我们可以绕过这些过滤。
 
@@ -641,19 +641,19 @@ UNION%20SELECT%23%0a1,password,3,4,5,6,7,8,9,10,11%23%0afrom%23%0asea\_admin-- @
 
 但是骚气的地方是：
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/2167077469.png)
+![](../../.resource/remote/f978fde1af156e498eed98c457642ec5a3e46a717a2286f58c8c40c43c3d36ad.png)
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/1449914742.png)
+![](../../.resource/remote/72cbfeff3672028e8ef071a9b1b1f2df1db387c3bfc0c58e448f654a261ae7c8.png)
 
 可以看到，经过 `CheckSql()`函数过滤的 SQL 语句并没有传入 `mysqli_query()`中去执行，在`mysqli_query()`中执行的是原始的，在`Readmlist()`函数中处理后的语句。这里的 `CheckSql()`函数也仅仅是起到判断作用，根本是没有对传入的 SQL 语句进行处理。
 
 我们可以看到最终传入 `mysqli_query()`中去执行的 SQL 语句如下图所示:
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/2037389285.png)
+![](../../.resource/remote/d9adffe4292c1a02a2c88a06e86623b15d32b167f07cd7f967dea88d01691a87.png)
 
 最终的执行效果：
 
-![](https://www.cnpanda.net/usr/uploads/2020/06/1704596438.png)
+![](../../.resource/remote/d22967f05298166b2e80f6663777cdd3a1885e27aa9fefc5e477f4d18ed14a8b.png)
 
 0x04 结尾
 -------
@@ -662,7 +662,7 @@ UNION%20SELECT%23%0a1,password,3,4,5,6,7,8,9,10,11%23%0afrom%23%0asea\_admin-- @
 
 使用微信扫描二维码完成支付
 
-![](https://www.cnpanda.net/usr/themes/sec/img/alipay-2.jpg)
+![](../../.resource/remote/2ec205f4d4e1861bf4478fe73de2635e47f5aa7c772331de6ba73a1f962e3cce.png)
 
 ---
 

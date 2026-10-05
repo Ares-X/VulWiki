@@ -99,7 +99,7 @@ schema_version: "1"
 
 #### 漏洞流程
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icefLCXrhxfiaL8rS88b6drJpBKU0FZ0q33zQac5s5ZTibdhd5kllCBQZaK3QoZ1Cvs3IOvLV3ocklHt6EyT2hCBA/640?wx_fmt=png)
+![](../../.resource/remote/b5cb696fb7141a57626688b664eb4275641c3eba72a1806ff83be57535bda208.png)
 
 0x03 漏洞分析与复现
 ------------
@@ -126,19 +126,19 @@ contract Attack {    EtherStore public etherStore;    constructor(address _ether
 
 1）受害者: Tony 在 EtherStore 合约中存入 2 ETH 2）攻击者：Hacker 也在 EtherStore 合约中存入 2ETH 3）这个时候 EtherStore 合约中存在 4ETH 4）攻击着使用 Attack 攻击合约对钱包里的 ETH 进行重入攻击，清空合约里的 ETH
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icefLCXrhxfiaL8rS88b6drJpBKU0FZ0q3sUcAPV0luoUVdRibVJicOFefE3LjicyiaXbAW7eK1noibN0ZaJpX9kDCsTQ/640?wx_fmt=png)
+![](../../.resource/remote/8974a4969a5f94be2f4c55ab0349b213bc9fa01b1cf44de90da9772b412b19e7.png)
 
 这个时候合约已经被存入了 4ETH，目前攻击者的合约中是不存在 ETH 的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icefLCXrhxfiaL8rS88b6drJpBKU0FZ0q3A7VIsQHIlVZax74ibsMjvTDOy3I8vJdjRgCo40OGAs0tEicWuyYt3Deg/640?wx_fmt=png)
+![](../../.resource/remote/7f36bf95c2994670011d64a39d1253f836e339a52909ecaa5d6a6ed65846697c.png)
 
 那么我们开始进行重入攻击！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icefLCXrhxfiaL8rS88b6drJpBKU0FZ0q3PsZgDPMxf0nWg5QiaPVn5te7trSchqNvHbXLoGicw27TvPc8eHHpSiaYQ/640?wx_fmt=png)
+![](../../.resource/remote/3cc9faa0e0524fe96cc6179b2dd94b1bff4411890ccc4f7b80e387981a3bdc78.png)
 
 可以发现，EtherStore 合约当中的 ETH 已经被清空，转而在 Attack 合约当中出现了 4ETH。证明，重入漏洞攻击成功，EtherStore 合约存在重入攻击漏洞。
 
-**攻击者的函数调用流程图：(转自 FREEBUF)**![](https://mmbiz.qpic.cn/mmbiz_png/icefLCXrhxfiaL8rS88b6drJpBKU0FZ0q3NHW0Kibg3QOKYrLlKEibCNo8ObazOiaNTMfjqHyc8lCblcYy0xGC0hXIA/640?wx_fmt=png)
+**攻击者的函数调用流程图：(转自 FREEBUF)**![](../../.resource/remote/403568b96adb42e73bd66cb143c3ef0d4920d68183fc2ced8e8d273c33001f9a.png)
 
 **漏洞预防**
 

@@ -372,7 +372,7 @@ InputTag.tag的内容：
 
 ```
 
-![image-20200331090423266](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131645.png)
+![image-20200331090423266](../../.resource/remote/2899b6fb1cddc49f36d18e7fb662f0ac86c306e8b09f8ddd298ced13d26ac454.png)
 
 执行命令：
 
@@ -384,7 +384,7 @@ InputTag.tag的内容：
 
 ```
 
-![image-20200331092210362](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131647.png)
+![image-20200331092210362](../../.resource/remote/dd76747f2e6e6e6b62dfdb6b40f4b293677903b13ef07077af9002a881e36fdc.png)
 
 但是此命令执行，不会在页面上显示，只会打印出运行的对象。
 
@@ -466,9 +466,9 @@ POC：
 
 ```
 
-![image-20200331111056698](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131651.png)
+![image-20200331111056698](../../.resource/remote/9193b5b4c2242b0007e2d32db04dfbe9d68d977bdf6192c6133d3f29392fa275.png)
 
-![image-20200331111146008](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131653.png)
+![image-20200331111146008](../../.resource/remote/97b25f0f3cab42a05aafaf55e4facf10e10f75a31c2927f730d6e25bd0be4faf.png)
 
 无害化payload检测，如果 response header 中出现 vulnerable 头，则有漏洞：
 
@@ -480,7 +480,7 @@ POC：
 
 ```
 
-![image-20200331111225481](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131655.png)
+![image-20200331111225481](../../.resource/remote/5b6c9f228b8d56c3aa283ef5dbe9dd36b5cd06811a5f814eda3b20ed7a04390a.png)
 
 ### [](#CVE-2017-8045-Spring-Amqp中的远程代码执行 "CVE-2017-8045 Spring Amqp中的远程代码执行")CVE-2017-8045 Spring Amqp中的远程代码执行
 
@@ -514,9 +514,9 @@ POC：
 
 ```
 
-![image-20200331114458798](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131657.png)
+![image-20200331114458798](../../.resource/remote/15b77d3576ee22bedb0525ace878bbceab390e466bc89d5a62f5c3e3bcfe594b.png)
 
-![image-20200331115328723](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131700.png)
+![image-20200331115328723](../../.resource/remote/4af61612b8cbdb6dc033089a7d31fde6a9875f01a146614e06aeee16daa2e7cc.png)
 
 ### [](#CVE-2018-1258-Spring-Security未经授权的访问 "CVE-2018-1258 Spring Security未经授权的访问")CVE-2018-1258 Spring Security未经授权的访问
 
@@ -558,15 +558,15 @@ POC：
 
 ```
 
-![image-20200331163229079](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131702.png)
+![image-20200331163229079](../../.resource/remote/6c487808d3d4c1b0e7c61e0a1ef9d6f97b3c51aa00a9a57c38d424c53d75b852.png)
 
 从bp中看到来回四个包，其中的内容为如上所示，修改如下请求包
 
-![image-20200331170304494](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131704.png)
+![image-20200331170304494](../../.resource/remote/8fb53b0c5b63f2859efc0600cf7fe80871a63b67af73efb79f945a8d707abab9.png)
 
 在发送任意消息，即可触发
 
-![image-20200331170357879](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131707.png)
+![image-20200331170357879](../../.resource/remote/47853544e16afd08a192231ebdbc7149458d9de6453d233736acc52873e068eb.png)
 
 或者尝试使用vulhub提供的脚本，但是此脚本并不具备通用性，需要修改使用[poc](https://github.com/vulhub/vulhub/blob/master/spring/CVE-2018-1270/exploit.py)
 
@@ -602,7 +602,7 @@ POC：
 
 [https://www.cnblogs.com/hac425/p/9656747.html](https://www.cnblogs.com/hac425/p/9656747.html)
 
-![image-20200331171801189](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131709.png)
+![image-20200331171801189](../../.resource/remote/e1fade093299567699e4c4bd0f388844e2f59ef88c28e7ecf14951660594af82.png)
 
 POC：
 
@@ -671,7 +671,7 @@ POC：
 
 ```
 
-![image-20200401094048949](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131712.png)
+![image-20200401094048949](../../.resource/remote/5d29b916f7681b66abb69c53a350c12c17f4758f4a1b7364280de09a5fce3247.png)
 
 即授权了读取权限的时候，修改为all就可以获得全部权限。
 
@@ -704,7 +704,7 @@ POC：
 
 其中路径代表：`/{name}/{profile}/{label}/`，如下中所显示的json。
 
-![image-20200401102213915](https://github-1300513062.cos.ap-shanghai.myqcloud.com/img/20200401131715.png)
+![image-20200401102213915](../../.resource/remote/3c2f4d93fafeffd0eacaef1f94085966a9a5f126e69024cc952bbba4b8c7d9ab.png)
 
 ### [](#CVE-2019-3778-Spring-Security-OAuth-开放重定向 "CVE-2019-3778 Spring Security OAuth 开放重定向")CVE-2019-3778 Spring Security OAuth 开放重定向
 

@@ -63,7 +63,7 @@ source_status: "recorded"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -71,7 +71,7 @@ source_status: "recorded"
 
  **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -79,7 +79,7 @@ source_status: "recorded"
 
 ER G2 系列路由器是 H3C 公司推出的一款高性能路由器，它主要定位于以太网 / 光纤 / ADSL 接入的 SMB 市场和政府、企业机构、网吧等网络环境，如需要高速 Internet 带宽的网吧、企业、学校和酒店等。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -87,7 +87,7 @@ ER G2 系列路由器是 H3C 公司推出的一款高性能路由器，它主要
 
 ### ERxxxxG2 (ER2200G2)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -97,7 +97,7 @@ ER G2 系列路由器是 H3C 公司推出的一款高性能路由器，它主要
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCsl6WNUnPh9j2UPTVpSDwQAib4IDAicLqQ4ib1EyIYMickVib2yDbeWic1tN6LK0qibtb667akmxPfZR5vw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5b6ca5b2bfc25a4747cf2890a756c3fd0b3d48aa2860b371ee3d9735b5f5f947.png)
 
 2. 对漏洞进行复现
 
@@ -111,13 +111,13 @@ Host: 127.0.0.1:8081
 
      漏洞复现，请求该地址查看响应结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCsl6WNUnPh9j2UPTVpSDwQnOIYq0zS8RvTFLFjcHTMdNicXOGrcdXKfZiaVBpfPxXo06M7vYsqzziaA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/96a4c44ec4009a42ddb86cbe5ff649346fb9716f165f47fc1f0344865badd4c3.png)
 
  通过泄漏的账户密码信息**成功登录**。（响应中查询 webadmin 获取密码）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCsl6WNUnPh9j2UPTVpSDwQYpiaGZ1wG7Vq6Zap8EmVM5wQ710tzeYPJ2s5icT2moq2ZM9A17G77U5g/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/98b9e5c540e2f8ade57e0d7633a925df02e248fd398cee540c320ae2dab93339.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -138,7 +138,7 @@ https://www.h3c.com/cn/Products___Technology/Products/Router/Catalog/ER/ER3200/
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -154,7 +154,7 @@ https://www.h3c.com/cn/Products___Technology/Products/Router/Catalog/ER/ER3200/
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

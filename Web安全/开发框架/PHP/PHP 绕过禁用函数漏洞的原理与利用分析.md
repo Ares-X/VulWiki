@@ -41,7 +41,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/_KCqGJnHaCBjCZ0VPo898Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif) 聚焦源代码安全，网罗国内外最新资讯！
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif) 聚焦源代码安全，网罗国内外最新资讯！
 
   
 
@@ -63,7 +63,7 @@ PHP 7.2 - 7.4.9
 
 在 array_merge_recursive 函数的实现中，通过遍历源数组键值，如果键值不存在，则将对应的值直接插入目标数组；如果键值存在，则查询相应的目标数组。在目标数组不存在此键值时，将键值与相应的值插入目标数组；如果存在相同的键值，则会尝试将相应的值加入到目标数组中。具体处理如下图，在目标值为 NULL 时，将其转变为数组类型并在数组中加入 NULL，在源数组中的值为对象类型时将其转换为数组类型，尝试为 src_entry 添加引用后将 src_zval 添加到数组中；如果源数组中的值类型为数组则递归调用 php_array_merge_recursive 函数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yocwExcc4MteicvLUE89bIia6UKwOL5SJXovPSTgmo89jQzS9KVz97H7Nw/640?wx_fmt=png)
+![](../../.resource/remote/24efe3c94e5b83ca5501d55a4af30e8b1268ddcac12e1a3d23af69a9f9a6edad.png)
 
 **二****、****原理分析**
 
@@ -77,33 +77,33 @@ PHP 7.2 - 7.4.9
 
 1、在字符串被释放后，创建一个新的对象占位，进行类型混淆，此时字符串的 len 被新创建对象的 ce 覆盖。ce 是一个地址，所以后续不会影响字符串的写入。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yoq0L0J1t58g4o0Zs9cVNYkwQ1Iyu0tsWQUGtQXvBrA9aEO19I7ibYdHQ/640?wx_fmt=png)
+![](../../.resource/remote/f14b4908987b60440cda8ff42200b5f2717660a39e35af67c8aa66dc66b607fe.png)
 
 占位前后对比图如下：
 
 字符串对象被释放后，创建对象前：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yo4kae0G1WzmLFqJAKhdWyfwtndJkMskoxLiavx2UzwWfZhM5QZNtZh2A/640?wx_fmt=png)
+![](../../.resource/remote/de86efe17ab5392c837c53d3ce62f24fd65860c72ec20d01bc7495e78017809f.png)
 
 创建对象后：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yoCJYicpXvd37c8nEGoBKlwRZQpmFicmxQOpicsBdkIfiaChKAR34XnlMdOQ/640?wx_fmt=png)
+![](../../.resource/remote/8ad5078405ee47e5f30701fd2592d69e03db34ab42b2d4cd8965b090e307a61e.png)
 
 2、读取新创建对象的 handlers 方便之后泄露内存信息，handers 的值即为上图的 0x0000000008dfe500，在后面可以达到任意内存读取后可以用来泄露 php 基地址。读取新创建对象中包含堆地址的区域，获取被释放的字符串地址，例如可以读取 0x7ffffb080540 中的堆地址，减去 0xc8 即为字符串对象中的字符串地址 hex(0x00007ffffb0805b0 - 0xc8) = 0x7ffffb0804e8 即为字符串对象的 val 属性的地址。
 
 3、将新创建对象的一个属性的值指向的类型改写为引用，引用的地址为一个伪造的引用字符串对象。可以将新创建对象的第一个属性即 properties_table 数组中的第一个元素的类型改为引用，地址改为伪造的引用字符串对象的地址。地址 0x7ffffb0804f8 保存的即为新创建对象的第一个属性的地址，地址 0x7ffffb080500 中存储的 0xa 代表引用类型。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yopakQbc7cjEaa9k5gibcAiasQm1WoLDF6Gy4LEqibq0M1eT31hZPtZoA1g/640?wx_fmt=png)
+![](../../.resource/remote/fee69d58de7591b03739b5c51e8b03c9a4c491de3ebe7c29aa880ed06d8a75f5.png)
 
 其指向的地址 0x00007ffffb080548 保存的为伪造引用对象的地址，伪造的对象的第三个八字节需置为 6 （引用对象的类型）。引用字符串对象的内存布局如下图。可以看到，引用中保存类型为 0x6 代表字符串类型，但是地址为 0x0，之后可以通过写入任意地址来达到内存读取。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yomIuTCBbeRjCu9jwshsicA51Wbolh7PpYdWXP1oTc3WTI5nnptjE97UA/640?wx_fmt=png)
+![](../../.resource/remote/b25701a696353c041de1837d152e488df3b6a3472d30a91d45a3e6d5ab842d6c.png)
 
 4、通过修改伪造的字符串的起始地址来达到任意内存读取，利用之前泄露的 handlers 地址来获取 elf 基址，之后遍历内存获取 zif_system 函数的地址。
 
 5、伪造一个闭包对象，从一个真实存在的闭包对象拷贝其存储的值，修改函数类型为内置函数类型，has_dimension 属性地址为 zif_system，修改后如下图。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yoljT5Oon3vyv4nuAU4xcZIkTiaRStTVWibgTJx5XicUn22WVBAQ4mRhiaCQ/640?wx_fmt=png)
+![](../../.resource/remote/7093ee278f2ac08d09f026f49a5ef2da84a26d2bd1f554baaf644b3084d4f5c6.png)
 
 6、修改对象的一个属性地址为伪造的闭包对象的地址，调用对象的属性函数即可完成禁用函数的绕过。
 
@@ -119,7 +119,7 @@ PHP 7.2 - 7.4.9
 
 修改 Z_TRY_ADDREF_P(src_entry) 为 Z_TRY_ADDREF_P(src_zval)。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yokjma2RKgZaj3Gib7p8EttWmAw2Hic6tfqS7IXCrjCnvCEhEYVNdU0ibibw/640?wx_fmt=png)
+![](../../.resource/remote/7b137c7cfcd9a6372012e74cb8f05df1aaf2829ca67ffae20367975edba35788.png)
 
   
 
@@ -130,7 +130,7 @@ PHP 7.2 - 7.4.9
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQUGmGl5DEIvfgYZ064WQYaxjN2cKvlbL3OEXEecGHBaIgqpwGaiavDx3ZVSvZ3ibP4ujibAqNjKCYOQ/640?wx_fmt=gif)  
+![](../../.resource/remote/1d40c1849dee68a923c2427245727f0e0eacd78567024699b2df988b83357c8c.gif)  
 
 **别走，代码安全实验室招人****了！**
 
@@ -184,9 +184,9 @@ PHP 7.2 - 7.4.9
 
 **转载请注明 “转自奇安信代码卫士 https://codesafe.qianxin.com”。**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMQjfQ8ZhaOGYOwiaOkCe6UVnwG4PcibqI6sJ3rojqp5qaJa0wA2lxYb0VKwria7pHqS9rJwSPSykjMsA/640?wx_fmt=jpeg)
+![](../../.resource/remote/59c36c89c7889c00786e4989b5756a8de1a93095a9d4d19052e75a426838597c.jpg)
 
 **奇安信代码卫士 (codesafe)**
 
@@ -194,7 +194,7 @@ PHP 7.2 - 7.4.9
 
 产品线。
 
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif) 觉得不错，就点个 “在看” 吧~
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif) 觉得不错，就点个 “在看” 吧~
 
 ---
 

@@ -77,7 +77,7 @@ app="Chroma-ChromaDB"
   
 资产大约4500个  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/uqtLGQlJSxXXI2r8J2P1LVsVvib4n1ssyBn7hIo9cicH6Qrn3h9s0EaSferGKIEq4oaDMiafLVaf9RIAUe9ibBMQmibWicNg5wgk5cnGR22A4C7icI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f8c0acfa173bb76807229e158bd582185b7f5aefe0def65c501d2395b08772fd.png "")  
   
 五 漏洞利用  
 

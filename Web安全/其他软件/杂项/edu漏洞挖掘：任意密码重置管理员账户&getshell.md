@@ -62,7 +62,7 @@ schema_version: "1"
   
 登录口找回密码：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjD3P3fkYE7Egn2qo7bpibWQicdnxRceOaBpRKbhpkmiaFONk2LgIwTfick1A/640?wx_fmt=png "")  
+![](../../.resource/remote/e53bf99f259db6409413abcd54ee29cd7bd03891f298c52fa565b9ab395e579d.png "")  
   
   
 输入找回admin  
@@ -70,13 +70,13 @@ schema_version: "1"
 下一步  
       
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjD7MCrRocTw2a4DTl8s6GzNiaMGiaAwlD43MHtp4rAkQWmV48yLiaiauGhOA/640?wx_fmt=png "")  
+![](../../.resource/remote/176d34f1b74067ea1b500b2adf3362288498abf13cf597022b016c9877159173.png "")  
   
 虽然是后四位  
    
 可以直接爆破 但是这里不用 直接随便输入一个抓包  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjD1wIyKic7PEuN3icAM542TIkGMhbZrrwPZRk44JsiaxTibIqPntquRFylOw/640?wx_fmt=png "")  
+![](../../.resource/remote/3912913edfc8270d098179d7fd81c4a24e655d385fd7139a43268c6d29ca826e.png "")  
   
 ```
 GET /ajax/Users/xxxxxxxxxxxs.aspx?LoginName=admin&Panswer=1111 HTTP/1.1              
@@ -95,22 +95,22 @@ Connection: keep-alive
   
 把返回包的数据修改为success  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDyib6PCz7IqiasI5awor0UtAfTB0y3js0WGg4kcQrRVFOTxic1IVzIib1gQ/640?wx_fmt=png "")  
+![](../../.resource/remote/6d1c5277cca48a46f6985a334bee67007bc65f45f60f20b8a01c72ddcdbea83c.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjD7K8pgiaTEUdyFsB8PZ7FsFTNpJ2GxcRIFWycwwyTj0vxQhCZCev6IDg/640?wx_fmt=png "")  
+![](../../.resource/remote/78e539fcb5668808d0d521209f25b73c961a8b2729c8ca5c706c91a410d9645e.png "")  
   
 输入密码  
    
 修改成功  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDWLibC6VCicZ7ugqiafrqUOHdERxkQE8ZCELdPia0k7DBRoswv95um3txiaw/640?wx_fmt=png "")  
+![](../../.resource/remote/cb7d1b30900dd349a19abe751decbf9d1c8bafbeb4d0e78ee94c025216720432.png "")  
   
 他这个个人社区的账户是和后台管理的账户是绑定的  
       
   
 账户密码是一样的  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDqkT6tDZ8WibvUibiaKzHyNbcQZhTsX3FNWKod4iceaLRUBBzD8Avt9jFzw/640?wx_fmt=png "")  
+![](../../.resource/remote/ea51bdc2ed41ebf07da5a96d271f0ffc23c3807f07d4cc4cbd04fc9968386811.png "")  
   
 登入成功  
    
@@ -124,7 +124,7 @@ getshell
 先上传一个正常的图片 获得路径  
       
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDY4n18xib3xQv0stCqX2nWcywLslI2a3licBz2PY8utYENAKOMTljkMRg/640?wx_fmt=png "")  
+![](../../.resource/remote/4c4022a521de87a50d96d8693a433036a07e76467e164e9413f7406e661b48c4.png "")  
   
 然后再抓一个上传正常的图片的包  
    
@@ -143,7 +143,7 @@ a.SXEWH = Request("shell")
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDCXGTPIC2Pe4pLemTfSVxvwMFN0zYszIjETNCibB0rRZUjVXcIUlaMtw/640?wx_fmt=png "")  
+![](../../.resource/remote/696cc5669f5b3762fc67ef3d61b58020713dfa41eb79106a092ad177abcd46cd.png "")  
   
 上传成功  
   http://xxxxxxxx/xxxxxx/xxxxx/admin.asp  
@@ -152,25 +152,25 @@ a.SXEWH = Request("shell")
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDfk18PC7JnmCPYWP69OITnQwnOctgiaV07VicpJnibthl5XAeZ29xqTO0A/640?wx_fmt=png "")  
+![](../../.resource/remote/909039df87670c56c5efc2d9b6adc529a1da2fb6ce3e55cdf14a027c3ec2e5e2.png "")  
   
 还有大量sql注入  
   
 抓此处检索的包  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDkzywuWmrvNEpG9HK83qRWenzrug6vmZyayRxkXtazZ0YPjqEWJNnQw/640?wx_fmt=png "")  
+![](../../.resource/remote/fbbaa0b9b7984e84f1ff19c502d56fa910615075977021165502d8ea8fcc538c.png "")  
   
 发现单引号报错  
       
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/98XEXnUkvMibxCB3AxOnXQCaWOo0EP6ChkSAZzLX2OGvzTuZI3XoibHibnzQax9y5e6EPMxcFKRAHNic1DS6JCpyeA/640?wx_fmt=png "")  
+![](../../.resource/remote/177addc331eda8eaa61b4e926b88a6ce569aa96bd49655b6f7399249b3317ee6.png "")  
   
 这边图方便  
    
 直接sqlmap 一把梭  
       
   
-   ![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDahgHQQP08rjYOxdrM8a3kULGMrSAkWyZGnEksByQ4InO6mPwrOpAQA/640?wx_fmt=png "")  
+   ![](../../.resource/remote/0ec6df314cbe84deb2f4ae57d8d4095f5d323ec5b69ffdcf9e4f84505eecb043.png "")  
   
   
 也是找到了三个接口存在sql注入  
@@ -179,7 +179,7 @@ a.SXEWH = Request("shell")
 最后也是共计拿下12rank  
       
   
- ![](https://mmbiz.qpic.cn/sz_mmbiz_png/qERLC0KMKDFHqah8rxEsYgOmPjjGSGjDJGcjFB95XFlsEqJkDMwUgPnhsGxySrPYT86MVGztQtNDruGCbhENYQ/640?wx_fmt=png "")  
+ ![](../../.resource/remote/0c8e6fa09747ffa2b143cb8fc45ed2e964656b6a93a7170f09f9b3f432f00e3b.png "")  
   
   
 bytheway  

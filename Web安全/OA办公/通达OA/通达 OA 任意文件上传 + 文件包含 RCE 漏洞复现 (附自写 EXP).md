@@ -192,11 +192,11 @@ json 中的值，根据返回的文件名进行构造，例如： 2006_209898972
 python3 TDoa_RCE 目标url -f 选择的功能
 ```
 
-![](https://img2020.cnblogs.com/blog/2063846/202007/2063846-20200723113259363-1757148902.png)
+![](../../.resource/remote/26646c09ab04bd9770fddcda4fec46153d7b66eadfa2c772c2a26e299206fe40.png)
 
 生成 webshell
 
- ![](https://img2020.cnblogs.com/blog/2063846/202007/2063846-20200723113337751-1493871276.png)
+ ![](../../.resource/remote/f981b103e7508b8f80e14f7ef0d8327b1707affdb5a49dddab0479812b8ad35a.png)
 
 脚本就不直接放在这了... 需要的可以联系我 (QQ 或者 wx 公众号后台留言)，注意：仅作为学习和讨论使用，禁止任何违法行为，与作者无关！
 

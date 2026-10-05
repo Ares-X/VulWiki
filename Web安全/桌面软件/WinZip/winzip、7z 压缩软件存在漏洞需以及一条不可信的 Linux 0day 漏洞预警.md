@@ -57,7 +57,7 @@ schema_version: "1"
 
  独眼情报   2024-11-23 07:09  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTNNicdRDCjuRO46761bVq60uyWOvYxspDyt1lHzDdGw8RA63e84jGRo2LibdySVg73G9tnfg1zvkTw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3a5bf24f458246defcc978491c85a673b93b1e2ed600d68b3c8c25ab0c564772.png "")  
   
 安全研究人员发现了广泛使用的文件归档工具 WinZip 中的一个严重漏洞，该漏洞可能允许攻击者绕过关键的安全措施并可能在用户的系统上执行恶意代码。  
   
@@ -97,7 +97,7 @@ schema_version: "1"
   
 卖家是 0 贴用户，也未提供 poc 不可信。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/KgxDGkACWnTNNicdRDCjuRO46761bVq60pzsslGgciba1LuNG346CRDevdSDhcvFYIRflueoq6DxQtgicy3y8gKTQ/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/d912e954f3f041899afce69f8a8fce44a135c9dcf357727cf1f0bb8b97df3777.jpg "")  
   
 
 

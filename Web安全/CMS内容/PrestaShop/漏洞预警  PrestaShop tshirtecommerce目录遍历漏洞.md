@@ -46,7 +46,7 @@ schema_version: "1"
   
 PrestaShop是一款功能丰富、基于PHP和MySQL的开源电子商务平台，而PrestaShop tshirtecommerce是基于PrestaShop搭建的，专注于T恤销售的在线商店系统，具有界面友好、易于上手、支持多语言多货币等特点，能帮助商家快速创建和管理T恤销售的在线业务。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SV9NDND6X8IXxCMkeiatzSt6CYJZmjGBJc8KuwlyQEL6GqHQmqjk1ekoOT2libyhCx9Lf8CPmYBbibtA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1 "")  
+![图片](../../.resource/remote/2499ca87208230d126824f49b22aeed82c0f50c6c5d78a2132afa82efbca2300.png "")  
   
 **0x03 漏洞详情**  
   

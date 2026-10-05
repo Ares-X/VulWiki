@@ -68,7 +68,7 @@ Casdoor 系统 static 任意文件读取漏洞
 
 版本信息不详
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfiaBttws98o9evb7fvnr8PFK0SlbAzwSKktibJYGajodA46123x3Ewd99g/640?wx_fmt=png)
+![图片](../../.resource/remote/54af44f84a3de13c421c19280d50403d5be89d8827e4cb190d167123fc40d005.png)
 
 03
 
@@ -149,11 +149,11 @@ nuclei poc 已上传网盘，后台回复【0006】免费获取
 
 运行结果如下
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfiaeWZMuG466yTtcmPDmDcDIEzb3b2EiaA3MHEFf7RibOh5otoe2oyhicYcQ/640?wx_fmt=png)
+![图片](../../.resource/remote/5ab15dc025f59db246bd44e1929b36074813a0490a2018945b7254e690a9aae6.png)
 
 上述命令中的 - me 表示输出 markdown 文件，方便查看数据包
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfiatvRDvMThCFIar3P2PD4Zia2XRekgcXR9UvWM32xDxcficFjFWxicSEjNw/640?wx_fmt=png)
+![图片](../../.resource/remote/2b4f2edf87db9154b3afce0af5be708ce75b8853d4bfc162dfdfa3a9c62d098e.png)
 
 07
 

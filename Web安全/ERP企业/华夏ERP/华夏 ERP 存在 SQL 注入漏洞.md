@@ -109,7 +109,7 @@ schema_version: "1"
 src/main/resources/mapper_xml/UserMapperEx.xml
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YuSY9mticHm3T872zjEAntcNlordxU2Yfd0uB8jSNAz8qo0bzJsH406w/640?wx_fmt=png)
+![](../../.resource/remote/63acb294eb703e80b56fd9b2f8c09006e029a4914eef44969b4f758a59e30d92.png)
 
 使用 mybatis 时 ${} 会对参数和 sql 语句进行拼接，因而存在 sql 注入漏洞
 
@@ -117,7 +117,7 @@ src/main/resources/mapper_xml/UserMapperEx.xml
 
 正常查询  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Y53Qlmw7z2fyWv54iaeVETYmGZZH0CibGqWDRYxaiclhkuqLqnjuXFsHZg/640?wx_fmt=png)
+![](../../.resource/remote/89f35dfffe86463043598946d0e32bbe26da894bae9e3cd4f556c4776cc846c9.png)
 
 ```http
 GET /user/list?search=%7B%22userName%22%3A%22%22%2C%22loginName%22%3A%22q%22%2C%22offset%22%3A%221%22%2C%22rows%22%3A%221%22%7D¤tPage=1&pageSize=10&t=1615274773529 HTTP/1.1
@@ -134,7 +134,7 @@ Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0
 
 使用 sleep 延时注入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YM6rH6hNlXBzGibnH7giaXQ2iblT35Yibl8vJOxVJJ0y4FM3M8t53xY4c4g/640?wx_fmt=png)
+![](../../.resource/remote/2bf556a57a821178ff9a029d0e0e7b9fa23260192b53ec63e0925652ed52b04a.png)
 
 ```http
 GET /user/list?search=%7B%22userName%22%3A%22'and+sleep(3)--%22%2C%22loginName%22%3A%22q%22%2C%22offset%22%3A%221%22%2C%22rows%22%3A%221%22%7D¤tPage=1&pageSize=10&t=1615274773529 HTTP/1.1
@@ -153,41 +153,41 @@ Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0
 
 src/main/java/com/jsh/erp/controller/ResourceController.java
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YrfNG1EjePhr2EofCgGI4U09D9NyWd5uZiafA29ddf5ia44aPUUwxFhcA/640?wx_fmt=png)
+![](../../.resource/remote/9475c460001248dc5e8f0829368f4f8cdd32ce4d72087ade004c0c820c8e73a1.png)
 
 src/main/java/com/jsh/erp/service/CommonQueryManager.java
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YUr2tCy2p8ImULvRia9PaKXaYqT5vn5EptEE9VickRTrAU55pKuoZ0Sug/640?wx_fmt=png)
+![](../../.resource/remote/e4c620044c7dcbb9eb311016b3cd827c0c37cf74079dd9ee175bfb6b41b6cf0d.png)
 
 src/main/java/com/jsh/erp/service/user/UserComponent.java
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YtiaokDicq8xOicLVddoko6QgfTe0bfJwL2fkP4IAicyPiadtGlc3ulJ4sVg/640?wx_fmt=png)
+![](../../.resource/remote/3c37604159d9f56facdef35e557f3ce887ca956ea7da61b92f45039004ff28d7.png)
 
 src/main/java/com/jsh/erp/service/user/UserService.java
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YFWtiaUibZf3RNP967ic8pxj8j1Oh3jtRlz2ryKAUPGUOmZ7WiaQ5wpjOJA/640?wx_fmt=png)
+![](../../.resource/remote/8ae48e8b62d1f79bb8a2f91ba60960eb965e20c90e753d852b98bc8533db70c9.png)
 
 src/main/resources/mapper_xml/UserMapperEx.xml
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YAvjiaEsZOptmIpKS1pdoccLo1qjZMMwSa0xQw8bzk816RgmXCmVIibiag/640?wx_fmt=png)
+![](../../.resource/remote/17a4b73b215877166f42d7a28fdab975ade8a38c780932c5081e18a8838f99ff.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Yzhia63knJ4QJFvO4WBfd6KQazjtuPC7uqNBt5gE06ia7GjOVn2RFOicNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/edbe746b63d462b8264c4cdc8bdb6f3eea3031d4a274e271cfb03ab17b8f24e3.jpg)
 
 扫取二维码获取
 
 更多精彩
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TlgiajQKAFPtOYY6tXbF7PrWicaKzENbNF71FLc4vO5nrH2oxBYwErfAHKg2fD520niaCfYbRnPU6teczcpiaH5DKA/640?wx_fmt=png)
+![](../../.resource/remote/ab6c5ecbc93adc192adef1b7c05ca25153b4fc3f9c4963f72d75fa0a3aaee299.png)
 
 Qingy 之安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
+![](../../.resource/remote/7b68c0062559511a9826e83699fc6bc7773c7080beb677ea03e8c7544a564dd5.png)
 
 公众号
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
+![](../../.resource/remote/8e57ad757dd628c11c5d5fecfeb91ca234ca60712b2f65d6b1294044233f5a75.png)
 
 点个在看你最好看
 

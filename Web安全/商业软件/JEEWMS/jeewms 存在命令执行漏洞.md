@@ -111,11 +111,11 @@ fofa 语句：body="plug-in/lhgDialog/lhgdialog.min.js?skin=metro" && body=" 仓
 src/main/java/org/jeecgframework/web/system/pojo/base/DynamicDataSourceEntity.java
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rupPYoX6oNK9apnBicobcWxvGcqVn0pxpuEgXZiaclLtxxR5vgtKiczjvvA/640?wx_fmt=png)
+![](../../.resource/remote/6861d124715b682b9364f5608faecaad02c1e012a2c6db818d9f940103f2657e.png)
 
 mysql 版本 <mysql.version>5.1.27</mysql.version>，可进行 jdbc 反序列化
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rus2PpKRwO9tmSFcwGibzNEcicziaayrzfLzuMSeGM18nicWCW7LCNTGqfnw/640?wx_fmt=png)
+![](../../.resource/remote/bbac9a55e403910dbe64301364c78143add58c9b3d0083cb17376ed9f8bd5801.png)
 
 1.  漏洞代码分析
     
@@ -124,7 +124,7 @@ src/main/java/org/jeecgframework/web/system/controller/core/DynamicDataSourceCon
 
 此控制器可传入数据库 jdbc url、用户名、密码，因此存在 jdbc 反序列化漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rulMDcDibIBnwW4UicPUGfaopqHiarfneZgiaMvGmKN5aOKTGaaxeYCALJibg/640?wx_fmt=png)
+![](../../.resource/remote/d3242f34344d9bfe680acf61c91396e6b1d5c9bc28552e9bbea48415daedfc4c.png)
 
 DynamicDataSourceEntity 内容：
 
@@ -132,33 +132,33 @@ DynamicDataSourceEntity 内容：
 src/main/java/org/jeecgframework/web/system/pojo/base/DynamicDataSourceEntity.java
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruDfnAgF1dZLEZ88TyrrCXjPoZfykI0kicKtuNhkD7ADibGpJUVG8njUlg/640?wx_fmt=png)
+![](../../.resource/remote/38dc83d1bcf6810c2cc26332fafe3cb2edbb2f409425191a2cfd4e9f407e3340.png)
 
 已知 jdbc url 可控，存在 jdbc 反序列化漏洞，无害验证如下
 
 启动虚假 mysql 服务器
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rudwfk8Dia0YMgI1K8ENeUDAZmwXceOictRPtsvmkBwgbC7ibhmlkr8gCwQ/640?wx_fmt=png)
+![](../../.resource/remote/8bf94a06950ad6f97f3e5a1e39c726a57d67df260595ffe3753f03b83ce088d0.png)
 
 发送 payload：使用了前篇文章的未授权绕过漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruEdMkqdzOMTryVZOkuB5deNSjic6ExvMtahpc263um56Ljgwx7TfsLew/640?wx_fmt=png)
+![](../../.resource/remote/404a15bee798a8c98ca948abc7e96caa54eb7bfd3fc58c7447345e21b6ab0017.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruMzibBJ3ghwF9236Jst7iaGguONMt1a8J0yAunVpkgpTURpF3Y2eMoB1A/640?wx_fmt=png)
+![](../../.resource/remote/c98fbbc1b3d5fb1b97b0e87dee5e22a86f366ae878b85ac890f8921b3eefe8b3.png)
 
 收到 dnslog 请求
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rukumrtzuFXBWFfXk58wN83WzJVoS8fuFSDfFXEnZtibfh6icBLwY1H0iaA/640?wx_fmt=png)
+![](../../.resource/remote/0b7554b1b925327dc503986f084c2ffdac0ebdea3efae04fbef21b87a0c024c3.png)
 
 公众号
 
 最后再给大家介绍一下漏洞库，地址：wiki.xypbk.com  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruC6mJg4KJiaTLnzne7w4qraaB6SO9iaCpBDufyKficZobmJolBlnFicWHpw/640?wx_fmt=png)
+![](../../.resource/remote/0ce0fc3f0c89c4cd9b6728b143cc0355198508f9fa8c6eb453ed5c255593b872.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rur7RMzhZOzp8XKibxMGTkJY5F2EBexNxIA3pibcAuYr24WYhfm2zQ46Og/640?wx_fmt=png)
+![](../../.resource/remote/379fd6bf8f0a7e1187b264a408baa8d195e66ad9f5536a623f74fd829079ebc2.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruib8N3ggtVKgjpxPP4kQrWDla13YBSeukib04BuFxhB7Q3UowJKI0iagicQ/640?wx_fmt=png)
+![](../../.resource/remote/84ab43b06699d9ed289fb3e9c9bb714a3e9b9a78b7390e9b43cc3a883c106414.png)
 
 漏洞库内容来源于互联网 && 零组文库 &&peiqi 文库 && 自挖漏洞 && 乐于分享的师傅，供大家方便检索，绝无任何利益。
 

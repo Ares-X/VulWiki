@@ -47,7 +47,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/7ZUMjN8xyaGUF-ZTh-7Csg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6s0gib9Yq2dPlIuE5CuO65ialicEm5rnO0ZlkUZavkSrbNSm0Tz3V9NNA3WLiarOvCicTuEDbCiaich9Pow/640?wx_fmt=png)
+![](../../.resource/remote/08127bb4bcb3ddae8a04bea05b7812a87a4a62a9a22b888748bee1d897da8c03.png)
 
   
 
@@ -327,7 +327,7 @@ Ps：后半部分合法的模板标签可以在 /Application/Home/View/tpl_compa
 
 接着我们可以看到后台已经产生了相应的日志文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6s0gib9Yq2dPlIuE5CuO65iacliaLN0OnPbIib3csV2SMAGUoqqXqJcCLDHkpSHiaiaOTg9mA1gsXQgic0g/640?wx_fmt=png)
+![](../../.resource/remote/257de4d802d5f4dad14853d7a39e9c2921174c308b420e0b2dc13ba702fdc3f7.png)
 
 #### step2 通过非法请求包含日志
 
@@ -340,7 +340,7 @@ Ps：后半部分合法的模板标签可以在 /Application/Home/View/tpl_compa
 
 执行成功！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6s0gib9Yq2dPlIuE5CuO65iaKQKMmZvvibm95XYhRIMRgcJzR4R1okp4pOnHK9YMJrQTbUjZKlZGs5Q/640?wx_fmt=png)
+![](../../.resource/remote/99942a780e569abb3093b64ed53a9f7bd4597ed6476c9dd93131707dad732d85.png)
 
 ### **2. 通过图片简历上传包**
 
@@ -374,7 +374,7 @@ function verify_mobile($mobile,$smsVerify,$vcode_sms){
 
 注册完成账号之后就可以在简历界面上传自己构造的图片马，需要注意的是图片马也需要包含上文中的模板标签
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6s0gib9Yq2dPlIuE5CuO65iaXVeRdsS7ezUkFxPs1ltsNErduTdDkRZnYsNVOsuyiajzPRArUTA1Yfg/640?wx_fmt=png)
+![](../../.resource/remote/61b3054ae7598ce54d769972ad0c1bca24dfd9a36cab79cf6c5ea8fbdb17fbe8.png)
 
 #### step3 构造请求访问此文件
 
@@ -432,10 +432,10 @@ if(empty($content)) {
 
 但其实补丁程序的这两处对于图片和文档的包含上传是没有影响的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png)
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ok4fxxCpBb5ZMeq0JBK8AOH3CVMApDrPvnibHjxDDT1mY2ic8ABv6zWUDq0VxcQ128rL7lxiaQrE1oTmjqInO89xA/640?wx_fmt=gif)  
+![](../../.resource/remote/632fd46fd9c5c81461bba0234f0d689bcd5e3937d9af2d92ada6ef08375280b1.gif)  
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 

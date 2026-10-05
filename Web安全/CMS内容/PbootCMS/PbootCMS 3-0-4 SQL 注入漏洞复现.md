@@ -98,7 +98,7 @@ app="PBOOTCMS"
 apps\home\controller\ParserController.php
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJY7mxqVMOqPJ23ohehUII6O2EicoeibwLpzpiaxOXsBEglia2rhU9m9e6UA/640?wx_fmt=png)
+![](../../.resource/remote/a1d11aecae73fe37d1268ead84faca0a453f340d4c39741429c66037851d0d15.png)
 
 当传递的参数 $where 是一个数组时就遍历数组，当 $where 是一个索引数组时则：$where_string.=$value。  
 
@@ -110,31 +110,31 @@ pbootcms\static\backup\sql\0cb2353f8ea80b398754308f15d1121e_20200705235534_pboot
 
 在 “parserSearchLabel()” 方法中，传入的数据被分配到变量 “$receive” 进行遍历，“$key”被带入 “request()” 进行过滤。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJImkibicicmCjgUZHHnFVApsQ3PYdhj3DcTgYia6YiaUw8FFHgn20aV8roYw/640?wx_fmt=png)
+![](../../.resource/remote/ab668b8a875872b04c3dd1889b7be1ca905a7c293acb2ea8b437702cc4a726e7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJR0g4UWfnFIp7mCicdyRJUIfqrzxm7XZjO8AGdZ7cicN4EicmhGltzx9LQ/640?wx_fmt=png)
+![](../../.resource/remote/449919bb68217f75586b097391b6a3421aa9cbd85c81df5d0673aaa518e0e0e8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJNCP56XubunAVugClgC9Xgs7OrnWw60In3OGjazCmF6vSkHhk0FrdPA/640?wx_fmt=png)
+![](../../.resource/remote/442305ba082ab6091f73b0236c3cd2924b419a2985bb8074320da8cdf6359e10.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJiaq9GXGUWpC8S8n3PibTp1jZl2oruw03SDd4Ho62ibBr22SyyyfRe0jYQ/640?wx_fmt=png)
+![](../../.resource/remote/bf42c7c83b74ca1b7073c60b08349990ec2b9140ed6746fb64eb0bfa5d398694.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJ59G2qkN9sRwLJyuz9bhibBvge942aicjm8ITEjK5rMZaVicDqvj5njA1g/640?wx_fmt=png)
+![](../../.resource/remote/953138e0a0b36f80733471d1d4afd4389088a13f17717e7418dfd5912136d9b8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJdLr57Uq0CgMdy6OWUcpsXCdiaSxjkatFzgUVkPwVQsoicEBwDvcIKJKQ/640?wx_fmt=png)
+![](../../.resource/remote/5d8b8f999c558ad8531d6ee8e661a00c8c1932d8492eaca6081a4bb658700de3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJ4EI6OoUgc7hXLibeglsnFFCnKq8ueMAuiciaO3VzSib4qYPUicOnjs8Psfg/640?wx_fmt=png)
+![](../../.resource/remote/f50c53ea63068e267715d21cfb2e6b38568f1ddb9164b5444186f27a6035dcd0.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJBmDXTWvSeKeWfK7wmhbssyZFQpd2SHNeV5tibqY9LouiaichXibVmwDY9Q/640?wx_fmt=png)
+![](../../.resource/remote/0da611dba2d2e1dbd0e5a7136b0e1bcedae72b4cb84b2d3887650ee533c59c47.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJibk0pZwjkApSpcge2JRd6Mdh5MmFy59M4YzQFFrGkcPv2aHjFKeqbZA/640?wx_fmt=png)
+![](../../.resource/remote/46bb44e528312b2310f30a328ce45bf24a65092af9bef121ec65c9e3e8f6687c.png)
 
 通过上述方法传入索引数组的值只能包含中文、字母、数字、水平线、点、逗号和空格！它由 “htmlspecialchars()” 和“addslashes()”编码。最后，它被传递到 “$where3”。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJwnItDwSKG3vMfcmdf1xpicVIcSuTGzdoXhFutxfiaA9g1T0vk5Ib1Uiaw/640?wx_fmt=png)
+![](../../.resource/remote/50912a68a0ff736b6edad1097948536b885a538db47a542e0e74ff60d8dafc74.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJM4b3dFRxXEg8LP0TwUyxEVFyWd7yiaI3Xq2zTHhic9Libu6kHjVG9DUZg/640?wx_fmt=png)
+![](../../.resource/remote/cccf21e1118957aaa0de9676731142bb04f89f8745c6f94d8543393e53558a3b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJvibTic6Prz7yGtdkYr0iaKibmiaDu8oGpNplMDZDvTeu01CNxgbR4y19HJw/640?wx_fmt=png)
+![](../../.resource/remote/784c0224c838b6df4866b711b2bd9ea08de4837d77db6b6d8ce8693ef3919da7.png)
 
 “getlists()”中的 “$where3” 是可控的，它将以 “and” 的形式进入语句，所以最终造成了 SQL 注入。  
 
@@ -147,29 +147,29 @@ pbootcms\static\backup\sql\0cb2353f8ea80b398754308f15d1121e_20200705235534_pboot
 pbootcms\static\backup\sql\0cb2353f8ea80b398754308f15d1121e_20200705235534_pbootcms.sql
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJvaRxkRybzHLNa3YSjh3ZhOCCJJ6guSSPZBX6icDCHQueekJdEARL18A/640?wx_fmt=png)
+![](../../.resource/remote/f074297250c40b8a946f4cf1a61ede560c50749c750e954c3288efcc179a1e9d.png)
 
 接下来，我们以 POST 的形式发送索引数组，还记得源码里数组中的值要以 “and” 的形式进入 “where” 条件：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJvaRxkRybzHLNa3YSjh3ZhOCCJJ6guSSPZBX6icDCHQueekJdEARL18A/640?wx_fmt=png)
+![](../../.resource/remote/f074297250c40b8a946f4cf1a61ede560c50749c750e954c3288efcc179a1e9d.png)
 
 当条件为真时：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJHjAPnHUiazydEWAsOL9WR3bfXg2se3xtuflboBBnK4V3Jndl9fnR7sg/640?wx_fmt=png)
+![](../../.resource/remote/7a62fa708e40fd5033489a45aa44ab9c722b7b5c681680c99fab3daf54d3c4b9.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJ0D7ZDWAezbIS51L1ic7bXEj6cNOoLLEmf9pIfMz0zdCVbtVtG91iaVJw/640?wx_fmt=png)
+![](../../.resource/remote/41bafc396499fab78a33d90dbebf3b2c1325e22313c90c43111f4d93eefc43fc.png)
 
 当条件为假时：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJD8Izn5vS8CBQQAH5oz6vKuicIFAEqSibsIOEOLYeLN7WibX3BxGNsFmbQ/640?wx_fmt=png)
+![](../../.resource/remote/cb5c81356c38df4b0037a354c48de6da63365f3cbfd5ac6f20dccba484394f7a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJZL7zTdVIOb3N5sCy2IxQUJmAdWxQtYJP8sByt6nqrcIKtd3zUIkS7g/640?wx_fmt=png)
+![](../../.resource/remote/86f8ef89ea9b6c84e7eff03b48cfaa10e57b14d5a1ab1b80a786465a6499ce7b.png)
 
 有效载荷：由于数据经过过滤，因此只能使用 “正则表达式” 进行常规匹配。例如：“用户名 = 管理员”可以表示为 “用户名 regepx 0x5E612E2A”，其中“5E612E2A” 是“^ a”的十六进制代码。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJFicpvx4nOPgMSzvhxKGtnKkjG5icOBsEtRPIVJ7iaLEzHxXG8pI3wn1hg/640?wx_fmt=png)
+![](../../.resource/remote/70117c21b9f442a32c4ceb3d5a338f5dc62a5927eea2e5e199616fa14cc3e223.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCXOYYibX4iaQSVe1FxuzpCKJaVUzoKlett2SDiak4zYTMGRxX3Z6wH2KIJkmPLbshazVsNZnEervmNQ/640?wx_fmt=png)
+![](../../.resource/remote/beda9688385a8183aa81840d6eb9ace6825671850036778cd36969b3a2e83e5e.png)
 
 就可以获得管理员的账号密码了。
 
@@ -195,19 +195,19 @@ wiki.xypbk.com 已经添加授权访问
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Yzhia63knJ4QJFvO4WBfd6KQazjtuPC7uqNBt5gE06ia7GjOVn2RFOicNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/edbe746b63d462b8264c4cdc8bdb6f3eea3031d4a274e271cfb03ab17b8f24e3.jpg)
 
 扫取二维码获取
 
 更多精彩
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TlgiajQKAFPtOYY6tXbF7PrWicaKzENbNF71FLc4vO5nrH2oxBYwErfAHKg2fD520niaCfYbRnPU6teczcpiaH5DKA/640?wx_fmt=png)
+![](../../.resource/remote/ab6c5ecbc93adc192adef1b7c05ca25153b4fc3f9c4963f72d75fa0a3aaee299.png)
 
 Qingy 之安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
+![](../../.resource/remote/7b68c0062559511a9826e83699fc6bc7773c7080beb677ea03e8c7544a564dd5.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
+![](../../.resource/remote/8e57ad757dd628c11c5d5fecfeb91ca234ca60712b2f65d6b1294044233f5a75.png)
 
 点个在看你最好看
 

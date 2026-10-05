@@ -134,9 +134,9 @@ https://www.helpnetsecurity.com/2024/09/10/cve-2024-38217-cve-2024-43491/
   
 安全KER致力于搭建国内安全人才学习、工具、淘金、资讯一体化开放平台，推动数字安全社区文化的普及推广与人才生态的链接融合。目前，安全KER已整合全国数千位白帽资源，联合南京、北京、广州、深圳、长沙、上海、郑州等十余座城市，与ISC、XCon、看雪SDC、Hacking Group等数个中大型品牌达成合作。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb4Mz500lzfSdDb2GMwEsbXokqSWLtI1fdUaJn5JEF24bfgs8bQLpYz6q4Kc8Q2c7WWkO8rDrH5icvg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d6caf2b9d07446e5db2fc0c72b39245bd35ef1117cbe12d413cf0c1f3677e90a.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb4Mz500lzfSdDb2GMwEsbXogZtbJBCtkFRz6tTNkaLtsIeXcgtUVQ94rgvaxU6ZXfz6qDDewZu3qw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/31600ffd2a8b7de6a5cfe92a17d234f4fe8bb143ca88486bc2e1ef8dac3fea63.png "")  
   
 **注册安全KER社区**  
   

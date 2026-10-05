@@ -43,19 +43,19 @@ schema_version: "1"
 
  FreeBuf   2025-04-01 18:15  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
 HPE Insight集群管理工具（CMU）v8.2版本中存在一个关键的无认证远程代码执行漏洞（CVE-2024-13804），攻击者可利用该漏洞绕过认证机制，在后端服务器上以root权限执行任意命令。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibrtyCQMVIBZG8oeXaqehKibMpVA0XBh3yibrrRT7R0VO10mIN7FuQ5Oc9ddJE6UXysfUesYPsmt9GQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/972b04f5e5a1b3e4ef4dbc4cff401693f21baedbed1553a7a9285ab70915b96e.jpg "")  
   
   
 该高危漏洞影响用于管理高性能计算集群的工具，可能导致攻击者完全控制整个计算环境。漏洞根源在于CMU应用程序在实现客户端授权检查时存在根本性设计缺陷，缺乏有效的服务端验证机制。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibrtyCQMVIBZG8oeXaqehKibzXHNiauibb31t9o4TzCm6Yibdb9L8H9kd07380R4w6ZIG7oVqeWb5LC9g/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/db7df34568d237ad7aff0e667c920f56ce54c95472130015658e55a035fe183d.jpg "")  
   
 应用程序匿名访问情况（来源：Navigating The Shadows）  
   
@@ -80,7 +80,7 @@ HPE Insight集群管理工具（CMU）v8.2版本中存在一个关键的无认�
 漏洞利用过程始于下载并反编译CMU客户端应用程序（cmugui_standalone.jar），该程序通过1099端口连接后端服务器。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibrtyCQMVIBZG8oeXaqehKibdykGUQmZXbib667qGD73L4ef1oricq0piaIaFJpCxaWnQYqw9HQOshH4Q/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b151a2d9603457a0090299977a98c3ae7727bc83a9787ed5e9a0fb8c346aa4e0.jpg "")  
   
 isadmin验证机制（来源：Navigating The Shadows）  
   
@@ -106,7 +106,7 @@ public Boolean isUserAdmin() {
 重新编译修改后的客户端后，攻击者可通过ModelDispatcher.getRMIModel().executeCmdLine()方法以root权限在服务器上执行任意命令，图中展示了成功执行"ifconfig"命令的情况。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibrtyCQMVIBZG8oeXaqehKibicUXDqPgqaTEskibxQgXXiaVDstT4zIA4gfehr3nUrS0SNmichBtOP77Aw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/95a412a8d5422deecf18d7d4f9f17e647624e6cc42060f274287f4ad8fd3412b.png "")  
   
 成功执行ifconfig命令（来源：Navigating The Shadows）  
   
@@ -132,10 +132,10 @@ FreeBuf盲盒、大象公仔......
 扫码添加小蜜蜂微信回复「加群」，申请加入群聊】  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ich6ibqlfxbwaJlDyErKpzvETedBHPS9tGHfSKMCEZcuGq1U1mylY7pCEvJD9w60pWp7NzDjmM2BlQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&retryload=2&tp=webp "")  
+![图片](../../.resource/remote/c756b5fb2e446e8a46aeb976861dc8502220a41de5fd7e545c0fa98a66cefe23.webp "")  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ic5icaZr7IGkVcd3DT6vXW4B4LOZ1M7YkTPhS1AT2DQJaicFjtCxt5BRO7p5AOJqvH3EJABCd0BFqYQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/550c384107beaf189c3fc4790e360c6fe7bc2da72b731e0458273c873e3e9555.webp "")  
   
   
   
@@ -146,7 +146,7 @@ FreeBuf盲盒、大象公仔......
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651312407&idx=1&sn=60289b6b056aee1df1685230aa453829&token=1964067027&lang=zh_CN&scene=21#wechat_redirect)  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
 
 

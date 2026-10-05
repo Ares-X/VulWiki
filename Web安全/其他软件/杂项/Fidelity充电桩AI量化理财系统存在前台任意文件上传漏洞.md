@@ -56,7 +56,7 @@ schema_version: "1"
 
 原创 Mstir  星悦安全   2026-01-14 02:14  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/lSQtsngIibibSOeF8DNKNAC3a6kgvhmWqvoQdibCCk028HCpd5q1pEeFjIhicyia0IcY7f2G9fpqaUm6ATDQuZZ05yw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=1jvfty28&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/a1e5fc8e9cb802709e046b5e5c431d484839d8ece47637b62553d23860ae50a9.webp "")  
   
 点击上方  
 蓝字  
@@ -68,9 +68,9 @@ schema_version: "1"
   
 **Fofa指纹:"模块不存在:index" && "/assets/img/error.svg" (模糊匹配，无明显指纹，需自行寻找)**  
   
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5eW0Bs78AYhl5ZxWTqWgMPVBjlemA9uwMDL7FtkgSZVy5Ih7ibcTcgibwW6U2KoPMed6T9PdYVPaFxg/640?wx_fmt=other&from=appmsg "")  
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5eW0Bs78AYhl5ZxWTqWgMPVH41IxEiaIb6I8ibeMpWdAFeUkQaFw1Vc8AWNGib9qbUp2PLpsS2gNkuYg/640?wx_fmt=other&from=appmsg "")  
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5eW0Bs78AYhl5ZxWTqWgMPV7te2nN1piaCEIOibXF0RVZ4gpJeqPyIvL0ibb8cb1MQZgyg9oP8ria8aRQ/640?wx_fmt=other&from=appmsg "")  
+![image.png](../../.resource/remote/90ca9300b46ef7ef98bdbcd91c1ed2e5ee5d8af787408dc2b3931e1609094ce7.jpg "")  
+![image.png](../../.resource/remote/46c13f39c883bdaad214e639d218ea11ab9534b20e9004f209bbe9ca5a350fa9.jpg "")  
+![image.png](../../.resource/remote/dab819d4a20bda9cf6918e89f9e3dd2f6c71dc569f3776b71ce716569f4c3b07.jpg "")  
   
 **框架:ThinkPHP 5.0.24 Debug:True**  
 ## 0x01 漏洞研究&复现  
@@ -87,7 +87,7 @@ public function uploadFile(){  $token=$this->request->post('token');  $_user=Tok
   
 **首先注册或登录获取一个token**  
   
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5eW0Bs78AYhl5ZxWTqWgMPVpETXKDTeaCicejnUmyHaZuU0EaSTxDMDEDd5oIpM9ZtpYXXIvYU6pjQ/640?wx_fmt=other&from=appmsg "")  
+![image.png](../../.resource/remote/eaa264b8ac2f49b60dfc1a5b668fbaa700b577e057d57e313d38113edee4f6ff.jpg "")  
   
 **然后直接发包上传即可，记得要填入你获取到的Token Payload:**  
   
@@ -96,8 +96,8 @@ POST /api/index/uploadFile HTTP/1.1Host: 192.168.140.128Content-Length: 325Cache
 ```  
   
   
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5eW0Bs78AYhl5ZxWTqWgMPVLp57MIlgkc64x1qWjClYkqj36WjLDsjHcDLicJYQibFpwCftzibiazEicUg/640?wx_fmt=other&from=appmsg "")  
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5eW0Bs78AYhl5ZxWTqWgMPVQ4969xORzconVEmBpgVxHkGVsWkoKOG6IH41GURBlkqqibMa2TjfaNQ/640?wx_fmt=other&from=appmsg "")  
+![image.png](../../.resource/remote/1531abf7f273de6373d4cc69e99a594efc9022b493f161cd5659cc5e1e833ac3.jpg "")  
+![image.png](../../.resource/remote/ceccce9f601721952b200dafad0a9b84f72e4f94fe367b14ce6044ae40b241a0.jpg "")  
 ## 0x02 源码下载  
   
 **标签:代码审计，0day，渗透测试，系统，通用，0day，闲鱼，交易所**  

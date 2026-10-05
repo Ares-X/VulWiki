@@ -102,7 +102,7 @@ WordPress 6.8.x 版本升级到 6.8.6 及以上版本
   
 360漏洞研究院已成功复现 WordPress REST API 路由混淆与 SQL 注入漏洞（CVE-2026-63030、CVE-2026-60137），通过 SQL 注入成功读取 wp_users 表数据并获取管理员密码哈希，验证了未授权数据库信息泄露风险。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/dZ7ia5iaWFzz8ydwlia2XpTRfXoUeZXoPMACia4PQZKUicewoBibBr8IAicibnLALM6zx4f9M18rWenZtWj5DmNoy43p70P3wGyQNRxiawc1xX1ZzYjY/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/14dede38d7846bb344397069d9d4fc3dca62ecb32bc3ae6bc8be3513ae73d88c.png "")  
   
 CVE-2026-63030、CVE-2026-60137  
   
@@ -161,7 +161,7 @@ https://wordpress.org/news/2026/07/wordpress-7-0-2-release/
 “扫描下方二维码，进入公众号粉丝交流群。更多一手网安资讯、漏洞预警、技术干货和技术交流等您参与！”  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/dZ7ia5iaWFzz8YToicKab1BicPnEdr7jiatvQUVWSMnYTBeG5ibibgxkGAG1rF4pUdpowPcCmokOO5tp4UjjhUsos4Zf4VwE1aM9NTUz3ogfgdwwFw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/efa33e0c5755999d7e950a6f035d0551872f4b1020f6bf761343227eb0b2f11b.gif "")  
   
   
 建议您订阅360数字安全-漏洞情报服务，获取更多漏洞情报详情以及处置建议，让您的企业远离漏洞威胁。  

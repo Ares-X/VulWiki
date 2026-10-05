@@ -107,7 +107,7 @@ Kubernetes已成为使用最广泛的容器开源系统之一；然而，由于�
 **【免费领】**  
 **网络安全专业入门与进阶学习资料，轻松掌握网络安全技能！**  
   
-****![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb59ibIezbic1Dob2DsGBgT7WkA3sJgtXriaUGWIocjCgU8JQth19dEFvC8lSOwlp1ALOVnZltOicA1RkA/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+****![](../../.resource/remote/c111db1ddb2e99aa6dcd0ab0df9db15f65c851b652eea6c8849bdb1c803129d9.png "")  
   
   
   

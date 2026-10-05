@@ -90,7 +90,7 @@ Nacos <= 2.0.0-ALPHA.1
 
 https://github.com/alibaba/nacos/releases/tag/2.0.0-ALPHA.1
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVK21AGjDIIxZfS6desLbJP2crh6KyWaVqm6RYIF4IUoLrGy3icJjCYNyw/640?wx_fmt=png)
+![](../../.resource/remote/318859010050dfa818037824d26c2f6779084e20b2fd54d993c3027780e54f46.png)
 
 之后执行以下命令启动环境：
 
@@ -99,11 +99,11 @@ https://github.com/alibaba/nacos/releases/tag/2.0.0-ALPHA.1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVK4CEdQMna29WNnVSdWaqvMqaTibFaMqyQiajibn2rIxrX1eRcia21FxDW5A/640?wx_fmt=png)
+![](../../.resource/remote/0f9c2a6919d3963242359178b6f2ea9d02ea0b72b15c1c8ccc4c72d2283b8a26.png)
 
 之后访问 http://your-ip:8848/nacos，默认账号密码为：nacos/nacos
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKxcSjsmS1sPkjmTNxxorM3uFiciaWdOC1uwmicPAtttJ2HZqQiaJjngoiazQ/640?wx_fmt=png)
+![](../../.resource/remote/c5e7bbf2aab3a9091f1dd38bf3b419f2960be4f38eee38edf61f70f3ef1e41ae.png)
 
 #### 漏洞复现
 
@@ -114,7 +114,7 @@ http://192.168.174.236:8848/nacos/v1/auth/users?pageNo=1&pageSize=1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKzSo2iavIC4O0IywvclJspZXyD4xZR5KfCs40V8NIJIiclO2mCdSA7cJQ/640?wx_fmt=png)
+![](../../.resource/remote/e13d570c78b2f5f669bed54d912e7449ba1526c668b1b284d002cd3556986bc9.png)
 
 Step 2：添加用户 Al1ex
 
@@ -127,21 +127,21 @@ username=Al1ex&password=Al1ex
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKj2I7wDWQV9hmsDaEd7sSgeR7AAxaXPibRoGIgkasTNP3IkdulPlgZRA/640?wx_fmt=png)
+![](../../.resource/remote/de66a4d1a9fb4803fddbbc79f5d8420716d5d25a2964eabf9bafe9060d566e0b.png)
 
 Step 3: 登录测试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKC3RYzjfM0G3UZAcfTfTGKibj6y9XLr3101ZOskS0DbUoc55HdbX4opw/640?wx_fmt=png)
+![](../../.resource/remote/e38536ed9b0b296de010ec499531c4c3c7a165d4394fe52d324482567cd8e743.png)
 
 成功登录：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKUwDDjgLPqaXgRK7seukibAc6IkRtOTDELpbL2lTPrDPrGQywaY8Fdkw/640?wx_fmt=png)
+![](../../.resource/remote/10ed79e06569f50e13808de5e16a3111a8c004b7ccd36713c3952877f655baa8.png)
 
 #### 漏洞分析
 
 Nacos-Server 是用来进行服务间的通信的白名单，比如服务 A 要访问服务 B，如何知道服务 A 是服务，只需要在服务 A 访问服务 B 的时候 UA 上写成 Nacos-Server 即可，所以当我们 UA 恶意改为 Nacos-Server 的时候，就会被误以为是服务间的通信，因此在白名单当中从而绕过认证，下面我们来看一下关键的处理逻辑位置 TrafficReviseFilter.java 中的 doFilter 的设计，在这里可以看到当接收到其他节点服务的请求时应该被 pass：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVK9LGosRwekuFhGMozYMSgprQfKN6ZEIDm73l489giaLLXXuSpClXdicGQ/640?wx_fmt=png)
+![](../../.resource/remote/d131cfb2fcd3c5406704451e99fae1d978478d5b5f86dff7abed7a5ea4262512.png)
 
 关键的判断逻辑如下：
 
@@ -155,7 +155,7 @@ Nacos-Server 是用来进行服务间的通信的白名单，比如服务 A 要�
 
 之后对 Constants.NACOS_SERVER_HEADER 进行跟踪，之后确定为 Nacos-Server：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVK0qicGiaMIMeVZUAHiclpiaR8SIJhqbNjcl0En5HUvowHbH3PO3lruRm3fg/640?wx_fmt=png)
+![](../../.resource/remote/a8b89e12859c5bc1ebb753e4a2a7b20f0af93414fe17fd957e23943bbccee256.png)
 
 #### 参考链接
 
@@ -175,25 +175,25 @@ Nacos 使用了默认的 JWT key 导致的未授权访问漏洞，通过该漏�
 
 Step 1：直接访问 Nacos 网站，填写任意用户名密码并使用 Burpsuite 抓包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKyvUzEhLRh5dyj6Q3zyzaIBxRWR95qqDnQT7avSpf14hyQyOGDwAbkg/640?wx_fmt=png)
+![](../../.resource/remote/b257d005262889bb0e0c681b175a623a371cd2eb6d3e5636804146be2399ac66.png)
 
 Step 2：之后拦截回显数据包，回显数据包如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKmcwibS41wfj5DibdXRfOyM4kktdjW6skQYCJCpuvWDQNKsU4tu4SnFJQ/640?wx_fmt=png)
+![](../../.resource/remote/9d4650bbb8f4a9f79975444bd1b60689dcdd3fee77dc208a863c31a8eac2d3dc.png)
 
 Step 3：修改回显数据包状态 403 为 200 并修改回显数据信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKsbkhDb0uAPribb5gKqqfCRremOGibA65x9gxo4ZwibgkyJdyFxZaIzAJg/640?wx_fmt=png)
+![](../../.resource/remote/fe77a96a8a24c8970061f077f7e86cdb1ec8d4b766d80ef84abd74cf0672f543.png)
 
 Step 4：释放数据包后成功登录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKeMcdmkne5gjLGHeFYVibIuCdNEGzSpn69w4FDM5zzlhLTLgr2Dcs3rw/640?wx_fmt=png)
+![](../../.resource/remote/f86dce75d7d46eb3245d44ed5e6db96d14591d66ede54734918cd1d830083f2d.png)
 
 **漏洞 POC**
 
 https://github.com/Al1ex/Alibab-Nacos-Unauthorized-Login
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKLTwQCKfXBGicfXd1Xhdgr0WQ8INGxaJ35iaoONa3TofYvkmvdO3tiaGcQ/640?wx_fmt=png)
+![](../../.resource/remote/a8918dba0292615e0a235d3bab934a0383cf589216332603d555d23cef18329e.png)
 
 **C、Alibab Nacos 账号密码获取**
 
@@ -234,15 +234,15 @@ Step 1：Nacos 继承自 Spring Boot 的目录如下：
 
 Step 2：访问 / env 接口确定漏洞是否存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKK4MEgfmjXZvcru7aseDsct3kGxKsOlwX6EacOg46YOjaCt8dicZpb4A/640?wx_fmt=png)
+![](../../.resource/remote/0580e2522c185b83e4da26f402d0d600cb8e517acc03648a778bbe7d47ffd50a.png)
 
 Step 3：调用 / heapdump 接口下载 heapdump 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKeuvicqL4DGZobZRwP5wRpIa5o1sgQczUEfcRbZ5nufSmmybstyINuog/640?wx_fmt=png)
+![](../../.resource/remote/c457566c7a5187ba286d3ae0d8e681688928bbf6a6d7f446b6aa660b6072d82d.png)
 
 Step 4：使用 MemoryAnalyzer(https://www.eclipse.org/mat/downloads.php) 内存查看工具分析 headdump
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKPJpv531j8NWYI3gks6BCnnZlyCGn426kdXPVvSAkJHSI1qhRVvL7JA/640?wx_fmt=png)
+![](../../.resource/remote/42d7ee1b59d6e8d9a7e87d5959badccdff558d12e3a2631c4fae8ff79ce87058.png)
 
 Step 5：执行以下 OQL 语句获得密码
 
@@ -251,13 +251,13 @@ select * from java.util.Hashtable$Entry x WHERE (toString(x.key).contains("passw
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVK6ticE6yPCRF1NGmdgWakibiclyw2VN9TjskuKIyMc9DU2qZmYYV9shqJw/640?wx_fmt=png)
+![](../../.resource/remote/f8185a89837c2b997f4ccba061531e958369655e5be337f7d17c9ac875a69825.png)
 
 Step 6：如果可以获取到用户名那边就可以直接登录
 
 http://x.x.x.x/nacos/v1/auth/users?pageNo=1&pageSize=1
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKSJ9vsjBeVqq2duxzZ5mxPIDmBDBobK0jnAFL618ic4SCQibyrw4iaR1yg/640?wx_fmt=png)
+![](../../.resource/remote/45d9f397491cf8a1fdf62345c847133b8db12aed1c7f365bd45448376f4055f8.png)
 
 **D、Alibaba Nacos 注册用户枚举**
 
@@ -283,7 +283,7 @@ Alibaba Nacos 注册用户枚举
 
 https://github.com/alibaba/nacos/releases
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKueC9ShApeBtdxTqF3oHpgunMZ2X6icL2jWdMqrhwBhZicczicCly82hew/640?wx_fmt=png)
+![](../../.resource/remote/74243c9d48d2cc18007bf78fd0a3827475de537f94f197f4dff54ef00885b69e.png)
 
 之后执行以下命令启动环境：
 
@@ -292,11 +292,11 @@ https://github.com/alibaba/nacos/releases
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKrXHCxhaHVbPFsxhusOYbjQgGfGFjRXXl8Du5LY9103BfaeDibzm5icug/640?wx_fmt=png)
+![](../../.resource/remote/14c183b3895bc7efee25cf86ee448d56bc845c48a9ae3d06d42d86fef9ecb1b9.png)
 
 之后访问 http://your-ip:8848/nacos，默认账号密码为：nacos/nacos
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKhZQNNEjt4PGuBXJaUmwzS2LzicvKUcfrETibG59Dz0Aibk089sAAWwmxw/640?wx_fmt=png)
+![](../../.resource/remote/23bc5384896f2cf54b1702b6af5b565ec81ad3d486333c3059bb59c17b229259.png)
 
 #### 漏洞复现
 
@@ -307,13 +307,13 @@ http://192.168.174.236:8848/nacos/v1/auth/users?pageNo=1&pageSize=9
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKnGZ7u52NAP0Auv6NgagnViaPR5UNiaFGx4mzhiaEUTJtgD4XoIyCd8yGA/640?wx_fmt=png)
+![](../../.resource/remote/907847c6397f7fd1fd4d8baf1c76f4ee2bcf7e6c32981c30b9385e97877b7a2b.png)
 
 #### 安全建议
 
 升级到 2.2.0 版本之后
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKkIRB30PgRIwkCLUhkaf0GCNU57zP8Pq9HticE4XHibPibtFjCRuHqicO9g/640?wx_fmt=png)
+![](../../.resource/remote/e3c1238d67a57f7dd9d661a686bbd7eae165fafcaba9d7b014bba9cf8b2d20ef.png)
 
 **E、Alibaba Nacos 任意用户密码重置**
 
@@ -335,31 +335,31 @@ Alibaba Nacos 任意用户密码重置
 
 https://github.com/alibaba/nacos
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKSoqib4Vrmjw9T4CY5TXQ9F7bsdVrLicHkR1OibnUCStljibibQicIeJlPKrQ/640?wx_fmt=png)
+![](../../.resource/remote/b6e5ce56c5a4def69acf9713bc6649a2e878c2658e7364cddd85948a15c27f38.png)
 
 之后执行以下命令启动环境：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKShTicka5PgZgzx2k1pKA64pmKkP3HCNWynjoqqG1vICV1lVVRn4cLaQ/640?wx_fmt=png)
+![](../../.resource/remote/40da9abc03174e507172d0ead869db39189312726afb0900ceb3c2b622cf04f2.png)
 
 之后访问 http://your-ip:8848/nacos，默认账号密码为：nacos/nacos
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKsjSWDW2URMiaUckR2oMrHf9mE4nw5a3VLQB9vToWHEUibJ4OXctJbkqA/640?wx_fmt=png)
+![](../../.resource/remote/f460442f85c1770410e6911c2fe0706d14c4ee668791b2811332881d75c0a831.png)
 
 #### 漏洞复现
 
 Step 1：获取用户名
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKXib5Mf6PgpGRAiaVRDZrwTHNIcdyaWfiaN6zz4JaW7sbtldraTFpB1O1w/640?wx_fmt=png)
+![](../../.resource/remote/19e21ea9439c5c2eb619a08b0cadb43e4bb4818376147a200b5427b0862b7705.png)
 
 Step 2：发送一下请求数据包重置密码
 
 POC：https://github.com/Al1ex/Alibab-Nacos-Unauthorized-Reset-PWD
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKzCiaOWHkq9b6dcSMs7ia8QlBNMd1XYcTric9y8vreRSb9RgNDEmNbtWZw/640?wx_fmt=png)
+![](../../.resource/remote/64ac3daa90d9406523b0f9f2e90f381c4e8de0c09772766d3d6299fb13b341a2.png)
 
 Step 3：登录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKG9kccibIeQYsibfp2x7SncBMqHjsylKPt6IF6IXf0Ue9HOic7JWEaPJcg/640?wx_fmt=png)
+![](../../.resource/remote/df7fbccf2ad1eda1cb86e5e6e16329b655f24b93303579e3de6b8ed4518a9f35.png)
 
 **F、Alibaba Nacos ServerIdentity 权限绕过**
 
@@ -387,7 +387,7 @@ serverIdentity: security
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicmXUKvjRpmTtibib64391jSVKsQytHicvHgWo7TUS4TEOkThuKngQx2MDutuN2vUeGsGNz31m9mITfJA/640?wx_fmt=png)
+![](../../.resource/remote/01fd2987d8f6d563d9db940d3d867f90915fe0d7f69d980aefa5793f23b1738c.png)
 
 #### 安全建议
 

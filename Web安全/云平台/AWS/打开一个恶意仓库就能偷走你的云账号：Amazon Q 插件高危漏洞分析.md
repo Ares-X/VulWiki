@@ -121,7 +121,7 @@ Wiz 团队做了一个概念验证。恶意的 mcp.json 里藏了这样一条命
   
 Amazon 已经在语言服务端 1.65.0 版本中修复了这个漏洞。语言服务端会自动更新（除非你的网络策略禁了自动更新），重新加载 IDE 窗口就会触发升级。如果自动更新被阻断，手动升级到最新版就行了。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6Tibek9nNltc2d32icbtnZZ4icdw8yEbwJ72HgEibq04Cnm21sqlAxdwRApV9WeI7cmtzB894BAVrAGq6QCZc2nkCIqAHKQwxaPMBENY/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e496d1df128d8ae0223ea0e3b396fe1f051121ea949e3b36495efc7897e9690f.png "")  
   
 ▲ Amazon Q 现在会在加载工作区 MCP 配置前弹出确认框  
   

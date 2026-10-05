@@ -81,59 +81,59 @@ schema_version: "1"
 1、打开a学校网站，a学校的登录分为两步。第一步输入学号与姓名。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqStpmJB6Cf3GkRAURfBBdFOZSsKU8YgamueAuvYoOXuA8EiaokiapsUnQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/96d26d6f6c3fbb2d6e6100ac57e7c13bb2fe38b519dad1bd34957e930090a704.png "")  
   
 当学号与密码正确后再进入第二步输入密码。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNq94664HkFzrpbNCOY49WPQ9Q9q8NlMgryznPdYb2eZLPkibkODx5yXwQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1e0547ae9a6f885bb06c01d7a3d706dd81b3c04f70c68aed5d5cdeb131e10084.png "")  
   
   
 2、在a学校输入信息收集到的b学校的杨**学生学号与姓名。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqhmZKcADuknicgUMuKFjVlyIu5kWJAibsWyy6BkUFB2DUYribicpcOhY6qQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f6ae304327c905fbb32d512b555bffa41486689347a2fc952377c1a5946c7d31.png "")  
   
 下一步显示需要杨**的密码，密码未收集到，但问题不大，从响应包中成功获取到了杨**的userid。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqia4UYnz26TZ52BngnRVMNazBPLkzsWT1LA5sNcl2ZzGIbdJsvYoBu5A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cd895b5034c2135e1b80bbca8a5668b86b2a7aba604ea28ce7f7f94c4448256e.png "")  
   
 3、打开b学校网站https://bbbbbbb.cn/user，系统与a学校网站相同。不同的是，b学校的登录步骤只有一步，即输入学生的学号，姓名与密码。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNq4k7wibOzfuslgibbB9OVGT7JNMqlKPThZdGicjkIozG2GjF9WBhlTMFgA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6b53a1ef7d52d50512f8cb340bc01e505afd3bfb42bc9d5aeee01556cebfb76a.png "")  
   
   
 输入信息收集到的b学校学生，于**的学号姓名与密码进行登录。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqxyU45NuFP38NozHSA75XjfomMxLqL37aXficlH7gP7stLNyq7Bw8ZFQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/56e2cf499549d8928ad36967884ce729ba5a17c6fcdc8a7f997d9b8a5a821307.png "")  
   
   
 4、在登录后的个人信息设置里，填写好要绑定的手机号验证码信息，抓包。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqCqOulZo6iaibvZATOPjmYafJGaTHibMcGuzZM3vSgGVZTkcOuTx0xEjfg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0eb40719329919e9d72fabe7088ec97d61e74a4f54d2ae3937c09dfe18e6443d.png "")  
   
 修改userid为从a学校中获取到的杨**userid  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNq0tibeMyOaVWC0gD48DuXn12DIQXKSfXVRkxIrcQLoIM9SRw64icAvc4A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dc70741a5824213ca660b736c8d5a3d613bdbf65d1b1f7ca2bab78bc72edbc77.png "")  
   
 响应包显示修改成功  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqhibW5BMfQT9SE4cPhUArC4Fl2gJ2A4OVPdTqIia4VLQgxdjibusp0gxSg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1db977b32e8b26b70d77294ea08c5d89fcafd2975dbdd46bc5e189b100f0bd57.png "")  
   
 5、打开b学校的找回密码功能，输入杨**学生的学号与刚才越权绑定的手机号，获取验证码信息,新密码为Aa123456@  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqk3XmqFcSibsSCUD7icvicwgAQ63mb50dtvZLh6Dr4zCKgFvNFKwNDiaInQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bc46f080f85d129747071dd9ab5e300aef7c6c87dd480446b3594a67ad6b7445.png "")  
   
 修改成功  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqH0hAWQeDtgIpMKiaUpMwmmOSiaoXFl4ziaQ66mdmPLoPz1ZYFesxZaFKA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c5dd8b9b7323c0c56bb1a4a0ca5aab18f91c996201626a6b8ad57485cb6c7339.png "")  
   
   
 6、重新登录b学校，输入杨**的学号与刚才成功修改的新密码Aa123456@。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqb7benDYo841EN1zxe2Hm6Xh9mdUg8icBlwLcKY18J6AEs0qibDFSgTtw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fe3be507e0243da28f4f57c3ccbf9ed2ad954e9be7950344ff32fab8856ab850.png "")  
   
 成功登录杨**账号  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fp1zrrz1Uibic25n4Wib6WWHARsYuvXxyNqXS2meI6JcmGJHUFfmicOKn5T3TqsPAkhOibtcLvSyU6HXZjPqDwmIsgg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/290e091e1d43069d4b550d4f591e29d8e3b87abf9f06961110dca537a104443f.png "")  
   
   
 **三、漏洞总结：**  
@@ -163,40 +163,40 @@ src专项圈子
 ```  
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuaRqDOYRFjU73rIsVy2ISg41LkR0ezBlmjJY4Lwgg8mr1A5efwqe0yGE9KTQwLPJTe9zyv3wgYnhA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=23 "")  
+![图片](../../.resource/remote/b89b48b5a8ce1686d5ebe60e08c5cf22d857deb5ba61af00e4dbaa64b0d8930c.webp "")  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuY813zmiaXibeTuHFXd8WtJAOXg868PqXyjsACp9LhuEeyfB2kTZVOt5Pz48txg7ueRUvDdeefTNKdg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=24 "")  
+![图片](../../.resource/remote/8206e892a145692cb440e214716a53fd2a34a92d947bb70f24d371b40fccabef.webp "")  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/h8P1KUHOKuZDDDv3NsbJDuSicLzBbwVDCPFgbmiaJ4ibf4LRgafQDdYodOgakdpbU1H6XfFQCL81VTudGBv2WniaDA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=25 "null")  
-  
-  
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuY813zmiaXibeTuHFXd8WtJAOApVm8H605qOibxia5DqPHfbWD6lmcweDjGv4DLl45waD068ugw2Iv2vg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=26 "")  
+![图片](../../.resource/remote/c59ee24f5453c4966b20529bf5ccb47a783a597b89018d56d5c9f4fcd24349bb.webp "null")  
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuadANlnTubvh6Abe7UZLdQWr5g7s0TNF4tBZqNbdewPNswTDOfvN6PkggCqz8j3mib6Vf3z4ia83asg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=27 "")  
-  
-图片  
-  
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuaRqDOYRFjU73rIsVy2ISg4Bd1oBmTkA5xlNwZM5fLghYeibMBttWrf57h8sU7xDyTe5udCNicuHo8w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=28 "")  
+![图片](../../.resource/remote/c9a6647b2ea1afd3698ab379704e411a3b23a518b6d756aae0885bcc03144b24.webp "")  
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuYrUoo5XZpxN9Inq87ic71D6aUeMdaWrKXgYYia2On8nMA7bqWDySa8odAq1a0kkp3WFgf0Zp0Eut0A/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=29 "")  
-  
-图片  
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuaRqDOYRFjU73rIsVy2ISg4KKlic4yiafWTpLdejicQe3MllEQc24ypeI3anaK7IjJDVyq1WVQN2yKBA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=30 "")  
-  
+![图片](../../.resource/remote/d86b7aa76d2a75481e62ca763c3c9f5d14b7d0d10ec3e49361ea2591d682ac8c.webp "")  
   
 图片  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuadANlnTubvh6Abe7UZLdQWHjP3FUnZpXdrOicRWrCf9MibaglQia7WesCVs0ibtBhC4c2XiaT9HibE1Drg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=32 "")  
-  
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuadANlnTubvh6Abe7UZLdQWXytl9Ioah3X7tw7EMlWV96wWXEHFEM4m6NwlvvkcmEcPqcxcE9MQDg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=33 "")  
-  
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuaDpuFU7U9TMK5eIpY8iaJcXCicmTB6fsRd8icmH7K1X99YbC07GaJbCRReocORsnDGNU7H7PeqcysIA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=20 "")  
+![图片](../../.resource/remote/4f7e120baa227fc0fa310b7cbf2e019080bbcaf137e6dbc121495745e633894c.webp "")  
   
   
+![图片](../../.resource/remote/ebee5cd5da1463d77024a5a4b2f8e3596f0727064c0dbf0a39be10be9f3e35fa.webp "")  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/h8P1KUHOKuaDpuFU7U9TMK5eIpY8iaJcXzeTsials9fwTK9lb0iavN5ya2KJAT9sXIBShtRdfRWHNUpgPKjmEnpsA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=21 "")  
+图片  
+![图片](../../.resource/remote/d59ce2a7542b1251e31fbad3bc59c70c6aa3483efdacdd2b3a1b551beaa0420e.png "")  
+  
+  
+图片  
+  
+![图片](../../.resource/remote/359497ff36c8520dc1b4b5b963451f98638560e6439a9a2962d9de4e648db319.webp "")  
+  
+![图片](../../.resource/remote/3c22e2541bb6d2c8d4f53d509cf1738bb79bb9052ea4bde1fb929b069bf4b680.webp "")  
+  
+![图片](../../.resource/remote/6c51456c246cf626d616406c9d2d56a6ab7918533cdddc7e8318d5a8a78287b2.webp "")  
+  
+  
+  
+![图片](../../.resource/remote/499c6f5277c4a2ea1402415033e409a715e0e2cc1712742ebce503277425cdff.webp "")  
   
   
 

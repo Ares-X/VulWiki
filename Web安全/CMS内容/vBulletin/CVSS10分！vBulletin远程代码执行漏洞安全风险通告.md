@@ -40,7 +40,7 @@ schema_version: "1"
 #  CVSS10分！vBulletin远程代码执行漏洞安全风险通告   
 应急响应中心  亚信安全   2025-06-03 10:03  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbFmnKntrOwOGUM4pPsX4e2tw2NfxbWLmeKUCcUY987x5hBKNG7fBGxBA6k04OQZVfp8h88mvSqm8A/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/910b335a6458065a123b5445f0459f4d8dc81af9c689989162e42cebb2e4cad3.jpg "")  
   
   
 今日，亚信安全CERT监控到安全社区研究人员发布安全通告，vBulletin 存在两个远程代码执行漏洞，编号为 CVE-2025-48827和CVE-2025-48828。  
@@ -107,7 +107,7 @@ AE产品在线更新方法：登录系统-》管理-》更新-》特征码更新
 TDA、AE产品离线升级PTN包下载链接如下：  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iczzp36h0nbFmnKntrOwOGUM4pPsX4e2tVCyBaMVQ1d3uvREH6ZvRqsr34icGjS0AEZ1CpIPqFf16RtIKYrhxE7A/640?wx_fmt=png "")  
+![](../../.resource/remote/5765f916c39114050c9679a09838827d13f4c1e0713beff99a38a2f3434f5b15.png "")  
   
 详细下载地址请后台咨询  
   

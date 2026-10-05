@@ -61,7 +61,7 @@ schema_version: "1"
 
  安全圈   2023-07-27 19:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/aBHpjnrGylgSxa9I02IBd3bgLEhwfJCeRibw3LEjMujeAhD2CvyiaVCZJVHGHODbkPx3pViaX0sAibZsDun6sicUzdQ/640?wx_fmt=jpeg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/393b4e080a4e28dc4d77ff8bf741ab287cf502d83934ee8e3545efa4ceaea3cd.jpg "")  
   
   
 **关键词**  
@@ -72,7 +72,7 @@ schema_version: "1"
   
   
   
-Bleeping Computer 网站披露，Wiz 研究人员 s.Tzadik 和 s.Tamari 发现 Ubuntu 内核中存在两个 Linux 漏洞 CVE-2023-32629 和 CVE-2023-2640，没有特权的本地用户可能利用其在设备上获得更高权限，影响大约 40% 的 Ubuntu 用户。![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylianfkerwib0edIbY9XS1MIhxuXibjYicb7gefmfauB6nZibfXut8VswYhpktxMnkWS1DFu9sicvxcZHhZw/640?wx_fmt=jpeg "")  
+Bleeping Computer 网站披露，Wiz 研究人员 s.Tzadik 和 s.Tamari 发现 Ubuntu 内核中存在两个 Linux 漏洞 CVE-2023-32629 和 CVE-2023-2640，没有特权的本地用户可能利用其在设备上获得更高权限，影响大约 40% 的 Ubuntu 用户。![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2499ed3c25f36b81bed5ea9c11703e575ad53e9862aecfdf5c534c3d6ed7d68c.jpg "")  
   
   
 Ubuntu 是目前使用最广泛的 Linux 发行版之一，拥有大约 4000 多万用户。  
@@ -81,7 +81,7 @@ CVE-2023-2640 是存在于 Ubuntu Linux 内核中的一个高严重性（CVSS v3
   
 s.Tzadik 和 s.Tamari 两位分析师发现在 Linux 内核上实现 OverlayFS 模块的差异后，找到了这两个漏洞问题。（OverlayFS 是一种联合装载文件系统实现，因其允许通过用户名称空间进行无特权访问，并且受到容易被利用的漏洞的干扰，过去曾多次受到威胁攻击者的攻击）  
   
-Ubuntu 作为使用 OverlayFS 的发行版之一，在 2018 年对其 OverlayFS 模块进行了自定义更改，总体上来说应该是安全的。然而在 2019 年和 2022 年，Linux 内核项目对该模块进行了修改，这就与 Ubuntu 的更改起了冲突，新版本广泛分发采用了包含这些更改的代码，因此冲突引入了这两个漏洞。更不幸的是，这两个漏洞存在被利用的风险，毕竟它们的 PoC 已经公开了很长一段时间。![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylianfkerwib0edIbY9XS1MIhx36cIDBicn4SjaTiaX9KeHvqHSkN1vT3TQZhTA1sa70ED2GZIJaSdcLdg/640?wx_fmt=jpeg "")  
+Ubuntu 作为使用 OverlayFS 的发行版之一，在 2018 年对其 OverlayFS 模块进行了自定义更改，总体上来说应该是安全的。然而在 2019 年和 2022 年，Linux 内核项目对该模块进行了修改，这就与 Ubuntu 的更改起了冲突，新版本广泛分发采用了包含这些更改的代码，因此冲突引入了这两个漏洞。更不幸的是，这两个漏洞存在被利用的风险，毕竟它们的 PoC 已经公开了很长一段时间。![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/aeeec58d3ee421dfd4e4ad0b87b0b6840cd5b6c36c68d112cc5f5c330661669a.jpg "")  
   
   
 Wiz 研究人员警告称这两个漏洞源于 Ubuntu 对 OverlayFS 模块的单独更改，都针对 Ubuntu 内核，目前针对这些漏洞的武器化攻击已经公开。需要注意的是这两个漏洞只会影响 Ubuntu，其它包括 Ubuntufork 在内的 Linux 发行版以及不使用 OverlayFS 模块的自定义修改都应该是安全的。  
@@ -95,35 +95,35 @@ Wiz 研究人员警告称这两个漏洞源于 Ubuntu 对 OverlayFS 模块的单
 阅读推荐  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylianfkerwib0edIbY9XS1MIhxWEG90Pl2ah3uAcjUZvcz3pdeaib69TXkW3TGf9EgWcCK7XJl9RWDHxw/640?wx_fmt=jpeg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/eed5195845c4c35122ad056ce21c4c62bcdeff48408386f104b9956fceec4721.jpg "")  
 [【安全圈】武汉地震设备遭攻击，“黑手”疑来自境外！](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=1&sn=5c9ef0d7dcb2b1b63eca5db4c4eed405&chksm=f36fc0fac41849ec4a8a80658dfa5379ff9ec33e94cf57cfbb094586d90792f7ab83fd20a15c&scene=21#wechat_redirect)  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/aBHpjnrGylianfkerwib0edIbY9XS1MIhx9sTmS53uutROVMdzGpH1ib76nnvgRvib1GKgkq0vRBEKhKRsdQZIER2Q/640?wx_fmt=png "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b4c496fe99de674df8a48a882c8734cbc2699f6a75ffd780ddd3b569bfbf6939.png "")  
 [【安全圈】“邪恶版”ChatGPT 出现：WormGPT，可利用其编辑恶意软件](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=2&sn=1709ae32ec52bb9307dd7c088ede4ccd&chksm=f36fc0fac41849ecbedef074d12e6a3b4ecb1b44605e1a815610f0f8b393b02d37ac08664e15&scene=21#wechat_redirect)  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylianfkerwib0edIbY9XS1MIhxpcS6Cuv3FIvgcN2xiab6uA5fc7iaqQaibpcgEn1yJDJ6XoGUPkXiaFAVNw/640?wx_fmt=jpeg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/338c0e0fecce975ec5bc545fadecda5ff1911c32293d4d7884c3a8cdef9fabd2.jpg "")  
 [【安全圈】遭遇攻击，挪威十余个政务平台敏感数据或泄露](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=3&sn=513ca6d7945c3a9d8c66ea8a681b4ee3&chksm=f36fc0fac41849ecfbf7c4760fd771120e56d4fdcebad3fc2420be2f610a95a960c8eaa8956a&scene=21#wechat_redirect)  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/aBHpjnrGylianfkerwib0edIbY9XS1MIhxNMBjLQpokR0NQXicZBuTBkyEGIlSNdbAveQZVo6iaMZIIFnVus4C81JQ/640?wx_fmt=png "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b2135bd7cf41de89dfd5522e42c4227e3e0a95609c0a7c471b5e9696de3f4cd6.png "")  
 [【安全圈】所有 AMD Zen 2 CPU 均受影响，专家发现 Zenbleed 远程执行漏洞](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=4&sn=a6770cb53a5583f0e8b921778dacfca5&chksm=f36fc0fac41849ecaefef66e916873551746f8c0e7a59be9c75cb86aab177b0f7d36120b18f8&scene=21#wechat_redirect)  
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/aBHpjnrGylgeVsVlL5y1RPJfUdozNyCEft6M27yliapIdNjlcdMaZ4UR4XxnQprGlCg8NH2Hz5Oib5aPIOiaqUicDQ/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8ef99978569138e40faaefacfc8d661fb13980ac43fb5341e3533c125d154eaf.gif "")  
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/aBHpjnrGylgeVsVlL5y1RPJfUdozNyCEDQIyPYpjfp0XDaaKjeaU6YdFae1iagIvFmFb4djeiahnUy2jBnxkMbaw/640?wx_fmt=png "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cf59233925b190a547d1093175012782459a87a613596889430326433b280cb7.png "")  
   
 **安全圈**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/aBHpjnrGylgeVsVlL5y1RPJfUdozNyCEft6M27yliapIdNjlcdMaZ4UR4XxnQprGlCg8NH2Hz5Oib5aPIOiaqUicDQ/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8ef99978569138e40faaefacfc8d661fb13980ac43fb5341e3533c125d154eaf.gif "")  
   
   
 ←扫码关注我们  
@@ -133,13 +133,13 @@ Wiz 研究人员警告称这两个漏洞源于 Ubuntu 对 OverlayFS 模块的单
 **实时资讯一手掌握！**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/aBHpjnrGylgeVsVlL5y1RPJfUdozNyCE3vpzhuku5s1qibibQjHnY68iciaIGB4zYw1Zbl05GQ3H4hadeLdBpQ9wEA/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e09a59ca7314db8625c67aa53c2a2a68642281bd4c465c4415787e93478bf110.gif "")  
   
 **好看你就分享 有用就点个赞**  
   
 **支持「****安全圈」就点个三连吧！**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/aBHpjnrGylgeVsVlL5y1RPJfUdozNyCE3vpzhuku5s1qibibQjHnY68iciaIGB4zYw1Zbl05GQ3H4hadeLdBpQ9wEA/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e09a59ca7314db8625c67aa53c2a2a68642281bd4c465c4415787e93478bf110.gif "")  
   
   
 

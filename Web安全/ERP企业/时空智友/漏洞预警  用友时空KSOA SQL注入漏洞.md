@@ -58,7 +58,7 @@ schema_version: "1"
   
 用友时空KSOA是建立在SOA理念指导下研发的新一代产品，它可以让流通企业各个时期建立的IT系统之间彼此轻松对话，帮助流通企业保护原有的IT投资，简化IT管理。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUXzkIS3UCiaMBXoe3QHiaR40QZ022CyNpkdUl51WGbHBBqnKAouicg7fO78vlrgDR9oib2mccXwwic0XA/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/03d2f12776f505810003187a7a9e5638543b34f0256b7b36c4b8ac63e15f6dc9.webp "")  
   
 **0x03 漏洞详情**  
 ####   

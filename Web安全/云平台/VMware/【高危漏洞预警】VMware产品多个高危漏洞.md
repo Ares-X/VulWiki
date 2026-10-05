@@ -46,7 +46,7 @@ schema_version: "1"
 
 cexlife  飓风网络安全   2025-07-17 12:44  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01SK4zK61JZc8IMZsTsmbj6o5aM6Ag42ymzE7FckgbsLDDTZaZ9FSoiaKh2Dra9XspHMjP1RzdSHfw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5da51b4848db2cfaf9fd7251c95dd1100ce933a3432ac54a863dc1d4aa0cce82.png "")  
   
 1.VMware ESXi、Workstation和Fusion VMXNET3虚拟网络适配器整数溢出漏洞(CVE-2025-41236)   
   

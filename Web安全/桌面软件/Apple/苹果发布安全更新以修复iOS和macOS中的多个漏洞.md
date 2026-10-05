@@ -56,7 +56,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2025-05-13 23:00  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEce9BQ6ka98O4HfvB8lHhIAibKRozbiaOsIvI1gaURukko3aiaz2Z83THSqBObdE5bjhSzoiboAgcKmaWrg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/60e4e054bd4d25c62eb26b8ae50e3944b290c573323374587aed1e320c5b5d81.png "")  
   
 苹果紧急发布iOS和macOS安全更新，修复可能让攻击者仅通过打开特制图片/视频/网站就能执行恶意代码的关键漏洞：  
   

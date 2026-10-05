@@ -74,7 +74,7 @@ source_status: "recorded"
 
 Phicomm 路由器
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BN9kicv5AxlAWayltvKKSl6eGXKf1AwlAVliaicQwNyCEtZyccChdzoZySicKOnic2x72g6qBoiba737J6w/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/db0842b62117f403d902e4b02500ba4df9050e9eb0abb056cde12a2a64063790.png)
 
 03
 
@@ -99,7 +99,7 @@ icon_hash="-1344736688"
 
 ‍‍
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BN9kicv5AxlAWayltvKKSl6ePjUaxCAHvqcRV82QvrSW6W2oYOOFx6Qq0SlojKdJ1sbsv2ibmzGeVYg/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f7dba9f287f56e73a28a0bbf55fe8f16974d20b80e9c90d2089433c83af61d5b.png)
 
 05
 
@@ -109,7 +109,7 @@ icon_hash="-1344736688"
 
 第一步，使用 admin 账号登陆，获取 cookie
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BN9kicv5AxlAWayltvKKSl6ef6Hc9O2eY3g8Beda58RJfkEC4eQib8KLAQXPP3nEhhEbjFUfVrWuImw/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b082d62ae63cbf933fc1d5d66216a6925e7919980fae8259694952f92adbd654.png)
 
 第二步，发送如下数据包，在目标机器上执行 id 命令（POC14 行）  
 
@@ -136,9 +136,9 @@ Content-Disposition: form-data;
 
 其中路径中 stok 和 Cookie 的值从第一步获取
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BN9kicv5AxlAWayltvKKSl6e7HSAtaF7PoF4Q6DicCxlctctxUvHLQGr3LbIjrlkicAXia4AiaHbVcK1Fg/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/438f030af59ef4ab7abf8d81ce4834775a10d92949a56fb42f834e3a0961077e.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BN9kicv5AxlAWayltvKKSl6eXpTLWXyW91X2617FnfPibEh7AvUT14y91gV4bbVc1bsFdefW4n2NYRg/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/750418b440baa4417b6a4fc0c4521b03dfb64e51ea2d5135b48a40444c84803e.png)
 
 证明存在漏洞
 
@@ -219,7 +219,7 @@ http:
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BOyvuDVu19tElwp2MufhD6sKibQzZiaXRjkj9JoJSibqXKJQB8GwtWqHVQcBz84RxXgIslEOU07N3UaQ/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/366a34f4537f44a110ccbf238452dada79cbbfa0423705a4088f521944fc7311.png)
 
 ---
 

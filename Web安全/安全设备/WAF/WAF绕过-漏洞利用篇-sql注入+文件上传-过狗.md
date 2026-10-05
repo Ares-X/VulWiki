@@ -132,7 +132,7 @@ sql
   
 测试注入点，发现被拦截  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub1DIGes6Yy1QJ1D0qELdJp2AUP66hZt8jDrIXyo6ZsJ79RKkXFQz7iaQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3995e4b3e7df4ebe7df59c51b9c559049639f5474db37e4ff97ef661c81d03cb.png "")  
   
 将  
 and  
@@ -140,11 +140,11 @@ and
 like  
 ，成功绕过  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubhKqDHOVBuUZBn2xOF3WIjePBn22M50IHswbPXAovU8wSp9x1m6zVeA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/292651f40ab28a94907a68675f65dc92b5fbceed222b50aa9575e7ec3178a765.png "")  
   
 还可以双写关键字绕过  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub5vicianFUe2a9j5vqW1tNiaxcENCiaFVlpic5ZQicjyFDGlXsuNV6GVxhbaw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2c148bfe7f69a031f8d936a35bd41627c5d6a46b8228c113949f0adb36637851.png "")  
   
 2.  
 更换提交方式绕过  
@@ -154,7 +154,7 @@ url
 ，不会检测  
 post  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub56weSd4n6DfHH4NglC17TxrMeesYr2fXHmcZPqbcjjo5rjicsnkx0Jg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f2d53f615dd573f4a28bc49190c76fa90a2ecd949b5f1a54a1583d069a2b5e8.png "")  
   
 开始绕过  
   
@@ -164,17 +164,17 @@ Repeater
 ——右键选择  
 Change request method  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubrsJN7g2iaGFKgRg0FUCAMH3D15yr29ErgW7hYVhh23B54Iqal7Jmj1w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6c2c15996ab22cb15a3a7ae7137082b3391facb928f28e5e9229d278fa0389c7.png "")  
   
 更改为  
 post  
 请求，开始注入测试  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubPyzheymT6Zviameic7gTBPC8oon80icVvDG09iawohek9os5AnNIjSAwpA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/14aab21961c9121d9a37d5a17470d40bcfca6b14cf7b6a2eb3de9e47fad13f43.png "")  
   
 更改正文编码绕过  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubNW5v8Sw1QtNScBBsONESxJQRHqibj64gZSbrmXuK5pafvlyvSLOrxQA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2afc9af19bdd04aae0ebbea04c01d1b0654e241941eb707a32213cfe3cf279d4.png "")  
   
 3.  
 HPP参数污染——使用网站安全狗  
@@ -187,21 +187,21 @@ apache
   
 特性图：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubxeuRGFMX6ia2Bs8sXib6sQiadk1vyibXMEgpe4COwOicoBaLXWoIErHwpDA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a68c294f1199cb811e090de550e0daf7491b53be51af11dac78cd0ba3065e321.png "")  
   
 写一串输出用户传递参数的代码  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubB7p9lytKdgdmJJYjFyycsCibg6cAxeue1P4KkDdv8bYnWjHy3W9mWsw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3b1a501427d2318a342c807c4b1cf282478c5dbd87bd1c76791505900c0f4639.png "")  
   
 访问，并且传递参数  
   
 传递一个参数：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubRIHLemsbfRtvjtreppXz6IuOvYBico6jCKWX1zVEF2BYia0HBHj1IBqg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bbf7f1d1fd2052567f5a1341311161ba1e77630fb5d0aa8d127a524619ccdc55.png "")  
   
 传递两个参数时，只会输出最后一个参数值：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubA5NTJ4bib7Y3evTa62GchJfpkvKtknhWZOIzUMY94cvYoAKvFEKrnQw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0ae7f8d9b7ef39002806357ec743645f855910e56456adee62c20b03d0bc91ce.png "")  
   
 利用这个特性就可以配合注释符  
 (/**/)  
@@ -209,7 +209,7 @@ apache
   
 使用注释符包裹因为中间件特性要执行的注入语句，安全狗检测到注释符就不会注释符内的内容，从而绕过安全狗。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub4F02nalCWMuHrfPWosfj3NICCiab699q3mWzHfH0EKaW8XK3ZgYygibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ce100cba0adc39221cc8505c6d23065173700b024d86ae5c4c64c0aad9b59928.png "")  
   
 文件上传安全狗绕过：  
   
@@ -224,7 +224,7 @@ php
 =_=  
 ）  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubFI2OL89Plp4P2ElgrDTCzZzGzj0CJePr1UJYq6Amdz9Coc5kOHWAcw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d3b858c6ac1e4f2d86b86b8f049618a469c855542ce3da17942a160e36969d02.png "")  
   
 1.  
 去掉符号绕过  
@@ -235,7 +235,7 @@ php
 ”的双引号变为  
  1.php  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub7RdwTplSibGgUh4uKrDB07z1yLSR7smQk1NbQP3TefxdMa2Xyl3QVRg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fc6358c81d022f672341d0d461ba59159d7cd0495cf922189c3d7f7d163295e6.png "")  
   
 2.  
 两个  
@@ -254,7 +254,7 @@ apache
 =  
 绕过  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub9Yr1REg2IricpdYXpo81VHxhGT7zKWwxHrIibNw5ib9yicWBkhwiczbDohw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/413206352d9521b78159dee5bf645a1776c76ada70904658407345e909da3b24.png "")  
   
 3.  
 后缀换行绕过——使用网站安全狗  
@@ -265,7 +265,7 @@ apache
   
 对上传文件的后缀名进行换行  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubGfa2ShiaBtxGkkiaejiaYEtsz1bXSDmpaibTeT0ibnBB6Qibe0oQuSaMXxKA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ff041caa07d0976fc9e7376d3e954ebe5f4f308ab8447124a155fd32ae76109d.png "")  
   
 4.  
 垃圾数据绕过——使用网站安全狗  
@@ -287,22 +287,22 @@ filename="3.php"
 ;  
 filename="3.php"  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubeskryC8P5pHz0zBORguSMBBox21fgcMX87GCRPCsosOIErFCvfEfKg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/45ca513f70f8b5307bc77804f26273b7050e472f0bd17b25e2444d5f74ab7aa1.png "")  
   
 5.  
 参数模拟绕过  
   
 将文件名修改为数据包里面的参数，让安全狗误判。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubE4fGpy5jlhFsotsRqvaxuhqLtmpdgQAMnWGtHXUuiaMSuPrNibCbQBUg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8451094cd9f930e49405942f1b90d4a821bbf6373c4ef8a47d26a86cb11325c1.png "")  
   
 网站目录也产生了上传的文件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdubeHxTiaAKnUcicO2FPiaI0dNlggGmgoPVnCTtX8dfOfw5793eiacKRhBdFw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9559b32d808728bd4a85bd307a7f63ed92e21a789fcfe37b1d74efae63a45c54.png "")  
   
 推荐一下作者最新研发的yakit被动漏洞检测插件，可挖掘企业src漏洞。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCImmI8E9Zf6JqGRia9JWljiaavtzDPaxIm6PXM8IuzuAB6ViceOVwpEMvHH403GNQp59nju2Q49TvqOpg/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1 "")  
+![图片](../../.resource/remote/a40336d7092ff5ae34f15868f8e079c13d7234b7bc2d635062425c1ec869df00.png "")  
   
 以上漏洞都是不需要任何技巧的，作者只是开启插件在目标网站用鼠标“点点点点”就挖掘出这么多漏洞，完全  
   
@@ -376,7 +376,7 @@ yakit
   
 使用教程。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/b9ibb0kbHCImmI8E9Zf6JqGRia9JWljiaavyafDg4ZciajrrTwTH4VWgO5MnmzRk1FMbiaZT2mQxbjb1JJicMDQLXDlw/640?wx_fmt=jpeg&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/b35803cda6c8e1b069a5f50f4c3696090ce83d61c1828256b7e12f5f9680e258.webp "")  
   
 本星球只提供精华内容，没有烂大街的东西。会持续更新  
 yakit  

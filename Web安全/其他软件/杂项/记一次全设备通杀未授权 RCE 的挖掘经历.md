@@ -63,7 +63,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DMYaM2LA5CySWPF8leqdpQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/vnT4hbaLoX5J1VZCVndQceEd50LP5ZcZfHY0maZdjCibzYW3P3hSEGxmwQVhYonEJBGxHeGmyLnibCXFtTcYkQVg/640?wx_fmt=gif)
+![](../../.resource/remote/c2be995afbefdfa21e94ddf52241a645458f0b171a229c3832bc3e44dc198e88.gif)
 
 {
 
@@ -75,7 +75,7 @@ schema_version: "1"
 
 }
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/RXib24CCXQ08ia4MhA05iaKSwJdaHp8U6mnOUGzQLuzP37icFJaVvBWBTu4JgiceNbTshL9gias9aCqkW9voORu4bTug/640?wx_fmt=jpeg)
+![](../../.resource/remote/a66eeea3f894f9f68e50fce04a3b10b48537c2be253f4e82a63bd5a23d1f5b3b.jpg)
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 **前言**
@@ -109,13 +109,13 @@ CVSS 3.1 评分：9.8（严重，CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H）
 
 可以从厂商官网下载到最新固件，然而可以发现其中的固件大多都是加密的，用 binwalk 是无法解开的：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQBKyIxsXOn2Qo6TpTlTtSmk6m7vXoeIUZecWWpRyTPQdLrN2jaOmqMw/640?wx_fmt=png)
+![](../../.resource/remote/eca08c67179f4acecf7b62899442df706eedce028099c9e0d5b5527a67c0bde5.png)
 
 这大概是想要分析该固件所需迈过的第一道坎了，不过好在还是比较容易解密的。原因在于，只是大部分固件都被加密了，但是仍有少部分固件（或过渡版本的固件）并未加密，很容易想到这些固件升级的过程中肯定也会使用到解密的程序，因此可以通过解开这些未加密固件，找到解密程序，并逆向分析出相关算法，这也是固件解密最常用的一种手段。并且，一般一个厂商的固件加密算法都是相同的，故这样所有的固件我们都能够解开了。
 
 此时，我们惊喜地发现 xxx 系列产品的 xxx 型号固件并没有被加密，可以成功解开。然而，如何找到固件的解密程序呢？显然，固件的解密操作肯定是在刷固件之前进行的，因此我们可以查找 OpenWrt 中用于刷固件的 mtd 命令进行定位：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQhBBXZngd2ePeNDwoRkWMW7z20EvzNIicESMMa0ibKNFWyAhZzibuC4E0g/640?wx_fmt=png)
+![](../../.resource/remote/476d616a8e11b7aebeb838f4d86662b2be3171be2176feb394afeb5619822e66.png)
 
 很显然，此处的 rg-upgrade-crypto 自然就是我们所要找到固件解密程序，并找到它的路径 / usr/sbin/rg-upgrade-crypto，对其逆向分析。
 
@@ -123,9 +123,9 @@ CVSS 3.1 评分：9.8（严重，CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H）
 
 因此，我们只需要根据 rg-upgrade-crypto 写出解密脚本，即可成功解开固件了：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQeXO0WDceCVTagAJMTUfiahxicc9eF7yRo8GIaswia7lzj0751gYSDn0bg/640?wx_fmt=png)
+![](../../.resource/remote/63897464b49113b101e26eb31621e04f941111bc01922b08a60d3714a40187cc.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQ7kLyz846pAfsJIgicZia9A2PyB9QUN3ngLXeDl6gxhrJ9EUO4KATwVXw/640?wx_fmt=png)
+![](../../.resource/remote/78049ab65a28a1e348014b1219b3225e5a3fe7c6932c78e82479405922689405.png)
 
 之后，解开不同类别、不同型号设备的固件，可以发现众多设备均使用的是该系统，因此只要挖出一个洞，就可通杀所有设备了。由于授权洞的实际影响并不算太大，所以我们期望挖出未授权远程命令执行漏洞。
 
@@ -289,7 +289,7 @@ end
 
 ```
 
-然而，分析 libuflua.so 可以发现，Lua 中所调用的 client_call 函数，其实是 uf_client_call 函数，这是在其他共享库中定义的函数。查找对比一下，不难发现这个函数定义在 / usr/lib/libunifyframe.so 中。![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQjQrHxt7P5Ezic8oQBIlEhwkDlnHgjKZxX6CaabKory97TlIW4KvUb7w/640?wx_fmt=png)  
+然而，分析 libuflua.so 可以发现，Lua 中所调用的 client_call 函数，其实是 uf_client_call 函数，这是在其他共享库中定义的函数。查找对比一下，不难发现这个函数定义在 / usr/lib/libunifyframe.so 中。![](../../.resource/remote/d7501afee896081c24190df9acc2b39d2addde0bfb85a6fa4f1e8739f085e317.png)  
 
 在 / usr/lib/libunifyframe.so 的 uf_client_call 函数中，先将传入的 data 等字段转为 Json 格式的数据，作为 param 字段的内容。然后将 Json 数据通过 uf_socket_msg_write 用 socket 套接字（分析可知，此处采用的是本地通信的方式）进行数据传输。
 
@@ -309,7 +309,7 @@ LABEL_82:
 
 既然这里采用 uf_socket_msg_write 进行数据发送，那么肯定有某个地方会使用 uf_socket_msg_read 进行数据接收，再进一步处理。匹配一下，一共三个文件，很容易锁定 / usr/sbin/unifyframe-sgi.elf 文件。又发现在初始化脚本 / etc/init.d/unifyframe-sgi 中，启动了 unifyframe-sgi.elf，即说明 unifyframe-sgi.elf 一直挂在进程中。因此，我们可以确定 unifyframe-sgi.elf 就是接收 libunifyframe.so 所发数据的文件（这里采用了 Ubus 总线进行进程间通信）。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQmcTp35J0hH61eNx5sRrbeuG6TNVu5af9R8jTDibgDgrhOicZ5Mhw0zew/640?wx_fmt=png)
+![](../../.resource/remote/4bc40b1c88fd4eaf17d6cadade363d38bfcb8def1ceea23df2ace776e1db544a.png)
 
 ```
 $ cat etc/init.d/unifyframe-sgi
@@ -655,7 +655,7 @@ if ( !*((_BYTE *)v5 + 56) )
 
 对某远程测试靶机攻击后，无需身份验证即得到了该设备的最高控制权：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQDLBic7wcoiau3ArWXGWNIzwRicbmsTwCBWJTeNLVdn6TvcvibaVbbfrPCA/640?wx_fmt=png)
+![](../../.resource/remote/d574846fe67e4aba4168639b5d2b2a2752b7c150bc441a3333e7a36cbac5f114.png)
 
 **仿真模拟**
 ========
@@ -686,11 +686,11 @@ sudo qemu-system-mipsel \
 
 在正式开始仿真前，需要先进行网络配置。用 ip addr 或 ifconfig 命令查看一下主机的 ip，如下图为 eth0（或 ens33）对应的 192.168.192.129，若是没有，手动用 sudo ifconfig eth0 xx.xx.xx.xx 分配一下即可。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQrQHkicibT9j0zZIrYhoLAETS9iaPMMMDzPLFic78P0DhXcfy1RdoYh8fAw/640?wx_fmt=png)
+![](../../.resource/remote/9a696b18e951991c4a30e32f4bac249d466fac49a1d40fddecc3ab7e210f8423.png)
 
 然后，用上面的脚本启动 qemu-system（先需要配置一下 / etc/qemu-ifup），初始账号密码 root/root。在 qemu 中，也需要给网卡分配一下 ip，这样主机和 qemu 间就能通信了（可以互相 ping 通）。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQQQPStvnWiaNicTdWg2hK10XxlZoNV3PXsqPiabTlb1ZQs6hatOfPyNuVw/640?wx_fmt=png)
+![](../../.resource/remote/459fe34b176c34d55bd4a43d7ecbb151396273a50e53c2362aa91210f91f1538.png)
 
 我们将固件打包成 rootfs.tar.gz，再通过 scp rootfs.tar.gz root@192.168.192.135:/root/rootfs 传输给 qemu 虚拟机，然后在 qemu 虚拟机中 tar zxvf rootfs.tar.gz 解压即可（打包之后传输更快）。接着，在 qemu 中依次执行以下命令：
 
@@ -707,59 +707,59 @@ chroot . /bin/sh
 
 以上都是些用 qemu 对设备仿真模拟的基本操作，接下来正式开始对这款设备的固件进行仿真。首先，对于 OpenWRT 来说，内核加载完文件系统后，首先会启动 / sbin/init 进程，其中会进一步执行 / etc/preinit 和 / sbin/procd，进行初步初始化。这当然也是仿真模拟的第一步，在启动 / sbin/init 后，会卡住挂在进程中，我们可以再 ssh 开一个新窗口进行后续操作，也可以用 / sbin/init & 将其作为后台进程执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQeyKOTVXjerYsrY9XU1HRx85epCqXnvGIRD0icnV8Gc9npYYL8JaTnUw/640?wx_fmt=png)
+![](../../.resource/remote/9fc3b2e0dc2c8d83eaf9b52d762952009ec1ee1626d16fd7b9e58e899403bb86.png)
 
 接着，真实系统会根据 / etc/inittab 中按编号次序执行 / etc/rc.d 中的初始化脚本，而 / etc/rc.d 中的文件都是 / etc/init.d 中对应文件的软链接。虽然说真实系统会依次执行所有的初始化脚本，但我们此处的仿真只是为了验证我们的漏洞，因此只需要部分仿真即可。
 
 显然，我们最开始肯定是需要启动 httpd 服务的，对应 / etc/init.d/lighttpd 初始化脚本。用 / etc/init.d/lighttpd start 命令启动服务后，发现缺少了 / var/run/lighttpd.pid 文件：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQ9Y1BtSV7ZTicxQLX7LSWiaicBcSZFgibXlH2M4Xo58c9moPUMLx40TYv4g/640?wx_fmt=png)
+![](../../.resource/remote/42b9fd0df50f1ed9d7ae5b33aee4ab87018c3ab959464be61dd5a058491bb824.png)
 
 这是因为我们是部分仿真的，没有按照次序，故之前没有创建这个文件，而通过查看该初始化脚本，可以发现此处 / rom/etc/lighttpd/lighttpd.conf 的缺失并无影响。因此，创建 / var/run/lighttpd.pid 文件后，再次 / etc/init.d/lighttpd start 启动服务即可。
 
 可以看到，此时进程中已经成功执行 lighttpd 程序，并且通过浏览器可以正常访问该漏洞入口的 api。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQlaq6GvqBxKQYZk6Xgpbb5CFkOHRDkPm2TceQkN0pgLFpAcJYEicf9bQ/640?wx_fmt=png)
+![](../../.resource/remote/1094ea8431e513f97df2fdfe2c361c70f994ae7298b980b14120986e92997a10.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQzlIwpEvxvMEgniaibclLcXcvAlyvTMuYzSz4J87YhdVcSYGI5EhzS74g/640?wx_fmt=png)
+![](../../.resource/remote/001b1b9ff8d0310d51e82e942f220f373ffe6e408b7c769b47e6a659f7933896.png)
 
 接着，我们需要启动 unifyframe-sgi.elf 了，对应 / etc/init.d/unifyframe-sgi 的初始化脚本。用 / etc/init.d/unifyframe-sgi start 直接启动后，报错 Failed to connect to ubus：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQg3w1C3ia69N52xwDfU1T4z0AtVyNBzpXwAU56pGQoSTia6nEmmlONDSA/640?wx_fmt=png)
+![](../../.resource/remote/aa442f88ca9cf7d838a3675c03c59e241e499c8afe62403120c1e9f150b6f4b3.png)
 
 这是因为 unifyframe-sgi.elf 中用到了 ubus 总线进行进程间通信，因此需要先执行 / sbin/ubusd 启动 ubus 通信，才能启动 uf_ubus_call.elf，继而才能再启动 unifyframe-sgi.elf。
 
 按照上述步骤启动后，可以发现进程中有了 uf_ubus_call.elf，但是仍然没有 unifyframe-sgi.elf，同时 procd 守护进程收到了一个 Segmentation fault 段错误的信号，意味着启动 unifyframe-sgi.elf 的时候出现了段错误。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQAF6ZFKJddq7o3Dh5XrUHOEqsT0IIib7Chg1NbfqvXO9BEjJ81xqE8Eg/640?wx_fmt=png)
+![](../../.resource/remote/b9f3d533edceedd2f487fa427cfb39d4d561df91e9db1a4024af027ba33ec976.png)
 
 接下来，我们需要分析 unifyframe-sgi.elf 为何会出现段错误，大概率是由于缺少一些文件或目录所导致的。首先，发现此时 / tmp/uniframe_sgi 中已经存在 record 文件夹，但并未创建 sgi.log 日志文件，进入 unifyframe-sgi.elf 的主函数，容易定位到 reserve_core 函数，其中需要打开 / tmp/coredump 目录，但这个目录此时是不存在的，因此造成了段错误。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQ0f4RibYRdH8O5T6PjPIJkM3uMicXJDZDYyLiaGIGIpoTn9kaIhChlMsJA/640?wx_fmt=png)
+![](../../.resource/remote/f394669d1c1d02bd8ce8b5403e40549e380af5fc09a89e5fda10a7cbe25f4ee5.png)
 
 创建 / tmp/coredump 目录后，运行 / usr/sbin/unifyframe-sgi.elf 程序，因缺少 / tmp/rg_device/rg_device.json 文件报错：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQcztmZDibWzOF4K5ZBYib6yOU5LomF7qOHB6FJXVI1cZsbE0thLzqtpqA/640?wx_fmt=png)
+![](../../.resource/remote/b3553426cb813e54c03fc91024f3ef9e440b35b138dfcc586e105526306a1dec.png)
 
 这里的 rg_device.json 大概率是在某前置操作中从其他位置复制过来的，故搜索同名文件，不过有很多：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQgYoIiaDREeX7oicuVKLtDzVR7rbGgO5ztNcVaakia66DpZqmZ79ZWahyA/640?wx_fmt=png)
+![](../../.resource/remote/032869cdb4ebdf48b08f153836583fcc2f2a660c7c1d78d134364d36aa051f18.png)
 
 为了确定是哪一个，我们定位到 ufm_init 函数中，发现此处之后会从 rg_device.json 中读取 dev_type 字段的内容。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQ5ROA1Il1ibZnwKpftyooLWCtdhA1G3salb5za4cwndzu9fJLmPTib6CA/640?wx_fmt=png)
+![](../../.resource/remote/995071821b2458e93fe65c3873584acdb4124bb0279493ea14e39cdd22766c91.png)
 
 可以发现除了 / sbin/hw/default/rg_device.json 中都有此字段，这里随便复制一个 / sbin/hw/60010081/rg_device.json 到 / tmp/rg_device 目录下。之后再执行 / usr/sbin/unifyframe-sgi.elf 程序，就发现没有新的报错，执行成功了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQJdkS17SUk7X2jYRMqpHj20t2Uhgicscxn7iaibJdDwqPe37kPNlFoRZwQ/640?wx_fmt=png)
+![](../../.resource/remote/96c955ab339e39a7872bfea55c0204f802894399052270230f5c5abeb2332edc.png)
 
 此时进程中也有 / usr/sbin/unifyframe-sgi.elf 程序在运行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQfRYchDCiaZsEOllvKnibopXTeuibibgOluNguYlfaFkdKadyuZKBiaMzTDw/640?wx_fmt=png)
+![](../../.resource/remote/ba6f1a8dbc6c84fda23d2a1714f13361583ea0c0094ffaec13bb82230c596a27.png)
 
 最后，我们利用该漏洞注入 telnetd 命令启动相应服务，可以看到代表 telnet 服务的 23 号端口被成功开启。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQq4ezD0Wc5snqtoYkHcrqUJeHupgDnNdZq1cvW4Xic3ma2bv5MB8mldg/640?wx_fmt=png)
+![](../../.resource/remote/8eab85fca6562760d6ae272081ace86ac183ea4e29414cafd7157225a418912c.png)
 
 至此，利用仿真模拟的环境对该漏洞的验证完成，总体来说对该设备的仿真还是比较容易的。
 
@@ -774,7 +774,7 @@ chroot . /bin/sh
 
 容易发现，在新版固件的 unifyframe-sgi.elf 文件中新增了 stringtojson 和 is_independ_format 函数：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQaVmFkcCH1bPCuAubtyB3W8DfTUITtFE4hQ2gUWuPuyoPwhYElZxsDQ/640?wx_fmt=png)
+![](../../.resource/remote/550ff90acbe727d3310d52224b1ac8848c62c873f46215ed455f7ecbdf61826b.png)
 
 在 stringtojson 函数中，调用了 is_independ_format 函数，判断是否存在单引号和反引号。若不存在就返回，而返回的内容无法通过单引号闭合，也就无法执行任意命令。
 
@@ -853,11 +853,11 @@ LABEL_26:
 
 进一步交叉引用，在 sub_40DB48 函数中，对可控的数据用 stringtojson 函数进行了过滤。然而，这里的过滤并不严谨，接着往下看。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQYcobibEyVymVoyXbVF3JoNQ3vW9eBchKPA82L0u8xDDSOfyTicrKI4qw/640?wx_fmt=png)
+![](../../.resource/remote/86542dfb31ab4c8faffcdc474e1ecf6b085f56af30dc5a8674bd315e4fe1fe26.png)
 
 由上述可知，若这里的 v74 不为空，则存放着 stringtojson 函数过滤后的内容，否则说明不存在单引号或反引号，也就未通过 stringtojson 函数进行过滤。又由于 stringtojson 函数处理后会带有双引号，故若包含了单引号或反引号，该命令在新版固件中实际为 / usr/sbin/module_call set networkId_merge "{...}"。虽然由于 JSON 数据中双引号得是 \" 才行（stringtojson 函数也会将双引号编码为 \\u0022），无法闭合绕过双引号，但是在双引号内是可以用反引号或 $() 执行命令的，而这里只过滤了反引号，并未过滤 $()，也就给了攻击者可趁之机。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQVBdHTa4ufSibu1czib8Hz5sgwGMdSJfhOggciaa2dNkqgMTFqGRzIIBaQ/640?wx_fmt=png)
+![](../../.resource/remote/3700438d2c4670c4182f65b36b5c75297abdf2e6b60c74251271ac447cdc8209.png)
 
 不过，在新版本固件中，也在其他方面加强了一定的安全检查和防护，例如在初始化脚本 / etc/init.d/factory 中通过 rm usr/sbin/telnetd 命令删除了 telnetd 程序，也就无法通过开启远程登录而控制设备了。但是，不难想到还可以通过反弹 shell 获取设备权限，这里笔者采用的是 telnet 反弹的方式。
 
@@ -870,7 +870,7 @@ LABEL_26:
 
 **演示效果：**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/96Koibz2dODsSyNcenhEBt8qvnOIAic7sQSHb5u9av2yfkQt7wZ21kkibSh9Wyp3DvDGAQibSO95ia9Hd1GXibZib2AzQ/640?wx_fmt=png)
+![](../../.resource/remote/0335d3e3d4d8e709d7e0143fce030277663cd9ca2a350c9277c11eed45db0f8b.png)
 
   
 
@@ -948,7 +948,7 @@ end
 [  
 ](http://mp.weixin.qq.com/s?__biz=MzI5MDE0MjQ1NQ==&mid=2247516613&idx=1&sn=be28c29022335c68d6048dc45da4bdd7&chksm=ec26a05ddb51294bfd8ab5c9199d64eae120b895782a5eb52b4d9bdf42d2455662858126051b&scene=21#wechat_redirect)[网络空间搜索引擎使用技巧](https://mp.weixin.qq.com/s?__biz=MzI5MDE0MjQ1NQ==&mid=2247524697&idx=1&sn=852dfdb59b30beb93d3b7aa8cb03a930&chksm=ec2640c1db51c9d752256fa2fbb0a3e32c476ea510d7a1cd242438d477aece3c31a3e1cb7ce6&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RXib24CCXQ08P2lHs2gMuphdmUxyKIQR1YoniczDqibgwjKkLqegFsBvq5bdUibgAhzoJnJuaHEYGZ7icTO3MNaIWjg/640?wx_fmt=png)
+![](../../.resource/remote/6899861881dee548d872ef03f50d901fb5024396ebd3d51fa29797033480f624.png)
 
 **雷石安全实验室**
 
@@ -960,7 +960,7 @@ end
 
 mtn@motanni.com
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/RXib24CCXQ09P8KpHiakzNxaeiaNpy9QJOicjS63gTVQ57eX4n7jnfk65micFGf1RP4kWh87kuM8w5dO5s6vsSx49yw/640?wx_fmt=gif)
+![](../../.resource/remote/d37276c855b33f6effceb05801f783fd0ddf9a3e8d18a457c7387c92648f37cf.gif)
 
 觉得文章不错，记得【点赞、在看、转发】！！！
 

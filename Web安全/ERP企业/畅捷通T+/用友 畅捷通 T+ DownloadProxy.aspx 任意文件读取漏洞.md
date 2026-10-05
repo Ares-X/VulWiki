@@ -73,7 +73,7 @@ http://xxx.xxx.xx.xxx:8080/tplus/view/login.html
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sajqow3Sgia7kWJlefpiaW49YyAtyfj1YM5ZJw5lQHYRaic1CFkpDCcxRX3cVakaKq3x391D1lKvnzGy6xygzGNbQ/640?wx_fmt=png)
+![](../../.resource/remote/7a3a45ee957d7ebff9d2eaa714e908638a4a6a35c5f43de00ea40613f780fc34.png)
 
 验证 POC
 
@@ -98,7 +98,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sajqow3Sgia7kWJlefpiaW49YyAtyfj1YMvceWYduRC1nX6zexVc2Najs9pYjGu19IpyLNMKs0gTBp8fnc7rjtLg/640?wx_fmt=png)
+![](../../.resource/remote/4722a74837e08e5e257d51fab6c352aaddad6a7389360889626c6b9a641f2732.png)
 
 使用 tr0uble_mAker 大佬的 POC bomber 工具，并为其编写 poc，可以做批量化漏洞检测。（ps: 该工具非常好用）
 
@@ -152,7 +152,7 @@ def verify(url):
 
 检测效果：   （工具的具体使用请移步原作者项目地址）  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sajqow3Sgia7kWJlefpiaW49YyAtyfj1YMvppndvqIRqcoM7rVjL8iaHC6zY6vbwAeqoH4qKhGUn59hp7X8xPViaEw/640?wx_fmt=png)
+![](../../.resource/remote/cf6eae191b559f703e19618549c6a0203f0db689e7ee3bd63557c5d1c0312773.png)
 
 ---
 

@@ -53,7 +53,7 @@ fofa: "title=\"MessageSolution Enterprise Email Archiving (EEA)\""
 
 **点击蓝字**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif)
+![](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -104,7 +104,7 @@ title="MessageSolution Enterprise Email Archiving (EEA)"
 
 登录页面如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCkjy5v5yVxVyhmicBHsahq3rA3mSAnYUqab5HTrX3hasX8F5YoX4EYRmep0O8C27ribxQ1ZkgXKK9w/640?wx_fmt=png)
+![](../../.resource/remote/be69aeae73bbe20549086e9b4eced1630ddc10b8bb447f45904ce8a2d84dee4d.png)
 
 访问如下 Url
 
@@ -112,11 +112,11 @@ title="MessageSolution Enterprise Email Archiving (EEA)"
 http://xxx.xxx.xxx.xxx/authenticationserverservlet/
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCkjy5v5yVxVyhmicBHsahq3kicFSzxBfOsuaNkVlL2LibKt6yGER7HibEyRZfBSORDxdSodIpP2ib273g/640?wx_fmt=png)
+![](../../.resource/remote/a9b975f3e100ee7f0a63f32b6761462ea8738e63cd146001f848f1a9635c12fd.png)
 
 使用获得到的密码可以登录系统
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCkjy5v5yVxVyhmicBHsahq3WRsZV886KN48oiafQZ1v9AH7JY2SZcMEaAVZOgRnicXzZRlAyvPfMn7Q/640?wx_fmt=png)
+![](../../.resource/remote/3a1b95380359dd4387bece7f48ce24ac2d6309ea17397c4700413f421333433d.png)
 
 漏洞利用 POC  
 
@@ -169,7 +169,7 @@ MessageSolution  邮件归档系统EEA 信息泄露漏洞 CNVD-2021-10543
 Goby & POC 已经更新到 Github中
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCkjy5v5yVxVyhmicBHsahq3M4yExhfY5H9iavc0AGjKU81MibNoypqehV1ialQpwxr5ia8G59M87XVCFg/640?wx_fmt=png)
+![](../../.resource/remote/6178675f1a5f29b25115ee6c16cf2dfeb30d851d510b5aead11240f25259d2de.png)
 
 四、
 
@@ -185,7 +185,7 @@ https://mp.weixin.qq.com/s/jehAIIYWrpkLtGvGN-LtFA
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzDCc55WbFiasXQV2ZDzFo8NclAZ2LicCiaeLqxOD3AticSzDm7rRACia7M9m4pickkG8pXR2w1L8maEoBSw/640?wx_fmt=png)
+![图片](../../.resource/remote/40b4bb848be8a556d4672c1284770f77f3c63bcb7d7d5bab550fac31288d8b51.png)
 
 PeiQi
 
@@ -213,9 +213,9 @@ PeiQi
 
 Twitter：@wgpsec
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4LicHRMXdTzBhAsD8IU7jiccdSHt39PeyFafMeibktnt9icyS2D2fQrTSS7wdMicbrVlkqfmic6z6cCTlZVRyDicLTrqg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b9e1284285c5071573cdab2007195e695eb9d397834bf8ada6d0ffc6fb61d537.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/gdsKIbdQtWAicUIic1QVWzsMLB46NuRg1fbH0q4M7iam8o1oibXgDBNCpwDAmS3ibvRpRIVhHEJRmiaPS5KvACNB5WgQ/640?wx_fmt=gif)
+![](../../.resource/remote/bd8c348cdec726a3436db5005b7a9fce34d12de57cac8d2d94ac31a1c423b221.gif)
 
 ---
 

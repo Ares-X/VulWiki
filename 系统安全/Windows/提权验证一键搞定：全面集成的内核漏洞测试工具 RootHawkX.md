@@ -63,11 +63,11 @@ schema_version: "1"
   
 在执行授权渗透测试或红队评估时，提权 PoC 的碎片化往往让人头疼。手头的测试脚本五花八门，而且很多 C 语言编写的底层漏洞由于机制限制，必须在目标机器上现场编译。面对不同的系统，手动解决编译依赖会消耗大量时间。  
   
-为了让提权验证更加顺畅，我们在原版 RootHawk 的基础上开发了 RootHawkX。在原工具的基础上我们重点补充了近期爆发的多个 Linux 高危提权漏洞(如 CVE-2026-46300(Fragnesia)、CVE-2026-43503(DirtyClone)、CVE-2026-46331(COW)、CVE-2026-43494(PinTheft)以及一个ssh信息泄露漏洞(CVE-2026-46333))，并将它们与经典的提权模块统一整合。![main](https://mmbiz.qpic.cn/sz_mmbiz_png/JCFOeHWnhFOSVeBUJyQFicQx7wXflHDGe0e807DOX18aEHS5pTa0EputVu540MBqQ8BZx8ibk8Klow1IjA6uPO726dQYrR2gb6l3OIb97GFgM/640?wx_fmt=png&from=appmsg "")  
+为了让提权验证更加顺畅，我们在原版 RootHawk 的基础上开发了 RootHawkX。在原工具的基础上我们重点补充了近期爆发的多个 Linux 高危提权漏洞(如 CVE-2026-46300(Fragnesia)、CVE-2026-43503(DirtyClone)、CVE-2026-46331(COW)、CVE-2026-43494(PinTheft)以及一个ssh信息泄露漏洞(CVE-2026-46333))，并将它们与经典的提权模块统一整合。![main](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d472f8eb82f437ccf9428543a598bfab9047bb854d047054dd928493f15a12ad.png "")  
   
 ## 模块清单  
   
-目前我们在工具中统一集成了 11 个热门的 Linux 提权漏洞，覆盖了近几年的高频内核态与应用层缺陷。![modules](https://mmbiz.qpic.cn/sz_mmbiz_png/JCFOeHWnhFPWCLJlcRljzyt71bsa9ksicHFryqL15xEvvlmCmx5Vms0W4sxWHuDwXzAxgKCTDEuW5zN2SM0PYsVgx0rZY54o83vV9qS6r7R4/640?wx_fmt=png&from=appmsg "")  
+目前我们在工具中统一集成了 11 个热门的 Linux 提权漏洞，覆盖了近几年的高频内核态与应用层缺陷。![modules](../../Web%E5%AE%89%E5%85%A8/.resource/remote/818892396ce1eab38c832080808135ebf2965b5d97be0f685ea319878dccf851.png "")  
   
   
 **内核提权模块：**  
@@ -114,13 +114,13 @@ schema_version: "1"
 如果已经确定目标系统的内核版本及对应漏洞，用 -e  
  参数指定 CVE 编号或漏洞别名即可触发。例如：  
 /roothawkx_linux_amd64 -e CVE-2026-46331  
-![CVE-2026-46331](https://mmbiz.qpic.cn/mmbiz_png/JCFOeHWnhFPQU3eiceVaHGiaGoyMRCyZ4oGSCbge4eDwyuNbLFBtpM2nFKnhAdEXDa2XuL3QpYxEVTqbjMhfXnbfciaUCE4QTnzkfSS3Rj9iacg/640?wx_fmt=png&from=appmsg "")  
+![CVE-2026-46331](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d525d4f8ce90fd00ba1e55b0a4317fdf541669645b1a49218fbc9229eb64fb2a.png "")  
   
   
 或者使用别名  
   
 ./roothawkx_linux_amd64 -e dirtyclone  
-![Dirtyclone](https://mmbiz.qpic.cn/mmbiz_png/JCFOeHWnhFP4Eb1V5zo6DM0sPD9F3nIHutc4B2DS10D6jcCJWfmFksJI9dVQ07roCkviamb4MaZEBBLPyrU8k9HkwZiaWXhb3Via1jKVRHfdyc/640?wx_fmt=png&from=appmsg "")  
+![Dirtyclone](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4ece1375edbc444a9441c78001d18b23cafb3dfb91433530fc0a69b86cfc6f9e.png "")  
   
   
 遇到不确定漏洞情况的盲测场景，可以直接附加 -any  
@@ -131,11 +131,11 @@ schema_version: "1"
 （窃取私钥）两种运行模式，可以根据任务需求灵活切换。  
   
 ./roothawkx_linux_amd64 -e keysign  
-![keysign](https://mmbiz.qpic.cn/sz_mmbiz_png/JCFOeHWnhFMhnogc40I3PaL04ypT4ptIJFRFmr6eiaUDHlnlfUghiaQJnS4SFdYpVr1ziayjqtg8Kj3wkl3KCIPl79fruiaqWdh3sTVRZrUKAT8/640?wx_fmt=png&from=appmsg "")  
+![keysign](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ef01732936ffc4cb22e338479a59486ca75b5731559204150689ddb35556d41d.png "")  
   
   
 ./roothawkx_linux_amd64 -e keysign -target shadow  
-![keysign shadow](https://mmbiz.qpic.cn/sz_mmbiz_png/JCFOeHWnhFO07UibTRehhmzyfrTks3RJ34QSibKJFMvViaic5lq1jVr3Jq9tWgHND7hMjia2EDdxZtVibKJstqEIcu2jGuhuribow36fJoYy4qNTr0/640?wx_fmt=png&from=appmsg "")  
+![keysign shadow](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2b66ccf0fc6f6e286707701dbb999444eaf6791c1fb189a11d7762648b8a0b10.png "")  
   
 ## 致谢  
   

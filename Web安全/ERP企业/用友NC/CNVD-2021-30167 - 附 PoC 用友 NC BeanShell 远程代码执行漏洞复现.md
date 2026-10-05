@@ -52,7 +52,7 @@ fofa: "icon_hash=\"1085941792\""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/zBJl19bmXZg2kVsVNTIG6Q)
 
-**![](https://mmbiz.qpic.cn/mmbiz_jpg/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tcByibvUp1Im1t9ZQg6jQpTr0Fjv90Eq9eoAPGm8QNNictsWVwYgD82qZg/640?wx_fmt=jpeg)**
+**![](../../.resource/remote/46c51ce554407f007489ff8f72283c5353dcb755385cea8f46afb73f2b2d54e4.jpg)**
 
 **0x01 简介**
 
@@ -72,11 +72,11 @@ FOFA 语句：
 icon_hash="1085941792"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tchySc8oxR1RY79J2GibSJgeYFkH3oUiaJCfhjkvEb9BibSt3oicNfUB8yUQ/640?wx_fmt=png)
+![](../../.resource/remote/8a6a00e4c0069f95841cd600c81034d466a1ae1609b2e5768765a99a121eb69b.png)
 
 **访问目标站点这个酱紫**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tcv5jwrFRjTu9Ho1ZGzxKia5X5X1wW5DwOpIVWvpeiaeVzbwiaIu1j5YcEw/640?wx_fmt=png)
+![](../../.resource/remote/330705ee6b4cc45178aad190347bac0cf4819a086c434861460d96f7534b1e14.png)
 
 **执行命令**
 
@@ -86,13 +86,13 @@ icon_hash="1085941792"
 /servlet/~ic/bsh.servlet.BshServlet
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tcHJceoaibVe8WCRribaS3lEUXeciaia4URLiaFL4UuGaDFib2UbptFoPc1tfg/640?wx_fmt=png)
+![](../../.resource/remote/c065e5c582068bb489e7eb7329fd17622d9c2be7383458f1ae6c65b73e936887.png)
 
 **脚本验证**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tcaNdzSCKJ6PzIV7yt0lek9ibaKpEQXGd3Db7B6BCv7GrKU7bUy2hHrCw/640?wx_fmt=png)
+![](../../.resource/remote/95e85e3b6cb8ac8517610cc17510665c7d3c2708792561a87f065e81f7d28920.png)
 
-用脚写的太菜就不放出来见笑了![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tcVjibZliaiboCcnIt7rbKswhzDzc1CicnrE9kzfqbYloh4vyS6aRs994Ffw/640?wx_fmt=png)
+用脚写的太菜就不放出来见笑了![](../../.resource/remote/5a5898db672fd17187aaddcef273dc12eba9e5bdf87b72b5389674c0a777e3bb.png)
 
 **0x04 修复方案**
 
@@ -125,11 +125,11 @@ http://umc.yonyou.com/ump/querypatchdetailedmng?PK=18981c7af483007db179a236016f5
 
 [【超详细】Fastjson1.2.24 反序列化漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247484991&idx=1&sn=1178e571dcb60adb67f00e3837da69a3&chksm=ea37f965dd4070732b9bbfa2fe51a5fe9030e116983a84cd10657aec7a310b01090512439079&scene=21#wechat_redirect)
 
-_**走过路过的大佬们留个关注再走呗**_![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTEATexewVNVf8bbPg7wC3a3KR1oG1rokLzsfV9vUiaQK2nGDIbALKibe5yauhc4oxnzPXRp9cFsAg4Q/640?wx_fmt=png)
+_**走过路过的大佬们留个关注再走呗**_![](../../.resource/remote/8cc3570fa84e0214bd4882ca2284917bea9ec1c64bf458282dbf38fe60e6120e.png)
 
-**往期文章有彩蛋哦****![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTHtVfEjbedItbDdJTEQ3F7vY8yuszc8WLjN9RmkgOG0Jp7QAfTxBMWU8Xe4Rlu2M7WjY0xea012OQ/640?wx_fmt=png)**  
+**往期文章有彩蛋哦****![](../../.resource/remote/9845d53d925abf99d219f962fd5b665cb348d43f21bae3b477bfa123261bc39f.png)**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTECbvcv6VpkwD7BV8iaiaWcXbahhsa7k8bo1PKkLXXGlsyC6CbAmE3hhSBW5dG65xYuMmR7PQWoLSFA/640?wx_fmt=png)
+![](../../.resource/remote/89e827312c8550f6340812bc85f707828b880d098fb9b95b9e398d9bd40326ed.png)
 
 基于 Kali Linux 环境，从理论、应用和实践三个维度详解 Windows 渗透测试，通过 136 个操作实例手把手带领读者学习，详解环境搭建、主机发现、嗅探欺骗、密码攻击、漏洞扫描等。
 

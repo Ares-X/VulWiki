@@ -110,11 +110,11 @@ Adobe ColdFusion 2023 用户请升级至 Update 21
   
 360漏洞研究院已成功复现Adobe ColdFusion 路径穿越漏洞（CVE-2026-48282），通过构造特制 HTTP 请求，成功在服务器上触发了远程代码执行。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dZ7ia5iaWFzz9cOanNccMUEQPa5fjStpkS2VWzJg5n5AvDKCJcdTed9oy5AcHAOqWtdWibliavUIxUNu4Ik4IZGPynSPw2iaPEARK3YvL4pBarN8/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9698e8ab409ea31daa704c2347da754bcef277e8c95b1ef893baada10a60ebf0.png "")  
   
 图1 发送 Payload  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dZ7ia5iaWFzzice8zicB5icNqP2zPMVwibplmWCVxe9aoDXdtvqPesjbr40XtUJ4JaF0R5u5ibxPNwnxP3Auh4x6wTCnkQG7dQibzHqD05yJDwCK3Mc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cdc150213be4c56d6376164a199d13c9c3ef9a3aa92cdf35fe878ce8b055c5ea.png "")  
   
 图2 CVE-2026-48282 Adobe ColdFusion 路径穿越漏洞复现  
   
@@ -169,7 +169,7 @@ https://labs.watchtowr.com/its-37oc-and-all-we-can-think-about-is-coldfusion-ado
 “扫描下方二维码，进入公众号粉丝交流群。更多一手网安资讯、漏洞预警、技术干货和技术交流等您参与！”  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/dZ7ia5iaWFzz8YToicKab1BicPnEdr7jiatvQUVWSMnYTBeG5ibibgxkGAG1rF4pUdpowPcCmokOO5tp4UjjhUsos4Zf4VwE1aM9NTUz3ogfgdwwFw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/efa33e0c5755999d7e950a6f035d0551872f4b1020f6bf761343227eb0b2f11b.gif "")  
   
   
 建议您订阅360数字安全-漏洞情报服务，获取更多漏洞情报详情以及处置建议，让您的企业远离漏洞威胁。  

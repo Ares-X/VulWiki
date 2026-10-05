@@ -61,7 +61,7 @@ fofa: "\"TerraMaster\" && header=\"TOS\""
 
 TerramasterTOS 是中国深圳市图美电子技术（Terramaster）公司的一款基于 Linux 平台的，专用于 erraMaster 云存储 NAS 服务器的操作系统。TerramasterTOS 系统 api.php 存在信息泄露 / 远程代码执行漏洞，攻击者通过漏洞可以获取服务器权限，导致服务器失陷。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GWXBjgPE49w3OdpLXhuTdN0aM8vS372ZtO6xicjVjsPLGZdyQaYJic9Z7RG5TLRhaRVDLVvVUN4Zibl7r5hVY5cEg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/70d670f94261f520fee57795e21c316f34f2aecb670919abe3e761ecf42583ed.png)
 
 **0x03 漏洞复现**
 
@@ -81,7 +81,7 @@ Connection: keep-alive
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GWXBjgPE49xibmmNCiaswtN58sXiaC1bLgTaO3IduUPB4zUPjJaJJLughRp2TVSOZDLQEn85aMVXhlRaYnhmiczwbg/640?wx_fmt=png)
+![](../../.resource/remote/d125c70ec5f4d7466880c4b74ea73b1f7df8f434891d53ddf40145a5f5117b51.png)
 
 2. 利用信息泄露 ADDR: PWD:，使用如下脚本进行 vuln.php 写入 phpinfo，得到回显
 
@@ -129,7 +129,7 @@ Connection: keep-alive
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GWXBjgPE49xibmmNCiaswtN58sXiaC1bLgT35k95P6aHCLFl9yOIWnJXVlmoAq2dhSjatIIJDVRSGM1mqN1KiaoReQ/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/GWXBjgPE49xibmmNCiaswtN58sXiaC1bLgTs7YyiakcMCRbwGu8OmjYOK30PWeolMFSF5EztvVZLr3P1DzxdMgUvGQ/640?wx_fmt=png)
+![](../../.resource/remote/9ee1ec52de1ab7767dc65b24be8be7a8d7a4dc0967d954d1d137be4e38c73589.png)![](../../.resource/remote/677577bca14574b5762de1fc98d74a27145ff81cfa4d735b61a8cc8c6b39cd91.png)
 
 3.nuclei 批量验证已发表于知识星球
 
@@ -138,7 +138,7 @@ nuclei.exe -t CVE-2022-24989.yaml -l subs.txt -stats
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GWXBjgPE49xibmmNCiaswtN58sXiaC1bLgThHVN2bsXqEibibTjgeOlqBhV6PFTrNa7Z1GSC3RU7NTbHhkZxBl5NDHA/640?wx_fmt=png)
+![](../../.resource/remote/bdda6f00f157569445e65cfbd9839168983371da4c9fab1ce56e0c79c5c8a801.png)
 
 **网络安全神兵利器分享**
 
@@ -148,7 +148,7 @@ nuclei.exe -t CVE-2022-24989.yaml -l subs.txt -stats
 
 👇👇👇
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GWXBjgPE49zs4eNkNzwGvylxKjRnH2aibQqdbEUPicwHRpyuIhk7YdcECWw9kZGCibot3aRDzS4ADTmywx57c7QBw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/b3ee90b6c6214a8cd9dd8ebba363d7cad05158a1170f0cc6c284e9eafac0db87.jpg)
 
 **0x04 ****公司简介******
 
@@ -161,7 +161,7 @@ nuclei.exe -t CVE-2022-24989.yaml -l subs.txt -stats
 
 **审核：Dog**
 
-****1 个![](https://mmbiz.qpic.cn/mmbiz_png/HrawmEuibfaIOiabAXdibIZicf2jWoboub7W1iap9PibRDKPpsdzMPM0daU2P2ibkhXDeic6LtWR71PlAmzE1Z6Ux6YdTQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)** 1 朵************![](https://mmbiz.qpic.cn/mmbiz_gif/0y9ibmULDTbBkmr06X1rtjETLFiaNJgiczQRMlsic03HkL1frCDcicujqskG8fzOuCq4IQo9JRqzV9bRphg4lE74zJQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)************** **5 毛钱**
+****1 个![](../../.resource/remote/2238a78b791a3a1e0f6a35951ccb5e98835ce83d6e7b65b5cb61aa3fcc04f635.png)** 1 朵************![](../../.resource/remote/eeafab41bae8306776aac50b5ff39f33935ad86ca0e52fa481508d7df8f94f21.gif)************** **5 毛钱**
 
 **天天搬砖的小 M**
 
@@ -169,7 +169,7 @@ nuclei.exe -t CVE-2022-24989.yaml -l subs.txt -stats
 
 **就看你们的啦**
 
-****![](https://mmbiz.qpic.cn/mmbiz_gif/HrawmEuibfaJtxalqIebTNSQbkflPG4vahmibDLYmNfjnOptwGv0NBQCdXxEcicN4Q08q9nkX86b5rkDSpXUZ6RWg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)****
+****![](../../.resource/remote/f0749ca228d67f369dc4205d9f3fe3643873218ba5eff839fb9e05fc84faad38.gif)****
 
 ---
 

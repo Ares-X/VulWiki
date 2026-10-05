@@ -231,7 +231,7 @@ int main(int argc, char *argv[]){
  实时监控功能。  
   
 以下截图展示了调用函数 soup_headers_parse_request  
- 的测试框架覆盖率结果：红色高亮表示模糊测试未执行的代码行，蓝色则表示已执行部分。需要注意的是，afl-cov 仅使用产生新覆盖率的输入来生成此报告，因此左侧显示代码行执行次数的数值并不完全准确，未产生新覆盖率的输入数据均未被计入统计。![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPO5xxR2AqAIwHdynyd6hjKPPXMquDLH9K0UX7LjrsJwic4AKlicJrPXibHB3PUhqfiae6Mz7ESkIbaaw/640?wx_fmt=png&from=appmsg "")  
+ 的测试框架覆盖率结果：红色高亮表示模糊测试未执行的代码行，蓝色则表示已执行部分。需要注意的是，afl-cov 仅使用产生新覆盖率的输入来生成此报告，因此左侧显示代码行执行次数的数值并不完全准确，未产生新覆盖率的输入数据均未被计入统计。![](../../.resource/remote/2a55d44009aedb24754f09bf24b5c11b8f01c533b48466b7eeb2dc35712bc01f.png "")  
   
   
   
@@ -242,7 +242,7 @@ gcov1
 通过覆盖率报告可见，源代码中的实际函数 parse_content_foo  
  虽被触发，但部分代码行未被模糊测试执行：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPO5xxR2AqAIwHdynyd6hjKgsDQsDIIPj0849W88spzcrvcibQlIiaWz2TvV4wr4OhCpvUTclE97ulw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/60a6d9453c195fa7ea312ebaeb891b46f585f2e2e62ab60097b33cc85e179d9a.png "")  
   
 gcov  
   
@@ -273,13 +273,13 @@ intLLVMFuzzerTestOneInput (const unsigned char *data, size_t size){
   
 数秒后，一个有趣的崩溃案例浮现：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPO5xxR2AqAIwHdynyd6hjKoMja1HMHXJr1XDCsDHMGKJc2Nz3bOcbkv2899ehDNMklicq2IKkk4sg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f11625ff7a868bdab63c0c22d16755cd67827b0e17247f8ec88740f3167f3e6a.png "")  
   
 afl  
   
 可通过 AFL-clang 编译的测试框架直接复现该崩溃：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPO5xxR2AqAIwHdynyd6hjKcg01edW1U5dHpbjicjK0jn2vUyydR8icvjb5P9UtAwfia3XvhPFPk9VYg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0ff01e5b0887f56f9c8dfe461ecfbfa12b1363b713f03da71da6e3824af9564c.png "")  
   
 asan  
   
@@ -309,7 +309,7 @@ simple-httpd.c
 ```  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPO5xxR2AqAIwHdynyd6hjKZl2fcZlVJQRYicon17GicdCKSjufsmSeZzBPUdWUO90IFJx45AmEvRvQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/93aa1b89b8b3f239f6cabbb8414c55eaa846f7be770002bf2272320519c47692.png "")  
   
 该崩溃的概念验证及修补后的 simple-httpd.c  
  服务器代码可在此  

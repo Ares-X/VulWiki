@@ -39,7 +39,7 @@ schema_version: "1"
 #  VM2远程代码执行漏洞曝光   
 ang010ela  嘶吼专业版   2022-10-14 12:05  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 VM2现10分漏洞，可在沙箱外运行代码。  
   
@@ -50,15 +50,15 @@ vm2是JS沙箱库，每个月通过npm的下载量超过1600万。Oxeye安全研
   
 Node.js允许应用开发者定制应用遇到错误时的调用stack。定制调用stack可以通过Error对象的“prepareStacktrace”方法来实现。也就是说错误在发生时，错误对象的stack属性会被访问，node.js会调用该方法，并提供给该方法一个字符串表示和“CallSite”对象作为参数。Node.js调用“prepareStackTrace”函数如下所示：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28LrEyHKKuuOsKYUaRLJcLymMHBfpgiaCVHFBE7ufxmuRQmtfNGjibfkxNJLk7y5rDZ9TV5xtlKUHjA/640?wx_fmt=png "")  
+![](../../.resource/remote/7bcf81dd34c00bf142e1a03be08d1da2633f9e32231511dbaaab0287e173f6ab.png "")  
   
 数组中的每个“CallSite”对象都表示不同的stake帧。“CallSite”对象的严格方法getThis负责返回this对象。该行为可能会引发沙箱逃逸，因为有“CallSite”对象可能会返回通过调用“getThis”方法时创建的对象。在获得沙箱外创建的“CallSite”对象后，就可能访问节点的全局对象并执行任意系统命令。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28LrEyHKKuuOsKYUaRLJcLy8Z51oado90iaIsPyk0rzllyP5923ntjRQRMDAIP6d9LV3a5c0URvWQA/640?wx_fmt=png "")  
+![](../../.resource/remote/35159e8c92c7bf64ddc9c94c9ca633b0afc79a2390a1c9bc4be421300208fafd.png "")  
   
 PoC代码如下所示：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28LrEyHKKuuOsKYUaRLJcLyvNmDRzQsicjmYwwfhLXlWtOB3t6ZLu14ApAZldR3QmKyAr55xzDyaNg/640?wx_fmt=png "")  
+![](../../.resource/remote/878c7b2a43d726c987daf81f42ac59f6cdc0c3626bb3f54a0cb1aaacbe053363.png "")  
   
 攻击者利用该漏洞可以绕过vm2沙箱环境，并在沙箱主机上运行shell命令。  
 # 漏洞修复  
@@ -69,9 +69,9 @@ Vm2维护人员意识到覆写“prepareStackTrace”可能会引发沙箱逃逸
   
 参考及来源：https://www.bleepingcomputer.com/news/security/critical-vm2-flaw-lets-attackers-run-code-outside-the-sandbox/  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28LrEyHKKuuOsKYUaRLJcLyNJ7sPbBCIiaesWxs4ZJ8iaWVZoFbL5CxwMrKjyKRbDSeGc9rRrqjCqmQ/640?wx_fmt=png "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28LrEyHKKuuOsKYUaRLJcLy25nJqrS3dpqubo41iaY2uw9H4XiatorZiawBbILY6kzBGaeelXPopiccfA/640?wx_fmt=png "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
   
 

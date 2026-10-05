@@ -42,7 +42,7 @@ schema_version: "1"
 
 长亭应急  黑伞安全   2024-04-17 17:50  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FOh11C4BDicTDoBJh7aQJm2oibMRkWvoayyxLm0DtPjJZNlvX4icjkMoQUB4vnBODWABsicHibwxibUGEEalicAqrfGQw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/b7e54c91bc75cac6dfe1248f68a32c1163282dd2a3b8c523db43213b962fdb4e.webp "")  
   
   
 kkFileView是一个开源的在线文件预览解决方案，支持多种文件格式。  

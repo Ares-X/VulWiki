@@ -45,19 +45,19 @@ schema_version: "1"
 
    学了一两个月的 Java 代码审计，对一些审计有了一定了解了。所以决定审计一下 JavaWeb CMS，随便申请一下 CVE。  
    认真严肃的挑选了一波之后，我选择了这个 CMS，可能是缘分，也可能是好玩吧。主要看的是这个项目有 QQ 群，可以加群讨论一下问题，方便更好的研究。先加群不说别的。[gitee 地址](https://gitee.com/jflyfox/jfinal_cms)，[GitHub 地址](https://github.com/jflyfox/jfinal_cms)。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130250-f0d6af90-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130250-f0d6af90-4412-1.png)
+[![](../../.resource/remote/85b7a4e58e5399f51efbcd5142197e746dc871bf05529ad1fce857b0de18a38a.png)](../../.resource/remote/85b7a4e58e5399f51efbcd5142197e746dc871bf05529ad1fce857b0de18a38a.png)
 
   环境的搭建很简单，几种方式可以选择。第一种直接 git 项目的源码，idea 打开项目，然后 idea 会自动导入下载 maven。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130251-f17f0dac-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130251-f17f0dac-4412-1.png)  
+[![](../../.resource/remote/8ca744e6146598d1113629b5c1cf9011d7870c12b4ef7146f7bd1ac8fb623da7.png)](../../.resource/remote/8ca744e6146598d1113629b5c1cf9011d7870c12b4ef7146f7bd1ac8fb623da7.png)  
 第二种方式是去 GitHub 或者 Gitee 上下载发行版。  
 [gitee 下载地址](https://gitee.com/jflyfox/jfinal_cms/releases)  
 [github 下载地址](https://github.com/jflyfox/jfinal_cms/releases)
 
    [Arbitrary file upload vulnerability](https://samny.blog.csdn.net//details/105385042) 文件上传漏洞存在于管理员后台中的模板管理。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130252-f1d5653a-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130252-f1d5653a-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130252-f21e7978-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130252-f21e7978-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130253-f2523416-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130253-f2523416-4412-1.png)
+[![](../../.resource/remote/50e7bc31c96e34e6a81619ec75d45cee73ece3f251a6a8157a5c4b226b13c825.png)](../../.resource/remote/50e7bc31c96e34e6a81619ec75d45cee73ece3f251a6a8157a5c4b226b13c825.png)  
+[![](../../.resource/remote/c8b0806f50c0a9fef0af6ef507da075821c1e55e970a3d00b18c334073207274.png)](../../.resource/remote/c8b0806f50c0a9fef0af6ef507da075821c1e55e970a3d00b18c334073207274.png)  
+[![](../../.resource/remote/1cc8101fe2dd25be3118c30c9fa511f14b345159e6a506faf47b3021e3c7205b.png)](../../.resource/remote/1cc8101fe2dd25be3118c30c9fa511f14b345159e6a506faf47b3021e3c7205b.png)
 
 漏洞分析
 ----
@@ -65,9 +65,9 @@ schema_version: "1"
    断点调试，断点设置在`E:\Soures\jfinal_cms\src\main\java\com\jflyfox\modules\filemanager\FileManagerController.java`模板页面的操作的都是由 FileManangerController.java 控制。
 
 1.  `HttpServletRequest request = getRequest();`有点 Java 知识的人都认识这个, 所以第一个断点设置在这里。  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130253-f2b97d06-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130253-f2b97d06-4412-1.png)
+    [![](../../.resource/remote/7ce96badb8855bc0edbf1ec7a398f240f0357c20ad702fb61623a5a2e4ec626a.png)](../../.resource/remote/7ce96badb8855bc0edbf1ec7a398f240f0357c20ad702fb61623a5a2e4ec626a.png)
 2.  第二个断点，审计的上传漏洞，肯定设置在上传方法里。  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130254-f32825b2-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130254-f32825b2-4412-1.png)
+    [![](../../.resource/remote/a0245e98f2bb7b0372c3db8e7ca9001258928931ddaaf5175a0a293bc21c0e71.png)](../../.resource/remote/a0245e98f2bb7b0372c3db8e7ca9001258928931ddaaf5175a0a293bc21c0e71.png)
 
 ### 漏洞源码
 
@@ -83,9 +83,9 @@ public JSONObject add() {
 ```
 
    项目主说这里修改一下就好了，但默认是这样子的，可见开发者自以为是可以防止任意上传文件漏洞，但其实这里默认是这样子设置。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130254-f34b2f8a-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130254-f34b2f8a-4412-1.png)  
+[![](../../.resource/remote/f2cf6b372c546b50ed2fa7a4afdf7d0e571059cdd658bbdc0e3ee1050fd80978.png)](../../.resource/remote/f2cf6b372c546b50ed2fa7a4afdf7d0e571059cdd658bbdc0e3ee1050fd80978.png)  
    默认设置是一次最多上传 5 个文件，文件大小不超过 16MB。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130254-f3633b70-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130254-f3633b70-4412-1.png)
+[![](../../.resource/remote/599ab0e6a4745b4a697defed092de4c353b9ae146ddd500506b4d7273f98e748.png)](../../.resource/remote/599ab0e6a4745b4a697defed092de4c353b9ae146ddd500506b4d7273f98e748.png)
 
 ```
 long maxSize = NumberUtils.parseLong(MAX_SIZE);
@@ -99,10 +99,10 @@ long maxSize = NumberUtils.parseLong(MAX_SIZE);
 ```
 
    这里 maxSize 是默认为 0。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130255-f40229ce-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130255-f40229ce-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130256-f44e484a-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130256-f44e484a-4412-1.png)  
+[![](../../.resource/remote/5ab9268bf3f541f45472ac901390a33577250c4e75d21a9bc30184e704a4facb.png)](../../.resource/remote/5ab9268bf3f541f45472ac901390a33577250c4e75d21a9bc30184e704a4facb.png)  
+[![](../../.resource/remote/f368451879137eff69b8002535ec8b0475c2def9657ea8c1bbebda14dea8e285.png)](../../.resource/remote/f368451879137eff69b8002535ec8b0475c2def9657ea8c1bbebda14dea8e285.png)  
    下面的一段代码是判断是否只能上传图片，在配置文件`E:\Soures\jfinal_cms\src\main\resources\conf\filemanager.properties`下可以看到文件复写和上传文件大小设置是为 0 的（`0代表的是没有限制`），默认是可以上传其他文件（`upload-imagesonly=false`）。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130256-f492d924-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130256-f492d924-4412-1.png)
+[![](../../.resource/remote/934c6e8cbf7559e513b90c08954bca54f5febeb7a5f8290dee1e82728ad210eb.png)](../../.resource/remote/934c6e8cbf7559e513b90c08954bca54f5febeb7a5f8290dee1e82728ad210eb.png)
 
 ```
 if (!isImage(item.getName())
@@ -245,9 +245,9 @@ tmpFile = new File(this.fileRoot + TMP_PATH + "filemanager_" + System.currentTim
 3.  配置文件中默认是不开启`filemanager.upload-imagesonly`需要使用者手动设置。
 4.  开发者仅仅在前端做了文件上传的白名单，后端没有没有进行校验，导致黑客可以绕过前端验证，上传任意恶意文件。（前端验证本文没有体现，但真的做了限制，有详情的童鞋可以去看看。）
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130257-f4d23d12-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130257-f4d23d12-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130257-f4eb0216-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130257-f4eb0216-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130257-f520ccf2-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130257-f520ccf2-4412-1.png)
+[![](../../.resource/remote/270a2ec94cb17734ec906021068639054e8986ada467bda2e2d82909c990641d.png)](../../.resource/remote/270a2ec94cb17734ec906021068639054e8986ada467bda2e2d82909c990641d.png)  
+[![](../../.resource/remote/49cb733893d219a12cd143d032e8d4d9c3c950e55b02de6e2d942a548d646ace.png)](../../.resource/remote/49cb733893d219a12cd143d032e8d4d9c3c950e55b02de6e2d942a548d646ace.png)  
+[![](../../.resource/remote/a26ade24351bacb914a98c591c1bb5aad559663c8a48fce74296a0d4ae1e22cc.png)](../../.resource/remote/a26ade24351bacb914a98c591c1bb5aad559663c8a48fce74296a0d4ae1e22cc.png)
 
 漏洞分析
 ----
@@ -302,7 +302,7 @@ tmpFile = new File(this.fileRoot + TMP_PATH + "filemanager_" + System.currentTim
     ```
     
        `model.update();`方法是更新数据，将信息写入数据库。具体实习方法可以下一部分代码。  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130258-f57c7958-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130258-f57c7958-4412-1.png)
+    [![](../../.resource/remote/1aa238420cf33ff252068e3bb0661547ee04445253bf60376444ec03b852c8e5.png)](../../.resource/remote/1aa238420cf33ff252068e3bb0661547ee04445253bf60376444ec03b852c8e5.png)
     
 
 ```
@@ -345,8 +345,8 @@ public boolean update() {
 ```
 
    创建数据库连接，更新数据。 可以看到执行完这步就会更新数据库内容。（`利用MySQL语句监控，可以看到最下面的一条是执行的sql语句`）  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130259-f60b0b0a-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130259-f60b0b0a-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130300-f6bc3452-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130300-f6bc3452-4412-1.png)
+[![](../../.resource/remote/0b885e245cbc4648d3521e10d236cc839397f8bb27c5f0e785c100a7d4b8aced.png)](../../.resource/remote/0b885e245cbc4648d3521e10d236cc839397f8bb27c5f0e785c100a7d4b8aced.png)  
+[![](../../.resource/remote/8f558c84d4431a7ed3bb82e408c9410ab1751e9140e55583e0ad64bac0048842.png)](../../.resource/remote/8f558c84d4431a7ed3bb82e408c9410ab1751e9140e55583e0ad64bac0048842.png)
 
 ```
 // --------
@@ -379,18 +379,18 @@ public boolean update() {
 
    感谢长亭科技大佬 @Lilc 耐心指导，这个漏洞也是这位大佬挖的，我只是漏洞复现并给大家分享一下笔者构造 SSTI 模板注入漏洞 payload 经验。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130300-f6ec7cf2-4412-1.gif)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130300-f6ec7cf2-4412-1.gif)  
+[![](../../.resource/remote/ea0c7439aeed16f10a5d38a1893afa71cf74815bfde1cd5188a8e87789d1491e.gif)](../../.resource/remote/ea0c7439aeed16f10a5d38a1893afa71cf74815bfde1cd5188a8e87789d1491e.gif)  
    漏洞存在的位置在管理员后台模板修改下，可以修改模板代码，插入恶意代码等操作。插入一段恶意代码可导致远程代码执行。
 
 ### 漏洞详情
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130301-f7273ee6-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130301-f7273ee6-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130301-f7571472-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130301-f7571472-4412-1.png)
+[![](../../.resource/remote/c6a8c64e241b71c0676f196d5bf26ce1e0ee4f3f51f691708ae6d1f7eb781cb5.png)](../../.resource/remote/c6a8c64e241b71c0676f196d5bf26ce1e0ee4f3f51f691708ae6d1f7eb781cb5.png)  
+[![](../../.resource/remote/45960349af4c8f0ced0bc93dc8a91aa408772eed7e6373d33c3b9a61c62a13a4.png)](../../.resource/remote/45960349af4c8f0ced0bc93dc8a91aa408772eed7e6373d33c3b9a61c62a13a4.png)
 
 ### 漏洞分析
 
    点击保存页面的首先会进入到`E:\Soures\jfinal_cms\src\main\java\com\jflyfox\modules\filemanager\FileManagerController.java`然后判断请求方法，是 POST 方法会判断是 upload 还是 saveFile，如果是 saveFile 方法会跳转到`E:\Soures\jfinal_cms\src\main\java\com\jflyfox\modules\filemanager\FileManager.java`中的 saveFile 方法。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130302-f7b11986-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130302-f7b11986-4412-1.png)
+[![](../../.resource/remote/332b1dfcbfcc9ff103f7d769fe26a96af43cadcd972eed50c896f39b07dd1035.png)](../../.resource/remote/332b1dfcbfcc9ff103f7d769fe26a96af43cadcd972eed50c896f39b07dd1035.png)
 
 ```
 public JSONObject saveFile() {
@@ -419,13 +419,13 @@ public JSONObject saveFile() {
 ```
 
    前期可以修改代码机制我们已经了解的很清楚了，没有做任何的防护措施。但这些远远达不到 SSTI 的要求。`判断一个系统或者CMS是否使用了任何一个模板引擎`，先有比较大众 Java 模板引擎有 Velocity，Freemarker，而这款模板引擎是 beetl，挖掘之间根本没有了解过。据查阅知道，这是一款国产的模板引擎。[官方地址](http://ibeetl.com/)，官网说有很多优势，感觉一般般，吹牛的水分比较大吧。在研究这个模板的时候，官方给[文档](http://ibeetl.com/guide/#/beetl/)真的很差，有些东西说的一知半解没有说清楚。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130302-f7dce25a-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130302-f7dce25a-4412-1.png)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130302-f82a8046-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130302-f82a8046-4412-1.png)
+[![](../../.resource/remote/19fb0d2dd44af385f3533b316c69946f2cbb72aae497efac765372f154eb8b9a.png)](../../.resource/remote/19fb0d2dd44af385f3533b316c69946f2cbb72aae497efac765372f154eb8b9a.png)  
+[![](../../.resource/remote/7d18652df74ae5a2b3624c2f7309569aa0a2142d2a9a555b72f0dca5a463f890.png)](../../.resource/remote/7d18652df74ae5a2b3624c2f7309569aa0a2142d2a9a555b72f0dca5a463f890.png)
 
 #### 知识补充
 
    查阅官方文档，了解这款模板引擎调用 Java 方法和属性模式。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130303-f854766c-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130303-f854766c-4412-1.png)  
+[![](../../.resource/remote/41e5c908a2d4faa63e0803eddcc05da238389609be59078204a71a9f9c56e118.png)](../../.resource/remote/41e5c908a2d4faa63e0803eddcc05da238389609be59078204a71a9f9c56e118.png)  
    本文构造 payload 得有简单 Java 的反射机制基础。[推荐文章](https://www.cnblogs.com/haha12/p/4724204.html)，文章中用了一个简单案例再现了 Java 的反射。[推荐文章](https://blog.csdn.net/SECURE2/article/details/81099574?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1), 文章用很多解释是关于 Java 反射和类加载的知识内容。[新增] [推荐视频](https://www.bilibili.com/video/BV1s4411U7x9?from=search&seid=13854513651556834308)  
 [video(video-hkteTk7M-1587384668444)(type-bilibili)(url-[https://player.bilibili.com/player.html?aid=63805421)(image-https://ss.csdn.net/p?http://i0.hdslb.com/bfs/archive/3ea308d0ab04ed422f45dc47274940762348f4fa.jpg)(title-【Java 反射机制】不懂反射机制不配当 java 程序员?](https://player.bilibili.com/player.html?aid=63805421)(image-https://ss.csdn.net/p?http://i0.hdslb.com/bfs/archive/3ea308d0ab04ed422f45dc47274940762348f4fa.jpg)(title-%E3%80%90Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E3%80%91%E4%B8%8D%E6%87%82%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E4%B8%8D%E9%85%8D%E5%BD%93java%E7%A8%8B%E5%BA%8F%E5%91%98?))]
 
@@ -440,7 +440,7 @@ ${@java.lang.Class.forName("java.lang.Runtime").getMethod("exec",
 ```
 
    **先忽视上面的 payload，下面会一步步解答，最后完整的 payload**  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201222130303-f8733ee4-4412-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201222130303-f8733ee4-4412-1.png)
+[![](../../.resource/remote/a3cadd5c06b0d79d49f6bdfcf2ca635ec94f3a8ba53625a20af8f9baa62da4e0.png)](../../.resource/remote/a3cadd5c06b0d79d49f6bdfcf2ca635ec94f3a8ba53625a20af8f9baa62da4e0.png)
 
 1.  我们且看第一行，按照上面给出简单案例方法，我们应该这样子就可以了`@java.lang.Class.forName("java.lang.Runtime").getMethod("exec",String.class).invoke(newInstance(),"calc")`
 2.  但是直接 String.class 直接写模板是找不到的，所以我们得继续构造 payload，将 String.class 转化`@java.lang.Class.forName("java.lang.String")`的形式，然后 payload 就变成下面这样子了。`@java.lang.Class.forName("java.lang.Runtime").getMethod("exec",@java.lang.Class.forName("java.lang.String")).invoke(newInstance(),"calc")`

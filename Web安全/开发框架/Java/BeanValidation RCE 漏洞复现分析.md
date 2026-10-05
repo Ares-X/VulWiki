@@ -54,7 +54,7 @@ schema_version: "1"
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Gw8FuwXLJnS0upf0PyEIHYGmOxqoHNJQKYOfgHJuH2nefQSic5zRPk73eSBm4aXagkbEFn6oZJ0noKsdXqicWjYg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/45b5eea3b007aae1b9a8752387edacba428db7b943a3b7e857c938917388ca5f.webp)
 
   
 

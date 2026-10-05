@@ -49,7 +49,7 @@ previous_fofa_unverified: "查询语句"
 
 **点击蓝字**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -106,7 +106,7 @@ FOFA查询语句
 app="若依-管理系统" && body="admin"
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgTQibR6MjfgoKOSkBRNbDC7cHRk5B9t7EV5icBUiaIw2QPoy6kXjRRTNSUw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/c720f80861125d41d1e8c2b639002883c8b44cea0a09d31cfc91f8ab4378e359.png)
 
   
 
@@ -114,33 +114,33 @@ app="若依-管理系统" && body="admin"
 
 https://xxx.xxx.xxx.xxx/common/download/resource?resource=/profile/../../../../etc/passwd
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgTicYActF4oc3S5Jb5ib6lp1Drc02BA8zxI8X1NOm3hicPLVNrZgJ9Luv7Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/57741bc8adcfa795459fc736a5d86c8e4c26ff1a6ec452887850160cf5951591.png)
 
   
 
 访问后会下载文件 **/etc/passwd**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgTKUh1HjKrJpUgO4WORO1EgFm4mWKo2OmgEfG7huY5VUMXzMkwxhRREw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/89cbd1e7096af3fd80a443a842063f61a1f0319720b52f66743c74641439771f.png)
 
   
 
 可以使用Burp抓包改变 **/etc/passwd** 为其他文件路径获取敏感信息  
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgT4u4caofibw4kCuyGibzhAxnqYtUwiciakcoxhBvcoGSHJdy83j1caqr3mg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/9e7dd8d8bc56f09a2d80db7addf179edda2e27fec3a55a79ba41d264b1dd6f5e.png)
 
   
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgT3ibFBwpic9ia2NFmdJYA9B9PtDIQudDN3OTUdxx7sFvAv7sJ3gLHesDjw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/edff97c0eade0896ebb5d6a1db25249a367b28222df83939d3de84a58d8d44c3.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgTibGmyXMWpQOF279wn4yIQWDjmDZaQXdRsUOEO9uaiaB1JGbnZsEqFfuQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/89703ccf3f8cbec3c4195f6193b18ba725f9ed6319839e5771050c2888ac0880.png)
 
   
 
 在更新的版本中添加了危险字符的过滤
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAxzs02coF0icbuc9Mb25RgTyqKTlgyxUD0FaC8epfSRhlnXPmxVH7QK2yNxzckcFiaEYGTBLytaKSQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/b87c7e33ca7f7e318b4e1b6dac0c0313163eecd0e788d5560a6de4eb20be2002.png)
 
   
 
@@ -162,7 +162,7 @@ POC使用需要后台的Cookie,读取的文件路径应为根路径
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9XhJILPG5qnhYyI1fjI4vqjV0MgnUM4ibYRfCFaV4wk5FRaGibxMptiadRw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/303b3136f767346ea10aea033c0e93560d44999800c78b3aa06265c36c124033.png)
 
   
 
@@ -194,9 +194,9 @@ Twitter：@wgpsec
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/4LicHRMXdTzBhAsD8IU7jiccdSHt39PeyFafMeibktnt9icyS2D2fQrTSS7wdMicbrVlkqfmic6z6cCTlZVRyDicLTrqg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/ca00422aadfd616255cb01d04d60143dbd9edd4f202a3804283e6c89dcc245dd.webp)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/gdsKIbdQtWAicUIic1QVWzsMLB46NuRg1fbH0q4M7iam8o1oibXgDBNCpwDAmS3ibvRpRIVhHEJRmiaPS5KvACNB5WgQ/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/bd8c348cdec726a3436db5005b7a9fce34d12de57cac8d2d94ac31a1c423b221.gif)
 
 ---
 

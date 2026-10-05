@@ -88,7 +88,7 @@ Istio架构中的JWT认证主要依赖于JWKS（JSON Web Key Set）， JWKS是�
   
 其中[4]：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUZ7wKHGkYXhKf66ibQWbFu1D21Ns03W8y4bLwya9T81jv0jkdhmLn7LSncUM0mXibsaloOFaDsTv95A/640?wx_fmt=png "")  
+![](../../.resource/remote/51bbd40b4af6f7babbc66c8bdb42f3619cbec5c251de2a7373cbbcf81df3e845.png "")  
   
 issuer：代表发布JWT的发行者；  
   
@@ -96,7 +96,7 @@ jwksUri：获取JWKS的地址，用于验证JWT的签名，jwksUri可以为远�
   
 triggerRules（重要）：此参数意思为Istio使用JWT验证请求的触发规则列表，如果满足匹配规则就会进行JWT验证，此参数使得服务间认证弹性化，用户可以按需配置下发规则，以上策略triggerRules部分的意思为对于任何带有“/status/”前缀的请求路径，除了/status/version以外， 都需要JWT认证「此次漏洞也是出在这个triggerRules机制上」  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUZ7wKHGkYXhKf66ibQWbFu1DibYpsBq4MfrRALnna5b2zWmn47PjQcEbAgmGckKENGbtZWXnFsGmliaQ/640?wx_fmt=png "")  
+![](../../.resource/remote/4b9a9d114d88eb54a53b0886f711c631494b6a9f7979085f13f56ae1769d9012.png "")  
   
 关于triggerRules配置详细内容可以参考https://istio.io/docs/reference/config/security/istio.authentication.v1alpha1/  
   
@@ -109,13 +109,13 @@ A bug in Istio’s Authentication Policy exact path matching logic allows unauth
   
 我们可以看到问题出现在Istio JWT策略配置中的triggerRules机制，triggerRules包含请求url的字符串匹配机制， 主要有以下四种：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUal4XzpeGtxgGdCb7KQncKdGRwGK2sCSLQrcsUcxQ8mSsH1GW4UHQoGx0dDZKhUBuibarK85vB2ibJA/640?wx_fmt=png "")  
+![](../../.resource/remote/079b210a4e2f4010ab4c23e83a264d740676f570b97d5ff4439bb730f29c5642.png "")  
   
 图1 triggerRules字符串匹配类型  
   
 「exact」是导致这次漏洞的罪魁祸首，它代表完全匹配的字符串才可以满足要求， 而完全匹配原则是需要包含url后面所附带的参数（“?”）以及fragments定位符（"#"），而不是在匹配之前将“?”和“#”隔离的内容进行分离，这里为了便于理解，举一个完整的url例子说明，如下所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUZ7wKHGkYXhKf66ibQWbFu1DALaF7oBuA5TZx4onbbx2DjVrF7ppbnuNKUcVtDuTJeLJgZVoYC4Eibw/640?wx_fmt=png "")  
+![](../../.resource/remote/8b293e0f8e0608018fa47e1bdf830a5657b5846f82e4b1a882952583db8e68e9.png "")  
   
 图2 完整的url示意图  
   
@@ -350,9 +350,9 @@ curl -v $INGRESS_HOST/apps?manifest=com.canonical.ubuntu.desktop
   
 curl -v $INGRESS_HOST/apps?manifest=com.mozilla.mozdef 可以将漏洞信息还原，如下所示：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUal4XzpeGtxgGdCb7KQncKd5Juic7Fcxhhzld3SnExWAzf5cwUHEE8KSELHhv2Q2aeCichGpO6GtYFA/640?wx_fmt=png "")  
+![](../../.resource/remote/0f2b122fb366ee35ad2257cfb002e83a08a1af97d4bb64f331bbab2134663aec.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUal4XzpeGtxgGdCb7KQncKdZt6icO1Den6wVpG2WtpLnh4WjXdYFl81UVyD1Jz6VocaxZAHV6v8Yjg/640?wx_fmt=png "")  
+![](../../.resource/remote/536dc1731fdc61e013dca17e4ea03d1c31ed498e06a72e0e44bda0d1fab14d92.jpg "")  
   
 图3 敏感信息泄漏  
   
@@ -525,7 +525,7 @@ https://istio.io/news/security
 星云实验室专注于云计算安全、解决方案研究与虚拟化网络安全问题研究。基于IaaS环境的安全防护，利用SDN/NFV等新技术和新理念，提出了软件定义安全的云安全防护体系。承担并完成多个国家、省、市以及行业重点单位创新研究课题，已成功孵化落地绿盟科技云安全解决方案  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hiayDdhDbxUY2VZS6ctcygfLB3cuGlpfIXcVuDjRVgY2TOOMicMXVGT62dxQducL3l8JsMdeArLuayUdwN9AVsdA/640?wx_fmt=png "")  
+![](../../.resource/remote/25bc52895b3c6389a61ebdfd0a7277f1f16887a34096e8a0c9172c9f779ef8e6.jpg "")  
   
 添加好友，备注“**进群**”，加入容器安全技术交流群，通过后会拉您入群。  
   
@@ -557,7 +557,7 @@ https://istio.io/news/security
   
 我们持续探索信息安全领域的前沿学术方向，从实践出发，结合公司资源和先进技术，实现概念级的原型系统，进而交付产品线孵化产品并创造巨大的经济价值。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/hiayDdhDbxUbrbTJxY0Qv9BtgtXZsYVvaVUtlPicCUV6qDBGgZnrxicAMwvibG73JUu0w1UweTicfkuTRIyJyt77C5Q/640.jpeg? "")  
+![](../../.resource/remote/e6f4e8a9ef4b309bcffd66fa16e9c8f4635bdc33c800f3fa9eff88cfe3c46826.jpg "")  
   
 **长按上方二维码，即可关注我们**  
 

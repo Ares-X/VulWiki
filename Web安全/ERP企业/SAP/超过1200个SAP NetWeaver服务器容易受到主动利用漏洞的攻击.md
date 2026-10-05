@@ -46,7 +46,7 @@ schema_version: "1"
 
 胡金鱼  嘶吼专业版   2025-05-09 06:01  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 超过1200个暴露在互联网上的SAP NetWeaver实例容易受到一个高严重程度的未经身份验证文件上传漏洞的攻击，该漏洞允许攻击者劫持服务器。  
   
@@ -82,9 +82,9 @@ Onyphe首席技术官说道：“大约有20家《财富》500强或全球500强
 参考及来源：  
 https://www.bleepingcomputer.com/news/security/over-1-200-sap-netweaver-servers-vulnerable-to-actively-exploited-flaw/  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28KibK9dreBuJribK5OBv2S3YJsllzSS2OSfmEspVib96GiaPNGNCWD9203nAia4rglj5yRciaPDSzCFmJw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28KibK9dreBuJribK5OBv2S3YoBTfyd4vJ38iawwmKTX6iaatjSict8CDr13enFkta7icAick5VQiar2dHFsA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
   
 

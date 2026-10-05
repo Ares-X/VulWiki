@@ -47,7 +47,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/F-M21PT0xn9QOuwoC8llKA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **公众号推荐**
 
@@ -71,7 +71,7 @@ FOFA: app="Hanming-Video-Conferencing"
 
 **登录页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3L7ee0BUTWa7icBbabrHIQGn6ZXnMEaC2rmeYeLPaQ87g0xf9nknNN5A/640?wx_fmt=png)
+![](../../.resource/remote/201f911579e42e6f02b84223ffa1f77876e7ad6489c4c30bf4b6bc570d8feb22.png)
 
 **漏洞 Url 为**
 
@@ -95,7 +95,7 @@ Cookie: mldn-session-id=7950aca4-6faa-46d9-858a-97b82d619741
 Connection: close
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3QUjjWLYt3PO1JXGtbwlLww4HgkoA907OevIULD76z8IWurXb4VpiaUw/640?wx_fmt=png)
+![](../../.resource/remote/6a8449e77eba14eb14a6d6a86b7fc3b108a680b1dd41e5e412ee65f286001d79.png)
 
  ****四:  Goby & POC🦉****
 
@@ -104,9 +104,9 @@ Goby & POC 已经上传到 github 的 Goby & POC 目录
 https://github.com/PeiQi0/PeiQi-WIKI-POC
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3iaicXatMRKT6TYUHvt0pz8yFvOwUrP36S8d8vzlBsOqFrKcXdOEwZdsw/640?wx_fmt=png)
+![](../../.resource/remote/c03f5ec6bc95d630344dcbc6ea189972e40a1a292d62e217e7154b8597a788eb.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG368fHF3y8RSyqz9F8S30UnKUVs54HVFiayMaRZjkYqPHzmicKaZIciabmw/640?wx_fmt=png)
+![](../../.resource/remote/1551f9bdc1ce286ee32325910eddcd70ed4f50790ce82b1eff244138542f1137.png)
 
  ****五:  关于文库🦉****
 
@@ -133,11 +133,11 @@ https://github.com/PeiQi0/PeiQi-WIKI-POC
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuR3NABhn2DHwpXzWABBJnA6HSjGYhvbow9iaFIXZ5IUrST4EjoHojtlg/640?wx_fmt=png)
+![](../../.resource/remote/a1d64d9470df3125bcc32109878d4b95c7818006558941c040beaa06403a25ea.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuCFdyVD9UlKcV0COuXd5oajiacmB5LB71gLdCaEhRaiaicMTS8oq55s9pA/640?wx_fmt=png)
+![](../../.resource/remote/3914e71324224f4bac05f0dc2326c9432c42e6b795e6d4f34e56a2e8f7306936.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZu0SvJFXqSugecfEnJujNOic73ouoGndJPRvezpAstLqLJDqe6JqJsf2Q/640?wx_fmt=png)
+![](../../.resource/remote/f35ee01effbbc009d67ee0ea679f43bd06adb2af75da7958bf86f4b0acbaee1c.png)
 
 ---
 

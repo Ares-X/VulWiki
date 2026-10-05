@@ -65,7 +65,7 @@ schema_version: "1"
   
 **漏洞攻击**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zNsFJyIuL0FF29bmLXtJ82yxnHYLTCvg5PKqJYbkKgFMdxTAl8F5nQuXlU0VJ0rMUj50MgedJQAmuPvLxLRouygFYU91ibfKHGYicYicvQh5hA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f7e73a98860e8aafff3a19f42e36761b98a0aae9ac18b10690af8c8ab420d137.png "")  
   
 Pack2TheRoot (CVE-2026-41651) — Linux 系统中利用PackageKit服务中的 TOCTOU 漏洞进行本地权限提升的漏洞。该服务提供了一个统一的接口，用于通过 D-Bus 安装和删除软件包，并充当用户应用程序和发行版软件包管理器（APT、RPM 等）之间的中间层。所有操作均由具有packagekitdroot 权限的服务执行。  
   
@@ -124,7 +124,7 @@ May 23 13:00:00 hostname PackageKit[PID]: uid 1000 is trying to obtain org.freed
 **END**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zNsFJyIuL0GgHnVEdEibr4CETet2bdkpKbeWg1bZiaesgbWJnWqNMRbKXoibKW5QDmibmbuYBqtHavcUmp5AC2NEmfqBzHqhTichzdzk9RicKn1Z8/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1f17faf71551225e041e505881a367a59f7a24d3aa6362c013322aaeb7efe4d9.jpg "")  
   
   
 公众号内容都来自国外平台-所有文章可通过点击阅读原文到达原文地址或参考地址  

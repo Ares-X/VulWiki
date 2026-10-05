@@ -87,7 +87,7 @@ CNVD 编号:
 3. 影响版本
 -------
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkd50yPBL4EpMVEh135EPZkXiaic71NbhwUFicJw0pZhCXyVz3YoyiaEJWXA/640?wx_fmt=jpeg)
+![](../../.resource/remote/6f775dfa650d197be67348516b6c86bc32d4b797e9cc8cb3cbf93dd9caacf552.jpg)
 
 4.fofa 查询语句
 -----------
@@ -113,18 +113,18 @@ Connection: Keep-Alive
 
 执行 md5(1) 函数 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkibjtzMeZUX2icWc9r1xBnglJ1vicQHTg2kvtmBPvmDPpupkTZkiczwGrgQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/ffa9d928b39e22718f0cc415cedb0d9b1fea4db01f71e4c37c124026f955739e.jpg)
 
 执行 user() 函数 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkz2wXABzQVdrjth9mE5YsEndtdCTx0XUE5cpVsQg533kh5SQAJbRdNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/5b3a9c0bdebc27cc0722349a7a05a835ea7f823cb7476043835bd6522289a158.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号  南风漏洞复现文库 并回复  漏洞复现 47  即可获得该 POC 工具下载地址： 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkZ5hQMpnfMAMlN8ncE6fIwZs9qjEKzicr9oObMVEerop9YfcckRWsKvg/640?wx_fmt=jpeg)
+![](../../.resource/remote/74ab7713e622ffd9ebf5f82c6d8d45f07d6af26a01a0b2f280ddf41c0529e1b5.jpg)
 
 7. 整改意见
 -------

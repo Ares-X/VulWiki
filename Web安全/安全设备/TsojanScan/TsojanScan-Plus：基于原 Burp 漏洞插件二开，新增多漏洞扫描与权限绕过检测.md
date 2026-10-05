@@ -80,21 +80,21 @@ source_status: "unknown"
   
 拓展漏洞检测覆盖范围，新增Jboss 漏洞扫描、XXL-Job 漏洞探测，同时集成OSS/Minio 对象存储检测（listObject），适配云原生、任务调度平台等主流渗透场景。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq5881ZxmHaUeFEjWGibtqkbt1B15WuHwsefqYeiamS3uicd9BpQsVgzNYZGWv4icI2ApxHHxm2wxFCeFA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c584253cedc79730611d5fda64c5cf21e48f95d784f62f7e6c9395cbf30364f5.png "")  
   
 新增权限绕过与接口探测能力  
   
 加入Bypass_Auth_Check 鉴权绕过检测模块，精准识别未授权访问风险；新增 SOAP 协议及各类 Services Api 探测，覆盖更多协议与接口类型的漏洞检测。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq5881ZxmHaUeFEjWGibtqkbtxmnMXxsFop0lDqBv16LiblhLgplZ0AuGsDKru7VVxApIVlasJHs2B5A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4a25476abcdca8a2c7a82b12462a46933025e709ae4354a3ae7fbac7dc3d709a.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq5881ZxmHaUeFEjWGibtqkbtQqdP8gug0wQiaGCm1NhicUIcO3SAW9ygyZ2dHjNhfg7UE1qL3N8L0RMQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0722358ebbb4a3f793fe99d0d31d6f35261450e65bfb9b405ac3021fc25c4d27.png "")  
   
 实测验证，功能实用性拉满  
   
 所有二开新增功能均经过Vulfocus 在线靶场实测验证，POC 检测精准度高，避免误报 / 漏报，可直接投入渗透测试实战使用。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq5881ZxmHaUeFEjWGibtqkbt1ibyhDib9aVIcGu34BY9onXTj98M8kgUAB4xPUSLDOLQPcQdRDUcBrOA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4f180a1514c5d05f28ed8d69a8a4516bfc055dd1765f8393c91994e0ee0be78e.png "")  
   
 轻量扩容，持续迭代更新  
   
@@ -121,7 +121,7 @@ source_status: "unknown"
   
 选择Java作为插件类型，点击Select file加载下载的 JAR 包，点击Next完成安装；  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq5881ZxmHaUeFEjWGibtqkbtXCEfReeetUcdYEXib3ZfOxuCfia6wZYzspnbwibibwebfiamc8e6JYj0zoQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d020d8898c3e58764c46091920b31b6504a0fe980b81fb8978545b3b88cafcca.png "")  
 ###   
   
   
@@ -201,7 +201,7 @@ https://t.zsxq.com/d8wtW
   
 扫码关注 了解更多  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/RjOvISzUFq6qFFAxdkV2tgPPqL76yNTw38UJ9vr5QJQE48ff1I4Gichw7adAcHQx8ePBPmwvouAhs4ArJFVdKkw/640?wx_fmt=png "二维码")  
+![](../../.resource/remote/c4a818ade8c58afccf6644c128060056407e18fb3167e8a6d9e7f73dce8a478d.png "二维码")  
   
   
   

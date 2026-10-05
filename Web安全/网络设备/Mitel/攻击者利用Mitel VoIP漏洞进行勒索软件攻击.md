@@ -50,7 +50,7 @@ source_status: "unknown"
 
 ~阳光~  嘶吼专业版   2022-07-08 12:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 勒索软件集团正在滥用未打补丁的基于Linux的Mitel VoIP（网络电话）应用程序，并将其作为跳板在目标系统上植入恶意软件。这个关键的远程代码执行（RCE）漏洞被追踪为CVE-2022-29499，该漏洞是Crowdstrike在4月首次报告的零日漏洞，并且现在已经打了补丁。  
   
@@ -92,9 +92,9 @@ Crowdstrike建议企业通过使用威胁建模和识别恶意活动来加强防
 参考及来源：  
 https://threatpost.com/mitel-voip-bug-exploited/180079/  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icGh5SfpLbxXAW4ZUoCCLo9f16W87DFLibspaRcFuR9eic8tOwd44OTySUGOPIJ0MaLiahEmRgogvpPw/640?wx_fmt=png "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icGh5SfpLbxXAW4ZUoCCLo9kG8sNRtw4XD7icHbKYSn4ELDniasjt61KDvxGibNibuAqTUbBHZiaVGhXng/640?wx_fmt=png "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
 
 

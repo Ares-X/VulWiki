@@ -57,7 +57,7 @@ source_status: "unknown"
   
 思科发布安全更新，以解决 ClamAV 拒绝服务 (DoS) 漏洞（编号为 CVE-2025-20128）。思科 PSIRT 专家警告称，该漏洞的概念验证 (PoC) 漏洞代码已可用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaFcfciaMOiau5iaQo70v3TJKTMLb6EUcdQ9HOynD1NtC69kJCsbXiatwba8VSHQVzCp6Kj1YYNQWhBorg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/4ffa939e9b11523ded79c7aa40ea30f0a3c2d45cc5369d4919913f79f41c7bc4.jpg "")  
   
   
 该漏洞存在于 ClamAV 的对象链接与嵌入 2 (OLE2) 解密例程中。未经身份验证的远程攻击者可以利用此漏洞在易受攻击的设备上造成拒绝服务 (DoS) 情况。  
@@ -74,7 +74,7 @@ Cisco ClamAV（Clam AntiVirus）是一款开源防病毒引擎，旨在检测恶
   
 该漏洞影响以下产品：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaFcfciaMOiau5iaQo70v3TJKTMu6cctl4icUP8hAn6PKgaJu6kYyYdobu7VpicG0lFgSxw0rSRSQRu7CXA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d1470763af2e82e27087de72107c6ad3957896037284a08c7bbe06b8c0d38abf.png "")  
   
   
 思科 PSIRT 尚未发现利用此漏洞的攻击。  
@@ -102,7 +102,7 @@ Google OSS-Fuzz 报告了此漏洞。
 https://securityaffairs.com/173446/uncategorized/cisco-fixed-clamav-dos-flaw.html  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

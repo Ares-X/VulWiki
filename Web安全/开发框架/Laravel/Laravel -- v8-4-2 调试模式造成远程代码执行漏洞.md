@@ -45,7 +45,7 @@ schema_version: "1"
 
             2020 年 11 月底, 在为我们的一个客户进行安全审计时, 我们发现了一个基于 Laravel 的网站. 虽然这个网站的安全状态很好, 但我们注意到它是在调试模式下运行的, 因此显示了大量的错误信息, 包括堆栈痕迹:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icHianvlWxTqAyjj9fPj11qZRp3r6tCbmKIjFdlbQ1fiagxzJqEHPuhWUfA/640?wx_fmt=png)
+![](../../.resource/remote/10a50c68c281c83f92762c89c9383b78bc5de3642ac7d129b9de9c09f8138a99.png)
 
 经过进一步的检查, 我们发现这些堆栈痕迹是由 Ignition 生成的, 而 Ignition 是 Laravel 第 6 版开始的默认错误页面生成器. 在穷尽了其他漏洞载体之后, 我们开始对这个包进行更精确的检查.
 
@@ -53,11 +53,11 @@ schema_version: "1"
 
             除了显示漂亮的堆栈痕迹, Ignition 还附带了解决方案, 小段的代码可以解决你在开发应用时可能遇到的问题. 例如，如果我们在模板中使用一个未知变量，会发生这样的情况：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icHgbJmE7G2QniblXdobjPbrTdib7uXz3dicIPSCtJ9YIF6CtvXgvC9mAlcg/640?wx_fmt=png)
+![](../../.resource/remote/9740e94337ad6b1f4ca438a8f9dbb24c359615adf94d388fdfde0e1ed8e26fbf.png)
 
 通过点击 "使变量可选"，我们模板中的 \{\{$username\}\} 会自动被\{\{ $username ? '' \}\}. 如果我们检查我们的 HTTP 日志，我们可以看到被调用的端点：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icHb0OJnpQaNg3wB0DOwv6t4QEWlNFSrK07katuSRKw6BmXTbJoZqRnyA/640?wx_fmt=png)
+![](../../.resource/remote/d92ea3a4b8ccb3c51accd6d51ed3db6498a213256e33f3dab655992e74569317.png)
 
 除了解决方案的类名之外，我们还发送了一个文件路径和一个我们想要替换的变量名。这看起来很有趣。
 
@@ -380,11 +380,11 @@ viewFile: phar:///path/to/storage/logs/laravel.log
 
 Result:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icHiaOagYZPKwISGyfmZ3oXmcgBBGOZ3icAB9FSEuIQtFcmINRc4iab7K14Q/640?wx_fmt=png)
+![](../../.resource/remote/32cd2bb914a3018db34b7db9c8e43d238ac9e9b0b40f02a2c481d64a11f7c140.png)
 
 As an exploit:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icH9veUIUbOZT6D1IR5PMAXF5X4iaQficKqmZsS6NtDtFNtiarA4Nju5Jhlw/640?wx_fmt=png)
+![](../../.resource/remote/6effdbadc6c4b9c07f8bca25da92bd37b897d71787289893d33d4c8a44dde560.png)
 
 在确认了本地环境下的攻击后，我们继续在目标上进行测试，但没有成功。日志文件有一个不同的名字。在花了几个小时试图猜测它的名字后，我们猜不出来，于是只好实施另一种攻击。我们也许应该提前检查一下。
 

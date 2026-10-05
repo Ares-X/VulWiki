@@ -82,7 +82,7 @@ tool\\log\\c.php 文件的变量覆盖漏洞也是最早开始网传的深信服
 https://xxx.xxx/tool/log/c.php?strip\_slashes=system&host=id  
 原理就是典型的变量覆盖漏洞，这里就不多做赘述了。
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/ee98e178712123721ba047e4c2752981.png)
+![](../../.resource/remote/e80da1b6e15e9564b9c272081783f01ddae2f336987506d47738ff601bca398f.png)
 
 payload 不仅这一种，除了 host 作为函数的参数值外，path，row 等也都可以作为函数参数值，所以 payload 可以有以下几种，show\_input 应该也可以作为执行函数。
 
@@ -183,31 +183,31 @@ ldb\_ext\_root(). 目录可以通过第一个 RCE 进行读取。
 
 http://127.0.0.1:8111/tool/php\_cli.php?code=phpinfo();
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/ce2721a264a7eb1fd46028a32c758cbb.png)
+![](../../.resource/remote/12050baa6e4ea2250b87182fd0057f87912fc4d9f579639e2aea2e94f9d9c836.png)
 
 ### RCE3?
 
 网传的第三个 RCE 点，tool\\ldb\_cli.php，该文件也存在多个变量覆盖点。  
 但其开头也做了简单的验证，需要存在 enable\_dc\_tool 该文件。所以是也无法直接 RCE 的
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/4f841494463af598487e14a5b7fd87ab.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2020/08/4f841494463af598487e14a5b7fd87ab.png) `）
 
 ### RCE4?
 
 网传的第四个 RCE 点，tool/mdd\_sql.php，同样存在多个可以变量覆盖的点。  
 但还是需要在服务器上添加 enadble\_dc\_tool 标记。// 默认不允许使用，除非登录到后台 touch 标记，这里中文没乱码就可以直观看出来了。所以该功能应该是给服务器管理者测试用的。所以，也是无法直接 RCE 的  
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/639512dcb21e8a91b26e3adf90714be0.png)
+![](../../.resource/remote/b827b6b0e4ac922f20d8e29b8727ecf3e6b7d193bc6fad466101dc0fdf997c24.png)
 
 ### 任意文件读取？
 
 然后是网传的任意文件读取的漏洞，store/cat.php  
 首先，最开始就会检测是否登录。  
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/a3f433094f106eb7cf294af9650250ea.png)
+![](../../.resource/remote/4540dbb236a2c4242f012903a8859d5a1e8b7cce83e258273fc0be95c3a72b29.png)
 
 其次，有对其进行了简单的校验。只能读取特定目录下的文件。  
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/e19e41a5f262d5ffd5208f023cf9f519.png)
+![](../../.resource/remote/587d978a056c69d5906d095abfe10721975fc32933a048f6a74ab6192e2b7803.png)
 
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/7bee0d0d139b539663c98e831f410043.png)
+![](../../.resource/remote/ff1022ccd60c0624a3d7f19906317881c88d36d34c9061b74f8b62b84ba24cf1.png)
 
 所以该漏洞顶多算特定目录需要授权的文件读取。
 
@@ -217,7 +217,7 @@ http://127.0.0.1:8111/tool/php\_cli.php?code=phpinfo();
 ----
 
 其中 tool 目录看起来只是用来系统维护的，通过安装新版本补丁发现，tool 目录和 store 目录均已经被删除。  
-![](https://blog.riskivy.com/wp-content/uploads/2020/08/00349f0a1a01a6082dca843a7f23ccbd.png)
+![](../../.resource/remote/10362a2d2d814bd8809e4a80c378ac7694f252437e02b95de62942d8feb25972.png)
 
 影响范围
 ----

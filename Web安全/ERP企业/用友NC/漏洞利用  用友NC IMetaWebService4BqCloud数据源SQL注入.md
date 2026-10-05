@@ -52,7 +52,7 @@ schema_version: "1"
   
 原来我是想投稿在奇安信社区的来着，不过漏洞分析总感觉缺乏关键证据，于是就放在公众号上了，希望有能力的师傅们能就这代码深挖一下  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSn3Viac9hzfSk85o3uJ7uzC7Gmom28O1jFJ4fwjVPdicIrLGQG93XnBjHhg7yq0TXflaFricam17Rwg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/314aa15afb048ccfdcd1117f24b2ea3d9849cd653c101166ecccd050e912ec25.png "")  
   
 那么废话少说，一上来就先说下漏洞的利用方法  
   
@@ -65,7 +65,7 @@ app="用友-UFIDA-NC"
   
 可以看到webservice的调用方法，用wsdl解析工具解析下构造请求即可  
   
-![image.png](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSn3Viac9hzfSk85o3uJ7uzCibV3QhRMYVhWyxoJjraYw2HiaCJESCqEoSicWMG1GvXwoB3JQpI9mtFeQ/640?wx_fmt=png&from=appmsg "")  
+![image.png](../../.resource/remote/fe3551b206ffcb24c58a533dff8f69869a9aa5f5badc8d5f5a2b10820cc3bcf4.png "")  
   
 使用SQLMAP对数据包进行验证，验证存在注入  
   
@@ -99,7 +99,7 @@ Content-Length: 350
   
 然后就到分析这一步了，漏洞是怎么来的呢，有请名侦探柯南  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSn3Viac9hzfSk85o3uJ7uzCfAtsmniak5mDVrOBUVNm1d9PUvcHJzsGn1AGm2lKlGVYd7cLow4wJcw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/38fec877badf76810c35f9a4d312e2c4a39e663cfc7158d4823215fbc77be32c.png "")  
   
 漏洞  
 位于IMetaWebService4BqCloud  
@@ -221,7 +221,7 @@ getInstance
 那再看getDataSourceByIndentifier  
 方法看下，就是取出上一步的数据作为数据源连接  
   
-![87bc2570-d6cf-4612-acd2-8749e50dea38.png](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSn3Viac9hzfSk85o3uJ7uzCKHaNyw6fNs66TtL21twaibtoEPcRD9QlibRSOs6h1Bl42AjFs8ibqibvmA/640?wx_fmt=png&from=appmsg "")  
+![87bc2570-d6cf-4612-acd2-8749e50dea38.png](../../.resource/remote/fec2f44234082d8e4ad1584abe98acc23f6f0f06e162fd20ee23ab670d50fe7d.png "")  
   
 到此分析结束，所以传入这个方法的字符串可以是以SmartModel^开头，后面再拼接SQL语句，类似会得到这样的解析  
 ```
@@ -236,7 +236,7 @@ tableName = "'; 恶意SQL语句--"
 SELECT * FROM ALL_CONS_COLUMNS WHERE TABLE_NAME = ''; 恶意SQL语句--'
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSn3Viac9hzfSk85o3uJ7uzCY3JUjyF2ShwVicyXdcGbSfH0PDyLuhaJzic10Bvg4KQoAiaGEXWESQcvg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a0e769685e007a469baff320cf6765ae8723ebd0ced93da28278faefa8e2ee1b.png "")  
   
 结语  
   
@@ -249,7 +249,7 @@ SELECT * FROM ALL_CONS_COLUMNS WHERE TABLE_NAME = ''; 恶意SQL语句--'
 **加入团队、加入公开群等都可联系微信：yukikhq，搜索添加即可。**  
   
 ****  
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/EXTCGqBpVJQSCTuiawtOw7G9JFaBeBc06sHdBhSTMMClOr5wLWmLYIl6Yry9n3ZIL97tylQib5YLOuJFxndeFMEg/640?wx_fmt=gif&from=appmsg&wxfrom=5&wx_lazy=1&tp=wxpic "")  
+![图片](../../.resource/remote/55259e9e53edfa43284d3246bc0572f6a983228f256b9c58334940d20b14bd07.gif "")  
   
 END  
   

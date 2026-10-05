@@ -42,7 +42,7 @@ schema_version: "1"
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-05-15 06:24  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DYqn7TU9icq3xhEXfBVr6RJvc3GjZyJn1eYoh0s2OVYwUm3GHIGB1Oic0TbmRZwBcVs1K2icT3rO8d7iauabYJdWLnWlHEM0Pf8zSbzibOGDwl8w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee9adbd2028e2b4f3c38c4b284585693805e83db7f116241befe359cf6674cf.png "")  
   
 博通为 **VMware Fusion**  
  发布安全更新，修复了一个高危漏洞，漏洞编号 **CVE-2026-41702**  

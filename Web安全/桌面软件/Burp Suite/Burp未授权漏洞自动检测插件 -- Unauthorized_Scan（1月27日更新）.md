@@ -88,7 +88,7 @@ ivu123ivu
   
 运行界面  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8H1dCzib3UibvhzSBtiawRxJIG37ibibkiblK6VKbeVDHyype3OBRONrNF8NppMVBO83u9XziarAr829waM5f0CELo7zg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e668a670bdc28dc8bad30570f5e8c029dd3656ff2043845f0bfc21e5e398b73f.png "")  
   
   
 网盘下载链接（一定要在虚拟机运行）：  

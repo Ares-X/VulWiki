@@ -62,7 +62,7 @@ schema_version: "1"
 原创 杜明
                     杜明  黑白之道   2026-09-17 00:35  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6OJ6icEPA6YDEttPyktdQhQRlaBpuM2BuyyibW3IIgragVw5tJNezEdHGoEk2TT4QcFl6iaKxy2aaAQyTaZrMDNEtuefvyHkb3kU0/640?from=appmsg "")  
+![](../../.resource/remote/eb6818a2a7924ac90a5d167a721bc2b2fe3fe0e639f77adc48bad09b563642e8.png "")  
 > **导语**  
 ：JFrog 周二公开 Parallels Desktop 本地提权漏洞 CVE-2026-90894，评分 7.8——只要 Mac 上有普通账户，就能一路打到最高权限。真正扎心的是漏洞本身吗？不是，是补丁只存在于 Apple Silicon 版 27，Intel Mac 用户被官方永久关在门外。  
   
@@ -70,7 +70,7 @@ schema_version: "1"
   
 9 月 15 日，JFrog 漏洞研究负责人 Yuval Moravchick 发布报告，标题直白："Parallels Desktop Turns Appliance Install Into Root Shell"（Parallels Desktop 把应用安装变成了 root shell）。漏洞命名 ParaShells——致敬 2014 年的 Shellshock（壳冲击），命名风格说明一切。编号 CVE-2026-90894，JFrog 自评 7.8 分。  
   
-![Parallels Desktop 本地提权漏洞警示](https://mmbiz.qpic.cn/mmbiz_png/nGzNudUIJ6P1s7AzDmHvA9ogrcYBEgYArvXAH3eia2g870lUZmUGZgU2LYTia6UL6j6RB1jYtsAAB6UV1NsLVDACWVaMszLrIB42kicl6VcVPw/640?from=appmsg "Parallels Desktop 本地提权漏洞警示")  
+![Parallels Desktop 本地提权漏洞警示](../../.resource/remote/6420a5afcf5ce0e17aac7a6ad7341a45677cb6b6a9e37df0ef75f8eaec405a92.png "Parallels Desktop 本地提权漏洞警示")  
   
 漏洞出在 Mac 端后端服务 prl_disp_service  
 （派发服务）上，负责给虚拟机搭宿主机网络、解压应用包，所以必须以 root（macOS 最高管理员账户）身份跑。JFrog 在 Parallels Desktop 26.4.0（build 57513）的 Apple Silicon 机器上验证成功，并明确表态："任何还在暴露同一个 InstallAppliance（应用安装接口）解压模板和派发器 Unix 套接字的桌面安装，都视为在攻击范围内。"  
@@ -80,7 +80,7 @@ schema_version: "1"
   
 JFrog 把这个漏洞归类为"漏洞链"——单看每一处都不致命，叠在一起就成了 root shell 的入场券。  
   
-![ParaShells 攻击链路示意图](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6MAdt0yb63C9pd2mrkicGQea4xT1NIBQjG8VWicLWoM3KicF6dpib9jVvb9ZTHklV6ib1ULUhgVDOYtQtOJdKK2XrjfwusDhxIIHvNU/640?from=appmsg "ParaShells 攻击链路示意图")  
+![ParaShells 攻击链路示意图](../../.resource/remote/81de9418cec2bcacd809f758f99be04b6deb97b7538214bb33ed506c18dddcc0.png "ParaShells 攻击链路示意图")  
   
 **第一处，Unix 套接字权限失控。**  
  派发服务监听 /var/run/prl_disp_service.socket  
@@ -116,7 +116,7 @@ JFrog 的 PoC（概念验证代码）就是写一条免密码 sudo 规则，再�
   
 JFrog 报告里写得很明白：补丁在 27.0.0。但 Intel Mac 装不了 27，只能停在 26.x，JFrog 也明确说"停留在 26.x 线的宿主机，包括 26.4.2，都没有这个解压修复"。最新的 26.4.2（build 57518，9 月 8 日发布）发行说明里只提了一个企业版部署问题，没提这个 CVE。  
   
-![Intel Mac 用户的版本困局](https://mmbiz.qpic.cn/mmbiz_png/nGzNudUIJ6OSXxXVGY7d059tvTpIGP2Gx8tYaHNrdRLf4aCLAFEBeoPnAAMrdibgHtEgSAo1yr15hupr1fUQ1K2VXjia0U0Ibk7xicyybENPtY/640?from=appmsg "Intel Mac 用户的版本困局")  
+![Intel Mac 用户的版本困局](../../.resource/remote/170b1205ff762acc3347f01050c54c9db83ed46d0adbf19f4c4edd8d68fbbffd.png "Intel Mac 用户的版本困局")  
   
 Parallels 8 月 25 日发过声明："Parallels Desktop 26 今天完全支持 Intel Mac，未来也不会变"，并承诺 Intel 用户"可以期待未来的安全与维护更新"。但 JFrog 报告和 26.4.2 发行说明都没提修复，Parallels 也没承诺 26.x 线会补。  
   
@@ -142,7 +142,7 @@ ParaShells 不是那种让人惊掉下巴的 0day——它甚至有点"老套"�
 **版权声明**  
 ：本文由华盟网原创发布，保留所有权利。配图由华盟网授权使用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nGzNudUIJ6NHG5d5xykehGLiaVoKKFLec6jon2ibW9qcL7RicMhBvPlf809oULP062Z7CwWEczRnDxibpxtJ0h0c7q4JHCkjzlDmIzcGPk0l2oY/640?from=appmsg "")  
+![](../../.resource/remote/60693bec6dc25202116eff5acd44b3a0b20861575216977bbe6111c063f0dbd3.jpg "")  
   
 [](https://mp.weixin.qq.com/s?__biz=MzAxMjE3ODU3MQ==&mid=2650621549&idx=1&sn=21c4b072726d2387d562109ada6b9bbb&scene=21#wechat_redirect)  
   

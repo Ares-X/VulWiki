@@ -55,7 +55,7 @@ schema_version: "1"
 0day  
 漏洞攻击。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaENpJ1SjpMDo3Z9FGm6AjmqhLxlHIWH9icOOYLDL8hialKZKia1v48GSEkwLxIia2ib58NY0btEVp66BtA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/13c3a4349c80ca30c9d13c8b4f0812c6071c18291953802afd620adc75d826d0.png "")  
   
 该漏洞已于去年 10
 月得到修复，VMware本周三确认（  
@@ -81,7 +81,7 @@ VMware Tools 身份验证绕过漏洞来升级权限、收集文件并将其从�
 并不知道攻击者如何获得对受害者 vCenter 服务器的特权访问，但在 2023 年末，VMware vmdird 服务崩溃，在后门部署前几分钟，与
 CVE-2023-34048 漏洞利用紧密匹配，从而使这种联系变得明显。。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaENpJ1SjpMDo3Z9FGm6AjmqtsiaXSTw4ODG05nDV19XNibQdfabPOTSNl0O5gbIzNNN7kI2S7tmlPkg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f4e7ae5a0e9f62bd8a757c600536919c74994b9f956aac0684c3aade049b524b.png "")  
   
 UNC3886攻击链（Mandiant）  
   
@@ -130,7 +130,7 @@ https://www.bleepingcomputer.com/news/security/
 chinese  
 -hackers-exploit-vmware-bug-as-zero-day-for-two-years/  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/McYMgia19V0WHlibFPFtGclHY120OMhgwDUwJeU5D8KY3nARGC1mBpGMlExuV3bibicibJqMzAHnDDlNa5SZaUeib46xSzdeKIzoJA/640?wx_fmt=svg "")  
+![](../../.resource/remote/0877e2d01c065e08b6bbbf6e0a90a3b1e83a9887e89bf3c0021a85dea378e78f.svg "")  
   
 **今日安全资讯速递**  
   
@@ -249,7 +249,7 @@ https://thehackernews.com/2024/01/pixiefail-uefi-flaws-expose-millions-of.html
   
 https://www.securityweek.com/critical-vulnerabilities-found-in-ai-ml-open-source-platforms/  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

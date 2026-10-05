@@ -55,23 +55,23 @@ schema_version: "1"
 
 从入口开始:`/semcms/Templete/default/Include/index.php`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwdyfcVLJ7zHQdAoMSep6lLoZPB3v0QBINRtGVDvQD3J5OOfdbo7XEVw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/32670327310e6b21bfcf81e4738868db79a2593eaa86eb76cd47022bb5b5cd9b.png)
 
 跟进`web_inc.php`, 首先包含  
 
 1)`db_conn.php`: 建立与数据库的连接, 代码量很少也很简单。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwGeicN1xELjAsU3BsCkCMiaK2MEcmg9J8uzy1EEPXbEeMLytSuWSe07kQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/7ed1c7d0620bd4535ca13bf2252e6ddbe1e3d643745c34dd95c5bc95dbb7df79.png)
 
 2)`contorl.php`: 对`$_GET`进行全局过滤危险的 SQL 函数。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqws98Yka192FmZ6M9eXojg3kHP0aVhgAibwdyKgBibZfq2UHH6OGW7ynCg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/6e65350ca3568c67768c22a8a25495e74c86d7df1abc70f626d4326f08da31fc.png)
 
 这个过滤从最简单的角度来说，即 mysql<8 的情况下，把`select`禁用了，其实就没办法进行跨表查询，SQL 利用造成危害的可能性会大大降低，当然这是一种直接且无需考虑用户体验为原则的暴力做法，点到为止吧。  
 
 回到`web_inc.php`, 继续阅读，后面吸引我的地方，在于 89 line 一处`SQL`语句的地方。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwffEZASaUf8S0IZzNP5XxA16jSYCm13M1nRjZteb9fsuUu6X42cWduA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/c57abe4c8fd5fa68598bbb8f915a3db5ab3500a3bd3b87c522b31e728d55f9ff.png)
 
 可以看到`$Language`没有单引号，直接拼接到语句中，且值由 POST 方式传递，不过这里经过了`verify_str`函数，导致我没有办法利用`select`进行子查询，获取到`sc_user`表的后台管理员用户密码，那么事实真的如此么？  
 
@@ -83,15 +83,15 @@ $Language=test_input(verify_str($_POST["languageID"]));
 
 经过`verify_str`函数处理后，会传入`test_input`函数，其返回值将会拼接进 SQL 语句中进行查询。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwUjhf1BWibRicWPezzJdp5ykkiaKwN9KFeoxrgva2zSMratO1hBL01n4fw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/2dd1cba9d63ea2d7e23b5bc1ff6c0d9c59b12f89fd3ab58ddf5ec85ba6c42197.png)
 
 `test_input`里面有个有趣的函数`stripslashes`, 函数的作用就是用于去除反斜杠，举个如图例子  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwI8B5T8PUMHFrksYVr6iaL4dexlGXGU5jcF3Rj0KUbtFbn2v1VSTRNOQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/40ffadef53b82a6d1b3b04a02f92495cfc99ed214fa789c0163b5a6424514a8f.png)
 
 那么绕过`verify_str`思路就水到渠成了。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwqTPmBXusyL71x3XfXyEaicyiaeJeugBKib6mHGuClkiaAMLGzY2GpibFicKw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/47a3a2edd34785b13129fa14f72d6c0f49422ff25e9a0af6805a993e63572eca.png)
 
 **分析下 payload 的原理**  
 
@@ -103,11 +103,11 @@ languageID=-1 uni\on sel\ect 1,concat(user_admin,0x2d,user_ps),3,4,5,6,7,8,9,10,
 
 `un\ion`&&`sel\ect`绕过了`verify_str`函数的正则匹配，经过`test_input`的`stripslashes`去掉反斜杠，最终拼接到数据库中执行的语句，实际上
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqw51FmkSicvrjg8KSfRh1RwEtdB9NiaFNyI34g5cGcZpiajQ2of5icPOgTTg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1c75b323db1eb5721cf09d1d6ce88e1cad52f70f298ab5bbbca29712022c6ec4.png)
 
 返回的后台管理员的账号密码信息到`$tag_indexmetatit`变量中。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqw4sDLLz7Qv8UTRUgr8uLtWyeQJRhgu6VM6GIjM9A4cobHWUU8pBTPcg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/b8f9b985f22eadfd781fbf67fb70e40a85795f9cd49c8b44fd2fccefa9028c8f.png)
 
 并经过`if`判断传递给`$indextitle`变量，最终直接被`echo`到返回包。  
 
@@ -119,9 +119,9 @@ if (empty($tag_indexmetatit)){$indextitle=$tag_indexkey;}else{$indextitle=$tag_i
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqw6c24xlZzWmsuUgn5uZxvQwNKibCyWb6YBoTlzudOOhe2vjm1nMQHa6w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1f0d7afbc750dc83659280d7195045f5ce886ecb015b0f4ab30292c1ea717c0a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwsA95rM8TB1S5FD0rKSOJ5TT91HGeMWVlScP9JUiauk1iaq80icosunv3g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/950357d4d48e7879993cfc252f14fb0a14ded7215da37848bb7918644c084c68.png)
 
 ### 0x1.1 小结
 
@@ -136,21 +136,21 @@ if (empty($tag_indexmetatit)){$indextitle=$tag_indexkey;}else{$indextitle=$tag_i
 
 `semcms/install/index.php`安装文件有后台地址的生成代码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwrhFUx0MMdfztbPB6opZ2AFjx4oypicA7g5gPkIHYT9tvmPOPLHkjDAw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/515d277e78f09c5b713df50ae90de84906d7f20b3224d7dfadac47706795cabc.png)
 
 那么我的思路，就是全局定位`$ht_filename`变量，看看有没有对此进行操作并存储的代码。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwnDicrINUkojsAxrwL7KsLCbG17CLtkiaAxUU9zib1AGngdaSx2jcruR1Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/e07238613533cd03c0491067fc95ad8edec4d261281190b0934e19763969c4ef.png)
 
 很遗憾，并没有找到对此变量引用的代码。还没到放弃的时候，一般这个时候，我还会额外找找一些其他的办法。  
 
 比如搜索 scandir 函数，该函数作用是列出指定路径中的文件和目录，目的是通过找到类似目录遍历漏洞的点，从而找到后台地址。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwS9TSjVtxW0h5Axlbxzn1mEJgbjSXqjYnxwrDq8VfIOpZH92umGfo5w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/10c4fd6c2f1f2203a6d6149e4e7fb74d4a0fd81e3d6bcbb7d2a3e0890c0ad3db.png)
 
 继续回溯`TemplateDir`  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwAsciaZpSZzJE0g82ib4uy3fAu7vISAJsUkYIxEUtnHPnezibOdSEY5pZg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/9f700ac78f816165c3ff0ae727d14c0e8477c3a88887fe791f5da46f951c5326.png)
 
 可惜的是，发现传入的第一个参数是固定的，故这个思路也断了，暂时没有想到其他的好办法了。  
 
@@ -250,7 +250,7 @@ if (empty($tag_indexmetatit)){$indextitle=$tag_indexkey;}else{$indextitle=$tag_i
 
 搜索`file_put_contents`函数，只有两个结果，一个是参数写死，故放弃，故只剩这个分析。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwAuyMzcgDM8jgaeXa0zAsr5OZUnXW15QxH3eShic1Ww5lJ779oKBUadA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/b7ad082c4321a94b11a3c8af908a784432d100699a9251f5bf31c9beb473c156.png)
 
 写入的文件`$templateUrl`得到的值是固定两种类型。  
 
@@ -298,7 +298,7 @@ function Mbapp($mb,$lujin,$mblujin,$dirpaths,$htmlopen){
 
 能够修改`semcms/Templete/default/Include/index.php`中的`<{Template}>`的内容
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwX2k28mtIpNlibsgtbfrOrhfEkswKk5djhuCU9U9dwJaMoeyw1vQSQpw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/9c4af45cb31d740760c0c6c3555f26c7b9f4c9b3c1c037c2952b3c8e75e8a15d.png)
 
 那么可以尝试如下的形式构造 payload:  
 
@@ -310,7 +310,7 @@ function Mbapp($mb,$lujin,$mblujin,$dirpaths,$htmlopen){
 
 最终的话会在`semcms/Templete/default/Include/index.php`写入如下图所示。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwNIkzIlibAXMY7HsU5BYfmKQWsxLRHAnfxpMAic2FsaLPvJmbcFjeO9tg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/b41b47402cc026f3298e638c238164adcc720371e9251efe2a966c48128edb7c.png)
 
 **问题 2**  
 
@@ -332,21 +332,21 @@ function Mbapp($mb,$lujin,$mblujin,$dirpaths,$htmlopen){
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwP8yicruCnoDqCSC7eicLfIhopjcVBIN6CedWglhvHsHpBmxhVwpmkAeg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/0c883eb7376592482eaccd53bdbd67aaf32725690267b2799c6ada678d5b8319.png)
 
 最终写入的内容:  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwuico621IYQIGeUoFdiaHe59ZzILCKEaplZP9FgX0hEuBhmroiavAJR4Bw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/8f6043f5ffbc002abf7291bbc6c6c3e319a5d55a069ad08d988e97557457a724.png)
 
 那么我们随意上传一个文件，即可当作 PHP 来解析。  
 
 那么`$mb`到底是否可控呢？回溯`Mbapp`函数的上层调用，可以发现可以通过`$_GET['mb']`来控制。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwx9uFKFZxLH5IaXv2OQ9YcgpWe6lWa2q9Qd9RBwzBQehLot96sJu1cw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/fea26ed047185be880687530458edf11afe3aa75c5b4f7f0857d3d4aaffbdf15.png)
 
 不过因为文件引进`/semcms/Include/contorl.php`，会调用`verify_str`对`$_GET`变量进行过滤。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqw9x9VudA3GGMhO45vKRw8RY3duOVZfVyRfDhB1DNDFv2LibOJ5ePDfBw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/fd2cb2cdecc0b130b2eabfa755bb4c110c24ba7d1fece83723cc3d3594502282.png)
 
 很不凑巧，过滤了单引号，导致我们**问题 1** 覆盖的`index.php`的思路直接断了，因为根本没办法逃逸出单引号。  
 
@@ -361,31 +361,31 @@ function Mbapp($mb,$lujin,$mblujin,$dirpaths,$htmlopen){
 
 1) 传入`../rmme.txt`作为图片的路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwOLIqdmT22Gcq8Sic44wibOIPVdM59Avy59neg7McNP39oNT1SCz1jZFA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/84d07b5c4b07dad0a6eca4f4db6d61d3ff60944e8b1af2b3dcc57e940555b26c.png)
 
 2) 选择删除图片后，会删除文件网站根目录下的`rmme.txt`文件  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwI5aNyQCiclKaXS21HC0DrjYLkBUn7GwibeV5DJ7ork483HLuUGOJOJCw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/7fb8256b7dc2ce9919b591e24ab4fe54a5a56074cb4e4a34cd86727235c26623.png)
 
 **成因:**  
 
 (1) 添加 URL 入库的时候，只是做了`test_input`，并没有过滤`..`。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwWG8UNibgurgK8nYfqnb9dOU67pnfVkunfEickXboQtq6grtT4uluQXBg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/b35e51b223c993e403bd4cc21e188dc4248a75b8c383479c3489ccfa70a22e28.png)
 
 (2) 直接入库  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwfsU31CIdNxdvUENA1E2RWXINYo85e1mpCInV7dcQNX3kj48uzl8P8w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/e0d8b1680a1c8a75019e8771fa156fce7137d8c8a30078c9072d3e465407f284.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwHdZofBfMibicAHQ3hBKh5CVxaYhmxXWuH9UoqELr42A86w7z3Aa9fGuA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/c82f2206e648aad1066ba0f510be909c95cd347311df01ae6204e3da206c626b.png)
 
 (3) 删除图片的时候，传入`AID`，获取到`images_url`字段的值`../rmme.txt`传入`Delfile`函数进行删除。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwn97WlRLLT6dabiaxkysebKNWv2Eian4ZtFIETpnr0yYNs5FgE8Ztlic0A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/f701960cd438ec454f1d3cca7250c9e08da0f973e5f76d0bb470e557822dffce.png)
 
 `Delfile`函数先判断文件是否存在，再使用`unlink`删掉文件，全程没有一丁点的过滤，送分题!  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8H1dCzib3UibslLbJN4R01ViaIOKZ1icQhqwyiaODc0JmBRCIIILMtHhPXDArs7wtIb0NcbZAdFznzcn4GG8StBCR0Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/3783e8bf2bc14bc301420c125bd30688733d7e26a41a8e1ecce7fdd5fcdf7503.png)
 
 0x05 总结  
 
@@ -395,11 +395,11 @@ function Mbapp($mb,$lujin,$mblujin,$dirpaths,$htmlopen){
 
 如有侵权，请联系删除
 
-![](https://mmbiz.qpic.cn/mmbiz_png/QO6oDpE0HEmt8Ss52ibJFcYB7ZHBRVbIpxr9XXibHdW6Eib11FYq0FDZFNMUgDMcqTyfs6iaX8OtFdlL6ypEVHCLrw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/6c7306b93f1141ff8798069f2ed37ae2acfc3926f202c725d839e6ff96a1e60f.png)
 
 好文推荐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/QO6oDpE0HEmt8Ss52ibJFcYB7ZHBRVbIpzdIMlC9plAr8AiaQRUUvBFXZM2scib9zTnRyp0XZQxSUYAWWS0avKrCA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/acfb8d53806a9de5116958f5c83c28bc984c29814f84e8869992d9fce99f19c5.png)
 
 [红队打点评估工具推荐](http://mp.weixin.qq.com/s?__biz=Mzk0NjE0NDc5OQ==&mid=2247508839&idx=1&sn=abc801070b0e44475887ddbf7273c2e7&chksm=c3087017f47ff901ecb212aadc22c5cbfc6407da79b43a6f48a355cc3fd8c5af79c113db5fd1&scene=21#wechat_redirect)
 

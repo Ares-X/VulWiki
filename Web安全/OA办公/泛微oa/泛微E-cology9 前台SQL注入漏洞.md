@@ -47,7 +47,7 @@ schema_version: "1"
 
 原创 微步情报局  微步在线研究响应中心   2025-07-10 06:15  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png "")  
+![](../../.resource/remote/94ba548e30fedc16feb634026eb27963411675ba9137220d7e4638955a9d68ae.png "")  
   
   
 **漏洞概况**  
@@ -86,11 +86,11 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKpVXmdib26icfXIfalericFI7Mz7TBBTRKB1gyoicW3c8ibIWu5wJu7VU7YuOvTnXdPcW0qibkwthrib4xw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8a93bb2f8b9bdeb8e0b72bbf3363b8510c3ff27192226370b7593159f1abe073.png "")  
   
 通过回显读取敏感数据  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKpVXmdib26icfXIfalericFI7yKYsJRuOiaINibNk5KicftLtEBe3zeRYibW08rfyYnyRicJ4uJWjtAz2LWg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7428d9cd3a6a743d7df42ad7f1b0a381753f381e9122587a24b17538fc064c80.png "")  
   
   
 **修复方案**  
@@ -111,7 +111,7 @@ https://www.weaver.com.cn/cs/securityDownload.html
 - 微步威胁感知平台TDP  
  已支持检测，检测ID：S3100164213，模型/规则高于20250709000000可检出。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/fFyp1gWjicMKpVXmdib26icfXIfalericFI70D8OUBtDgh8QwEtWowwk7a6LRpgAgeMpLzhn2Apq4MkV0mgBWg8Jfw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/4ad167e01b91c0e37e417a8e70ae08c1eb64bed6d87cfb9431e744e49dde1cab.jpg "")  
   
 - END -  
   
@@ -136,9 +136,9 @@ https://www.weaver.com.cn/cs/securityDownload.html
 ↓  
 ↓↓  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hQl5bZ5Mx6PTAQg6tGLiciarvXajTdDnQiacxmwJFZ0D3ictBOmuYyRk99bibwZV49wbap77LibGQHdQPtA/640?wx_fmt=png "")  
+![](../../.resource/remote/af2820a378c199548053d385bda4250d7d50a5a22d6bbb58a06bceb40d5e843e.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hTIdM9koHZFkrtYe5WU5rHxSDicbiaNFjEBAs1rojKGviaJGjOGd9KwKzN4aSpnNZDA5UWpY2E0JAnNg/640?wx_fmt=png "")  
+![](../../.resource/remote/c4634cd583acfab3faf2a0b9edd62202d8949eb72b8c2d639482249716277ac2.png "")  
   
   
 点此电话咨询  

@@ -38,7 +38,7 @@ schema_version: "1"
 Rhinoer
                     Rhinoer  犀牛安全   2026-01-29 16:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBlibkAjaR8rHFBibnQTUkSKXUbGz8frQyAkpassLFUubiaggfGr0aGHPMdUeVpHsPbaBx6Q8tvyokGIQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f5c06116c694bc40e3eccf23e534ad4a46c6d6ce44e2abe12fa5b5201865c6f0.png "")  
   
 GitLab 已修复了一个影响其软件开发平台社区版和企业版的高危双因素身份验证绕过漏洞。  
   

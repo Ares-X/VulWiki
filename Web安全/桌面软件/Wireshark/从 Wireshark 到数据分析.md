@@ -82,7 +82,7 @@ schema_version: "1"
 
    接下来打开 Wireshark，可以看到设别的网卡信息，选择需要抓包的网卡双击即可。或者按 Ctrl+K，勾选需要抓包的网卡，一般情况都会选择 WLAN 点击 Start 开始抓包。从流量波形图可以看到弯曲起伏则表示有流量，直线则没有流量。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dOicVSvKrZSia818ZZQz9vKAlvCfISyI4eOl1TlwgwASlayLQOkaVB7icw/640?wx_fmt=png)
+![](../../.resource/remote/a4eb3af4d723c18de9c011bd1d9d9362dd18323cc1b42d64727a180a4b742d0c.png)
 
 **0x03 Wireshark 语法**
 =====================
@@ -224,13 +224,13 @@ and，or
 
 第 5 行：TCP 或 UDP 是传输的 DATA，DNS 这是域名的相关信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dfB9JStIODWL4uGTxENscichupZEIAZSkTobq5yLAoR0nflDVwnHQQJA/640?wx_fmt=png)
+![](../../.resource/remote/0835298d62b108c6e084b92b0e665e3305390990a35670651554e7650f21e429.png)
 
     2.wireshark 着色规则
 
   在菜单栏中点开视图中的着色规则就可以看到
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dvNia180icTp2kYia0qGj1Iv4dxC1VSuONDNiciaBRyKzkgjTVYYl4ic7XzCg/640?wx_fmt=png)
+![](../../.resource/remote/a8d7eb93cd99cbcce8913050be036389e3267864c93aebca355ac67f5f4d825a.png)
 
     3. 数据包的统计分析
 
@@ -238,25 +238,25 @@ and，or
 
   在菜单栏中点开统计中的协议分级（P）就可以看到
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dpWOZvmT5kHP9t6NBBv9NA59PHOpY7E9LG6aaodxOD8AeMTO0mJaXZw/640?wx_fmt=png)
+![](../../.resource/remote/e0a1c78d20cc809793931158a66987716d19619a739c6f28b028af7ee832f763.png)
 
   在 Endpoints 窗口中，可以通过排序 Bytes 和 Tx Bytes 来判断占用带宽最大的主机
 
   在菜单栏中点开统计中的 Endpoints 就可以看到
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dSMxzQtibQbmc4ToicYbqzEUVFQlx1AUOeTdbs88WI7S289RC66pgSic1A/640?wx_fmt=png)
+![](../../.resource/remote/c7bcdf83d71692cd48f0448353a3ec7d83766be29ee9b10df5430b772e6bed9b.png)
 
   Conversions 窗口可以看到两个主机之间发送 / 接收数据包的数量、字节大小以及数据的流向情况，也可以通过排序来判断占用最大带宽的主机。
 
   在菜单栏中点开统计中的 Conversions 就可以看到
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dYAJjq3dWbozVGZgJ9iaAoqwYzjmwRibqRVOrzJM4Vop2vcnIFaamQxHA/640?wx_fmt=png)
+![](../../.resource/remote/fd3ff6cedc5b9edaf79dc8bebb863b8b0692a963d0492904ead9606a3ae5aa78.png)
 
     4. 追踪数据流
 
   当分析到某条数据包对于的数据流查看。可以选中数据，右键选择追踪流。里面就会有 tcp 流、udp 流、ssl 流、http 流。数据包属于哪种流就选择对应的流。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dtibqibib4NpzEIp6hWmczXSlfEKIXTNWwicCs1WCiaQ6Rict4gDQk5E5ntDQ/640?wx_fmt=png)
+![](../../.resource/remote/350a8a96025e23d1ef72de18460a5a10c0719e2c26438c289ebb6c1e093eb449.png)
 
 **0x05 实战分析**
 =============
@@ -265,7 +265,7 @@ and，or
 
   题目：黑客通过 wireshark 抓到管理员登陆网站的一段流量包（管理员的密码即是答案)。flag 提交形式为 flag{XXXX}
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dbqics0GR4RV4Ol4fJtZCnxX3Lp7F4KPljNr79mGEVGUEuJDISVhIibZg/640?wx_fmt=png)
+![](../../.resource/remote/2b4891513205d49c80d61580251f04d3779e98ee7553e7af05a8da590aa12738.png)
 
   下载题目数据包，根据题目要求对数据包进行分析
 
@@ -278,13 +278,13 @@ http.request.method == "POST"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dFdGPr3LTkfE77yXDnVhGianQ3WshBUuJ0QWXwOqKHum15AtQFia62L1A/640?wx_fmt=png)
+![](../../.resource/remote/1ec74348c5dba18e142d8e362d3b7dcff778889db405b17c984c40cfe01397cd.png)
 
   追踪 HTTP 数据流，获取管理员密码
 
   ffb7567a1d4f4abdffdb54e022f8facd
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDyLibAuZicOJZuh1oNadF79dTczT8AQnFNnFkH0ADNSeRe2dwOcFsicoOz6bSbIMkG4ntjQLBHv0XHg/640?wx_fmt=png)
+![](../../.resource/remote/e59ee4285095576238ae2ff43bf7a7c262a5f0439d0e12e78f7757a7a1a41e4a.png)
 
 **0x06 总结思考**
 =============
@@ -304,7 +304,7 @@ https://adworld.xctf.org.cn/
 
 **关注弥天安全实验室微信公众平台回复 “wireshark” 获取数据包**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif) 
+![](../../.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -320,7 +320,7 @@ https://adworld.xctf.org.cn/
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg)
+![](../../.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

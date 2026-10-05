@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Rhinoer  犀牛安全   2025-05-05 16:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkQ5YJHoFGVzHoiaXZ3e8hBq65voCFBvQIDKRROicYEZzaIqbrp1ta5Rw0xTr5GPjKriarhsQ1ojRO8g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/eab7d6c2536988c45513b3b7211ad8ed6e63363b2259a00afd208b1bad1fdb7c.png "")  
   
 思科发布了针对高严重性 Webex 漏洞的安全更新，该漏洞允许未经身份验证的攻击者使用恶意会议邀请链接获取客户端远程代码执行。  
   
@@ -62,7 +62,7 @@ Rhinoer  犀牛安全   2025-05-05 16:00
   
 无论操作系统或系统配置如何，此安全漏洞都会影响 Cisco Webex App 的安装。目前尚无解决方法，因此需要更新软件来阻止潜在的漏洞利用尝试。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkQ5YJHoFGVzHoiaXZ3e8hBqoVaCQGw5wPJ0C8BUhCppDS3ibDVQibzyhibaN8UJuiaA6kIs8CjibgRqWNA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9bd2dca795fb36f260cc4408579107b1febab72034911f4bfe06b4ef5aa0d5a1.png "")  
   
 本周，思科还发布了针对安全网络分析基于 Web 的管理界面中的权限提升漏洞（ CVE-2025-20178 ）的安全补丁，该漏洞可以让具有管理员凭据的攻击者以 root 身份运行任意命令。  
   

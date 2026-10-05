@@ -16,6 +16,8 @@ import re
 import subprocess
 import sys
 from collections import defaultdict
+from html.parser import HTMLParser
+from urllib.parse import urlsplit
 
 ROOTS = ("Web安全", "系统安全", "IOT安全")
 LIMITATIONS = [
@@ -37,6 +39,34 @@ def load_wiki():
 
 
 wiki = load_wiki()
+
+
+class ResponsiveImageSources(HTMLParser):
+    """Additional browser image candidates outside the ordinary img src."""
+    def __init__(self):
+        super().__init__()
+        self.picture_depth = 0
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "picture":
+            self.picture_depth += 1
+        if tag != "img" and not (tag == "source" and self.picture_depth):
+            return
+        for key, value in attrs:
+            if not value:
+                continue
+            if tag == "source" and key == "src":
+                self.links.append((value, True, self.getpos()[0]))
+            if key == "srcset":
+                # Remote candidates have no unescaped spaces/commas. Embedded
+                # data-image candidates remain local and are not requested.
+                for match in re.finditer(r"(?:https?://|//)[^\s,]+", value, re.I):
+                    self.links.append((match[0], True, self.getpos()[0]))
+
+    def handle_endtag(self, tag):
+        if tag == "picture":
+            self.picture_depth = max(0, self.picture_depth - 1)
 
 
 def image_format(data: bytes) -> str | None:
@@ -116,6 +146,7 @@ def inspect_file(root: Path, relative: str) -> dict:
 def audit(root: Path) -> dict:
     references = defaultdict(list)
     reference_review = []
+    remote_images = []
     article_hashes = {}
     for folder in ROOTS:
         content_root = root / folder
@@ -130,10 +161,17 @@ def audit(root: Path) -> dict:
             text = raw.decode("utf-8", errors="replace")
             _, body, _ = wiki.parse_frontmatter(text)
             prose, _ = wiki.prose_and_fences(body)
-            for target, is_image, line in wiki.markdown_links(prose, with_lines=True):
+            responsive = ResponsiveImageSources()
+            # Match wiki.markdown_links' code-span exclusion before feeding HTML.
+            responsive.feed(re.sub(r"(`+).*?\1", "", prose))
+            for target, is_image, line in [*wiki.markdown_links(prose, with_lines=True, check_image_links=True), *responsive.links]:
                 if not is_image:
                     continue
                 try:
+                    parsed = urlsplit(target)
+                    if parsed.scheme in {"http", "https"} or (not parsed.scheme and parsed.netloc):
+                        remote_images.append({"article": rel_article, "line": line, "target": target})
+                        continue
                     local = wiki.local_target(rel_article, target)
                 except ValueError as error:
                     reference_review.append({"article": rel_article, "line": line, "target": target,
@@ -158,6 +196,7 @@ def audit(root: Path) -> dict:
         files.append(item)
     counts = {key: sum(f["status"] == key for f in files) for key in ("missing", "zero_byte", "html_error_page", "recognized_container", "unknown")}
     counts["extension_mismatch"] = sum(bool(f.get("extension_mismatch")) for f in files)
+    counts["remote_images"] = len(remote_images)
     try:
         head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True, stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
@@ -168,6 +207,7 @@ def audit(root: Path) -> dict:
                   "image_reference_occurrences": sum(f["reference_count"] for f in files),
                   "method": "Offline source parsing and byte/signature checks; no rendering or execution."},
         "counts": counts, "files": files, "reference_review": reference_review,
+        "remote_images": remote_images,
         "limitations": LIMITATIONS,
     }
 
@@ -176,6 +216,8 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--require-local", action="store_true",
+                        help="Reject active remote images in this offline knowledge archive; code examples and source links are not images")
     args = parser.parse_args(argv)
     root = args.root.resolve()
     if not root.is_dir():
@@ -184,7 +226,9 @@ def main(argv=None) -> int:
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"report": str(args.report), "counts": result["counts"]}, ensure_ascii=False))
-    return int(any(result["counts"][key] for key in ("missing", "zero_byte", "html_error_page")))
+    return int(any(result["counts"][key] for key in ("missing", "zero_byte", "html_error_page"))
+               or (args.require_local and (result["counts"]["remote_images"] > 0
+                                          or bool(result["reference_review"]))))
 
 
 if __name__ == "__main__":

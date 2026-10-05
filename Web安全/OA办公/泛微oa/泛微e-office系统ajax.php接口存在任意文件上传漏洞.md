@@ -64,7 +64,7 @@ CNVD编号:
   
 泛微 E-Office 9.5版本  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOzB6BmSEjMqtQRgiaHQxPxrRqOiaSj5ibXhaE82icwNCQJx7txyDdiaqwGvg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/257469f411d8637504b251f642d34ec546f9e1aabda0bb9d8824f2a9963dc245.jpg "null")  
   
 泛微e-office系统ajax.php接口存在任意文件上传漏洞  
 ### 4.fofa查询语句  
@@ -106,24 +106,24 @@ Content-Type: application/octet-stream
 
 > 请求长度说明：原资料 Content-Length 为 334；保留原始标头；其数值未据实际请求体重新计算或验证。
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOib2p2kNNXvoO9vmlsyuBu3A79dbOPtUicRVD4ic4ibibqsORFf2tK1rAA7A/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/ee1ebf9405170c3e7ec831f87f0f143926f27aa62dcd392327765d8bbd103f0f.jpg "null")  
   
 上传成功会返回路径  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOC4n3sklvotp9kYj6TkibwHpaQic6x4ZibayEicRHAoNrhAq5QXD1uZxe4Q/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/fb587cf501b41ea6370111f51b477b77485ce4f240beb9e8c4bfcd4f2219abe5.jpg "null")  
 ### 6.POC&EXP  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOl8iatZwtTRK03GichEH859BpMQQwHKxK9WYlPdAHVTLXpLU0wiapfHe9A/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/3594c9841c216698f236f2d352b9969b919df90c138ebd78b4bfee09b6689b50.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOxCz9YJ6Hx20g9DSCyM2zZ17uK2WuO5T8v6SI88cEGyw0AUXJGkTX6g/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/5d6a45f25899215706838d7d66ec7f80816d533f1878d3f33dd73027bef1b971.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAO69xDicD33jShDrqEzEWf2Zw44fJBxW6BhrX2V06eEbiafBr2oScMooDg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/31d277a6fa41aea2b7fd0d593be57026d58b7876987c18d87a59ee8ba08134b9.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOWETSnEbYjyjFzgpS1ERXSl20rG3A9jgxKkx0Hlsyd1U9lqVnITwmwA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/65011a35c2836fc5571df8cee7426ebc5a17f6ba9ca67b14d3c7d9f48aadbf2f.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOsLVxRNdae2ufX4IAYMBhBxTuiaGKQ0SvYdIECq0Ez1CeXWymdJSSPQA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ### 7.整改意见  
   
 请关注官网更新补丁: https://www.e-office.cn/  

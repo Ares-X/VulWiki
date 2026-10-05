@@ -54,7 +54,7 @@ schema_version: "1"
 
 Sergiu Gatlan  代码卫士   2024-07-26 17:41  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -80,13 +80,13 @@ Progress Software 公司在周三的安全公告中提醒称，“更新至 Repo
 Progress 还为无法立即升级设备的用户提供了临时的缓解措施。Report Server Application Pool 用户可更改为权限有限的用户。无法创建 IIS 用户并分配 App Pool 程序的用户可参照 Progress 支持文档中的信息缓解该漏洞。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMS8BY61icLViaX2jVuzSdo1Aic08icPYmiba5M2ZQ2NShIO5rAJ9AhV8Gnqqjv9KTbNnrrjguCA5VCAAdQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ed57a52eb1053d90d3d407ac19d6f8b247122706e82712b98a65d1eb8485243a.gif "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMS8BY61icLViaX2jVuzSdo1Aic0fLEG1WJDYcmfW24Z9VN6iaZhhGOqemBs8thUAUP36pzqp6EOJD0YPQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b7d48cc9ee06ee7ebd6a6c0775fcb01fb0440dcda99e4f0951c3e5f4f6bbacfd.png "")  
   
 **老旧 Telerik 缺陷已遭攻击**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMS8BY61icLViaX2jVuzSdo1Aic0fLEG1WJDYcmfW24Z9VN6iaZhhGOqemBs8thUAUP36pzqp6EOJD0YPQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b7d48cc9ee06ee7ebd6a6c0775fcb01fb0440dcda99e4f0951c3e5f4f6bbacfd.png "")  
   
   
   
@@ -147,15 +147,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

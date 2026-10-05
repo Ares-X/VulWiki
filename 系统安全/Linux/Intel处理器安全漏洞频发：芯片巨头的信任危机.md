@@ -57,7 +57,7 @@ schema_version: "1"
 
  黑白之道   2026-03-09 01:47  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicwgPqvK8QgwnCr09iaSllrsXJLMkThiaHibEntZKkJiaicEd4ibWQxyn3gtAWbyGqtHVb0qqsHFC9jW3oQ/640?wx_fmt=gif "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/54e6aa533c71207faa872ac7dd6fc7f1f67c8202e18fd82865cee6d560192712.gif "")  
   
 > **导语**  
 ：在全球数字基础设施的核心，Intel处理器承载着数以亿计的计算任务。然而，近期连续的CPU安全漏洞曝光揭示了深层的安全隐患——从微码缺陷到固件漏洞，从信息泄露到拒绝攻击，这家芯片巨头正面临着前所未有的信任考验。  

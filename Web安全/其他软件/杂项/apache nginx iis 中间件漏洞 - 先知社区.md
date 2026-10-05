@@ -113,7 +113,7 @@ php,php3,php4,php5,pht,phtml都会当成php文件执行
 
 > 修改`.htaccess`的文件名`修改apache下的conf文件的AccessFileName .htaccess`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-dd721036-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-dd721036-3f42-1.png)
+[![](../../.resource/remote/2b1917e4d60b95392dec27f943189e662084fce26b12f973e354fc7eb2c535bd.png)](../../.resource/remote/2b1917e4d60b95392dec27f943189e662084fce26b12f973e354fc7eb2c535bd.png)
 
 作用
 
@@ -133,9 +133,9 @@ FcgidWrapper "G:/11111111gongju/phpstudy_pro/Extensions/php/php7.0.9nts/php-cgi.
 将php-cgi.exe路径改为对应的php版本即可
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-dd9716e2-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-dd9716e2-3f42-1.png)
+[![](../../.resource/remote/f1f405a48881e04c87f1ed4020f878db2fd79c33baf0c2d6f59908f9b064ecac.png)](../../.resource/remote/f1f405a48881e04c87f1ed4020f878db2fd79c33baf0c2d6f59908f9b064ecac.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-ddb938b2-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-ddb938b2-3f42-1.png)
+[![](../../.resource/remote/353e00891d7d557983240fd688cec23cb91c714e60f852836d1e2543120449d9.png)](../../.resource/remote/353e00891d7d557983240fd688cec23cb91c714e60f852836d1e2543120449d9.png)
 
 1.  执行命令 (此方法下我无法解析 php 了)
     
@@ -160,7 +160,7 @@ FcgidWrapper "G:/11111111gongju/phpstudy_pro/Extensions/php/php7.0.9nts/php-cgi.
     FcgidWrapper "C:/Windows/System32/cmd.exe /c start calc.exe" .jpg
     ```
     
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-dddea7d2-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100318-dddea7d2-3f42-1.png)
+    [![](../../.resource/remote/2b9d54401f0264d65ec0eb0b8686826153fb9bcfe7064931a6b18e3908b34a31.png)](../../.resource/remote/2b9d54401f0264d65ec0eb0b8686826153fb9bcfe7064931a6b18e3908b34a31.png)
     
 
 > 这与 apache 的 conf/vhosts 文件夹中的配置相同, 这个文件夹可以在单个 ip 创建不同域名的配置文件.
@@ -203,9 +203,9 @@ windows下Apache要加载mod_Rewrite模块，配置文件上写上：LoadModule 
 该语句会让Apache把.jpg文件解析为php文件。
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de07a52e-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de07a52e-3f42-1.png)
+[![](../../.resource/remote/c30a74d44ab84615276c0662a8a0d3c28e17e17077b7eeb22754eb4bd12b6167.png)](../../.resource/remote/c30a74d44ab84615276c0662a8a0d3c28e17e17077b7eeb22754eb4bd12b6167.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de24cf3c-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de24cf3c-3f42-1.png)
+[![](../../.resource/remote/50ed79156e1f61577bf007148cd9b31f093dadec027963ef0fd7899511ec879c.png)](../../.resource/remote/50ed79156e1f61577bf007148cd9b31f093dadec027963ef0fd7899511ec879c.png)
 
 *   防御方法
     
@@ -364,7 +364,7 @@ location ~ \.php$ {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de509bc6-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de509bc6-3f42-1.png)
+[![](../../.resource/remote/c5f1dc8bc50a2d023b642bef23e4befb81ddfe01a1bb05322b825ced389fc247.png)](../../.resource/remote/c5f1dc8bc50a2d023b642bef23e4befb81ddfe01a1bb05322b825ced389fc247.png)
 
 文件后缀解析
 ------
@@ -379,7 +379,7 @@ location ~ \.php$ {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de6d3e52-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de6d3e52-3f42-1.png)
+[![](../../.resource/remote/455a2e13df7a0740414301b89fe10d8eae78d7cbaeb147e91be4da5ee2f3f925.png)](../../.resource/remote/455a2e13df7a0740414301b89fe10d8eae78d7cbaeb147e91be4da5ee2f3f925.png)
 
 ## 修复
 php.ini 中的  cgi.fix_pathinfo=0 访问后就是404
@@ -431,7 +431,7 @@ location /files {  #这里files就没有闭合
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de913f8c-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de913f8c-3f42-1.png)
+[![](../../.resource/remote/3ab1695c0b96d831abcfe4e634821db9ed89ddc026abad4c0d4e24c0da2f58b9.png)](../../.resource/remote/3ab1695c0b96d831abcfe4e634821db9ed89ddc026abad4c0d4e24c0da2f58b9.png)
 
 add_header 覆盖
 -------------
@@ -460,27 +460,27 @@ cve-2017-7269
 
 > iis 6.0 开启 webdav, 攻击前记得拍摄快照!!!!!
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100320-deb93b68-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100320-deb93b68-3f42-1.png)
+[![](../../.resource/remote/723941eeaeab223edd627286572a38a2e21e4f86c07d12daa007c5af6cf11ac9.png)](../../.resource/remote/723941eeaeab223edd627286572a38a2e21e4f86c07d12daa007c5af6cf11ac9.png)
 
 > exp: [zcgonvh/cve-2017-7269: fixed msf module for cve-2017-7269 (github.com)](https://github.com/zcgonvh/cve-2017-7269)
 
 直接 set rhost 然后 exploit
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100320-df27f256-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100320-df27f256-3f42-1.png)
+[![](../../.resource/remote/ac3ca8a636d0051e9365bfe997e5ecc164c2eae9d174af4249c6673ee1e02311.png)](../../.resource/remote/ac3ca8a636d0051e9365bfe997e5ecc164c2eae9d174af4249c6673ee1e02311.png)
 
 直接打是用在 iis 没有绑定主机时
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100321-df50b7c2-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100321-df50b7c2-3f42-1.png)
+[![](../../.resource/remote/8a0a88c504fa53734f9225e55cf4ac5ea3cd4232bfb7eb63970b859049908caa.png)](../../.resource/remote/8a0a88c504fa53734f9225e55cf4ac5ea3cd4232bfb7eb63970b859049908caa.png)
 
 如果绑定了就需要输入物理路径长度 (如: `c:\inetpub\wwwroot\` 就是 19)
 
 修改路径为`c:\inetpub\wwwroot1111111`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100321-df720332-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100321-df720332-3f42-1.png)
+[![](../../.resource/remote/95348241efbd8894c6a7f67bb769dbcd50f71507d045f3fc45965d9a879e23b6.png)](../../.resource/remote/95348241efbd8894c6a7f67bb769dbcd50f71507d045f3fc45965d9a879e23b6.png)
 
 使用脚本爆破 ([Windows-Exploit/IIS6_WebDAV_Scanner at master · admintony/Windows-Exploit (github.com)](https://github.com/admintony/Windows-Exploit/tree/master/IIS6_WebDAV_Scanner)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100321-dfa83ec0-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100321-dfa83ec0-3f42-1.png)
+[![](../../.resource/remote/a22fe6b23309851d9916e97b6530e6263349b6ae8867acf0d75a4e6c0f963824.png)](../../.resource/remote/a22fe6b23309851d9916e97b6530e6263349b6ae8867acf0d75a4e6c0f963824.png)
 
 ```
 set PhysicalPathLength 26
@@ -496,17 +496,17 @@ PUT 漏洞
 
 使用 PUT 方式, 上传 txt 文件 (直接上传 asp 文件会失败)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-dfde48e4-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-dfde48e4-3f42-1.png)
+[![](../../.resource/remote/9a48d7c7a11e943d44c487e43989b53d8b26932627415b79aca73cc628dfec2a.png)](../../.resource/remote/9a48d7c7a11e943d44c487e43989b53d8b26932627415b79aca73cc628dfec2a.png)
 
 然后利用 move 将 txt 文件修改为 asp, 变为可执行脚本 蚁剑连接
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-e0050222-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-e0050222-3f42-1.png)
+[![](../../.resource/remote/94fa6ac289feec728b07ed2aaa7a2c0e0a9d815a8a1e23dc2591d626203c7d7b.png)](../../.resource/remote/94fa6ac289feec728b07ed2aaa7a2c0e0a9d815a8a1e23dc2591d626203c7d7b.png)
 
 记得在 web 扩展中开启 active server pages
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-e02b8028-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-e02b8028-3f42-1.png)
+[![](../../.resource/remote/b4f219d4142d501260bdd83c39675f325e8e1dabf0b99372abc65e6dc1e90fb3.png)](../../.resource/remote/b4f219d4142d501260bdd83c39675f325e8e1dabf0b99372abc65e6dc1e90fb3.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-e0540d9a-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100322-e0540d9a-3f42-1.png)
+[![](../../.resource/remote/95eda3001de2184208e9cda9f040752a2692c77495bd9fbd334d759b276cb96f.png)](../../.resource/remote/95eda3001de2184208e9cda9f040752a2692c77495bd9fbd334d759b276cb96f.png)
 
 短文件名猜测
 ------
@@ -580,13 +580,13 @@ cer asa cdx 都会当做asp文件解析
 
  当访问不存在文件时返回 404, 访问不存在短文件名时返回 400
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e072f796-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e072f796-3f42-1.png)
+[![](../../.resource/remote/3010f9cd2ca73f792d0a3473544ee028bd817ca6502669a4570a8a7a3202dc23.png)](../../.resource/remote/3010f9cd2ca73f792d0a3473544ee028bd817ca6502669a4570a8a7a3202dc23.png)
 
 > 版本: iis 6.0
 
 1.  xxx.asp 文件夹里面的文件都会以 asp 解析
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e09beffc-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e09beffc-3f42-1.png)
+[![](../../.resource/remote/9623f94c3b44191441a4b6eb99114beda0992d8e05bac7a428cd775ee19c1a93.png)](../../.resource/remote/9623f94c3b44191441a4b6eb99114beda0992d8e05bac7a428cd775ee19c1a93.png)
 
 1.  `;`截断
     
@@ -595,7 +595,7 @@ cer asa cdx 都会当做asp文件解析
     
     ```
     
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e0bfda34-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e0bfda34-3f42-1.png)
+    [![](../../.resource/remote/fc2bb0a2f138bb3baebc26c5fc78c1a55334774e2a210bf622a411e01229cc13.png)](../../.resource/remote/fc2bb0a2f138bb3baebc26c5fc78c1a55334774e2a210bf622a411e01229cc13.png)
     
 
 1.  遇到 php 文件时

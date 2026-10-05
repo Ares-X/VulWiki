@@ -82,7 +82,7 @@ source_status: "recorded"
 
 鹰图指纹：web.body="/views/home/file/installPackage.rar"
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtexwpqsTURgjgVKcvQJT2BLZNsjLAc8mkNIkTbTXGO8uydlGKZaMyjA/640?wx_fmt=png)
+![](../../.resource/remote/c2671b1bf0296a5e09693d41411d628d73a54365968897ae0a8ef37e71829531.png)
 
 0x05 漏洞复现 
 ----------
@@ -163,7 +163,7 @@ python3 ivms-poc.py -f file.txt
 
  效果：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtNvIEROb4z9Jtic67MLZG2SSsEDHLOyNwE3CjrXkUe18YPeozLzNmlCg/640?wx_fmt=png)
+![](../../.resource/remote/9f515978c9bcf835e25ef7d6668a30330540327e13865c83c8e7190230ea14ff.png)
 
 手动复现 
 
@@ -171,7 +171,7 @@ python3 ivms-poc.py -f file.txt
 
 bp 抓取首页包，尝试访问接口（发现 token 需要进行鉴权）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtk6enTCRwPnxics5oJUZib20Ffcszh7qYicCOLDMQcHThicxqm4kGnQukRQ/640?wx_fmt=png)
+![](../../.resource/remote/53cca2ea23414e55978949b20f1341728ddaf26b47e6a4d0831d0f69e7942eb0.png)
 
 ```http
 POST /eps/api/resourceOperations/upload HTTP/1.1
@@ -197,11 +197,11 @@ token 值需要进行 MD5 加密（32 位大写）
 
 组合：token=MD5(url+"secretKeyIbuilding")
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvthHksh4GrJo3cusr67kH8Uu8EWKIu6MXticWs3cAf4Nyyn4S0SrPYyqg/640?wx_fmt=png)
+![](../../.resource/remote/9e837495a635ca2e9ad6c1330427109b8bc3b95abf59e0fad8459943f34ea511.png)
 
 重新验证
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtShR5oNsia4kWhwibbTfytvaPcOrnWJZQ0M9QrzJEXZBo44ZeELAUeDXA/640?wx_fmt=png)
+![](../../.resource/remote/412b086f27f326858ae4a12447da80bb1204786d207f5c409afc007a94842fbe.png)
 
 可以看到，成功绕过
 
@@ -226,13 +226,13 @@ test
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtgzZ6uXmw87z6D9UrjSfzAnvsGLeUSaN0HYG7uBHNWetk7Wia7fChRhw/640?wx_fmt=png)
+![](../../.resource/remote/4516cae5de019cf73d338a90cfe8dde368e1b6b8c37fa7da36c501d0552bdeef.png)
 
 显示上传成功且返回了 resourceUuid 值
 
 验证路径：http://url/eps/upload/resourceUuid 的值. jsp
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtBvC4iaBoxCrrWVWialKEpp6g1DhXfXGlLWEPIwpeGBNbgekpFZGjrtDA/640?wx_fmt=png)
+![](../../.resource/remote/9268370fb9792194f148d3a0dca6b1a0dc21f8095b396658b33e134a14d93efb.png)
 
 0x06 漏洞利用
 ---------
@@ -269,11 +269,11 @@ test
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtILN4exE2Q6sAI6aRztfGLDY4UNWosDcOVzt9Jg896ICmh22a2e83sg/640?wx_fmt=png)
+![](../../.resource/remote/ac5aa069a66adcc8ede49209025573e622561f5ed2ae8dacd5560a97d96873e6.png)
 
 上传成功，尝试连接
 
-![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvt6iclpicADRfXLrfDJCwHlHwxxg86giaUczhhSohKeicgJ1WVDmaibJvDTwA/640?wx_fmt=png)
+![](../../.resource/remote/453d7bdf2d450c99b77c967f29be1cb18bcc174b4277d4722afa13ff62cf3e1e.png)
 
 0x07 修复建议
 ---------

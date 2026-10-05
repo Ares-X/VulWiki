@@ -51,7 +51,7 @@ schema_version: "1"
 原创 TT
                     TT  TtTeam   2026-01-24 08:33  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/0HlywncJbB1aKxPaJNIlQmnYdovumGzyqibM24kBuTZ9R95UrRlFgE2xhmkX37ScbGjhdicgaiav9Nh0EExiaxAXAA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/eb961292328afd1f929671d6ea845fa39f1efe1bfe1dcc02d9d6a94ecb099b33.png "")  
   
 **漏洞等级**  
 ：高危（High）  

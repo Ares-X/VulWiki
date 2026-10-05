@@ -89,7 +89,7 @@ KEV
 FortiCloud  
 账户，绕过身份验证机制直接登录其他用户注册的设备。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/f0KlQiaibhCCDvSpHQXCxicrIC53AUQ0qIXRK4VN9kx7GCericM43Nq0frCSgBLRpsHfezrwicuhBLwSnzHeLrU6qrw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/fdaf834395a7b5937b2eae56e4fe83edc8e5448234bfe0e08b2ac537d73bbddd.jpg "")  
   
   
 一、漏洞概述  
@@ -307,13 +307,13 @@ FortiAnalyzer
 GUI  
 方式（推荐）  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/f0KlQiaibhCCDvSpHQXCxicrIC53AUQ0qIXFiaTEhQ84xO5AzkbBjfsAdTYU8ibGtYCpPrtSjuSh8prPibTvqS9sq7Yw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1ae22ff0de19f9e88a9d5470946aa0d592df8ffdb1049990d1d49f18867a52d5.jpg "")  
   
   
 CLI  
 方式  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/f0KlQiaibhCCDvSpHQXCxicrIC53AUQ0qIXQP5BBf9VEdL3oISjj39mFFEIILRBFsvzfY9xJwV9Sialvn7uaKHhiauw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/ba82111dd85ed694ae5ad815e1bb236cce4b3440a756aace325c0f019c5cfb09.jpg "")  
   
   
 3. Fortinet  

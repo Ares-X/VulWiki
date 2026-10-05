@@ -51,10 +51,10 @@ source_status: "unknown"
 
  FreeBuf   2025-07-02 11:03  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ib2oZzz7fu5ib8DRjTvSTx5XiaLrg6GicG561vrZTg7ibmdwWj0mtc0VWVnZojQUsN9QjFknTSRqVvGOQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f8494dc52358a6b4244834bd0be3dc2650c207f7a80ce618a67203981b924656.png "")  
   
   
 Tenable最新发布的安全公告披露了Nessus漏洞扫描器中存在的严重漏洞，攻击者可能通过权限提升攻击危害Windows系统。  
@@ -160,7 +160,7 @@ https://cybersecuritynews.com/nessus-windows-vulnerabilities/
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
    
   

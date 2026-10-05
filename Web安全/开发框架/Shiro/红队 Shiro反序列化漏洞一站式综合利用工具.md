@@ -38,16 +38,16 @@ schema_version: "1"
 FightingLzn9
                     FightingLzn9  贝雷帽SEC   2026-01-22 02:05  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
 **免责声明**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/HVNK6rZ71oofHnCicjcYq2y5pSeBUgibJg8K4djZgn6iaWb6NGmqxIhX2oPlRmGe6Yk0xBODwnibFF8XCjxhEV3K7w/640?wx_fmt=gif&wxfrom=13&wx_lazy=1&tp=wxpic "")  
+![](../../.resource/remote/5d8e97bd8bbfcb07a847ff7c0333ab5c756563c54c875eea35a17415bdeced16.gif "")  
   
 本公众号所提供的文字和信息仅供学习和研究使用，  
 请读者自觉遵守法律法规，不得利用本公众号所提供的信息从事任何违法活动。本公众号不对读者的任何违法行为承担任何责任  
@@ -55,13 +55,13 @@ FightingLzn9
 工具来自网络，安全性自测，如有侵权请联系删除。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
 **工具介绍**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
   
@@ -89,28 +89,28 @@ ShiroExploit，是一款Shiro反序列化漏洞一站式综合利用工具。
   
                                               
   
-![](https://mmbiz.qpic.cn/mmbiz_png/lcbWX2ticDCCf0XAmulMp5w2ucBKddG4q3rRnqficVzQs9vpsGPcd52hUmgzg2U4w77QbguYTaePVo4u7Wf3qKUg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2ec11172455057b8c4cf0a53390a4cc5ac4c31219ffaeef6efe92960bcc18239.png "")  
   
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
 **工具使用**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/lcbWX2ticDCCf0XAmulMp5w2ucBKddG4qTbAWBXuQaNu4hmm38ZWuRAMZZVPS0Sy70jOYCoqricUKvzDjyMKV30Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/32b0c49fcb1a7ce878ac4ae32117383dab79538520299050de5194d3e3ee6150.png "")  
   
   
   
 **下载链接**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
 ```
@@ -129,7 +129,7 @@ End
 **工具精选**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
   
@@ -174,7 +174,7 @@ End
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/pM2klgicgT5dylTzXyrXBmex6dlAsZ0QJOQdzqcw2HpC49rnL0dTHNsWsOze4QmRYN7fPRoLdVK5MXs0DXtOvZw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/67ea8a82f197465852210195516fd5aaa4a0c9544a442bf64707789e72fb10fd.png "")  
   
                                                    
   

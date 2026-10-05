@@ -55,25 +55,25 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/q5SWUXN_7Ab2g7653bEjSA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/xaUfm8URXuekQBS93GdYryjIs9TQd3nibGJKRMrXH0e4CQuBMfxA59GZxInpTtDqgHO3KOWqxlRicHP3vkyXYhTA/640?wx_fmt=png)
+![](../../.resource/remote/f0cbe6f8db2a529ec5862f64c3f6dd9a4cf452fe4c0b72d6cf08f2a3cc88c551.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/xaUfm8URXuekQBS93GdYryjIs9TQd3nib3BuM4gjCmNOcVN2DtVOYshl9shmNLaoLVL8BuYsDoaTrIicJVOktnibA/640?wx_fmt=png)
+![](../../.resource/remote/ff58d1fae87f9db70b7f2ccd3759cc4eadabe6594449ed4455d70f3a10a6f7bb.png)
 
 点击上方蓝字关注我们
 
-![](https://mmbiz.qpic.cn/mmbiz_png/al1OxRUwibUXtWs1ibqvwNlJ0FKeAOQLgg4Niaibib0k08p4Ww4VI9rBI8taicaDXXFEv7ibNMKJBvqAGW5JJkTTauNJQ/640?wx_fmt=png)
+![](../../.resource/remote/ff58d1fae87f9db70b7f2ccd3759cc4eadabe6594449ed4455d70f3a10a6f7bb.png)
 
 公众号
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ev6nEGEuLgm0XHepQNIyic7b6pAjpjsalGgyCtGUCqjcIAFnnftHQdfeuQ5SZibbOfuCLia9fuLHtjooHauyBok2A/640?wx_fmt=png)
+![](../../.resource/remote/86c414d6e2067b21267e4049ca42ee1fe876a7b166f1d18ab945b5f1947c8624.png)
 
 WaP9 安全搬砖客的技术文章仅供参考，此文所提供的信息只为网络安全人员对自己所负责的网站、服务器等（包括但不限于）进行检测或维护参考，未经授权请勿利用文章中的技术资料对任何计算机系统进行入侵操作。利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责。
 
 WaP9 安全搬砖客拥有对此文章的修改、删除和解释权限，如转载或传播此文章，需保证文章的完整性，未经授权，不得用于其他。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ZQUYW3ywzVu445ZO6E9JyjdLumI8go1WIIoHqV0IzIB2HK4BNqdDtS2ZFeSZicibgcYs4YoHHfb7p0QLG665gsOw/640?wx_fmt=png)
+![](../../.resource/remote/86c414d6e2067b21267e4049ca42ee1fe876a7b166f1d18ab945b5f1947c8624.png)
 
 **1. 环境配置**
 ===========
@@ -98,56 +98,56 @@ WaP9 安全搬砖客拥有对此文章的修改、删除和解释权限，如转
 
 安装地址：https://indusoft-web-studio.software.informer.com/7.1/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdUrHU8toZwjxL2Qp8bqzTpfoMicUChGQibhTcNQicMs2UuCaHErfwsDjsg/640?wx_fmt=png)
+![](../../.resource/remote/e273e26ed33cf9eb4b54d707ac809fdfe6da6967123b547afe66bd9bfcac6ad4.png)
 
 然后过程可参考：http://www.opdown.com/soft/92899.html  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdglcwTUwSkO3115vs6zAzEibkPsWk4DqTqHYVGPHj7rj1qYZXicu12yVA/640?wx_fmt=png)
+![](../../.resource/remote/c65b10f6e285a29561a457c0c5d9c59ef80829d482181424c857fea6327ecfc2.png)
 
 在靶机中安装 InduSoft Web Studio v7.1 工业软件，安装好后点击 remote agent，然后点 start
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdjibqJLHiaayPBnKHbRjJib2Rk3QxTyJ868AFHgicTpp6jtzlmNp2lTib7vg/640?wx_fmt=png)
+![](../../.resource/remote/c34c9e7f79f89092397e51f460090b7dcc15fa307e5035182d96ed4f343fb0b6.png)
 
-然后就来到了主页面![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdqMII7UqOApykILntMBe5CgF53XYySEeicpibsCmUqlbYsCTyAgmpGmYw/640?wx_fmt=png)
+然后就来到了主页面![](../../.resource/remote/497dec21cfd83660c0bd2edefc34ed546dfaa64c3df9dcf2358fb48271232915.png)
 
 此人机界面继承了许多存在的工业场景，比如是由燃气采集
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUd4RXH1afTiaeNAt9bE7yyc4iafrc7ZPe1rQ6sPJ5CXMrtERhzdgjwPZuQ/640?wx_fmt=png)
+![](../../.resource/remote/fd4d2b280efb9425d78c003edc0b19db9d13cd935df19126499e2442fec4123c.png)
 
 然后还有自动化机械臂  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdq9eG3FxbXlKia0s4LBwaj3KcLnibGBxDRLHVibiaibAZ9LgfALBlP6gxnibw/640?wx_fmt=png)
+![](../../.resource/remote/492aeabab91d055e9af60b8264e98dd5c4fa0a5fcb080c6d531284dd83d0a24d.png)
 
 还有风能监测，并且还登记了操作系统和用户，作为十年前的软件做的确实可以  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdnialTh6tyd5ADEet8UibETxjt4EWr3OekjAJ9rX2HokfpbvAYjxZxMTg/640?wx_fmt=png)
+![](../../.resource/remote/e65d53db6c44993fa081e7eebc182ae2ed2d7845e1854e2b4e9ff464aa63fd14.png)
 
 然后我们此时查看端口占用情况
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdqR3Ys8VUYIDicwiauDW4kWIsZx4Fqs0j7JAavDBbWMnxIQkQSibSa1uXQ/640?wx_fmt=png) 同时可以看到 4322 端口已开启  
+![](../../.resource/remote/5f69c6ff6af6b96aa3525f9802e92a50d34391658966203a89a6b8d60032f3c0.png) 同时可以看到 4322 端口已开启  
 
 **1.3 子弹上膛**
 ------------
 
 在 kali 攻击中，如下目录放入下载的 exp 模块  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdHScBWXBonic3wnjI5UdX8a46OjNHvMIEYOQiattOdXmXpKWG4LMTfWicw/640?wx_fmt=png)
+![](../../.resource/remote/d24c1a681baac626030b895da9a778cfafbe113efd1b4a86b2fedb6cbaee8811.png)
 
 然后下载此攻击 exp  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdzn9h27oCNJjbXia23tzlG3Yx2fDm3ibRkWDK0oibue71PyDzYz9g3G5iaQ/640?wx_fmt=png)
+![](../../.resource/remote/44c5e16fbd506f4e5fb7193916baa9650c6fe91b1ad9894112b1ceee7eddb0ca.png)
 
 此脚本在更新后的 msf 上是存在的，没有的安装一下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdVWaN4iazu7icDIrNydJUGSOr9eaxA6Oprb4ic8vLQYzvXVnwEDt3jQUJQ/640?wx_fmt=png)
+![](../../.resource/remote/4098944de464af7e26a73e9535495a97b64741e8ff23a0b712528cc62e3d6576.png)
 
 通过 https://www.exploit-db.com/exploits/21837，获取漏洞 exp，发现漏洞测试版本为 InduSoft Web Studio v6.1 SP6，由于 v6.1 版本已经很难找到，本文尝试使用 InduSoft Web Studio v7.1 版本代替，亲测 v7.1 版本也是 ok 的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdhJCfGKwsQjUmKYiadRDk8icgeiaeQbvBS70Pttw6XUg3K5p6d0e6PtJNQ/640?wx_fmt=png)
+![](../../.resource/remote/e442759381d5ebc88ec07b419baaca9caf12fdba64734f6c0f28e9465b9475f9.png)
 
 通过 exp 发现漏洞利用需要通过 4322 端口，故 InduSoft Web Studio v7.1 需要开启相应服务。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUd3wykHlJAFyhiaMKfTqicMvCYkcPwWogL8jicYg1W3VgVCE1iaHiac2OWOOw/640?wx_fmt=png)
+![](../../.resource/remote/2e4650bf59290e6b2a1ddd4874f400e82c86da2c88ab2c8c4360202265a3077e.png)
 
 **2. 漏洞复现**
 ===========
@@ -194,11 +194,11 @@ msf6 exploit(windows/scada/indusoft_webstudio_exec) > run
 [*] Exploit completed, but no session was created.
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUd7006SbcqxcibjicoXgO8rfwSQx4BGCcuPibSDWEu3dZY0pSl9zmwd5Gkw/640?wx_fmt=png)
+![](../../.resource/remote/51ef643bc5fac00484750e42da61daba5bb0d02829843fd14f5c8d7b1865e750.png)
 
 这里需要开启一下，然后就可以进行提权操作了
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdO9aCfeK2zBHnbPgCM8v5IKnTYLV3Y4eUAVQ2VRic98z83rE25DGYyLA/640?wx_fmt=png)
+![](../../.resource/remote/2a54a428f626d0f2a8cb16851dcf324c2b93acf5006b94cba10dc9013a9311ca.png)
 
 输入 shell 就可以执行命令了，到这里提权成功
 
@@ -218,27 +218,27 @@ C:\WINDOWS\system32>
 
 参考链接：https://www.freebuf.com/articles/ics-articles/256862.html
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7PuqRWWU6zPRMxSeBfjvKhbuTlWQcqk8L2ib8dROI0fFTknJfEctspUxmbxZwkvG9214pibCEmGWsuEDvDad20tA/640?wx_fmt=png)  
+![](../../.resource/remote/81a4f20c54e5a7401b685a7cb7eb699f7a80a74ce3cf814b2b1dc5097ff631f6.png)  
 
 新书推荐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/US10Gcd0tQGCeAxCpwiafHPCQ59GvHz6giandwhxYRRbpy9Fg4r24n3DUppDIuN9AdtiaAYaIEm15OGhIfuv6Mzkg/640?wx_fmt=png)
+![](../../.resource/remote/8eb4c7ae365d7609e30238924eaedcd561880974d09cca56771d5ea4521a4419.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/TN05MmJLxMrNiboff6rhmPUYUNXdWTXZfiaHXPuUGqmPZtqhI6NtGicPMIu6ohOCReWY2C4YZY4AIchDMyal6KWQw/640?wx_fmt=gif)
+![](../../.resource/remote/775e513d5b85394cf19d6fd19485f8b08a7225e1bc1c7255cf8550e882264571.gif)
 
 《GO 语言区块链应用开发从入门到精通》全面地介绍了 Go 语言区块链应用工程师所需要的基础知识和各种技术，主要分为基础篇、进阶篇和实战篇三部分。全书共 7 章，其中 1～2 章为基础篇，介绍 Go 语言环境安装、基础语法、函数编程、容器编程、面向对象编程、并发编程以及网络编程；3～5 章为进阶篇，第 3 章介绍区块链基本原理、发展历程、行业应用案例，第 4 章主要介绍智能合约，包括 solidity 基础语法，多个经典案例，以及 Go 语言如何调用智能合约，第 5 章主要介绍区块链原理的程序化实践，包括 Go 语言实现 Base58 编码、P2P 网络、PoW 共识、区块链组块以及 UTXO 账户模型实现；6～7 章为实战篇，介绍 2 个实战项目，第 6 章介绍如何实现 Go 语言版的区块链钱包项目，内容包括助记词生成、私钥存储、Coin 交易以及 Token 交易等内容，第 7 章介绍如何实现一个版权交易系统，内容包含如何去设计区块链应用系统、后端功能如何与区块链相结合，它既是一个区块链系统应用项目，也是一个 Go 语言 Web 服务器项目。《GO 语言区块链应用开发从入门到精通》适合想从事 GO 语言区块链开发的程序员及 GO 语言爱好者阅读。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/HficxWTTwt1Ctic0nBTofOAVNukhTeZlsqONvGUibOiajRpg6I5uw8s3vopR0d5XMiaFtJxPCZnicCxrO5v4ZakBsFKw/640?wx_fmt=jpeg)
+![](../../.resource/remote/bce696809d225d04076233bee3fbee3350d76f35e1c7f41135796606a3e464a5.jpg)
 
   
 
 点击上方链接，更多优惠等你哦~  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUd00M71lia0nV5DnYlFVGQk7ZhUicmsYiaglxB3vZ3q0YVvUpQNYQEztobw/640?wx_fmt=png)
+![](../../.resource/remote/281d69614f0349c93ee6eb49f9747972adb8fa0281d6d7a47a43f83d86620598.png)
 
 **扫码关注 “WaP9 安全搬砖客” 公众号，持续更新文章**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/zl5yfOjG6ENmMlXBUuJEmJyxseEgIdNnc45EhNWCF1hYRd63Zkpia6rMriacqaBmMQ8mkzwX0jse6BE6SickfCicOw/640?wx_fmt=png)
+![](../../.resource/remote/b57837ab69d8a7f11d3d1274263f4d175fd58f519c09369f4db33aa384811e35.png)
 
 WaP9 安全搬砖客
 

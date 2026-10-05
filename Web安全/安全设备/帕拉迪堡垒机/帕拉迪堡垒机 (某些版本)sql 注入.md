@@ -117,7 +117,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAPENC="http://sche
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5sMuNdjXwwP51MjEMaNLmq5faicVJib7cibQicZntmm4PfnfJ8yvibyj3821XDEfapNBib478OjpOpuMicnNFQmOibOia1Q/640?wx_fmt=png)
+![](../../.resource/remote/0292d8161dd04af286d63637ee77f10343ba66b1a22b5e08f9ee32c3a656377d.png)
 
 我们构造 sqlmap 方便注入的数据包：
 
@@ -158,7 +158,7 @@ select id from user where account='superman' limit 0,1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5sMuNdjXwwP51MjEMaNLmq5faicVJib7cibIm9JEe6oKGMyuRWNBdN17xQsG5fOPxNvunQPARLAM6GzkGrDKzuQ6A/640?wx_fmt=png)
+![](../../.resource/remote/a3de0fb3c6679cf2c75364f504a057a9a2f59ffebf538882f36565da13783b2f.png)
 
 查询密保答案
 
@@ -168,11 +168,11 @@ select answer2 from user_secret where usr_id=1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5sMuNdjXwwP51MjEMaNLmq5faicVJib7cibgIPkiaDuDcPG5DLwPCLoBwYDZLrb83299Fw9yJCEdFNGyjdHrAsRjicw/640?wx_fmt=png)
+![](../../.resource/remote/1c38b572dbc4d847a9ec8ad37ed17979f66f8153ea6bbc07918d15a61067e908.png)
 
 我们试试 (答案 2 随便填写)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5sMuNdjXwwP51MjEMaNLmq5faicVJib7cibLZpG73mA1nXtibLiaVNmsEfpib3yBuGia1f4RJuiascicVNQL6CIweUcxD2Q/640?wx_fmt=png)
+![](../../.resource/remote/33a0351650dc95136dd4af4a5f220b8a11025935d4e211495cbc542af747a356.png)
 
 可以看到答案完全没问题
 
@@ -182,7 +182,7 @@ select answer2 from user_secret where usr_id=1
 
 ---------------------------- 关注我查看其他文章 ----------------------------  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5sMuNdjXwwOTI9R0HP1ahk5P93K3VZkSr4J0fG743YxiaC4ktBTw4d8yjLjIfPibkzmP7YX0gofU3YhAia7IM86xA/640?wx_fmt=png)
+![](../../.resource/remote/f57a087fb3e432077a27aae4461dc9ff547b6dacf1b9a2463367f30d7ed763f1.png)
 
 ---
 

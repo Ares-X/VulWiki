@@ -63,7 +63,7 @@ schema_version: "1"
 
 do son  代码卫士   2025-03-20 17:42  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -73,7 +73,7 @@ do son  代码卫士   2025-03-20 17:42
 **谷歌推出重大安全更新，修复了位于 Chrome 的 Lens 特性中的释放后使用 (UAF) 漏洞 CVE-2025-2476。该漏洞已在 Windows、Mac 和 Linux 的最新稳定版本中修复。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMREnmv2ykWoK0kxjAXa1ib0h71CR2Po1U5Aadb1mNt9LHNiayM632YKDnFicCxmnIYLYso3XzIbfCG2w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2069adf134a498822d98b9e340a1ef09614dc268f3618e95dc44e85f5dcda62a.png "")  
   
   
 该漏洞如遭成功利用，可导致攻击者执行任意代码或控制系统。谷歌并未发布漏洞详情，以便多数用户更新浏览器并防止漏洞遭利用。  
@@ -161,15 +161,15 @@ License
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

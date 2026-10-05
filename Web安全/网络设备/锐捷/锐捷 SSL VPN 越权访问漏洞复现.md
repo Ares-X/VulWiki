@@ -57,7 +57,7 @@ source_status: "recorded"
 
 **很强点击蓝字**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif)
+![](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -111,7 +111,7 @@ icon_hash="884334722" || title="Ruijie SSL VPN"
   
 访问目标 http://xxx.xxx.xxx.xxx/cgi-bin/installjava.cgi
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9Xhiat7O9M6WcFsNedHoDzh1BMLBTicVBYmBtk5OSz0Iw6RRTB8SBO6Bqw/640?wx_fmt=png)
+![](../../.resource/remote/0f473f8ba416558eb37516103a56adc0b3705c59240bda8178064c7c05ce1528.png)
 
 POC 请求包如下  
 
@@ -143,21 +143,21 @@ UserName 参数为已知用户名
 
 > 在未知登录用户名的情况下 漏洞无法利用 (根据请求包使用 Burp 进行用户名爆破)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9X2GXC5nAibBTfiaJ7umWd4F0qotpichlB2ejlXf8oic5ZwicQlxfdaibsK27g/640?wx_fmt=png)
+![](../../.resource/remote/12255872453b3bb1346d0c8610e9c8d2de9d9f278f3fe1aeb1e61603ca489e9a.png)
 
 用户名正确时会返回敏感信息  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9XiaUZ2wMPv0piakRpR3pU8TgKgDd2CicZAvUc0QRUIxHqUrePul4RvZtlg/640?wx_fmt=png)
+![](../../.resource/remote/3d620a60e37bc9cd0ffe2a30cb87f08549acc5d23f4a2538d0040e5b6a506fb9.png)
 
 通过此方法知道用户名后可以通过漏洞修改账号参数
 
 访问 http://xxx.xxx.xxx.xxx/cgi-bin/main.cgi?oper=showsvr&encode=GBK&username=liuw&sid=1&oper=showres
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9XwRAkiaBdBf0TibGibQictAibFOaQlvyymRjibA5tCLiaer9pg8eNlk73WialYw/640?wx_fmt=png)
+![](../../.resource/remote/5ebf11cc4deac7c57446df58611c94d8d2ebe2c9b495e2a40fa5475ca467bdc8.png)
 
 点击个人设置跳转页面即可修改账号信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9XIPjHZvjRVicVeibiaL5zf0U4RdgiaMlDR39MY5l1zl94dSH5MCsJ39LpzQ/640?wx_fmt=png)
+![](../../.resource/remote/66fe41ace075e76ed27a81b944607625ca9dc995289a79c18fe943f0c3d6aafc.png)
 
 参考文章  
 
@@ -165,7 +165,7 @@ https://mp.weixin.qq.com/s/iRmDQJH23FJ6mL_GzXeL6g
 
 **团队【PeiQi】师傅的微信二维码放在这了**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9XhJILPG5qnhYyI1fjI4vqjV0MgnUM4ibYRfCFaV4wk5FRaGibxMptiadRw/640?wx_fmt=png)
+![](../../.resource/remote/303b3136f767346ea10aea033c0e93560d44999800c78b3aa06265c36c124033.png)
 
   
 
@@ -189,9 +189,9 @@ https://mp.weixin.qq.com/s/iRmDQJH23FJ6mL_GzXeL6g
 
 Twitter：@wgpsec
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4LicHRMXdTzBhAsD8IU7jiccdSHt39PeyFafMeibktnt9icyS2D2fQrTSS7wdMicbrVlkqfmic6z6cCTlZVRyDicLTrqg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b9e1284285c5071573cdab2007195e695eb9d397834bf8ada6d0ffc6fb61d537.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/gdsKIbdQtWAicUIic1QVWzsMLB46NuRg1fbH0q4M7iam8o1oibXgDBNCpwDAmS3ibvRpRIVhHEJRmiaPS5KvACNB5WgQ/640?wx_fmt=gif)
+![](../../.resource/remote/bd8c348cdec726a3436db5005b7a9fce34d12de57cac8d2d94ac31a1c423b221.gif)
 
 ---
 

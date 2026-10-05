@@ -330,11 +330,11 @@ DTD 实体是用于定义引用普通文本或特殊字符的快捷方式的变�
 
 外部实体默认支持的协议
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnv8xPtzLPdwjdlsrscQZiaDIrC6W1Ns2hiaWuxJ6ficHApIzHoCXtlwqicUQ/640?wx_fmt=png)
+![](../../.resource/remote/c95512d5869ef63d7c06ec7440c4991031a6e35b73e472df33b9852dc2165102.png)
 
 而且 PHP 在安装扩展后还能支持下面的协议：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvEOkpvJ2Sic2ibgRuFsGydLhdVlgGeqGkyQgeIrSia4e1QOU86egNCpJIg/640?wx_fmt=png)
+![](../../.resource/remote/62a3e92581908ae8f7038779519c3c872eda3c66e975bc5e56b4d2c5b4d63dff.png)
 
 **3.XXE 攻击**
 
@@ -391,15 +391,15 @@ Windows 系统使用 payload：
 <creds>&ali;</creds>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvAtHKgQE6DjEJlGaC8lj6jAra6hZaulbjaibC0ricrsSozuRK8apmYoyA/640?wx_fmt=png)
+![](../../.resource/remote/3af810f881e8913b48e9ee54141d821282a890da97c1d552f7c03b870fe2096f.png)
 
 可以看到文件成功读取，但是可以看到读取的文件中并没有特殊符号，如果文件存在符号呢？
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnv97uVTzUVbIzWXXvSWXY3WeZic18Ufa3I3hFBMl04icoBukZnkRft2Y1A/640?wx_fmt=png)
+![](../../.resource/remote/0df4d950590553311bbfd62f356d1c45c31547955207bdd9c7ba2fe2ba1f2a80.png)
 
 尝试文件读取：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvqAFMTia5iakxoaUicIFEjt1LOHE1llQNhcloOq9HwyqbLyG0YJmRCNV6g/640?wx_fmt=png)
+![](../../.resource/remote/46e6b5bb7e6e55b72c4ed2a0b5880043ebe064531e13c7a496586637e1091801.png)
 
 发现当腰读取的文件中有特殊符回报错，无法读取到想要的文件。此时使用 CDATA 解决报错问题，我们将读出来的数据，放在 CDATA 中输出即可；CDATA 部分中的所有内容都会被解析器忽略。在前面有讲到：
 
@@ -449,7 +449,7 @@ $dom->loadXML($xmlfile, LIBXML\_NOENT | LIBXML\_DTDLOAD);
 %all;
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnviafbJWghyGqib2IR0TjyvZYEibVXQ2ALLJLGkN11LzkhdhffdmA6bFNPQ/640?wx_fmt=png)
+![](../../.resource/remote/f0baa23398800878795d70e1bd714dd399467b3a93294eb78e5a4ae43b7580f0.png)
 
 然后在 VPS 上开启 http 服务，端口为 test.dtd 中的端口。payload：
 
@@ -466,17 +466,17 @@ encode/resource=file:///C:/test.txt">
 
 这里用到 base64 编码，是因为避免读取数据时候，遇到空格无法读出
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvqmn5U3C8PGxmdO8cFdvZicAQG8YgibMU6cccfldZP6ib13XktKhibHEqvQ/640?wx_fmt=png)
+![](../../.resource/remote/27b3c9eceb133c02ad347a5d969a6310dc47ff6bed822cf0152d50409d0f25e3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvCRDYqy0wYtkicHG1ibw9u0KbK7VIacABOjYKib8kUYCDCjhl9iaWIkpB7g/640?wx_fmt=png)
+![](../../.resource/remote/f091cda427d7de444e007c2f642ca39cd808018e64350e7b51f4f021921cfb63.png)
 
 解密：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvyddxy5RvkW6Jwvbsiceyl31dIdqUia0ktoPib2e5JGDKI1rAhofQYzOcQ/640?wx_fmt=png)
+![](../../.resource/remote/d7629ed2bce72b886751d64e9dbacb53e4e515b17e59264927e162a01646e8e3.png)
 
 被攻击者：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvU5WSSHH8ClocMSY86uyQibhzNolMBBJ4zN5yiaeU6PvVHdL1l5W12GIg/640?wx_fmt=png)
+![](../../.resource/remote/5022d298b286db9e714a94220098a455bbbe9910b280966ee2b3287ff43b25b0.png)
 
 **可以看看调用的过程：**
 
@@ -500,15 +500,15 @@ encode/resource=file:///C:/test.txt">
 
 探测 80 端口，显示信息如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvCzRMZYTf0FXc6XvoqdgibnjvVTR1mJWVWBOguyicV3H0amuZRBhQW6Vg/640?wx_fmt=png)
+![](../../.resource/remote/29bb5236d4dbbcd548f5d1ef75b28f304825fa17ea043d01aa5f28b8f1c35126.png)
 
 探测 3389 端口，时间响应很久，可以看出 3389 端口并未打开
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvcdDyHTQlh6QUH5ibVrkDiaZhwUTpeq8u1K5ibw4trtiaIndg6thfyFhx9Q/640?wx_fmt=png)
+![](../../.resource/remote/9d8207de205b3340ae43d3d19f20f2081b46bfd5151d408105155a7aff1da690.png)
 
 也可以查看响应包确认端口是否开放，通过返回的 “HTTP request failed” 可以知道 445 端口是关闭的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/flBFrCh5pNbEzHMsZj9FJDtjy5TeNsnvLMcoVaXyrwAwNUN8ARzvQ2R5rf1ibAAEJ9Rw6mKh7bPoWpK1coOT1bA/640?wx_fmt=png)
+![](../../.resource/remote/dd31b872aa1b482bf14d5135aed6b07386c6fed1ec84d462f6c3d340f7889087.png)
 
 **4.XXE 的防御**
 
@@ -541,7 +541,7 @@ xmlData = etree.parse(xmlSource,etree.XMLParser(resolve\_entities=False))
 
 ③检查所使用的底层 xml 解析库，默认禁止外部实体的解析
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/flBFrCh5pNYHaptkXpPHeWT1vPTK7ZpnVQN3picALfeLv7mLPIDQpqPiczibLMjIoibiaX92ZibFfbGxfEphBSp8PRQg/640?wx_fmt=jpeg)
+![](../../.resource/remote/790c93b77450660086d8b8247be42c821338377a3418095136a6ba2690d60b76.jpg)
 
 ---
 

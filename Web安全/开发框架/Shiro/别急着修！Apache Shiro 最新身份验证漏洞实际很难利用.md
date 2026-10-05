@@ -37,7 +37,7 @@ schema_version: "1"
 #  别急着修！Apache Shiro 最新身份验证漏洞实际很难利用   
 原创 微步情报局  微步在线研究响应中心   2023-07-26 14:08  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/94ba548e30fedc16feb634026eb27963411675ba9137220d7e4638955a9d68ae.png "")  
   
 01 漏洞概况****  
   
@@ -61,7 +61,7 @@ Apache Shiro是一个强大且易用的Java安全框架，用于实现身份验�
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKMIzWohMb3ZHMRxrL84ibzF2ZpCGgZ8nicFP7Ov79miaK3nCLLWTo3xRxIr2h37A71G9U3eb662ibM6g/640?wx_fmt=png "")  
+![](../../.resource/remote/2f423ecdd3f0bde2318d93fa2d5dfd9302ce5dcf227ec7be7b333869d572e1cc.png "")  
 ### 04 修复方案 官方修复方案：Apache官方已发布修复方案，安全版本为1.12.0及以上，2.0.0-alpha-3及以上。https://github.com/apache/shiro  
 ### 05 微步在线产品侧支持情况  微步在线威胁感知平台TDP通用规则默认支持检测。  
 ### 06 时间线 2023.07.24 微步获取该漏洞相关情报2023.07.26 微步发布报告  

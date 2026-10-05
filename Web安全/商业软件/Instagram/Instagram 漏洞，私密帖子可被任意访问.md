@@ -62,7 +62,7 @@ schema_version: "1"
 ##   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jlbXyV4tJfwXpicwdZ2gTB6XtwoqRvbaCy3UgU1Upgn094oibelRBGyMs5GgicFKNkW1f62QPCwGwKxA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/eddb7ac5af1c4aa41fcf18ebd54f3dfb40773257473b6f6f3c97a34bc085be42.png "")  
   
 相关链接与视频演示请从博客或下方原文链接查看。  
   
@@ -110,13 +110,13 @@ Meta 公司在收到其漏洞报告后的 48 小时内悄然修复了此问题�
 #### 漏洞利用演示  
   
 **PoC脚本暴露私密帖子**  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jm2KyFRs3ZBaNAKupaStqRSaLhLSl0C7mARczuNBlNfHwd7SlPElCUYuTJOCmuDvnBkBOw6ZOOj4w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/51a1fd20b464ae146bad4589788408d9beabe419ad67c80800a0a70f435e3895.png "")  
   
   
 脚本实际运行，成功提取私密帖子数据。相关过程可查看源视频2（第0:25秒处）。  
   
 **针对第三方账户的利用演示**  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jm2KyFRs3ZBaNAKupaStqRS2J0B2kUZKkiaF06ok95UjS7W1bEa8CYuX5Fo7YRJM7cuYkZia5O6pbOg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/05f39b2cd1cec36da0d5d2febb75c9f6a89e5b96c197c3448dfa142894e2a278.png "")  
   
   
 相关过程可查看源视频3。  
@@ -150,7 +150,7 @@ Meta 公司在收到其漏洞报告后的 48 小时内悄然修复了此问题�
  研究员提交了详细分析报告，解释了漏洞触发的“双重状态”机制：特定请求头会诱使服务器返回 0 关注者 / 0 正在关注  
  的异常状态，在此状态下，部分账户的私有时间线数据会被错  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jm2KyFRs3ZBaNAKupaStqRSia9rVWW3Usm6AWlqZJ6FiauKjZQhwkdH8PYFYYWGfcFdgboHthiagzJ4w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/02ff8e54d10a59daadc283698982b4af66585e10b7ed453a1ec2322808a9b7f1.png "")  
   
 漏洞触发的“异常状态”界面。请注意，尽管访问的私密账户拥有多位关注者，页面却显示0 关注者 / 0 正在关注，并伴有故事环。这确认了会话已进入服务器端的逻辑错误状态。  
 #### 漏洞被悄然修复  
@@ -208,9 +208,9 @@ Meta 对此的回应是：
 **所有证据均在报告过程中实时提交至 Git 仓库，其时间戳和提交历史无法事后伪造。**  
   
 **漏洞修复前后界面对比**  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jm2KyFRs3ZBaNAKupaStqRSuCZlQyWnAWfibicRO1llhu9fcH6AFVfHwSwY8mV3hdzUFYV11Sojxm6A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dacff875359e91598a0e9e7037cf8b039dc17de178f732dbc76f44ae7c189a87.png "")  
 修复前：polaris_timeline_connection.edges 字段中包含私密数据。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jm2KyFRs3ZBaNAKupaStqRSZXvLZInwOjcoFrh75hdwRqxVv9LvmQ1FiaDiapRIvZNk5QpkACRV7aYw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1e9a920f07feacc4687acfc5fddd775550d60706ff306514319b8e7ff0499bb8.png "")  
 修复后：相同请求返回空的 edges 数组。对比过程可查看源视频4。  
 #### 事件反思与影响  
   

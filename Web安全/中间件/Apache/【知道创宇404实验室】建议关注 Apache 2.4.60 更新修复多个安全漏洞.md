@@ -42,7 +42,7 @@ schema_version: "1"
 
  知道创宇404实验室   2024-07-02 17:41  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0w1E5Vv5bUiciao6o2cu11sMdG8VhZckT7VYyIuheUxda7pAfjc9RTXFibtXgv0oVbb5A299nIB93UA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/aa5dc4c8663fea30852d94268f285d18bf3a42203e5898af6ad1e03c7c362f58.png "")  
   
 2024年7月1日，Apache官方发布了最新的版本2.4.60 并修复了7个安全漏洞，其中包括4个important漏洞：  
 - CVE-2024-38472 Windows Apache SSRF漏洞，允许通过SSRF和恶意请求或内容将NTML哈希泄露给恶意服务器。  

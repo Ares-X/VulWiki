@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Sergiu Gatlan  代码卫士   2025-02-19 10:07  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -66,7 +66,7 @@ Juniper Networks安全事件响应团队 (SIRT) 提到，尚未发现该漏洞�
 Juniper 表示，“在Conductor管理的部署中，仅修复 Conductor 节点即可，修复方案将会自动推送到联网路由器。在实践中，路由器应当升级至已修复版本，尽管它们连接至已升级的 Conductor后并不易受影响。”  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQhr6jXufaic6PJrZauaJPDaD1ibGiaFMEGFsj7NfhCojnSXl4L07PJSBB07fT9Nq8ENpy0ywg1icNS0A/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/64a47fdb6fd01ce92c179f11699071e8ef0ee303cdb62635f8e829f925940b8d.gif "")  
   
 **常遭攻击**  
   
@@ -130,15 +130,15 @@ License
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

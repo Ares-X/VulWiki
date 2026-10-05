@@ -42,7 +42,7 @@ schema_version: "1"
 
 你信任的  亚信安全   2024-08-15 17:33  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbF9uZS3F55VicBTibJiaV8O9MfYTrBelTibgQIbeHibOvXKOgib7ibTYxAvRTAf4ZSiaLDicnShTzHVxASyWrw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/910b335a6458065a123b5445f0459f4d8dc81af9c689989162e42cebb2e4cad3.jpg "")  
   
   
 今日，亚信安全CERT监控到安全社区研究人员发布安全通告，披露了Zabbix远程执行代码漏洞(CVE-2024-22116)。该漏洞发生在监控主机部分的脚本执行功能中，由于脚本参数缺乏默认转义，具有受限权限的管理员可以通过 ping 脚本执行任意代码，从而破坏基础架构。  
@@ -71,7 +71,7 @@ schema_version: "1"
 当前亚信安全天河实验室团队已复现该漏洞，攻击者可以通过添加、修改Host的Macros参数注入命令，进行敏感信息读取、恶意代码执行等攻击。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iczzp36h0nbF9uZS3F55VicBTibJiaV8O9MfmHeHDrf9SMWSibp7Vh82jjVx8pAwcAZWHN7TE0BTMqLRDU7pGZict75A/640?wx_fmt=png "")  
+![](../../.resource/remote/48df919d7e1b69b3c42f5263ac8ef9f04dcd9b8c602aacce617ba9a5659f529a.png "")  
   
   
 **漏洞状态**  
@@ -107,7 +107,7 @@ AE产品在线更新方法：登录系统-》管理-》更新-》特征码更新
 TDA、AE产品离线升级PTN包下载链接如下：  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iczzp36h0nbF9uZS3F55VicBTibJiaV8O9MfdnKTztdxyNNUticCumuQEUlaXqrnrXQFNRm1klYJI1RRYJib2X15iadGw/640?wx_fmt=png "")  
+![](../../.resource/remote/1e8a22bb9840900fd41d231523e201d9db2e983d3855e406ab076f44208803af.png "")  
   
 （详细下载地址请后台私信获取）  
   

@@ -49,20 +49,20 @@ source_status: "unknown"
 
 Ddos  代码卫士   2025-07-09 10:21  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMTXhrQzEVPnK0sPmBCdpxrZ5vyzBDRw4OZr2WfP2ztE50oEGibibiay6VWwQz4vHkDkNMtTo2ZhDFyibA/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/15f554c72fcdee6b3e63bb0d95562acd1c1841508bc00728398a4f7a7babd667.gif "")  
   
 **Fortinet 修复位于FortiWeb 产品中的一个严重漏洞CVE-2025-25257。它是一个高危的未认证SQL注入漏洞，远程攻击者仅通过发送一个构造的HTTP或HTTPS请求，就能执行未授权的SQL命令。**  
   
   
 FortiWeb 是广泛部署于企业环境中的一款 web 应用防火墙。CVE-2025-25257的CVSS评分为9.6，属于“严重”级别的漏洞，加上无需认证即可遭利用，因此是寻求轻松入侵受保护环境的威胁人员的香饽饽。该漏洞影响多个主要发布线中FortiWeb 的多个版本：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMTXhrQzEVPnK0sPmBCdpxrZMO47bXQwX0ia7QyD7XD5UAdWicAevJK6SHXfAMic6kzo1sWM8vNUMhTYg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fbfb1dd0db396e2151eedf0b06a58a5922f2eb578f9eaeb279a75cd6a75a31b7.png "")  
   
   
 该漏洞可导致攻击者访问敏感数据、修改数据库内容或攻陷后端系统。如组织机构无法立即升级，Fortinet 建议禁用 HTTP/HTTPS 管理接口作为临时缓解措施。然而，禁用GUI接口可能限制可管理型且并非永久性解决方案强烈建议组织机构应用厂商提供的补丁。  
@@ -121,15 +121,15 @@ se
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

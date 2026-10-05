@@ -53,7 +53,7 @@ source_status: "unknown"
   
 Bleeping Computer 消息称，美国网络安全和基础设施安全局（CISA）在其积极利用漏洞列表中新增三个安全漏洞，**其中包括 Windows Print Spooler 中的本地权限提升漏洞。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icLakkwkZcBhelPShgjiaMlYnOmib2F5IGPvicv9quN7j3xicMu6KjEoT5ZjWiczMl1Rvaic68G9F3kaD5w/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/06e18b17e1e2d3a58034dd7c01b834bd3137e30ebe13c3a1daaf6a6503fe322b.jpg "")  
   
 从微软发布的公告来看，此高严重性漏洞（被追踪为 CVE-2022-22718）会影响所有 Windows 版本，已于 2022 年 2 月被修补。  
   
@@ -73,7 +73,7 @@ Bleeping Computer 消息称，美国网络安全和基础设施安全局（CISA�
   
 另外，美国网络安全机构在其 KEV 目录中增加了两个相对较早的安全漏洞，这些漏洞也在持续攻击中被滥用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icLakkwkZcBhelPShgjiaMlYeeSicX91xQicqYw55kricV6q04LVWn5uJGq3J5QcWvnH53M20EmszNZ5Q/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/efa42ce3fbdf56c49c2928e7e2c77b0fdef573ec870e55f305e05e27d5502d40.jpg "")  
   
 据悉，BOD 22-01 约束性指令自发布以来，CISA 已将数百个安全漏洞添加到其积极利用漏洞列表中，同时也在积极敦促美国联邦机构尽快修补这些漏洞以防止网络攻击。  
   
@@ -87,7 +87,7 @@ https://www.bleepingcomputer.com/news/security/cisa-warns-of-attackers-now-explo
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/6a85bd81b6c759a0832fee43a3d96c383ae032b5f74f300eaf04a904e924eab8.jpg "")  
 
 
 ---

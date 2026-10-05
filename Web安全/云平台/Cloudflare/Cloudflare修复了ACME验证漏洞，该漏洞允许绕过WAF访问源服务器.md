@@ -56,7 +56,7 @@ CA 的服务器会向该 URL 发送 HTTP GET 请求以检索文件。验证成�
   
 如果该挑战来自 Cloudflare 管理的证书订单，则 Cloudflare 将按照上述路径响应，并将 CA 提供的令牌提供给调用方。但如果该挑战与 Cloudflare 管理的订单无关，则请求将被路由到客户源站，该源站可能使用不同的系统进行域名验证。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/mibm5daOCSt8nGxU1dbZhBowfiaibcQMfGZ3ibwfRNDP48dgJ7DAK9pBfIKjdIBOeHXdQSmR131AlDCzNicPnnicDWdQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f0a7e8648e6b582c3d336c14585d6987bf3c113dd5e36b911c12dd8af2b18e90.png "")  
   
 这样做是因为这些特性可能会干扰 CA 验证令牌值的能力，并导致自动证书订购和续订失败。但是，如果使用的令牌与不同的区域关联，并且并非由 Cloudflare 直接管理，则请求将被允许继续发送到客户源服务器，而无需 WAF 规则集进行进一步处理。  
   

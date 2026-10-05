@@ -58,7 +58,7 @@ schema_version: "1"
 
 ang010ela  嘶吼专业版   2022-09-06 12:05  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 抖音国际版安卓APP安全漏洞可实现用户账户劫持。  
   
@@ -67,7 +67,7 @@ ang010ela  嘶吼专业版   2022-09-06 12:05
   
 TikTok安卓版使用多种deeplink方案，其中部分通过mainfest导出，部分只是应用内部使用。其中https://m.tiktok[.]com/redirect链接是由[redacted]类处理的，用于根据查询参数重定向URI到应用的不同组件中。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNib8o2U5VvYIIfwtwAia1KeIYO6XzUgkkGttBDSFLnjec7lg2oeIiakSlmA/640?wx_fmt=png "")  
+![](../../.resource/remote/9dd1d7514805db758cd4926da5c0c4fe6f393557e61e91b4ce4de577fce68057.png "")  
   
 图 使用Medusa识别deeplink和其他目标活动  
   
@@ -75,13 +75,13 @@ TikTok安卓版使用多种deeplink方案，其中部分通过mainfest导出，�
   
 研究人员构造了一个PoC URL，该URL使用特定的非导出方案来加载https://www.tiktok[.]com到应用的webview，如下图所示：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNibrHF0IUnc7sK1ibSMFqnYUsENUSJVe58yVq0JfK6jH6rKeibTpTTnRbUg/640?wx_fmt=png "")  
+![](../../.resource/remote/79835268f75401f8beafe8fb8d3a3dccccfc8c8109e44a38c1045aff57e525a0.png "")  
   
 图 使用链接来触发内部使用的方案，并加载tiktok.com  
   
 虽然[redacted-internal-scheme]://webview?url=< website > deeplink 可以用于加载URL到CrossPlatformActivity的WebView，但应用会通过过滤器拒绝不信任的主机。相比成功加载的Tiktok.com域名，下图展示了应用过滤器拒绝的Example.com域名：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNib47Qmiam172SKr1ntf4FdLlbdVlXcfK3vUxh620tl5X6A0qx5bAtVPeA/640?wx_fmt=png "")  
+![](../../.resource/remote/4b0bd6c416f54f3d642524bce27dab19648397225eeedce93eac8803a89144f4.png "")  
   
 过滤器位于服务器端，加载或决绝URL的决定是根据接收到的特定HTTP GET请求的回复决定的。研究人员分析表明有可能给deepLink添加两个额外的参数来绕过服务器端检查。  
   
@@ -103,17 +103,17 @@ TikTok安卓版使用多种deeplink方案，其中部分通过mainfest导出，�
   
 然后视频上传认证token会通过XMLHttpRequest发送给攻击者。攻击者还可以接收回复body和header，如下图所示：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNibiaR5sI07YSYWic1CXQA2ROBRtwiaerlv5gkRqLVScg5YSkTQTB6Orwc3A/640?wx_fmt=png "")  
+![](../../.resource/remote/20dcf7d281186e1dfcff35f52c9d72a66c6f949a3b88c36fb9925a089e563eac.png "")  
   
 图 攻击提取的请求header  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNibicgA754xiat5OLZNLAGwpYp9cibJwXHnbtia9KzgDIRqUsiasoTHySGZUtw/640?wx_fmt=png "")  
+![](../../.resource/remote/1a3b4eec929d2bbd709eb181c3d84e258cf6f50bacfdbddc9aeee44df9eac9c7.png "")  
   
 图 服务器回复中包含header  
   
 最终，消息“!! SECURITY BREACH !!!”就被设置在用户的个人简介中：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNibBDk93K0Jz1QYWGc9X9vCictpKpLvskMCkC85mkt7wh6kBicoBkV0aW8A/640?wx_fmt=png "")  
+![](../../.resource/remote/0266dcf75f49db8fea08a1b94613fcf42a50c1cc26d3f0e570cf634dd542778e.png "")  
   
 图 入侵用户profile  
   
@@ -121,9 +121,9 @@ TikTok安卓版使用多种deeplink方案，其中部分通过mainfest导出，�
   
 参考及来源：https://www.microsoft.com/security/blog/2022/08/31/vulnerability-in-tiktok-android-app-could-lead-to-one-click-account-hijacking/  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNibnqQxxdC1bPv88enlkYyHib2yG2PshwOtpw5S4Kg7NKqjtnMQR0ZiayiaQ/640?wx_fmt=png "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icWF7kOmAWz873rfb9mhCNibia6n1fb1YzolekfwKApvNHibCy36iaXwSXUdX4XKqSq37FpLthc8vOpMg/640?wx_fmt=png "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
 
 

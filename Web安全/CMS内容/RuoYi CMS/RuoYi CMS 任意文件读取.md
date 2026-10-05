@@ -53,7 +53,7 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
 ## 2.分析过度
 
 1、**看山不是山**  打开源码，看到“通用下载请求”的实现方法，先研究一下。![image-20201109164827975](./.resource/RuoYiCMS任意文件读取/media/image-20201109164827975.png)
-流程如下：1、传入两个参数，一个文件名参数，一个delete参数，控制是否删除2、将全局变量中的下载路径和用户传入的文件名进行拼接![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016072.png)
+流程如下：1、传入两个参数，一个文件名参数，一个delete参数，控制是否删除2、将全局变量中的下载路径和用户传入的文件名进行拼接**原图暂未找回**（原引用：` ![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016072.png) `）
 其中getProfile()获取资源下载路径，该下载路径在配置文件中声明了，如下：![image-20201109164820331](./.resource/RuoYiCMS任意文件读取/media/image-20201109164820331.png)
 
 3、先读取文件，然后再到FileUtils.writeBytes方法，将文件内容放到response流中。

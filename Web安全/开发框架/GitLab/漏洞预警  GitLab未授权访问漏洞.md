@@ -46,7 +46,7 @@ schema_version: "1"
   
 GitLab是一个用于仓库管理系统的开源项目，其使用Git作为代码管理工具，可通过Web界面访问公开或私人项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVGBiaficDylnXhWUEY2CkYiavDjgRSHG0ao3eXBzYqlMf7sTtGRGDCeVDTaNKSEibCnSCGvMvU88ZlVA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/6740dce81bc336e623d43ef3fb5dbc616de6d5ffcb7e95450ffe35aabc641a63.png "")  
   
 **0x03 漏洞详情**  
 ###   

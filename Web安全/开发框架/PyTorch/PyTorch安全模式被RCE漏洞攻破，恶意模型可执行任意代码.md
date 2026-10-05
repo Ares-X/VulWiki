@@ -37,9 +37,9 @@ schema_version: "1"
 #  PyTorch安全模式被RCE漏洞攻破，恶意模型可执行任意代码  
  FreeBuf   2026-01-29 10:32  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibvic9mib2trd1W0JGAJEHlF8rvCNwNbFuugBybo8QibCBJBAbLR7XO2c4qzWpHzw0F1N5jgoMs0ITWA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/8f5892568a2b7b64e81c3024926caa2d0fa1bfb72ea24b5bcf61e1ae85b0b450.jpg "")  
   
   
 作为现代深度学习和AI研究核心框架的PyTorch，其开发团队近日修复了一个高危漏洞（CVE-2026-24747，CVSS评分8.8）。该漏洞会破坏PyTorch最受安全关注的功能信任机制——即使启用专门设计的防护设置，攻击者仍能执行任意代码。  
@@ -98,7 +98,7 @@ https://securityonline.info/safety-broken-pytorch-safe-mode-bypassed-by-critical
 ### 电台讨论  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

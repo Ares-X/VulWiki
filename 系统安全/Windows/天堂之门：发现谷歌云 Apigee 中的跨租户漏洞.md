@@ -70,18 +70,18 @@ schema_version: "1"
   
 “天堂之门”漏洞的发现，揭示了一条从外部渗透进入租户项目，最后访问到所有其他租户数据的完整攻击链。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicwhsPxwDWuj35JrFBiaAcMbYOAtG7kiaYQCL35tofibuqMfs4vSNqEnCk7k0MCEa6HLibmjibOGWQyRBKJSxWicGzsPDtbjxwXicq7efs/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2fc3ef6d7027c719ff29d672333d18134cbd714ed215918bf011df981b2a2df5.jpg "")  
 ## Apigee 访问权限  
   
 目前对租户项目和理论上的跨租户目标的看法是这样的：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicwWWdqUGS4xO2EhIgx2wAeSkqQOhOeoKOuFoVuABxZuWESTRKBd6kjENlvQD3rELJm04eP4OEUpSrq4gsib9W45oNwEbTqlkHfA/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/54304ac9872c3855935db029261a802a82ef0b4cea9dd7c649e639dbf4949be1.jpg "")  
   
 Apigee 允许它在云外部署，从而在租户项目之外。云部署和混合部署在某些方面有所不同，但在许多其他方面也很相似，探索有详细文档的混合版本可能会揭示云版本中组件的配置方式。  
   
 这是 Apigee 混合部署的粗略示意图：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicyxjqx96FotJ7N3dSQHGwAPrXRBtq5X2RhDH4e2n2xZoRtrvxou6SEOHRuE647aNRoicssKVsAtd1zgz6wraZrPx60Nk1w2LSMU/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/df37777a075fd2aaacaa9cb2a719ed311cac06678eef789f935af04b244bfa35.jpg "")  
   
 Apigee 的主要组件是消息处理器，在图中以黄色高亮显示。  
   
@@ -93,7 +93,7 @@ Apigee 默认会为所有代理请求添加 X-Forwarded-For
   
 在消息处理器的元数据端点暴露后，可以与该工作负载关联的服务账户令牌：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicyicFKbHpianks1l597Xht4UntOvjWku2icu1rJo8EpW44HNZu44TDGzExc43GBLt437BZ0QtQYm1ZVxibpNFO0rxicZTkHp98ic9F14/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/46ad97e2b162bf959b81366291b6d52c4afbf647c3c332ed51715b47ae5d3217.jpg "")  
 ## 租户项目探索  
   
 gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥有的所有权限并检查它们是否存在。  
@@ -108,7 +108,7 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
 权限可以列出和读取磁盘、快照等资源，并控制知道名称的存储桶的内容。这是使用 Apigee 服务账户令牌在租户项目上运行 gcloud compute disks list  
  命令的输出：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYiczWdqe5jlwb6DKXrkRr79NOSEqk6r98MkbFTiauuv2BKkNA3H3Hzm4VLzlLpJlQslHiaQJiciafmO44HwkenSVeP3iaUUkDzSXmCC4E/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0c8a7cd799fda3b0de703e45590e54b55dc181726c15fb34a835cb2e4d6fee17.jpg "")  
   
 转储磁盘的内容，需要执行以下操作：  
 1. 创建磁盘的快照。  
@@ -124,9 +124,9 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
 通过浏览转储文件中的所有日志和配置文件探索， boot-json.log  
  的文件，其中包含有关分析计算实例行为的日志：  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/PkfClzhSYiczXCE8MlYDNZ1esgicmicjAtL6ficEKb1JImDqiakhchRwS4WqViatpHNqlHRWZ27dWjOzZ4TJ6zaZUQbCwP50Igef3ajAAy9OW4zSo/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a50ccee2739e1a367b326898d2c502d4db05bf55c1e6038bd8e3a72b4ab2c697.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicwBGHREZX84QSXOMia3YNf6wCkJNyaO3vqibicwe5vG0kJ2hIf6ZggUP7B0wkX2YUGAqkmjicpgg0SuVCfQjv4oCnVXv8zMbGcGPUE/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e75f561393c41c7475e2c258478b344cae1bdaf20e6b7e20a08f872a0ae67e12.jpg "")  
 1. 租户项目配置了 Dataflow，并且此磁盘属于其某个计算实例。Dataflow是一个谷歌云服务，提供统一的大规模流和批量数据处理。  
   
 1. 初始化时，Dataflow 管道访问一个存储桶，下载 JAR 文件，并在执行时将它们用作依赖项。  
@@ -137,11 +137,11 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
  显示，Dataflow 管道由另一个服务账户执行：apigee-analytics@TENANT-PROJECT.iam.gserviceaccount.com  
 ：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicyI9lvRkucZXvOVPjia52fQ22os2G7kEnQiareqv8KZSibibnry48W6nShy5J1n0vfGkAR1AicD2IWUkh2CiaDJR0HGQOiaLoYH08euEM/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/19321519c8465c120eebc66220a518dbcbe3367eaf0eaaa7e90ad6124dc05d0a.jpg "")  
   
 这个账户可能拥有一些跨租户权限。同一个文件还有以下配置值：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYiczvjC44UF9k3aaSeaye3W3m1Gmch61Bib3xTSUrhGjhr5rzQAiamNhpS6eXF7Yh95ksxZAKAuoQA19G6OVTgGuKiaE2ABYPGlR1Qw/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/eefd6f0c63d71886be362bb14daf17004e48e3c6fd150ce26c2ea7f225106cef.jpg "")  
   
 其中指定的元数据存储桶的名称没有任何随机后缀，暗示它可能包含跨租户的元数据。  
 ## Dataflow 的权限  
@@ -153,29 +153,29 @@ Apigee 服务账户拥有对存储 Dataflow 管道执行的 JAR 文件的存储�
   
 修补 JAR 文件后，我们可以使用 Apigee 服务账户覆盖存储桶中现有的文件：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicwOnvjSEibDa7tiaASMOdZWlVURmM8Yvkd0icS12icQEsibOvbPWcohicL2IuKbeKuPGNYYlHJmooib5Zeu4289tB8HEjSJsq6ibayw2ZY/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0cce2761e23fd80d5698aa56621fef602c6a46e54d1193e3281b60b1bd207cdb.jpg "")  
 ## 影响  
   
 令牌可以访问跨租户的元数据存储桶，在存储桶的 tenantToTenantGroup  
  文件夹下的缓存目录中，许多不相关的 GCP 项目名称 + Apigee 环境名称，被分组在一起：  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/PkfClzhSYicxwzL3KeEYoRdprIicxdd08rTW1pHmjqq8mNRVnn6wVIDZgcM4EKVhvr5pfVeoxYQlc04WRR0M6jM0FCIVthDZwT4KvNvONdgrY/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1ed7a8e9abcfa228e387bef9c6bb3adca260fbb648d6ec08c425590a856c5773.jpg "")  
   
 在 customFields  
  文件夹下，所有不同 Apigee 租户的所有自定义分析字段都是可访问的。这是其中一个租户的自定义分析字段示例：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicxDZmsdHrTLsnvrJEMo7xuHGtcU2QCqm6M9E2iaU7pb50PklwXsNvQUCKCIFME4G2ZiceDYb5oZCYBDqmFxRgByUrpo5XMX0zM5w/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/92a77643d84252988e058ce05f8e6dbae5401c6f6e9c1478b44f60143f62a730.jpg "")  
   
 存储桶也可以使用 Dataflow 服务账户访问。彻底检查后，**这些存储桶包含了所有 Apigee 租户的每个请求的分析数据。**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicwhcxU1ujIOTGbyR2EfOjLeNnKQovXoLB197CYpKhLg3V9KLmn5rwsj4sucFFLtTFKxK6dgaZoRRCicI9QtvKic0RUxGHvE4Z1Co/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d6e7342e6f3075f003d9f02f2b6b2c2ee867aca1f0c49bcfdc31ab0c42d51331.jpg "")  
   
 访问令牌是攻击者可能从这些日志中提取的最严重的信息。攻击者可能已经将它们窃取出来，并用它们来验证身份，并以任何 Apigee 租户的任何最终用户的身份发出请求。  
 ## 结论  
   
 完整的攻击路径如下：  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/PkfClzhSYicwzLSccYPebfoX1MPF7OQbaaAibFoArpLRPGmzAX67pmPYCbfGmtzBfogyr33XvVvQvWa6U4s4G7TiaZQOTRkOVxbJmJCZkr4Kzk/640?wx_fmt=other&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9d8fea5af52d4f86c403acf1f422a837c3f226243bcf397a04e702900e523b66.jpg "")  
 1. 攻击者将 Apigee 指向 GKE 元数据端点，获取其自身租户项目中消息处理器的服务账户令牌。  
   
 1. 攻击者利用 Apigee 服务账户的权限转储租户项目中的磁盘，发现了 Dataflow 暂存桶的名称。  

@@ -42,7 +42,7 @@ schema_version: "1"
 
 Becky Bracken  代码卫士   2023-04-06 17:10  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -63,7 +63,7 @@ QNAP 公司在安全公告中指出，“如遭利用，该漏洞可导致远程
 虽然这些漏洞被评级为“低危”级别，且目前研究人员未发现遭在野利用的迹象，但快速打补丁很重要，因为 QNAP 用户仍然是网络犯罪分子眼中的香饽饽。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQKjGAntH92EUgeNoMVYKoyPkgsQxcvNdmvibNXvVqS1GYPQolibXicD2zUrzhR5lGjKC7rg0iaqXbn3g/640?wx_fmt=gif "")  
+![](../../.resource/remote/c041a4043491a14b3d352ce81aed54ed1ac13156e90c02cd039e5a511bb9d41a.gif "")  
   
 **QNAP 为何是攻击者的宠儿？**  
   
@@ -83,10 +83,10 @@ Parkin 解释称，“据称，有时在某个目标中发现一个漏洞就会�
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQZeSribxs2yU1w56EMvgX9cDBCiabniazxdxtQ25cBCAd5vBJIM2sOv1khjzwwViaT0pS74U6piaiauiaGA/640?wx_fmt=png "")  
+![](../../.resource/remote/66b1ac947994df6ffca93aa0695c4d5878660931663fdc6f9bb6359a33c59e8f.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMTBzmfDJA6rWkgzD5KIKNibpR0szmPaeuu4BibnJiaQzxBpaRMwb8icKTeZVEuWREJwacZm3wElt7vOtQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/7ac0e4dd5ecf5ae15d5f5eede1491e723925c4ff6a4ed491da1c31ac64c5b113.jpg "")  
   
 ****  
 代码卫士试用地址：  
@@ -141,15 +141,15 @@ https://www.darkreading.com/vulnerabilities-threats/qnap-zero-days-80k-devices-v
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

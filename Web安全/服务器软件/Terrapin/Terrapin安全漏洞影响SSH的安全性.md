@@ -48,7 +48,7 @@ SSH是提供网络服务的安全访问的互联网标准，主要用于远程�
   
 Terrapin是一种针对SSH协议的前缀截断攻击。具体来说，攻击者可以通过调整握手阶段的序列号来移除客户端或服务器发送任意数量的消息，而不引起服务器或客户端的注意。漏洞CVE编号为CVE-2023-48795，CVSS评分5.9分。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2ibRKxQTO3SfnK2DvsNCt1bFlBFsXib4l0hhVbCTWIsq07IpXEZWrVp5wzL8cUYa61zOXGPqd6cAprw/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/5784e241fc6b84fdf19173eec163597c554d385ad3eb46605011a8ba60c02717.png "")  
   
 图 Terrapin攻击流程  
   
@@ -76,7 +76,7 @@ https://terrapin-attack.com/
   
 “投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
   
 
 

@@ -55,7 +55,7 @@ schema_version: "1"
   
 WSO2 API Manager是一套API生命周期管理解决方案，WSO2 Identity Server是一款身份认证服务器，WSO2 API Control Plane是一个控制面板。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SX3cS10b2cf8361nD7jcY7EATLvkLyzRdBDvAibvJ9EWSjUKRFhrcoJwsELnfmLXBRt3zDwu8T85yA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0af3aa59ec492fb5eb998c00fc9b643f355c574c01d50cfb71c24afd79c1f1bf.png "")  
   
 **0x03 漏洞详情**  
 ###   

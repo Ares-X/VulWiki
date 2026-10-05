@@ -162,41 +162,41 @@ schema_version: "1"
 
 2、打开 cobaltstrike，设置一个监听 http 或 https 的都可以 https 的相对稳定，这里使用 http
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFt80YheicItqjcibQECsPS03xOianbaZUpgmjk6OEAK0oXf67Lo3sM7icj6g/640?wx_fmt=png)
+![图片](../../.resource/remote/b286d2cde8804b389fe06948791ea2390227d210fd339df1b9d2db76243af83f.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtqD6wribHTEWicAUKUshJ69QibUf7IBoaW7yJnyBfqKTnxmn0icStFlrQiaQ/640?wx_fmt=png)
+![图片](../../.resource/remote/e40cb835a7b26cf7e7b221c97bf2de948a94385071a82e685f5b3732124776eb.png)
 
 3、使用 cs 生成 payload，监听器选择上一步生成的，输出选择 C，然后勾选上 X64 payload。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtdmQtpwbJc0he3N0W3QVXKTe6ZF1oHbAicCoxldaK5buLLBiaiaeq5cftQ/640?wx_fmt=png)
+![图片](../../.resource/remote/52f67767643dce1a1326316f060847d1b3801560739cb34bdbe490b021581246.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtvXy3O75EDThhmoHHv2O2lWYBYj98AH1cEnueXqcBuMWOUTlkbkGwEA/640?wx_fmt=png)
+![图片](../../.resource/remote/40a069aee6ab5ed579498cc93f2da449a53e6730e1d4e04916a2d9bb7dc82418.png)
 
 4、打开生成的 payload 取出 shellcode 部分 使用全局替换功能将 “\” 为改为 “,0”。 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtXKAVk9wzzn8tRH4Ca1xv00RgEqsRfDLPBTGFibLSNO5VZeQbFnrNLqg/640?wx_fmt=png)
+![图片](../../.resource/remote/03b1e0a4897c002f7741ef28ce220e9b61a33508e90fa32c599bca425d16c6dd.png)
 
 5、将替换好的 shellcode 拿出来放入到 chrome.html 中的 shellcode 中
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtw7UMySFIoJl6THiaDtqLExU1wxy6odsnhlg0UhpvLEAlNZQueRfic8rg/640?wx_fmt=png)
+![图片](../../.resource/remote/0af13418e1883021eba3c6da5d8c61aaf1e088aaecfc0c42d4445a0437c9a986.png)
 
 6、在桌面 Google 快捷方式中右键属性在 “目标” 处加上 --no-sandbox 参数关闭沙箱
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtcAH9SGg7XtLGyDYPKSCIKN6OEN4N4mym9ica1sictlgcalKTNh1X1NAw/640?wx_fmt=png)
+![图片](../../.resource/remote/6e02b27169295147becfe0bc73602e7de025e98d078e6f20978608848a33f4e5.png)
 
 7、在 chrome 中打开，chrome.html 文件，可以看到 cs 成功上线。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtDXxdS1IUicWljtGvAeAYjWAqnQRGGhCc3ZibgluUOV2yqqN0G7ogmGGw/640?wx_fmt=png)
+![图片](../../.resource/remote/7fc7b0684654edd79a403ca1bdc2c46c18312e229ed1a0334356fde11e85542c.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtN85Ivn420zIcbHhDs0bahQhiav33AMTLNL6OyZ1rqGIy1TicssQIURkA/640?wx_fmt=png)
+![图片](../../.resource/remote/0fd6c14c44d5653d543595abe73466a3d1dc5989f4d833b54a447d893206ffd8.png)
 
 成功上线
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtXuLnEicEPJlapxH6ic0x6XickDHMicZQmiao4FxYvnGw8yS5d8w2QUUJHNw/640?wx_fmt=png)
+![图片](../../.resource/remote/ef62ba7e29c61495e3435cae69255cd52f95abd92dd5efc93587c64bd1df6ba9.png)
 
 视频演示
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/gqALwUU9cicwic9L79bylTHllIvbgqXTFtdx4veDCAvgPSxYiaNusggyQiaSjibCUCVzOIBjzD72glJWk17CDmmicLAg/640?wx_fmt=gif)
+![图片](../../.resource/remote/d81c62c7e9f02b04893174b1f3983d82644b8311f590a7c4a4ceb2f10ea2419c.gif)
 
 8、临时修复方案：
 
@@ -429,35 +429,35 @@ Windows 版微信: 小于等于 3.2.1.141 版本
 
 1、搭建 cs，设置一个 http 或 https 的监听器
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFt1dScg2ov2eb3Gu4ooic8JxSZTh0koGpoRQWg1SIOLZWcYtM3MgDpv3g/640?wx_fmt=png)
+![图片](../../.resource/remote/ebfc2bf195a53afc677eb158dc1affd448700dc35b06b2265e458691b12c1819.png)
 
 2、生成 payload，选择上一步的监听器，输出选择 C#，我这里就不勾选 x64 了，点击生成，将生成的文件保存到桌面。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtTlx7aoiboYVWw2ALa97EMwhwOS8wQO3uuS86AaPfXoubWXicjYAxpNfw/640?wx_fmt=png)
+![图片](../../.resource/remote/e7663351a59222e2dda30438ac52b510d0b0c46dc28cf5b4647cfbb464459f64.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtpSW79UY0jCMDzGjywhypwJ6CPFesXXokiau1J7eEric9e8Fq7DUv8ZDQ/640?wx_fmt=png)
+![图片](../../.resource/remote/64a96210e66b3cabd214b1af39f39200f452e240fcc988177679a719d46f52ad.png)
 
 3、使用两个脚本，修改 color.js 中的 shellcode 为 cs 生成的 shellcode
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFt9UibbicgnLLOn4icafHcUfGcZxY5ThqDeyaEe6znwYhiciaH65btqKM0AIw/640?wx_fmt=png)
+![图片](../../.resource/remote/876007893adb99a4c56d2b9c80ccbf72cce35695dc8f202fdfbb104a1dc768cf.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtneFBXquLNmxWgicQXzibJH8Rk2Bb9vBHnU2SOicdkKld71FnL7oZC1Ovg/640?wx_fmt=png)
+![图片](../../.resource/remote/3e274f3272fe1719e7081df47b16b40a9dc1d7b14239e20c970a67bd50512e45.png)
 
 4、然后搭建一个 http 服务器可以使用 python 开启也可以直接使用 apache，然后发送到微信上点击，cs 上线成功
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtI75twP2YY19TcHhKbKibAF2ohNXBvETWvF8YVYGDycYvktrDtDIZnJQ/640?wx_fmt=png)
+![图片](../../.resource/remote/454707469fececa1300aac5d5ae2276f8e941c7c9bcf27434603e34dec015fed.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtOianwrRLa1oCeZq9eTyD3hYz522m8NPd9c9o0JTmzGic2S8HFcJAKaiag/640?wx_fmt=png)
+![图片](../../.resource/remote/cb5530fbcb6afd55f96faa30ac8ed06a624722a8881531d0aed44ed761582e23.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtCSicazqTxlgz0RO7oqKEVyqib7JfovWGVaFAEfPcPPvTYgTO96cu3mBQ/640?wx_fmt=png)
+![图片](../../.resource/remote/356015654a1d236a53404e0a4dcc0fb18434b359490d086509542f5f2d469b27.png)
 
 查看 cs 成功上线
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFt1ermQfPWNeIpn7Ddj1aIjlLHppKwzGPEibOtiaX9o5U7Aln86D2yBQTA/640?wx_fmt=png)
+![图片](../../.resource/remote/83ac1ca562bb8cc087658ebe7921dfe4fd4ba37a9afef1435a5e2504cefadf66.png)
 
 5、查看复现 wx 版本（最新版微信使用默认浏览器打开，无法利用）
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtSHhwmk2wJl4987REhsQwXAhQtBxsjiakKEDQvEUVqM6D858IBZL0X3A/640?wx_fmt=png)
+![图片](../../.resource/remote/77d19b7f2b591066c54fc016e21d555e489d38ac0e85d6422eaaf6048f86c718.png)
 
 6、修复建议：
 
@@ -467,7 +467,7 @@ Windows 版微信: 小于等于 3.2.1.141 版本
 
 * * *
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/LTShIAW8RQXrLs0VMuiaXo1LQ48jVKnNAAXbPntkzRVbqUNb8pPAzAjJ0LDYQfIkpQQIIW6u0PTqlFVyianYAX4Q/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/300063c606237433727fb583c04c78f23050fa169bf0b99048657d7862b611aa.jpg)
 
 ---
 

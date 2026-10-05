@@ -41,7 +41,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8sD1ssAsORFVbleMVzjo0O7sFtWDRZ3F7KSfSYqRfTk4ajeUrt1aMF9devKgOZ5C4s7AsFvibXKKWw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/201bd6328fc83146f8c118d33ebe1b2f521dcd8314da4188e6ce7ff3e59b4eb7.png "")  
   
 已在 PHP 的 libxml 流中发现了一个严重漏洞，该漏洞可能会影响依赖 DOM 或 SimpleXML 扩展进行 HTTP 请求的 Web 应用程序。  
   
@@ -122,7 +122,7 @@ https://cybersecuritynews.com/critical-php-vulnerability-let-hackers-bypass-the-
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

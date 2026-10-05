@@ -48,7 +48,7 @@ schema_version: "1"
   
 XStream是一个用于在Java对象和XML之间相互转换的工具，它能够将Java对象序列化为XML或JSON格式，也可以将XML或JSON格式的数据反序列化为Java对象，从而简化了数据的存储、传输和恢复。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWpsmBToJ1PmvpWYLUqE5SKR3Ce50wCJImsymoz7GSVlS2psLAvUzlIiaG7QS43dNib3ccr7RUyicfpQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0d94e48ea64bd50b5899e36cf6558734c6c0a114ffacd8c10ae4908c99236ab9.png "")  
   
 **0x03 漏洞详情**  
 ###   

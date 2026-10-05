@@ -39,7 +39,7 @@ schema_version: "1"
 
 <meta name="referrer" content="no-referrer"/>
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [bbs.ichunqiu.com](https://bbs.ichunqiu.com/thread-19033-1-1.html) ![](https://bbs.ichunqiu.com/template/win8mi_15th_design/src/noLogin.jpg)icq27160d12  我是小白，这是我写的第一篇文章，希望各位大牛多多指点。  
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [bbs.ichunqiu.com](https://bbs.ichunqiu.com/thread-19033-1-1.html) ![](../../.resource/remote/8f69400e5e106927ab8608f6c03a3805e215f540ccbe98fce67f15ca579d769b.jpg)icq27160d12  我是小白，这是我写的第一篇文章，希望各位大牛多多指点。  
 之前遇到一个 php 站，翻看一遍没什么可用的，就尝试下 robots.txt。 
 
 **1.png** _(76.34 KB, 下载次数: 46)_
@@ -290,7 +290,7 @@ base64_decode(substr($string, $key_length));
 后面附上大牛视频：[http://bbs.ichunqiu.com/forum.ph ... mp;highlight=phpcms](http://bbs.ichunqiu.com/forum.php?mod=viewthread&tid=11898&highlight=phpcms)  
   
   
- ![](https://bbs.ichunqiu.com/uc_server/avatar.php?uid=50014&size=middle) 小伙子有潜力哦，可以考虑加入作家团，不过这篇文章水准还不够，可以继续加油写一篇更好的，先加我 QQ：286894635，我们聊聊吧  厉害厉害 收下了  厉害了，膜拜！  为毛我 183 行提示错误
+ **原图暂未找回**（原引用：` ![](https://bbs.ichunqiu.com/uc_server/avatar.php?uid=50014&size=middle) `） 小伙子有潜力哦，可以考虑加入作家团，不过这篇文章水准还不够，可以继续加油写一篇更好的，先加我 QQ：286894635，我们聊聊吧  厉害厉害 收下了  厉害了，膜拜！  为毛我 183 行提示错误
 
 > [Orvilla 发表于 2017-5-9 15:21](https://bbs.ichunqiu.com/forum.php?mod=redirect&goto=findpost&pid=320026&ptid=19033)  
 > 为毛我 183 行提示错误

@@ -42,7 +42,7 @@ schema_version: "1"
 WordPress插件Really Simple Security（原名Really Simple SSL）中发现了一个严重的认证绕过漏洞，若被成功利用，攻击者可能远程获得对受影响网站的完整管理权限。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb5kUfuarVeLria5jLPtjYtTu44tiasibxlr7qR6BEvFhibRGQ7iaelicqq2ACd1JQoCTLA0pR25Hj6IyW6w/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b684dc6b0ff17f73fbf1b4f6778a314c868a468cc0c671aba14f338818cc64b3.jpg "")  
   
   
 该漏洞被标记为CVE-2024-10924（CVSS评分：9.8），影响插件的免费和付费版本，涉及超过400万WordPress网站。Wordfence安全研究员István Márton警告称：“这个漏洞可以被编写成脚本，转化为针对WordPress网站的大规模自动化攻击。”  
@@ -54,7 +54,7 @@ WordPress插件Really Simple Security（原名Really Simple SSL）中发现了�
 Wordfence指出，这个认证绕过漏洞存在于9.0.0至9.1.1.1版本中，由于“check_login_and_get_user”函数中的错误处理不当，允许未经认证的攻击者在启用双因素认证时，登录为任意用户，包括管理员。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb5kUfuarVeLria5jLPtjYtTuSUqasMCu7ams9Akar6yevUDtqXbWTweteqIOKDSK3dpeCqs6YCgwibQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/4355521e2731a4ea03a8adb4414c7da17d3d46ecbe297f337056901343a319f7.jpg "")  
   
   
 Márton解释说：“不幸的是，增加双因素认证的一个特性实现不安全，使得未经认证的攻击者在双因素认证启用时，只需一个简单的请求就能访问任何用户账户，包括管理员账户。”  
@@ -91,9 +91,9 @@ https://thehackernews.com/2024/11/urgent-critical-wordpress-plugin.html
   
 安全KER致力于搭建国内安全人才学习、工具、淘金、资讯一体化开放平台，推动数字安全社区文化的普及推广与人才生态的链接融合。目前，安全KER已整合全国数千位白帽资源，联合南京、北京、广州、深圳、长沙、上海、郑州等十余座城市，与ISC、XCon、看雪SDC、Hacking Group等数个中大型品牌达成合作。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb5kUfuarVeLria5jLPtjYtTutj3FiccoK99NiaHe7A1F3Xz03k1SO0qVxJBBdnSRjdBLR9No7PoSmk5w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d6caf2b9d07446e5db2fc0c72b39245bd35ef1117cbe12d413cf0c1f3677e90a.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb5kUfuarVeLria5jLPtjYtTuicRJ1gXxBZEAks5B8ia4pMkKCFvlk7pGqVjEZzjfkjoG1NIU1ZdzictSw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/31600ffd2a8b7de6a5cfe92a17d234f4fe8bb143ca88486bc2e1ef8dac3fea63.png "")  
   
 **注册安全KER社区**  
   

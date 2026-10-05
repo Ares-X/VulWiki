@@ -68,7 +68,7 @@ CNVD编号:
   
 用友U9  
   
-![用友U9 DynamaticExport.aspx接口存在任意文件读取漏洞](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHIgMvP0EWnGYrPeaK2keAsNFw9ibueGLmrAN2eqmry7QO0LSq6qIApVg/640?wx_fmt=png&from=appmsg "null")  
+![用友U9 DynamaticExport.aspx接口存在任意文件读取漏洞](../../.resource/remote/432ab888a718def3ac33603aca086e5a6bc9c147a1d4c9e2ccf5607ea59c1152.png "null")  
   
 用友U9 DynamaticExport.aspx接口存在任意文件读取漏洞  
 ### 4.fofa查询语句  
@@ -76,7 +76,7 @@ CNVD编号:
 body="logo-u9.png"  
 ### 5.漏洞复现  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHpeNibrPPnyILJicTyXibEibg0TtWQ8fbNdrKy0iaMIbDknJJ2R0BYM6P5Uw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/70aed80fdc85b7838148d9f535c90a96d50aa738318d24d35db013c84d4c188e.jpg "null")  
   
 ### 6.POC&EXP  
   
@@ -86,23 +86,23 @@ body="logo-u9.png"
 3: 更新其他实用网络安全工具项目。  
 4: 免费指纹识别，持续更新指纹库。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHRdicjDByXfvTg9eWN0ZZjEwncHrAXx9SvEe3bGY2xUhxKpmqfrQWceQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/ec99fffee50dba8e25bf204b83a7efab14528d3ddab458c1761025fc27f3dd5d.jpg "null")  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHtF5YYpolBrA5Iib0KrSfZCGfwFMryZEkxeaakMOfh0liaVMsSt30UF1g/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/5d6a45f25899215706838d7d66ec7f80816d533f1878d3f33dd73027bef1b971.jpg "null")  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHH7N5TtVzP8nnW4WpAJVDaxibNicwEGyN0A9yg7OnUe9OSlTpwnWKCYOw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/31d277a6fa41aea2b7fd0d593be57026d58b7876987c18d87a59ee8ba08134b9.jpg "null")  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHibpLjLcVGObNwQLILqiapFgRZhwhrkTGBQr6JHQMEL8icdN7icOB80GPiaQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/65011a35c2836fc5571df8cee7426ebc5a17f6ba9ca67b14d3c7d9f48aadbf2f.jpg "null")  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZTCxJ0eHuW2q7SMyshDpjHLCRyUhibIdibK8ETXaictZHU7v9sOFSE3I0Ou7ylButZnSQEW5LZfcnEw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
   
 ### 7.整改意见  
   

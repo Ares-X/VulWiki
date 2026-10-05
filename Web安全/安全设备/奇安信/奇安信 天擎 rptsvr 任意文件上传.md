@@ -55,7 +55,7 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Ijbunc9p8Mu-Gk-pChGKDA)
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib531eRPH00LFvvFlsMrJ12QXqbKQicCd22lL1y5jQakibicNKJRSNYrf9RA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/b6f5c02d26656705cba8a2f735326eef2beaa3d8ec53c08fab737dc86dc4e16b.png)
 
 **请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，作者不为此承担任何责任。工具来自网络，安全性自测，如有侵权请联系删除。本次测试仅供学习交流使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
@@ -63,7 +63,7 @@ source_status: "recorded"
 
 **漏洞概述**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib5PIjXTEAQsdRsjy7ic0CfiaE3qxMyM3XMENBGyGYTzOhIsFMicCNu3hicbw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/8ebd469c5c0a92a0fb13a3776c263de514622027e0199c2ea4f8be5eaa98d47c.png)
 
 奇安信 天擎管理中心 <=V6.7.0.4130 版本的 rptsvr 接口存在任意文件上传漏洞，可上传恶意至服务器，执行脚本文件。
 
@@ -71,7 +71,7 @@ source_status: "recorded"
 
 **空间搜索语法**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib5PIjXTEAQsdRsjy7ic0CfiaE3qxMyM3XMENBGyGYTzOhIsFMicCNu3hicbw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/8ebd469c5c0a92a0fb13a3776c263de514622027e0199c2ea4f8be5eaa98d47c.png)
 
 FoFa
 
@@ -81,11 +81,11 @@ banner="QiAnXin web server" || banner="360 web server"  || body="appid\":\"skyla
 
 **利用过程**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib5PIjXTEAQsdRsjy7ic0CfiaE3qxMyM3XMENBGyGYTzOhIsFMicCNu3hicbw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/8ebd469c5c0a92a0fb13a3776c263de514622027e0199c2ea4f8be5eaa98d47c.png)
 
 登录页面如下
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rEofrXODgG3Qsa2CKEqMLwDRvUQpBvL7Q4YicmQEsXIflk3vP48DkOnauQU2rtNQYic4x6oy13Vuf6g/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/fb6aab9819e26dc7af630dcf0951b0684da0871ce7db24c67c38264f4d7d6c21.png)
 
 上传数据包如下：
 
@@ -113,7 +113,7 @@ skylar_report
 
 ```
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rEofrXODgG3Qsa2CKEqMLwDlpysic0qejykxs7g5J7kgniaf0vdLeyYEEm1yXAXlSwroiaWhVbwQtWHg/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/a47f58ac4aece8f987ef5c8656be048b64066b5ac5e6c4ef7b5383fcba07fd50.png)
 
 访问上传文件路径如下：  
 
@@ -122,15 +122,15 @@ http://xxxx/application/api/controllers/TController.php
 
 ```
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rEofrXODgG3Qsa2CKEqMLwD6yLTZFJHjeT2baIMiau7ebAib8lCQxN8FXZBTAEIj9dChFfiaQOL4ICSw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/f816473d1ca1e4e03f711acad5b841ef129b7d4cf6fb22d4ed6d0576b8f5ce07.png)
 
 **03**
 
 **nuclei poc**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib5PIjXTEAQsdRsjy7ic0CfiaE3qxMyM3XMENBGyGYTzOhIsFMicCNu3hicbw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/8ebd469c5c0a92a0fb13a3776c263de514622027e0199c2ea4f8be5eaa98d47c.png)
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rEofrXODgG3Qsa2CKEqMLwDwrg29Sb2zNTI7rDjU4ExDEBxhsWHDqxR4kYRrpa9Pw4Z8wGIu3QBiaQ/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/d9572330e37ce2c2ea57e9422f0eaa70f154d686eb6f9907f584e54c9ee3b7dd.png)
 
 获取脚本关注本公众号后发送：qaxtq1
 
@@ -138,9 +138,9 @@ http://xxxx/application/api/controllers/TController.php
 
 **星球简介**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib5PIjXTEAQsdRsjy7ic0CfiaE3qxMyM3XMENBGyGYTzOhIsFMicCNu3hicbw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/8ebd469c5c0a92a0fb13a3776c263de514622027e0199c2ea4f8be5eaa98d47c.png)
 
-**考虑到团队运营成本和公众号****福利发放****，创建知识星球欢迎各位师傅打赏💰****后期会用打赏的资金去****做福利****。星球的性价比真的比较可观，绝对不会因为某些身外之物水文章，安全圈很小，主要是和师傅们****交个朋友****。还请各位师傅监督团队后边的表现，将心比心![图片](https://res.wx.qq.com/t/wx_fed/we-emoji/res/v1.3.10/assets/Expression/Expression_67@2x.png)！**
+**考虑到团队运营成本和公众号****福利发放****，创建知识星球欢迎各位师傅打赏💰****后期会用打赏的资金去****做福利****。星球的性价比真的比较可观，绝对不会因为某些身外之物水文章，安全圈很小，主要是和师傅们****交个朋友****。还请各位师傅监督团队后边的表现，将心比心![图片](../../.resource/remote/24ccf5893e67f64ffdd22b1cc01f5563fd717adea138acb7b7c7ec6e5bf29538.png)！**
 
 **进入星球你能直接收获到：**
 
@@ -161,11 +161,11 @@ http://xxxx/application/api/controllers/TController.php
 
 欢迎各位师傅加入哦~～
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rGG0kwDuoVbFd1QRfqqNx8oaaHZE3zicqYZYeiaHxMSqj8jFEcbhZDsOxEfeZvcviaXLpMFNLibAcaLGg/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/17be16bd3a30cb07ebb9cf29bbf41783d953f4b9f603f713015871f31c1a5158.png)
 
 进入星球直接能学习到这些漏洞：
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rGG0kwDuoVbFd1QRfqqNx8oJEl0gmuMxDZpRic42FYdBPJcMHfOnnDVYpdxcRqCvCfI2JViaEicJJM9Q/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/aaf60189c4c849b1159705aebe2e25de4d2e4c39feee8fd45902ba24520d334c.png)
 
 ✓
 

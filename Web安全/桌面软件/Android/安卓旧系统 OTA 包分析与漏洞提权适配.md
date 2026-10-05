@@ -83,13 +83,13 @@ schema_version: "1"
 命令即可查看符号表，但分析发现碰到的是一个没有 ELF 头的纯二进制内核代码，这个方法不能使用。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8G1VoewWmfN1y7Ka2ibhgAwlkWrLuemV8a3xQYYiaxfZYG4a3NZmymkM9KA5mg2miaBAQ68cFtJZHmcg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/05d0b35ede94b5c5c0aa778abf1568d2d52c503564b4fb81778acf7b3f1b64b7.png "")  
   
   
 经过一番分析搜索，使用vmlinux-to-elf项目的kallsyms_find.py模块，可以从 47F7 文件中提取生成内核符号表。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8G1VoewWmfN1y7Ka2ibhgAwlxAln60ukMrzhDhCxAJk1ePW3QV2SLLicaBibvoA4ksHNMUujE0U5bIPA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d963cdee6d6ac253d3428fc2260732cf338a2fa02ac61560ca251835407cc0fd.png "")  
   
   
 有了内核符号表后，可以直接把 47F7 拖进 IDA，选择 arm 小端序架构后将 ROM start address 和 Loading address 设置为 0xc0008000 加载，再撰写执行 IDAPython 脚本来给内核二进制文件恢复符号。  
@@ -104,20 +104,20 @@ ksyms = open(r"D:\47F7.kallsyms")for line in ksyms:    addr = int(line[0:8],16) 
 执行完后便可看到已经有函数符号了，现在就能查找相关 CVE 提取漏洞函数来进行适配了。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8G1VoewWmfN1y7Ka2ibhgAwlVuichx2JINENHmQUySvsuxFiceoDITKBV5d8J4Kxhx5MZCib8qF5SQNcw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2c4c0db713082e26aa822661e74b4c109a7e079b064f4a0ce3f7f53bf29c355c.png "")  
   
   
 其实整个过程还可以更简单，vmlinux-to-elf项目包含了解压 zImage、提取内核符号表和封装为 ELF 文件的功能，直接执行vmlinux-to-elf 47F7 kernel.ELF  
 ，便可得到一个拥有符号可拖进 IDA 直接进行分析的内核文件。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8G1VoewWmfN1y7Ka2ibhgAwl6EDN55c5V8BTMpiaE63dgicXEfM6SwOrqUYjDwIaGUfLR2o8VaAJqfZQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0c5927156c37be872994b47a7ccd880ed5ce9ede24b1eba835374bc248f424d8.png "")  
   
   
 以及上面的 47F7 是我们手动用 binwalk 解包出来的，有些 OTA 包里面可能没有 boot.img 文件，而是有一个 kernel 文件，binwalk 查看是由内核引导头和压缩的 Linux 文件 vmlinux 组成，这时候直接用 vmlinux-to-elf 来生成内核 ELF 文件，就会用到其解压 zImage 模块功能，经测试是要比一些extract-vmlinux脚本支持适配得更广泛。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8G1VoewWmfN1y7Ka2ibhgAwlL6qMb1Y71EoTM2ichHwNDibB7UOFXqq0wBb3jsfoCrGF8uwYicpMWpiaxQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/87d5898e2cdcc7cd78003ecfaeccc6de9c23020dac0db520ad06fe62deaba8da.png "")  
   
   
 翻一下vmlinux-to-elf项目代码会发现，这个工具根据 Linux 内核 kallsyms 系统演变的不同版本进行了适配，通过特征搜索定位，模拟内核解压算法过程，最后构建符号表，实现从内核二进制文件中直接解析出符号表。  
@@ -166,7 +166,7 @@ CVE-2017-8890
 ###   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8G1VoewWmfN1y7Ka2ibhgAwlEAibU8SD3ribWXgDxRr1Khyibd4kRNbx6iaefkGJu8AABFacxKxHqGqj2A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/99e72e7bfc18aa30e65aad7de656e35dcfcd669b7fa11bb6ed79922bc2b6d156.png "")  
   
   
 看雪ID：  
@@ -202,23 +202,23 @@ https://bbs.kanxue.com/user-home-802108.htm
 [驱动挂钩所有内核导出函数来进行驱动逻辑分析](https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458595727&idx=1&sn=9f3708ee6e109504785a4827d2de931b&scene=21#wechat_redirect)  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/3bda3987c64417397ab972d267f862449372e82b23178eaa23dde40354644cb5.webp "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpvJW9icibkZBj9PNBzyQ4d4JFoAKxdnPqHWpMPQfNysVmcL1dtRqU7VyQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpvJW9icibkZBj9PNBzyQ4d4JFoAKxdnPqHWpMPQfNysVmcL1dtRqU7VyQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpvJW9icibkZBj9PNBzyQ4d4JFoAKxdnPqHWpMPQfNysVmcL1dtRqU7VyQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球在看**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Hice1nuesdoDZjYQzRMv9tpUHZDmkBpJ4khdIdVhiaSyOkxtAWuxJuTAs8aXISicVVUbxX09b1IWK0g/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/bc51e60a1ab9953f98cd0a2143c252c867072663f41e9d1e7cb32951a0a00487.gif "")  
   
 点击阅读原文查看更多  
   

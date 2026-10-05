@@ -102,7 +102,7 @@ replace 处理之后赋值给变量 \(tagname 。但是写入文件的时候并�
     通过查看页面源码即可获得 token
     
 
-![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS%20V5.7%20SP2%E5%90%8E%E5%8F%B0%E5%AD%98%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/token.png)
+**原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS%20V5.7%20SP2%E5%90%8E%E5%8F%B0%E5%AD%98%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/token.png) `）
 
 2. 然后访问
 
@@ -116,7 +116,7 @@ shell 地址
 http://127.0.0.1/include/taglib/secnote.lib.php
 ```
 
-![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS%20V5.7%20SP2%E5%90%8E%E5%8F%B0%E5%AD%98%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/1.png)
+**原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS%20V5.7%20SP2%E5%90%8E%E5%8F%B0%E5%AD%98%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/1.png) `）
 
 参考来源 [¶](#_5 "Permanent link")
 ------------------------------

@@ -64,7 +64,7 @@ previous_referenced_identifiers: ""
 
 原创 Yannis  云起无垠   2025-05-22 08:30  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/4vD467VsKgIyZ1VBWSEZ5D9CyVs2zCHdLWiaMbScsTP8jMicqnXH6icLycxZot7Q1CTPogdBQ0CduHPiaR62fe4I2g/640?wx_fmt=gif "")  
+![](../../.resource/remote/fc473a20bd28958850013c5ea8aed2f0aa34059903e0ad44a3df69d6e76572b1.gif "")  
   
 本文将详细介绍如何使用无垠智能模糊测试系统复现OpenSSL中的CVE-2022-3602漏洞。平台不仅简化了模糊测试流程，还通过AI赋能大幅提升了漏洞挖掘的效率和准确性，为企业构建自动化安全测试体系提供了强有力的支持。  
   
@@ -94,13 +94,13 @@ previous_referenced_identifiers: ""
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeBvy8fcwbiaMjf0VIPibKQDBMicn6UvMfPzD1k04UXOOJ2EFEgdRAErD4g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/12f50997a65b4c6da2058ec317a85786494de909dc2709a68bfb67a8fed928dd.png "")  
   
 - 漏洞触发点：在ossl_punycode_decode()中，首先会处理基本字符部分，然后进入主解码循环。漏洞的根本原因是内存移动memmove 操作导致的栈缓冲区溢出。  
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubejmxQmRXdU7FfJ1sdcYg2YFDddjbGlprM5LnENKAOAV3hosVJkjVJAA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dbbd10875e27c1758279f29c02f60aa05de22501a1d030395eb1377f0d3b0d11.png "")  
   
 触发原因是由于只检查了written_out > max_out，没有检查memmove操作不会超出缓冲区范围。当i很小而written_out很大时，移动的数据会超出pDecoded缓冲区的末尾，导致栈缓冲区溢出，写入到相邻的栈变量或返回地址。  
   
@@ -143,7 +143,7 @@ A：RCE漏洞常见于 Web应用程序的命令注入、反序列化漏洞、缓
   
 工程创建过程中，平台将自动完成OpenSSL编译构建、解析测试目标源码、生成函数列表、生成测试驱动，无需手动干预。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeib1sohrDic8ZeJlEl1icoQQHW5p9mxJwXIEpmxm1KZEJdf6uiaM3aF5h6A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a85c3c9df9d2d367702df628ad34c36e11283c1cd540338980141818166c36e4.png "")  
   
 2. 选择测试入口  
   
@@ -153,18 +153,18 @@ A：RCE漏洞常见于 Web应用程序的命令注入、反序列化漏洞、缓
 已经自动识别出目标函数，并且基于语法和语义分析，  
 自动生成了测试驱动！  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4vD467VsKgLAbkdYicbWd27WfUkOZrubeeI5KfKIE4UraRVr7LTcAGL9pDiaTRvjKyrOHpLXiacZAUHIkrhJkqViaQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/3cdef0a12fe7bc5a856562887175ca1da8dea21f28c125ebe047261fce7a3e2f.jpg "")  
   
   
 3. 驱动验证  
   
 在模糊测试前，进行驱动验证，需要试运行一下驱动的有效性，过滤掉那些编译错误、无效运行的低质量驱动，确保宝贵的机器资源和时间用在“刀刃”上。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4vD467VsKgLAbkdYicbWd27WfUkOZrubeR6odKu0bmhBuiaTV5XwS3yMvkpx1tgIs6Jks2WhAgWJR4ryPLia2kSTA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b0417dd9eccc2b9dda58c453f536ba1b1b2c6a436ed9bf74d65cd7da87482462.jpg "")  
   
 图 引擎自动生成  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4vD467VsKgLAbkdYicbWd27WfUkOZrubejgWIm7eeib49nXTwzQZoIg5LZia9eiaSliaKU6N9o6hwGHibI6qtRUc3CUw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/e55da0f1bfdb0e09272b1e7ead75532d2f021b0917f1065100ad01ed0cdcfcd1.jpg "")  
   
 图 AI生成测试驱动  
   
@@ -175,14 +175,14 @@ A：RCE漏洞常见于 Web应用程序的命令注入、反序列化漏洞、缓
 正常情况下，我们可以  
 一键对全部可测函数进行驱动验证、下发测试任务。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubebN9QGM1n3qXPh45vZ3YUaVIS4Beta90PxTjhulufUxuw43QFnnIgRA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0688efe049559c0961dabf562127280ae07e01542a95d1bd49b0443c89cf15f0.png "")  
   
   
 图 测试任务设置  
   
 测试过程中，系统实时监控测试进度和代码覆盖率，结合覆盖率反馈，自动生成测试用例、探索测试路径，以最大化漏洞触发概率。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeAAzEGHmk1hee6v1AK9orvFafSXkHjfTLBiaABibDiadzffSxYWgbkholw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/49cd8d207f8cef70dcb60f979f58444f87ae1bfa5e34bcc8e4bc1fbc72cec5d7.png "")  
   
   
   
@@ -192,7 +192,7 @@ A：RCE漏洞常见于 Web应用程序的命令注入、反序列化漏洞、缓
   
 测试结果：仅用2分钟，平台成功触发了CVE-2022-3602漏洞！  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeWH9wxhEicSLCdOFntwLMJyNW1icnbBicopvs1ic3BoD4V3yibYx0UGJ8OvA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6a280bffae7d5f71ab65b18a997b674e1fe792663c465defd61cda2aed879bd3.png "")  
   
 缺陷详情中，平台展现出精准的缺陷定位能力，并提供详细缺陷信息：  
 - 精确定位到crypto/punycode.c中缺陷触发位置  
@@ -209,7 +209,7 @@ A：RCE漏洞常见于 Web应用程序的命令注入、反序列化漏洞、缓
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeLljNjWlucrw7HPlr3IIQrXow9UiaBcHun9opsGS7ABKpseGo26j3tTQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/873afb0bfb89de9b78d7b0a44f5aa006f7364ee7da15a098891b88da500a4e15.png "")  
   
 6. 缺陷修复方案对比  
   
@@ -217,7 +217,7 @@ A：RCE漏洞常见于 Web应用程序的命令注入、反序列化漏洞、缓
   
 OpenSSL官方在3.0.7版本对漏洞CVE-2022-3602提交了补丁，修复方案如下：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrube3goSOt2mibXzPcO4bl8EnwtgnmXsfkUIFDCn7t3Cw1PNIGTrbhDwSGg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/50a6c6a9ed220b2b0289d9541839f218e2b509920debf106092378a677cafb0b.png "")  
   
 下面，我们来看看平台使用AI对缺陷的分析和修复方案：  
   
@@ -225,18 +225,18 @@ AI对缺陷触发原因的分析：
 漏洞成因分析和  
 理解正确！  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeeAJ7QNaIwxT35AhN8P49zroJQILgmBB6Ml93CbMyIjemeLuzFkN1mw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/60f96f96c2bea07c98d73d43095204d1914c1aeac61818d1008f865f0c947c1f.png "")  
   
 AI提出的修复方案：与OpenSSL 3.0.7官方补丁的实现  
 完全技术对齐！  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeNCFwzZXPWicibAQWicBOtSlcmqy20OdeZ5Utva7ls2jLyzia1FcMrEvpRA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0a148508ef0bea961283501f8e45a6616aea0898eb539c0ca9c53eb09fa715a2.png "")  
   
 7. 同时复现CVE-2022-3786漏洞  
   
 值得一提的是，此测试任务同时检出了CVE-2022-3786漏洞，该漏洞的触发场景是，攻击者恶意制作包含特定电子邮件地址的证书，以溢出包含"."的任意字节数，此缓冲区溢出漏洞可能导致服务崩溃。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/4vD467VsKgLAbkdYicbWd27WfUkOZrubeek4clpZhllL7x4cRl5qeNvCicpABO72AEUmvNaicFVVxQNoiaElZSOnlA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/873f688e736e2c51c2433b836db892c85e27b2132b61fe6c8c5f8b768a3ff049.png "")  
   
   
 **精准破局：两大痛点，智能解法**  
@@ -299,7 +299,7 @@ https://snyk.io/blog/breaking-down-openssl-vulnerability/
 四大主题构建内容分享生态。云起无垠作为联合发起方，欢迎广大安全专家的加入，共同探讨前沿安全技术，促进行业内的知识分享与合作。  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/D9wGKNiaQYpx7bvaHqVZibq0ogu5pckjQMepnZgmhgM01uFQsoFz5QDDE0iapRkuUumSGfk8Dz7mjnbvibwPk7jISg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/4cb39aa44b041774df37a3c0397fabf1baa424131388b288ea4838349d477604.gif "")  
   
   
 **更多阅读**  
@@ -317,7 +317,7 @@ https://snyk.io/blog/breaking-down-openssl-vulnerability/
   
 [](http://mp.weixin.qq.com/s?__biz=Mzg3Mjc3Mjg1Ng==&mid=2247484503&idx=1&sn=e01fdfb2eeb6f2a879e9c621fc7aef0d&chksm=ceeb61c0f99ce8d6c427d1c94e340bed048cd9ccda050d3a9a35cc456ea1abd5a30cbd1ad152&scene=21#wechat_redirect)  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/4vD467VsKgJvXxhxgI0uwSegpw30knZ4fxL8lMEsgcQVdu4O39iceakUhyYUjOdoVCOBlJ88xNGhpOKhVYibkgZA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/fe7038d3915fa1126c5954702b86d2fc49b4f63a120b958fac6447d10456285e.webp "")  
   
   
 

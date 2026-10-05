@@ -333,7 +333,7 @@ http://localhost:8080/adminPage/conf/runCmd?cmd=calc%26%26nginx
 
 如您有问题、建议、需求、合作、加群交流请后台留言或添加微信
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/3LFWic4c794DRbQdyzS3QZWaHQrmJEXdQJmlv4PxuQQpziaKhcyJznSqdP0mUWuSSpSRDX8Ujyx1yEL9G98Vy6sw/640?wx_fmt=jpeg)image.png
+![](../../.resource/remote/d4b4f0f2cdceb9d33813998cad46dafd467adc913269c25cdebed995f1e2e48e.jpg)image.png
 
 ### References
 

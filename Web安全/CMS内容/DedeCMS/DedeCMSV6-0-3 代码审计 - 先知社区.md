@@ -55,44 +55,44 @@ index_category: "Web安全/CMS内容"
 文件上传
 ----
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210909213046.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210909213046.png)
+[![](../../.resource/remote/2597a44b363ff1c20eb9e56695872e1d2908d2d663f3a1103c0556f0d738574d.png)](../../.resource/remote/2597a44b363ff1c20eb9e56695872e1d2908d2d663f3a1103c0556f0d738574d.png)
 
 可以上传 php 文件！
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210909213135.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210909213135.png)
+[![](../../.resource/remote/4f500f19aea79e3452e3324068bc0818ab6040bc0e8ca6a36b4fb0c77bd38a35.png)](../../.resource/remote/4f500f19aea79e3452e3324068bc0818ab6040bc0e8ca6a36b4fb0c77bd38a35.png)
 
 发现什么过滤也没有！
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910183646.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910183646.png)
+[![](../../.resource/remote/8c1587d08915f583f5f5baa79f8f9555b5a11d7b39692598af287d0a1ee8204c.png)](../../.resource/remote/8c1587d08915f583f5f5baa79f8f9555b5a11d7b39692598af287d0a1ee8204c.png)
 
 RCE
 ---
 
 后台`rce`!
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210909235956.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210909235956.png)
+[![](../../.resource/remote/0d85b0ee2ed80fbab461139426f20bd4ec7461c0b4c5b2646ca12d519af6f437.png)](../../.resource/remote/0d85b0ee2ed80fbab461139426f20bd4ec7461c0b4c5b2646ca12d519af6f437.png)
 
-首先：增加个增加顶级栏目[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910000047.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910000047.png)
+首先：增加个增加顶级栏目[![](../../.resource/remote/418b76ec1b8d2b4616221078b03725d6b8c71f5bc44a31848e9353bdba17ba38.png)](../../.resource/remote/418b76ec1b8d2b4616221078b03725d6b8c71f5bc44a31848e9353bdba17ba38.png)
 
 再增加表 `<?php phpinfo()?>` 栏目！
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910000202.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910000202.png)
+[![](../../.resource/remote/c3af74a292f1850b961defb937754ed5c9cc9479068a5fe58fa3fbe32416da1c.png)](../../.resource/remote/c3af74a292f1850b961defb937754ed5c9cc9479068a5fe58fa3fbe32416da1c.png)
 
 DOM 型 xss
 ---------
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910001222.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910001222.png)
+[![](../../.resource/remote/02099c4aa8e2fa061e3c516ba9891f670d1b331a2656e21e1b5c5676d57e1ba8.png)](../../.resource/remote/02099c4aa8e2fa061e3c516ba9891f670d1b331a2656e21e1b5c5676d57e1ba8.png)
 
 RCE
 ---
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910104403.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910104403.png)
+[![](../../.resource/remote/c8991956a535bc93661124965c30a6202af38dc7ee31fa55b8fe67918346ede7.png)](../../.resource/remote/c8991956a535bc93661124965c30a6202af38dc7ee31fa55b8fe67918346ede7.png)
 
 3 个位置都可 RCE！
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910104433.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910104433.png)
+[![](../../.resource/remote/cd1faeff81cb83131bc58c75cd64c46a9c2e96605eac0215b0d86339c15267f2.png)](../../.resource/remote/cd1faeff81cb83131bc58c75cd64c46a9c2e96605eac0215b0d86339c15267f2.png)
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910104646.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910104646.png)
+[![](../../.resource/remote/5892d397fd3e34d36ee7f318636335501a93b2914bb13235281ab949d50963a7.png)](../../.resource/remote/5892d397fd3e34d36ee7f318636335501a93b2914bb13235281ab949d50963a7.png)
 
 黑盒做完了！ 再做做灰盒！
 
@@ -105,7 +105,7 @@ RCE
 
 `src/dede/article_template_rand.php`
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910154643.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910154643.png)
+[![](../../.resource/remote/1cf0b70c5b3fe070a6ef5ca58e8e4dfcfeec500eba08623d3bdd2f237546e17e.png)](../../.resource/remote/1cf0b70c5b3fe070a6ef5ca58e8e4dfcfeec500eba08623d3bdd2f237546e17e.png)
 
 但是要绕过 csrftoken 验证！ 这个用 bp 就行了！
 
@@ -141,31 +141,31 @@ _csrf_token=dede_csrf_token的值&templates=想执行的代码
 
 ```
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160157.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160157.png)
+[![](../../.resource/remote/9dc258b82e4a51cdfd7677c4e4f85e51ef00146e850272e343cb95b850f0715f.png)](../../.resource/remote/9dc258b82e4a51cdfd7677c4e4f85e51ef00146e850272e343cb95b850f0715f.png)
 
 命令写入成功
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210913214359.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210913214359.png)
+[![](../../.resource/remote/10c18e671753e57fe655be88b6a9abcd47b5b75935eabe0adc0c0140ce1c644d.png)](../../.resource/remote/10c18e671753e57fe655be88b6a9abcd47b5b75935eabe0adc0c0140ce1c644d.png)
 
 访问验证：
 
 src/data/template.rand.php
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160314.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160314.png)
+[![](../../.resource/remote/1c3560dc87dcda75fed1328353a2b08da32f44b83447bc751983e703b790db4f.png)](../../.resource/remote/1c3560dc87dcda75fed1328353a2b08da32f44b83447bc751983e703b790db4f.png)
 
 写入成功！
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160324.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160324.png)
+[![](../../.resource/remote/bfa289016f984b65226c8cc8cf2dbd5edfe4c6d8f05d618c6a12371dbb01f4da.png)](../../.resource/remote/bfa289016f984b65226c8cc8cf2dbd5edfe4c6d8f05d618c6a12371dbb01f4da.png)
 
 写入`shell`!
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160430.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160430.png)
+[![](../../.resource/remote/e26cf877fd78e61813d28f3d9c80e0a198df76dcfba8e9e557e3f212f7e48f97.png)](../../.resource/remote/e26cf877fd78e61813d28f3d9c80e0a198df76dcfba8e9e557e3f212f7e48f97.png)
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160455.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160455.png)
+[![](../../.resource/remote/56b5da0646371e47d2cf969f4a675b6287edc21ce40eeecc7df8ce4e55084a56.png)](../../.resource/remote/56b5da0646371e47d2cf969f4a675b6287edc21ce40eeecc7df8ce4e55084a56.png)
 
 访问：`src/data/template.rand.php`
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160726.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910160726.png)
+[![](../../.resource/remote/afe2d258e68eda18e921d2ac84e2cd8926ed45a6879bde374444a9927b0ce94c.png)](../../.resource/remote/afe2d258e68eda18e921d2ac84e2cd8926ed45a6879bde374444a9927b0ce94c.png)
 
 ### poc
 
@@ -195,7 +195,7 @@ _csrf_token=d1d094594ef058ead28e6fb33bcbb4a1
 -------
 
 `src/dede/article_string_mix.php` 和 rce1 一样的原理！  
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910161533.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910161533.png)
+[![](../../.resource/remote/9b3d6e5cf9adc6845ec5ee7e5b6b067701bc3575a7c8a44ebcbcd3ea4601e90c.png)](../../.resource/remote/9b3d6e5cf9adc6845ec5ee7e5b6b067701bc3575a7c8a44ebcbcd3ea4601e90c.png)
 
 执行 poc
 
@@ -230,9 +230,9 @@ allsource=执行的php代码&_csrf_token=cookie里dede_csrf_token的值
 后台 RCE3
 -------
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910164024.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910164024.png)
+[![](../../.resource/remote/5638365998a50afa1737a3c04bde68269f1290a8858218955c4697bcb46f01df.png)](../../.resource/remote/5638365998a50afa1737a3c04bde68269f1290a8858218955c4697bcb46f01df.png)
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910164048.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910164048.png)
+[![](../../.resource/remote/ededc52757f37fb81ffad2ff26bed94b85feb8293f8b55c670966a4e7bff2038.png)](../../.resource/remote/ededc52757f37fb81ffad2ff26bed94b85feb8293f8b55c670966a4e7bff2038.png)
 
 要保证几点！
 
@@ -247,11 +247,11 @@ allsource=执行的php代码&_csrf_token=cookie里dede_csrf_token的值
 
 `src/dede/file_manage_control.php`
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910174452.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910174452.png)
+[![](../../.resource/remote/121bc0de81ddc9e702850496ca35fa2d5642b5c180fca8505670a7d4b7dccca6.png)](../../.resource/remote/121bc0de81ddc9e702850496ca35fa2d5642b5c180fca8505670a7d4b7dccca6.png)
 
 `src/dede/file_class.php`
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910173919.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910173919.png)
+[![](../../.resource/remote/d642bd966fb3a7f3d8252711f54704e474d834bf835bdc7e3b9916929ca6bec5.png)](../../.resource/remote/d642bd966fb3a7f3d8252711f54704e474d834bf835bdc7e3b9916929ca6bec5.png)
 
 sql 注入
 ------
@@ -372,7 +372,7 @@ print(flag)
 
 ```
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210918174807.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210918174807.png)
+[![](../../.resource/remote/b1cb509032eb299a609e59b7024e4224f17a8a0c2e5eb0ec4eea23f35e88363b.png)](../../.resource/remote/b1cb509032eb299a609e59b7024e4224f17a8a0c2e5eb0ec4eea23f35e88363b.png)
 
 类似的 调用 ExecuteNoneQuery2 函数的地方 都存在！sql 注入！前提没 waf！
 
@@ -381,7 +381,7 @@ sql 注入 2
 
 `src/dede/member_do.php`
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210918181845.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210918181845.png)
+[![](../../.resource/remote/f2f1cb8d6634e314e8c67b82366fb14e401e7c2b812f5e0472c0557e0dbfab32.png)](../../.resource/remote/f2f1cb8d6634e314e8c67b82366fb14e401e7c2b812f5e0472c0557e0dbfab32.png)
 
 ```
 else if ($dopost == 'edituser') {
@@ -418,14 +418,14 @@ sql 注入 3
 
 `src/dede/sys_admin_user_edit.php`
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210919090744.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210919090744.png)
+[![](../../.resource/remote/e0ed4de8cbad6b5d0284c47c2c6e8813335753b59c4bd4dc7a96698928ea855e.png)](../../.resource/remote/e0ed4de8cbad6b5d0284c47c2c6e8813335753b59c4bd4dc7a96698928ea855e.png)
 
 文件写入
 ----
 
 `src/dede/file_class.php` 下面 `MoveFile`函数 但是`$oldfile` 是拼接的 ！没法绕
 
-[![](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910181511.png)](https://gitee.com/taochiyu/blogimage/raw/master/img/20210910181511.png)
+[![](../../.resource/remote/33b270dfd7142f562b42be802c621397774c770ac69062f491bb6534a1f82d7e.png)](../../.resource/remote/33b270dfd7142f562b42be802c621397774c770ac69062f491bb6534a1f82d7e.png)
 
 文件写入
 ----

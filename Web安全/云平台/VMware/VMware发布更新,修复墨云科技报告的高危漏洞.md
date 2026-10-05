@@ -41,7 +41,7 @@ schema_version: "1"
 
  关键信息基础设施安全保护联盟   2024-12-03 23:30  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DoGPicehpSD7yIqt5JDquCLys40yW2MZt5JjERM23U0ibHC3galCTkkuTaZSmFwMSU6ctcUQYuM9Vm3k75oNfctQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/54fbb384b9da2c2be6ace31c29e67f14ac5d272b5ee99d5ed91105ab6077ef3e.webp "")  
   
 ****  
 ******VMware发布更新,修复墨云科技报告的漏洞****CVE-2024-38830、****CVE-2024-38831****。墨云建议广大用户做好资产自查以及预防工作，以免遭受恶意攻击。**  
@@ -54,7 +54,7 @@ schema_version: "1"
 **时间：2024.12.03**  
   
 ****  
-![](https://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPgyGRhyoqbTupN7lM2NSVJqkaFQzA59F6kiblIQsL175lxIVZbSLrFDFicibxXiaXpXmAGkrGNSib76Ylw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/fc39235b1600eb1017e15ebccdb18f55112214cfbfbb9e068fe408515db1889e.webp "")  
   
   
 **漏洞描述**  
@@ -78,9 +78,9 @@ CVE-2024-38830、CVE-2024-38831
   
 墨云科技VLab实验室向VMware公司提交报告后，协助其修复相关漏洞。VMware于北京时间11月26日发布了补丁,并公开致谢了墨云科技VLab实验室。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7lCiaSMMkhia7ZykLmAicwp9zxAIS8zAiaIlkbumuamhY7eVJC1xQgkfgxUdv9M04TuJLBVpD8HuCCS3Wl4layhOkQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/efd98f14da99809eb58940ab0af94682068bd2a04edd4cf73e731a5a2230aeed.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7lCiaSMMkhia7ZykLmAicwp9zxAIS8zAiaIlt0Z7UEWiaZnYwzH1pOzLbrjcVx2ceM6kUvsLaLALkQwicibyEZvAIYe9A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/664a8ad967fa8857a2d144c7351ab9dca19953a08c53d78065449b32da80273d.png "")  
   
   
 **影响版本**  
@@ -99,11 +99,11 @@ https://support.broadcom.com/web/ecx/support-content-notification/-/external/con
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/KWBheD0eoTHmXibldR5t7OHtciaES56KKVkeLOlSfiae7xUDwFDN32pM2r0eTNBVWc201Ra6VA4JUQianh2x2zCZMw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/fd2f30043435b6d51792845046fbc80eacd4860ed8b56b784283062696ba431b.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5t8Rl4ruGlxXxO8pSz7H4nTTGuaJib0NM5VCjvS81AkaiaMuDvsmW7ic0xP9ZBdlbqlW4Ct5TgNRfghuC8WVcCH4w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/fd2f30043435b6d51792845046fbc80eacd4860ed8b56b784283062696ba431b.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/DoGPicehpSD7yIqt5JDquCLys40yW2MZtFQ0H2icygiaEDbWz3dBCwdcsb5D47tzCWrUhWfPF4pRGiab44IKIFaicww/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/6cc6a9912f926811293e8972b2b587f9a99aee7ce7e31df275452c0b6f0b0353.webp "")  
   
    
   
@@ -119,9 +119,9 @@ https://support.broadcom.com/web/ecx/support-content-notification/-/external/con
      
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/uM5JC8OpyM38qX6pScddCVZj0GPqNazCtDiaYzicEsCzzCwJ0TkK31XFKaAR1oE7s5H5mpdmJPn5YpUpvicmE8FHw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/fd2f30043435b6d51792845046fbc80eacd4860ed8b56b784283062696ba431b.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/B13XbuVeoMbBqibuBVrYqqcCOTyZaz7k6RaF3BicicNzE6tW38rjHP6ZRTYCQmuvlBiaYQ7O9kKiblxkibMDFPSewWiag/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/fd2f30043435b6d51792845046fbc80eacd4860ed8b56b784283062696ba431b.webp "")  
   
   
   

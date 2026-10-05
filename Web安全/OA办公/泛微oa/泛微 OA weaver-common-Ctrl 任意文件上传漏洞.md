@@ -48,9 +48,9 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/WoWIZzY48C6GjCrbgnSErg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -80,12 +80,12 @@ FOFA: app="泛微-协同办公OA"
 
 **请求包为**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5zkgPAK0ic769mRwPT6mVxWafcXnCVRwdVNUibuVbcYLb24sDBgLUjVe9Zmk7tthKxzlq6vQEYYeTA/640?wx_fmt=png)
+![](../../.resource/remote/1a3d81dad513e84f5f18a1d02bc4e9e107e84d7a1647ce47456fa46544350ef9.png)
 
 **使用 POC 文件上传  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5zkgPAK0ic769mRwPT6mVxW0Lg983FejqdRiabNFvc8Rtt5cMmKqiacsd56ee9FGzeF1mZv0c4lA1eg/640?wx_fmt=png)
+![](../../.resource/remote/3376575c174829205bb70999adefc0481158abb04da8c6b55c8f1067936332ba.png)
 
  ****四:  漏洞 POC🦉****
 
@@ -169,7 +169,7 @@ if __name__ == '__main__':
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -186,7 +186,7 @@ if __name__ == '__main__':
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

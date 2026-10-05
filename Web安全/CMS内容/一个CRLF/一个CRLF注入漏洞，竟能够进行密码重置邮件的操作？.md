@@ -46,7 +46,7 @@ schema_version: "1"
   
 六月，Laravel曝出一个编号CVE-2026-48019的CRLF注入漏洞，CVSS给出 8.9 分，分别影响v12.x和v13.x版本，这一次的CRLF注入，它挑了个所有人都默认忽略的安全点进行切入，带来的影响是能够进行密码重置邮件的较为危险的操作。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dscLuiaicVquP5u5L60P74ANJaxfv17D0KQqlP1nkcSzBdfzYkNpOLekYBlwsNZffrmIY6o9zDH1HOdbr4Opxicaic294RYPGtyZgkr580qkjGk/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/831a3ca92f6afe0c69c6ca64a0056bbf46538c82c4a5cb40dd2bfeb2cc78b0d8.png "")  
   
   
 其中为Laravel的表单验证部分函数  

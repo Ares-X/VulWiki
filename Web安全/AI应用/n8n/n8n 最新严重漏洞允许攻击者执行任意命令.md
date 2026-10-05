@@ -63,12 +63,12 @@ schema_version: "1"
   
 该漏洞编号为 CVE-2025-68668，CVSS 评分为 9.9 分（满分 10 分），属于严重级别，凸显了其高度危险性。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaGNqLP8O2pnP6Yt9MjyK51gAL7GNVteZW6SsLQygdy1K3wA1MQ2Y8caIvLzxZibMqY7bPKAyRqH8VQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9b73b3ac921553ab9fce6427a7b7f71643127cdf305a220ab690a15c7ee5f221.png "")  
   
   
 该安全漏洞源于 n8n 的 Python 代码节点中的沙箱绕过问题，该节点使用Pyodide 进行代码执行。该漏洞允许具有工作流创建或修改权限的已认证用户绕过预期的安全沙箱。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaGNqLP8O2pnP6Yt9MjyK51gpueyO6nsUfbK3zHE2t3Afibo7SIv6QLTNBdSJdiaVCOYib7ibLJ9DEMfVw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e25d95523aa472795accde6d6b17a5bd8b28ae97f07f7fa16e943a698ca827f1.png "")  
   
   
 攻击者可以使用与 n8n 进程相同的权限，直接在运行 n8n 的主机系统上执行任意命令。该漏洞影响从 1.0.0 到 1.111.0 的所有 n8n 版本，使各种部署面临潜在的风险。  
@@ -104,7 +104,7 @@ https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v
   
 https://cybersecuritynews.com/critical-n8n-vulnerability/  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/McYMgia19V0WHlibFPFtGclHY120OMhgwDUwJeU5D8KY3nARGC1mBpGMlExuV3bibicibJqMzAHnDDlNa5SZaUeib46xSzdeKIzoJA/640?wx_fmt=svg "")  
+![](../../.resource/remote/0877e2d01c065e08b6bbbf6e0a90a3b1e83a9887e89bf3c0021a85dea378e78f.svg "")  
   
 **今日安全资讯速递**  
   

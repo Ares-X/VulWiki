@@ -57,7 +57,7 @@ schema_version: "1"
 Rhinoer
                     Rhinoer  犀牛安全   2026-09-16 16:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/vO1zY1O9p8KP0hlNp6rqFcicVUmChYYTDwXgVL8ORFbIicc5chJJ8gTicqpSZKS0XtPtmq3O1g5TRzyw9WYa7O9ibiapg5vo3yWmz4du8aQEh7cQ/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/75781e8e1ad654aa627be31c35471d66370bb813cdb720949dcd4757aa3c314f.png "")  
   
 微软披露了Windows BitLocker（操作系统内置的磁盘加密功能）中一个新的安全漏洞，该漏洞可能允许攻击者在易受攻击的设备上执行恶意代码。  
   
@@ -70,7 +70,7 @@ Rhinoer
   
 微软赞扬了香港理工大学的 Thanatos Tian、wgg 以及与 Diffract 合作的 @2st__ 等安全研究人员，还有华中科技大学的彭志强，他们通过协调披露的方式负责任地报告了这一漏洞。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/vO1zY1O9p8LQ7qjwUNmich345SianiaiaEBiamDE30L8QnPP7Vkd0VH7RTCSby1dTQ0eOrria2jtjQcL4hJ6KsjXeqWujaH8zRl3B9a6UIj8LQSLc/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5b2272a2e2e9ab23422490725d86b38e91be629c0cb120a115508020ca0d4ef1.png "")  
   
 受影响的系统包括：Windows 10 版本 1607、1809、21H2 和 22H2（x64 和 32 位版本）；Windows 11版本 23H2、24H2、25H2 和更新的 26H1（x64 和 ARM64 架构）；以及 Windows Server 2012 和 2012 R2 到 Server 2016、2019、2022 和最新的 Server 2025 版本，包括它们的 Server Core 安装变体。  
   

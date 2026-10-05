@@ -226,7 +226,7 @@ poc.xml
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zQTDuPY727g7F1BVEPMXVlS1ObFzvjic4sCEHRlEsa6CJbZ9tNzeuxFQ/640?wx_fmt=png)
+![](../../.resource/remote/08d1f7fd4c881f77cbc8834034c0a389d6482f2b3b65ebda31a578af0534988c.png)
 
 使用 java.lang.ProcessBuilder 进行代码执行，整个恶意 XML 反序列化后相当于执行代码:  
 
@@ -297,7 +297,7 @@ Content-Length: 639
 
 这里要注意`Content-type`要设置为`text/xml`，不然会报 415 错误
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zI8ZyaJuGgKFibeZVyurl74fkbhu4DSfo7ibPkYq8BkLwp4NAxtXLss6A/640?wx_fmt=png)
+![](../../.resource/remote/391a5383aad076c9f6eddc555d8c3a492d3a9d5b5bf43c53134e60538111618d.png)
 
 Weblogic-XMLDecoder 反序列化漏洞分析  
 
@@ -318,13 +318,13 @@ export debugFlag
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zypFibePDV1yoibrycyxKcvoRcBLSV86Hl41zIm7m4A4w4LrDxglTeT7Q/640?wx_fmt=png)
+![](../../.resource/remote/34617785a69c4752376daeee9d5d0dfa878d450ef6fa7c35b2ff51ae898fbedc.png)
 
 然后重启容器，再从 dcoker 里面从拷⻉ Weblogic 源码和 JDK  
 
 `docker cp 692394a45a38:/root ./weblogic`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zexq2Mk6loV573nOHZ2rDznuq8gA2gkFMrH3HXyvcqJPdWDvNqLDHZw/640?wx_fmt=png)
+![](../../.resource/remote/5ff95a2e3cc7d7bf8ec6b56ee212cf1e5b2ac796d4e532ef1800ec99c47b1813.png)
 
 在 Middleware 目录下提取全部的 jar 、 war 包到 lib 目录  
 
@@ -338,13 +338,13 @@ find ./ -name "*.war" -exec cp {} ./lib/ \;
 
 将 Oracle/Middleware/wlserver_10.3 作为 IDEA 项目打开，设置 JDK 为拷⻉出来的，然后添加包含 lib 目录到项目的 Libraries
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zhv6LXtvJ4ibNOcWL2OXw84f8JR9DWUdkjeD93mZP6akIo0gGYnlcJHg/640?wx_fmt=png)
+![](../../.resource/remote/4cf165b1804f02e3d3a4214c1adb65ed07506332a6981137861b86ced218b250.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zNE4SJENa13EKKK84YCLABoyv2a1P98E29wpGUhGlofslE7B0UNCvZw/640?wx_fmt=png)
+![](../../.resource/remote/28fc6d22ff929e3e747f24f16d01b887a501573d8983d4e3090737885044ca62.png)
 
 设置 DEBUG 模式为 Remote ，端口为与 docker 映射出去相同的 8453  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zg6mrft1o2D8gkSCoxYySnahX4Mc4EPDsEm1Dq1XmNW6LkG92YHOuqg/640?wx_fmt=png)
+![](../../.resource/remote/08931f29323098d836fda6c12517968afb6c84a1c23e8c6379de79fab49b617c.png)
 
 现在就可以使用 debug，如果控制台输出`Connected to the target VM, address: '192.168.50.145:8453', transport: 'socket'`则说明配置成功  
 
@@ -372,53 +372,53 @@ CVE-2017-3506&CVE-2017-10271
 
 wls-wsat.war!/WEB-INF/web.xml
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zYcEcojBfibaMuVMLblhqzVtU9iaxkuWAwRcz42IDckon6pFabTO24b3Q/640?wx_fmt=png)
+![](../../.resource/remote/2fb05802397c0e881ed94fc37209ac2e871a03fa06ceee17a4fa0eba5f09c7bc.png)
 
 查看 `web.xml` ，可以发现存在漏洞的 `wls-wsat` 组件中包含不同的路由，均能触发漏洞  
 
 weblogic.wsee.jaxws.workcontext.WorkContextServerTube#processRequest
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zlK6mWHf5Dob1RSMcj9AeTicVncpFKcZ3Sx1Fiad9e7qR5rPPODyKdEWA/640?wx_fmt=png)
+![](../../.resource/remote/b1b9c3ab9e058c1c0ef62b8ecea79d3467300a24bc0fc147c3d1458132a23820.png)
 
 这里 var1 的值是我们传入的恶意 xml 文档，var2 是数据中的 headers，var3 是从 var2 中获取 WorkAreaConstants.WORK_AREA_HEADER 得到的，然后将 var3 放入 readHeaderOld 函数中  
 
 weblogic.wsee.jaxws.workcontext.WorkContextTube#readHeaderOld
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zXrlALzew0FgBw3MqmhOqHHeWBKWsCdvcNUakiafVPwgFOyH51KpEQmQ/640?wx_fmt=png)
+![](../../.resource/remote/e601203a91e95320b5bcbdfacbf278461ddea0dd906faa0f91759b5c32adef55.png)
 
 var4 的字节数组输入流传入 WorkContextXmlInputAdapter 的构造函数  
 
 weblogic.wsee.workarea.WorkContextXmlInputAdapter#WorkContextXmlInputAdapter
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zyuRWRljHB2YPxAdArOTWgHXevH9xib2w0fK2csxE3OUKFa5jSl5kIMg/640?wx_fmt=png)
+![](../../.resource/remote/db16ea26d287513791d11d6e025d8cdd87057c4f6dd6affc9afece1e96a1a95b.png)
 
 包含恶意 XML 的输入流作为参数传入 XMLDecoder 的构造函数，返回一个 WorkContextXmlInputAdapter 实例对象到上层的 var6 ， var6 作为参数传入 receive 函数
 
 weblogic.wsee.jaxws.workcontext.WorkContextServerTube#receive
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zIIo0f5dGB3Bc3EBBU3pploGd4FVjEB3uuwEqFmVzPxp1GXjMu5chtg/640?wx_fmt=png)
+![](../../.resource/remote/71bd6614f78dc611c447dd51ee20d0a5b65e8c663854abd19612a94ece5c2627.png)
 
 继续跟进 receiveRequest() 函数
 
 weblogic.workarea.WorkContextMapImpl#receiveRequest
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4z67Cp0bHgu6gneEhCZLRO2StIrSdt4kdLBU4jd10ibuRN0UQWH8RSib5w/640?wx_fmt=png)
+![](../../.resource/remote/9ed07de08b57725100e2815bcce2a94acc29458255992234c6343ee7dcbf0a78.png)
 
 被传递到 WorkContextLocalMap 类的 receiveRequest() 方法
 
 weblogic.workarea.WorkContextLocalMap#receiveRequest
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zLUIHicibQ2r9fY4ZoI0ATtichFq82v0lHzpLPuM29GGYOSmZyc7JszU2g/640?wx_fmt=png)
+![](../../.resource/remote/b2c7d64bdddafc678fc59289ba64f6bcc25aa3c3df4f2f4b32c510568053521d.png)
 
 继续跟进 readEntry() 函数
 
 weblogic.workarea.spi.WorkContextEntryImpl#readEntry
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zAlB0AHTLXSojZgQXuJFnYEc4gTCasGBmib90OKbZ4HUjoRdR9OzwNuQ/640?wx_fmt=png)  
+![](../../.resource/remote/0b8f32536f69c6ae3eaf7d72786347757f4e24d8b3f582373770cf5431075660.png)  
 
 继续跟进 readUTF() 函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4z8w9Jl8kKaayFHmJhZrUGaWtAJcSLhuJxlMKYnrib4747oEXDDSNjKOQ/640?wx_fmt=png)
+![](../../.resource/remote/68f4c094f47d5936aa031609ae2cbd947bda4015bb164710d93bb14f9c5346ce.png)
 
 调用了 xmlDecoder 的`readObject`函数进行反序列化操作，最终造成命令执行  
 
@@ -578,7 +578,7 @@ xmlns:asy="http://www.bea.com/async/AsyncResponseService"> <soapenv:Header>
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zbB2XiaNJhZ4TrJ2wsa0cgeI8yhXC6iakR2ohjagBqb1uglBcC3mxSTew/640?wx_fmt=png)
+![](../../.resource/remote/e7842deb822bb1b387dbe0710d480183a204c095e3fb76fdab63c171c86dcb1a.png)
 
 ### CVE-2017-10271 补丁绕过分析及利用方式
 
@@ -670,7 +670,7 @@ https://www.anquanke.com/post/id/180725
 
 **关注公众号: HACK 之道**  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GzdTGmQpRic3qL1R1NCVbY1ElanNngBlMTUKUibAUoQNQuufs7QibuMXoBHX5ibneNiasMzdthUAficktvRzexoRTXuw/640?wx_fmt=jpeg)
+![](../../.resource/remote/b99edeed31d21a7e1f077b5f0a7b8cb6d33ab827ad75cac3f9ab724087e41e44.jpg)
 
 ---
 

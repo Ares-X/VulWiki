@@ -48,11 +48,11 @@ schema_version: "1"
 
 畅捷通是用友集团的成员企业, 致力于为企业提供高效、方便的解决方案。好生意是畅捷通公司的产品, 能够从不同的维度帮助企业提升效率、降低成本。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/DBoCyk48rwC59icfkzNShHoR2Awfs6aYYkmpjsHziab1VxCiaAVTVQJmMfYcMN1vKiboDicB3d0AkzlGY56nCMX1gMA/640?wx_fmt=gif)
+![](../../.resource/remote/c571a8dfe156d7bb698a33221cd272a9d34aadd709bb0235fcbc8e1aa3a8a943.gif)
 
 <table><thead><tr><th width="45">漏洞介绍</th><th width="474">畅捷通 TPlus keyEdit.aspx SQL 注入漏洞<br></th></tr></thead><tbody><tr><td width="45">漏洞描述</td><td width="454"><p>畅捷通 T + 是⼀款企业管理软件，主要⾯向中⼩企业。它提供了包括财务、采购、销售、库存、⽣产制造、⼈⼒资源等在内的全⾯企业管理解决⽅案。通过畅捷通 T+，企业可以实现对业务流程的数字化管理，提⾼⼯作效率，降低成本，增强企业竞争⼒。</p><p>畅捷通 T+ /tplus/UFAQD/keyEdit.aspx 接⼝处未对⽤⼾的输⼊进⾏过滤和校验，未经⾝份验证的攻击者可以利⽤ SQL 注⼊漏洞获取数据库中的信息。</p></td></tr><tr><td width="45">影响产品</td><td width="454">畅捷通 T+</td></tr><tr><td width="45">修复方案</td><td width="454">请使⽤此产品的⽤⼾尽快打补丁或更新到最新版本：https://www.chanjet.com</td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/DBoCyk48rwBdEFyIHR1EGhqLicyHSs6x4WZQjlq5DjBfRUMNB4uA26hNbzgEjKezgAQvoFW6fbjeCgIltyuWjjA/640?wx_fmt=gif)
+![](../../.resource/remote/2fbfd3f1d3ddd2f28344dd590db8a2e8d8a7cfb60b00ec73eef6a0938384be17.gif)
 
 用请尽快进行应用系统的检查，确认其中是否存在使用畅捷通 T + 情况。如果确认存在相关应用的使用，需要立即采取行动，因为这些应用极有可能受到漏洞影响。  
 影响版本：  
@@ -66,7 +66,7 @@ Fofa 指纹
 `app="畅捷通-TPlus"  
 `
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBoCyk48rwDpXhAiaTzXNyHCiabE9nfLblsibdzgHxZ8liawfDiaicjjicm6xsUTic9kkTSD6cSeh1opW7GOJhQROgpjRw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9593b13586557de20f72202a988d81ac174a077bb3615e4764c25661beb2f33e.png)
 
 **漏洞复现 poc**
 
@@ -86,7 +86,7 @@ Cache-Control: no-cache
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBoCyk48rwDpXhAiaTzXNyHCiabE9nfLbl0fCoDY5LSwMYmicKm7n7WjB2RHKvwuoKDlWpiahk25MUltf8Io33bSrA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0e6239f23138931abb4dda536e5cd6ef92d52882c9911ffaccb2df827332c6b5.png)
 
  **nuclei 批量验证脚本**
 
@@ -128,7 +128,7 @@ requests:
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/DBoCyk48rwDpXhAiaTzXNyHCiabE9nfLbl5F5wN94UJQicfUn3P6waFmF1mAzZuXPxxQ3qkaCKuD6v2S53zpuE7JA/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/c37def2b355096acd6747c01455d0d6ea375c97eef9df6f56b790e478e64f48c.jpg)
 
 获取更多的网络安全热讯或者学习交流可以加入群聊！！
 

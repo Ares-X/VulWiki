@@ -56,7 +56,7 @@ schema_version: "1"
 更多资源请访问：  
 www.xwdjs.ysepan.com  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/UM0M1icqlo0lxt0ibYqVFodyiaLaT0UNgQzWGoibKZIh453k7XHuhicvGbrD4sUAD4bqLKg9BRR6MXrJXTc0M03Wn1g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fdc66e14a2c0db64945a1878987b7a7b61c39971c4853a73ad04c85852930188.png "")  
   
   
   
@@ -102,12 +102,12 @@ Content-Type: application/vnd.ms-excel
 1. **2、验证上传结果**  
 发送请求后，若服务器返回 HTTP/1.1 200 状态码，且响应数据中包含 "success:true" 字段，表明文件上传成功。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/UM0M1icqlo0lxt0ibYqVFodyiaLaT0UNgQz2av1K1I1SJBe9clibjYDhCMVHdmLQvwT0wtYSk3u5Zr6P93wjOaUDkw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f48621b82236a5e0adffeb3a7a730269043e3c82e903ed5e28dbf42ab99eeccb.png "")  
   
 1. **3、访问恶意文件**  
 通过浏览器访问上传后的文件路径（http:// 目标服务器 IP/test.jsp），若页面显示 "seeyon_vuln" 内容，说明恶意脚本已被服务器成功解析，漏洞利用完成。  
   
-1. ![](https://mmbiz.qpic.cn/mmbiz_png/UM0M1icqlo0lxt0ibYqVFodyiaLaT0UNgQz8HmFZQR4ykOKFHUibt64IkgyG91icQzxrh8J3pNHKEDaWgzXvjkc1l6Q/640?wx_fmt=png&from=appmsg "")  
+1. ![](../../.resource/remote/03a24a8441a94d1acb618ab6152a4a6e0a0b8433bb6b94c8b61279577b5372e4.png "")  
   
   
 ### 三、漏洞危害警示  
@@ -142,7 +142,7 @@ Content-Type: application/vnd.ms-excel
   
 随手点个「推荐」吧！别逼我求你！！！  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/UM0M1icqlo0knIjq7rj7rsX0r4Rf2CDQylx0IjMfpPM93icE9AGx28bqwDRau5EkcWpK6WBAG5zGDS41wkfcvJiaA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=5 "")  
+![图片](../../.resource/remote/7369588de90ebf5823e3c60b7662fd83ce9556b9ad327e306d5a049be159839b.webp "")  
   
 声明：  
 技术文章均收集于互联网，仅作为本人学习、记录使用。  

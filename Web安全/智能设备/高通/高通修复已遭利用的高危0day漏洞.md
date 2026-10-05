@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Sergiu Gatlan  代码卫士   2024-10-08 17:31  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -60,7 +60,7 @@ Sergiu Gatlan  代码卫士   2024-10-08 17:31
 **高通修复了位于 Digital Signal Processor (DSP) 服务中的一个高危 0day 漏洞 (CVE-2024-43047)，它影响数十个芯片集。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMS7euItcwX5GeUyNmUywibIImEcU8BbMwicmibzYs1w5BIRsiaY06tIdwd2AkOFjUm4gaQiaVkDuzuATibw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f06e2f5274cab008783f77e65bebe04443c456536ad86c5e57464501ce34c984.png "")  
   
   
 该漏洞由谷歌 Project Zero 团队的研究员 Seth Jenkins 和 Amnesty International Security Lab 公司的研究员 Conghui Wang 报送，是由一个释放后使用弱点引发的，如遭具有低权限的本地攻击者成功利用，可导致内存损坏。正如在一条 DSP 内核提交中解释的那样，“目前，DSP通过未使用的 DMA 句柄fds 更新了头缓冲区。在 put_args 不分，如果头缓冲区中出现了 DMA 句柄 FDs，则相应的映射会被释放。然而，由于该头缓冲区被暴露到未签名的 PD，用户可更新不合法的 FDs。如果该不合法的 FD 匹配已在使用状态中的任何 FD，就可导致释放后使用漏洞。”  
@@ -128,15 +128,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

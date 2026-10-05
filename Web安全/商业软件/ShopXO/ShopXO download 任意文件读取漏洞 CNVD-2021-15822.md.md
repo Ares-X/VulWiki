@@ -47,9 +47,9 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/69cDWCDoVXRhehqaHPgYog)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -67,7 +67,7 @@ app="ShopXO企业级B2C电商系统提供商"
 
 **商城主页如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7htH9AibquAMvoqJYD5h1KbUuK0JicIxw5icNZKpOKOVJZrpUEun44USqI9VA1j4icV7Amse1aVs7O2Q/640?wx_fmt=png)
+![](../../.resource/remote/743e5c555b62ea1aca892870902c909721771504bf43a98553adc2b10d0aeee6.png)
 
 **发送漏洞请求包**
 
@@ -84,7 +84,7 @@ Upgrade-Insecure-Requests: 1
 
 **其中 **/url/xxxx** 中的 base64 解码后为 **/etc/passwd****
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7htH9AibquAMvoqJYD5h1Kb1mNQyhQhA2IIo8TmKMGb5ogibEK6RPTbtbXCDgzOr1dKicgLtKYqkaSg/640?wx_fmt=png)
+![](../../.resource/remote/fe4178fcdb93261dac84e799985523be9f2c88453e4e14a909fa5355fa1b3053.png)
 
  ****四:  Goby & POC🦉****
 
@@ -92,7 +92,7 @@ Upgrade-Insecure-Requests: 1
 https://github.com/PeiQi0
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7htH9AibquAMvoqJYD5h1KbNKa3mtwcib8NmjBt8NlaWOoUiaiahrvDTGGsMmntQoy11s1ibibGhjoIDpg/640?wx_fmt=png)
+![](../../.resource/remote/ba32d713388b27433e3691b2613e9a78cdf7310334a5a63ac03a01fcdefcfc39.png)
 
  ****五:  关于文库🦉****
 
@@ -104,7 +104,7 @@ https://github.com/PeiQi0
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -119,7 +119,7 @@ https://github.com/PeiQi0
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

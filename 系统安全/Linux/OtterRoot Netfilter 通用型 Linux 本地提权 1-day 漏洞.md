@@ -80,7 +80,7 @@ lonial con[2]
   
 内核是操作系统的核心；它的目的不是作为一个普通应用程序，而是创建一个供应用程序运行的平台。内核直接与硬件交互，实现你能从操作系统中期望的所有功能，如用户隔离和权限、网络、文件系统访问、内存管理、任务调度等。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kS9KNVK8hN55wibJYiaW39xMdGX4gPtt59mrYib4mbQEQ5tgHKgujoBNTXw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/82d18dac3cb60904d2c684a46b35beafab102c46892096bb152bcc852b01b8b2.png "")  
   
 内核提供了一个接口，用户应用程序可以通过这个接口请求它们无法直接执行的操作（例如将某些内存映射到进程的虚拟地址空间、向进程暴露某些文件、打开网络套接字等）。这被称为系统调用接口，是用户空间向内核空间传递数据的主要方式。  
 ### 内核漏洞利用  
@@ -434,7 +434,7 @@ static void trigger_uaf(struct mnl_socket *nl, size_t size, int *msgqids)
  重叠，我们可以泄露->ops  
  指针，并利用它来计算 KASLR 偏移量。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSUdyzBpFVXUpzb7ZSNSj2wruE6ial29rMaA3Iiccx0OibCgQkeQGT8ZFGw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b5b98658b5bf1528955e3d8d2044b6c62995fa80be2fcaae075b8d0d0e854e26.png "")  
   
 ```
 [...]
@@ -480,7 +480,7 @@ nft_object
  中的list_head  
 ，反之亦然。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSQRRNciaziaLhP0fVhCxuygAI6Jf4RD6t7AHdRH26IfEtiafGAbz2nmBRw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1e0857a456d0d86bd6f5d4b1c7f834e45cad4d6619f9e0cafe84c3903bc310ea.png "")  
   
 简而言之，这意味着如果我们将nft_object  
  的udata  
@@ -511,7 +511,7 @@ nft_object
  指针与udata  
  指针交换，从而控制指针表。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSP1SMXxAM7Nt3vWEutsjrAfoTicLfZMKGlXRvp5gRAf2nGVXd19g94DA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/dd90c3b35c6dd14b00539be8ae548bf328140ae57ace52c9916f73e9b4c0df71.png "")  
 ```
 [...]
     // Fake ops
@@ -605,7 +605,7 @@ D3v17 在
 [...]
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSicx9eXWjnVRJVEcFRMrG7EWukxYicTWOfYx1EM8UDzJz8FFs4gSfmH9w/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ac24972025b0542a4f74fb768282f9416518bac4faa1c522d3dc20d97096d738.png "")  
   
 你可以在我们的  
 GitHub[12]  
@@ -638,7 +638,7 @@ struct list_head {
 通过将我们可控的msg_msg  
  的 next 指针增加 256，我们可以使其指向已被其他主消息引用的不同次级消息，从而创建重复引用。这为我们提供了一种简单的方法来将双重释放能力扩展到其他缓存，并攻击更多种类的对象。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kS4Mwj9rMibSoVxUPRSP35JyY7ySV1cbXibsNE7CK6V46Aghpp5icKKEh3g/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/56548c329adfd27134264fa9cae9172b1519fafcb78663bb6a632443a67644a6.png "")  
 ```
 [...]
     // Spray msg_msg in kmalloc-256 and kmalloc-1k
@@ -677,7 +677,7 @@ page
  字段是指向vmemmap_base  
  的指针，其中包含了所有用于跟踪映射到内核的内存页面的结构体。在读写管道时，这个指针用于获取与给定管道相关联的数据地址。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSibnTdsdxFiatIp4ME1ZyEyuJlsMlA4tbAGHKb7JaT1fE94uFMSYe4r0Q/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c12970accda6f9989b79d38558e398fc9e9b5ae389908330ec48b909c8b8fb4c.png "")  
   
 这样我们就可以遍历vmemmap_base  
  数组，并使用我们的管道作为接口直接读写内核内存。  

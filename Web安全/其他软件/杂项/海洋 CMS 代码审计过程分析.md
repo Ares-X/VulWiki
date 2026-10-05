@@ -63,7 +63,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PMutZvYD\_C6NXrs87Z8W6Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZyLXh2ia0AsKF6yM8k5wEaUDicAEeiaQUPcjN0O8NlyajIetDVg0ZVRZ9A/640?wx_fmt=png)
+![](../../.resource/remote/6c3c38b2064dcf29143ca7a75449e782732a5cdbd9fb67b0d5a17cf91ed10984.png)
 
 最近在学代码审计，但总是学了忘，所以把思路步骤全写下来，便于后期整理。这次审计的是 seacmsV10.1，但是审完返现 V11 也有同样的漏洞。先放 payload:
 
@@ -72,7 +72,7 @@ schema_version: "1"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZxGtmtNt7blK7ECMBQPYS4kvKXXWQyHA9nfSqmVqeQGcdww4Vibt6ZpA/640?wx_fmt=png)代码审计不知道该如何入手，所以去看了 cnvd, 在 cnvd 上看到 seacms10.1 有个前台注入，于是尝试分析了一波，全部弄完发现作者发布了最后一版  
+![](../../.resource/remote/8ce538fa6bafbfe6d6ec03801887d67c2074a4b963c2a2a77e9e155436c0cc66.png)代码审计不知道该如何入手，所以去看了 cnvd, 在 cnvd 上看到 seacms10.1 有个前台注入，于是尝试分析了一波，全部弄完发现作者发布了最后一版  
 
 > 更新日期：2020 年 06 月 08 日 v11  
 > 更新新域名 https://www.seacms.org  
@@ -108,11 +108,11 @@ foreach($\_REQUEST as $\_k=>$\_v)
 
 随便构造个语句，比如`?di=1 union select`看看防护在哪。注: 语句瞎写的，用来找防护在哪。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZTnjzKAJYDepHcz8dbhA0kibNu5GQRfqtD72QbaeRwFT14YvVjWmKib3w/640?wx_fmt=png)
+![](../../.resource/remote/a5d3a634f05d3fe45674c5e86858befa6885fcde2b9da3d6156dcd016e2dd812.png)
 
 根据报错搜索全文
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZ5hdUQIbgTgvOBQLFQRM5K71CndVq0TzCX2GbX9OGBRtJRjyLzr3ecg/640?wx_fmt=png)
+![](../../.resource/remote/d0da5b87699624ee4ac6d347d82110f57ee857c98b6b640573bdbf3f34e1bbfe.png)
 
 在`Upload/include/webscan/webscan.php`有对`get post cookie`输入的内容拦截，`get`拦截内容如下：
 
@@ -124,13 +124,13 @@ $getfilter = "\\\\<.+javascript:window\\\\\[.{1}\\\\\\\\x|<.\*=(&#\\\\d+?;?)+?>|
 
 其中`UNION.+?SELECT`在印象中可以使用正则逃逸解决, 即空格可以使用`%2d%2d%0a`、`%23%0a`之类的代替，构造`?id=1%2d%2d%0aunion%2d%2d%0aselect%2d%2d%0a1,2,3`。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZVDGbtZUqTSl9aRHyicBkneV9OzXFpFaY6MkicrdyB2tv7e9euejB0M9g/640?wx_fmt=png)
+![](../../.resource/remote/ab3436c32ff9b9ecc5940948eaf87323098006425efa6a661cc0dab7ad8d121c.png)
 
 虽然不知道能不能用，最起码检测过去了。 
 
 解下来看看有哪些地方执行了`sql语句`，在`seay`没跑完的时候，已经出来一堆了相关语句了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZxibvPQ16WN7CmadUWMpZ72AvpZMNtCF6w59vD3LiaeVFKr1n2wJicL3PA/640?wx_fmt=png)
+![](../../.resource/remote/a00c7bec97279f4612d94eded488cb56802cc7a47a232b5b764d5ada06c6f472.png)
 
 感觉看完头肯定会很凉，而且我代码很菜，sql 语句也很菜，所以先尝试去看看和`select`相关的地方。 
 
@@ -147,7 +147,7 @@ if($mod=='repsw2'){
 
 在这个地方看到了`select`, 通读得知在找回密码时会到这里，访问
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZD7kcJXpuQmcibdqdjEpCWruePu6fPFrLiaKib0d51mJXcOVtx7m7tpl9A/640?wx_fmt=png)
+![](../../.resource/remote/ad9f3fe81a0b01ef7fea50011f1052fc2ee2a3e2cc763333dcfe378b20864316.png)
 
 无法访问，修改`Upload/data/admin/smtp.php`内`$smtppsw = "on"`, 断点追踪，发现在`Upload/include/sql.class.php`内会有检查；
 
@@ -161,11 +161,11 @@ $sql=CheckSql($sql);
 
 直接构造`test' and updatexml(1,0x7e,1)#`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZApJpeya2Uotsvia6ZbKiajyCymxcXh4ENOc1L8WoOicD48QpI1tf67cWA/640?wx_fmt=png)
+![](../../.resource/remote/7412ba4cabb3afc400ea5484127121e6e8cb3bee5db866f62f666268241a5b38.png)
 
 报错
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZD8z8ibvJYylJkZ03ic1ToMp8xhHgMp1V9KSU6C6zHjsd1sXcibDsiaLP9Q/640?wx_fmt=png)
+![](../../.resource/remote/4e7c91f539981b954be6138633f7e8ee2383d6e6eaafcc79992c0a94f1d5dcab.png)
 
 定位错误，发现错误在`CheckSql();`内，研究发现
 
@@ -184,7 +184,7 @@ function CheckSql($db\_string,$querytype='select')
 
 这样危险字符会被转成`$s$`，从而绕过后面的检查，但是结果了出现了`$s$$s$`  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZ2X3gyr5ErgBkLibdk8iaSIoychicWoribFBMoQDyyiabt4vfFsYK7PrWZAg/640?wx_fmt=png)
+![](../../.resource/remote/51560a3555ab99060ef1fde21a21a0149108dbfa0681d4c7225765931b907869.png)
 
 而在代码中有这么个判断：
 
@@ -210,7 +210,7 @@ if (stripos($clean, '@') !== FALSE  OR stripos($clean,'char(')!== FALSE  OR stri
 
 换一个地方，找一个数字型的地方试试。 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZYVM2u5yVSPHgUrP2SGtkQMjXh0iciclxfLaoiaFEibsm5UtJ43JA7qvWCw/640?wx_fmt=png)
+![](../../.resource/remote/c387152fa8f4c9700fd32204bdac7f60ee2634fc54b2a307df95abb16f1c905d.png)
 
 查看`Upload/comment/api/index.php`文件，用到`select`的地方只有 4 个，待会儿挨个查看。 
 
@@ -225,13 +225,13 @@ $type = (isset($type) && is\_numeric($type)) ? $type : 1;
 
 根据代码构造`?gid=1&page=2&rtype=1`，注意`page<2`会中断运行，断点追踪执行过程  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZHRUFibuw1xV9tlzPs45JRnGL3UGoU2HZzlwAbnUlo3zEib9YeNmPPT7g/640?wx_fmt=png)
+![](../../.resource/remote/2d48d2c90766168415931446360cfe3b94f36145afac19db271065fedf710655.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZmouugVe624sQUqxia1vibmJHTBVna0ZwS2BuAG9FeBAAwT6gBqgSMClw/640?wx_fmt=png)
+![](../../.resource/remote/4fd250255049f4e1f62ca49730a1ceb1185987ea9e92e031dfcc909d0aadaff6.png)
 
 发现经过上述 4 条语句中的前两条，尝试使用 16 进制做判断，测试了很多方法，用了好久都不行，后来直接在数据库里构造也没弄出合适的语句 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZTbru1VhBZ9o0YlfdksjPiaB3P2xPrth8EMD57M3QTAIITia1jd3OUVkA/640?wx_fmt=png)
+![](../../.resource/remote/4b04b4332f1643e63c1696d5e7f45ff323718869c3df3005599344e85454c461.png)
 
 只能接着往下看了。接下来是
 
@@ -242,7 +242,7 @@ $sql = "SELECT id,uid,username,dtime,reply,msg,agree,anti,pic,vote,ischeck FROM 
 
 里面有两个参数`$type`和`$ids`, 查看`$ids`是如何构造的  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZ9RV5LLFA7m3NgFiaDhRgppekT4pQjkTTTs5icibdib5VCpNiclsC3FicS86Q/640?wx_fmt=png)
+![](../../.resource/remote/9d59654bd74e45016749809a8540873a382e7553dfb6b648c90dd801eb5bb5a2.png)
 
 梳理下过程，函数运行到 18 行`$h = ReadData($id,$page);`之后，在第 19 行开始赋值`$rlist = array();`, 一路运行到 24 行`die($h);`重新运行`$h = ReadData($id,$page);`此时`$rlist`是一个空数组。
 
@@ -295,7 +295,7 @@ $sql = "SELECT id,uid,username,dtime,reply,msg,agree,anti,pic,vote,ischeck FROM 
 
 报错如下  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZxBBHr3e8gBVAsfgc9ps6UJcmt6zFibazTjbl8kzvA4H9og2tDVEVzTg/640?wx_fmt=png)
+![](../../.resource/remote/7dbf86a1272f96b1d968273f12039dafdf3f301f4ecf0313406fc35c7713f6d3.png)
 
 全局搜索，在`Upload/include/sql.class.php`中
 
@@ -318,7 +318,7 @@ $sql = "SELECT id,uid,username,dtime,reply,msg,agree,anti,pic,vote,ischeck FROM 
 
 不允许有小写的`union`和`select`，重新构造
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZjouDmXunhd1xUG1otu4FN96MOGyn1sByplyv6FIgsmxZgXUEiaDmvTg/640?wx_fmt=png)
+![](../../.resource/remote/46c7cc9f8763d4c671b1e9f5ddd377ecb84c26013320e1e768d1ad87af5779b7.png)
 
 没执行，但是没有报拦截, 断点追踪，看看语句
 
@@ -331,7 +331,7 @@ sea\_admin-- \\') AND ischeck=1 ORDER BY id DESC
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZ5hLz7nDicZqgkk5njObiaZ8NiapNfibia3IaVOPO23P8avOPO2f1xqfQCXQ/640?wx_fmt=png)
+![](../../.resource/remote/0259de0aa63a92223b31de5aa3719ab8370cdc30bf9ac405a11b286f2494ec1c.png)
 
 分析可知，多了个单引号，这个单引号虽然有助于绕过 80sec 防注入，但是在数据库里会出问题，尝试注释搞掉它 因为有过滤，所以试着用下面的方式进行注释
 
@@ -360,7 +360,7 @@ sea\_admin-- \\') AND ischeck=1 ORDER BY id DESC
 
 报错
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZCcNoGsot9stlgia1PTrDOTECsAkRPCT5MjcCnamlCUZd1GL2q438RBQ/640?wx_fmt=png)
+![](../../.resource/remote/2d93b4252c1a9eb6f74385f87768144fcdb2f691e701a01db7dbdeaaa9bda4bf.png)
 
 其实这时候说明成功构造了出了`/**/`, 只不过被拦截了，使用`@`插在`/`和`*`中间打破正则，构造
 
@@ -402,7 +402,7 @@ function Readmlist($id,$page,$size)
 
 结果如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZfqR6mIP1hfM35r5CFqLQL9o8nDJibjNcGlkjic1DO4HSicLPeTsBveHGw/640?wx_fmt=png)
+![](../../.resource/remote/f8b1d37cd07d93aed2e3bdd60bad10b54d2c440474820852e3efef7db840b8b0.png)
 
 查看日志
 
@@ -438,11 +438,11 @@ sea\_admin-- \\') AND ischeck=1 ORDER BY id DESC
 
 就可以了，如下图
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZwrkLwv9R8pv9n0cjD4OubA232M1w0aJvmKXTfDic4AVKzeGsPVNDAAw/640?wx_fmt=png)
+![](../../.resource/remote/23fd57e8eaaafafce7b5ed0e75b885d96036dee348efc0964e25ebc3def6ade2.png)
 
 查个密码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZEWmdlhRFnJxxNCwuatkn4yR3Z1lRzpicKqepavs07thHmiaag36pOyIQ/640?wx_fmt=png)
+![](../../.resource/remote/7827353e32b9e9dfa17e75a48e84e8018b11bd17fe6ea290662c6b2493fbc040.png)
 
 ### 总结
 
@@ -458,7 +458,7 @@ sea\_admin-- \\') AND ischeck=1 ORDER BY id DESC
 
 这是我学代码审计的第二周，也是我审计的第三个 cms, 在这过程中深刻体会到一句话: **漏洞的本质在于输入和输出的控制**, 道阻且长，代码多不胜数，慢慢记吧。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfeibiahLB2ygmQDWKPibocFLVp3xWu8OuId8iciazic5rhcfajBpcK3iaYicN55UQEZPnVJ5icAvVKcib9Ieacw/640?wx_fmt=jpeg)
+![](../../.resource/remote/8a30eea4f4f260bbb67fcb558d5b04de0db1cff17acba665a8d95aaab4705e1f.jpg)
 
 ---
 

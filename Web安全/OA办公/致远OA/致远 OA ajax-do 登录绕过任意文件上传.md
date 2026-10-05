@@ -205,7 +205,7 @@ echo $webshell;
 
 上传后请求 webshell 地址，访问返回出现如下图则成功写入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqdjpNzAh6qTBCo4ewU5Cr6fNiceIX18o1xibPmdd7Op1ZGh0c20fhq50RVoPTdHujMuf6s8Nfo1koicQ/640?wx_fmt=png)
+![](../../.resource/remote/74a3231e82174002904d122106b08b268481b4772ef61f4a462b7edf9efe6803.png)
 
 > **Note**
 > 
@@ -215,7 +215,7 @@ echo $webshell;
 
 使用冰蝎连接:**rebeyond**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqdjpNzAh6qTBCo4ewU5Cr6fuLArQgYJoO5UtW5uicXeZWVwKcWIT2wANaF1APVxfjiaYPhR6APzwnuQ/640?wx_fmt=png)
+![](../../.resource/remote/6468c7d559694d1db86ffcfbd35ca022626248693a17006e505c5ead1c69b78f.png)
 
 **漏洞利用 POC**
 ------------
@@ -267,7 +267,7 @@ if __name__ == '__main__':
     POC_1(target_url)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqdjpNzAh6qTBCo4ewU5Cr6fZVbed5zU7NkoW9icDPV9YPXqszdhMjv3gQGrvzZa4RqYkrh25w2C1Hg/640?wx_fmt=png)
+![](../../.resource/remote/62bff2730c5614c6837448f755ae9ee5a10f2cf52eb5212c671d76deccbcc4d8.png)
 
 文件编码脚本, 自行进行自定义调试
 
@@ -287,7 +287,7 @@ echo $webshell;
 ?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqdjpNzAh6qTBCo4ewU5Cr6fMyoI9j4XHjO9ASmGKS67V07DlwyRah22GUdXJVOoKjhfSRTAicfleSQ/640?wx_fmt=png)
+![](../../.resource/remote/c65c75bc67583b24c15efee38743d9ef0cf6f7d80eafdcf2e0aa5cd273328131.png)
 
 ---
 

@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Ravie Lakshmanan  代码卫士   2023-05-04 17:35  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -59,7 +59,7 @@ Ravie Lakshmanan  代码卫士   2023-05-04 17:35
   
 **FortiGuard Labs 发布安全公告指出，威胁行动者们正在利用影响 TBK 数字化视频记录 (DVR) 设备的一个未修复漏洞 (CVE-2018-9995)。该漏洞已存在五年之久。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMTrAHkdKMa6fHC9ibFXqneeopib5N9MxaeIVYGiad10eKZhbUHHdN20tuP4RLLNFJnFKTSmF7KLPx6icg/640?wx_fmt=png "")  
+![](../../.resource/remote/cd0c5e75c20dd68311f507cef9a3c569c1db69279d5eb6d2f33eb382a147c6fc.png "")  
   
   
   
@@ -73,7 +73,7 @@ Fortinet 提到，“目前可接触到不同品牌下的数万台 TBK DVR，PoC
   
   
 ****  
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQZeSribxs2yU1w56EMvgX9cDBCiabniazxdxtQ25cBCAd5vBJIM2sOv1khjzwwViaT0pS74U6piaiauiaGA/640?wx_fmt=png "")  
+![](../../.resource/remote/66b1ac947994df6ffca93aa0695c4d5878660931663fdc6f9bb6359a33c59e8f.png "")  
   
   
   
@@ -132,15 +132,15 @@ https://thehackernews.com/2023/05/hackers-exploiting-5-year-old-unpatched.html
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

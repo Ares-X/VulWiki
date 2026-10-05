@@ -60,7 +60,7 @@ schema_version: "1"
   
 记得上个月给某金融客户做安全加固，他们给的资产列表里混杂着测试环境和生产环境。用这工具批量导入IP段后，Shodan的数据库直接把暴露在公网的Redis、MongoDB全给揪出来了。特别是那个开着27017端口的数据库，CVE-2022-29020的高危漏洞直接标红。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/LYy9xnADcdjF5LVjrys0fIyoWqfu1P4fj3ojT4viasL3Kx8CCbo9vicHkO7TJETqSfVeCUj7D10vNS1SnjznLdyw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/46ef1f021228c9b341f70795dbd72e5acc2ec045b6625ea7601b2af4203112a5.jpg "")  
   
 模拟攻击时，发现某OA系统的Tomcat存在CVE-2020-1938漏洞。用LazyHunter一查，发现同一内网段还有三台服务器用着同版本组件，直接生成了横向移动路线图。要搁以前，这得手动交叉比对扫描报告。  
   
@@ -105,7 +105,7 @@ schema_version: "1"
 https://github.com/iamunixtz/Lazy-Hunter   
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/LYy9xnADcdhic61NkXCWKufScrUrmmsG8tztWD8fDRiatPUaljxxpKc1PpnYNFjPibU5FwJmcuO4mZoQg5aXsAcog/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/2978135b05d1029db4d627613977f7885477fc56580d33730fcb7730ada8634e.gif "")  
   
   
 声明：该公众号大部分文章来自作者日常学习笔记，也有部分文章是经过作者授权和其他公众号白名单转载，未经授权，严禁转载，如需转载，联系开白名单。  

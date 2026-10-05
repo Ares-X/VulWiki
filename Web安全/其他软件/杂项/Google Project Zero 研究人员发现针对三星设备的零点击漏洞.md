@@ -66,7 +66,7 @@ schema_version: "1"
   
 网络安全研究人员详细介绍了目前已修补的安全漏洞，该漏洞影响三星智能手机上的Monkey Audio (APE) 解码器，可能导致代码执行。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaEI5fQDUTBdhSm4rsfmjj8Yhw2rDTcJw5vXCdiaM7ypTrqvWBeLh9gPQfYOlmU7iaictZwGvrH0F96cw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ebf9f68b7c67048dd38c863939a53bda31a3c04c066131fdcc449d56ba491d53.png "")  
   
 该漏洞编号为CVE-2024-49415，CVSS 评分：8.1，影响运行 Android 12、13 和 14 版本的三星设备。  
   
@@ -125,7 +125,7 @@ https://thehackernews.com/2025/01/google-project-zero-researcher-uncovers.html
   
 https://securityaffairs.com/172909/hacking/samsung-zero-click-flaw.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

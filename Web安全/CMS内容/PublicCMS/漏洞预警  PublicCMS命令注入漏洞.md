@@ -46,7 +46,7 @@ schema_version: "1"
   
 PublicCMS是天津黑核科技有限公司开发的开源JAVACMS系统。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVfRgZ6ibfom9PVU6ppu085FgGTDfI4jqMlQgkza90h44m8Y0Mm54RLibRicN4vgGEFJ0UbjazX1kcrg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0422cdcda02364033d1d4f2c60d6fc21a6a8d4adfce6291d9deb09433fa9f915.png "")  
   
 **0x03 漏洞详情**  
   

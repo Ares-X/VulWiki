@@ -88,7 +88,7 @@ $ cat test.lualocal arg1 = arg[1]print(arg1:match("([a-fA-F0-9]*)"))$ lua test.l
   
 最新版的patch代码如下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLUx01hEV1cI75YWzpPZztFTibJ6OWZ7QSfN1Fzdickpc9c9CuqNEIYd0w/640?wx_fmt=png "")  
+![](../../.resource/remote/83fb460a7b7c6ba5d9ed78de76b58012187af7abb90a6ac3e967d204ad4fd4c4.png "")  
 图1 IOS XE系统新版与旧版比较代码  
 正则变成：ip:match("^([a-fA-F0-9:]+)$")  
 ，这样，基本就没绕过的可能。  
@@ -97,7 +97,7 @@ $ cat test.lualocal arg1 = arg[1]print(arg1:match("([a-fA-F0-9]*)"))$ lua test.l
   
 1.snortcheck.lua  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLS70SdFEeLVNO5NuMa2Eutib8Yia46SyRvRoThEYppuqyKYvI9qkjWibcA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f8b4d93baa5d43129c104e9819c97eae7d18c937d987f526b7d91a4e6df70c7.png "")  
 图2 snortcheck.lua文件相关代码  
 在validateSnortRequest  
 函数中会对ipaddress  
@@ -105,7 +105,7 @@ $ cat test.lualocal arg1 = arg[1]print(arg1:match("([a-fA-F0-9]*)"))$ lua test.l
   
 2.softwareMgmt.lua  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLrG14KjdeguFUBDWNM0AeTOTGnDfnVDPpial3Sjc8gvSfMnNaSic3T9bA/640?wx_fmt=png "")  
+![](../../.resource/remote/fbe7f84505a9dd48998ef965547aa48623a12bbe311289e6b3199e0ce6321a8c.png "")  
 图3 softwareMgmt.lua文件相关代码  
 在validateSmuRequest  
 中会对ipaddress  
@@ -196,12 +196,12 @@ nginx默认情况下，就是把请求发送给iosd
 头，如果是通过默认路由访问到iosd  
 服务的，则设置为：Proxy-Uri-Source: global  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLbtwVbUBpWa8x4UNHg8sahica28x2tmvlEgM79NbhibJteDSibTyuoNCSQ/640?wx_fmt=png "")  
+![](../../.resource/remote/be03cd4aa9b1615b9f168e769d78a1234430ff38ea856d56c73f3cc7aece633e.png "")  
 图4 iosd在IDA中的相关代码  
 如果是通/lua5  
 路由访问的，则设置为：Proxy-Uri-Source: webui_internal  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLFIFIlgHgIicz6oslZXfTJ5HGfo6z3SLbz6j431YqK7KetoQKb11xxpQ/640?wx_fmt=png "")  
+![](../../.resource/remote/642aa6dc9fd7aa58def49a65c9c304d553a835f6ec37f2e5c0470b5702ce7638.png "")  
 图5 IOS XE系统新版本新增代码  
 而iosd  
 后端处理webui_wsma_http  
@@ -227,7 +227,7 @@ iosd
 Cisco官方并没有公布漏洞详情，但是公布了如何检测自己的设备是否被攻击者植入了后门马。  
 #### 第一种检测方案  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLn8ibGzSPcoWpcmICCuMaiagQtGxlyRjJLaAOvp2eFAAtVAZ3GcIiaUXng/640?wx_fmt=png "")  
+![](../../.resource/remote/1cd6239973bd5d06cfe2c5b29a2b130434aa1e5739e28855d00f11bb2b045b50.png "")  
 图6 IOS XE后门代码1  
 上面的代码猜测是Cisco官方在设备中抓到的后门，通过上面的代码我们可以知道：  
 ```
@@ -242,7 +242,7 @@ $ curl -kv http://host/webui/logoutconfirm.html?logon_hash=1 -X POST# 该请求�
 值都不同，应该是和前面返回的十六进制是一一对应的关系。  
 #### 第二种检测方案  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLZUcFZngxVAd2Yftg3eqWzvdX5P94shWvib8JKLaEHVVXtHZD292o0tA/640?wx_fmt=png "")  
+![](../../.resource/remote/b79a71c8108fff0a4680ee44df486399da8e69c8b70a791410b5c9cfe9d0afee.png "")  
 图7 IOS XE后门代码2  
 第二种相当于在第一种的情况上进行了升级，增加了认证代码，我们并没办法知道Authorization  
 的值为多少，不过Cisco官方却提供给我们了：  
@@ -255,7 +255,7 @@ $ curl -kv http://host/webui/logoutconfirm.html?logon_hash=1 -X POST -H 'Authori
 功能，用来执行Cisco CLI命令。  
 #### 第三种检测方案  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLic5uMpAG1aNjS3fnkObsrEYCoYchBej5kJnNyuc5u5wGZbXTs1Y8ibCQ/640?wx_fmt=png "")  
+![](../../.resource/remote/7411d4c438e880525baef29b14cbe0128b500b18abfa529fd6dd096231427e61.png "")  
 图8 后门代码中的修补代码部分  
 攻击者不仅在目标设备上留下后门，还对未授权的漏洞进行修补，该路由将会匹配包含%  
 百分号的请求，如果请求的uri  
@@ -321,7 +321,7 @@ ASR1000 Software (X86_64_LINUX_IOSD-UNIVERSALK9_NPE_NOLI-M)ISR Software (X86_64_
   
 随后发现后门再次更新，更新了两部分内容，第一部分：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLex7rDoHSMLhbL4JTFZica9pGdIfjHq0AeicGctTMcfbFtQRqxAoO4Qibw/640?wx_fmt=png "")  
+![](../../.resource/remote/e632482deaaa4f62ee8c3741c623b456ee02f35b7c49ef24995b4598e1d24222.png "")  
   
 图9 新版后门的修补代码  
   
@@ -330,7 +330,7 @@ ASR1000 Software (X86_64_LINUX_IOSD-UNIVERSALK9_NPE_NOLI-M)ISR Software (X86_64_
   
 第二部分：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0nc7UibpnyUdBFV5nfbWwhLqtCJxib2Ar2akRTl67D1icLW51aQlAjOHXX30FSJtm9dO1GaW7icFgs7w/640?wx_fmt=png "")  
+![](../../.resource/remote/91c825b7d9619c69cf6c6212d61dc60181be5e11c893b401cdad7ec6835a7451.png "")  
 图10 新版后门的认证部分  
 该部分更新让我们更难的通过logon_hash法去探测被入侵的目标，因为Authorization  
 不再是一串hash值，而是要求指定值的sha1sum哈希值为指定值，这种情况下，只能通过hash碰撞，爆破sha1哈希值等方法来通过后门的认证检查。  
@@ -354,7 +354,7 @@ ASR1000 Software (X86_64_LINUX_IOSD-UNIVERSALK9_NPE_NOLI-M)ISR Software (X86_64_
   
 1. https://www.horizon3.ai/cisco-ios-xe-cve-2023-20198-deep-dive-and-poc/  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/3k9IT3oQhT0mSRTxbY7fsoLUFViaxk1nhQByibgTdbwbMqNibWMKbHKrjwUUY8GNZlAoUlcic5ibVhyCebVwoNialnow/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "404 logo-b04.png")  
+![](../../.resource/remote/b625135bbd87b3f404f32587af667f69d01ea46d33b06ce59cf3dbc300241dc9.png "404 logo-b04.png")  
   
   
 **作者名片******  
@@ -362,10 +362,10 @@ ASR1000 Software (X86_64_LINUX_IOSD-UNIVERSALK9_NPE_NOLI-M)ISR Software (X86_64_
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/3k9IT3oQhT3sXnXuQEC0cBYM1ticOaffZ9wCTgmvWia2tw6zicibs7e82O4HEOmSbftfdEUTlUgTG0R93KQJnQn1FQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/09577a7c21b0281a63d725444c357fe9b607458d5acee483ecdbf69761159e53.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3k9IT3oQhT0Z79Hq9GCticVica4ufkjk5xiarRicG97E3oEcibNSrgdGSsdicWibkc8ycazhQiaA81j3o0cvzR5x4kRIcQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/0ec3d2e970617b231bf3f09ccad3daca48f94c6a76eb40009fd8b0d6dd138417.gif "")  
   
 **往 期 热 门******  
   
@@ -376,7 +376,7 @@ ASR1000 Software (X86_64_LINUX_IOSD-UNIVERSALK9_NPE_NOLI-M)ISR Software (X86_64_
 [](http://mp.weixin.qq.com/s?__biz=MzAxNDY2MTQ2OQ==&mid=2650973143&idx=1&sn=9ac214cb2e34e16e28940b1b2a84cbd3&chksm=8079e1e5b70e68f306e34893bbacafb61a9ba8ff57045b639641791fa4d93b4c79f8ad9f03ff&scene=21#wechat_redirect)  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3k9IT3oQhT3XlD8Odz1EaR5icjZWy3jb8ZZPdfjQiakDHOiclbpjhvaR2icn265LYMpu3CmR1GoX707tWhAVsMJrrQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif "")  
   
 戳  
 “阅读原文”  

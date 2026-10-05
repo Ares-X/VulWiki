@@ -49,11 +49,11 @@ source_status: "unknown"
 
 Superhero  Nday Poc   2025-07-03 02:44  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkYN4sZibCVo6EFo0N9b7Kib4I4N6j6Y10tynLOdgov9ibUmaNwW5yeoCbQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/a186c4f5d9d52347540c4cbb93e8961b5ba9c0dd7f4fd061d48211661876676f.webp "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkhic5lbbPcpxTLtLccZ04WhwDotW7g2b3zBgZeS5uvFH4dxf0tj0Rutw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/77be41dad9935140a4007bdfffbddf41fc1a986a3fecd8c99e21852085b04197.webp "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCk524CiapZejYicic1Hf8LPt8qR893A3IP38J3NMmskDZjyqNkShewpibEfA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/44ad08ffbb51946186bc46c860da341a77d976872c15eb51f56d078afe49905c.webp "")  
   
 内容仅用于学习交流自查使用，由于传播、利用本公众号所提供的  
 POC  
@@ -79,7 +79,7 @@ FOFA:
 body="/html/css/dxtdata.css"
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKjEE6TBckrtsu4FDibkTFcy1H0KXoSkCH6Tuzk2eNQJia7iaAJRQRnhFzYZOW6QBOpDDnUqwL8GCQRA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e1e473c3dbe4a2d744e8c2ed5da75f374bf0542a92784e15109042f2cf7e61c6.png "")  
   
   
 **03******  
@@ -88,11 +88,11 @@ body="/html/css/dxtdata.css"
   
 写文件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKjEE6TBckrtsu4FDibkTFcyF0HuRjQ4p82PVhLyu56vpp5iaYLdHwn8HAhKu82Rvzic0sngicYpiayl8A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f83ed8d7a84b96cb05aa977a29beda58a515251babe91aea26861d666af74c3f.png "")  
   
 读文件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKjEE6TBckrtsu4FDibkTFcyJ56JlTdIxKiaF3SDatuMACqHnoFndmib4rw8njVdt1G5Kj1zTvkaEjgQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e98b1cf0554eb06eef84712e85c14484945a4934f1378ad79d19cad52231e448.png "")  
   
   
 **04**  
@@ -102,15 +102,15 @@ body="/html/css/dxtdata.css"
   
 nuclei  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKjEE6TBckrtsu4FDibkTFcyqnwKNAaMIuCLXWaQEJQdFuwtziaicgvicRj2Tou0yJLBssianfdzgY9Uvg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/166b20f09e737a0e59e41a2b88ab0de5aee7d907d2209abd9ae7408365fcb1b1.png "")  
   
 afrog  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKjEE6TBckrtsu4FDibkTFcyLX6ianccD4Br8iaP2tibKAYTMHyWtfyJicU8L8kXyDcor2PJkrSvn2JqUg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dc5e90664ac4e408022ab5466eb0bb53c1c5fbd7dce630de9bbde1f6b3daddd9.png "")  
   
 xray  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKjEE6TBckrtsu4FDibkTFcyeaR84sFaQlCjgCUdDqoK8v5fKcH6a2MSeA4n9r9VCWM1jzsmNhT22w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e2a37e2a7bef6e70722ab06ca75deec08a32d77c4a8015fbe167f52c1ee5967e.png "")  
   
   
 **05******  
@@ -160,7 +160,7 @@ xray
   
 ⚠️ 声明：仅限合法授权测试，严禁违规使用！  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwKE6HlialDOuZmZiaaGBhUxs0uPw8ia9QiaUFicEkckcjkG3czx12xRkRFM5XicUmvmKVpC5WzpOCeR93Yg/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/7949ef457ff8d7833c0a84a353f86732591a27b77cc7537f220e01eeac2a9091.png "")  
   
   
 

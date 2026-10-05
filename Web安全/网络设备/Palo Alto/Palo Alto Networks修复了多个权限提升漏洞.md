@@ -49,7 +49,7 @@ source_status: "unknown"
 
 鹏鹏同学  黑猫安全   2025-06-16 01:48  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceicbhicIuO4lYKvBV5H8vEOHwWBRmuiceCQia5YMzRqUbmCJMeTvhaUE9ZXwpT6NwU1N09PjY8gWZAAvA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/33145989d86a9e33915df3592f952e647f98b01efc2e31e1fed86ab165dfcd2d.png "")  
   
 Palo Alto Networks修复了七项权限提升漏洞，并将最新Chrome安全补丁集成至产品中。  
   

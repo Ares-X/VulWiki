@@ -85,7 +85,7 @@ schema_version: "1"
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC6mpt7JbBoCdIbkf4IeUUsjTLpicJFnj5ZvTLv2tc9HW06OdNicgdZ9V90GGUonok8nibSiagrTZUicbiag/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/be0b4c7fd9dcc45e8f3f469c2831d13610849525a954de43d4e765c1cacd2229.gif)
 
 **文件上传漏洞**是指攻击者上传了一个可执行的文件到服务器并执行。这里上传的文件可以是木马，病毒，恶意脚本或者WebShell等。
 

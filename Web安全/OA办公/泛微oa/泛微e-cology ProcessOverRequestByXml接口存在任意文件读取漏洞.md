@@ -65,7 +65,7 @@ CNVD编号:
   
 泛微e-cology  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPeaCQ6lxOcVVnIfxr7sU3sjnL6TEA5apBOicCkV4zZUf59giaMpgfgoXQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/e4b8601758b74d4d192341ec8b7e3610a1d1bc2ad6763e03620abf5817aa8542.jpg "null")  
   
 泛微e-cology ProcessOverRequestByXml接口存在任意文件读取漏洞  
 ### 4.fofa查询语句  
@@ -91,22 +91,22 @@ Content-Length: 146
 
 > 请求长度说明：原资料 Content-Length 为 146；保留原始标头；其数值未据实际请求体重新计算或验证。
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPK8o0bbowreiacDhDbrpLia2dqOJ3icSmibMEapGjrHCTVRqo8xOIvAYoRA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/e6b79a1611caa8425c5d00448ead52dd6c19ce51f7ddfa4f331ea25fff68465d.jpg "null")  
 ### 6.POC&EXP  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPiaefydDicEjFO8spVsic6NdNDvgAia8mWTjUBu7sz6Koictk9u5GpWCNeLA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/cc93ebcdcbd34198f948c093eb9e0191ff05cc567d0d984be702ca1ddd9c201f.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPNsgHSwZjN5UHdY2xFo2YWiaJwqB8KAYXQkm5gy1LtRr2y18nFwwlrkQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/a9f6a3a4c648ac7928ce52f931737cfa3f866c26b7a423274f702ed5bc021add.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPbTTRKkyah5r5dTjYK6P0I2uYFMnhl7F1iaFVJJ0MrBKKvJncDELxclw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/97c98b18f439a868d8cfa64cedce8533e0b3e047aea351c40ee5c9c04548f442.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPY0odmDaru8PqCq7SGw8zhMDK8O2GQibQmiaCaAuXic7Y2LIMdWrD2xC5g/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/52cf49b8035e39b0d88a3b1ebd2a90cc2530c6d361f456979640567457456ded.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggP2RPJQasVNwPllHYIQK5smIEbcvtRznA28Xm9vG8zZszickb3oeakV7Q/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/cee40f310988c352b2dcd7342d7c204003b81cef9dc7e043db5b852ffdc43cc7.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPqeL1etiakSyCkkspA9wxBpn72l1OlNZ7zngRfABDTK6BrcWU7bBZl0w/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ### 7.整改意见  
   
 请联系官方打补丁：https://www.weaver.com.cn/e9/  

@@ -50,7 +50,7 @@ schema_version: "1"
   
 go-git是一个用Go语言编写的高度可扩展的git实现库。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVkFdQtD1w6hW1aqBKDvPKCVFib9lVbgkxhgIJrvcIx6PfTzIDFmy1ZzM2nic7cX1iaqXOqIAq8abn3w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8dfaa36004dbfc6bd45f52f39134eeedbb82e03423b53170cddf4bab31bf8d67.png "")  
   
 **0x03 漏洞详情**  
 ###   

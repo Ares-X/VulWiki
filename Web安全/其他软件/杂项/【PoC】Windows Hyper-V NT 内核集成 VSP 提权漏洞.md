@@ -101,18 +101,18 @@ _IOP_MC_BUFFER_ENTRY
  指向的数组中的**一个条目**  
 。 由于指针数组的大小可由用户控制，这意味着它可以用于从多个 LFH 存储桶的堆溢出和 UAF 开始获取可靠的内核中任意读/写能力。 我不知道是否有人已经分享了这种利用分页池中的溢出或 UAF 的技术。 这些截图是在执行 POC 后拍摄的。溢出发生在对象大小为 0x50 的存储桶中。注意可以在该存储桶中分配 RegBuffers 数组，且第一个指针指向用户空间内存。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTo9eLLCxs64bsKrohs3qILNQia20NiapdRQDZ71lRm3XBViaA6ZhZ7ZyBdbn534q7TftmyrHYwoMAXQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6dc18a0c1adfc01ec41ae845bf1a97e3a4b1f5e9f6b94dd47b9ade12e0ea640a.png "")  
   
 注意恶意条目将 Address  
  设置为一个进程对象。_Address_ 对应于我们可能想要读取/写入的任意地址（这在 Yarden Shafir 的文章中已有详细描述）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTo9eLLCxs64bsKrohs3qILMg6Vwo77sLXuXLCubiaXnAib5EQzByRiaNOq00ESjtQiavL3WaTvNVWTiag/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c4251845e4ca3bff0ac189c104629f720c9744b5c9b02dadad3aa304989bffbb.png "")  
 ## 需求和限制  
   
 必须开启 **Windows 沙箱功能**  
 ，这样易受攻击的系统调用才会由易受攻击的驱动程序处理。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTo9eLLCxs64bsKrohs3qILYWhMpzyMMlJ4umfZG0wKpicO0fOZ0kLWXWGgOIW1CWk7MA7ChbEaxxg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b37b0bf3c59e664f81459e1ccfe4b52eb7bd2e7a8091aee49164cc1ac81f1259.png "")  
   
 我设法获得了 **0xfff0 字节的溢出**  
 。我没能使溢出长度完全可控。如果**溢出大于子段**  

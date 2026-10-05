@@ -42,7 +42,7 @@ schema_version: "1"
 #  利用旧的ThinkPHP和ownCloud漏洞的攻击事件激增   
 胡金鱼  嘶吼专业版   2025-02-17 06:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 威胁监测平台GreyNoise报告称，  
 越来越多的黑客正试图破坏维护不善的设备。  
@@ -59,7 +59,7 @@ schema_version: "1"
   
 尽管它的漏洞预测评分系统（EPSS）评级很低，只有7%，而且该漏洞没有被包括在CISA的已知被利用漏洞（KEV）目录中。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2ib12eicKmIIRRyKsgeicIBCuEwXT86buEsffFGiardpbvarnuCOFw5C8dpbSNlQkicpmgibxBMHx0RX3pQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/110788e8cf109d36496554d1d2a7830a1a70ee1b9903e88fb0db2c363f9824ee.png "")  
   
 日常开发活动  
   
@@ -71,7 +71,7 @@ schema_version: "1"
   
 尽管自供应商发布解决安全问题的更新以来已经过去了2年多，但许多实例仍然未打补丁并暴露在攻击之下。GreyNoise最近观察到CVE-2023-49103的利用增加，恶意活动来自484个唯一的ip。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2ib12eicKmIIRRyKsgeicIBCuEaK0JIRvCG5Ix6bcp7ibsnZOjib3I3NUA8E4kzePI4lGAOpTZCdn6RyFQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2be0b174bd08b9280bc1989e42967b909ffb8163a897ad2a3041a1c3a530c969.png "")  
   
 每天针对ownCloud的ip  
   
@@ -79,9 +79,9 @@ schema_version: "1"
   
 参考及来源：https://www.bleepingcomputer.com/news/security/surge-in-attacks-exploiting-old-thinkphp-and-owncloud-flaws/  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2ib12eicKmIIRRyKsgeicIBCuE5tmrwOG0iaQiaB1UtqUibeuWl9BAeyzjFiclJldKEjkoMPo6Y8qiaAXqbLg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2ib12eicKmIIRRyKsgeicIBCuEibo6ICU4p5MuAuicg00LQmzYkyp78yW2utO1NJWFUTTQicbicC9TvdlhyA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
   
 

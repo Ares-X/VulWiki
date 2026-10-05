@@ -46,7 +46,7 @@ schema_version: "1"
   
 近日，美国网络安全和基础设施安全局 （CISA） 将一个影响美国甲骨文（Oracle）公司融合中间件的严重漏洞跟踪为CVE-2021-35587（CVSS 3.1 基本分数 9.8）。该漏洞是由于yizhi Access Manager（Oracle融合中间件）未对HTTP请求进行有效的验证，攻击者可利用该漏洞在未授权的情况下，构造恶意数据进行远程代码执行漏洞攻击，最终获取服务器最高权限。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/QmbJGbR2j6y0HPo7G1hgaN1VQNaOZq01XxPEbg6PcpYPTwfX9GwBU1GKpzBLLhECiaib8WQMHYzhHpdSNrA2GyHQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/38039032e8ceae290d1ad39da7da1ba3144cbfaf87bd22c3dd0c18d37c9007d1.jpg "")  
   
 美国甲骨文（Oracle）公司  
   
@@ -54,7 +54,7 @@ Oracle Access Manager是Oracle公司出品的一款单点登陆认证管理系�
   
 目前受影响的版本为Oracle Access Manage 11.1.2.3.0、Oracle Access Manage 12.2.1.3.0 和Oracle Access Manage 12.2.1.4.0在漏洞被发现后不久，Oracle公司就发布了针对该漏洞的补丁，及时修复系统。   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/QmbJGbR2j6y0HPo7G1hgaN1VQNaOZq01MFn6hQeibw0O92Sdckyqqjuet3jXbLO9nE7daAuyia2nhEw2dEHPCGZA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3ce0a9701bef6a03554eb0adb10a8c999bc600d1aeaa0bee1723a86517d7ad46.png "")  
   
 Nguyen Jang 发布的视频 PoC  
   
@@ -79,7 +79,7 @@ CISA已命令联邦机构在 2022 年 12 月 19 日之前修复这些漏洞。
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/6a85bd81b6c759a0832fee43a3d96c383ae032b5f74f300eaf04a904e924eab8.jpg "")  
   
   
 

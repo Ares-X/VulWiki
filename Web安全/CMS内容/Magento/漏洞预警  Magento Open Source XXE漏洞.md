@@ -50,7 +50,7 @@ schema_version: "1"
   
 Adobe Magento Open Source是Adobe公司的一套开源的PHP电子商务系统，Magento Open Source提供所有基本的商务功能，可用于从头开始建立独特的线上商店。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SXaqpBYiaDTgZPe9XeqSxh7yOLFz89okSbeNCBvI3EH8Uib9OBmh9gZnjOuukml79kZ7pXrfwQsicNnw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/2adfb3db274db214aeb149346238a432afb53a7ba77a3e81420e7ac11162d837.png "")  
   
 **0x03 漏洞详情**  
 ###   

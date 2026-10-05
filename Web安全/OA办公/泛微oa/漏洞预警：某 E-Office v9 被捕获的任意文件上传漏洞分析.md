@@ -46,13 +46,13 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/uAhcQ8O1HKHZ6JLZ_pmNzg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 **一****：漏洞描述🐑**
 
@@ -62,11 +62,11 @@ schema_version: "1"
 
 https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MMiaR8fQyEKMFDFKqZUBkEphYbgvDWBTA3BG4PKvbml2BaoW2F8HG29Q/640?wx_fmt=png)
+![](../../.resource/remote/5dba6d1cb39fd945c316866a2e99ab56abba9c751dadb32b339e9b7adaa2b76d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 二:  漏洞影响🐇
 
@@ -74,9 +74,9 @@ https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
 泛微 e-office v9.0
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 三:  漏洞复现🐋
 
@@ -90,19 +90,19 @@ https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MUFEuOVicEypveLGwo0pWsbSemToAIll83a8K6153NBIwZ7OQu9s5W1A/640?wx_fmt=png)  
+![](../../.resource/remote/24ead2516b24a901f416fd49671db3563deed015d38e569db9ae0146d6616353.png)  
 
   
 
 存在漏洞的源代码位置，主要是源于 uploadType 参数设为 eoffice_logo 时，对文件没有校验，导致任意文件上传  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MkbOfn9vPE1sTKGgGLicIVibNAibl2vH5GgwOB2GfYVJiafnq8xvN92LS8Q/640?wx_fmt=png)
+![](../../.resource/remote/95260acbe9f8d0f0558b3486980bdfa05f877caa6593d3d5c83ee2ff0f83f0b4.png)
 
   
 
 调用方法 uploadPicture
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MgDc5rmJngPYA6AchtTxk2H2fSoJp3QP2icyWWuxQicrwcyG1dRHicwTew/640?wx_fmt=png)
+![](../../.resource/remote/c13cbe15d814bb0a3b76a37f3bf54ab3468769d6c5f234ba7cc6a17ebd404cb8.png)
 
   
 
@@ -131,17 +131,17 @@ Content-Type: image/jpeg
 
 > 请求长度说明：原资料 Content-Length 为 193；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MAXYCsbxD8JjNibBmIv4nLYtwOg6A6oQk7l1PHH6SmHyn3NL7jQTCuMQ/640?wx_fmt=png)
+![](../../.resource/remote/9da34573610a895f375de9a3cfb7da79b1c19bc2fa51ad956988f31bb0a5dc03.png)
 
   
 
 上传成功后访问 /images/logo/logo-eoffice.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MAnsr7GVQe9tqFDRPezT3ribmIRT8xY36fbLonlNiayr4jwJ2mUETC2WQ/640?wx_fmt=png)
+![](../../.resource/remote/f463a72bfb51e5e6af4f9687c196f2458c1b6e54c38bbe021e5ad40180db5dd6.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
  五:  关于文库🦉
 
@@ -151,7 +151,7 @@ Content-Type: image/jpeg
 
                     https://www.yuque.com/peiqiwik                           
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7M1sUD3R1Am0JerQ98aaxL4qVEdVxM9YquIrAs2ovlic0sTp2KXdrvEnQ/640?wx_fmt=png)
+![](../../.resource/remote/f428fa7efb1ea243d315abadbaa5386e114d25f63b0376da5dd4b827e2f4f6a8.png)
 
 最后
 --
@@ -168,7 +168,7 @@ Content-Type: image/jpeg
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

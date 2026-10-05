@@ -64,7 +64,7 @@ schema_version: "1"
 
 Lawrence Abrams  代码卫士   2024-09-12 17:35  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -74,7 +74,7 @@ Lawrence Abrams  代码卫士   2024-09-12 17:35
 **Acrobat Reader 中存在一个RCE 漏洞 (CVE-2024-41869)，其 PoC 已公开。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQOpd7wGiaRuOYnMUibGAZpkC1m1XU9s28tELgO855dMKBbxLib3OQeZaibrj8kTvXWvCMKttzWNX9QrQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f06e2f5274cab008783f77e65bebe04443c456536ad86c5e57464501ce34c984.png "")  
   
   
 该漏洞是一个严重的释放后使用 (UAF) 漏洞，可导致在打开一个特殊构造的 PDF 文档时造成远程代码执行。UAF 漏洞是指当程序尝试访问已被释放或发布的内存位置中的数据时，就会被触发，从而导致异常行为如程序崩溃或冻结。  
@@ -82,11 +82,11 @@ Lawrence Abrams  代码卫士   2024-09-12 17:35
 然而，如果威胁行动者能够在该内存位置存储恶意代码，而且程序后续访问它，就会导致在目标设备上执行恶意代码。该漏洞已在最新版本的 Acrobat Reader 和 Adobe Acrobat 版本中修复。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQOpd7wGiaRuOYnMUibGAZpkClUxTKysgd4a6sb6lmfxJxS1kECB7BxQV80PmLydDKrtnM9SiaFZq0pQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d8ab9cf59ef7b3cc8e61e586814bcfb76287bdc14d20e9027cdb05714998e11b.png "")  
   
 **6月已出现PoC利用**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQOpd7wGiaRuOYnMUibGAZpkCZxgwgcUqicrF3NIhNtHNYyR7vfPnVzdbicIuDI0Ay3iboSnZNmOcqUfEw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/dcd91b81a294fcc883ac5327699f62f4a6430c79ac6be82f8f1e7dda6ef60210.gif "")  
   
   
   
@@ -151,15 +151,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

@@ -101,65 +101,65 @@ _手动修改上传数据包导致失败和使用 macOS 的 tar 打包会出问�
 
 从 [VMware 官网](https://my.vmware.com/group/vmware/patch#search)下载 VMware-VCSA-all-6.7.0-17028579.iso，一定先下载这个版本不要下载 7.0，为啥不能下 7.0 后面会讲到。
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-15-47-51.png-w331s)
+![](../../.resource/remote/8d62a797dba3ac42ebacbeaea3aa8cf48d93e2df75b5f776de101bd367dc61a9.png)
 
 然后挂载 ISO 文件后会看到有个 ova 文件：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-15-52-15.jpg-w331s)
+![](../../.resource/remote/fd55d4dba7c69811f7acac5f12a83d7422cc9492b1eeb0585a624a38fe974bcd.jpg)
 
 我们要用将它导入到 VMware 虚拟机安装，我这里用的 VMware Fusion Player 12.0.0：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-15-56-36.png-w331s)
+![](../../.resource/remote/14f92a9c7044772f3fd78da212ba4ae6ad3ab7ab9f79f50a392a7a030e99a7ab.png)
 
 部署选项选择 Tiny 即可：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-15-58-24.jpg-w331s)
+![](../../.resource/remote/a674164366bcb6b51026cac7d7a0dabc18851e39d262f46b392628ff43cc7e45.jpg)
 
 然后按照引导安装，网络配置参考宿主机，设置成相同的网段、相同的网关和 DNS，以便后续顺利访问。 假如宿主机 IP 为`192.168.18.2`（[ZoomEye 搜索结果](https://www.zoomeye.org/searchResult?q=192.168.18.2)），网关和 DNS 均为`192.168.18.1`（[ZoomEye 搜索结果](https://www.zoomeye.org/searchResult?q=192.168.18.1)），子网掩码为`255.255.255.0`（[ZoomEye 搜索结果](https://www.zoomeye.org/searchResult?q=255.255.255.0)）, 那么我们就设置如下：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-07-28.jpg-w331s)
+![](../../.resource/remote/aa3a8afcc74b37cddccc1532709cc0014fe6588eed03a62224e1cf9803a0efce.jpg)
 
 然后配置 SSO 用户密码、root 用户和密码，即可完成安装。 这里有个**小坑**：root 用户名和密码不要很复杂，我这里用的 root/root。之前设置了有大小写和特殊字符的密码死活登录不上，我以为我自己把密码忘记了，但是重装依然不行，暂不明原因，这个不深究了。
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-10-06.jpg-w331s)
+![](../../.resource/remote/e3edd40e09cde3b8c189d6edfac4aed4ea4824c85b747d16409e492758a16a37.jpg)
 
 然后再继续即可导入成功，虚拟机会自动启动进行初始化。
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-10-37.jpg-w331s)
+![](../../.resource/remote/4ede456673e1ac116c6cf0fbc1f5231d655b73a2d35192f01a057ef97109c19c.jpg)
 
 此时查看下虚拟机网络适配器模式应为桥接模式，不用更改。初始化 OK 了如下图：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-12-10.jpg-w331s)
+![](../../.resource/remote/8389797d127f8578f53b992abd98525266229112e0c265dfbfe862f81cf64148.jpg)
 
 此时域名为 photon-machine，我们没有对应的 DNS，所以手动修改域名为刚才设置的 IP（192.168.18.5（[ZoomEye 搜索结果](https://www.zoomeye.org/searchResult?q=192.168.18.5)））。按 “F2” 手动修改域名，“enter”进入网络配置：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-14-06.jpg-w331s)
+![](../../.resource/remote/0c36924d9a29c1cad93a0c89e4519251126803e2dcd6a0c27903b7062e33c8a5.jpg)
 
 进入 DNS 配置将主机名从默认的 photon-machine 修改为 IP 地址（192.168.18.5（[ZoomEye 搜索结果](https://paper.seebug.org/1500/192.168.18.5)））：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-27-39.jpg-w331s)
+![](../../.resource/remote/a87d939e177e0f38dcecc8bb50ffa961d6a9382cdb575cbada727e234d95b854.jpg)
 
 然后重启网络，等一会儿：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-28-04.jpg-w331s)
+![](../../.resource/remote/f7749ac83a129b40c77c27143a0ec31155172f909b0f2f3bba0e627921f489d4.jpg)
 
 回到了刚刚的页面，这时之前的域名已经变成了 IP：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428655000-2021-03-06-16-46-38.jpg-w331s)
+![](../../.resource/remote/5644a400abd9ed47c3dd5c9f788ba53f549caae2a92417e5a66ef7c3cd807add.jpg)
 
 至此第一阶段安装已经完成了，这个过程顺利的话 5 分钟搞定，主要时间花费在第一次启动虚拟机初始化的过程。
 
 **第二阶段安装**
 
-访问`https://192.168.18.5:5480/`继续配置： ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-16-51-43.jpg-w331s) 选择设置后用 root 账号登陆： ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-16-51-57.jpg-w331s) 按照向导继续配置，注意在网络配置阶段把系统名称修改为 IP： ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-16-53-33.jpg-w331s) 这里又有一个**小坑**，系统名称这里应该会检查是否能真正访问到这个地址，所以我们使用桥接模式，前面修改主机名为 IP 地址的操作都是为了这一步能顺利，否则这里很容易出现 “无法保存主机名” 的错误。 然后设置 SSO 密码，一路下一步，就基本不会再遇到什么坑了。 第二阶段开始安装的时候基本就是纯等待，会比较慢，去喝口水、冲杯咖啡、泡个茶、吃个饭、睡一觉吧…… ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-16-58-45.jpg-w331s) 第二阶段安装完成会打开 443 端口，就可以正常访问 vCenter 也可以正常调漏洞了。
+访问`https://192.168.18.5:5480/`继续配置： ![](../../.resource/remote/1c51978162e9a792a65c06652ea6e566ded401de0933114b4b154bfb3d956cc0.jpg) 选择设置后用 root 账号登陆： ![](../../.resource/remote/f6aa2b14df6556b9369b99a92207d4079e20e8319d121ef43ad6fa3427f10192.jpg) 按照向导继续配置，注意在网络配置阶段把系统名称修改为 IP： ![](../../.resource/remote/eaf9ed94ee0aeb4126b65ca5427f8787eea11ad480c1ef9001683881e293daac.jpg) 这里又有一个**小坑**，系统名称这里应该会检查是否能真正访问到这个地址，所以我们使用桥接模式，前面修改主机名为 IP 地址的操作都是为了这一步能顺利，否则这里很容易出现 “无法保存主机名” 的错误。 然后设置 SSO 密码，一路下一步，就基本不会再遇到什么坑了。 第二阶段开始安装的时候基本就是纯等待，会比较慢，去喝口水、冲杯咖啡、泡个茶、吃个饭、睡一觉吧…… ![](../../.resource/remote/146ba4db171e95525b460d45354a5ac63c5321be3a13c93bd22541033f678f34.jpg) 第二阶段安装完成会打开 443 端口，就可以正常访问 vCenter 也可以正常调漏洞了。
 
 ### 坑 1: 此方法不要使用 7.0.x 的 iso 镜像，会有一个无解的 BUG！
 
-在刚开始复现漏洞的时候，我很自然的选择了修复版本的前一个受影响版本：7.0.1，**但是第二阶段安装无论使用什么域名和什么 IP 地址作为系统名称，都会出现无法保存 IP 设置的错误**： ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-17-07-55.jpg-w331s) 抱着有问题一定是我的问题的想法重装、改配置、再重装、再改配置、再重装、再改配置。。。都无法解决这个问题。最后我去谷歌搜到了这样的结果： ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-17-09-15.png-w331s) 翻译下来就是在浏览器中通过 5480 端口进行网络配置会报错无法保存 IP 设置，（正常安装应该不会有类似问题）解决方案：无…… 快速搭环境的话绕开 7.0.x 吧。
+在刚开始复现漏洞的时候，我很自然的选择了修复版本的前一个受影响版本：7.0.1，**但是第二阶段安装无论使用什么域名和什么 IP 地址作为系统名称，都会出现无法保存 IP 设置的错误**： **原图暂未找回**（原引用：` ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-17-07-55.jpg-w331s) `） 抱着有问题一定是我的问题的想法重装、改配置、再重装、再改配置、再重装、再改配置。。。都无法解决这个问题。最后我去谷歌搜到了这样的结果： ![](../../.resource/remote/d7db037774e8d33f7953ccceee84fdc368f29862459f7ccdd4f3badb143edb5b.png) 翻译下来就是在浏览器中通过 5480 端口进行网络配置会报错无法保存 IP 设置，（正常安装应该不会有类似问题）解决方案：无…… 快速搭环境的话绕开 7.0.x 吧。
 
 ### 坑 2: 虚拟机网络适配器选择 NAT 模式无法保存主机名
 
-这个坑应该是我配置的问题吧，可能不算普遍但是已经有两个人遇到了相同问题了，表现为无论如何改主机名都提示无法保存主机名，也尝试过改其他网络配置、DNS 等，没有解决，遂使用桥接模式绕开。 ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-06-17-19-42.jpg-w331s)
+这个坑应该是我配置的问题吧，可能不算普遍但是已经有两个人遇到了相同问题了，表现为无论如何改主机名都提示无法保存主机名，也尝试过改其他网络配置、DNS 等，没有解决，遂使用桥接模式绕开。 ![](../../.resource/remote/20d2ccab58ce521cb72b40609704deba3ccb1c7905b6d3a56d7dc5d974e71269.jpg)
 
 0x02 漏洞 PoC 构造
 --------------
@@ -168,7 +168,7 @@ _手动修改上传数据包导致失败和使用 macOS 的 tar 打包会出问�
 
 **使用 HTML 构造文件上传页面**
 
-漏洞刚传出来还没有什么细节的时候，我就从一些截图中注意到了`Content-Type: multipart/form-data`，不同于传统的 Form 表单`application/x-www-form-urlencoded`，`multipart/form-data`更适合发送大量二进制数据（文件）或非 ASCII 数据。关于这两种 Content-Type 的详细信息，可阅读 W3C 的相关文档 [Forms](https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4)。 根据漏洞触发点的代码可以得知，需要构造一个使用`multipart/form-data`的文件上传，并且上传控件的 name 应为`uploadFile`： ![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-07-00-03-49.jpg-w331s)
+漏洞刚传出来还没有什么细节的时候，我就从一些截图中注意到了`Content-Type: multipart/form-data`，不同于传统的 Form 表单`application/x-www-form-urlencoded`，`multipart/form-data`更适合发送大量二进制数据（文件）或非 ASCII 数据。关于这两种 Content-Type 的详细信息，可阅读 W3C 的相关文档 [Forms](https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4)。 根据漏洞触发点的代码可以得知，需要构造一个使用`multipart/form-data`的文件上传，并且上传控件的 name 应为`uploadFile`： ![](../../.resource/remote/8f9a29c5583299121f8ad319991cd0ece3697fd739d6de6f730e52b094ba12d4.jpg)
 
 所以可以直接构造一个上传控件直接上传文件到漏洞点：
 
@@ -187,7 +187,7 @@ _手动修改上传数据包导致失败和使用 macOS 的 tar 打包会出问�
 
 继续看漏洞触发点代码，可以看出真正导致解压文件到任意路径的`entry.getName()`目的是迭代每一个压缩实体时获取文件名，可能这样说并不清楚，举个例子，文件 a.txt 和文件 b.txt 被压缩到了文件 c.tar，在解压时会分别获取 c.tar 中的`a.txt`文件名和`b.txt`文件名，拼接到了`/tmp/unicorn_ova_dir`中。那么若将 a.txt 换成`../a.txt`就将 a.txt 这个文件释放到了`/tmp`目录下。
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-07-00-35-03.png-w331s)
+![](../../.resource/remote/f7004669e2a25f8d2b63ed0add30aaa5eeef21777f6856814eec1d33d1875740.png)
 
 但是实际上你很难创建一个名为`../a.txt`的文件并将其压缩成 tar，所以可以通过以下代码去创建一个压缩包并释放到我们想释放的地方：
 
@@ -214,11 +214,11 @@ with tarfile.open("test.tar", 'w') as tar:
 
 假如我们自己使用 Linux 打包 tar，然后上传抓包，可以看到这样的数据包：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428656000-2021-03-07-18-22-04.png-w331s)
+![](../../.resource/remote/c6da490a068e9b090e611c27898fa39f4737906a9c40ed1fd73957b137628ade.png)
 
 明白了漏洞原理，很容易就会想到直接将最开始的文件名改成`../`的形式去释放到对应的目录，但是最终会返回 FAILED：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428657000-2021-03-07-22-48-25.png-w331s)
+![](../../.resource/remote/fe2bb106f4d46b49298a6184f2b048b8ec35207b5b01de734ab237e5ffbbdddb.png)
 
 我相信复现漏洞卡在这里的肯定不在少数，为什么会这样呢？这里需要深入研究一下 tar 文件了。
 
@@ -226,7 +226,7 @@ with tarfile.open("test.tar", 'w') as tar:
 
 我们不妨使用任意 HAX 编辑器打开我们的 tar 压缩文件看一看：
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428657000-2021-03-07-18-25-26.png-w331s)
+![](../../.resource/remote/9e1ddc500419a3f6e37924cb922911bad2a7f99204e87d6c844de2d4b62d8928.png)
 
 看起来挺乱的？不慌，按照 FreeBSD 的文档和源码对比分解一下即可，并不难。
 
@@ -244,7 +244,7 @@ with tarfile.open("test.tar", 'w') as tar:
 
 再次看一下刚才那个文件在 HAX 编辑器下的截图是不是瞬间就不那么懵了？
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428657000-2021-03-07-23-55-21.png-w331s)
+![](../../.resource/remote/39537b4a5dc7aa3f1f20e67c61f6377434e52b5e4b398532aedc28cfb025fd06.png)
 
 **那么详细说一下刚才划重点的 checksum**，这个位置是整个头部的校验和，想计算它的值，需要先把这 checksum 这八位填充为空格（0x20）然后再把整个头部字节相加成无符号整型，然后再换算成八进制，填充到 checksum 字段的前六位，第七位和第八位分别填充空（0x00）和空格（0x20），即组成了完整的文件头部。
 
@@ -317,7 +317,7 @@ fs.readFile('test.tar', function (err, data) {
 
 大胆修改数据包吧！
 
-![](https://images.seebug.org/content/images/2021/03/11/1615428657000-2021-03-07-23-05-38.png-w331s)
+![](../../.resource/remote/dcff2219ca8bc47e99b7a3abd409b3c88e840ea474ffa7df3033521aa54b220c.png)
 
 那么关于在 macOS 上使用自带 tar 软件打包后修改包失败问题，也是校验和错误的问题。他们都遵守了相同的规范，自行调试下即可。
 
@@ -331,7 +331,7 @@ fs.readFile('test.tar', function (err, data) {
 **偏漏洞挖掘：**去找一下类似的利用点，或者这个新的软件 / 组件 / 中间件是否能带给你一些新的漏洞挖掘思路。  
 …… 总之太多知识和事情可以从一个漏洞扩展出来，学海无涯，技术无边，学无止境，你我共勉。
 
-![](https://images.seebug.org/content/images/2017/08/0e69b04c-e31f-4884-8091-24ec334fbd7e.jpeg) 本文由 Seebug Paper 发布，如需转载请注明来源。本文地址：[https://paper.seebug.org/1500/](https://paper.seebug.org/1500/)
+![](../../.resource/remote/a6e53a0be256061c6a0f237d6a8cf74dee28885911b12d2ab2b2c1acd3d57dd1.jpg) 本文由 Seebug Paper 发布，如需转载请注明来源。本文地址：[https://paper.seebug.org/1500/](https://paper.seebug.org/1500/)
 
 ---
 

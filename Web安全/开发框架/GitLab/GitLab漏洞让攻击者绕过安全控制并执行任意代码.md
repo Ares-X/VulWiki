@@ -46,7 +46,7 @@ CNA 已撤销 CVE-2025-0307，当前记录未给出更具体的原因。本次�
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8uG8iboql72V37wncP4M0cMDothkgdEHDy6DnhIoWsWgiajCbbGLAfEyxyCBCjMOR5wucj6OhHDt39g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/18c032e487ee8155aaac100070841dabd2a6edbf8549f2084cdf07935176d430.png "")  
   
 GitLab 已针对其 DevOps 平台中的多个高风险漏洞发布了安全咨询警告，其中包括两个关键的跨站点脚本 （XSS） 缺陷，使攻击者能够绕过安全控制并在用户浏览器中执行恶意脚本。  
   
@@ -98,7 +98,7 @@ cybersecuritynews.com
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

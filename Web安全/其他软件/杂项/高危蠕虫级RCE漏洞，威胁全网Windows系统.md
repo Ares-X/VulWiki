@@ -62,7 +62,7 @@ previous_primary_identifiers: ""
 
  网络安全与人工智能研究中心   2025-07-11 01:41  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/ezpQRXtYHibztA3hfhcEV95uic15Gs4MXFtGRmT68AQosiap9UZk1YOLno7GV99zz9Zx881BWfGtNGibjSXONSSKPQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/3ca45517d5f3bee59ed2167cbcba57c90815064de62d730cc2c63f818ae33d04.gif "")  
   
 微软已发布关键安全更新，修复编号为CVE-2025-47981的高危漏洞。该漏洞存在于SPNEGO扩展协商(NEGOEX)安全机制中，属于基于堆的缓冲区溢出漏洞，影响多个Windows和Windows Server版本。  
   
@@ -115,7 +115,7 @@ CVE-2025-47981被归类为CWE-122，属于可远程利用的基于堆的缓冲�
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ezpQRXtYHibztA3hfhcEV95uic15Gs4MXFtm3icicENQhSGezMAKd1YsjyHXNmCXrrziabahEPibvhFnWW3JlGeibcuWQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/38736a7dbab4c8e3005e4ff53a9140f2493279bd7266c142c0f4ec616ffb6201.png "")  
   
   
 **Part04**  
@@ -136,7 +136,7 @@ Microsoft Patches Wormable RCE Vulnerability in Windows and Windows Server
 https://cybersecuritynews.com/microsoft-patches-wormable-rce-vulnerability/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ezpQRXtYHibztA3hfhcEV95uic15Gs4MXFae1JNZratOb7hv2vCDFNDIus3YhTLk5OrNjWJnY0Qu1Bsn0cicoduRw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5190898c9b53c038958a0997928960c935b7fccf1b85421b398ddc1b99c36358.png "")  
   
 编辑：席沐沂  
   

@@ -69,7 +69,7 @@ previous_version: "`环境：phpstorm+xdebug``Thinkphp_5.0.14_full``phpstorm+xde
 
 POC效果：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzK5QSgnEutBUUUwZMf7madHbCsh6vy9f88g94Xdt4xBu5v0hJicEQeBg/640?wx_fmt=png)
+![](../../.resource/remote/3fb34c8e845d0e936b369afd77966424433a441708119b002ade0c61b53e0eee.png)
 
   
 
@@ -79,19 +79,19 @@ POC效果：
 
 前置知识：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzn4kCGA4VzibyQhX5Y7YehSvGa6BWfaZQiayEaKaPKwLVWicmIklrmo3xw/640?wx_fmt=png)
+![](../../.resource/remote/c1173f46b0a507875436bef7c1ad0ed851c8a94947512cc0429ce35ace3edcb6.png)
 
 入口文件：Thinkphp5的入口文件位于public目录下的index文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzJreE7nXNqnJUdebs1ST8ibbzhZialFTNL0ay3Y7kcGicAnz8A20b4ohZA/640?wx_fmt=png)
+![](../../.resource/remote/76503386e17ee0f40c5eae0c04409f9320246475c64959e0582cfffff3337231.png)
 
 跟进入口文件,先进行了一些配置加载、设置路由规则的工作
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzBwXEEtxRTHe2CDRS1BVNTQAvOpk5IQgCHkcYlSIQ8PeeV2fWJEPIKQ/640?wx_fmt=png)
+![](../../.resource/remote/550f27d00f3bc84a15cd5c57c2518774317df8fd6888d66230e742cd506187e1.png)
 
 加载完之后进入start.php开始执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzVngcVGlESsj4q5Pau3Z72VFLK6XX2SY8oxqCDYkC1d0Fbj68YDVYjg/640?wx_fmt=png)
+![](../../.resource/remote/9be03c1c2fed464024adced43cdcc1a460657a14ec3106400374bd0bf2e4ed66.png)
 
 Run方法：
 
@@ -101,11 +101,11 @@ Run方法：
 
 跟进run方法，首先是自动加载机制autoload加载think\app类
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXz2MgUf4bfXsicg0RicvLK7DMaDsvYU2mxyet3oFGpX9wxEj2GG1VmoiczA/640?wx_fmt=png)
+![](../../.resource/remote/30a70f7acbfd346cfb21173e930e4cf3bfbdcb0c7f81c0759f416643b62646af.png)
 
 初始化、语言包加载、模块绑定等工作完成后开始获取调度信息dispatch，未设置调度信息则进入routecheck()方法进行url检测
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXznkIbiaAYQg7k7t52XP1Cem8OGMcOv35HicmC0QrtKHctbnerMwbnwfiaQ/640?wx_fmt=png)
+![](../../.resource/remote/b8097f13d25d888b8575d2532b2cb9c0f3b98418acfa69f877d6f37654a691ab.png)
 
 Routecheck方法：
 
@@ -115,7 +115,7 @@ Routecheck方法：
 
 跟进routecheck()方法，routecheck方法对pathinfo进行分析（tips:thinkphp的pathinfo格式为模块/控制器/操作/[参数名/参数值]）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzMa8rO8JhnIBT5nnPa5MeQctMxpWAH4hbCJuzZJaiazfibQHCKiaBca6oQ/640?wx_fmt=png)
+![](../../.resource/remote/4fe1cc7610668a684b6963fa076da7ade42f3cb6a8730f94a95c350ba0c29355.png)
 
 调用path()方法获取到url的pathinfo信息，返回path=” index/think\app/invokefunction” 
 
@@ -127,31 +127,31 @@ Routecheck方法：
 
 Routecheck()方法载入路由，对比pathinfo以生成调度信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzGyQ5rHNsrT9E0T78d1oN6fbRrP0xFRqUR2pcdibu4Xehc5hiaqaTejSw/640?wx_fmt=png)
+![](../../.resource/remote/824e4654da4e7d998e3b3d4eaaa788e612fb67e6a0fd0769e80d90896a5fa9e6.png)
 
 随后进入路由检测，读取路由缓存内容、导入路由配置，随后进入check()方法根据解析的pathinfo信息与路由进行对比，因路由规则中不存在对应的路由信息，返回$result=fasle，代表路由无效，无调度信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzk7ltmSCmO3eWkKgpK4srcqygkvVicuNRMC1mEsrPzI4oUmJ15tH3sFw/640?wx_fmt=png)
+![](../../.resource/remote/35dfa1921f470da154dff00ebf27033dcdfc860d1dd3f83134bb3902c9b6b7c3.png)
 
 因为根据路由缓存检测出调度信息无效，所以进入parseURL进行URL的解析进行url的解析以再次获取调度信息  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzNHZ4ZwQVYjiceQ1LSjwlwS7l1wpLiaCYu67fbRxg1Ce7nPQEHeCbL5UQ/640?wx_fmt=png)
+![](../../.resource/remote/d4fa26e5646e03539e2c3fd73ecad2df3e5ad0f51acbd94e318794f36d4a6677.png)
 
 跟进parseURL，parseURL中调用了parseUrlPath来解析url，此时url= “index|think\app|invokefunction”。 parseurlPath将url解析为数组形式，$path:{“index”,”think\app”,”invokefunction”},分别为模块、控制器、操作
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXztYmlRA4NQRFvE2c5hhGO1LFXU0icKjuoLJ2VNLiakygBOvsQFs6VGucQ/640?wx_fmt=png)
+![](../../.resource/remote/326a5d9010da204ffda985cf2158419befdf015ae66ea51c4e49e623f7995015.png)
 
 ParseURL对parseURLpath返回的数组$path进行模块、控制器、操作的解析，得到结果：模块$module = “index”  控制器$controller=”think\app”  操作 $action = “invokefunction”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzvdRpgicbFCYHDzAkCUYHh5jF413hCIWraFOCwTuuLgAPkRxzX0SwEoQ/640?wx_fmt=png)
+![](../../.resource/remote/e127afc7f0d920b15ee3bf437e641439c980aeba512b3c335f4a3bcf25ed6a9f.png)
 
 随后对获取的信息进行路由封装，得到$route = {“index“,”think\app”,”invokefunction”}
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzkhqKwBERIxmuuJlrm603nMHZIw2sia7paJ9wt4SrxYjR8ajPqsibRaBw/640?wx_fmt=png)
+![](../../.resource/remote/4cbc93d890410a0bb836d6c8fc017666463e6454153024bb02022fc19f09d1e0.png)
 
 继续跟进，对路由进行记录、检测缓存信息，完成后进入exec()方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXz4okYqIswIjV5SaSlGcLNFJTvf3w6oxIiae4T8GVSK7AEWxgeYVyFN1g/640?wx_fmt=png)
+![](../../.resource/remote/ab9b0a36438fab8bd50c05fc9398a68b21d85e87e0065534ac68a131f4b36739.png)
 
 Exec方法：
 
@@ -161,47 +161,47 @@ Exec方法：
 
 跟进exec()方法，exec根据dispatch数组中type字段的值进入module分支,并调用module方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzQvW7bgl837yiaU452vWBj8LIcib3J9BQAuxzvqDMkf0lJA3PGXACzicGw/640?wx_fmt=png)
+![](../../.resource/remote/7f825547778890800a43e14c06220c5e4cf89d1c3cb0ee98806b510dfbef772f.png)
 
 跟进module方法，module方法首先对模块进行部署、初始化、缓存检查
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXznnv7Agyp5TIdzuga6U28VYfWsGyndicmmVT6LN7OCtLicMKVprfCicV2g/640?wx_fmt=png)
+![](../../.resource/remote/271ad714670f2025639709715c5db7b43e7383c3a3a2923acd088752fc678075.png)
 
 随后module方法获取模块名index、控制器名think\app、操作名invokefunction
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzBriaco6DRNBZp9KzqDKDHp4SoRV9KlJkIicibmPJrcBaniadnoVGEicEqrQ/640?wx_fmt=png)
+![](../../.resource/remote/ac64e70712ce068906be3e2573587c2a7ca22d053dd0204df824f2c901c6fc01.png)
 
 随后分别进入controller()方法、parseName()方法、action()方法设置控制器、操作并载入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzTT4tWPAHAsEsQuauiaRiarIZIKAaYnVofpgYwlHgpRyHCUfsHmJIQN7g/640?wx_fmt=png)
+![](../../.resource/remote/641c72bc33bf509b832fef59f2aa6d5d79ddc4f40eadcc07901908c5018d940c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzMqjHBAN06dd5mlrrOJknHTTecvy1WM5zrZyIpUSoPlQ5IR8BlzakbA/640?wx_fmt=png)
+![](../../.resource/remote/3e6d98bbdbaf484deafeff07b29ccf45dedbd733dea263d46540e55a9279c6e1.png)
 
 设置并加载控制器、操作后通过is_callable()查看invokefunction是否能被调用，若不可调用则抛出404不存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzOSEnMKxgHuKBHW9riaOibxibJQ1rLc3MunFu4szdocSpc8RvrfeCfJE3g/640?wx_fmt=png)
+![](../../.resource/remote/db7f3b9cd26eddc50a283f26115862888225f2da1ad2f705b5f2429ffb067693.png)
 
 随后进入invokemethod方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzau3CVlXob9uyC775FZAgTbjHGYpzaC7utic8pjm5fDZSicHrmWdfLxUA/640?wx_fmt=png)
+![](../../.resource/remote/10331327b8d9268984b41ee1079126f365699ac4beef313e210d0c2039b761dc.png)
 
 跟进invokemethod，invokemethod通过反射机制ReflectionMethod调用操作invokefunction，bindParams用于获取绑定参数 args = {“call_user_func_array”,”{system”, {“whoami”\}\}”}
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzkn0baeZh9rI9soMNJ0vuEpxdyUWWbqnyobWuIJS38bAC9iaibpge5rOg/640?wx_fmt=png)
+![](../../.resource/remote/dcc73d68d0cb7de75637b0d0cad6c38359bcbc1a63079ccfba2da4d5dcd9d843.png)
 
 此时通过反射机制将调用操作指定为invokefunction ,将参数绑定为args = {“call_user_func_array”,”{system”, {“whoami”\}\}”}
 
 随后进入invokeargs方法，invokeargs通过反射进入invokefunction方法，在此设置反射为call_user_func_array(),绑定参数为system和whoami
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzib2cU4w58ib8jFYQFVewBFvHfgsEibmKpjFfhFMvZwQ4LDfZMI1iaPKGbw/640?wx_fmt=png)
+![](../../.resource/remote/9f4e20f2ae1bbf47283903e0ddec91aac41442d88b5362f942921a02b4940b5f.png)
 
 再次调用invokeargs()方法，成功调用call_user_func(system(“whoami”))达到远程代码执行的目的 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzUugmiaLrVqYz9mDBpDhE1iamyvX2uD9e4p1rTBJXuicFIJuz0tK104Vuw/640?wx_fmt=png)
+![](../../.resource/remote/7664746b75440c0fb32d2126fe2a70e6f998d754e1e118d724be9f5d68604060.png)
 
 退出module达到命令执行目的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzSGh3nWACShnVEbujIvVCqYCCp0v5bow69qHEicY6LrjK7qBjXWcZ4TQ/640?wx_fmt=png)
+![](../../.resource/remote/b787113ed06e922997314b471f7ad01927d24e3114bba819b264ee9c910d44bb.png)
 
   
 
@@ -211,7 +211,7 @@ Exec方法：
 
 结合此次RCE审计流程来看，漏洞点主要是解析pathinfo的时候并没有对控制器操作进行过滤，导致恶意用户将控制器操作指向invokefunction，再结合call_user_fun_array达到了远程代码任意执行的攻击效果，通过对比thinkphp发布的补丁可以看出，thinkphp通过增加对控制器名的过滤达到修复。
 
- ![](http://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibYMGgsCATs68fsqzZNMtia0fjXEtEXd7gfw5xmAcQdEmAoOOFcS4Ce6vQyyh0DJtq8po5bQicfRrKA/0?wx_fmt=png) ** InBug实验室 ** 信息安全相关信息推送，专注于红蓝对抗。 14篇原创内容   公众号
+ ![](../../.resource/remote/859554cda6b14f3c67ebd8af5deb2b1b996d7b3e2d558b93a1fd1cc87a050f94.png) ** InBug实验室 ** 信息安全相关信息推送，专注于红蓝对抗。 14篇原创内容   公众号
 
 ---
 
