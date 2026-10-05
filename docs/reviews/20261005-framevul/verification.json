@@ -2,7 +2,7 @@
   "verified_source_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "newer_master_known_but_not_reconciled": "25e2037091036e848c6f141e52a21f405f198c20",
   "ready_to_merge": false,
-  "independent_review": "Seven article texts and immutable evidence scope accepted; precise final SHA256 per article below",
+  "independent_review": "16 article texts and bounded source evidence independently accepted; final SHA256 per article below",
   "article_hashes": [
     {
       "frame_ids": [
@@ -52,6 +52,69 @@
       ],
       "path": "Web安全/开发框架/GitLab/GitLab Bulk Imports UploadsPipeline 符号链接文件读取 CVE-2022-0244.md",
       "sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb"
+    },
+    {
+      "frame_ids": [
+        300
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins 插件资源 Accept-Language 文件读取 CVE-2018-1999002.md",
+      "sha256": "c242bb42f41fbe284c68b5797e36dfcdc7257de054401a319f2643a38b018bdc"
+    },
+    {
+      "frame_ids": [
+        302
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins Git client Plugin 仓库 URL 参数注入 CVE-2019-10392.md",
+      "sha256": "d76fb0ab36c91481d62687baf1a5c41e73ec6b838ffe8eb0e24cf779d142af3b"
+    },
+    {
+      "frame_ids": [
+        265
+      ],
+      "path": "Web安全/开发框架/GitLab/Gitlab 任意文件读取漏洞.md",
+      "sha256": "7637a98bd56111758aaabe525534104fc725d4916ae4aad2a3a95fed4656e53c"
+    },
+    {
+      "frame_ids": [
+        359
+      ],
+      "path": "Web安全/开发框架/PHPMailer/（CVE-2017-5223）PHPMailer <= 5.2.21 任意文件读取漏洞.md",
+      "sha256": "3cab94110472c7d6ab4a938544c764d60573c2b6b851dc1c28b5a81c6eb0978a"
+    },
+    {
+      "frame_ids": [
+        363
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/（CVE-2018-12613）Phpmyadmin 远程文件包含漏洞.md",
+      "sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8"
+    },
+    {
+      "frame_ids": [
+        351
+      ],
+      "path": "Web安全/开发框架/Sonatype Nexus/Nexus Repository Pro SAML 元数据 XXE CVE-2020-29436.md",
+      "sha256": "d4e1a515f58e7b687af8041582aa41d6640bcdf3426876830618163e5b529e3d"
+    },
+    {
+      "frame_ids": [
+        366
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 服务器配置删除 CSRF CVE-2019-12922.md",
+      "sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca"
+    },
+    {
+      "frame_ids": [
+        367
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 跨站脚本 CVE-2022-23808.md",
+      "sha256": "7f833bbd28db725226fcf0d520292d1121e2ddf389b2d07981a67d07b322d12c"
+    },
+    {
+      "frame_ids": [
+        339
+      ],
+      "path": "Web安全/数据库/Metabase/Metabase-未授权-JDBC-远程代码执行漏洞-CVE-2023-38646.md",
+      "sha256": "eb6bd1341e31358c24dc6e3302f924e06b13cd0f8599218905b4e3dd2f822646"
     }
   ],
   "tests": {
@@ -60,7 +123,7 @@
       "failed": 0
     },
     "content_quality": {
-      "documents": 5852,
+      "documents": 5857,
       "new_issues": 0,
       "fatal_issues": 0,
       "historical_warnings": 4095,
@@ -68,10 +131,15 @@
     },
     "generated_indexes": "build and build --check passed",
     "selected_resource_check": {
-      "articles": 7,
-      "files": 7,
-      "bytes": 1001560,
+      "articles": 16,
+      "files": 21,
+      "bytes": 5565010,
       "missing": 0,
+      "zero_byte": 0,
+      "html_error_page": 0,
+      "recognized_container": 21,
+      "unknown": 0,
+      "extension_mismatch": 0,
       "remote_images": 0,
       "unusable_image_tags": 0,
       "external_image_dependencies": 0
@@ -87,11 +155,16 @@
       ]
     },
     "code_copy_check": {
-      "articles": 7,
-      "blocks": 11,
+      "articles": 16,
+      "blocks": 34,
       "exact": true
     },
-    "remote_ci": "pending publication"
+    "remote_ci": {
+      "first_batch_commit": "1a2d853d8c509eb1aa8426cd16de858ea9d9e620",
+      "first_batch_push": "success",
+      "first_batch_pull_request": "success",
+      "current_batch": "pending publication"
+    }
   },
   "not_performed": [
     "No article code or exploit execution",

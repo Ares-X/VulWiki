@@ -11,7 +11,25 @@
       "sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e",
       "metadata_added": {},
       "metadata_changed": {},
-      "assets": []
+      "assets": [],
+      "editorial_changes": [
+        {
+          "old": "source: \"wuhan005（E99p1ant）与 Li4n0；FrameVul 条目 267\"",
+          "new": "source: \"wuhan005 与 Li4n0；FrameVul 条目 267\""
+        },
+        {
+          "old": "CVE 记录的影响边界是 1.16.7 之前。",
+          "new": "[固定 CNA 记录](https://github.com/CVEProject/cvelistV5/blob/84ce905802bd42acd5009dff04e62c322abd9f0d/cves/2022/30xxx/CVE-2022-30781.json)的描述明确列出 1.16.7 之前的 Gitea；其 references 同时对应 PR 19487 / 19490。"
+        },
+        {
+          "old": "- E99p1ant，2022-05-26，[原始研究](https://tttang.com/archive/1607/)，对应漏洞发现背景和作者流程",
+          "new": "- 原 PoC README 引用的[原始研究](https://tttang.com/archive/1607/)；本轮未读取其正文，具体方法以已审阅的固定 README 和响应文件为依据"
+        },
+        {
+          "old": "- MITRE，[CVE-2022-30781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-30781)，对应产品与版本边界",
+          "new": "- MITRE，[CVE-2022-30781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-30781)；本次实际核对 [CVE 官方集合固定记录](https://github.com/CVEProject/cvelistV5/blob/84ce905802bd42acd5009dff04e62c322abd9f0d/cves/2022/30xxx/CVE-2022-30781.json)，对应产品与版本边界"
+        }
+      ]
     },
     {
       "frame_ids": [
@@ -133,6 +151,173 @@
       "operation": "new",
       "sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb",
       "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        300
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins 插件资源 Accept-Language 文件读取 CVE-2018-1999002.md",
+      "operation": "new",
+      "sha256": "c242bb42f41fbe284c68b5797e36dfcdc7257de054401a319f2643a38b018bdc",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        302
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins Git client Plugin 仓库 URL 参数注入 CVE-2019-10392.md",
+      "operation": "new",
+      "sha256": "d76fb0ab36c91481d62687baf1a5c41e73ec6b838ffe8eb0e24cf779d142af3b",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [
+        {
+          "target": "Web安全/开发框架/Jenkins/.resource/FrameVul-302-GitClient/configure.jpg",
+          "bytes": 148877,
+          "sha256": "66da832da41a67733058646ce55065e1da2538fcfd4f4a8b5479ad32b01a26ff",
+          "original_url": "https://github.com/jas502n/CVE-2019-10392/blob/6cc445e2590c7564c38dd60033b2e8fad3ad1b0c/configure.jpg"
+        },
+        {
+          "target": "Web安全/开发框架/Jenkins/.resource/FrameVul-302-GitClient/exploit.jpg",
+          "bytes": 175220,
+          "sha256": "97543e1af178bdacfe417ab6f57f9243e82024984572374af99a563e6443141a",
+          "original_url": "https://github.com/jas502n/CVE-2019-10392/blob/6cc445e2590c7564c38dd60033b2e8fad3ad1b0c/exploit.jpg"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        265
+      ],
+      "path": "Web安全/开发框架/GitLab/Gitlab 任意文件读取漏洞.md",
+      "operation": "append",
+      "sha256": "7637a98bd56111758aaabe525534104fc725d4916ae4aad2a3a95fed4656e53c",
+      "metadata_added": {
+        "version": "原报告 GitLab 12.8.7-ee；静态对照 CE v12.8.7；CVE记录的8.5到12.9简写不解释为连续含补丁区间",
+        "fixed_version": "静态确认 CE v12.8.8 具有本路径修复；其他维护分支未逐一核对",
+        "verification_source": "https://gitlab.com/gitlab-org/gitlab/-/issues/212175",
+        "previous_primary_identifiers": "",
+        "previous_identifier_role": "unknown",
+        "previous_identifier_status": "unknown"
+      },
+      "metadata_changed": {
+        "primary_identifiers": [
+          "",
+          "CVE-2020-10977"
+        ],
+        "identifier_role": [
+          "unknown",
+          "primary"
+        ],
+        "identifier_status": [
+          "unknown",
+          "active"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        359
+      ],
+      "path": "Web安全/开发框架/PHPMailer/（CVE-2017-5223）PHPMailer <= 5.2.21 任意文件读取漏洞.md",
+      "operation": "append",
+      "sha256": "3cab94110472c7d6ab4a938544c764d60573c2b6b851dc1c28b5a81c6eb0978a",
+      "metadata_added": {
+        "previous_identifier_status": "unknown",
+        "version": "PHPMailer 5.2.22 之前（CVE 官方描述）；Vulhub 锁定实验依赖为 5.2.20",
+        "fixed_version": "5.2.22（PHPMailer 官方发布说明）",
+        "previous_prerequisites": "来源所述条件，未列明部分仍待核：<=5.2.21，缺修复版本与msgHTML/basedir调用条件",
+        "previous_side_effects": "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对",
+        "verification_source": "https://github.com/PHPMailer/PHPMailer/releases/tag/v5.2.22",
+        "ref": "https://www.cve.org/CVERecord?id=CVE-2017-5223",
+        "additional_source_url": "https://github.com/vulhub/vulhub/blob/8fd63916f7a8711e2e01dda0d27237e4d6175d38/phpmailer/CVE-2017-5223/README.zh-cn.md"
+      },
+      "metadata_changed": {
+        "identifier_status": [
+          "unknown",
+          "active"
+        ],
+        "prerequisites": [
+          "来源所述条件，未列明部分仍待核：<=5.2.21，缺修复版本与msgHTML/basedir调用条件",
+          "调用 msgHTML()；HTML 含未经适当过滤的用户输入；未设置 basedir；邮件发给操作者可读取的收件地址。公开实验为 PHPMailer 5.2.20，经 SMTP 发信"
+        ],
+        "side_effects": [
+          "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对",
+          "来源方法会连接 SMTP 并向指定收件人发送邮件，可能包含服务器本地文件数据；本轮未运行、未发送邮件；index.php 未见持久化意见的操作"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        363
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/（CVE-2018-12613）Phpmyadmin 远程文件包含漏洞.md",
+      "operation": "append",
+      "sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8",
+      "metadata_added": {
+        "fixed_version": "4.8.2 或更新版本；官方另提供 4.8 分支补丁",
+        "verification_source": "https://www.phpmyadmin.net/security/PMASA-2018-4/; https://github.com/vulhub/vulhub/blob/8fd63916f7a8711e2e01dda0d27237e4d6175d38/phpmyadmin/CVE-2018-12613/README.zh-cn.md#L1-L28"
+      },
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        351
+      ],
+      "path": "Web安全/开发框架/Sonatype Nexus/Nexus Repository Pro SAML 元数据 XXE CVE-2020-29436.md",
+      "operation": "new",
+      "sha256": "d4e1a515f58e7b687af8041582aa41d6640bcdf3426876830618163e5b529e3d",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        366
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 服务器配置删除 CSRF CVE-2019-12922.md",
+      "operation": "new",
+      "sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_changes": [
+        {
+          "old": "原研究者的样例使用图片请求触发 GET，目标配置编号为 `1`。下面保留其原始值及换行：[1]",
+          "new": "原研究者的样例使用图片请求触发 GET，目标配置编号为 `1`。下面按存档 HTML 的代码区域恢复文本：先移除存档站自动生成的链接标签，再解码 HTML 实体。原参数和可见代码结构保持；这是经上述方式恢复的代码文本，不是原始邮件的逐字节副本。[1]"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        367
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 跨站脚本 CVE-2022-23808.md",
+      "operation": "new",
+      "sha256": "7f833bbd28db725226fcf0d520292d1121e2ddf389b2d07981a67d07b322d12c",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        339
+      ],
+      "path": "Web安全/数据库/Metabase/Metabase-未授权-JDBC-远程代码执行漏洞-CVE-2023-38646.md",
+      "operation": "append",
+      "sha256": "eb6bd1341e31358c24dc6e3302f924e06b13cd0f8599218905b4e3dd2f822646",
+      "metadata_added": {
+        "version": "来源实测 OSS v0.46.6；需非空可接受setup-token、H2/JavaScript引擎及样例数据库路径，其他版本不由单一范围泛推",
+        "fixed_version": "官方：0.46.6.1/1.46.6.1；0.45.4.1/1.45.4.1；0.44.7.1/1.44.7.1；0.43.7.2/1.43.7.2",
+        "verification_source": "https://www.metabase.com/blog/vulnerability-advisory"
+      },
       "metadata_changed": {},
       "assets": []
     }
