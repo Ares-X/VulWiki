@@ -156,6 +156,32 @@ test('does not misclassify normal shell backticks, ordinary HTML, or nested exam
   assert.equal(result.candidates.some((candidate) => candidate.rule === 'unknown_html_literal' && candidate.raw.includes('<script>')), false);
 });
 
+test('maps repeated CRLF code ranges with preserved tabs and Unicode prefixes', () => {
+  const code = '```http\r\nGET /inside HTTP/1.1\r\nHost: example.invalid\r\n\r\n\tbody\r\n```';
+  const source = `前缀😀\r\n\r\n${code}\r\n\r\n${code}\r\n\r\nGET /outside HTTP/1.1\r\n`;
+  const result = audit(source);
+  assert.deepEqual(result.candidates.filter(item => item.rule === 'unfenced_http').map(item => [item.raw, item.line]), [['GET /outside HTTP/1.1', 17]]);
+  assert.equal(result.inventory.code_blocks, 2);
+  assert.equal(result.inventory.bytes, Buffer.byteLength(source));
+});
+
+test('retains earlier legacy tab-expanded token ranges before equivalent space-indented blocks', () => {
+  const code = '```http\r\nGET /inside HTTP/1.1\r\nHost: example.invalid\r\n\r\n\tbody\r\n```';
+  const source = `${code}\r\n\r\n${code.replace('\tbody', '    body')}\r\n\r\nGET /outside HTTP/1.1\r\n`;
+  const legacyTokens = {
+    ...marked,
+    lexer(value, options) {
+      const tokens = marked.lexer(value, options);
+      for (const token of tokens) if (token.type === 'code') token.raw = token.raw.replace(/^\t/gm, '    ');
+      return tokens;
+    },
+  };
+  const result = auditArticle({ path: '样例/旧版兼容.md', source, marked: legacyTokens });
+  assert.deepEqual(result.candidates.filter(item => item.rule === 'unfenced_http').map(item => [item.raw, item.line]), [['GET /outside HTTP/1.1', 15]]);
+  assert.equal(result.inventory.code_blocks, 2);
+  assert.equal(result.inventory.bytes, Buffer.byteLength(source));
+});
+
 test('preserves Unicode paths, full raw candidates, code text, trailing spaces and blank request lines', () => {
   const raw = 'POST /路径 HTTP/1.1\nHost: example.invalid\n\n{"token":"完整公开值"}  \n';
   const source = `---\ntitle: "中文"\n---\n\n\`\`\`http\n${raw}\`\`\`\n\nhttps://example.invalid/完整路径?q=原值\n`;
@@ -168,6 +194,44 @@ test('preserves Unicode paths, full raw candidates, code text, trailing spaces a
   assert.equal(code.text, raw.slice(0, -1));
   assert.ok(code.text.includes('\n\n{"token":"完整公开值"}  '));
   assert.equal(result.inventory.bytes, Buffer.byteLength(source));
+});
+
+test('locates mixed CRLF and LF duplicate blocks within their own top-level tokens', () => {
+  const code = '```http\nGET /inside HTTP/1.1\nHost: example.invalid\n\n\tbody\n```';
+  const source = `${code.replace(/\n/g, '\r\n')}\r\n\r\n${code}\n\nGET /outside HTTP/1.1\n`;
+  const result = audit(source);
+  assert.deepEqual(result.candidates.filter(item => item.rule === 'unfenced_http').map(item => [item.raw, item.line]), [['GET /outside HTTP/1.1', 15]]);
+  assert.equal(result.inventory.code_blocks, 2);
+});
+
+test('locates legacy tab-expanded blocks before literal space-indented duplicates', () => {
+  const code = '```http\nGET /inside HTTP/1.1\nHost: example.invalid\n\n\tbody\n```';
+  const source = `${code}\n\n${code.replace('\tbody', '    body')}\n\nGET /outside HTTP/1.1\n`;
+  const legacyTokens = {
+    ...marked,
+    lexer(value, options) {
+      const tokens = marked.lexer(value, options);
+      for (const token of tokens) if (token.type === 'code') token.raw = token.raw.replace(/^\t/gm, '    ');
+      return tokens;
+    },
+  };
+  const result = auditArticle({ path: '样例/旧版混合缩进.md', source, marked: legacyTokens });
+  assert.deepEqual(result.candidates.filter(item => item.rule === 'unfenced_http').map(item => [item.raw, item.line]), [['GET /outside HTTP/1.1', 15]]);
+  assert.equal(result.inventory.code_blocks, 2);
+});
+
+test('keeps fence-shaped HTML text distinct from real code under CRLF and mixed line endings', () => {
+  const code = '```http\nGET /inside HTTP/1.1\nHost: example.invalid\n\n\tbody\n```';
+  for (const tag of ['pre', 'textarea']) {
+    for (const codeEol of ['\n', '\r\n']) {
+      const source = `<${tag}>\r\n${code.replace(/\n/g, '\r\n')}\r\n</${tag}>\r\n\r\n${code.replace(/\n/g, codeEol)}\n\nGET /outside HTTP/1.1\n`;
+      const result = audit(source);
+      assert.deepEqual(result.candidates.filter(item => item.rule === 'unfenced_http').map(item => item.line), [3, 17]);
+      assert.equal(result.candidates.filter(item => item.rule === 'unknown_html_literal').length, 1);
+      assert.equal(result.inventory.code_blocks, 1);
+      assert.equal(result.inventory.bytes, Buffer.byteLength(source));
+    }
+  }
 });
 
 test('writes stable JSONL inventory and full raw candidate values only under the requested output directory', () => {
@@ -183,8 +247,8 @@ test('writes stable JSONL inventory and full raw candidate values only under the
   const inventory = JSON.parse(fs.readFileSync(path.join(out, 'inventory.jsonl'), 'utf8').trim());
   assert.equal(inventory.path, 'Web安全/中文.md');
   assert.match(inventory.render_hash, /^[0-9a-f]{64}$/);
-  assert.ok(summary.marked.module.endsWith('/marked/lib/marked.cjs'));
-  assert.equal(summary.marked.version, '4.3.0');
+  assert.equal(summary.marked.module, require.resolve('marked'));
+  assert.equal(summary.marked.version, require('marked/package.json').version);
   assert.equal(fs.readFileSync(path.join(root, 'Web安全', '中文.md'), 'utf8'), '```\n\n```\n');
   fs.rmSync(root, { recursive: true, force: true });
 });
