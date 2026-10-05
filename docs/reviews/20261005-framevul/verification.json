@@ -2,7 +2,7 @@
   "verified_source_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "newer_master_known_but_not_reconciled": "25e2037091036e848c6f141e52a21f405f198c20",
   "ready_to_merge": false,
-  "independent_review": "18 article texts and bounded source evidence independently accepted; final SHA256 per article below",
+  "independent_review": "19 article texts and bounded source evidence independently accepted; final SHA256 per article below",
   "article_hashes": [
     {
       "frame_ids": [
@@ -130,6 +130,13 @@
       ],
       "path": "Web安全/中间件/JBoss/JBoss EAP JMXInvokerServlet 反序列化资源耗尽 CVE-2016-7065.md",
       "sha256": "4c469a54090f60b39bac97584e4f76fe9d693bcd5b545af4d954b582965dc31a"
+    },
+    {
+      "frame_ids": [
+        352
+      ],
+      "path": "Web安全/中间件/NPS内网穿透/npsauth_key未授权访问漏洞.md",
+      "sha256": "cc8572a2bd5957abf9fe5938e4ecaeb87f2bd3846980fd278dcd06643f2aad3a"
     }
   ],
   "tests": {
@@ -146,7 +153,7 @@
     },
     "generated_indexes": "build and build --check passed",
     "selected_resource_check": {
-      "articles": 18,
+      "articles": 19,
       "files": 21,
       "bytes": 5565010,
       "missing": 0,
@@ -170,8 +177,8 @@
       ]
     },
     "code_copy_check": {
-      "articles": 18,
-      "blocks": 38,
+      "articles": 19,
+      "blocks": 42,
       "exact": true
     },
     "remote_ci": {
@@ -181,11 +188,13 @@
           "checks": [
             {
               "event": "pull_request",
+              "status": "completed",
               "conclusion": "success",
               "url": "https://github.com/Ares-X/VulWiki/actions/runs/37266722157"
             },
             {
               "event": "push",
+              "status": "completed",
               "conclusion": "success",
               "url": "https://github.com/Ares-X/VulWiki/actions/runs/37266631229"
             }
@@ -196,18 +205,38 @@
           "checks": [
             {
               "event": "pull_request",
+              "status": "completed",
               "conclusion": "success",
               "url": "https://github.com/Ares-X/VulWiki/actions/runs/37268851326"
             },
             {
               "event": "push",
+              "status": "completed",
               "conclusion": "success",
               "url": "https://github.com/Ares-X/VulWiki/actions/runs/37268847450"
             }
           ]
+        },
+        {
+          "head": "b0ed1cb1a11d3b542a473ffc4a8499b556e88b68",
+          "checks": [
+            {
+              "event": "pull_request",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37269306344"
+            },
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37269302797"
+            }
+          ]
         }
       ],
-      "current_batch": "pending publication"
+      "current_commit_checks": "The current published head is verified after push; see PR25 checks and description for that exact head. This file does not claim a self-referential commit status.",
+      "pull_request": "https://github.com/Ares-X/VulWiki/pull/25"
     }
   },
   "not_performed": [
