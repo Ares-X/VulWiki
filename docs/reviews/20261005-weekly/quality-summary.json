@@ -1,5 +1,5 @@
 {
-  "baseline_issues_remaining": 4097,
+  "baseline_issues_remaining": 4096,
   "by_code": {
     "fingerprint_unverified": 45,
     "identifier_inactive": 26,
@@ -7,14 +7,14 @@
     "noncontent_link_candidate": 24,
     "path_legacy": 2,
     "site_relative_link": 81,
-    "source_missing": 3829,
+    "source_missing": 3828,
     "unrecognized_identifier_namespace": 88
   },
   "documents": 5848,
   "errors": 0,
   "fatal_issues": 0,
   "new_issues": 0,
-  "resolved_issues": 1045,
+  "resolved_issues": 1046,
   "result": "no new debt; historical issues remain",
-  "warnings": 4097
+  "warnings": 4096
 }

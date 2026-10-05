@@ -1,0 +1,22 @@
+{
+  "path": "Web安全/开发框架/GitLab/（CVE-2026-85706）GitLab repository commits API未认证任意文件读取漏洞.md",
+  "before_sha256": "5cc521b2c53694e80283bdb1ab350a4d82d7476cf84d932bdd270b2ecd407b14",
+  "after_sha256": "e752434287798cbb1951dfe597ba238e8ce47571649c7c9c893966d2376dbb9d",
+  "old_body_sha256": "39e1b92474b80f0fd965ef4aee2410052a4f9bbcea89535f402f56ee557d91fc",
+  "old_body_exact_suffix_preserved": true,
+  "added_note": "\n\n## 2026-10-05 官方证据补核与历史说明更正\n\n[GitLab官方安全公告](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/#cve-2026-85706---path-traversal-issue-in-repository-commits-api-impacts-gitlab-ceee) 已明确确认本编号：repository commits API 的路径约束与认证检查存在缺陷，**在特定条件下**允许未认证用户读取服务器文件。下方旧核对记录中的“无确切 GitLab 安全公告”及由此产生的漏洞真实性疑问已过时，不再作为本条目的当前结论；旧记录与技术原文完整保留，便于追溯。\n\n官方于2026-09-10发布19.1.8、19.2.6、19.3.2，并在**2026-09-23**补充18.11.12与19.0.9回移修复。当前受影响区间应按分支区分：\n\n|分支|受影响区间|本编号修复版本|\n|---|---|---|\n|18.x|>=18.7，<18.11.12|18.11.12|\n|19.0|>=19.0，<19.0.9|19.0.9|\n|19.1|>=19.1，<19.1.8|19.1.8|\n|19.2|>=19.2，<19.2.6|19.2.6|\n|19.3|>=19.3，<19.3.2|19.3.2|\n\n因此，下方历史原文横跨多个分支的“18.7.0–19.1.7”范围及仅列三个修复版本的建议不应直接用于当前资产判定。上述版本是本编号的补丁边界，不是对其他漏洞或部署配置的安全保证。\n\n[CISA官方目录仓库](https://github.com/cisagov/kev-data) 本次读取的2026.10.04快照（发布时间2026-10-04T18:52:56.0635Z）确有本编号，记录收录日2026-09-11、到期日2026-09-14。官网JSON直读403，核对依据为官方仓库的同名目录文件。这支持KEV收录事实，不能据此推断任一具体实例已遭入侵或文件外泄。\n\n**仍保留的技术证据缺口：**本次公告与目录核对不证明转载中watchTowr“次日06:00 UTC”的精确观察时间，也不独立证明Workhorse/Grape编码解析、multipart绕过、公开项目条件、synthetic-detections单行报文的实际利用效果，以及外链脚本的`--auto`或`--shell`能力。原有第（2）、（3）项限制继续适用，`content_status`保留`needs-review`；原文“已发生文件外泄”的泛化表述不能替代具体实例的事件证据。未改写原请求、代码、引文、链接或实验主张。\n\n以下为此前的核对记录及历史技术材料；与本节冲突的官方存在性、KEV日期和版本结论，以本节有来源的更正为准。\n",
+  "metadata_old": "\ncve: \"CVE-2026-85706\"\nsource: \"hatch 补库批 20260928\"\nproduct: \"GitLab/repository commits API 声称文件读取\"\nrecord_type: \"vulnerability\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nprimary_identifiers: \"CVE-2026-85706\"\nreferenced_identifiers: \"\"\nidentifier_role: \"primary\"\nidentifier_status: \"unknown\"\ntitle: \"（CVE-2026-85706）GitLab repository commits API未认证任意文件读取漏洞\"\nprerequisites: \"来源所述条件，未列明部分仍待核：声称18.7.0至19.1.7、19.2.0至19.2.5、19.3.0至19.3.1；修复19.1.8/19.2.6/19.3.2\"\nside_effects: \"未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对\"\nsource_status: \"unknown\"\nid: \"vw-e875499c5d5e8e77620b73fb\"\nentity_id: \"ve-e875499c5d5e8e77620b73fb\"\nschema_version: \"1\"\n",
+  "metadata_new": "\ncve: \"CVE-2026-85706\"\nsource: \"hatch 补库批 20260928\"\nproduct: \"GitLab CE/EE repository commits API\"\nrecord_type: \"vulnerability\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nprimary_identifiers: \"CVE-2026-85706\"\nreferenced_identifiers: \"\"\nidentifier_role: \"primary\"\nidentifier_status: \"active\"\ntitle: \"（CVE-2026-85706）GitLab repository commits API未认证任意文件读取漏洞\"\nprerequisites: \"官方确认在特定条件下可由未认证用户触发；须可达repository commits API；原文公开项目、路由编码及完整利用链前提仍需独立证据\"\nside_effects: \"未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对\"\nsource_status: \"recorded\"\nid: \"vw-e875499c5d5e8e77620b73fb\"\nentity_id: \"ve-e875499c5d5e8e77620b73fb\"\nschema_version: \"1\"\nversion: \"GitLab CE/EE >=18.7,<18.11.12；>=19.0,<19.0.9；>=19.1,<19.1.8；>=19.2,<19.2.6；>=19.3,<19.3.2\"\nfixed_version: \"18.11.12；19.0.9；19.1.8；19.2.6；19.3.2（按分支）\"\nsource_url: \"https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/#cve-2026-85706---path-traversal-issue-in-repository-commits-api-impacts-gitlab-ceee\"\nverification_source: \"https://github.com/cisagov/kev-data\"\n",
+  "independent_peer_review": {
+    "decision": "pass",
+    "old_body_bytes": 6579,
+    "old_body_sha256": "39e1b92474b80f0fd965ef4aee2410052a4f9bbcea89535f402f56ee557d91fc",
+    "checks": [
+      "official GitLab five ranges and Sept23 backports",
+      "official CISA dates",
+      "original body exact suffix",
+      "generated source URL clean",
+      "diff whitespace check"
+    ]
+  }
+}

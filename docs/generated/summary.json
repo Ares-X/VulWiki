@@ -11,12 +11,12 @@
     "noncontent_link_candidate": 24,
     "path_legacy": 2,
     "site_relative_link": 81,
-    "source_missing": 3829,
+    "source_missing": 3828,
     "unrecognized_identifier_namespace": 88
   },
   "primary_cve_identifiers": 3560,
   "primary_entries": 5752,
   "schema_version": 1,
-  "source_digest": "e97b40906a6258cda568e5979cecec809f626aba37f4d853e2ba4ca13d3036be",
+  "source_digest": "f57ad99b68f7a58f428bb8a6d31c70aedacf3363dd40f183f0d60779c1f10923",
   "verification": "offline-static-only"
 }
