@@ -80,7 +80,7 @@ V8 里的 Signature 类处理函数签名。每个 WebAssembly 函数都得在�
   
 上面这个模块定义了三个空函数。第一个接一个 i32，后两个各接两个 i32。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibevsnqBMGXuAa3yuwFerhIXOhA5OO3yCNlGibuBsibAWRcxcNKvzEET11g3Yo2rMrbibvCXAmXfbVTteZEGsky92cicmkLx1Qk7Cdw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2ae2a455eebc67a647897c644bbaccae17e65ea31d6e771838ac80b103d51903.png "")  
   
 ▲ 第二个和第三个函数签名相同，所以在类型段里只定义一次。同样，跨多个模块出现相同类型也能合并成一个规范类型。  
   
@@ -98,9 +98,9 @@ TypeCanonicalizer 在 V8 初始化时构造。
   
 /* src/wasm/canonical-types.cc:191-211 */void TypeCanonicalizer::AddPredefinedArrayTypes() {  static constexpr std::pair    kPredefinedArrayTypes[] = {{kPredefinedArrayI8Index, {kWasmI8}},                                                {kPredefinedArrayI16Index, {kWasmI16}}};  for (auto [index, element_type] : kPredefinedArrayTypes) {    DCHECK_EQ(index.index, canonical_singleton_groups_.size());    CanonicalSingletonGroup group;    static constexpr bool kMutable = true;    // TODO(jkummerow): Decide whether this should be final or nonfinal.    static constexpr bool kFinal = true;    static constexpr bool kShared = false;  // TODO(14616): Fix this.    static constexpr bool kNonRelativeSupertype = false;    CanonicalArrayType* type =      zone_.New(element_type, kMutable);    group.type = CanonicalType(type, CanonicalTypeIndex{kNoSuperType}, kFinal,                                  kShared, kNonRelativeSupertype);    canonical_singleton_groups_.emplace(group, index);    canonical_supertypes_.emplace_back(CanonicalTypeIndex{kNoSuperType});    DCHECK_LE(canonical_supertypes_.size(), kMaxCanonicalTypes);  }}  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibdF4aThc02lZZC2gpGSBTLm35KucNWLia4nIRSaJxWMvDcyt1JLFMEDicTcfOcKxeACVv7IctmwYh0xdyAUTzmdExdHgrw2xrxL8/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a28b18fdbfe76d0f4820133f7d2c0425e5db1589dab0a6cb6bc63d389c4dec43.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6Tibc79HV6zTS6YV3TJ3slPRgtg8KVmLnIC2TibvELWicvCYl82wpuBjrZ609xIFQQvdqO8lnCa85ew7495nicpYPvUh21KHoaBEukOQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/47b50fd357122bdf4193fefc939a304d88fd80f99d2bc38e9d19b7dea8260bfa.png "")  
   
 AddPredefinedArrayTypes() 往 canonical_singleton_groups_ 里加了一些默认的规范类型。有两个预定义类型，索引分别是 0 和 1。  
   
@@ -112,9 +112,9 @@ AddPredefinedArrayTypes() 往 canonical_singleton_groups_ 里加了一些默认�
   
 WasmJs::Install() 把 js_tag_object 的签名规范化了。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibdiboEibNBtG4WibhsicjzRFMFz8mLUpDyaGJeGpV4OFgVG0dKTIzpInEHXtqoJZXYyFyibstekmKxZORrechNtcsPBn4Nmg6RMS0SI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0e4e66d1dd6b131573f5e908030015bc2a71bd45d8d56fbc39575bde16234d57.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibeCt05mUrohl8S5kzTvyGmWdVfm8uEgO5OhJ0mVicZUuPS4HXCXStOkiadib65A6FahGd1JMZAIuye1MicPySBkpNicsBjHKbBmCUibc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f33b72bd2338de6a88c9d20b8027c3f5dd202c7bd87a81f11785b4127effd270.png "")  
   
 这种情况下类型是函数签名，所以同时加到了 canonical_singleton_groups_ 和 canonical_function_sigs_ 里。加到 canonical_function_sigs_ 时，索引和 canonical_singleton_groups_ 里的一样，即使这是加进去的第一个函数签名。所以 canonical_function_sigs_ 的前两个槽位是空的。  
 #### 规范化递归单例组  
@@ -147,7 +147,7 @@ AddRecursiveSingletonGroup() 调用 CanonicalizeTypeDef() 为该类型创建一�
   
 CanonicalizeTypeDef() 会为所有用到的类型调用 CanonicalizeValueType()。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6Tibe4ibQibPohj1BUFy4wrdPNaKGSjnl1CMQgQ7x3sHJ0DIbhNyS6iaVha6H0uWiaLUFxABv7dib4mfQMH9XdJlvYia12dgCHdiaYcFutVo/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5d9e444a84c36d90a6731ee066087533e72d28f53258c73195c3c0b31c715647.png "")  
   
 /* src/wasm/value-type.h:642-644 */  constexpr bool has_index() const {    return is_rtt() || (is_object_reference() && heap_type().is_index());  }  
   
@@ -174,9 +174,9 @@ CanonicalizeTypeDef() 返回的 CanonicalType 对象被传给 AddRecursiveGroup(
 
 > 归档说明：上方源码在原归档中已压成单行，含 `//` 注释，不能作为完整可直接编译的代码；这里仅修正字面量显示，未猜补换行。
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibcSzFInsJagicbiaYiccHOPndlDo5ruOx5g911r0UmaRuts1FtJYtUJIhYvV5BJCcGH5POGtuYuozFJvdfCyVVxLOW2f8eL08yORM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d05e47ba17206e3b5a4bd77b7f0c87aa9ba6dd6e88ec0c6a8931558c55c6465a.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibciadtIK6KibphD6EeZjicyAzVQqsVlk4HxzHGfmwmzsf7UJrRqcaBK2qar1RRX1DWAQuNheXmFBgyyia2TlFEeECFLykexIU2bicibI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/83239be8e1904fef71b0dbb4ad308eaf098263adb215fd7538fc66714d08cf14.png "")  
   
 AddRecursiveGroup() 创建一个包含该类型的单例组，加到 canonical_singleton_groups_。如果类型是函数签名，同时加到 canonical_function_sigs_。  
 #### 规范化单个类型  

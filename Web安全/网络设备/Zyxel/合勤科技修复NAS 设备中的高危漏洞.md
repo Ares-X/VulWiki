@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Helga Labus  代码卫士   2023-06-02 17:37  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -63,7 +63,7 @@ Helga Labus  代码卫士   2023-06-02 17:37
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRXJlqiaBqkj0pz1iau7yfTAONN3u5ibjNoLzfY8VR7YmyeySsWkg7NmKlaQZenL6b7mGI3FXLphOVJA/640?wx_fmt=png "")  
+![](../../.resource/remote/d64ba97f238a9a3eb12d0dd5bd02564bfd465113b3186f89d55e3d5e6717299b.png "")  
   
   
 **漏洞简述**  
@@ -86,7 +86,7 @@ Helga Labus  代码卫士   2023-06-02 17:37
 研究人员解释称，“这些测试已经证实，认证攻击者可通过设备上的根权限执行任意系统命令。最终，这些漏洞可用于执行更加恶意的操作如远程恶意软件注入。”  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRXJlqiaBqkj0pz1iau7yfTAONN3u5ibjNoLzfY8VR7YmyeySsWkg7NmKlaQZenL6b7mGI3FXLphOVJA/640?wx_fmt=png "")  
+![](../../.resource/remote/d64ba97f238a9a3eb12d0dd5bd02564bfd465113b3186f89d55e3d5e6717299b.png "")  
   
   
 **迅速修复**  
@@ -148,15 +148,15 @@ https://www.helpnetsecurity.com/2023/05/31/cve-2023-27988/
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

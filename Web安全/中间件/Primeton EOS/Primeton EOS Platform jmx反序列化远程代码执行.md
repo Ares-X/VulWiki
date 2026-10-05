@@ -58,9 +58,9 @@ Primeton EOS Platform是一个由普元科技开发的企业级应用软件平�
   
 **漏洞检测与利用**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtBH6NRebJU0KaibAngsKvVNHRJiaPWKNHY67J8DFwCdJHOkdPOs2sonsAlIMrEe8DyptxLA5tWXIibpw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/837d3d81a7b74818931d4b1531afef6a0531f66c2aa6601cc89b41b81ce6e71f.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dfviaLov8RtBH6NRebJU0KaibAngsKvVNHRf9ZqAUnhaM7W9SxjfULZxYZBCvjiblhibv10L1ovR9QFee7CHRmlcDg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ac801995e0f6f8c43fd96470021d0ec45e10b94bc97078c014a8a5c2176258e.png "")  
   
   
 **修复建议**  

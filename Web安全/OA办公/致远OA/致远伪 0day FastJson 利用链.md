@@ -221,19 +221,19 @@ com.alibaba.fastjson.JSONException , 触发方式如下
 使用方法不在过多介绍  
 **dnslog 初步探测**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JW6o36ZrKicEHhCJd5dnJyuoUDz16qvwsdRsQG9YCnHzFPLt7muCKNCGIBIWAr6RuK1JmGrpwYlOOA/640?wx_fmt=png)
+![图片](../../.resource/remote/9b2854b7b36c3077df51461e840b65b42ebf4fa767d82c951a8fd5083e5911ef.png)
 
 **命令执行探测**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JW6o36ZrKicEHhCJd5dnJyuom4zTb3sbTJVicG31o14YHfcib5iaQj6ZynxrveGv8V62YwXUiaXsnXicxicg/640?wx_fmt=png)
+![图片](../../.resource/remote/edbfcb0fca0874837d01e71d7330068c74c912f066d5b4c7588b506d26dd3f07.png)
 
 有请求表示, ping 命令执行成功
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JW6o36ZrKicEHhCJd5dnJyuoLIkjB0CdEyoBJsbWjKfib4WXEQOMCdgQUHPw6ibNTLwAwgsWjMyRlaXA/640?wx_fmt=png)
+![图片](../../.resource/remote/23c67bbd679f6d14b46aaf4e59596f1e6ca0dd7a5bced0eee380b111d304e983.png)
 
 回显姿势
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JW6o36ZrKicEHhCJd5dnJyuo6WQpgvSGAk0Y9LqfQpQb7l2zkSdpgYF4zN1SuiceloYXy8LJksddmsw/640?wx_fmt=png)
+![图片](../../.resource/remote/5da17caa3f29df5174993f43d5431733cdcc3a9336a6586dd9fea025bc2748fd.png)
 
 **修复建议**
 
@@ -384,11 +384,11 @@ bountyteam@dbappsecurity.com.cn
 
 END
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/CtGxzWjGs5uX46SOybVAyYzY0p5icTsasu9JSeiaic9ambRjmGVWuvxFbhbhPCQ34sRDicJwibicBqDzJQx8GIM3AQXQ/640?wx_fmt=gif)
+![图片](../../.resource/remote/bd009f28a1feafd068fd1b7b30f3ee84175ddcaac33525b831179a99b6aa3bda.gif)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JUtWVUtGyNMRco3QkL4hMnIdIznBrxZB2picXpSkW7aJQH1BI0vU8Dqaszu3lbYibfPUbOfScFV0ACg/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/59eee7c2dce721579a926589f555ebdc98acf54687d1ac0a1192d11c3b2ea46b.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/0BNKhibhMh8eiasiaBAEsmWfxYRZOZdgDBevusQUZzjTCG5QB8B4wgy8TSMiapKsHymVU4PnYYPrSgtQLwArW5QMUA/640?wx_fmt=gif)
+![图片](../../.resource/remote/de69a03d90463d2f73a695bb9dba6bea64f2d5dc7e5efb2bfe2274065456c583.gif)
 
 **长按识别二维码关注我们**
 

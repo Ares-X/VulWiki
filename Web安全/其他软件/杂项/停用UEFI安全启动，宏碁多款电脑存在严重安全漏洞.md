@@ -65,7 +65,7 @@ Martin指出，宏碁笔记本设备上的HQSwSmiDxe DXE驱动程序中发现了
   
 UEFI是统一可扩展固件接口（Unified Extensible Firmware Interface）的缩写，用于在加载操作系统之前启动计算机硬件。UEFI安全启动功能确保在设备启动过程中不加载恶意代码。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibDWW3m4U1QgEBD9B9OvbvCEVeSCiaq52aISibcB8xnvZNfTL2ELIb1C51frMvSg22ibytTT9Lw1neYg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/645471ee13447e2c71478a9fd103655118c6894c3ceab058ae0d844eb5028629.jpg "")  
   
 宏碁回应称，该漏洞确实存在，目前已修复该漏洞，并提醒用户及时更新固件。用户可在官网下载BIOS更新，并在系统中手动部署。  
   
@@ -84,7 +84,7 @@ https://cybernews.com/news/acer-flaw-malware-boot-process/
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176njVOPvfib4X3jQ6GIHLtX8SSDvbpmcpr4uu3X7ELG7PDjdaLVeq4Er02ZoicTPvxrC6KCVH3bssUVw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
   
 
 

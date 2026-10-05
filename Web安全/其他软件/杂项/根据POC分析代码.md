@@ -70,20 +70,20 @@ POC：
 https://github.com/wy876/POC/blob/main/JFinalCMS/JFinalCMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E(CVE-2023-41599).md
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9ydNZfgkO7zibyspicXhAML4nicBk4q3vFewFfSoiaVryDlibPWvdF3f59HA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4be6f4002f0b6b7acc4d6329a52719a2358c0ffae768b19d4c64fa3ca4183695.png "")  
   
 根据 POC 找到相对应的接口。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9SKN9EysicuOJk1WSENWfqpPokVX9WHbmWJ8mBpEuslkHJJHEdS9Wz9Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ea4db10c332b629827eeedfe12e57ebdf0b97340bf850044188f8fef7759ebff.png "")  
   
 找到接口之后，点击进入相对应的 java 文件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9e0oRheFF6Dh16TDrFVfRyQC5HaO8jESaibxQXnGib43r6DA9v1YsSDwg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1559fe12671e1be7278f148365c4ade102549cab90420bf2cbd9b03c8f1e72ce.png "")  
   
 这里 file() 方法也被拼接接口，应该是系统自己封装的方法，接着我们点击进入getPara  
 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9ARJc3sgoAiblT4WF6PXatDBcjz8bc84bAribhygOgk6dE8xKQficpq1ibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/78b49dd0219f61b5b15aab1d98e74439b17c9b3f365d49807b62ac006290be4e.png "")  
   
 很明显，这里就是使用了request.getParameter  
 ，获取了当前参数fileKey  
@@ -92,21 +92,21 @@ https://github.com/wy876/POC/blob/main/JFinalCMS/JFinalCMS%20%E4%BB%BB%E6%84%8F%
 接下来就是分析 renderFile  
 函数，点击进去，然后定位代码位置。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9XTQClrGticBNx7en3QgNm4azJVL275POCL8IOxJ4wFveuHDx78cmdVQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/104681e620cfff81e37f8eea9034966c19dc3f9ac63daab1b68e908bbb33396b.png "")  
   
 很明显是自己封装的方法，我们直接网上搜索，查看它的文档。  
 ```
 https://jfinal.com/doc/3-8
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9R1naz9yduS7ePJp1Xy0oPP6a3IhSFFZicYzZsMQicELicibUjVnOroyrKQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/799c236ab92add3fbfa0ee5e6c00519854e22d122e6938b9d119c9cdb272c551.png "")  
   
 可以看出，此方法就是用于下载文件的。  
   
 接下来分析getWebRootPath()  
 方法。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9WXV6p9nUIzJnw2mEvs8oqgpszXfFdWuORbH8wwziceI7zcJYbkqKd9Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7ad1d6b659b489cb1470aa717d5436224db4f66a087af4fb696f109276a0022c.png "")  
   
 这里显示，如果根路径为空，就让路径等于detectWebRootPath()  
 。  
@@ -114,26 +114,26 @@ https://jfinal.com/doc/3-8
 继续点击去detectWebRootPath()  
 方法。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9ha41lstialcVzCII2XZzGtgtbYzib0VWVD17Gfpb28fQP20VyusJRlgQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9aec93c079b2d42a9af33bd607cd3a3f424779979f30f718332c475b458f07fc.png "")  
   
 此方法就是用来识别 web 根路径。  
   
 接下来，打上断点，进行调试。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9FkkyIcmkLYTp7rTVgJSgiapZUytSlOMwDCkxqnW5KLn3Cf1BGmbd8fg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/38653df537139f1e0e02a646e61ffe7ce49d759fc4878da293051a74ae1fd60a.png "")  
   
 fileKey=/../1.txt  
 ，继续下一个断点，进入 File()方法。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs95h9sec2pia1F4uu3ZcF54hQaKic6uaRJoLjw81hhpLz1vHGTyAGRztibg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6bb0b7a1b35bc41ca83c9a8c6b783a9b81e62bf3efe46de61697e79328ad5a99.png "")  
   
 调试得到根路径。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9icaC93N3zjzn3zXodxeHg9ICrdNUwJk1BGlE5meIiabaBmQfKyicYacaQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8839c4123de07ae9ff4e20b0e183042c6bec672a977df1cfaf5378ca70a8366f.png "")  
   
 成功读取到文件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9691BAyJWvMaTv7abIGNun4NaYiaLLiayjGicf372ZRZsZygNn88mjRmdA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/76987505f23fe683eda4189c9dc0b1cbee72a900f10bfe99b022e0fe22ece199.png "")  
   
 
 

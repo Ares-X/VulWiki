@@ -341,9 +341,39 @@ def active_url(value):
                          re.sub(r"[\x00-\x20]", "", value)))
 
 
-def markdown_links(prose, with_lines=False):
+class HtmlCodeText(HTMLParser):
+    """Locate literal text in HTML code/pre without hiding actual HTML images."""
+    def __init__(self, source):
+        super().__init__(convert_charrefs=False)
+        self.depth = 0
+        self.ranges = []
+        self.offsets = [0]
+        for match in re.finditer("\n", source):
+            self.offsets.append(match.end())
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"code", "pre"}:
+            self.depth += 1
+
+    def handle_endtag(self, tag):
+        if tag in {"code", "pre"}:
+            self.depth = max(0, self.depth - 1)
+
+    def handle_data(self, data):
+        if self.depth:
+            line, column = self.getpos()
+            start = self.offsets[line - 1] + column
+            self.ranges.append((start, start + len(data)))
+
+
+def markdown_links(prose, with_lines=False, check_image_links=False):
     """Inline/reference links, balanced parentheses, HTML and line positions."""
     prose = re.sub(r"(`+).*?\1", "", prose)
+    html_prose = prose
+    literal = HtmlCodeText(prose)
+    literal.feed(prose)
+    for start, end in reversed(literal.ranges):
+        prose = prose[:start] + re.sub(r"[^\n]", " ", prose[start:end]) + prose[end:]
     refs = {m[1].casefold(): m[2].strip("<>") for m in re.finditer(r"(?m)^ {0,3}\[([^]\n]+)\]:\s*(<[^>]+>|\S+)", prose)}
     links = []
     cursor = 0
@@ -378,6 +408,7 @@ def markdown_links(prose, with_lines=False):
             continue
         label = prose[match.end():end]
         image = bool(match[1])
+        wrapped_image = False
         if image:
             backslashes, previous = 0, match.start() - 1
             while previous >= 0 and prose[previous] == "\\":
@@ -387,7 +418,21 @@ def markdown_links(prose, with_lines=False):
         line = prose.count("\n", 0, match.start()) + 1
         # A link may wrap an image; that inner image still needs an asset check.
         if not image and "![" in label:
-            links.extend((t, i, line + n - 1) for t, i, n in markdown_links(label, True) if i)
+            inner = [(t, i, line + n - 1) for t, i, n in markdown_links(label, True) if i]
+            links.extend(inner)
+            wrapped_image = bool(inner)
+
+        def resource_link(target):
+            if not check_image_links or not wrapped_image:
+                return False
+            try:
+                parsed = urlsplit(target)
+                return (any(target == t for t, _, _ in inner)
+                        or bool(re.search(r"\.(?:png|jpe?g|gif|webp|svg|bmp|ico|tiff?|avif)(?:$)",
+                                       unquote(parsed.path), re.I))
+                        or bool(parsed.hostname and parsed.hostname.endswith(".qpic.cn")))
+            except ValueError:
+                return False
         start = end + 2
         if prose[end + 1] == "[":
             close = prose.find("]", start)
@@ -395,13 +440,14 @@ def markdown_links(prose, with_lines=False):
                 continue
             key = (prose[start:close] or label).casefold()
             if key in refs:
-                links.append((refs[key], image, line))
+                links.append((refs[key], image or resource_link(refs[key]), line))
             cursor = close + 1
             continue
         if start < len(prose) and prose[start] == "<":
             end = prose.find(">", start + 1)
             if end != -1:
-                links.append((prose[start + 1:end], image, line))
+                target = prose[start + 1:end]
+                links.append((target, image or resource_link(target), line))
                 cursor = end + 1
             continue
         depth, end, escaped = 1, start, False
@@ -421,12 +467,15 @@ def markdown_links(prose, with_lines=False):
                 break
             end += 1
         if depth == 0:
-            destination = re.sub(r'\s+["\'][^"\']*["\']\s*$', "", prose[start:end]).strip()
-            links.append((re.sub(r"\\([() ])", r"\1", destination), image, line))
+            # A double-quoted title may contain apostrophes (and vice versa).
+            # Strip only a complete matching title, leaving the URL untouched.
+            destination = re.sub(r'''\s+(?:"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')\s*$''', "", prose[start:end]).strip()
+            target = re.sub(r"\\([() ])", r"\1", destination)
+            links.append((target, image or resource_link(target), line))
             cursor = end + 1
     html = HtmlLinks()
     try:
-        html.feed(prose)
+        html.feed(html_prose)
         links.extend(html.links)
     except (ValueError, AssertionError):
         pass

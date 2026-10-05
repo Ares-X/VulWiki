@@ -56,7 +56,7 @@ schema_version: "1"
 
 SOC  赛欧思安全研究实验室   2026-01-08 01:30  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/yIEz1DpiaC4OICYgUZcRuP314ibXN1hmnKN8awMTWfgW35GkCiaCesHpPBWmcpUrPBKmycrBQnbhWlYzdrQtkK0uQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/73ab9c10cbe76f37b56b2b65f1616908e8eb03067c7ffa3516296846596b9a9c.jpg "")  
 - **摩根记录管理漏洞：Everest 集团声称有 52GB 文件外流**  
   
 Everest 勒索软件组织声称已经入侵了 Morgan Records Management 公司，据该组织称被泄露的数据达 52GB，包含约 1512 条记录，其中包括显然与纽约市住房管理局（NYCHA）有关的文件。  
@@ -106,7 +106,7 @@ Everest 勒索软件组织声称已经入侵了 Morgan Records Management 公司
 来源: GBHackers  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/yIEz1DpiaC4N8qpicxMwqxTp23lQH1GHC5ibn9wOD0iazhNVqe0ELFVg5592ZkHm6hcoQCzzYXsgbGa42JkfibDEvCg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bce5730b9331e3be84559e6698bb0c5fd41706f7feeb5ab64152e5e999ae160b.png "")  
   
 
 

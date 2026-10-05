@@ -67,7 +67,7 @@ schema_version: "1"
   
 Microsoft ODBC Driver是由微软提供的一种数据库连接工具，它允许应用程序在Windows操作系统上与各种数据源进行交互，包括SQL Server、Microsoft Access、Oracle、MySQL等主流数据库系统。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVleaDeU1ibPickZJzpKIF4Mcm9iaHXXSDJfzdooHoG4ZA4iaHupxCYLp8HtE2qPLEqYibUd5u3E3Nmiczw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/41f189510ddc99e12fc2b184bd128f8ee4b6def1ad7e02edb594581e1f289756.png "")  
   
 **0x03 漏洞详情**  
   

@@ -47,14 +47,14 @@ schema_version: "1"
 
 _7ingLian  偏远酒馆   2025-04-24 03:36  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/6ibqWGD93gcqIia6rwoa6Ex5b6D1CDj7FC5MrZn00B8rdTgvHWpYMUgS8iaDTicmb1obUoN8VEkvwY92XMr7XIfXGw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/20c06577a83756c0056fe0add2781b6f583e8f560f67fedeee8dc0aa183aa31f.png "")  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/7QRTvkK2qC6TPeG2dkwjCcbyCSX68lItlSsQFThaWupVms88KGHQMozur7n83IBgQe13iboB9k4QX9mmbyqWbOw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/eec5f85b9fc6d030225c34438f93496c733990f54a3d07a7153a380692e9784b.webp "")  
   
 CVE-2021-27651  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/l8UzsHjZBUkicvzLrJysUqiavdGwOPVCtxzkH7GfsKt6awLq96X4RqeGuay4CfPnLm7J1Oh2INENyooZrEDqaicNA/640?wx_fmt=png&from=appmsg&wxfrom=13&tp=wxpic "")  
+![图片](../../.resource/remote/424bf7c2bb6e08a8db219f94a15ed409c9ad2d5bd3f2e781d479e969ce88e4c0.png "")  
   
 **免责声明**  
   
@@ -116,13 +116,13 @@ pzAuth=guest&NewPassword=Rules%401234&ConfPassword=Rules%401234&pyActivity%3DCod
 administrator@pega.com / Rules@1234
 ```  
   
-![Password bypass](https://mmbiz.qpic.cn/sz_mmbiz_png/6ibqWGD93gcqIia6rwoa6Ex5b6D1CDj7FCPaiapzXby7haa7uNLic38gC9h8HmSczPxFHn58buQcP7cEBdyic60eL8w/640?wx_fmt=png&from=appmsg "")  
+![Password bypass](../../.resource/remote/b93ea3ef51b565853f02c6aea0aca38c57ca1e90472a17399b801578c2670260.png "")  
   
 Password bypass  
   
 Remote code execution via shell upload  
   
-![Remote code execution via shell upload](https://mmbiz.qpic.cn/sz_mmbiz_png/6ibqWGD93gcqIia6rwoa6Ex5b6D1CDj7FCicYhRRIePz66p2XkgcUnClkrianf8mP43rOia12Wy6vgjHUic2c1u5KwkQ/640?wx_fmt=png&from=appmsg "")  
+![Remote code execution via shell upload](../../.resource/remote/1df61b641d69c5c9c44d14939b96c37fc98a2c562eece5d3611b48159750cf04.png "")  
   
   
 --->POC  

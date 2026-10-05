@@ -74,23 +74,23 @@ xx.jar\com\dongbao\web\base\InitController.java
   
 在该java文件当中发现了下述接口。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Dfrm5V3o6kT787XxAuEyCJpV92Rf3uJfFp6t26EVCAbJzhQtxuvlnoUUBiaPaEfEm4CzBQ51AHuJY6J35oKiay3FscbBA15f825jDxoJeW2Ww/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/700e55274b681cb0d3aeb028944ad15126e06763306e14cce28f65a6a04cf674.png "")  
   
     跟进代码发现，利用底层函数获取beetStringGroupTemplate，获取到其对象gt。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Dfrm5V3o6kRqY5HZdGSEmtTzqpYMso5Z2S45d6ibT86emdkfZVqdFBkAIGRyuCCQiaZWSFq2icV29nmgb7YDDxHc2A3MHJJfolcxeaMcnCextg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dd420b65d8d450689d53af0960b162589dcec4d1cd554431c237cfa5b850fe16.png "")  
   
     获取json参数赋值给 param 和 paramTyoe  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Dfrm5V3o6kQGSspI8xVZbsqEsYchFktXM9SrFempD0lKriaKH5iaWiaaFSVic2iapFLUdM5264Q5eRn5C0WG5ZorbMfM1Zib0fzoJiaoan5eEBS6z8/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/11340587873686eb5ce36099cb239d441ccba9640404d3ea899fc612249c48ab.png "")  
   
     然后param不为空，进入如下for循环。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Dfrm5V3o6kShwcOm32fOmWzAMjMLOe8ibDm2kmL3y0mjRZpdIa8JAvQxdUibpbd1IgTspkDFVx9SD84K5Hvd63ZQmjqadsn5Z05JwHjVzMfQo/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dff3fb2e0ebda1279d537b66b22b04303dac0ab5e58617529ce2ca4713e62d03.png "")  
   
     先获取到paramType的键值（也就是参数infoType），赋值给 propertyType，然后判断propertyType是否为空，不为空，就反射获取propertyType 的类（也就是paramType（也就是infoType）），然后只要 classType不包含 HashMap 关键字，就可以不进入if，然后就可以把classType传入 params，然后进入下述代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Dfrm5V3o6kTLTdhPiaYrcH2Tia3uVzLO7rwvdmOV3uP5pmOuEUqHv3BF1LYEhWpUalcO4ycBPOTKzrndYssnM7EyTKczeJxxJhT80fqaiariaick/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1933bf67ca4a73726e2225a8a85d5135443d5f32ef90d2205d9fc835d9883fc0.png "")  
   
 传入params，code 到 runScript 函数执行，全程除了 Hashmap外，无过滤  
   
@@ -120,13 +120,13 @@ groovy.lang.GroovyShell
 ，然后赋值给propertyType，此时propertyType 的值为   
 groovy.lang.GroovyShell  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Dfrm5V3o6kT1p3hPDxAIqGsZyJ6OnicRNRUAZVnHS8tljsTXPtlLH8wwOZ2oQ63ww6SOyfiaCwvAmxpCiaAqu0JZ3A7ia0RkyT83hyTcOqar3hM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e7471c5e42ac4f6774c5179fa895a88d18bc192ab754c09f38559df9cf71cb19.png "")  
   
     反射获取  
 groovy.lang.GroovyShell  
 .class，赋值给 classType  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Dfrm5V3o6kRSdbfzhaaT2eibic41DQ0lnQIdVcxFPsQzPobPYZBgZFh7ydyJ0icDuVCs3TriapWoAXFQicGibLaJVjziaVMMwqXjiaoJ8mFwKP8TYvA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0808fdfd700a6d2bb1d0bbae0c34905ec939bba5082204bfbb89896cc2c2e1f8.png "")  
   
     然后调用，  
 TypeParseUtil.convert({}, groovy.lang.GroovyShell  
@@ -135,7 +135,7 @@ TypeParseUtil.convert({}, groovy.lang.GroovyShell
 TypeParseUtil.convert(  
 )  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Dfrm5V3o6kSOrTzGXbMIBS9UaicjA2acZoGX74n1Xan49ibahV3XwG0O9UVGWFbl7iclslf0bvtlhW60nBIgvxiaKxeyAUXlDINNg8HeiagEpcH4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7fe2ef55144e4052e742be6b888bfd0d7ce58badc57e210354d896519bb776ac.png "")  
   
     调用了  
 JSONObject.toJavaObject({}, groovy.lang.GroovyShell  
@@ -164,7 +164,7 @@ GroovyShell.evaluate('"whoami".execute().text')
 三、漏洞复现  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Dfrm5V3o6kSnBZSia9ZibBEicP1jgOFuqyeNDXYGr5mtianNQjmzoYsPtg8JLCpYn52DXBV2ibicfeukNY7yY8TKsQKDH3rC5sN6b1Dic50cxuWdbM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ac6255639d7be080d306828bc3ac0a1d29a9bc05e6da060256cde6e21aacf43b.png "")  
   
    成功执行whoami命令。  
   
@@ -173,20 +173,20 @@ GroovyShell.evaluate('"whoami".execute().text')
   
     目前第四期进阶课程已经开始，课表如下：  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ZRKuxIKRyhWnO9eMTmk5VVbhFTVLxXia4jqS2iaCJ15VPYY4I0MqNdo32T3flbxyxMMW0hwc7yzyicschnpgDGpYQ/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=16 "")  
+![图片](../../.resource/remote/a1a41ada7009c5f94245bd324062fef34d753ad6678fbbe72b8c46e5e4de5ded.png "")  
   
 同时报名第四期基础课程同样可看，课表如下：  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ZRKuxIKRyhWnO9eMTmk5VVbhFTVLxXia4n1Oz8NkOc9iaTZoFo8icSh5icPpsApB2A3ahLpHNcXBkoNgcqibDTUMBgg/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=17 "")  
+![图片](../../.resource/remote/6e1ebf44b3ab7376875fd4e61fa366bb3201cd3cd0055a05aab6962c7679df61.webp "")  
   
 同时具备内部资料以及靶场相关福利，想要了解的师傅可以冲了。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ZRKuxIKRyhWnO9eMTmk5VVbhFTVLxXia4MRnfNlopYRJ1xcwpguV74bTe3l8fPCACxUOGicR9BN3SsOYWtWgotMQ/640?wx_fmt=png&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=21 "")  
+![图片](../../.resource/remote/802aa926d3734ba087c0b36bc2a1fee91169b999c79f05e4d916fa8023f5fed6.png "")  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ZRKuxIKRyhWnO9eMTmk5VVbhFTVLxXia4ibiaWHuP6wheHNfH9znJyVQIbslJbbvNLWaFPpmA6YkpYicUfnJJsgia9A/640?wx_fmt=png&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=22 "")  
+![图片](../../.resource/remote/5882c89148ef314d413c09692e751f88d499dec0a6cafe031b4b3847680b0752.webp "")  
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ZRKuxIKRyhWnO9eMTmk5VVbhFTVLxXia4UILQauuRVdMl8DdtIykpSEnmZNLc1hRy6UWuAZqYFVH2Wl2ncVJyxQ/640?wx_fmt=png&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=23 "")  
+![图片](../../.resource/remote/83c478489f924c6ca8398b0369230c331f35871716c392310994e4463e6a93aa.webp "")  
   
   
   

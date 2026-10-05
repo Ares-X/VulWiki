@@ -112,13 +112,13 @@ C6/JHSoft.Web.Dossier/DossierBaseInfoView.aspx?CollID=1&UserID=想要的id用户
 
 以 admin 用户登录 OA 系统
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGb6h2wfSiaHLBsDfhSUAUnPiceKhvpAKNmucibdtvW0QEtLqRXOL2WR5aPdXb7ewKyibmmuE654s0urJA/640?wx_fmt=png)
+![](../../.resource/remote/275d38f0c360102b5d0f909e8470f1efe1dbb410877c0adac44ee1a7460bd330.png)
 
 查看用户管理，看到用户编号 0001 为董事长
 
 为了验证水平越权漏洞，我们登录一个普通用户账号，下面是普通用户登录后的界面。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGb6h2wfSiaHLBsDfhSUAUnPickzDydFrH99gX0Pfib1A4sFiba4hoqGXaJAeb2fLW1GkhEH7NUhxtdrhQ/640?wx_fmt=png)
+![](../../.resource/remote/46e8d71bd70275bcf267b69a81d1abe85f7f71938c70e0ab0755df96f5e25cce.png)
 
 访问 url:
 
@@ -126,13 +126,13 @@ C6/JHSoft.Web.Dossier/DossierBaseInfoView.aspx?CollID=1&UserID=想要的id用户
 http://www.xxxxxxx.net/C6/JHSoft.Web.Dossier/DossierBaseInfoView.aspx?CollID=1&UserID=0001
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGb6h2wfSiaHLBsDfhSUAUnPicnvsic9B6Y5rFzbNVUeDsglXuicuyIRicrnJMia921vEHzI5PEh6qIAqsRA/640?wx_fmt=png)
+![](../../.resource/remote/163c74c3b5b97e647e4dba3ca3eb0f8214496927565da42243813434eb11258b.png)
 
 以普通用户权限查看用户编号 0001 的用户信息，复现成功。
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/z1BDHniaudwlfmWtOG25nMTy7Rm8fr8FiaZGaNFeOjQK1wfqWpcrZc3TPvRmyYN2r2qC8JFGuMFEXobVMYp9hQzQ/640?wx_fmt=gif)
+![](../../.resource/remote/8f65c5e3c670e903030d9feb29b33ee94d38d6768dc8869282c5be2f22dba534.gif)
 
 扫码二维码
 
@@ -140,9 +140,9 @@ http://www.xxxxxxx.net/C6/JHSoft.Web.Dossier/DossierBaseInfoView.aspx?CollID=1&U
 
 F12sec
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/EWF7rQrfibGZjT4wKhhUiaY0Vfb11FayFhDumgDvFHln8q6rttXdllugQU7ibcLLOxp5H581iayytcnXEPwibEO8yqw/640?wx_fmt=jpeg)
+![](../../.resource/remote/5ddf78d6ebe65766a69e829e9eb3baddd946677f3cfc0008edbc430328dcfc1a.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eHpJZ2bXAXdly9aB5q6xe9xjE66TzF3GbwhdOYtfUyyejGYeOcS7L6yn8WP1LflIANPiafT4h0kghD7MGhJkqAA/640?wx_fmt=png)
+![](../../.resource/remote/2b9f5d90903c2b58b5ddc097a27b236281159a76855c2e757b0e1a82b88ef9da.png)
 
   
 

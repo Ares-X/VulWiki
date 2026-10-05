@@ -90,7 +90,7 @@ Userman 模块的 UCP 通用模板为方便批量部署，插入了**硬编码�
   
 FreePBX 部署于全球大量企业 VoIP 通信环境、呼叫中心和托管 PBX 系统。受影响版本涵盖 16/17 两大主流分支，2021 年后的部署若使用 UCP 通用模板且未修改默认密码，均处于暴露状态。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uqtLGQlJSxWB2SBL4vEV9W5icCYNV3gIbOJFpL7C4UaskC2E66HMRibAic8fj8Z0yUmdhcIQf5orCLlQxW2iaH4u4jvJwqmJ62rU0T3WgickIbf8/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/02303d9237aecacc97120a41e9a137345953f221850af24c2a711c987e7c9433.png "")  
   
 六 临时缓解措施  
 ```

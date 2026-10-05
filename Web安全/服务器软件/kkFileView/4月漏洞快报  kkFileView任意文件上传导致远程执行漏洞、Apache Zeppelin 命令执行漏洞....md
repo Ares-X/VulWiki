@@ -47,7 +47,7 @@ Apache 已于 2024-06-21 撤销 CVE-2024-31861，理由是进一步调查确认�
 
 原创 梆梆安全  梆梆安全   2024-04-24 16:30  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/YpfGdibD1mRlEhUENIEoRKT24icXeO3JJwibGtsO8Joic50gqlSvLmCHJreMjPSJ65ya8RqWGTpurGMxXM3xJN7faQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/4d78a44a05a5b7471cf5127c81d1b887b0797b4de4c13e73cb7b14c5b7d110c5.gif "")  
   
 近日，梆梆安全专家整理发布安全漏洞报告，主要涉及以下产品/组件：kkFileView、Palo Alto Networks PAN-OS GlobalProtect、Apache Zeppelin 、  
 Node.js，  
@@ -66,7 +66,7 @@ Node.js，
   
 kkFileView 是使用 SpringBoot 搭建的文档文档在线预览解决方案，支持主流办公文档在线预览。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/YpfGdibD1mRkELT5oLa2E8msXXfjknIIvbxjzHynXuiasI2sKFm8MLx728h1zBtmcoHodaBic2jMvTbVBkyZTE5Cg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/533e7d027df6902243f29b9afcc36df91c57aadbadfddcfb68cd336419f6e329.png "")  
   
   
   
@@ -104,7 +104,7 @@ kkFileView 4.2.0 到 4.4.0-beta 版本中文件上传功能存在 zip 路径穿�
   
 Palo Alto Networks PAN-OS GlobalProtect 是 Palo Alto Networks 的一款防火墙产品。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/YpfGdibD1mRkELT5oLa2E8msXXfjknIIvictOO7CEWR8IU7B3n9mk6cyTj8NicMuSI8pfPuKooAw4iaQyplPa6zKgA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/16721532fb5fcc06e3c8c29a19f748996b057ee9f7e6ce05ab99b5a5ebf6b3d1.png "")  
   
   
   
@@ -163,7 +163,7 @@ PAN-OS 11.1.2-h3
 Apache Zeppelin 是一款基于 Web 可实现交互式数据分析的 Notebook 产品。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/YpfGdibD1mRkELT5oLa2E8msXXfjknIIvMg243qBv8AQIxwx3nOckaH3fJ7CicRa3LguvNMBadybt4OoT0Rv0EibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ece499f96f31d6e7e68f8ab3c22fce422d8a5249dfc6f5fcd52cfea382cc10ac.png "")  
   
   
   
@@ -203,7 +203,7 @@ Apache Zeppelin 中 sh 解释器类型的 Notebook 可以直接执行 shell 命�
   
 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，用于构建快速、可扩展的网络应用程序。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/YpfGdibD1mRkELT5oLa2E8msXXfjknIIvLDEBzMxawW6SklmRbhwhhXSsoreKQPib2xSJQJMtRmZVzRtyy1yrjVg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8ce55a795d7597dc0292bfd756f549fcc6f87cc0640f48867cd11b34e91620a1.png "")  
   
   
   
@@ -250,7 +250,7 @@ Recommended
 # >移动应用安全监管的主要难点与应对之道  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/YpfGdibD1mRnDY5407c6UFGMlacqbuQrzVRU5sgjicTxqFdSDRLzgbfM5BibmVpNibL7Wlia0630UxgBIGaX18IJzqQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/e18aa29cb4ce6c3e10085133ee596807286c6da70c8e10105ac43ed5fb88200a.webp "")  
   
   
 

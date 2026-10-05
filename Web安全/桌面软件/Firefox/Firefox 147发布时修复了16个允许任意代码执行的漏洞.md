@@ -57,7 +57,7 @@ schema_version: "1"
 
  网安百色   2026-01-17 11:08  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo49E74BLfrEBM3Nko9RBqsZiahDV6k6P3AW3Z8IY3JZ3XmjrFzSyqKSyMDmmvJSLd9OFS3qJJz4L3w/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/02ca733ea88d324542d3674afd88749701c249c9997be3696a3c7a56d060a8d0.jpg "")  
   
 Firefox 147于2026年1月12日发布，修复了16个安全漏洞，其中包括6个高危漏洞，主要涉及沙箱逃逸和内存安全问题，建议所有用户立即更新以防止潜在的任意代码执行攻击  
 。  
@@ -131,7 +131,7 @@ Firefox采用多进程架构和沙箱机制来隔离不同组件，防止恶意�
 ：检查浏览器扩展和用户配置文件，确保没有异常活动  
 本公众号所载文章为本公众号原创或根据网络搜索下载编辑整理，文章版权归原作者所有，仅供读者学习、参考，禁止用于商业用途。因转载众多，无法找到真正来源，如标错来源，或对于文中所使用的图片、文字、链接中所包含的软件/资料等，如有侵权，请跟我们联系删除，谢谢！  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo5lNbibXUkeIxDGJmD2Md5vKicbNtIkdNvibicL87FjAOqGicuxcgBuRjjolLcGDOnfhMdykXibWuH6DV1g/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=p6hk1x4r&tp=webp#imgIndex=1 "")  
+![图片](../../.resource/remote/cc9dd7fb5b24fc27ce16bb1e9985b3b85c989e00551dbfad66f86d1e7499d3f3.webp "")  
   
 
 

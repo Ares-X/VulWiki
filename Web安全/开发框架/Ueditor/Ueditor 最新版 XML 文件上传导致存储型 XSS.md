@@ -60,20 +60,20 @@ IP：192.168.10.1
 
 不用安装和配置，直接打开就用，不过上传文件的路径需要注意下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb5rLahQ3akyic6RXoAtrW0qAz7yLcqR5YqVlC037HEWnuyHibgkLdrY20Q/640?wx_fmt=png)
+![](../../.resource/remote/3a3ff25d128f98a6ae15801fb881fe69596e7ff1eb100e78102bfaabcbdd3004.png)
 
 **测试过程**
 --------
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb5m5GhicA5uQrMpMxR5bLARnqb6MoSVVshzZly1icP6qmmdwTyPMP35JkA/640?wx_fmt=png)
+![](../../.resource/remote/f4e2f947b00efce40e5dc523907b0f0da61dbb8776d8d49d06a7a89bb359fbaa.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb56Df3KkdXFSDNuz1wSA1H21B69lluuJqJqkS67tZp2q7fFys4xYSSVw/640?wx_fmt=png)
+![](../../.resource/remote/abb8d6ffee5a68ac69935f3ac97c5d453ecc22aad1a2429c978c53b2a252281a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb5QFLduMksqQtxk4jvUnutZXp14PtYdFJKtJ0d10NKdrx1mOpTNeicHSw/640?wx_fmt=png)
+![](../../.resource/remote/bd5b9c4ca344ee09e375f65a82cfac6d9e2613f040b31b982808b837a978d717.png)
 
 访问触发弹窗，可以改成下面其他代码测试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb5nw1SGZZHKpdUic6NOnRzFyFDL8VXCCsmTkuDD1MEUFYGJbcZgumLwtg/640?wx_fmt=png)
+![](../../.resource/remote/91b9252215971d057536e4ac4cf5e2b8cad42f6d8484cc7973e7bddb44f37345.png)
 
 有时候上传访问不了找不到路径可以访问如下 url 把文件目录列出来再拼接，实际过程中请注意 controller.xxx 的访问路径
 
@@ -105,7 +105,7 @@ window.location.href="https://www.t00ls.net/";
 </html>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb5snIbPTmWKUb01kBj8ChVwZrc2X8ubmQNicMlNcKFMjMhy2R710uDjxA/640?wx_fmt=png)
+![](../../.resource/remote/60d405e77ce11ddf54ddc07d86b13db1fe178d397d3f0e2762a8390532ac228a.png)
 
 **常见利用代码**
 ----------
@@ -147,7 +147,7 @@ window.location.href="https://www.t00ls.net/";
 
 可以看到在 config.json 配置文件里 xml 文件类型默认是可被上传的，所以去掉重启下应用或者服务器就好了
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfydhiawYTQxzNWznNWWOlb5eZRSibUMWZnvibBtMf3Xq7bueTz7IiaSz8lOocWh5IADoTtTdtuRoXkAQ/640?wx_fmt=png)
+![](../../.resource/remote/694c56b68a26142dfbb244228bf736ecd8d85bcbd16dfda473dd87e993ff47e6.png)
 
 **实战意义**
 --------

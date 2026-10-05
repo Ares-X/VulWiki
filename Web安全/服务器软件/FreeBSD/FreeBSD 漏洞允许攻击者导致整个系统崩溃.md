@@ -45,7 +45,7 @@ schema_version: "1"
 O安全研究员
                     O安全研究员  O安全研究员   2026-02-27 11:42  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/FiapE7wXY1K8z0r3z0Bicpg1XDoLsRA29y8X1nYqg8SicobPVHVY4ialMZyyhgGCoF5otZWNia3skjiclX6CmAwQicqG3o1J9Q99ZXShyRdiaYjHLYM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/41a5c02a4591b05f0d4807a39ffd53129c716ba6cac47c9bdb6d6ebefd83b5f1.png "")  
   
   
   
@@ -68,7 +68,7 @@ FreeBSD jails 是一种作系统虚拟化形式，能够安全地隔离进程。
 如果管理员通过 nullfs 挂载配置两个兄弟监狱共享目录，这些监狱中的协作进程可以通过 Unix 域套接字建立连接。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/FiapE7wXY1K8SExI5LSt8EBHkTVHSjibOhIPgm9IU8BuRJdlyY3LXiapJxBOicaz13R1FDoJhFo2r8P34MqXPxDtvZuUUxk0ge8jTRFJ2PiaHRwE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/aa2b27784b52b6e1d7e8c7697bdbdc5a6da6880eaec0856cf2be779cdac7febb.png "")  
   
   
 通过该套接字，恶意进程可以交换目录描述符。在正常的文件系统名称查找过程中，内核检查目录是否下降到jail根以下。  

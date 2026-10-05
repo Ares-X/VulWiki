@@ -89,7 +89,7 @@ Hooks 是 Claude Code 用来在特定事件（如项目初始化）自动执行�
 ：攻击者可以执行任意 Shell 命令，包括安装后门、下载恶意程序。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/PIWj1VguNovXHwPtahtOicAYjzWonawPhibElWdGfSyfFXX1p0vjMQbxulA19Ygbs4Q2CWJ7d37icWzic4oD64W7icAFibFDFKFFpdKh3FujUtX0g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9909fbb3a776bdb8e65f462863962f4f89aba7500ac9ee3c701740bb16c0571d.png "")  
 ### 风险场景二：自动化绕过 MCP 的用户确认机制  
   
 MCP (Model Context Protocol) 允许 Claude 调用本地或远程工具（如连接本地数据库、运行终端命令）。  
@@ -104,7 +104,7 @@ MCP (Model Context Protocol) 允许 Claude 调用本地或远程工具（如连�
 - **潜在后果**  
 ：在受害者意识到项目正在打开之前，机器就已经被完全控制。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/PIWj1VguNosG4cZ6XYjo7LaGrPAj1pQFc5QJs7UWJYuILIbW89nFVuLycBu7K6dJTRYibvicURbWaIc9fVw0jHcrzwzeNW7l1JxIME1DMWsF4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2ccf467e0f67540c275081752bb6fb05d95280dbcd58e99eec04b5fb493b3f47.png "")  
 ### 风险场景三：针对 Anthropic API 密钥的“中间人”投毒  
   
 这是一种旨在直接窃取财富和数据的身份劫持攻击。  
@@ -123,7 +123,7 @@ MCP (Model Context Protocol) 允许 Claude 调用本地或远程工具（如连�
 - **潜在后果**  
 ：攻击者使用受害者的 API 密钥进行账单欺诈，或者利用 API 的 Workspace 功能直接读取受害者托管在该 Workspace 下的所有项目文件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/PIWj1VguNotZc397xkLtD28LoYJiafxrvn32mHwwQvTWemmg5QiazlANCrBQ1YmSOMGib0BibNCpfPn79bX4xGxnXKHKuGAWOXLXE63ApxpicIrc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/85269ed6f147fd0c525169706c2ed3cefdd68f70e7253c05c2ac0165dbc8d697.png "")  
 ## 03 总结与防护：严审你的项目配置文件  
   
 在 AI Agent 时代，**配置文件即病毒体**  

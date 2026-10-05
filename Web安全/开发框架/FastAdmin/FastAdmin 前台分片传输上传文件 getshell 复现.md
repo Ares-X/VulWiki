@@ -91,11 +91,11 @@ https://package.fastadmin.net/full/1.2.0.20210125_full.zip
 
 先开启分片上传功能，文件位置如下图  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSreHIP4ghOFe6MQYt7Rcfq70Pe5Ty9icIH4aYSKR2R6bgPicSsbdiaSib9w/640?wx_fmt=png)
+![](../../.resource/remote/b031bc63eb42f88532c55f760f0f1836b9a07f7051b41bb16115fd1f2f6a5c6f.png)
 
 访问 / public/install.php 进行安装，填写数据无脑下一步即可  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADS5L80y8BxhNcmKI2GQoGEbleLpfJNiaVsFDvRhZ2l6zEIXDAHln2CJNw/640?wx_fmt=png)
+![](../../.resource/remote/c33f57a3d95e3f4b265a0126caa59435f98ff201fd4e81bca4aec25b0d0181f7.png)
 
 **0x05 漏洞复现**  
 
@@ -105,15 +105,15 @@ https://package.fastadmin.net/full/1.2.0.20210125_full.zip
 
 所以我们需要在前台注册一个普通用户  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSjQdBN3btycM0lH3icEJkDjQmGqN6rhnhcicFSx8Sr9Z9dqmB5O4ApGtg/640?wx_fmt=png)
+![](../../.resource/remote/cf94380c206557fafdb9da3d49f86ce9379be632a8ef1c781e32025449224d97.png)
 
 登陆后在个人资料头像处抓包并上传 dog.jpg
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSVWDtRqfWohjvk2p8pWbyBqtgH1dVJZ4gF8Y4y2hQXv3DMC6uPSfFzg/640?wx_fmt=png)
+![](../../.resource/remote/19e99ea8a5954c5109691483c320558000916df15777a2b71216ed0b34f89672.png)
 
 更改上传数据包（需要注意图中几处红框的内容）  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSMxYiaFXMiaz9WmziarMDZEYODZpgwBDaEBOtDcADcFjl9os6cMRcJdvHg/640?wx_fmt=png)  
+![](../../.resource/remote/cea384ae3c39639006bcedb78625a94eec9f60efbc6e1afae0f4aa45fc67cb7e.png)  
 
 ```
 POST /index/ajax/upload HTTP/1.1
@@ -148,13 +148,13 @@ Content-Disposition: form-data; ;
 
 C:\phpstudy_pro\WWW\fastadmin\runtime\chunks 下生成一个 test.php-0.part 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSXrGNCMDAzcibDhL3PhtXEuhC9y7j21POl6JHIa4QJvezK8SmXXAVLxg/640?wx_fmt=png)
+![](../../.resource/remote/4a70e57f47f1a51725f9c43b36661c407fa1772cb8cc602fd2b3f1671f803570.png)
 
 发送数据包（需要注意图中几处红框的内容）
 
 返回包显示 200 则代表合并成功  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSIPYAP0v3PiaibgvkibQ8UmUAkym2r0MaMMLX0IqzqgXQSsXiaFMrC5B37Q/640?wx_fmt=png)  
+![](../../.resource/remote/3b79e9f728d7bed9264aa67252c19333a862b841f18fc2f83fbb0f4a7e93f0ae.png)  
 
 ```
 POST /index/ajax/upload HTTP/1.1
@@ -177,9 +177,9 @@ chunkid=test.php&chunkcount=1&action=merge
 
 /fastadmin/runtime/chunks/test.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSG7Xian8WjULziaIS28A79IclLYYdmLytQ8OvhiaU4kpkXbO5Z812YHOtg/640?wx_fmt=png)  
+![](../../.resource/remote/02971e1ab8869eafe08c7586479ced186f64026d1bc155f6c0d364092a9fe580.png)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSgnh4ctn5mibWs6CKtGBn8sxYEaZviaVyBhZBlVZNUjjo8jOAgyQ3GvUw/640?wx_fmt=png)  
+![](../../.resource/remote/1084036d4b5b8b75d9b6e17c828d55021ebf5d05b6ccc164a14bf68a9a58fbaa.png)  
 
 （漏洞利用存在很大的局限性，首先是需要开启支持分片传输，我在调试的过程中发现，在指定 host 解析，设定网站的根目录为 /fastadmin/public 之后就无法访问  /fastadmin/runtime/chunks 下的文件，虽说如此，但是可以通过设定 chunkid 的值为 ../xxx.php 就可以实现跨目录的上传）
 
@@ -191,7 +191,7 @@ chunkid=test.php&chunkcount=1&action=merge
 
 application/extra/upload.php 中 chunking 为 true  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSAE3ibb0hdJZ61euYx20mZVjnMv6Wz5Hc5j02fiauHVwvCzhbDsSOZtqA/640?wx_fmt=png)
+![](../../.resource/remote/a34025ac29b50505cd546bc759b65fe1022dc9238a69db629fb7d97cfd205784.png)
 
 同时最新版本已经修复存在的漏洞，修复位置为
 
@@ -199,7 +199,7 @@ application/common/library/Upload.php
 
 复现漏洞时，应注释这个部分
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSNYhibaniblg26E5Ac3LiaRwYkgKmia1NiaGe7Wtia4j0iapqljB9f0tnxpDfA/640?wx_fmt=png)
+![](../../.resource/remote/48690939a302b6085acc8bb65c7212f748eab6980389f42005228259d4d29b93.png)
 
 根据上传时的路由信息  
 
@@ -209,7 +209,7 @@ application/common/library/Upload.php
 
 application/index/controller/Ajax.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSDZHL5L3TsUULRFmbeedicVeMZ74SoNwkI4Qr15RphLpwtUEc9xJ18KA/640?wx_fmt=png)
+![](../../.resource/remote/d4d828dc98d7829f398115db27d24122c703fc9bdd50f417d406a9f5a6f5d4df.png)
 
 漏洞的触发共分为两个过程，上传分片与合并分片
 
@@ -217,11 +217,11 @@ application/index/controller/Ajax.php
 
 \app\api\controller\Common::upload  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSaVeqQJqDkQH7lfsKl8DWwyouYPiboibmD4Kib2ONT2LqMknLicCFB3tG5Q/640?wx_fmt=png)
+![](../../.resource/remote/bbae24853610063024718af106d7973d60d304b2ff971acb461f0c991eabd10b.png)
 
 \app\common\library\Upload::chunk  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSSHhTD4ZYwq2GwqCGE61KPw8Sq8hGC5ibMDPuKHOQyFSo5KXPmjA15VQ/640?wx_fmt=png)
+![](../../.resource/remote/db223b5862f856c83a9813c12582e5f335fe55cdeec9703fc3ffc2fc7be2edf2.png)
 
 在 chunk 方法中，首先对 Content-Type 进行了校验，必须为 application/octet-stream 将传入的参数 chunckid  与  chunckindex 通过 - 连接，最后拼接 .part 最后保存到 /runtime/chunks/  
 
@@ -229,11 +229,11 @@ application/index/controller/Ajax.php
 
 然后是合并分片文件的操作，需要传入参数 action=merge 才会到合并分片文件的函数  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSbfAccDnPbVyx1HoEx8QgE9V1dElxicdysvC7JRsywBzK3nkS1PA9Gsw/640?wx_fmt=png)
+![](../../.resource/remote/cd68983b06598beb1ac3d326a72649e7fbb7dab4718af074f506727997545c69.png)
 
 \app\common\library\Upload::merge
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsh5E9kDWAEbeEnDAocNfADSfjgLuc3hGyb2uFnEvEJ6ldzp4KuUGE3srUlRHSialh1MOrS2XRhxKkg/640?wx_fmt=png)
+![](../../.resource/remote/1c9c887abace0f70d23d1a10acd99d61bd4d9ccce9b5d2a2359c5e339d91048c.png)
 
 在 merge 方法中会将 $chunkid 的值指定为最后保存的文件名，然后回根据传入的参数 $chunkcount 遍历查找是否分片文件上传完成，我们仅上传了一个分片文件，所以第一个分片文件应该设定为 0，此处 chunkcount 的值应为 1  
 
@@ -259,11 +259,11 @@ https://xz.aliyun.com/t/9395
 
 https://mp.weixin.qq.com/s/otrH75ZjCHBQbRB7g5DdWg  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章  
 **

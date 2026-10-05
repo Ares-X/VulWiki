@@ -44,7 +44,7 @@ schema_version: "1"
 Apache Subversion（SVN）是一款广受开发者欢迎的版本控制系统，用于维护源代码、网页和文档。最近，Apache Subversion中发现了一个关键的安全漏洞，CVE-2024-45720（CVSS评分8.2）。该漏洞主要影响Windows平台，可能导致命令行参数注入，从而执行非预期的程序。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38iaLH1sCCqKO5RW4IzCrBCvqs25icsWhicQvblg2joYhfd79ytzddygWrWeSoZMXo9hxt4jRRZicna5A/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/c4bfb055ca79039fc23e539ecc9248b9953018036bb75ee7ec179642f12b1a6a.jpg "")  
   
   
 根据Apache Subversion项目的安全公告，该漏洞源于Windows平台上命令行参数的处理方式。具体来说，当命令行参数传递给svn.exe等Subversion可执行文件时，会发生“最佳匹配”字符编码转换。公告解释道：“攻击者如果能够运行Subversion的一个可执行文件（svn.exe等），并使用特制的命令行参数字符串，可以利用字符编码转换过程导致意外的命令行参数解释，从而导致参数注入和其他程序的执行。”  
@@ -83,12 +83,12 @@ FreeBuf盲盒、大象公仔......
 扫码添加小蜜蜂微信回复「加群」，申请加入群聊  
 】  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ich6ibqlfxbwaJlDyErKpzvETedBHPS9tGHfSKMCEZcuGq1U1mylY7pCEvJD9w60pWp7NzDjmM2BlQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&retryload=2&tp=webp "")  
+![](../../.resource/remote/c756b5fb2e446e8a46aeb976861dc8502220a41de5fd7e545c0fa98a66cefe23.webp "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oQ6bDiaGhdyodyXHMOVT6w8DobNKYuiaE7OzFMbpar0icHmzxjMvI2ACxFql4Wbu2CfOZeadq1WicJbib6FqTyxEx6Q/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/af824128f3c655f23db4a009f5f2a753c9c7e209ababffdeaf5e18432c146adc.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ7JfyOicficFrgrD4BHnIMtgCpBbsSUBsQ0N7pHC7YpU8BrZWWwMMghoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/0bffd438af0f544d8aead12bdd40b183fc2d88caa433e43fbd4152d042609e5d.webp "")  
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651302087&idx=1&sn=29d91904d6471c4b09f4e574ba18a9b2&chksm=bd1c3a4c8a6bb35aa4ddffc0f3e2e6dad475257be18f96f5150c4e948b492f32b1911a6ea435&token=21436342&lang=zh_CN&scene=21#wechat_redirect)  
   
@@ -96,7 +96,7 @@ FreeBuf盲盒、大象公仔......
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect)  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
 
 

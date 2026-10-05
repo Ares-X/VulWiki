@@ -41,7 +41,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/972fmkQM1YpKhFCeAj-lwg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMsCKzOcSia4CUbkMJiaFtvDiaGwnXTHzO9exWmQKljFzibl9lV2N3l3zwv9g/640?wx_fmt=jpeg)
+![](../../.resource/remote/cb1f0e70e157edfb19b6416608a25c2c738ceed81a2b55eae19f0b47b8eee7ec.jpg)
 
 介绍
 --
@@ -63,29 +63,29 @@ schema_version: "1"
 
 在 gh 的 v1.2.1 版本中，引入了一个 safeexec.LookPath 函数，当通过滥用 Windows 路径搜索顺序克隆新存储库时，可以阻止远程代码执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMs0yBc4t6Lo2EKQDOxHhvmyWqGGicTHb5xewgA8TzSOeYq5r5poCMnuCQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/64e4b5d8db3b9366e82e6a88eec34cf1c9d23ba52af69e854d80f1bc814a7eba.jpg)
 
 在仔细研究之后，我们的安全工程师 Vitor Fernandes 发现了一个绕过方法，这样就可以利用它来实现远程代码执行了。
 
 在漏洞发现过程中，我们发现在 fork 一个新的私有存储库时，仍然可能出现远程代码执行场景。因为在克隆命令执行之后，并不会通过 safeexec.LookPath 函数来调用 “git.exe config credential.namespace”。因此，所以 Windows 将返回到其默认值并搜索 git.exe 文件当前克隆存储库中的二进制文件：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMsttWKURbLMg6a8XV8TvPtnibhjECsg8ekMyicGgUvd8MHYysDxMiatBJxw/640?wx_fmt=jpeg)
+![](../../.resource/remote/6da6655f5c571f802670bdc9babf7557fabd277d4a6ccebafbd1f1aba7166375.jpg)
 
 下面给出的是 src/shared/Microsoft.Git.CredentialManager/CommandContext.cs 中的代码：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMsltibp7yGvQAcJH9txLEkRX0vJPPjhUGObdbsreEI3aibbSUR80rYV2ZA/640?wx_fmt=jpeg)
+![](../../.resource/remote/38db32361c28354a098a14bb936f505f13d1a455b019e115071ff40d9b7a7dac.jpg)
 
 我们可以看到，在第 89 行代码处，将创建一个新的进程来搜索 git.exe，而 “Environment.LocateExecutable(‘git.exe’)” 将作为目录路径参数传递给 GitProcess()函数。
 
 下图显示的是 Environment.LocateExecutable() 函数代码：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMsAFSxicBu6xscCA8vZhtD9lXcyoYxrbFyf980OxGkubE00AnFdCWnJzg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b5f3dfe3f70486b6bd7bd65052137b4bd8e8400c974da5d2ab5275137a4ebc6f.jpg)
 
 /src/shared/Microsoft.Git.CredentialManager/EnvironmentBase.cs
 
 函数 environment.TryLocateExecutable 的代码可以在【阅读原文】找到：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMs6181qOIARnLnOtCKYa3FHWtib2bwRYpbQ0YmcQLlC3k3IZRtQLJBFqA/640?wx_fmt=jpeg)
+![](../../.resource/remote/910d2185f3c51b0bae66cf8ef861cb40b1e93e25582dcf15ffaa477cd529d219.jpg)
 
 在使用 Windows 的实用工具 where.exe 时，它将会返回所有出现的文件或命令，包括 %PATH% 和当前目录的值。
 
@@ -104,11 +104,11 @@ schema_version: "1"
 
 在下面的例子中，我们将 calc.exe 重命名为了 git.exe，并将其上传到目标代码库中：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMsylUOob9A4vwGZoIZiaomnUhqcpHIHDx8Sw5Buu8bV7YCyUy6naIiaYQA/640?wx_fmt=jpeg)
+![](../../.resource/remote/ebfe5e3653396b2c81b16d681f01246148f1536796967ac691c411cb9cc60634.jpg)
 
 Fork 代码库并执行 “gh repo fork REPOSITORY_NAME —clone” 命令之后，目标设备将弹出计算器程序：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR398q2nLwgDYls15FI9JWrMsEibCYic2iaFDrPbozKgDFZuOSpM6GVxXycQjoy6xcSLiaP3FvKqfAAdKSg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b1501c0906116420f26966b7193dd9f47791b60eab47dbb45718f7d9324e80a3.jpg)
 
 参考资料
 ----
@@ -123,9 +123,9 @@ Fork 代码库并执行 “gh repo fork REPOSITORY_NAME —clone” 命令之后
 > 
 > https://nvd.nist.gov/vuln/detail/CVE-2020-26233﻿
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38Tm7G07JF6t0KtSAuSbyWtgFA8ywcatrPPlURJ9sDvFMNwRT0vpKpQ14qrYwN2eibp43uDENdXxgg/640?wx_fmt=gif)
+![](../../.resource/remote/33f7cb5f70c2418864a2ab9c5ebdb737b442bc98d5a34c344981f472bf69c466.gif)
 
-![](http://mmbiz.qpic.cn/mmbiz_png/3Uce810Z1ibJ71wq8iaokyw684qmZXrhOEkB72dq4AGTwHmHQHAcuZ7DLBvSlxGyEC1U21UMgSKOxDGicUBM7icWHQ/640?wx_fmt=png&wxfrom=200) 交易担保 FreeBuf+ FreeBuf + 小程序：把安全装进口袋 小程序
+![](../../.resource/remote/241a5efdd3cb729f4507509cc08336272b9d313bf6f9b586027d6bbf4e5d3099.png) 交易担保 FreeBuf+ FreeBuf + 小程序：把安全装进口袋 小程序
 
 精彩推荐
 
@@ -137,17 +137,17 @@ Fork 代码库并执行 “gh repo fork REPOSITORY_NAME —clone” 命令之后
 
   
 
-****![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ib2xibAss1xbykgjtgKvut2LUribibnyiaBpicTkS10Asn4m4HgpknoH9icgqE0b0TVSGfGzs0q8sJfWiaFg/640?wx_fmt=jpeg)****
+****![](../../.resource/remote/1347c4eed374fe9bbfe38e3bb4209c6240c5b44ca7dab877fa596499b746684e.jpg)****
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icpSmNbdiaVpmTEfDHJFoS2OIO0ibau3Xo0W3W5icSIT9hIQY4gmlK4nOY8jcVq2hngIe7Fug8w6lHyQ/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484287&idx=1&sn=16a9b2dc0e205a0e5fe86ae5cae9fe2e&scene=21#wechat_redirect)[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR39823fgk2Py1fbU5wCoewwO0AKFIGmCLF6bY37GDicGMDRicgQf6xW1jtjY8Raby8RjiauX5205Zg8Dg/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484370&idx=1&sn=8b79701a2936e04e390f165344e5fcdc&scene=21#wechat_redirect)
+[![](../../.resource/remote/c997a9f4986b6f5dd3a7ce30fe4438432a0e69a1510ddadfdcc3490a3c0ca6b7.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484287&idx=1&sn=16a9b2dc0e205a0e5fe86ae5cae9fe2e&scene=21#wechat_redirect)[![](../../.resource/remote/c4252b3cb8caac64577e3e9712325a5420a41886301aa06c145beb949c573d10.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484370&idx=1&sn=8b79701a2936e04e390f165344e5fcdc&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibSZod64tZYfVs9eOO83Wq83nUmS51lkhNxf89EtGvGDD3Dlqria56Wl73fmg1kGk4WNKVN8AXCuEQ/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485424&idx=1&sn=1d4409309a035cb6ffcbdff54cc7ab7b&scene=21#wechat_redirect)
+[![](../../.resource/remote/5cbcade7924bfe90c519a14683ad1b9b0792ea1cde8f831c71554b5af0261ce1.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485424&idx=1&sn=1d4409309a035cb6ffcbdff54cc7ab7b&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR395Z4CT37PeziaibYaIGkflMsWMmHkcFLhU4zwO7V5TrLCjyZtIkKvYTIrL4WYG2cs1wZdH3uKaKRDQ/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485262&idx=1&sn=3038b6d54c1a38213d660ca7b0000562&scene=21#wechat_redirect)
+[![](../../.resource/remote/73e115b1fe73b8704c8c7d77bdc9befe5a00ecc76af231f90d82c63d36a1877d.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485262&idx=1&sn=3038b6d54c1a38213d660ca7b0000562&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR38jJpuKrr8kx7KiazujuhoibR00ibHanwiaWL3iacIL65dliaJaPRwUwL2DvOo9NL4UWva3EwF35bcflS0A/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485242&idx=1&sn=b189e16baeec14f28f55c690598ef020&scene=21#wechat_redirect)
+[![](../../.resource/remote/8fba5be2fb9ca42aaae73c8b679dbb8c16cea44f849a771e3588cc6e96fd1b43.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485242&idx=1&sn=b189e16baeec14f28f55c690598ef020&scene=21#wechat_redirect)
 
-**************![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif)**************
+**************![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif)**************
 
 ---
 

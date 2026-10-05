@@ -56,7 +56,7 @@ schema_version: "1"
   
 Lаnɡflоԝ是一款用于构建和部署AI驱动的代理和工作流的工具。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWHPUpZmONDCibcFMW39mQNiaulRXCKTibMciaWtBw1yDKAkx71WnnxR63goPXFQVQMAyTUUu2pIgLQuA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0 "")  
+![图片](../../.resource/remote/82315b169e39a5a3131405196ab57a08b79de06bde89fd785f9a180d4600a58a.webp "")  
   
 **0x03 漏洞详情**  
 ###   

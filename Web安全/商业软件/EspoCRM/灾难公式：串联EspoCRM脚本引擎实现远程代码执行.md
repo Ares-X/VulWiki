@@ -170,7 +170,7 @@ sourceId</code，就等于控制了文件系统的访问目标。
 文件，添加处理器指令，强制Apache将特定文件（如shell.php  
 ）作为PHP解析。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibeSpanuFp3rOUakB45vqPr1As90EBRPppGIynwrKAYoM7c0xkcsnkhrS2Gj2AS0HnOreptk2DiazaUVbOceB5DIz1BMqJ4sicEMA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a10d790870aa03193dab1b0b5771552e1ef3de03c4e42a0eeb61b55de51f9314.png "")  
 ### 影响范围  
   
 此漏洞直接影响所有运行EspoCRM **9.3.4之前版本**  
@@ -210,7 +210,7 @@ sourceId</code，就等于控制了文件系统的访问目标。
   
 这为攻击者提供了在不触碰文件系统的情况下进行横向移动的能力。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibcoOx9CF3gRjnrapwop9aa5iaadjibEQpL9538moI3IdoRIIcC38hXmq4y2Cc5Lliazia0KiagL6AYESibVKk2Ux91icTH1icqaSVUQ4ia4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d652e8d94c2111dd9608d972fd9a4642255e85eaf4ea238ccca4dc07998ba3d8.png "")  
 ### 漏洞复现与PoC说明  
   
 完整的远程代码执行利用链涉及6个HTTP请求。以下为关键步骤概述，完整的自动化PoC脚本可在GitHub查看（JivaSecurity/ESPOCRM-RCE-POC-CVE-2026-33656）。  
@@ -252,7 +252,7 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
   
 整个过程不依赖任何第三方组件、特殊的PHP配置或服务器错误配置。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibddrP4JaGQlp41VrZyyPOtpxxQiaGksvrO0Z3dwp1cK6uGvRHLD9D6ib6RiaiaUnTGCo3oib1yr4haHGNTHCFgteHjrkHK4jRcovhyM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b4202eaa497b9e9452bf97c31bcb52391f0b26f2d75530c845a37cf5c8c901eb.png "")  
 ### 修复建议与缓解措施  
 #### 官方修复（EspoCRM 9.3.4）  
   

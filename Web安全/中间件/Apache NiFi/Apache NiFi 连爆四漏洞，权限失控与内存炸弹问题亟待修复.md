@@ -70,7 +70,7 @@ schema_version: "1"
   
 **高危风险一：只读用户竟能“偷改”配置（CVE-2026-62354）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Cpo2XCpI7K1ibP4zWKPPU7icNdmDAUA2qVcDtlYiba9h1ZnXy15Sq3VbELTSmCLCqu7L4JEA6cJTop9ckibK5HVjKf7gqNHJYDA30CduqXYeibZw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fb3875db6f475a86ae556171f214bfe7f79b1386394d4de5c482bb47d4584851.png "")  
   
   
 影响版本：1.10.0 – 2.10.0  
@@ -91,7 +91,7 @@ schema_version: "1"
   
 **高危风险二：小压缩包制造“内存黑洞”（CVE-2026-68981）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Cpo2XCpI7K1qcVAqsoXXF3gpzAYRz7NkZ88CHEfuiaicfSbbNTBicSMY6XfNJ1MDvSDE9AXTBbbsk7k7ctNwzJiaAg5wdXnJRavJuPP5uUXb8NE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fb3875db6f475a86ae556171f214bfe7f79b1386394d4de5c482bb47d4584851.png "")  
   
   
 影响版本：1.5.0 – 2.10.0  
@@ -111,7 +111,7 @@ schema_version: "1"
   
 **中危隐患：改一个参数，动全局组件（CVE-2026-68979）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Cpo2XCpI7K0daDPica78vBK3bsKvxicZYudibjb7libpU6bq5ibLLF733Yg6tDW5gcar4LKOnF2SCotdDFZSNKLEiaFtP86uyTNCSP70OXV0gdbicw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fb3875db6f475a86ae556171f214bfe7f79b1386394d4de5c482bb47d4584851.png "")  
   
   
 影响版本：1.10.0 – 2.10.0  
@@ -132,7 +132,7 @@ schema_version: "1"
   
 **低危但需警惕：删错资产的“乌龙指”（CVE-2026-68980）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Cpo2XCpI7K1DY3EGAicDibRoPOKrMFq3wR7jnRDlrqyqxc01ZLYHvylaGXlc212I10nDqLYQtUeIeB0zCUGf9ZibvniciaC1muQCve2rpdanjBxc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fb3875db6f475a86ae556171f214bfe7f79b1386394d4de5c482bb47d4584851.png "")  
   
   
 影响版本：2.0.0 – 2.10.0  
@@ -148,7 +148,7 @@ schema_version: "1"
   
 **安全建议**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Cpo2XCpI7K0jTpoSrg9IHw8fsIeeibEyDUnjia4ZAbOgXxzesC4OicIeb5s36rH5dedRcWst0awyaSE5d8BHwRn9y0VRzgFnKgPBX6vB5q4GkE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fb3875db6f475a86ae556171f214bfe7f79b1386394d4de5c482bb47d4584851.png "")  
   
   
 如果您正在使用 Apache NiFi 1.5.0 至 2.10.0 之间的任意版本，请立即将部署升级至 2.11.0。  
@@ -161,17 +161,17 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Cpo2XCpI7K1FDtnr5zibNS26DiaIFCJqjBIbrW1wj5VPwy3Gp1INNUc5DJcliaQza6uIUqUkYBiaOFmTCzyiceQwl6omDicUVcKSnJvq9h9kocrVc/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1174aba2fd2940bc43d2ae24fb3dc5445254a6d40df4c96dc10b062e956cbbfb.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Cpo2XCpI7K2csoNBPibJ5yBkicM9IWNvuJF2zwACV8Jpk089llOReuialAZlxrERoQFPmLyE8wM4fbxAx8ictaT2Mlic16vD8j8zORNggQQWrvFk/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/Cpo2XCpI7K2ZGE8y5XJjibicmgibPian1Xu0w1wrJz8jQyDlxibEN8pLTH6iakZ8mZq1IUj33rkWcunoF5xbyrJBibDIK4ibk1Ylbx9lCzbL0gH5SLY/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/Cpo2XCpI7K1SoMzconMFSsU5m9TB9a9Wg3HHXGS156abuuPzXV29M7W4k0Mej6AzNkjHz2aNpsJEBkVibhxbFJvQwfFG0ibYXdncY1ZhkKgibc/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球在看**  
   

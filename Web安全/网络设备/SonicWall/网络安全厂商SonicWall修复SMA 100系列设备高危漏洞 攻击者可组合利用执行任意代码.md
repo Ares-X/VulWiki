@@ -51,7 +51,7 @@ source_status: "unknown"
 
 鹏鹏同学  黑猫安全   2025-05-11 23:00  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceibod01MkGXBORy4xnoicKSz6icPv9naUnjicG49B86zG1NgALC9lAAibAGiaZFmMz5pg3pzmBn4G2gRX3g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f593f5488968f881562e79f69381cf955400d048cf41107735990b6c64ff94f6.png "")  
   
 漏洞详情：  
 1. CVE-2025-32819（CVSS 8.8分）  

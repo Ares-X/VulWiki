@@ -47,7 +47,7 @@ previous_version: "`@Bean` `public Function<Person, Person> pojoecho() {` `retur
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/sPPyso-WyPGnYYHeyL9DPA)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/mVborIuoDaaXFjOddIVfKpgl8XAxib0MB7zmeTIBmSLs6YjnDN80IdibscSTlf5iam8IPXpOhEve6NWI2zIcFXxOA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/08b558a3b23b77d0c82eb97211eb136501a395e01b5d3793d3497e9b76aefe96.png)
 
 背景介绍  
 
@@ -95,7 +95,7 @@ result = ((Function)this.target).apply(convertedInput);
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/mVborIuoDaaXFjOddIVfKpgl8XAxib0MBfKgelODv8qqah6Hxj5jRjvcvyGydK6fFZ9twickoWLfd7UnFG2l4scg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/b87d718ee2ae5cc79f51d180b700a2f6ad726ffdb80e311e14acf0262e926ec4.png)
 
 看下 RoutingFunction 原型是实现了 Function 接口，输入和输出参数都要求是Object类。
 
@@ -113,7 +113,7 @@ spring.cloud.function.definition=functionRouter
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/mVborIuoDaaXFjOddIVfKpgl8XAxib0MBSXibwqlS9YAicIWZtNlhOibdJamAALANCaHuLZEBibOGTkJBOmYjXqDsibA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/9564e79e5f8cafd5965426826eb2f7443ba21a6daf34b5983feeed5cca0db5a1.png)
 
 但是这样写那就会受此漏洞影响
 
@@ -123,17 +123,17 @@ spring.cloud.function.definition=functionRouter
 
 以为这样就结束了，但是发现**pen4uin 的文章里 提到的路由** 不论代码是怎么配置的，都能够触发SPEL表达式执行。是因为这个路由最终会绑定到RoutingFunction，因此满足isRoutingFunction() 条件。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/mVborIuoDaaXFjOddIVfKpgl8XAxib0MBfO5r62uO4pjWP6GAJ0icysRfGJMNSQE0T6a2SKN4k2XD9iaAKZ3gMNqg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/38f52f43e4f15b0c68233c3b1e2c861e887885571da394e5865959e70b7a789c.png)
 
 其实 /functionRouter/ 后面跟任意路径都是可以的，例如
 
 /functionRouter/aaa
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/mVborIuoDaaXFjOddIVfKpgl8XAxib0MB3OH2GX1fkEIia6eo1j4he29yna6cO2MqkpnV6JSnzsKd4gZveRJIhkw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/bce3e82c050003b74c360bd27d0c0a60cd824474ae657b6bf0cdc410fffdb556.png)
 
 甚至 /functionRouter/aaa/bbb
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/mVborIuoDaaXFjOddIVfKpgl8XAxib0MBzSRI02fAuR500STaOgiaLme7anS7bxLJ6TwF8FeLkhBZQWbTBrfJB1Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/24ae44062008cbde09f1a469525ab32a75b1f5a07849ada427980c6bf6de1491.png)
 
 修复方案
 ====

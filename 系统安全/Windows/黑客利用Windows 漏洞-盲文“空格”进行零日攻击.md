@@ -57,7 +57,7 @@ schema_version: "1"
 
 Rhinoer  犀牛安全   2024-09-29 19:07  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkera2MSpeQjpAPpicPpnIfOAH65SVUROnibNpgZNCcMKeepic2Yiaiazv61SiaqjRA8x50fuNTKQ9MeNDw/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/da0f750e60d29ccdb92e88104800e1a53ec766a647c52719c75693c4da5d91b5.png "")  
   
 最近修复的“Windows MSHTML 欺骗漏洞”编号为 CVE-2024-43461，现被标记为之前被利用，因为该漏洞曾被 Void Banshee APT 黑客组织用于攻击。  
   
@@ -85,15 +85,15 @@ ZDI 研究员 Peter Girnus 告诉 BleepingComputer，CVE-2024-43461 漏洞也被
   
 正如您在下面看到的，文件名以 PDF 文件开头，但包含二十六个重复编码的盲文空白字符（%E2%A0%80），后面跟着最后的 '.hta' 扩展名。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkera2MSpeQjpAPpicPpnIfOtQQPJ20nNbYR9OMQ0zic7sR3crhQzYcvQVPnk3NNEenh5ELbHbUMbxg/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cb55a5a3bf68ba591e9df45a7ff6bb02848922ce3d584dd9ba3f743b48607295.png "")  
   
 当 Windows 打开此文件时，盲文空白字符会将 HTA 扩展推到用户界面之外，仅在 Windows 提示中用“ ...”字符串划定界限，如下所示。这导致 HTA 文件显示为 PDF 文件，使其更有可能被打开。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkera2MSpeQjpAPpicPpnIfOHaKNb7hL5XviaLVk1Mo1Nuqexmtnnl9KHG8vBm0ETQvsJxf5ic2FLBXA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1eaac60c773e4f5d34143b4de8f07b93c8d9751a8cfc03a88bb3c18ed0e50940.png "")  
   
 安装 CVE-2024-43461 的安全更新后，Girnus 表示空格未被删除，但 Windows 现在 在提示中显示文件的实际.hta扩展名。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkera2MSpeQjpAPpicPpnIfOGb1SvQ9yqxb9TjfD1TFY5FhZib4UsKPVV2coF6f7kL7KU1EIGC9hBQA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e7145227875f7b554a6e5fcc40785d1891ed816e83b3bbc385ba639651e2208f.png "")  
   
 不幸的是，这个修复并不完美，因为包含的空格可能仍然会让人们误以为该文件是 PDF 而不是 HTA 文件。  
   

@@ -72,11 +72,11 @@ Oracle MySQL Server <=9.1.0
   
 https://www.oracle.com/security-alerts/cpujan2025.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagjjiabSel4JYUrIJRX2sCgxCWFmqm9LnZPUSoT4iaiaYUiam109roPJfCFA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/02fdff02b2442b8cb96f58786a82462072fb3731630421aa39d1190080a15c76.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagWhiaJypiaEgbbx4tayubzSp9mnB6FALbOMpWepoOZz9xicyUwneG8zMvw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fda296da5ba01886cc0913c8460f06a8214c4461626d6656dfc3776c223de4e6.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiag9WJKsjsYs8oBzT71xHrbdlC8FgmMdRkXiat1d7qONlVFnnLFbMpFNzQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/32ab199ca9f8225c8a4545e0da899fe2e3e48a0278e2d2257f5e5e904e8ae248.png "")  
 # Oracle MySQL Server存在未明漏洞  
   
 Oracle MySQL 9.1.0版本及之前版本存在安全漏洞。攻击者可利用该漏洞创建、删除或修改对关键数据或所有MySQL Connectors可访问数据的访问，以及未经授权读取MySQL Connectors可访问数据子集，并导致未经授权导致MySQL Connectors挂起或频繁重复崩溃。  
@@ -99,15 +99,15 @@ Oracle MySQL Connectors <=9.1.0
   
 https://www.oracle.com/security-alerts/cpujan2025.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagZdIQdZIJklUnNDbE21YeKheLHAHnRhdRWjStOr8k5Bv1JCOvicqmT9w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a7c45c81722d159b6c3b6e3bb889518539ac568f47dd245f6e301cc33e456697.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagKyYyxSdxogI7dicia8o41gdXqJib6Ve3GeoUhoIIb2syp1VdVtMZdKlgg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fc445a88f5eff5edb175a007e4f8a1339673dd9b7c9baa264f87ac47bfefef2a.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagK0B081iaa7kBZQWqqEY1jFYCRBlf78VaRIBNJ35b9wekfpL74zYg5lQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/21d6a11c96cdbc0363755481bf969d6c840abc4d41190c52414db5b4cfa2ff49.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagnLBWmDXD2JuAibdwLR8vC6Mibxq9Mak5Py6DkS65QqW1fvpbLFfhfYIw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/193e4be61e3adc93db7255cbb614cf88c2845329195906b0521472be7a36947c.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiag0tsIxQYQMZZtu5fueKTlsREzk1F4ibWricic3PiaYPK01EWgZrItBcNM5w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/83886c5c30de17416c37b6a106c200f1dbee16fe8e13483fa6bee07229dd37ad.png "")  
 # Oracle MySQL Server存在未明漏洞  
   
 Oracle MySQL的MySQL Server存在安全漏洞。攻击者可利用该漏洞导致MySQL Server挂起或频繁重复崩溃。  
@@ -157,9 +157,9 @@ Oracle MySQL Server <=9.1.0
   
 https://www.oracle.com/security-alerts/cpujan2025.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagyp8OjIzINAEsaZY9GcbeHUIah8SdfzlpmygI0m1xoCxOFzqZrDJVxg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c24f3e05dc78764e764f615f5be26aa4e1b8325321fec3a0ba7f18ac961b0f6e.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiag3IJ9xC2bcZQyOLqPH2Fny1nyibSK2YZtib1zU8b40HPxSfPA7dsdjbeg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d27e463f1961ad68cf1fa39492757a8abd2077d2617fe7b0e7b8bb8c36ef48d7.png "")  
 # Oracle MySQL Server存在未明漏洞  
   
 Oracle MySQL的MySQL Server存在安全漏洞，攻击者可利用该漏洞导致MySQL Server挂起或频繁重复崩溃，以及更新、插入或删除MySQL Server可访问数据。  
@@ -211,7 +211,7 @@ Oracle MySQL Enterprise Firewall <=9.1.0
   
 https://www.oracle.com/security-alerts/cpujan2025.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagHmoMtpwAYQN9BQ4VYb0zwPKGeCicHhibh4AJ3KBWD0EzD6RS9fSmicjWQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/23f5fc4a5213ea8458eed409291a34089e589ff9d723c452d7f63496aa67325d.png "")  
 # Oracle MySQL Server存在未明漏洞  
   
 Oracle MySQL的MySQL Server存在安全漏洞。攻击者可利用该漏洞导致MySQL Server挂起或频繁重复崩溃。  
@@ -285,15 +285,15 @@ Oracle MySQL Server <=9.0.1
   
 https://www.oracle.com/security-alerts/cpujan2025.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagEZog4licPhpEnmTSZR0DxsiceIxJ0E6YBNN9IMqylQpLEUPVCye2Jsbw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bb92aeebd176cb95e3e5ac253a902708a1740191e1f677b2a156980106f54dff.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagyHHtSEukuicicczqic24DqU7EFecEZ14eXPQ3Qfc0eIMLWWbRS151ia1qQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8f2f278f49fa2591722161433385bef7764f58225eef0f9da1827ae677319f5d.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagjELGu0y0GtkqqcUonBjGrplFIUKu4hGWeJicibOlQqIpfMsBG0xuPLoA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/50964ccfbe19606abec6573f77de5900b4e837cef9847e4af0246ab8511d0ad0.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagO2icc8XsdbjETpLA7icZ8RyYHGuqWAx4br7L2HGW7jb6ycsjGPibpYWeg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ab4468c1ab4d385a00c4850d5f4389704143a10548c0b98c8d5027c05fdb36c1.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagmWPdBMTguKwO917FU8ykdUMxo4tOsNPmuYOMwMblNsyiaJ1BC3pbRBg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/03c77ac59b2a494143c0f5693558d02b7469f394ec4c930703096cdef3348a91.png "")  
 # Oracle MySQL Server存在未明漏洞  
   
 Oracle MySQL的MySQL Server存在安全漏洞。攻击者可利用该漏洞导致MySQL Server挂起或频繁重复崩溃。  
@@ -317,11 +317,11 @@ Oracle MySQL Server <=9.1.0
   
 https://www.oracle.com/security-alerts/cpujan2025.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiagfG4sTIUxmwfNrk8Xpx3De9EX1Tmx65kNZlp6WNIsPlXa1ntKFeICow/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e2f24bfb76522c9257081058179b5367c6a82905d0c0aa7cb0d052f021522e3f.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiag5NlSZ4ASq5jQYV6z3M63UzV9q6KbZxE3buxR3MlsqyzDU48mNhUGHw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/872a2fc926fdc9f5416a86af14947061e71b5a64535901278427c564e5380b70.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/jffibz4Oml1CvFsluV8ls16XwJtPEiajiag17HKNsKiaFz4WKcRqY9mQGDtjaic4Jpem0YpRA2NA99ia7q10TEUa0h3Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/aa019fd7ba1c10acc021e19450eba3e09c9952658219f4e81f4a8933f5a24490.png "")  
   
   
   

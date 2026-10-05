@@ -61,7 +61,7 @@ schema_version: "1"
 
  Ots安全   2024-03-28 12:09  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
 1. Cisco Talos 去年披露了 JustSystems 的 Ichitaro 文字处理器中的多个漏洞。这些漏洞非常复杂，是通过广泛的逆向工程发现的。  
   
 1. CVE-2023-35126及其同类（ CVE-2023-34366、 CVE-2023-38127和CVE-2023-38128）均被评估为可利用，有可能实现任意代码执行。  
@@ -104,29 +104,29 @@ Ichitaro 字处理器支持的主要文档类型使用 .jtd 文件扩展名并�
   
 使用微软复合文档格式的软件实施者将利用其类似文件系统的功能来存储与文档内容相关的不同流。因此，当要求应用程序加载文档时，应用程序将从文档中读取目录条目列表以提取流名称。然后可以使用这些流名称来访问各个流的内容，然后可以使用这些内容来加载恢复文档所需的部分。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscYSbGFibtgjledf9Jzy8621LdicWibLDWQB1Sbr4k8eEcCiceVIGNAnOkNw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e79589a9694fd98a651d42083ee5726c145fc81344d2357db7b8c0b1ae2f0256.png "")  
   
 根据这种通过名称引用流的逻辑，逆向工程师可以识别模式，并识别二进制文件正在解析特定流的位置。这种模式与标准 API 相结合，可以使逆向工程师识别应用程序中与文档交互的相关部分。  
   
   
 利用这些模式，TALOS-2023-1825被发现，然后报告为CVE-2023-35126。当第一次检查空文档文件时，可以在结构存储文档的目录中找到几个流及其名称。将其中一些流名称与加载到二进制文件地址空间中的模块进行交叉引用，我们将得到引用该流名称的单个二进制文件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscPk9T2ALOccTX8Mq68mNLH8aPiaBK2CpkzZkibjPCZhkT7on6usCsAMPw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/172144bcdf949143509a06c87952c363a6f724eef65c6ce0fc3d0f81248ba935.png "")  
   
 使用在应用程序生成的文档中找到的默认流名称，可以搜索属于应用程序的每个二进制文件以确定哪些库引用相应的流名称。以下命令演示了此类搜索。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscJvUneCU1K7fpbxnILbiaumOYmHtqYZlG89eOyLMff91dyT9kN6hROHQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a6b229a82bb292e9d5978861fc6a5e644ad2377b21112bd12bf35b1daacdb369.png "")  
   
 一旦识别出正确的二进制文件，就可以简单地交叉引用字符串来识别可用于与相应流交互的候选列表。在下面的屏幕截图中，每个流名称都彼此靠近。识别出候选函数列表后，可以使用该列表通过调试器设置断点，然后用于枚举与解析文档相关的函数。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscaZ8kHkxjW30hCB7pAk1Xm6KxFmpvWbZm34Qick0jopIMnv8QJmRAqicQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/347b2f79087d12399a941ae74d61dc5cbfece093b36c6c5102d74155d5adf988.png "")  
   
   
 **发现**  
   
 发现相关错误首先要识别流名称的位置，枚举对它们的指令引用，然后找到每个引用共享的公共调用者。这是使用 IDA Python 脚本在下面的屏幕截图中完成的，该脚本获取选定地址的列表，获取每个可执行引用，将每个地址分组为单独的集合，然后找到所有集合的公共交集。这导致单个函数地址负责选定的流名称。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscRAulmeQBZ1fQIO8WrI4SnxicyeJjQYb0OChYs5TsK0p1IDxXCwrFR2A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4ffaac6481f79608823f6c65be0bc94e6ad98d78aedee2c63b6bed98dd932272.png "")  
   
 在检查与发现的地址相关的函数后  
 0x3BE25803，它似乎引用了从空文档中列出的所有流名称，并用作某种形式的初始化。在将此地址设置断点运行应用程序后，我们的调试器将确认在打开文档时执行此代码。在同一调试会话期间检查回溯可以为我们提供一条简单的路径来识别应用程序如何解析文档中的流。  
@@ -208,11 +208,11 @@ DocumentViewStyles流。具体来说，
 DocumentViewStyles和  
 DocumentEditStyles字符串都是相邻引用的，仅由条件分隔开。因此，两个流可能使用相同的实现来解析它们的内容，并且使用参数来区分它们。在同一函数的底部是一个循环，可能用于处理流的可变长度内容。如果我们检查此循环的每次迭代所调用的函数，我们将遇到以下函数，该函数具有合理的复杂性，并且似乎使用 16 位整数作为键来处理一定数量的记录类型。该函数的形状如以下屏幕截图所示。   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscfXUDLD32rlPIXhFs2sGJY8xyt8wTKSjYQiaYLmZTOXDD9oc2IKaawrw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6af8f0c96a5864f0ae61b71641275cd46033d0c3a7a0e8f3e36283d216dad359.png "")  
   
 以下列表是上一个屏幕截图中解析流中的记录类型的函数的反编译。探索此方法实现的不同情况表明，它负责解析大约 10 种不同的记录类型。大多数用于解析每个单独记录类型的函数都以一个函数开头，该函数确保在处理相应记录之前构造并初始化必要的字段。这意味着与这些字段相关的条件分配只能在每个文档实例中使用一次，并且需要已经被调用以避免在利用过程中留在堆栈上的数据的不可预测性。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdsc4YZGwwYMSmEsGY0a2GNK9PlUCrccjmViabP0LUhEESPeXvZHW885pdQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0efc4d64b8ec7c6a79575b46995d323abdbbba964ffb174cf66b5ac185bca926.png "")  
   
 ```
 int __thiscall struc_3a9de4::parseStylesContent_3a7048(
@@ -530,15 +530,15 @@ object_9d15a0为
 0x68字节，主要由用于存储从当前流读取的数据的整数字段组成。因此，该漏洞使我们能够根据解析期间读取的情况将数据写入对象的字段之一。单独检查每种情况，可以通过三种方式将实现写入  
 object_9d15a0.  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscGn4AroNxSPSWicOdiazhBAmmdaMxwmfTiapQ7m36xCXGDfd3Aqb7ibyQmw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/456ffd9a17157c9ed332ffc76c8bfc5cf62b8cb19d097f0bf8dc652fa18a80a3.png "")  
   
 第一类涉及从索引对象取消引用指针，然后将 16 位整数零扩展为 32 位写入指针的目标。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscJiagC8IpVOcHbqyRug44q5iaiahdeRgLibXDiaHicaeiaT6pcLJERHfxp26Zg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d10ae6a9c45162213e7fbe369bedfe4b36cd1d03c8ea56b1f87307826d93e246.png "")  
   
 第二类还涉及取消引用指针，但允许我们将 32 位整数写入指针的目标。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscyWsiaq2gqmicPJEbib0wGDicliaHDkAzEicVupV8YPs65eAPBGatqEnEYhPA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9ec1b25eef7dcf18bf32d4fc238f26a02a94a922d043f7acb776e26e86cce65a.png "")  
   
 第三类稍微复杂一些，但它似乎编写了对某种短对象的引用，该对象包含一个可以设置为1or 的整数2，以及一个可以根据该整数的值释放的指针。在这三类中，32 位整数写入似乎是最有用的，除非我们计划写入高 16 位始终被清除的长度。  
   
@@ -590,18 +590,18 @@ v_typeFieldString(5)_2ccase字段5将允许我们写入一个指向 16 位字符
   
 识别漏洞后，我们可以立即检查已应用于目标的缓解措施，以更好地了解哪些因素可能阻碍我们的写入候选者的利用。通过检查地址空间中的模块，我们可以看到 DEP (W^X) 已启用，但 ASLR 不适用于某些列出的模块。这大大简化了事情，因为我们的漏洞允许我们覆盖这些列出的模块中的几乎任何内容。因此，除了写入已知地址来劫持执行之外，我们不需要做太多其他事情。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscicHTx1DPlNKfjs1Lhy0qPlhHA8xMYichWaoo69DBGO4MumW3KHETicqwQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a316b5e5d5e37197deae2affa6bd2cd83f0cc83a69b6de90b69a782b0003e17c.png "")  
   
 在下面的屏幕截图中，我们还注意到目标使用帧指针和堆栈金丝雀来保护它们不被覆盖。这不会直接影响此漏洞的利用，但可能会影响我们在获得执行代码的能力后最终重新利用的任何代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscK7p5nAbtodG5mAk9Vs8wFuibaYC3mVPXdnjkokAibibdBnFicSmicoS4WfA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/dd5f191dce52c418579afc64eb0f375eacab13ec4d44886ef6778b02c50ab2c7.png "")  
   
   
 **利用漏洞**  
   
 现在我们已经确定了任何可能增加我们目标复杂性的因素，我们可以重新审视该漏洞并对其进行扩展。我们需要做的第一件事是控制将被取消引用的指针。我们的指针将位于堆栈上，因此我们需要获取应用程序从流中解析的数据并将其放置在堆栈上，以便我们可以使用越界索引来取消引用它。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscylvrsDicKtRXDPxB7zLibjebIkPiaZ5pHB1TuagicTDYpgsicyrxMeOJfyw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e709d1f77541a5c8ad8e70ecff19df9d9307f0180f7c703ebb39c0987e17304d.png "")  
   
 检查该漏洞的范围表明，从文档开始解析 文档中的流时起，它的调用堆栈深度为 3   
 object_9c2044::method_processStreams_77af0f。该深度代表应用程序中我们控制输入的部分，并包含我们可以通过文档影响应用程序的逻辑。从文件中读取的任何数据只能从此范围内的方法之一获得。  
@@ -729,7 +729,7 @@ object_9d0d30::readStyleType(2008)_391906。在此布局中，该
 lv_objects(6)_6c字段包含与索引一起使用的六元素指针数组。这意味着我们将取消引用相对于该数组的指针。该数组之后是金丝雀之前的缓冲区，保护调用者的帧指针和地址。如果我们交叉引用这个字段，我们可以看到它在 case 的处理过程中被引用  
 5。   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscyWsiaq2gqmicPJEbib0wGDicliaHDkAzEicVupV8YPs65eAPBGatqEnEYhPA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9ec1b25eef7dcf18bf32d4fc238f26a02a94a922d043f7acb776e26e86cce65a.png "")  
   
 在情况 中5，实现将读取两个 16 位字段，其中包含索引和大小。  
 0x66在用于将 16 位整数数组读入所引用的字节大小缓冲区之前，会根据常量检查该大小  
@@ -1025,7 +1025,7 @@ Python> [frame.members.list(bounds=(-0xac, -0x58)) for frame in struc.right(0, m
 然而，有一个警告，因为该方法仅在使用 初始化object_9c2d50::create_field(64)_6bf3a6该字段时被调用。因此，我们将使用反编译器在我们的范围内找到对此字段的所有已知全局引用，并使用它们来确定是否有某种方法可以初始化该值。  
 object_9c2d50.v_data_4.p_object_600x00000000  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdsckjOQ8H3MFsLp4JxhpDrjkmy0EygyZKAmm5UstfthJdjABq3AM2BYTw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/baf23e1a001b793fbee85cacec5412ffecbd9b00f7c30bfe7016c095ca27c765.png "")  
   
 不幸的是，从这些结果来看，该  
 object_9c2d50.v_data_4.p_object_60字段仅在进入和退出时初始化，并且要求该对象不是由任何其他记录类型构造的。使用调试器验证这一点表明，这种情况阻止我们使用利用此路径所需的任何其他可用记录类型。  
@@ -1983,19 +1983,19 @@ JSAPRUN.DLL    0x6100104f: leave; ret;
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

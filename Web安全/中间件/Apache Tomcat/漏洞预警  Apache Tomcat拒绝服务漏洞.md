@@ -66,7 +66,7 @@ schema_version: "1"
   
 Apache Tomcat是一个流行的开源Web服务器和Java Servlet容器。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVK4xQb2ufvg2EXDtgjwmkJU7jSlCgMq3waOxibXOUBuTBQKo3OiacLU2cKQZvxLz8Jff2p4bgibaYwA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2b04c9b05f154d6b64328f1df7d1546a49e13e039aaa78dc986ece5740e447e6.png "")  
   
 **0x03 漏洞详情**  
 ###   

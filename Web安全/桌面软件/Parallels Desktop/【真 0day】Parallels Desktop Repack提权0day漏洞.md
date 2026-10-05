@@ -77,7 +77,7 @@ Parallels
 (https://khronokernel.com/macos/2024/05/30/CVE-2024-34331.html  
 )的博客后，我发现Parallels的补丁非常容易被绕过：  
   
-![图1](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnSFlicfZLnBsNrCOB1dn5n9abbXULPOQYLfibUzWicjHsDBibCC4U4ujEjPbsZJp7vjD1uNq8vgM1iaydA/640?wx_fmt=png&from=appmsg "")  
+![图1](../../.resource/remote/d973c2cdc31f9e52b27f4b690dee126ef0eb3029e58ed9d11c0cd83ae161036c.png "")  
   
 图1  
   
@@ -148,7 +148,7 @@ Mykola在5月30日发布了他的博客。
   
 然而，ZDI处理这个报告太慢了，然后情况发生了变化：  
   
-![图2](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnSFlicfZLnBsNrCOB1dn5n9aYPk4napraKfB4JxG3H60fk13hiatOEe2YN8m6w6fuf1IpmOtsmW2icfw/640?wx_fmt=png&from=appmsg "")  
+![图2](../../.resource/remote/80dbf62f304a88003f4fb7c8ea05f9e45455499d489e921fc1819aab7982eb60.png "")  
   
 图2  
   
@@ -162,7 +162,7 @@ ZDI告诉我他们无法在版本19.4.1
 中的repack  
 命令行发生了变化：  
   
-![图3](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnSFlicfZLnBsNrCOB1dn5n9aB34YPsMN5gVgCiay7icTfibVlOs8Ql8JsbxQMcxhhjfD4FYyswYS3S0gA/640?wx_fmt=png&from=appmsg "")  
+![图3](../../.resource/remote/f206e1ff347fcd08139b5af517ca093eddd201c6101e70e45702e8ff64f67e1a.png "")  
   
 图3  
   
@@ -390,7 +390,7 @@ echo "[*] 完成。享受root shell吧 :P"
 这次，我**不再相信ZDI了**  
 。所以我决定直接向厂商报告这个新问题：  
   
-![图4](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnSFlicfZLnBsNrCOB1dn5n9avia6ricyOcL4Wm3tD2DvR9cPMkCBKdJoaCeu0gNEicicTxeAPMiaocgVXyw/640?wx_fmt=png&from=appmsg "")  
+![图4](../../.resource/remote/aef2a766039a70933288c769e392327f1acf1c24068a246cdc4aeb05899b8a2b.png "")  
   
 图4  
   

@@ -53,7 +53,7 @@ schema_version: "1"
   
 pyLoad是一个用纯Python编写的免费开源下载管理器。它是一个轻量级的工具，旨在简化和优化下载文件的过程。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUu97AuuP1dfkDicwM95VIiaZRaobLsKlxJMjkfucplUI2DBCAgRjSN2Wy1bqjroicHrpwevfwiaibSIeg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/524efc9c634ff8e1aec206b2902fb66ebd5adeecb681bebe1649738dee607744.png "")  
   
 **0x03 漏洞详情**  
 ###   

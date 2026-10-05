@@ -68,7 +68,7 @@ schema_version: "1"
 ## 🔴 重大事件  
 
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/XfaKEJuIKkic7JDKsOLibK0DloOnLkp0kvmnicgVDvALgXwcvHeCp7t3glI1zU4WNSvCR5HpR0x1SicQUUoNZkdMBD60Q4heuvAartdcu7Mbia5Y/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/e45d91977eda6b89779c3a3da48d758e9446a029bf68c3cb551935b6f878bdcf.jpg "")  
 
   
 **Claude Code 用 30 分钟发现 Vim 与 Emacs 多个 0Day：AI 辅助漏洞挖掘正式进入全面实战**  
@@ -105,7 +105,7 @@ unSafe.sh 报道，WhatsApp 官方发出警告：意大利监控软件公司 **S
 ## 🟠 高危漏洞披露  
 
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/XfaKEJuIKkicnpvbP39AcJIa9MHCBxNWRicq6r62c2qvclLapWR682BSoVmwBMpoGLe8PpYghoQ740qHF42xVlKA7ZuL2giaI4NsmSvNBlYFw8/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/3bf82e81dcbbdd67087a6555a0f62da6fffc21083c33b0696751931a46952915.jpg "")  
 
   
 **Vim CVE-2026-34982 高危 RCE：打开任意文件即触发漏洞，Vim 9.2.0-9.2.0272 全线受影响**  
@@ -150,7 +150,7 @@ unSafe.sh 报道，Palo Alto Unit 42 研究发现，**Google Cloud Vertex AI** �
 ## 🟡 合规与监管动态  
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/XfaKEJuIKk8LKH3IkWBsIQz3Vt40lI7vjX2An3PS9OwCia3QhtOiaLVByfp6oHlcLLTbhKfuhBylWe5PFJAo8ILZnwvJLgrPibPicE3L7CM1WKY/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/dd0b24f60107d0aee16cce17a3afc0fe8dd01c05bc8967aa74dce8c58407593a.jpg "")  
 
   
 **4 月起多项网安新规正式施行：严打恶意索赔，规范免密支付自动扣款**  
@@ -171,7 +171,7 @@ CNNVD 发布人工智能重要漏洞通报第四期，统计周期为 **2026 年
 ## 🌐 国际动态  
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/XfaKEJuIKkibabmYDcKWCcicvdnMZqul07vtwDBzzGdiccm5m0TLA0IY9ZyRLCHQbAHcvFPInicicbibPO8D04IpeTkJwoWmt3v6kMF6Xh7Iibo2Cg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/ee7702414b6e4b998e4aab887aea8e78676d325fe2483170bd9ae8e518e405e8.jpg "")  
 
   
 **Trivy 供应链攻击影响范围持续确认：Docker Hub 官方镜像遭污染，GitHub 组织账号批量被劫持**  
@@ -184,7 +184,7 @@ CNNVD 发布人工智能重要漏洞通报第四期，统计周期为 **2026 年
 ## 💡 今日安全建议  
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/XfaKEJuIKk8YiaCLsEFeA5jxYRHgQUGDYjOJS8Z8WS8ymOGWqNhW5gvV4db7aftp4ulqaBKsNSN5JLNHvSWElHM6ZxDCp0WmXEusicflqyKZ8/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/7fea5bdad2681cf628b51bf111ef348433c2f4c60fef7abf0998d30021cb8efd.jpg "")  
 
   
 **① 今天更新 Vim：CVE-2026-34982 的利用场景在运维人员日常工作中随时发生**  

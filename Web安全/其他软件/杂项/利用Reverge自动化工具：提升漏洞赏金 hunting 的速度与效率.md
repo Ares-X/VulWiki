@@ -58,7 +58,7 @@ schema_version: "1"
 
  Ots安全   2025-06-10 06:26  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 本文深入探讨了如何通过利用自动化工具“reverge”显著提升漏洞赏金（bug bounty） hunting的效率与成功率，特别针对当前网络安全领域日益增长的需求和挑战。文章以作者的亲身实践为基础，详细讲解了从漏洞的证明概念（PoC，例如近期在Fortinet产品中被利用的CVE-2025-32756）到快速验证目标的完整流程。reverge作为一款专为安全专业人员设计的工具，通过其直观的用户界面和强大的集成功能，允许用户高效搜索、排序并隔离高风险系统，同时支持无缝的验证和漏洞利用测试。作者强调，这种自动化流程不仅大幅减少了手动操作的时间成本，还能在时间紧迫、精度要求高的情境下，帮助漏洞赏金猎人、渗透测试人员和红队成员优先处理关键漏洞，从而最大化收益和安全效益。  
   
@@ -72,89 +72,89 @@ schema_version: "1"
   
 如果您拥有 Shodan API 密钥，则可以使用 reverge 的Shodan集成快速收集潜在易受攻击的 Ivanti EPMM 端点列表。我们倾向于使用图标哈希值在 Shodan 中搜索，这意味着我们首先需要从受影响产品的实例中获取图标文件。这些图标不会经常更改，因此不必与版本完全匹配。我们可以使用文章中提到的一些唯一 URL 路径在 Google 上搜索 Ivanti EPMM 实例。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCmgXy7JicaM0T3SLiaZJeNDwRGEAg8UibcUS8r93gZLexI3wRiaRcbdbtgA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a3381a54d6ea6e14b0a0389b526a8ac2c85a911e2e083296baa45605c1735bc8.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SC0R3PlmxLh2tvYlq2UChCJtoQSj0icY6kicwWBFndV5w0tR5n9p1Gojxw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e123eeb177b1ce1a1172f3afad741457a0ca64e6f4f983da6801064f0141b4c2.png "")  
   
 如果我们点击该链接并点击“查看页面源代码”，我们就可以搜索该网站图标的链接。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCxgAzH9SLVw4KNwpHibNKzMekYWQpghPMIb9ELJueVgG62TU2MFnJLBg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f3c13d6b955cc8ec3bba22f0f2448142aa53729cd586cda35fcc93ac0fac5f7f.png "")  
   
 接下来，我们点击 favicon.ico 链接，右键单击并选择“将图像另存为”。复制 favicon 图像后，我们前往 Reverge 并选择 Shodan 集成。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCOefwVffiaIoibzjsb6YBp6hianOTStjrITQ9MnbnCnBECVK8gQUdwKibbA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b348a864e0015aa357023c47a8851ee7afefdd845963751e6ac330b09d800755.jpg "")  
   
 在这里，我们给 Shodan 搜索命名，选择“哈希”类型，选择图标图像作为图标文件，然后单击“搜索”按钮。Shodan 查询结果表中将添加一个条目，我们可以单击该条目来查看结果。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SC8X8EcWzreh32o5RnC890x9kRnMPCqCWxoiaM1poRYo9V2mY5sSl64Hw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/f0d22cec88ebf2ccc0dfff5d0fe8ee13515508cad6dd7c4574d5909af8a77531.jpg "")  
   
 结果表显示了 Shodan 找到的所有与指定图标哈希匹配的端点。然而，该列表包含不同的 Ivanti 产品、版本和可用性。要开始扫描并收集更多详细信息，我们需要将这些数据导入到反向传播目标中。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCb8LKeUNBNWQmeZwdqkFQ8te1Gum0UahB1Gv1N94R7zFW9hj3zYjcaA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/6b035221f579f9e48cb9565b48733de596c88c011e86dd3eeff3708ecdcb0553.jpg "")  
   
 要将所有结果导入到结果目标中，我们单击Shodan 查询对话框中的“创建新目标”按钮。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCLctusyibFmmq7LYVGkg81U9x2XJ4uIwo0PwgUic4KyKjeOW1vIeFdIgQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/af2e2cb049c643facbb789c4b95903a89a27eea528b151a8aa56d005b6bfcdcb.png "")  
   
 根据结果数量，导入可能需要一分钟。完成后，您将进入在 reverge 中创建的新目标的“范围”选项卡。此目标将包含从 Shodan 扫描结果中提取的子网、域和 URL 的合并列表。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCuGChsgFsosvXp74Yz9g5qpQ6r9EXWedicW3Wzeiau5iapWzsjnpOSKiaOg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/5f9d4f9df072a993a1f67061e70ac4c4f20c173451417dee1a2144affc594f03.jpg "")  
   
 由于我们知道这是一个 Web 应用程序，我们可以向下滚动到 URL 对话框，选择所有表条目，开始初始扫描。我们点击标题行中的复选框，选择页面中的所有条目，然后点击“选择所有页面的所有行”链接，选择表中的所有 URL。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCdNqbwbnAicf8ReVj1GK4AHn0YHOyedp9a5yCVcja2xicUlnSe6m0A5Uw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/d97e4ec92aeb04d55c51945b50207b24adc176777b7f0e9faffcdeb59bfdd138.jpg "")  
   
 选择端点后，我们点击目标标头中的按钮打开“网络扫描”对话框。然后，选择httpx 以从潜在易受攻击的端点收集更多信息。最后，点击“提交”开始扫描。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCr9iaVNmtZiaYd5WhdKG3XmibfTuDmR7FpxR2icBaCpgdepxIrSXTgymNxw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b69e01e5fd514bd70d40e0ae7e59fdc413675bc14551f9afb2f7163d6c436ab5.jpg "")  
   
 这会在“扫描”选项卡下的“扫描计划”表中添加一个新条目。当所选收集器下次签入时，它将启动扫描，并在“最近扫描”对话框中显示一个新条目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCicIx4TP5hYAF1Fu74ick7mEzu4mPjVSlC7RnCQrvJQ8FngIhqzbnaFSA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/4f89157d443004bcb6c8a5ad67e99d35652dbd0e1466480fde58d2d6bcecc716.jpg "")  
   
 单击“最近扫描”表中的条目将进入扫描详细信息页面，我们可以在其中跟踪正在运行的作业并查看结果。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCAkAsxrxog8PQcEvCllarL9EDmn80XCOnpulsmknEyicFibF9wV6f2kaA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/406b6f9c9fd6d6a825c5716ea941e6fe39a3e19caed00daf4a952bb6dff236ab.png "")  
   
 目前，尚不清楚哪些端点实际运行着 Ivanti EPMM 软件。虽然我们可以截取所有端点的屏幕截图，但我们更倾向于先缩小列表范围。基于我们之前将 Ivanti 与 Java 联系起来的研究，我们首先点击了将 Java 列为组件的条目之一。在HTTP 端点表中，我们注意到网页标题提到了“Ivanti 用户门户”，这是一个很有希望的线索。为了确认，我们点击了链接打开页面，发现它确实是 Ivanti EPMM。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SC1qGpPze6TAKmTtXfSmESoUXI2S2ny1j6KicyxJpPdyo5M5e0mFaoAgQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d6727e62034f4e487e79c3df47c67de6a521bdcbf774a8f3b425bf66075682e0.png "")  
   
 考虑到这一点，我们在左侧的筛选器窗格中打开“组件”对话框，并应用筛选器以仅显示 Java 作为组件的端口。单击“筛选”按钮后，扫描结果会相应刷新。为了帮助验证我们是否瞄准了正确的系统，我们启动了 pyshot 扫描来捕获所选端点的屏幕截图。首先，我们点击“主机”表标题中的复选框，以选中当前页面上的所有条目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCsrUibPB0ukLk4sRy1B1TLXbpbuVDKpSPKPYv3jDHQt3Hn8wSAumqHGA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4a6d88ead5d63e8c7754636b4512759883c402d152a119e3c5fc616606909e93.png "")  
   
 然后，我们可以点击目标标题中的按钮打开“网络扫描”对话框。这次我们选择 pyshot 来捕获所有选定 Java 端点的屏幕截图，然后单击“提交”开始扫描。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCXHib6rbibW67uEB1K90HkAicIfOdCowbOFX9rH8OR26dGTP5icp0opphbg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7cd8a99287ff087fc2e9d10bbc62a6ffb8a7c39145d4ac4c74d235d64bc0888e.png "")  
   
 一旦 pyshot 扫描完成，我们会查看扫描端口的屏幕截图，以快速验证它们是否确实在运行 Ivanti EPMM。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCK4VbhvackdwPqTnF33IlQVN9DM5icTdEzQaV7X2X3vsFraxkI7LibvKA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1a89b2e48b71b06c54a9d8ae2bde95798df2fe2e58def97b07439473d69739a9.png "")  
   
 在此阶段，我们对筛选出的端点集有足够的信心，可以对它们运行 Nuclei 来评估可利用性。虽然现有的 Nuclei 模板可用于此测试，但我们不太愿意直接使用它。首先，因为它会在目标上执行命令；其次，它会通过联系 Interactsh 服务器来生成出站流量。为了避免这些问题，我们创建了一个修改版的模板，它仅使用 WatchTowr 文章中演示的标准乘法技术来检查模板注入。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCJDlGuusiaI9NZOgbo0DqZ4cZBrmMAkJXQqppDmtjfn67HgaIj79hiagA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b043fbb98410338140760855f5307f0d6a3bfee6d769c03c12f779e031ffc6f0.png "")  
   
 为了将更新的版本部署到收集器，我们通过 reverge 顶部菜单中的“收集器”选项卡打开控制台。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCPKfQ9sDOtr4LiaEibBIR2pdXmPMEK4p4hpGMJCqGOPU4GYG7rdiavukVQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/471a268632f750e2cf3fec2d30d90343326b29657fc45e901bc38826f0e90832.png "")  
   
 从这里，我们只需克隆 nuclei-templates 存储库的分支并切换到我们的自定义分支，即可使更新后的模板可供扫描仪使用。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SC9R7HUEiaqmGLVafURWUanuIQwZcmJrbzxibmu1ubPbbnf8jBhKJE0K3g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c15e1681850b1dbc72143698e8ac72b1aa608c5a4d51dca18a7de5c82ba1bf59.png "")  
   
 现在，更新后的 Nuclei 模板已在收集器上可用，我们导航回目标，启动针对 Ivanti EPMM 端点的 Nuclei 扫描。在 Java 组件过滤器仍然应用的情况下，我们点击“主机”表标题中的复选框，选中当前页面上的所有条目，然后点击“选择所有页面的所有行”以包含所有已筛选的主机。接下来，我们点击按钮打开“扫描”对话框。这次，我们选择“Nuclei”，并使用旁边的下拉菜单修改参数，指定我们的自定义模板。最后，我们点击“提交”开始扫描。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCWlXcQJaVNpUjEaju0C3ibhK4414h3TIQx31MNArGBAFz3YyqH51Ljsw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a4525aa52afb6614e64986e09995849f74da2edea122a5655b4b83d81904446c.png "")  
   
 扫描完成后，我们会应用新的 CVE 特定过滤器将结果缩小到仅与我们的发现相关的结果。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCiaZibegNGtzL8UibYlEDbicqHe5QOEb6z6YhRQhzeLnKeRHPxU0ia0aenZw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/baa6c88486d7a59b7dd557b7c2bbf384ac7aac07d0d9fc3656596a4cec320d53.png "")  
   
 通过深入研究其中一个结果，我们可以查看 Nuclei 扫描输出，以验证该漏洞是否可利用。响应结果清晰地反映了我们的模板注入有效载荷8*8的结果，证实了该漏洞可利用。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taf03DAhCv8Q4vm4XUAUp2SCf68HJP3SPWWBFVklfsDa8EhUhV9zpDub8TTmO1mb4pribKqS3tVN5Iw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e9f9489cd69d9f0ca12d15a42853ab1cfb9eb2daf58bae7cb9437b016fcb161b.png "")  
   
 这只是 reverge 如何帮助安全专业人员快速识别、评估并处理目标环境中的关键漏洞的一个例子。其直观的界面使其能够轻松搜索、排序和隔离高风险系统，而集成的工具则支持无缝验证和漏洞利用测试。在时间紧迫且精度至关重要的情况下，reverge 对于确定优先级并大规模执行有效评估至关重要。  
   
@@ -168,19 +168,19 @@ schema_version: "1"
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

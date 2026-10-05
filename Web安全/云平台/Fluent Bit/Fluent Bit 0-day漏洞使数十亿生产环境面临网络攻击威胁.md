@@ -46,12 +46,12 @@ schema_version: "1"
 
 e安在线  e安在线   2025-02-26 03:26  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1Y08O57sHWiahTldalExhOyzXNMO6kcO7ULmiclhSZfg8zVMLHEMUGBu3lBjFbjib8vsYDZzplofMSC7epkHHWpibw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fbedbffe4d9d77ef3e98ac06000a7f299f97d254e8ee018c72e4bc8d436a8ed4.png "")  
   
 研究人员发现了 Fluent Bit 中的关键 0-day 漏洞，这款日志收集工具广泛应用于 AWS、Google Cloud 和 Microsoft Azure 等主要云服务提供商的云基础设施中。这两个漏洞被追踪为 CVE-2024-50608 和 CVE-2024-50609（CVSS 评分 8.9），利用了 Fluent Bit 的 Prometheus Remote Write 和 OpenTelemetry 插件中的空指针解引用弱点。  
   
   
-![image](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icjj1UwrW0ibdCzFnUysXGMBz7sGRC5dSTzcD9mBfe8VbZuMHznTc7sl3pHPTLv6PEKw4diavLAUE8w/640?wx_fmt=jpeg&from=appmsg "")  
+![image](../../.resource/remote/a518b2e9fda4c0f2df436bcd15cb7f64adb2789ce3aa323cc2f0f8b9e95236c8.jpg "")  
   
   
 Fluent Bit 拥有超过 150 亿次下载和每日 1000 万次部署，这些漏洞对全球企业和云生态系统构成严重威胁。  
@@ -65,7 +65,7 @@ Prometheus Remote Write 漏洞允许未经身份验证的攻击者通过发送 C
 函数中的空指针解引用。以下是一个简单的利用示例：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icjj1UwrW0ibdCzFnUysXGMBxvuEeP2SuSXv9JiatTpzl1TnyMsAyC9nX08DzicW35VDK3OAzzfDJwSQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/9a3ae8aaedf7a37f84a17ac12dae3f3b8dc45e53dd28e8fc3624b7a420da37d6.jpg "")  
   
   
 类似地，OpenTelemetry 插件在跟踪配置请求中未能验证输入类型。向/api/v1/traces  
@@ -75,7 +75,7 @@ Prometheus Remote Write 漏洞允许未经身份验证的攻击者通过发送 C
 Fluent Bit 的架构通过涵盖输入解析、过滤和输出路由进一步放大了风险。例如，配置不当的 HTTP 输入插件会将 API 暴露给恶意负载：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icjj1UwrW0ibdCzFnUysXGMBSfFT1cEibA7jfTziaXpX6bwVfCywkXPzDBbtnjwg3Ve6AYEIjHHck24A/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/4263ae1bdfcac991dcd66157d712890756380e32d064eb8839a0457752102bee.jpg "")  
 ##   
   
 **影响：云基础设施与企业面临的风险**  
@@ -87,7 +87,7 @@ Fluent Bit 的架构通过涵盖输入解析、过滤和输出路由进一步放
 Ebryx 使用 Boofuzz 进行的模糊测试揭示了系统性缺陷。例如，以下脚本对 Prometheus 插件的 HTTP 处理程序进行了模糊测试：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icjj1UwrW0ibdCzFnUysXGMBEItclwlPNv2GlIQ9l9vvq8Vx9lpI6dSZXXmNWs6AZGYJVEmM4V9BAA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1e6a3ab16671bb26a60d12a29b2c5d1bd1f47488b657563c4512fce921c034fb.jpg "")  
   
   
 flb_sds_create_len()  
@@ -119,7 +119,7 @@ FreeBuf
   
   
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1Y08O57sHWiaM9uv5Q89hYMT8zuKQtQYuvSPy0HyyLwRShZOMcoGgoBy6qiatgDhW3UhCXGVXiaEbS8ANmZwViaMAw/640?wx_fmt=jpeg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic "")  
+![图片](../../.resource/remote/53d5dfbca01b5bd333cab9eb2f5a15f82e2f4c60a200bea8e310f91cbce3c837.jpg "")  
   
   
   

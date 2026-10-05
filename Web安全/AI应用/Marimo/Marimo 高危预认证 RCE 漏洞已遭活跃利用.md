@@ -43,7 +43,7 @@ schema_version: "1"
 Bill Toulas
                     Bill Toulas  代码卫士   2026-04-13 10:41  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -75,12 +75,12 @@ CVE-2026-39987是因 WebSocket 端点 “/terminal/ws” 在没有进行适当�
 Marimo 在今年4月8日披露了该漏洞，并在近日发布0.23.0版本修复该漏洞。开发人员注意到该漏洞影响那些将所部署 Marimo 当作可编辑笔记本的用户，以及在编辑模式下使用 –host 0.0.0.0将 Marimo 暴露到共享网络的用户。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/t5z0xV2OYfXibheZ8YbRFdgjhweBibtfDS4DKyYPzLejaGUlNMzL5ensuFPxjXjEQ6f5mib7pTGwwWkrp1yM8gxmmwbdNPKicfdoibniaqcSJL6W8/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **已遭在野利用**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/t5z0xV2OYfXRHr8ZHicvXt6H7icOLJhxLM1uicAGhd88DA1sl70eibpFo8KJGWP8KA3LRtEYyEMVC7fwIvNEyN2pD629848MpBI3AfD2kHgqibE8/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -141,15 +141,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
   
    

@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Sergiu Gatlan  代码卫士   2024-07-19 18:20  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -76,11 +76,11 @@ Sergiu Gatlan  代码卫士   2024-07-19 18:20
 该漏洞的修复方案已通过“内容扫描器工具”包版本23.3.0.4823及后续版本发布。更新版本默认包含在 Cisco AsyncOS for Cisco Email Software 发布15.5.1-055及后续版本中。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMSBCsNOVb5OACT0e8ico896EyuQsa8YqDRg8emb2CD7CwcVUjBsa8TXRmxbId3d974QZjgDxuLAkzQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/75b6ca9f250c2494f97b3784a7612f94b9ddccf521dbf884e84dceeb3c860e86.gif "")  
   
 **如何找到易受攻击设备**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMSBCsNOVb5OACT0e8ico896ED1o1iaia0PAFfQRzttKKq439PBc7k320sQRLgBbiaQT3sWLrOqicPPj1aQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/8729e999d01c6becf53256bfa73517c5d99968046224a73ef6636d0ae0054156.gif "")  
   
   
   
@@ -142,15 +142,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

@@ -67,7 +67,7 @@ schema_version: "1"
 
 我的审计思路一般是：-> 看目录摸清大体的框架 -> 找具体功能审计 -> 选择漏洞类型进行审计。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/2359394904.png)  
+![](../../.resource/remote/6ef1d44633cc3d24aaa3ef0a520d37ab043d59075e522341254099f008c46b9f.png)  
 图 1 主要目录 Tree
 
 看目录很明显，有后台目录、缓存目录、数据储存目录、安装目录、插件目录以及手机版的目录。大体的目录了解了后，就开始正式的审计了。  
@@ -126,20 +126,20 @@ require(dirname(\_\_FILE\_\_) . $tmp\_file);
 
 首先构建 php 文件，然后判断该 php 文件是否存在，如果不存在，直接 die，如果存在，引入该文件。没有任何过滤或者判断，很明显的文件包含漏洞！！于是测试查看 phpinfo 的信息。在根目录下创建了一个 phpinfo 文件。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/3463860796.png)  
+![](../../.resource/remote/1d5860bff4eeb51ce32843af9da61797a2c1b4910f62dd26084883ea75526a57.png)  
 图 2 phpinfo 文件
 
 然后根据代码，来构建 playload。
 
 > [http://localhost/app/index.php?tpl=../../phpinfo&id=1](http://localhost/app/index.php?tpl=../../phpinfo&id=1)
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/3226718175.png)  
+![](../../.resource/remote/ac8c3eae21b80dd11dc773987c8e4152befc4380b3be7ab6777d72055e0cb4e0.png)  
 图 3 包含结果
 
 成功读取。  
 到这里有两个利用的思路。一是读取相关敏感信息，二是利用该漏洞上传文件带有一句话的文件，通过该包含漏洞进行链接菜刀。第一个尝试了一下，没有发现什么有效的敏感信息。后台什么的，都是 js 文件和 php 文件操作，这个包含也看不了什么信息，于是就把目光转向了第二个。既然是上传，肯定要找上传点，发现前台并没有什么上传点，于是尝试着后台，发现一个神奇的地方。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/616036572.png)  
+![](../../.resource/remote/6f488f65befe1066bcc0236b5ad86bac1ff16e3addb74de3e5d9ef31fbadb66c.png)  
 图 4 上传点
 
 > app/upload/upload\_form.php?params=%7B%22inner\_box%22%3A%22%23ff1%22%2C%22func%22%3A%22callback\_upload\_resource%22%2C%22id%22%3A%221%22%2C%22thumb%22%3A%7B%22width%22%3A%22300%22%2C%22height%22%3A%22300%22%7D%2C%22domain%22%3A%22localhost%22%7D
@@ -160,18 +160,18 @@ $json=json\_decode($params);
 这就有意思了。  
 于是结合上面的那个文件包含漏洞，上传一个含有一句话的图片，尝试获取 shell。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/2394515347.png)  
+![](../../.resource/remote/019bf16917315abf09be92ee23b5ec83baf11379e767925a2f5232d4e149c85a.png)  
 图 5 一句话木马图片上传
 
 PS：这里有个问题，就是图片上传后，文件名是随机的，实际操作的时候，可能要扫目录或者其他方法获取文件名。  
 因为在服务器上储存的是 jpg 文件，如果直接访问的话，肯定是显示不存在模板，如下：
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/3253823070.png)  
+![](../../.resource/remote/b453900fdb9ce9c49e0e48771eb28289343037083e78d8e2c2b8e385a85372ba.png)  
 图 6 尝试读取
 
 随即自然的想起了 %00 截断。由于本地环境的 php 版本是 5.2.17<5.3.4，而且并没有开启 magic\_quotes\_gpc 所以是可以截断成功的。如下：
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/4027778262.png)  
+![](../../.resource/remote/361d50f18d26a9ff1587d8e0e54f39d1bdd67e8759e61fb943b4faa9ccea4429.png)  
 图 7 %00 截断
 
 > [http://localhost/app/index.php?tpl=../../upload/img/2017/06/11/](http://localhost/app/index.php?tpl=../../upload/img/2017/06/11/)  
@@ -179,7 +179,7 @@ PS：这里有个问题，就是图片上传后，文件名是随机的，实际
 
 菜刀成功连接之。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/865450976.png)  
+![](../../.resource/remote/72b0f699f497ba8283be06524d053fd3a3af199a8206fc4603a16fe271d1e988.png)  
 图 8 菜刀连接
 
 看完了入口文件，开始审计其他内容，首先从安装开始，很遗憾，并没有发现什么漏洞，想从注册和登陆这块审计，无奈这套系统又不存在这个功能，所以就开始了针对于漏洞的审计。发现根目录下的 pic.php 存在问题。代码如下：
@@ -225,10 +225,10 @@ if(isset($\_GET\['url'\]) && trim($\_GET\['url'\]) != '' && isset($\_GET\['type'
 其中 dXBsb2FkL2ltZy8yMDE3LzA2LzEwLzU5M2NjMjEwNmZkOTMlMmUlNzAlNjglNzAlMjUlMzAlMzAuanBn 解密后是 upload/img/2017/06/10/593cc2106fd93%2e%70%68%70%25%30%30.jpg  
 这里的 %2e%70%68%70%25%30%30 是. php%00。然后菜刀连接之。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/1845191152.png)  
+![](../../.resource/remote/c00e53c5d7311b0a3ee9ed4dde95b55cce4e6b0c4052f96bf420a1790bebe848.png)  
 图 9 连接地址
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/3863456210.png)  
+![](../../.resource/remote/218b46caf3f41de00d0d507a6cf615a6b65bd727c740df19d78dd689420a52af.png)  
 图 10 成功连接
 
 还有一个漏洞就是 **header("Content-Type: image/{$\_GET\['type'\]}");**
@@ -253,7 +253,7 @@ if(isset($\_GET\['url'\]) && trim($\_GET\['url'\]) != '' && isset($\_GET\['type'
 
 成功触发漏洞。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/3411965198.png)  
+![](../../.resource/remote/bd2717b1ad336d89e1118709663b641d548944a17d48907530f31589a719d894.png)  
 图 11 XSS 漏洞（1）
 
 第二处：/templates/m/search.php
@@ -270,7 +270,7 @@ if(isset($\_GET\['url'\]) && trim($\_GET\['url'\]) != '' && isset($\_GET\['type'
 
 成功触发漏洞。
 
-![](https://www.cnpanda.net/usr/uploads/2017/12/3411965198.png)  
+![](../../.resource/remote/bd2717b1ad336d89e1118709663b641d548944a17d48907530f31589a719d894.png)  
 图 12 XSS 漏洞（2）
 
 最尴尬的是，inc\_head.php 这个文件是存在 xss 漏洞的，但是很多文件都引入了这个文件，也就导致了很多地方存在了此漏洞。
@@ -285,7 +285,7 @@ if(isset($\_GET\['url'\]) && trim($\_GET\['url'\]) != '' && isset($\_GET\['type'
 
 使用微信扫描二维码完成支付
 
-![](https://www.cnpanda.net/usr/themes/sec/img/alipay-2.jpg)
+![](../../.resource/remote/2ec205f4d4e1861bf4478fe73de2635e47f5aa7c772331de6ba73a1f962e3cce.png)
 
 ---
 

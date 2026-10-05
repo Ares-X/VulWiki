@@ -64,7 +64,7 @@ source_status: "recorded"
 
 大华智慧园区综合管理平台是由大华技术股份有限公司（Dahua Technology）开发的一款综合管理解决方案。该平台旨在帮助园区管理者提高管理效率、提升安全水平、优化资源利用，并实现智能化的园区运营。大华智慧园区综合管理平台采用模块化设计和开放式架构，可根据不同园区的需求进行定制和扩展。同时，它还支持云端部署和移动端访问，方便管理者随时随地监控园区运营情况。大华智慧园区综合管理平台存在前台任意文件上传漏洞。**本文将复现该漏洞的利用方法。**
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzunul6ZUoiaGFs5b5SyVe1A4iaqhg7WxWeJkGKeoOMwVa6UAVC5hpeckXQ/640?wx_fmt=png)**
+**![](../../.resource/remote/4523fde4d01f7f848935cb7238657839afa2aadc8b65237c962837605dc0b2ee.png)**
 
 **0x03 漏洞利用**
 
@@ -78,7 +78,7 @@ source_status: "recorded"
 
 **/emap/webservice/gis/soap/poi 接口，出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzulLcHGs3sevxjcKLm4Vnhg43qsfD32kE5JZKmj3JvDGKfDZ0po2TfVw/640?wx_fmt=png)
+![](../../.resource/remote/4189d593b4b4407024e3bf4efa0e7aa0b9ca369cc83cb13ffe289bacafe5abc3.png)
 
 **exp：**
 
@@ -117,15 +117,15 @@ Content-Length: 3117
 
 **打入 exp** 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzu5Zc09BNjesQvicuVF7EicLqFwS5WaOia6bXD8C8fiar9Qzwib0xKgXv0EVQ/640?wx_fmt=png)
+![](../../.resource/remote/a88acf4f73ce7cd10e9af7692b5184c4d7e42f62e58cf6db100456a2d0e3485b.png)
 
 **访问 / url/kaisa.jsp：**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzuFaYSbrHypdFDUGEspEVvIBUM49huwoxPjXtzYccibO5pvuLDBW7P9iaQ/640?wx_fmt=png)
+![](../../.resource/remote/cf8686a3586f17cbff5ae8bc44b698f7e2650721d332dd93036d9a600c570005.png)
 
   同理 将 poyload 换成 webshell 马 可获取服务器权限：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzum6HZG0ePh5tXGETuIO6uroqibMPVg1ECnbHxOJ6otdibh2j2MdXIbU7g/640?wx_fmt=png)
+![](../../.resource/remote/4e03ff3d48f9eeaaa07bf2d8652ad67e08755fb25b282461842d397eddc363e8.png)
 
 关注公众号带你了解更多 0/1day 漏洞
 
@@ -135,9 +135,9 @@ Content-Length: 3117
 
 同时欢迎各位师傅加入 HW 闲聊吹水群（2000 人群）
 
-**![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibbalVucuLZ76mxOCrOhTyhSu8Sru0DlwBYruQhnkIG8ia4shVDPd4VBg/640?wx_fmt=jpeg)**
+**![](../../.resource/remote/80c27e5ed3f67f52c7ec472a138de27988f1adc682a81c9e3dd7043ae63172fb.jpg)**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBssPEvyWSBIpUFH4FYbmxzwydudRibUP8icaLbZJQ5WmBNtmFzWU8x8avVw34FqSicxFsaQCSfveDUXibg/640?wx_fmt=jpegwxfrom=5wx_lazy=1wx_co=1)
+![](../../.resource/remote/4acef8fe657897741824fa52426813dee86890dad62fabbad6b96ba1d1492501.jpg)
 
 ---
 

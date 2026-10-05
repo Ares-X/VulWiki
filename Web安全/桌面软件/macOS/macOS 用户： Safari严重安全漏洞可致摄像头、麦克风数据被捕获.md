@@ -70,7 +70,7 @@ schema_version: "1"
 **HM Surf 漏洞****让攻击者能在未获用户同意的情况下，轻松获取浏览器数据、摄像头、麦克风及位置信****息。**微软威胁情报团队的 Jonathan Bar Or 表示，这一漏洞的关键在于某些苹果专有应用（如 Safari）具备特殊权限，能够轻松绕过 TCC 的保护。“HM Surf 涉及移除 Safari 浏览器目录的 TCC 保护，并修改该目录中的配置文件，以获取用户的数据。”他强调，这种隐私风险让用户的安全面临严峻挑战。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb4pn3G2XIc1djkYwZeBkzw7LTWeGzDjmCfM9Hj0RQhxhrtRfRbh4h9AOOzwcAkWGVS0YOy3NGFa2g/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/b3a9ebcb2233c8f0d86c3af39f25758825e3fe74b8adabe75fd3a1b0a932ccba.jpg "")  
   
   
 攻击者利用 HM Surf 漏洞的流程如下：  
@@ -116,9 +116,9 @@ https://www.darkreading.com/vulnerabilities-threats/macos-safari-exploit-camera-
   
 安全KER致力于搭建国内安全人才学习、工具、淘金、资讯一体化开放平台，推动数字安全社区文化的普及推广与人才生态的链接融合。目前，安全KER已整合全国数千位白帽资源，联合南京、北京、广州、深圳、长沙、上海、郑州等十余座城市，与ISC、XCon、看雪SDC、Hacking Group等数个中大型品牌达成合作。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb4pn3G2XIc1djkYwZeBkzw7xu83YhJQs0YK3ngm9k2tpU3RqVewH3dzkz0PmX3kfe8xnjL6rXdnKA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d6caf2b9d07446e5db2fc0c72b39245bd35ef1117cbe12d413cf0c1f3677e90a.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb4pn3G2XIc1djkYwZeBkzw7WSGrmBKR6ceFgsxJHWPvIIPoBZl4vu1VyJcor2Yxo2iaMGpTAMbz3MA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/31600ffd2a8b7de6a5cfe92a17d234f4fe8bb143ca88486bc2e1ef8dac3fea63.png "")  
   
 **注册安全KER社区**  
   

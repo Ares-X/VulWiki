@@ -46,7 +46,7 @@ schema_version: "1"
 
 Sergiu Gatlan  代码卫士   2023-04-21 16:30  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -56,7 +56,7 @@ Sergiu Gatlan  代码卫士   2023-04-21 16:30
 ****  
 **VMware 公司修复了一个严重的 vRealize Log Insight 漏洞 (CVE-2023-20864)，可导致远程攻击者在易受攻击的设备上执行代码。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQtVbLwfmWoaA42wRH8Ea7V1xvmO6721AMicuC63NqN4b8e5KVBekkqY5MTIL7ThLpYpmTB1D2nEmA/640?wx_fmt=gif "")  
+![](../../.resource/remote/348216747fabd6a2a0a20bc742dc8fa1429b7de596957a2047f2577e905727e4.gif "")  
   
   
 VRealize Log Insight 现名为 VMware Aria Operations for Logs。这块日志分析工具有助于管理大规模环境中数TB 的应用和基础设施日志。  
@@ -68,11 +68,11 @@ VMware 还发布了另外一个漏洞CVE-2023-20865的安全更新。该漏洞�
 这两个漏洞均在 VMware Aria Operations for Logs 8.12 版本中修复。目前尚未有证据表明它们已遭在野利用。VMware 指出，“CVE-2023-20864是一个严重问题，用户应当按照公告中提出的指南立即修复。另外需要强调的是，仅有版本8.10.2受影响。VMware Aria Operations for Logs 的其它版本受CVE-2023-20865影响，不过该漏洞的CVSS评分更低，为7.2。”  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQtVbLwfmWoaA42wRH8Ea7V7yhJg7QsfKKEdiaEInTl0InZNXByBwRsuhJuOe3alGOqYcxTUOaxmyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/be67e94b2f0916167bb8529cbae81658c7eb1045df514aee697a08affd5f234e.gif "")  
   
 **1月修复的其它两个严重的 vRealize 漏洞**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQtVbLwfmWoaA42wRH8Ea7Vj1zjne7RRIOOrSkssXls2cjChbsE8rQUWl23OlpdVG3331r6d8HXiag/640?wx_fmt=gif "")  
+![](../../.resource/remote/87058a278b12b9fe44959563ea2ba0f6256b5646e28fab509c500ace81109d51.gif "")  
   
   
   
@@ -83,7 +83,7 @@ VMware 还发布了另外一个漏洞CVE-2023-20865的安全更新。该漏洞�
   
   
 ****  
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQZeSribxs2yU1w56EMvgX9cDBCiabniazxdxtQ25cBCAd5vBJIM2sOv1khjzwwViaT0pS74U6piaiauiaGA/640?wx_fmt=png "")  
+![](../../.resource/remote/66b1ac947994df6ffca93aa0695c4d5878660931663fdc6f9bb6359a33c59e8f.png "")  
   
   
   
@@ -136,15 +136,15 @@ https://www.bleepingcomputer.com/news/security/vmware-fixes-vrealize-bug-that-le
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

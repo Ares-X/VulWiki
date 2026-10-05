@@ -60,7 +60,7 @@ NTLM策略罗列允许/阻止/审计却未明确防御需限制/阻止，审计�
   
 近日，微软披露了 Office 中一个未修补的零日漏洞，如果被成功利用，可能导致敏感信息在未经授权的情况下泄露给恶意行为者。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR39HkdkkbeicU4UFJAMggoNRibS1ddz9kR60n9l0TMSnGpSsk6aib4QNVktXKpftiaBicoV7xyo5ALLVMog/640?wx_fmt=png&from=appmsg&wxfrom=13&tp=wxpic "")  
+![](../../.resource/remote/1f65102db753b097d00b156d0730489ad78019cf84187e83a975f073420791f6.png "")  
   
 该漏洞被追踪为 CVE-2024-38200（CVSS 得分：7.5），被描述为一个欺骗漏洞，影响以下版本的 Office：  
 - 32 位版本和 64 位版本的 Microsoft Office 2016  
@@ -104,7 +104,7 @@ https://thehackernews.com/2024/08/microsoft-warns-of-unpatched-office.html
   
 “投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogvC8qicuLNlkT5ibJnwu1leQiabRVqFk4Sb3q1fqrDhicLBNAqVY4REuTetY1zBYuUdic0nVhZR4FHpAfg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/4ee926918a01b41e6eb8b00ff473dfe6a11ee91a5f8d7e7b0e58cf6962b20514.webp "")  
   
   
 

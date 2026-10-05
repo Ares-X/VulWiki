@@ -59,7 +59,7 @@ schema_version: "1"
   
 MiroFish是一款基于多智能体技术的新一代AI预测引擎。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/NQlfTO30MhwGiasvAF1rUUKiah5dS39zzGicDGuwxKSWoJjo39EJpPB4B2aRD6yyBBnlopY1Z04U0D1aGyib3s6dzOR3Nz1T19ZVg8Ap7yRGA2Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/12354934cc7c174d48704ec5c5ab858b45c4475477bba31d623a6d7bf7efc523.png "")  
   
 **0x03 漏洞详情**  
   

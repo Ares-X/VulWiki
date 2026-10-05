@@ -47,7 +47,7 @@ schema_version: "1"
 
 原创 微步情报局  微步在线研究响应中心   2025-06-05 03:30  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/94ba548e30fedc16feb634026eb27963411675ba9137220d7e4638955a9d68ae.png "")  
   
   
 **漏洞概况**  
@@ -88,15 +88,15 @@ DataEase 是一款开源的数据可视化分析工具，旨在帮助用户快�
   
 权限绕过 + Redshift JDBC  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQR07Hictic66RP2m0I9nTuT7gG50icO0iaGUKbvfe4TMy44hSv8lLCWOVItg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/843375d32e1831c85f6778208f6ce20b764b8d9d944bfb47430f82c3e79f18ea.png "")  
   
 权限绕过+ H2 JDBC  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQRZFZGNGHzAPEaPF14yebKWLIKXkJW0jbazPxMT97pmJnvwibU8zrqDwg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bf7612b84bee178776017f73bbdde96e784adf6a787f4c610605e1ee5fb5b17f.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQRstghU1B5m0aXtOgV26toWSrjg9fCuJ4sibRdfddz9pJeIWz5Rd3pyNw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a5821b5180a6b75cf3261a989608a765131c99bcd6b8bad3b018a9b39f14cd74.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQRAf8Ag1pDt1qv0Rtq2BBD0hGzj04dAqrh1rHOYx11EBlibGgHOlnjAcQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3c966a98a9be0aaa02b5efdb90671e075d5a423051b587af0d342f1206caf85c.png "")  
   
   
 **修复方案**  
@@ -132,18 +132,18 @@ TDP检测ID：
 S3100160418  
 ，模型/规则高于 20250605000000 可检出。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQR9yergFdrQb803WeDP9K9gwwJgBbxf30nea4WsCyxUtFantdj6OjT8A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8e8963abb141687b741e72ecd311d80180da1b3534d38355de576bb72cb9f230.png "")  
 - XVE-2025-22922  
   
 微步威胁感知平台TDP已支持检测，TDP规则ID：S3100160420， 模型/规则高于20250605000000可检出。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQRxZdrZuUYLSmCVIz0Kq84Riaq31p3n5zS9IjfOavpkP5jiaR1iaqzL1CqQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d0371f23df8d7993dae48a32a7a5151efd0e0662b98b650aef3e757295964eba.png "")  
   
 - XVE-2025-22923  
   
 微步威胁感知平台TDP已支持检测，TDP规则ID：S3100160421， 模型/规则高于20250605000000可检出。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMJ6HMdugWIPjNgHfCkHlIQRYn2ZMvW2BXPwCefNYmdGiajQvxhFvfn5OWwj6YVl2s6l6f94dVstq2w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e0bfd38dfa7f8e224baab69793b4b044e4600f2e97eb6e48f0b163caf0121e2e.png "")  
   
   
 - END -  
@@ -170,9 +170,9 @@ S3100160418
 ↓  
 ↓↓  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hQl5bZ5Mx6PTAQg6tGLiciarvXajTdDnQiacxmwJFZ0D3ictBOmuYyRk99bibwZV49wbap77LibGQHdQPtA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/af2820a378c199548053d385bda4250d7d50a5a22d6bbb58a06bceb40d5e843e.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hTIdM9koHZFkrtYe5WU5rHxSDicbiaNFjEBAs1rojKGviaJGjOGd9KwKzN4aSpnNZDA5UWpY2E0JAnNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/c4634cd583acfab3faf2a0b9edd62202d8949eb72b8c2d639482249716277ac2.png "")  
   
   
 点此电话咨询  

@@ -44,7 +44,7 @@ schema_version: "1"
 3月5日，虚拟化巨头VMware针对虚拟机逃逸漏洞发布了紧急安全更新，漏洞影响范围包括VMware的ESXi、Workstation、Fusion和Cloud Foundation。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8F4IGWNIKGxNd1Tibr0ibn5ZZ1JIibeNNnrM1GhB97AnH66sWlY43o8Ffqz6NxUY2Y4MLQvaGQqAsnWw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fac3c7fcb5d8dcb85b5d8501cccb2a69df81dfd43e62644f9a698fc643749f9c.png "")  
   
   
   
@@ -58,7 +58,7 @@ CVE-2024-22254（CVSS评分7.9）-VMware ESXi中的越界写入漏洞，在VMX�
 CVE-2024-22255（CVSS评分7.1）-VMware ESXi、Workstation和Fusion的UHCI USB控制器中的信息泄露漏洞，在虚拟机上具有管理访问权限的攻击者，能够利用此漏洞从vmx进程中泄露内存。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8F4IGWNIKGxNd1Tibr0ibn5ZZqE75VUdGEULJLLXJWAG9ajK9WClnVkhhAoyX8DicNiclsDf8tkkcJszg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/652cf882e48e9f2f5a9814e078f1bdd0b5b399f0217a9c38b95f534553025b68.png "")  
   
   
 VMware表示，上述漏洞使得攻击者有可能突破沙箱保护，违背了VMware产品的基本目的——在与主机相隔离的虚拟机内运行敏感操作。鉴于问题的严重性，VMware已在以下版本将之修复，包括已经达到生命周期终点（EoL）的版本：  
@@ -108,24 +108,24 @@ https://www.vmware.com/security/advisories/VMSA-2024-0006.html
 ﹀  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/067b16256e0ba673a1adf65d982af935c9dacaa6db0fe2765439200e9725754c.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球在看**  
   
 ****  
 ****  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/1UG7KPNHN8FxuBNT7e2ZEfQZgBuH2GkFjvK4tzErD5Q56kwaEL0N099icLfx1ZvVvqzcRG3oMtIXqUz5T9HYKicA/640?wx_fmt=gif "")  
+![](../../.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif "")  
   
 戳  
 “阅读原文  

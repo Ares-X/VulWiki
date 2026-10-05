@@ -48,7 +48,7 @@ schema_version: "1"
   
 Django是Python编写的开源Web应用框架。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUlxtwpd4P0rFf3icGicd7SNwE4CWbV4iaVERiayibWSH5SHVwV784JOGmUhXFDqibMBTXVaTcDibWepNqsA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1f9de9dfc7714a129189196c7c8e48586d3435a63f24f88b60450ac593e39c07.png "")  
   
 **0x03 漏洞详情**  
 ###   

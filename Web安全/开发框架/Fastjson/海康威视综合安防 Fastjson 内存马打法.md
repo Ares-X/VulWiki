@@ -49,7 +49,7 @@ schema_version: "1"
 
 **海康威视综合安防管理平台, 可以对接入的视频监控点集中管理, 实现统一部署、统一配置、统一管理和统一调度。海康威视综合安防管理平台存在 Fastjson 远程命令执行漏洞，攻击者通过漏洞可以获取服务器权限。本文将复现该漏洞的内存马打法。**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsudK5Y6WZTUyBJET7HlKKRqQA6hENhYOUWRRZGvOdHE2mia6iaCblLZyjjqEIkkWq39gO8YPan5Ls7w/640?wx_fmt=png)
+![](../../.resource/remote/082a16dfa6720e70b222efe954f3fe8766f99c31dbf66899ca674782c1f47d01.png)
 
 **0x03 漏洞利用**
 
@@ -59,7 +59,7 @@ V2.0.0 <= iVMS-8700 <= V2.9.2      V1.0.0 <= iSecure Center <= V1.7.0
 
 **打 cmd 回显：**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsslicNPFcSu4rE49vicVZeBvUYgmS1mic7253GyQXeapzWH9cNiaKHqfBf5RkqcLPNnRIAibHXmAXDHqhQ/640?wx_fmt=png)
+![](../../.resource/remote/a9968a253f80bfc9a30eaf8827c5e7eca64734e066a47a97faabe24a70d5fa27.png)
 
 **poc：**
 
@@ -81,7 +81,7 @@ Content-Length: 197
 **打入内存马：  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsslicNPFcSu4rE49vicVZeBvUic2zia5ZNp7kLYy6IEorqGiaraicQ1rfJy4gAenytGRUNZr1uoVN1TlmVg/640?wx_fmt=png)
+![](../../.resource/remote/a893fc9d7160a4c23d748d529e1be6a8aeb2fc36169200b564f15d49470f2f77.png)
 
 **poc：**
 
@@ -104,9 +104,9 @@ Content-Length: 202
 
 使用二开冰蝎 3.0 进行连接 密码：rebeyond 需要添加一个头：X-Options-Ai:xxxx
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsslicNPFcSu4rE49vicVZeBvUgq4dDfiboEyd1CI7SHz9ZMfXB19jWJctzJzvXWKkR8j2spib0cxFSHKA/640?wx_fmt=png)连接成功！
+![](../../.resource/remote/b490ec53cf30ccdfda8ef6512d8ddea27a219cea3d677f341b317877e82fa5af.png)连接成功！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsslicNPFcSu4rE49vicVZeBvUfH33MhVF4G9gvrITvqc18I4ELLLJepsjc014p8xbOLIwVbZMoCX96g/640?wx_fmt=png)
+![](../../.resource/remote/7e0fbfa2d5e93d26a433fca9e7a37663f8a0d607fb993e6830046ee1be443a73.png)
 
 这里二开工具不对外开放
 
@@ -116,9 +116,9 @@ Content-Length: 202
 
 同时欢迎各位师傅加入 HW 闲聊吹水群（2000 人群）
 
-**![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibbalVucuLZ76mxOCrOhTyhSu8Sru0DlwBYruQhnkIG8ia4shVDPd4VBg/640?wx_fmt=jpeg)**
+**![](../../.resource/remote/80c27e5ed3f67f52c7ec472a138de27988f1adc682a81c9e3dd7043ae63172fb.jpg)**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBssPEvyWSBIpUFH4FYbmxzwydudRibUP8icaLbZJQ5WmBNtmFzWU8x8avVw34FqSicxFsaQCSfveDUXibg/640?wx_fmt=jpegwxfrom=5wx_lazy=1wx_co=1)
+![](../../.resource/remote/4acef8fe657897741824fa52426813dee86890dad62fabbad6b96ba1d1492501.jpg)
 
 ---
 

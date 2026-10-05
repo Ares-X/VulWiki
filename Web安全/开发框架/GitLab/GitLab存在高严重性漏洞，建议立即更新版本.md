@@ -47,7 +47,7 @@ schema_version: "1"
 本周，GitLab发布了一个重要的安全补丁，以修复一个严重身份认证绕过漏洞（CVE-2023-5009，CVSS 分数：9.6）。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8FJ3BiblV2gIwVD82qUo5OkL5bgGHcYV75uldibvspbSu7wsgqQuia4jlCcyAsGlg7ibib0DRk1vPZdyEQ/640?wx_fmt=png "")  
+![](../../.resource/remote/d06dbf9d2c3b30cbf7e6062dc2a8fa379f840986b2cfdb8b43b4160c764fb9f7.png "")  
   
   
   
@@ -57,7 +57,7 @@ GitLab安全公告中写道：“发现了一个影响GitLab EE（从13.12版本
 据了解，攻击者可以利用此漏洞访问敏感信息，或使用所冒充用户的提升权限来访问或修改源代码，或在系统上运行任意代码。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8FJ3BiblV2gIwVD82qUo5OkL98SpSkPeGwpx2LP1pYA1cRgVpp9kYxrGh85hVM6I0uvbHtvAUINLaA/640?wx_fmt=png "")  
+![](../../.resource/remote/09856e0b4406b4564d111dfb4b3c97f698d44143988733a00dfbbf727262b40d.png "")  
   
   
 该漏洞由安全研究员Johan Carlsson通过GitLab HackerOne漏洞赏金计划报告。GitLab为此发布了Community Edition（社区版）的16.3.4版本和Enterprise Edition（企业版）的16.2.7版本以修复此漏洞。  
@@ -91,24 +91,24 @@ GitLab.com目前已在运行修补版本。为降低此漏洞的风险，GitLab�
 ﹀  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/067b16256e0ba673a1adf65d982af935c9dacaa6db0fe2765439200e9725754c.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球在看**  
   
 ****  
 ****  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/1UG7KPNHN8FxuBNT7e2ZEfQZgBuH2GkFjvK4tzErD5Q56kwaEL0N099icLfx1ZvVvqzcRG3oMtIXqUz5T9HYKicA/640?wx_fmt=gif "")  
+![](../../.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif "")  
   
 戳  
 “阅读原文  

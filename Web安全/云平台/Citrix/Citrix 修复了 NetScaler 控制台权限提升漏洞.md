@@ -45,7 +45,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2025-02-21 06:05  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEce9Y0U0UUkU9ibec9VSJAnicyibickmUwOj8VOFZA1icxpRXIcROAtt9Iq6VGSjHNPBy6tZicyJ9hQic37noQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2c11dcd461903f8bb54ac407eea8b7836fe206a3517b37f2e5c40cf0009694fb.png "")  
   
 Citrix发布了安全更新，以解决一个高危安全漏洞（CVE-2024-12284，CVSS评分8.8），该漏洞影响NetScaler Console（前身为NetScaler ADM）和NetScaler Agent。  
   

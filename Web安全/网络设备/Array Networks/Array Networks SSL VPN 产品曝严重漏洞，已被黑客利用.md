@@ -51,7 +51,7 @@ source_status: "unknown"
   
 美国网络安全和基础设施安全局 (CISA) 警告称，黑客正在积极利用 Array Networks AG 和 vxAG ArrayOS SSL VPN 产品中的一个远程代码执行漏洞。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wWBwsDOJT4ic36icMGWKhdHVHorEXdiaVqX598wjicqALgD6ShQPAsh5Il8E6OZmskUiaRG6hCqOdShcMfiatC51OOcQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b16bc1bfe954355a6228b3244af1ea1197d3e853e6aa5b46b84629df1bc7c8d2.png "")  
   
 图片来源于网络  
   

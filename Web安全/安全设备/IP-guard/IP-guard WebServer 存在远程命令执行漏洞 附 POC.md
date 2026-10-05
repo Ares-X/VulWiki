@@ -84,7 +84,7 @@ CNVD 编号:
 
 IP-guard < 4.81.0307.0
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWDETUrKbgSRRibJhrYBEAkMrgfIUiaCTop4K0WnVgSmkDbYFLKnRuKP9eA/640?wx_fmt=jpeg&from=appmsg)IP-guard WebServer 存在远程命令执行漏洞
+![](../../.resource/remote/05214a4440fa71c928228bb569e3efb64fdaa39c137fa39b0379031d6b0fbe26.jpg)IP-guard WebServer 存在远程命令执行漏洞
 
 4.fofa 查询语句
 -----------
@@ -107,22 +107,22 @@ Connection: Keep-Alive
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWD65DawTmvBfn4dRf9MMIicLicVjlcgTLmicc3geyr1H0Ql0WRwnSiazVubg/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/c53d3b6e20adb646747d27511ba879398ee9c8bca72beadf09c699c9f2e22841.jpg)
 
 拼接上传的地址：http://127.0.0.1/ipg/static/appr/lib/flexpaper/php/sanyt.php
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWDicI2ib8cdJDruIhqFdD7gRUtEpqTdPuicriaZuCtB1mx1R4cvnGbCCiarHA/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/6712fc2589e5dbbb64a6a85f2282c3ffb3a99f0f2ad53da46c8c51863857605d.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号 南风漏洞复现文库 并回复 漏洞复现 73 即可获得该 POC 工具下载地址：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWDLPdRMMIlndeJT9B3pMhGIASibUXPzDrJyAeNx8ibBqtiaCkN3DTeUn28w/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/78976e42115672736d4a2fe206df832fd39522135e44348b1c5da3e9e8431f25.jpg)
 
 **本期漏洞及往期漏洞的批量扫描 POC 及 POC 工具箱已经上传知识星球：南风网络安全**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWDN9Fk2dWJFqxwmIxCeMLiaQicOr3cGPtx5Y4HEngejMRRnTbAic36D0eCg/640?wx_fmt=jpeg&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWD9Ny9YUmXTiaaiaicqJcia7f3AgFtwWp1dzkI9pAyUwkMZDWm54vzBicJ0Lw/640?wx_fmt=jpeg&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YIw2kZXJoew7Vhr5jGicibWDaeELQnDVmGODcPoiacmGnCaTV5VXTGw7FjJun7Y1ibuOXVzk70MgvLRQ/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/50e0146a102c6dfc74b06a6d7078abecd86295c6908e71d3a34cf95d9723a773.jpg)![](../../.resource/remote/30a8de7633796eaeaa47a84b1aee6300d945429696599919404949a7f3d86deb.jpg)![](../../.resource/remote/60edce5f69691f2dd9e2149ac02fae513695a58c7a68b13d3a8b737b35d64f02.jpg)
 
 7. 整改意见
 -------

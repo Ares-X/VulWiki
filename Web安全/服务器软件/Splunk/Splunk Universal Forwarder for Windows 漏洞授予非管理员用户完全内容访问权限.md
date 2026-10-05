@@ -124,7 +124,7 @@ Splunk 建议始终运行最新的 Universal Forwarder 版本，并在安装或�
   
 本公众号所载文章为本公众号原创或根据网络搜索下载编辑整理，文章版权归原作者所有，仅供读者学习、参考，禁止用于商业用途。因转载众多，无法找到真正来源，如标错来源，或对于文中所使用的图片、文字、链接中所包含的软件/资料等，如有侵权，请跟我们联系删除，谢谢！  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/PZMEGmaOicg8ud6Dic1Iib7uTfNm8jAAfC30BiceZWyBtBkI31rYBGAXNkVTQVF2FLoJhU3a3uUhnI9iaHeYic6bLwvA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/f608ad70d5100972b026c346b45482b4af81a2909d58f36f5187a012eb60a8b8.webp "")  
   
 
 

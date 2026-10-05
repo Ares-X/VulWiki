@@ -134,23 +134,23 @@ IIS Server 在 Web 服务扩展中开启了 WebDAV ，配置了可以写入的�
 
 1） 开启 WebDAV 和写权限
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozYkhRfgCc5SCo4tpbLqnnibZP20jV08K7mhVicD9K0ibB3ZylhQm9cmeaw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7cfb78ccf08afaf9075ea723b5bc9953720101e8ddd5905ae4262bc9b0c8ee46.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozn9t3AOtmNLzzfZkIA8mWws5hsJZwLKKdSs65IzVBYza8ytDvs3icLpQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/9901759d6e3679c49041e0772ced731a4ddf78d3e6861d6817e9a294cffd12fb.jpg)
 
 2） 利用 burp 测试
 
 抓包，将 GET 请求改为 OPTIONS
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozlm3oWTIxet9CHibPDwVm2iaBlooSan8yQHxJzX9GNWsFX08XkWxO6BZw/640?wx_fmt=jpeg)
+![](../../.resource/remote/bc66a959475202688256e04119136fe8f3fde4e386c7adc26bed31b6e6f46602.jpg)
 
 3）利用工具进行测试
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoz7RdH4EoynWuK1gSXfiaVdzkibybW281iaeQFXswuLUAJZldnPgzRtjQ5g/640?wx_fmt=jpeg)
+![](../../.resource/remote/84e020374718901502d95a1e0d757c8690cf78ea998ce901a50c1e09446af65d.jpg)
 
 成功上传，再上传一句话木马，然后用菜刀连接，getshell
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozEiaibVWVAWAo3CWqiaEWl8Usp0nYibAqibTSeJwX2H4VVjUCXVpicme82ibrQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/89dbd67f6275918958e0d879f797b52eba660e855777f1bc4345303ea819aa4a.jpg)
 
 **3、漏洞修复**
 
@@ -166,13 +166,13 @@ IIS 的短文件名机制，可以暴力猜解短文件名，访问构造的某�
 
 1）、在网站根目录下添加 aaaaaaaaaa.html 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozqGSRQjQqVNHXWA3lXvwXbY2BAeppdIiaOBTUiatcdbMZNEkM9YlMD6Ew/640?wx_fmt=jpeg)
+![](../../.resource/remote/66035f9ef0a56831e42a45285055eb8d31109ad880710fccd11f17cca15556f8.jpg)
 
 3） 进行猜解
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozsT6bf7NBHSRicHSeYD8pibiaXOYBUb0gT7Xuz8GrMrLlG6NwcvUe2j9mA/640?wx_fmt=jpeg)
+![](../../.resource/remote/5bca93963c84344e59bb25a16f22b19c45ea633334e4e890573d2bc76821b066.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozh9iciaJfnghZ0Dge0TfYOFdcGQwy4Ns5elVartOic5w1Q2ibdTsLvqeHtg/640?wx_fmt=jpeg)
+![](../../.resource/remote/6d59111a8026218b4898d4ca7dc2af2d26b6a1e7e7f736df3a85b7f28b20ebd2.jpg)
 
 **3、漏洞修复**
 
@@ -192,7 +192,7 @@ HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem，将其中
 
 修复后：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozt0a0YVRyBsCcjcPbeM2SJnyoc6sNCbFicFm86H0DHCptXKibCIQm1xbw/640?wx_fmt=jpeg)
+![](../../.resource/remote/04579cd667f99ef0c2a5ecd4bac3c7bc35f4e726345e63ee7229b76b0d4e487c.jpg)
 
 **4、局限性**
 
@@ -218,11 +218,11 @@ HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem，将其中
 
 在本地执行 exp，exp 如下
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozldq6MP60eZmJHpcZibTzXTNC89cibtOiaxPvM2ohsnoSuJdud8bEtQbibg/640?wx_fmt=jpeg)
+![](../../.resource/remote/7120b7982c0631f6f96c4b0556d1618f0767c68b81b3ae517ca42dc6a9cecb2d.jpg)
 
 执行成功后，服务器端弹出计算器：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozFfxvsomOBWZCJ8VgZajRAekzgjnVrJ6OTL4lwdUaBXxib8jugc9pcwQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c946102c91955c9eb74b3484343f2fbb3350e0aff995647053d371e9839ae9fa.jpg)
 
 **3、 漏洞修复**
 
@@ -246,13 +246,13 @@ IIS 6.0 在处理含有特殊符号的文件路径时会出现逻辑错误，从
 
 第一种是新建一个名为 “test.asp” 的目录，该目录中的任何文件都被 IIS 当作 asp 程序执行（特殊符号是 “/” ）
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozHxPrLGN7aQqR6OZSeo839ibDAyf8yOGVCDRUfekfHtOvDkJodeGdJnw/640?wx_fmt=jpeg)
+![](../../.resource/remote/512619c9dd7882dfe7c400067c39b17d18e9597f9018d3d19adbb7afd161275a.jpg)
 
 利用方式 2
 
 第二种是上传名为 “test.asp;.jpg” 的文件，虽然该文件真正的后缀名是 “.jpg”, 但由于含有特殊符号 “;” ，仍会被 IIS 当做 asp 程序执行
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozHumnRlGXicr6tTWcwMkOCRTZhKWwibibmU4eylHWDfrqJOFA3jQYEvdBg/640?wx_fmt=jpeg)
+![](../../.resource/remote/d7ce999d8572295e1bf2eaa49f78476602dcb106e4099d4404ffd5271792c509.jpg)
 
 IIS7.5 文件解析漏洞
 
@@ -301,7 +301,7 @@ php-> 发现后缀是 php，交给 php 处理这个文件
 
 上传一个后缀名为 360 的 php 文件
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozeV8dvnTWddWC6pjeXiareWbh0WQian5gHXwxsdWnsWc4NGEiae9HVODCA/640?wx_fmt=jpeg)
+![](../../.resource/remote/09bbb594ccf34aff2677b28d1d99bc87dac707c2b75e47bc1230041c5a1a1e48.jpg)
 
 **3、 漏洞修复**
 
@@ -315,7 +315,7 @@ php-> 发现后缀是 php，交给 php 处理这个文件
 
 **2、 漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozDavXe92E9WZlccGIiaHs9ToFl4iazT8siaePDyqibJkzhiakYywmNDDEUOQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/390e10b34af11239b24b477372246ace97cfed76a6535548078ad06b5b7fe601.jpg)
 
 **3、 漏洞修复**
 
@@ -323,9 +323,9 @@ php-> 发现后缀是 php，交给 php 处理这个文件
 
 找到 Options+Indexes+FollowSymLinks +ExecCGI 并修改成 Options-Indexes+FollowSymLinks +ExecCGI 并保存；
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozyNDKN2RzgHFZmTuypdK1icI9Fc2xicEGiaO2FjQXXgySibA5ho1O6ZPs0A/640?wx_fmt=jpeg)
+![](../../.resource/remote/2fbb7bf089c9556e18f9bc2e0cd464596efcf92f3ae4da89c050db0d7bd84acd.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozDBQGLORoQcOiaRMyYS6Relm4k4uqpLjRLzy2wSXoEReF4QFDreKcquQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/83211c8355d0e31b6eebd16cdc328bd206b0a8e750e333184b033da36260f68a.jpg)
 
 四、 Nginx 漏洞分析
 -------------
@@ -346,19 +346,19 @@ Nginx 是一款 轻量级的 Web 服务器、 反向代理 服务器及 电子�
 
 在浏览器中打开
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozuDl9IY06ebV6VhMemOChUKvicEgLWFib9tEtLWia0uN54f0Z9wNfEqTGA/640?wx_fmt=jpeg)
+![](../../.resource/remote/d77e2a3aa0fbdde1f764dbb566e05ec67ff51fbbb880d6675ec3d4f1a10c39f7.jpg)
 
 利用文件解析漏洞，输入 192.168.139.129:100/i.gif.2.php, 发现无法解析
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozDCtKKurghicpadOiaibaM2aX0WFuPxQxWMWv5c9SRvHtVJAO1ibZS0Jibdw/640?wx_fmt=jpeg)
+![](../../.resource/remote/eb12860fb29079bab41a8834aed025f190811aa6c18f374d5f8804e0e077362e.jpg)
 
 将 / etc/php5/fpm/pool.d/www.conf 中 security.limit\_extensions = .php 中的. php 删除
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozFSVTSdlqqvuLBeicOib6VfZN3TibcJrKIqLekicJzJNMOkibTvD4KGYJy4Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/86c67a0f711306d370ea0fffcfb1a7ac0d9835fdec545359b01c2417759e69f6.jpg)
 
 再次在浏览器中打开，成功解析
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozxyuFPSbmanLrVFK0BfQBAxqeEUpGicCJUzibTNLyEHng6ibjV6t2dcMhg/640?wx_fmt=jpeg)
+![](../../.resource/remote/62b3146fd9ccc5e8ad20fc14304827c2c90436857799b86565a0c2ceaaa69191.jpg)
 
 **3、 漏洞修复**
 
@@ -376,15 +376,15 @@ Nginx 的目录遍历与 Apache 一样，属于配置方面的问题，错误的
 
 打开 test 目录，发现无法打开
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozCjet8soISeIKDjxKau4AdaF4BWib2pOYHItaOtC0aHp2eWXAEB4LkhQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/9518b04b970ca805318ebd1676f515e1d45030b740e5b522042919001ae5f98f.jpg)
 
 修改 / etc/nginx/sites-avaliable/default，在如下图所示的位置添加 autoindex on。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozNZkKlwF5ibxicG4JGerP7gonW2x3N9rrVib9U4KX7bpOYyYDF5zQTJFNg/640?wx_fmt=jpeg)
+![](../../.resource/remote/35fb02d3421a01e218cdaf3a8369322e146b623131351fbbad023c32b452ad8d.jpg)
 
 再次访问
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozZm0sO3pS25W4fCwr0f8ZSWxvSErDdcfpl0ApfMIkz46t9FUeiacp3rA/640?wx_fmt=jpeg)
+![](../../.resource/remote/c36875e2c8d040a4334f7b678c579063fe6c4c5a4c494940baad859afea3689c.jpg)
 
 **3、 漏洞修复**
 
@@ -406,7 +406,7 @@ HTTP Header 与 HTTP Body 时用两个 CRLF 分隔的，浏览器根据两个 CR
 
 请求加上 /%0d%0a%0d%0
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozOqDa2ftdWohWIQ7OCR4xlpsSncb24fRI0Qsd77P4aNIs4X25nziauUw/640?wx_fmt=jpeg)
+![](../../.resource/remote/0e2ebd2efe038f8c62217723b739d016d4cd6c9d376af2eb8e7c3a3d827f811f.jpg)
 
 由于页面重定向，并没有弹窗。
 
@@ -424,13 +424,13 @@ Nginx 反向代理，静态文件存储在 / home / 下，而访问时需要在 
 
 访问：http://192.168.139.128:8081/files/
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozAolOQW9BbNBOfzic1ZTdqIWNszibMFsQSuaHKANibkjxVqcG9exmBib2dQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/8f74da29ec365b4ee24f01f1c392910998f36f867b368ecd159275ca146d34b2.jpg)
 
 访问：http://192.168.139.128:8081/files../
 
 成功实现目录穿越：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozqTJ3ReU8Y7h6fNTwdZJT4ic40BOmNP1TSUukibqVSRsbygRLF00S0xNg/640?wx_fmt=jpeg)
+![](../../.resource/remote/f91b469afc69b99c16b27b66a960bd2d44900a6f4099c36e9e47772875023292.jpg)
 
 **3、 漏洞修复**
 
@@ -463,7 +463,7 @@ tomcat 文件夹下的 / conf/web.xml 文件插入：
 
 重启 tomcat 服务。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoztGCZSxs4EuA3cePpkUKbuuCsYUUtNQS0FBdsvywwEBibvib6rd9nQZVw/640?wx_fmt=jpeg)
+![](../../.resource/remote/54813e9e0cc43d1385e14fc68e77e3fbec6ca188ed31997bb590a82c2ea8983b.jpg)
 
 访问 127.0.0.1：8080，burp 抓包，send to Repeater，将请求方式改为 PUT，创建一个 122.jsp，并用 %20 转义空格字符。123.jsp 内容为：
 
@@ -473,13 +473,13 @@ tomcat 文件夹下的 / conf/web.xml 文件插入：
 
 返回 201，说明创建成功。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoziaH5YVzLWwdSaEmo3DJFe1Jl3hau69KcOicplF8qqWENLMpevjSrtIIA/640?wx_fmt=jpeg)
+![](../../.resource/remote/65cc0a9e8e1d22666e81e64a79b7cccdb80fbd488f92030655562f0d0d8f234c.jpg)
 
 访问 127.0.0.1：8080/122.jsp?cmd=calc。
 
 弹出计算器：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozUsaW1Vj0HiaNbrahBybZQLfMnMiaKep3udZBzqq8VoeSr9zjgbroQwDQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/bd5cd62633d95dbbb3e6ddbe3cb0ddbabf533bfff57483156865cbeb4dd90ea0.jpg)
 
 **3、 漏洞修复**
 
@@ -499,27 +499,27 @@ Tomcat 支持在后台部署 war 文件，可以直接将 webshell 部署到 web
 
 Tomcat 安装目录下 conf 里的 tomcat-users.xml 配置如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozNLQ89QUDa8IZfKtpU9CtP9Jwn4vzUztooibBEfCY12tWrWkzYXmeUfA/640?wx_fmt=jpeg)
+![](../../.resource/remote/bc2ab5d15358730cd93523465bb289f1446b61fda84afefcfbef713e6bcd6cfa.jpg)
 
 访问后台，登陆：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozvJ3CIYdb883XkS93JbSlEcwia2vNq1I12jRsWgAXgiammuU9EcDKU7kQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/44307b591d165d15ccfcd6b99e7f48c9007507d171a101c748dd3f4e1bb57493.jpg)
 
 上传一个 war 包，里面是 jsp 后门：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozOrpl2krkLFdaAMBL6UH3YNgbIriaXrS8DD6AWibGBmA00deDSb2U4PKQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/46b2dadcabdb72ef9e97f9ba02a82b711a53a6b26276886878b09394cb5136d1.jpg)
 
 成功上传并解析，打开：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozIfATjfwo5avh2H9mSs6pFqtXJEgvsqGPpqKkWDe93OHsu61avqmcew/640?wx_fmt=jpeg)
+![](../../.resource/remote/559feed2cf35d2bf4c645e94909394b960ee67205d2a053d2dda3e52a3182e6c.jpg)
 
 可执行系统命令：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozCnj6MtHY1CN5RabWmianKbocQX1FoZMoJFpy5ZJOH8HictaMKXFCe3dg/640?wx_fmt=jpeg)
+![](../../.resource/remote/92fc685eb818f6ff99d7d6b83f6c7d45beadd22c55156ec208357811bf0fad8b.jpg)
 
 也可进行文件管理，任意查看、删除、上传文件：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozqry7rRr1E6rkvd1J3NUwDKK07csUGIKJjNWoSSerfQMgnTsZBialQlQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/bf21edede50f86fb905c4a3fd280015ac97c70d8fbd0ed2c0dc0a66d2e1e8071.jpg)
 
 **3、漏洞修复**
 
@@ -550,29 +550,29 @@ Java 序列化，简而言之就是把 java 对象转化为字节序列的过程
 
 攻击机访问靶机服务：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozE3h5ialhAF4L7DA5RqLPb9uNetAibdMSRrc1oyASBa2JX3DicHzDnMicJQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/cc1efeac570c0032926b34e0e625686b8ed498899f92489a819de55d9d312cfe.jpg)
 
 访问 / invoker/readonly。
 
 返回 500，说明页面存在，此页面有反序列化漏洞：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozsiaia0BwSKHNjxMSRvkiaXKBrOgq3768tCU7MGbiaA1GpiazWGCiau3DQLibQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/1ebc768f194c77540fd6bdcc711878ba55b8391d8cbb4b480f548556b3091072.jpg)
 
 抓包：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozS9oVdhZBDLcOibGP7M06BibsQlv0UGtyeH0J9aI2Kf6ia5Blbickrb0WZg/640?wx_fmt=jpeg)
+![](../../.resource/remote/a22c7799f25d2392dc1c411c9579cc0f58cf9b125092d691fba24d51a994b83a.jpg)
 
 改包。
 
 POST payload.bin 中数据。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozB5Lu5HEcia3x9691mqpFMrqEkS6Gld3pXiaLRia2Z0kgnmOEVU1M40alg/640?wx_fmt=jpeg)
+![](../../.resource/remote/e621190d7c46fc126d5c7404555218eba00a91d637ec119d71399cc1308986c9.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozDQsAicIot5OyQXMQiaOVUrBU1c3NQWZz1X6PtNtPSibYzXJgpbHFicEg5A/640?wx_fmt=jpeg)
+![](../../.resource/remote/ad28d7dec817e84089a5bfc2b69cd362dccc07f75e062e12db17eafe5233316e.jpg)
 
 查看靶机，弹出计算器。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozKtptJE7rOhgibxGjEZ4kLbh1icXCmP35NzOmlunhmLjkpu5BppibRBVJQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/4e02f925f41b142e8bc97fd31ea5b46644e47fcb5cf81f6dba028bdeb4a0a2eb.jpg)
 
 **3、 漏洞修复**
 
@@ -590,33 +590,33 @@ jBoss 后台管理页面存在弱口令，通过爆破获得账号密码。登�
 
 **2、 漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozMGM08qctm6ibhjFQx33Avib9bJicQzWqIRClxQsBjRsMf0StO9TjZPjfg/640?wx_fmt=jpeg)
+![](../../.resource/remote/e2635d69e7706604416b003cc2e2f68c81a736febf68653caf7a1213435055a1.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozfeFX1rLSyearKCzrPbRHe5TIPNxm60ASbE2k1LiaMtyjI56NoZcTNug/640?wx_fmt=jpeg)
+![](../../.resource/remote/a18aaa64a584738df3d860c753e3d1bd0e039487f8b8ca2160ba7ecc6668604f.jpg)
 
 点击 Web Application(war)s。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoz3qG93EF5DiaWpkA9l6N0JCjSfUibXAHqHFO4dE4gWn8a4dw4nicweVVZw/640?wx_fmt=jpeg)
+![](../../.resource/remote/52421f19e0e7f02669ddfb3745aa5d9b2bb34244bdc12163eee1368aab902546.jpg)
 
 点击 add a new resource。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozf4yicUECURb3FZPmDkT7wSEKQYqxIq2sLSCrHxeuH9uUJqwhDTEhfWw/640?wx_fmt=jpeg)
+![](../../.resource/remote/ccd59425751ea216f5cae23a24e106f02f13750eff776fdf493de8f4c317f358.jpg)
 
 选择一个 war 包上传，上传后，进入该 war 包，点击 start。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozumg3w2nzUUxRDGT1SGAvYW4NJibmyyRpiaHYcLBMkbJjzrVvA7qARHSQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/4d241e550eac085fae3357080d3a18e91ad9f28046c4c388c6edae1261bc53b2.jpg)
 
 查看 status 为 sucessful。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozget4a0ibPog9ia2XSibhXeybKiaZNr1upCG4UYzH2cxndVVXUvpUIeyu1w/640?wx_fmt=jpeg)
+![](../../.resource/remote/7649c9287c785a26f589a83b10f201cd9b7852e51b72e86055b9fb111e141464.jpg)
 
 访问该 war 包页面，进入后门。
 
 可进行文件管理和系统命令执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozxdMjQFG1tRAHUc2Qcjh8EicwIeDbSF50VCoE1OzlTmbqdURfruHXmNQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c2fba6ae351ef69ad9b7652163aa7088a0b491a895c57881d5b9815b56d0eaf5.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozKAa6aXqgCBCyv63xMUmxI6FXyyGETazicswzTJx8KDJD91YrMRegRRA/640?wx_fmt=jpeg)
+![](../../.resource/remote/f48ae2b8e847644266eef3f86bfca5acefd98959fe2d9f16ad215258590e9bd3.jpg)
 
 七、 WebLogic 漏洞分析
 ----------------
@@ -635,13 +635,13 @@ Java 序列化，简而言之就是把 java 对象转化为字节序列的过程
 
 使用 vulhub 实验环境，启动实验环境，访问靶机，抓包，修改数据包。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozKBLdeWsFtXfjpzdjtfZH39hXGtWT7GdTlLN5eMydBX3k1yzASpsB1A/640?wx_fmt=jpeg)
+![](../../.resource/remote/7ceeedb3fa9e09fb3d28a30575e4c4f2db6ce53f14b21c6adef81794462379cb.jpg)
 
 Kali 启动监听。
 
 发送数据包成功后，拿到 shell。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoz0N4FdSg4ugibaGFr4WDd1DN6EtrGxpylYqeadE3cbaEUkOTrIHBOwPA/640?wx_fmt=jpeg)
+![](../../.resource/remote/8fae763de541edbb4effe034ccef24efe9f21fc6cd7213331264a61cc411e206.jpg)
 
 **3、漏洞修复**
 
@@ -661,15 +661,15 @@ Weblogic 中存在一个 SSRF 漏洞，利用该漏洞可以发送任意 HTTP �
 
 访问 http://192.168.139.129:7001/uddiexplorer/SearchPublicRegistries.jsp。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozyQj30s3KeHic6icLqnlOJnF0ib25ZIKgyjibz3oICOib9PFkicff97iaichCNw/640?wx_fmt=jpeg)
+![](../../.resource/remote/34e1c98a4763243c56383cbbfa5cd985de1713fbef5849e8106509eef28c015a.jpg)
 
 用 burp 抓包，修改请求。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozA2tH6K16a6icrlZYYAGrDjOK2ib9CPopf9BNmQMqwTuOy7jAoXibnzLJw/640?wx_fmt=jpeg)
+![](../../.resource/remote/2eead53f6b10fa9a6dd517c3264529fb26efecccb681ea652939aae6c1534a46.jpg)
 
 启动 nc 监听 2222 端口。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozicPoiaQF63ejyuiajFEFwrroDRtmSibZuEnqlhYjdK9MyBqEQVDNSWb8vQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/2d9790a0fef8111af899e9a5bd602050b5cbe922b94b94b15146608ec76d4169.jpg)
 
 拿到 shell。
 
@@ -713,17 +713,17 @@ Weblogic 服务端请求伪造漏洞出现在 uddi 组件（所以安装 Weblogi
 
 访问 http://192.168.139.129:7001/ws\_utc/config.do。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozaPGwQr6WB31ibibdlEQlniamPF7HssLJAuabfR7J08MZyryUREFzWnlHA/640?wx_fmt=jpeg)
+![](../../.resource/remote/8fb7b667b836fe6814ecd9500c9bccad07c98b5b6f65c9c970a776f2698ac6fe.jpg)
 
 设置 Work Home Dir 为`/u01/oracle/user_projects/domains/base_domain/servers/AdminServer/tmp/_WL_internal/com.oracle.webservices.wls.ws-testclient-app-wls/4mcj4y/war/css`。
 
 然后点击安全 -> 增加，然后上传 webshell ，这里我上传一个 jsp 大马。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoztaREibAUJjETI2jDqjZJWE7oaDz6uAQCwRyJKEediaZ75f0cq80agCqA/640?wx_fmt=jpeg)
+![](../../.resource/remote/4f5b9b310f3975c41764ce3e3741674adf4051a9ea7a9dd8f0a93aa695db78b5.jpg)
 
 上传后，查看返回的数据包，其中有时间戳：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoz3VyFEBywiaeNW6LdBaSDKFyHdqJqKlVKuNzxcowuVxmR5qPgZfxgMug/640?wx_fmt=jpeg)
+![](../../.resource/remote/e262156db00b39e192429af25840d2e1389ce225750b4d20b76060056cc2881b.jpg)
 
 可以看到时间戳为 1543145154632。
 
@@ -731,11 +731,11 @@ Weblogic 服务端请求伪造漏洞出现在 uddi 组件（所以安装 Weblogi
 
 可以进行文件管理、文件上传、系统命令执行等。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozTJIhXSPML0tH4dZvAbKSiaOBj0hxnxJO4PqDEoDMNc7CDgxkKgNWawA/640?wx_fmt=jpeg)
+![](../../.resource/remote/8d8e0cda08e4635dce0af883259888abb61a723fa182e78aeba2000fc9c6aba4.jpg)
 
 尝试以下执行系统命令。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoznooTcbXQWdZnsxXTx5YNBQaPTs1VL8YRemicbiaNicMSehpDiaNnia1j16Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/091986638b5fa668b11a5f7021f6059d9f749cef44fd7c6e0b9c38813aedd5b5.jpg)
 
 命令执行成功。
 
@@ -765,41 +765,41 @@ https://support.oracle.com/rs?type=doc&id=2394520.1
 
 访问 http://192.168.139.129:7001/console
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozs98R55gxwP2icqDYd56yMShPl8Hw7h6but8yC9nNVJJkGmfTicyoAUTg/640?wx_fmt=jpeg)
+![](../../.resource/remote/3de94588eb2c06072657afc77668ef9b87dabc3a0b5e6734b0ba9d01b9da4b87.jpg)
 
 使用弱口令登陆至后台。
 
 点击锁定并编辑。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozy6kjYORmjdTqMo8ibGtJRQnVEObFY9up9V8iaibnUNlnsxG6lr6F4ZutA/640?wx_fmt=jpeg)
+![](../../.resource/remote/6f0a756487f939a47af3907842110a5629dcb0750797a9df51ac7fa4a1f98840.jpg)
 
 选择部署，进一步点击右边的安装。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozgNUgfxApAZKTkibAvdwgRdvRB2SjtSJeOKibtkjnZRspV4KqN4dzx3Fw/640?wx_fmt=jpeg)
+![](../../.resource/remote/2949fd87318c8625563928ed766247b28013ab379f0549bd8c5506799ae40e73.jpg)
 
 点击上传文件 — 进入文件上传界面，选择要上传的 war 包。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozrVYHamBJwGG08roAGIlXCEkcsvopBI7jb7ttoS6ibs6fGRhXGmRpgLQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/37f139483e7a760b9036b93093f91f01ef13cf2886c8d03d6de11eed8849716d.jpg)
 
 进入下一步，选择对应的 war 包进行部署，下一步下一步直至完成。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozoV1icHb8vRiacje1KhUuduibAm1I3aOibI01oIFPYZqBHJNrGmrLoDZd9Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/b09050aba0aaaaa4ca8e04b07a3e8bedeefbf21fa63d3b45f0b8172b2a2dac70.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozvrs8Ykl5GFVHkia739lY0Pjm8D01KbkXuUt3FgNqSdz9RTicYrmVR6hg/640?wx_fmt=jpeg)
+![](../../.resource/remote/ab804cddab9fe54d33ca4503e234a1cba65ddac33ca86cf75a0191f05ac8fc27.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoziahZewJRofMo60q34zf0miaq0IgqADTu2gxeKVtCfzwVvZXgdiblxEaNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/bf077394974666e7eb0656e3c718c8173d4bd523343f3cd9b394af54f1e9a419.jpg)
 
 点击激活更改。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgoz36IyapZ2TdW4tm5t37lOhq6jDjAgVRvltfYicyp9S3shh3W47q4HjPQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/cf7b9ea274f32deb67a361157e8e34b218774323a60e510990561281a3ab915f.jpg)
 
 启动上传的 war 包所生成的服务。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozkNaboCib19x7ms2R3ZG1KCnribEz2ib4leXeaKwAxgynC5sVvCBAB1PdA/640?wx_fmt=jpeg)
+![](../../.resource/remote/f36297092dcec6ef310c49b1a07ae079931583763420dc8210a0349aa0657243.jpg)
 
 拿到 webshell。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozdvYhoicRDjy9eyhpRHhrKM5mythwzItY9pAk5LuRsHuoQ6Ew59SLLEg/640?wx_fmt=jpeg)
+![](../../.resource/remote/12a452ac409c763814b698f37612e5f5c4300020b619dbfd633db11eb33a9bc2.jpg)
 
 **3、 漏洞修复**
 
@@ -820,7 +820,7 @@ https://support.oracle.com/rs?type=doc&id=2394520.1
 
 在攻击机使用命令 python fpm.py 192.168.237.136 /etc/passwd，观察返回结果。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozoj0H1dibNoPqsBoqPzXlYiciaj756GErzlT5ZYazXr2ibZSdajo8WS5I9g/640?wx_fmt=jpeg)
+![](../../.resource/remote/8bd57e4b9fd96714983e93066f5b12775d7080db95998ed0f7797cdcb74720a5.jpg)
 
 由于访问非 \*.PHP 文件，所以返回结果 403。
 
@@ -830,7 +830,7 @@ https://support.oracle.com/rs?type=doc&id=2394520.1
 python fpm.py 192.168.237.136 /usr/local/lib/php/PEAR.php
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozPNXJJnlsymzxcrXBUInnYKBGUmy31ZmHtsu0HnjoRzxjC3cwlM9Mxg/640?wx_fmt=jpeg)
+![](../../.resource/remote/2c1ab57f301b1d4ad21e8771dec6b54bb3f58f668703e17a4e841353c46bda0f.jpg)
 
 利用命令进行任意命令执行复现。
 
@@ -838,7 +838,7 @@ python fpm.py 192.168.237.136 /usr/local/lib/php/PEAR.php
 python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`pwd\`; ?>'python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`ifconfig\`; ?>'python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`ls\`; ?>'
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozZppDlaCU2jkV7plSd3dUP8SPLXGDlK1zUORVQN79H6MeicHjTIZ6HFw/640?wx_fmt=jpeg)
+![](../../.resource/remote/3e4b87e9ea73ca859cdb2aee1b6f845505f0cfc99658aa556a87b3a2cd799dcd.jpg)
 
 **3、 漏洞修复**
 
@@ -858,11 +858,11 @@ python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`pwd\`;
 
 访问 http://192.168.139.129:8080/index.php。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozJTaYbgh89YLDOKMgUUSupxKQ95BgbZ9LFiakafd9AXHN365qaHDNbVA/640?wx_fmt=jpeg)
+![](../../.resource/remote/5dad59c2da360604793ec37e916032e3b0f9c215803c399a566153ba8b39d82b.jpg)
 
 抓包，修改包。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38gibtbOUjtcSxJ6KbI2fgozxtjriaAoF1es5x2YsynKnwibYmAtwE8iaFQMr6j8D6M6vyYeoXhURQq3g/640?wx_fmt=jpeg)
+![](../../.resource/remote/a0e7d26be409e63c5f3bf2e375740b92f3a4481263f394606608843cdec4136d.jpg)
 
 命令成功执行。
 
@@ -894,7 +894,7 @@ RewriteRule ^(.\*) $1? \[L\]
 
 ****扫描关注乌云安全****
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/bMyibjv83iavz34wLFhdnrWgsQZPkEyKged4nfofK5RI5s6ibiaho43F432YZT9cU9e79aOCgoNStjmiaL7p29S5wdg/640?wx_fmt=jpeg)
+![](../../.resource/remote/959902509a75de9424a32f711a9ad7d429534785d0222234fc57187cd40683a7.jpg)
 
 ---
 

@@ -77,7 +77,7 @@ fofa语法
 app="用友-NC-Cloud"
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zBdps5HcBF2lyTia4zbDGBAXb8jGZ45uyqUVDFgNgzO29AqyD84FUG0pCpiaW96O8wGamSQjaRBSYjzMibpzOXpQQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6a64da2de472306eb8f23a6c033425740d051a9e188abef960d8dc15f0612947.png "")  
   
   
 4  
@@ -88,11 +88,11 @@ app="用友-NC-Cloud"
   
 上传文件  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zBdps5HcBF2lyTia4zbDGBAXb8jGZ45uyGLLycbxj89K7p9F9JUjAeI69GAsQ8WbJ97WLM8N5iayALM8M8U1FHzA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a48a82683fbe4f4a913d1aadebc8e8812c9c904eefde83cfb82b3f3ed8cdd50b.png "")  
   
 访问文件  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zBdps5HcBF2lyTia4zbDGBAXb8jGZ45uycHu5aYicNMG2tyiaSWzrDTt7aSeM1tqWgOuAuY9B9RQoicIHyCzhzMeiaA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c601e05a6dc25d1ea02242017a0de78c95cd03dcb64391f47ef365beca324a9a.png "")  
   
   
 5  
@@ -103,11 +103,11 @@ app="用友-NC-Cloud"
   
 nuclei  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zBdps5HcBF2lyTia4zbDGBAXb8jGZ45uygokfKUKDK27lzQT81gXHZZ5tWkcAb7aJNIhm0CcTooZFT9lsEualsw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/029304e4d3c8be799a3e9a8a48100b59926a70bd75f5434eb498496f4d78f51a.png "")  
   
 afrog  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zBdps5HcBF2lyTia4zbDGBAXb8jGZ45uySXiaxYF6jB1noGNYAIIibCAXn1RwftHqkEK7pwdZrZ46979nRrsAna4Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0c77659d0ac43817cd804669bbe77008663ae10bf9728decde32c166a0b90a4b.png "")  
   
   
 6  
@@ -168,7 +168,7 @@ afrog
 交个朋友啦  
 ），后面将调整涨价啦。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/zBdps5HcBF3oJ7iaibTn5lqn7gNWQtO0Areia3jT8E5TBnUFp0u3Y7hXzbtHyicWAzv9RafOVa4YOby4l5ZGsLTRfw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/7d41f9e4db66f4c60c75934b767ac39763b110f012f4f86ad35d91804318030a.jpg "")  
   
   
   

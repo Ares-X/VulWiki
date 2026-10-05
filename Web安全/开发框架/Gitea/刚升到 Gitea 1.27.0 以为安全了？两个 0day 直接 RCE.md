@@ -52,7 +52,7 @@ schema_version: "1"
 > 展示校订（2026-10-04）：同篇已经给出的 Gitea PR URL 恢复为参考入口，更新旧空链接诊断；此链接不证明其与本文 RCE 主张的对应关系。 本文技术正文及其核验范围保持原样。
  night安全   2026-07-27 05:07  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/LAQpgdWQSctVS8Ps0NsFTqMiasz8uDibcvoib0spt17ORFYGT7Lk8y0JElHpWukiczXboIicO8mrOUut0DwfE4PvMwpuReeibS0yQHqN8Tictdm4Z4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5aa190d62280013032d2327b088867b6a061f9921f767737e45f88cf6c2e9a6e.png "")  
   
 前两天刚写完 Gitea CVE-2026-58443 的分析，告诉大家升到   
 v1.27.0 就安全了  
@@ -70,7 +70,7 @@ Remote Code Execution
 File Inclusion  
 ，无需管理员权限，任何能创建仓库或向已有仓库提交代码的用户都能触发。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/LAQpgdWQScsXaLose7RcSicUuibibBv7bkK5pPUgiblZtqyMFfO21IIveRKPzUOMICBSGIz83DLCC3eoO3qWHJQ8mFuetFROQzIgpZ2uyVIKJ3I/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1d1d3f59a02a3525474a10d961c47f9e1c0ffa9e0db2ffb9789dc9522704c6a0.png "")  
   
 0day-A · 远程代码执行（RCE）  
   
@@ -234,7 +234,7 @@ curl -s https://<你的Gitea域名>/api/v1/version
   
 研究者明确表示将在补丁发布后公开完整技术细节和 write-up。届时大概率会分配 CVE 编号。一旦 Gitea 官方发布安全更新，立即升级。同时关注 GitHub Advisory 和 Gitea 官方博客的安全通告频道。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/LAQpgdWQSctTWicwicwovsVtMLAjYPfEB9lMRmJJiaIozWIuicwrbneXZ3pGly4lRNAd1WrP6AKYA925Iz4c1EbnMLCOqWzkCmdCLXDQibsG4VQw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d23349d637b905b72bb703d5567ae968997dab36ce6cd9e9afa5e3776c772c9f.png "")  
   
 
 

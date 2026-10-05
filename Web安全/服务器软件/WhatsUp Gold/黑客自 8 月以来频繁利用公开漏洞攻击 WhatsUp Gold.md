@@ -46,7 +46,7 @@ schema_version: "1"
 
 胡金鱼  嘶吼专业版   2024-09-18 14:01  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
+![](../../.resource/remote/80b6b7b79e984bc49420b10fe1591d45aaacd71189216eaceb88bde0aa98a0bc.gif "")  
   
 黑客一直在利用 Progress Software 的 WhatsUp Gold 网络可用性和性能监控解决方案中两个严重漏洞的公开漏洞代码。  
   
@@ -60,7 +60,7 @@ Progress Software 于 8 月 16 日发布了针对该问题的安全更新，并�
   
 该研究员在技术文章中解释了如何利用用户输入中不适当的清理问题将任意密码插入管理员帐户的密码字段，从而使其容易被接管。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icqtSkbuA492yVNAhh7O2Xkp02LiaEK6mSTG1mkjSqpXWUGswvia4T9ltfFZ34Mb3M4sQHwThbQ5ibjQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6eff3e2e14786ad22fb584d80023656bb0cf6422aa904f32b3241bb729fe60cb.png "")  
   
 Kheirkhah 的漏洞概述  
 # 野外开发  
@@ -69,7 +69,7 @@ Kheirkhah 的漏洞概述
   
 攻击者利用 WhatsUp Gold 的合法 Active Monitor PowerShell Script 功能，通过从远程 URL 检索的 NmPoller.exe 运行多个 PowerShell 脚本。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icqtSkbuA492yVNAhh7O2XkQQ3zyFryiajbfcSorKR1YKpCPYfiaiaFgV34ZPEDFCHAS5aBoobEQWGSA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/298b7fcdbdffbab27bb8d782be7d56daab642423a0f9fb327d00a8d99088bfd6.png "")  
   
 攻击者部署的恶意 PowerShell 脚本  
   
@@ -79,7 +79,7 @@ Kheirkhah 的漏洞概述
   
 在某些情况下，研究人员观察到部署了多个有效载荷。分析师无法将这些攻击归因于特定的威胁组织，但使用多个 RAT 表明它可能是勒索软件参与者。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icqtSkbuA492yVNAhh7O2Xk7PzbosbVkiaF8v4pMg44fSndgdFDHeY4pTXKVYTiboMbOxkaDbpPbf3Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4bb534986ff8f3bebb7d8483f12a6ec0b2acdd487eef876fe62b6763aa15cf9e.png "")  
   
 观察到的活动的攻击流程  
   
@@ -87,9 +87,9 @@ Kheirkhah 的漏洞概述
   
 参考及来源：https://www.bleepingcomputer.com/news/security/hackers-targeting-whatsup-gold-with-public-exploit-since-august/  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icqtSkbuA492yVNAhh7O2XkiamYZ3LzK6EjiadkzokRHJmVZc1wkNYoA6ia32fSKdQI9OJDJCibHHe9hQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/598c9ec37a2a5848a3f2349f16da3b187cdf1751fb8d0992b0eafe7c420cac84.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o2icqtSkbuA492yVNAhh7O2XkiaibTqDuHrKtFQXlEVzYWvYdtv9kSFMPxcRK6B0KTBicLRNpiajia1BEkog/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/87091f86e6b87e79fc790468bd390ed87c5ac5247f6afbe7e279c98cd6e5ff26.png "")  
   
   
 

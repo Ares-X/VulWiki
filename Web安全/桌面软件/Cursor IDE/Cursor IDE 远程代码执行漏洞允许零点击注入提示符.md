@@ -68,7 +68,7 @@ Cato AI Labs 披露了两个漏洞，称为“DuneSlide”，这两个漏洞的 
   
 这两个漏洞都是在没有任何用户权限或故意交互的情况下触发的；受害者只需要发出一个看似无害的提示，该提示会无意中从不受信任的来源（例如MCP 服务器响应或被污染的 Web 搜索结果）接收攻击者控制的内容。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/BicXBAdicJy7PD5laiakcvgQcxLHT8ics0GttKBzXrhz1A2RibemB1Xd5QeKFcIhyOuclmq4s9zJibDrll8A4W0F5cBUJuGQPzibkXhR4xgQc8ibNPw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/88156c2da249426b51f5145cf55d606b2ddb208fdf6b0977f3cccdc3771895fc.png "")  
   
 Cursor 2.x 会在沙箱内自动运行代理终端命令，无需提示批准，这种设计旨在减少审批疲劳，同时限制简单的提示注入所能造成的后果。  
 ### 漏洞#1：工作目录操纵  

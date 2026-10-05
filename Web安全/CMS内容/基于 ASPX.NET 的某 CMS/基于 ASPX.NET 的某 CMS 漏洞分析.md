@@ -48,7 +48,7 @@ schema_version: "1"
 
 **0x00: 前言**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbsUooEqTcFHr8DBzT6DyprjznolfCpPZArXiaOz4AvxrDA4wLFYcvCBQ/640?wx_fmt=png)
+![](../../.resource/remote/115a0e9e7ed1b83eb474ce600dd97b1d0db89a9be3ed91b8e11c91818a15fc6c.png)
 
 之前在 @Ivan1ee 師傅的群里有师父再问有没有人研究过这个 CMS，当时去官网下了源码初略看了一下没有发现啥问题，就搁置了一段时间，刚好最近有空就继续拿出来看看。 iNethinkCMS 基于. NET4.0 C# 分层开发, 是一款精致小巧、开源、免费的 CMS 网站管理系统。创新的模板引擎 (类标签式)、插件扩展技术, 可以适应各类的网站开发需要。直接从官网可以下载到相关代码
 
@@ -57,7 +57,7 @@ schema_version: "1"
 
 分析 aspx.net 代码我喜欢从 Global.asax 文件开始，Global 一般会实现一些全局方法。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb8KrTXpUiaibP0WX7uoI7fQUic6BIfVmFpEftX7iaGUh5MHqfwMPsTzauGQ/640?wx_fmt=png)
+![](../../.resource/remote/b84e9580bb56cce45cfff2a36ef5a4ec86ac46cdb5a246bdccc6c30461503803.png)
 
 根据 Inherits 属性找到继承的类，在 bin 目录下即可找到对应的文件，这里我们使用 Dnspy 进行反编译以及调试工作。
 
@@ -67,7 +67,7 @@ https://github.com/dnSpy/dnSpy
 
 注意，使用 Dnspy 调试请选择对应的版本，我这里因为虚拟机是 32 位的就下载 32 位的版本，要不然找不到对应 IIS 进程
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbOgf5CxlC7TtcHaia1GickxOP73ElqZKCltq8jUGXIJ7HxfNk8fSZj1hw/640?wx_fmt=png)
+![](../../.resource/remote/c68175560d60e649191ff75785c7e46ec7b424b77535958e9d2dfe0acfe336c1.png)
 
 我们先看看 Application_BeginReques
 
@@ -92,9 +92,9 @@ if (base.Request.Url.ToString().IndexOf("error.aspx") >= 0)
 
 下面就是一些网站状态判断，以及 IP 黑名单判断。最后实现了 SQL 注入的全局检测，通过判断请求方法进入不同的处理逻辑
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbcmJ5wxiaTX8btrnicqqMaW8Ba9v9kFroVziatDdjJTMhbZYXibjUxeSUIw/640?wx_fmt=png)
+![](../../.resource/remote/ad864c8523846b6eac419499d1172ed6b7368231d3989328c658a283030a8c0b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbnibRL0ibX0Z2rvjiaXyb10qiboLnLv1Gm73aRUE4XGF5lGiagWtzz47jO8Q/640?wx_fmt=png)
+![](../../.resource/remote/cdc27e84991e207c27f948fd836d131655857a89cf128854e8f0f108934a422d.png)
 
 过滤了 GET、POST、Cookie、referer 参数，从全局进行了 SQL 注入的过滤。当然由于前面存在一个逻辑，我们只需要在 URL 中带上 error.aspx 即可绕过
 
@@ -103,28 +103,28 @@ if (base.Request.Url.ToString().IndexOf("error.aspx") >= 0)
 
 全局搜了一下 base.Request.QueryString，来到了 iNethinkCMS.Web.inc.ajax，实际对应 inc/ajax.aspx。跟进到 Page_Load 方法，Page_Load 是 ASP.NET Web Forms 页面生命周期中的一个事件，它在页面加载时被触发。当客户端请求一个 Web Forms 页面时，ASP.NET 引擎会自动创建页面对象并触发 Page_Load 事件。在里边看到这样一段代码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbETrweBBlphEcgSibT9BZOIeluiaCpHx4I0Ju4hJwiaLR7pT8Q8faz8UGg/640?wx_fmt=png)
+![](../../.resource/remote/ffbdd819fa2c50ed1c7e4f8f21138047e29b68fab26cf04fe64282a48b2adfe8.png)
 
 在这里，text12 来自 base.Request.QueryString["Title"]，text12 被拼接到 SQL 语句中去，跟进 this.bll_content.GetRecordCoun 看看是不是执行 SQL 语句
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb8Vg4zzCia08uuCHdLUk3aB87IJLXTDzeBawMAdYY6ZbAZgXkuQviaguw/640?wx_fmt=png)
+![](../../.resource/remote/cd00c34882110cf2a6e41b401c5848abf1b1fee4faf68135e3edd801b4cf146e.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbUD2dlzyg0TEOcYUBEG8ewAtKMHgVwuoecrSSnx5iaT8WFicHQOpSPx0Q/640?wx_fmt=png)
+![](../../.resource/remote/ebfae8070816376c1c79bce212f7720577972b62afde94fe52f80e56d9a26df0.png)
 
 跟进`SQLHelper.GetSingle  
 `
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbDibYuYibpicCmF9nuHnEpgwCfibtNcAf7Pcfib0veb8qKxSF3OxAXAXDlgQ/640?wx_fmt=png)
+![](../../.resource/remote/a3f46f776d4ea5162cdb49ada6a4577372a2660b8597c028ab0ed2f5b74a9d1c.png)
 
 ``使用`sqlConnection`完成SQL查询并返回单个值，那我们确定这里存在一个SQL注入漏洞，我们返回ajax，寻找是否存在前置条件  
 ``
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbZw2ykJ2sWRnKG9wnEEfgskkewx40S3JnJnr3FvLLCn3gTq11GaQBWA/640?wx_fmt=png)
+![](../../.resource/remote/ac3c699f51da54a5f78fb2e2110a51e1b7dd07cbc529f00bf4ad009213ff88d4.png)
 
 ``需满足 `versionsMode` 的值等于 "checktitle"，继续往上看  
 ``
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbBSgNKfE7O8ic722DHNQPfpEqw8u7ibBMjKktXJLFwEeB5K6sDMTX0B8g/640?wx_fmt=png)
+![](../../.resource/remote/eb74ad3fb3602db0ad2cd4109f322feac67226604aed45d1207c0a0890d7b7fa.png)
 
 只有一个全局的 base.CheckUserPower("login");，从字面上来看应该是登录身份校验，跟进看看
 
@@ -133,7 +133,7 @@ if (base.Request.Url.ToString().IndexOf("error.aspx") >= 0)
 
 我们跟进到 CheckUserPower 方法，单独拎出来写一章节的原因是这里鉴权存在一个苛刻的绕过条件。虽然苛刻但是也能绕过
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbZqHbKOosictvd9VSwvqib4qJgNicC0qRZFjYts7OIf0JYhwAV5qfotbibA/640?wx_fmt=png)
+![](../../.resource/remote/b6e17f760a7baa0745c7c2cf57005fa2fd93f0ec02f1031ed5db88b4f1f9f563.png)
 
 先判断
 
@@ -156,7 +156,7 @@ if (model_iNethinkCMS_User != null && Command_MD5.md5(this.siteConfig.CacheKey +
 
 关键在这一段，使用 bll_iNethinkCMS_User.GetMode 方法查询用户信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NblRliaAhbh5GNkFUNupdv40BLWyyV4PIJCGolEBCsMuRZDiaa3nibO2j0w/640?wx_fmt=png)
+![](../../.resource/remote/2588000c97c715913684ce6fe22a041da03de854193e319775f03e4c1990d9ef.png)
 
 然后
 
@@ -176,27 +176,27 @@ Command_MD5.md5(this.siteConfig.CacheKey + Command_Function.GetUserIp() + model_
 
 this.siteConfig.CacheKey：从配置文件 sys.config 中读出来，值为 "CacheKey"
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbACobowvriaZenboRrzxenWnrIiarmFlwkicFnUDtSTW9mfmvDEmeiaian8A/640?wx_fmt=png)
+![](../../.resource/remote/021733fc22c998a59a37d230f7d2358c7814555bb6ee70893db7abe358774c50.png)
 
 Command_Function.GetUserIp() : 如果前端存在 X-Forwarded-For 就从前端取，那么我们可控。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbpYyHY8dpyJCv1fRHYgVVtBDfwovFia5oRB9ERCTtEVemFluP0bRLkrg/640?wx_fmt=png)
+![](../../.resource/remote/26d435ee8a6de8067d8744654d72e1de5ea47628ddd2215f7ace1eead6185f46.png)
 
 model_iNethinkCMS_User.SecurityCode：从数据中查出来，用户表中的字段。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nbj2E37kfG7jVQmDGohK1Eves16vEaZ10xwxxCNHx0fc1ZSGQ8r2MzoQ/640?wx_fmt=png)
+![](../../.resource/remote/83218b520d635589c3661c0a125c41f2390e4e4611830fbd67245ee7220babbf.png)
 
 似乎看到这里没有什么办法绕，三个参数中只有 SecurityCode 是不确定的，无法控制。寻找一下 SecurityCode 是如何生成的，是否可以计算预测
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nblea9oGYKN34I92nSdrnDSibWHfoyM1sWgWOGxKzVLJ74sfDXcLUics9A/640?wx_fmt=png)
+![](../../.resource/remote/6a7aae4b757ac8ee4ba25d7a558514ed0585b834c67522fcde4c041ee0a960ff.png)
 
 全局搜了一下，只有在用户每次登录后会生成一个 SecurityCode 并更新到数据库，每次登录更新一次。text 值由随机值 + 用户名生成，跟进 RandomCode 看看如何生成随机值的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nbq8N9HCtoGG4CRrSor4DHfucZrQ9qias0mBwsrG0Gq4UGzozHib181usg/640?wx_fmt=png)
+![](../../.resource/remote/6ebce37a8d4977407768ead1c4882e9a6e48537d435db7ad308be80601a8b213.png)
 
 大概粗略的看了下這個隨機算法，穷举预测的概率很低，搞台量子计算机还有点希望。这里进入了死胡同，似乎无解了。突然脑壳抽风想一下当网站初始化的时候，也就是安装时会不会初始化一个值给 SecurityCode 的呢
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbplNU20WXMoGWlicrJiaYKVMMb7Dk0HrLictQrRrB8gEmAz1joKWctiaxIg/640?wx_fmt=png)
+![](../../.resource/remote/e5177e6165c256b0e29c7abb59fe502903da8c26813ab90cd8fd97118ab2b998.png)
 
 看了下 install 页面并沒有相关处理逻辑，只有去读 install/mssqldb.file 的内容并在数据库执行的逻辑，看了下是官方给的安装 SQL 文件
 
@@ -222,15 +222,15 @@ model_iNethinkCMS_User.SecurityCode 如果用户从未登录过系统则也为�
 
 为了验证这个猜想，我在后台新建了一个用户，不用赋予任何权限。默认即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nbd0Q4tHXlT0AXf0UnWhWPRfYbFIVI1ibOsTaNYBonrPd9sslnPHwbQ9g/640?wx_fmt=png)
+![](../../.resource/remote/c9c79f61a16b6028ed253c628f19abe960184db2b99cc4d994781c22a42803b0.png)
 
 可以看到在用户从未登录的情况下，SecurityCode 的值是为空的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nbmm57Emib4Sic4398eAbp4eldibuE4pjp4Nvr3xrOibEHLvzLOhecc4u2aQ/640?wx_fmt=png)
+![](../../.resource/remote/a1738134ea76eb434a26f8439ec549a9db53b4baa9fba902b2e920966e0d9627.png)
 
 这个猜想得到验证后我们回到 CheckUserPower(string byUserPower) 这个函数的实现过程中，继续看。可以看到当我们满足条件后就会赋予 session 相应的值。在 37 行会默认添加一个 login，字符给 SysLoginUserPower。让我们把思绪带回 0x01 中的 SQL 注入那一节，代码开头有一个 base.CheckUserPower("login")，那么这里在 37 行就会默认赋予一个 login。成功满足条件。造成 SQL 注入，让一个登录后的 SQL 注入，变成一个条件苛刻的登录前 SQL 注入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb2rzu4FDyPmpu6UkXzYaj6aTeWp6XQLF1v067WrsMnE3xztwicJrOicnQ/640?wx_fmt=png)
+![](../../.resource/remote/c2dacc302a593384490b6701e950e262502142d687401790c98368f651303cf3.png)
 
 根据
 
@@ -251,7 +251,7 @@ cookie_admin_password=md5(CacheKey127.0.0.1) 即可，
 
 那么则为 8f334b5d7fb04b8345bb32cffd7d0b8a
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbZC9XZSgoq0BpySflhiaiaCLrrS0kYWPiaqODic6HhhdVRiaDVpO3dT09qpw/640?wx_fmt=png)
+![](../../.resource/remote/ce1ee20899c3b997e3b743ddace52cb6abefef0bd898824c5c4587a93b2c858a.png)
 
 最终这个认证的绕过方法为：
 
@@ -279,7 +279,7 @@ Cache-Control: no-cache
 
 最终在未登录的情况下触发 SQL 注入。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb79Jwy3u8stia3B0FpLiaSQ2Qjm9ZKgImwrr1RSxquvYQY84jpCWUwWLQ/640?wx_fmt=png)
+![](../../.resource/remote/57f80d4355c79fd1cd232587272ae4609d6432ae84c0fcb6d831dd74541df442.png)
 
 **0x04: 其他  
 **
@@ -290,37 +290,37 @@ Cache-Control: no-cache
 
 当我们搭建好系统后，数据库以及 IIS 都已经配置好了，网站也能正常访问后 使用管理员身份打开 Dnspy
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbJPeMLQibt1e1wOfIwzG0xZT9mGFP5WPZ68yx413KOp6duq8ql8ExkPw/640?wx_fmt=png)
+![](../../.resource/remote/198fdaf78e585f3d786f146558b516a62cf110e3689d3299eac5d1d44c5d3965.png)
 
 选择调试功能，附加到进程
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb72aCG7dIL8iboHbTMZpzF0M1eiadH6HURcfNib4laDoLhqKxY5OAn1VKg/640?wx_fmt=png)
+![](../../.resource/remote/7d94e148ac9ec1814e17fe7036586bba7fa89778b24fea9c5c7ad4487f5ccd3c.png)
 
 找到 w3wp.exe 找不到就刷新几次，要不然就是版本不对。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb0BO6hLLLOVyUDgC1ybqh8Vuhed47za5pJlnQ9wVTuJgs7rXqGv1QgQ/640?wx_fmt=png)
+![](../../.resource/remote/22a699e48372304405163bafe88f867ac59bd718dc75d74bd19d50bf55e9d4bf.png)
 
 找到下面的模块，选中你要调试的 dll, 然后右键点击转到模块
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbGCo7eCPKJ0wbo07b7IqOyTLUA47jrV1buzGK5ZuWkbDKBic7OMTtrMg/640?wx_fmt=png)
+![](../../.resource/remote/1d1deb0d1ca0ca85930a6136c719c48bdfb37d75206a2ec9d1f3482ed881964a.png)
 
 然后找到对应的代码逻辑打上断点即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nb0cWf2eftnzX3DfPAR8jT4t7MeicVBBjlY6PHg5Lr7TIpbe3SWy6niaMg/640?wx_fmt=png)
+![](../../.resource/remote/f2ccd419bbb0c87c13729b36f2ea70c78f654166ea7e2e32cceec3d6e6f9d72f.png)
 
 然后访问触发对应的页面即可进入断点
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbGvlicTOEFic1UJ1xO8co5ib6MNg6qWxKnOqbIpPvDhuJMibxt37Sg5akzA/640?wx_fmt=png)
+![](../../.resource/remote/4a3016baf05bc166363c7b9e0f1cc8d700b3887d5e005f18d84bec8d157347c7.png)
 
 在数据库是 sql server 的场景下，在做代码审计时想看具体的 SQL 日志也是很方便，使用 Mssql 自带的 SQL Server Profiler 即可。
 
 新建一个跟踪
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4NbJHh0D2qePxf6tPnuwE3fxIglADSpRDkIglSoApbuF6KNXCaWzz13AA/640?wx_fmt=png)
+![](../../.resource/remote/85c96b44cc9caac8203a926f124289ab40715cef8604364faf06247939c2e1c1.png)
 
 随后查看对应的 SQL 日志即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Lu7eicMrZheE3ujKiaLTyqFPicgCAFiaU4Nbmp0Weetm3cJW9Tpcr4Xy2gzUC67AgxeibNPQWLfOhnGSMofBaiaSicTUw/640?wx_fmt=png)
+![](../../.resource/remote/059c67908482fdc8335b0b56ffd4cb1163d10f6e0222046c2e3985ecb1dfbe3d.png)
 
 ---
 

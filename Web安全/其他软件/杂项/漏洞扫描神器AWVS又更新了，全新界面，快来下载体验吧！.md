@@ -108,11 +108,11 @@ Sitecore XP 模板解析器 RCE ( CVE-2023-35813 )
 ## 破解方法  
 - 1、先安装好最新版程序。点击acunetix_24.1.240111130.exe按步骤进行安装。  
   
-- 2、管理员权限运行crack.bat![](https://mmbiz.qpic.cn/sz_mmbiz_png/JtFpsuzZS5WKrXwqxNXYZxdf8G1df7z8HZb3UuCicpO7S9iakFBp8gCicyHZptobChE6ibTibDXxcTNuiaHU5YvUACng/640?wx_fmt=png&from=appmsg "")  
+- 2、管理员权限运行crack.bat![](../../.resource/remote/b9ce6b35df0bc587e6b4188c5ca6db0437e457fad49e1634c9f7c60c5f9ea56f.png "")  
 等破解完成  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/JtFpsuzZS5WKrXwqxNXYZxdf8G1df7z8TqcZakVagokTPsCdiaa94OFOflibusL696HUBU8XNbYmbN8tME83ZoQQ/640?wx_fmt=png&from=appmsg "")  
-- 3、登录使用![](https://mmbiz.qpic.cn/sz_mmbiz_png/JtFpsuzZS5WKrXwqxNXYZxdf8G1df7z8a8towNVRsnGsQcVkbKjkqwuWE1jPSpF5ZYkicM2QFficSgrJRRzNKkibw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/236e375d3027805c90a96a7d3f89967fa3981b89ee7fb62bbd478a7f1d70f3ff.png "")  
+- 3、登录使用![](../../.resource/remote/8273311c527f6a3411d21e43437b6cce373ea6b73aa936b52025b961019dd7b0.png "")  
   
   
   

@@ -56,7 +56,7 @@ source_status: "unknown"
 leepingcomputer的消息，全  
 球网络安全巨头Palo Alto Networks近日发布紧急通告，确认其PAN-OS软件中存在一个已被野外利用的零日漏洞。该漏洞编号为CVE-2026-0300，目前已针对部分防火墙型号展开有限攻击，厂商计划于5月13日起分批推送补丁。Palo Alto Networks产品服务于全球超过7万家客户，涵盖90%的财富10强企业及大多数美国大型银行。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/lQ1jXOMq3d38j5a9dSnicytj8MHFqfwkd9bqAzZL7gjfkmN4977GnKA7q3J4vicsvFwyPAqkEyjRQph9ehgR2f2HwzJQN6lZMVW6mUIgJicW38/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/56b49cc2aa6cbc9e934a9b59ed37cbfc987922de61339a5928a70117cef2ad43.jpg "")  
   
 缓冲区溢出可致完全接管  
   
@@ -68,7 +68,7 @@ leepingcomputer的消息，全
   
 据Shadowserver监测，目前有超过5,800台VM系列防火墙暴露于公网，其中亚洲约2,466台，北美约1,998台。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/lQ1jXOMq3d34WwTGsy7LxE0rHt5CbsXlYWoBvpe2WGLDN6C4z7B2ZjibaglKcQGyby3jgfNw1iaicILKq44cyPSn091TIA4Awd4BCDPjx68Vmw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/bd92c5cc85b85f7e1c3a6bec3e97a7ae0d7f39ecd8973c5c0a0380948cd66b3c.jpg "")  
   
 监测到全球各地在线暴露的vm系列防火墙数量  
   

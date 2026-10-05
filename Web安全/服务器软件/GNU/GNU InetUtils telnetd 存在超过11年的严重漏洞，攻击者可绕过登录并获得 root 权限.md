@@ -49,7 +49,7 @@ schema_version: "1"
   
 GNU InetUtils telnet 守护进程 ( telnetd )中存在一个严重安全漏洞，该漏洞存在近 11 年未被发现。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaHxOSt9kiarIl20Ehjy9Us5qg11Y4CwrxauVx7JlvdxT94RVz8RlQdZuDT1Xab0tibh2SZvuz1TMwCg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/aba1a2fd5d5e9b7978cfeda529a9ff826be6827477a4cedeb41fbcd9e5670137.png "")  
   
   
 该漏洞编号为CVE-2026-24061，在 CVSS 评分系统中得分为 9.8 分（满分 10 分）。它影响 GNU InetUtils 的所有版本，从 1.9.3 版本到 2.7 版本（包括 2.7 版本）。  
@@ -95,7 +95,7 @@ Josefsson 补充道，作为临时解决方案，用户可以禁用 telnetd 服�
   
 https://thehackernews.com/2026/01/critical-gnu-inetutils-telnetd-flaw.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

@@ -85,9 +85,9 @@ MiniMap导航：左下角缩略图快速定位
 **·**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/PQNvx9ufMAjaAvulTpp5EzsOia3uw33nGmXPfQ5D83U7xiau5u8RYZA5KTgFhJCduSckic202FqXotLsApOibdUKO4Ob8MeNnp9iadg9Er2qYTZE/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/48f51fb9af0ed0c4500509b1e400f921f5941a62b7e50bd21ac9ebdca859b6ee.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/PQNvx9ufMAiaGePxnm1WIIgKPWSc0mz2MrAsIQQt2ueSjgmIxOBS0cnv1tdrp2XJET2ia2UGER6Wjafj6ctz4f5SL8sygqSDfWdONiaXMcSCibw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6220ded88fbe473d53aa09129ce579ad5b9f22c8fb78652b64fe8a6a08d42a81.png "")  
   
   
 

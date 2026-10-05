@@ -130,15 +130,15 @@ xdebug.discover_client_host=true
 
 wordpress 发布新版本的时候会提到[安全更新](https://wordpress.org/support/wordpress-version/version-5-7-1/#security-updates)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211133-95f0b50e-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211133-95f0b50e-a9b5-1.png)
+[![](../../.resource/remote/3cfe4f508a5ac5ec03ab3fdd07eb0cc5aa7c81b37e265f1c79d6eedc5df55df1.png)](../../.resource/remote/3cfe4f508a5ac5ec03ab3fdd07eb0cc5aa7c81b37e265f1c79d6eedc5df55df1.png)
 
 这里提到了 media Library, 然后我们去 github 直接对比下代码
 
 Compare: 5.7 <-> 5.7.1
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211156-a3d31e3c-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211156-a3d31e3c-a9b5-1.png)
+[![](../../.resource/remote/56c5d978a5a10fb78d669d02e0c17ccd7c47d787ce5828669cf3261829af9d81.png)](../../.resource/remote/56c5d978a5a10fb78d669d02e0c17ccd7c47d787ce5828669cf3261829af9d81.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211225-b52bb018-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211225-b52bb018-a9b5-1.png)
+[![](../../.resource/remote/646b6c44326880fee7ef07a74df8e85caf4ab03ffc141217bed221a408839a71.png)](../../.resource/remote/646b6c44326880fee7ef07a74df8e85caf4ab03ffc141217bed221a408839a71.png)
 
 0x4 漏洞分析
 --------
@@ -193,7 +193,7 @@ $XMLobject = simplexml_load_string($XMLstring, 'SimpleXMLElement', LIBXML_NOENT)
 
 直接开始，全局搜索只有一个引用的地方
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211308-ce59cc1e-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211308-ce59cc1e-a9b5-1.png)
+[![](../../.resource/remote/ff24de8c8079a63a77b61c1f083e588dfbc6ccb29f60ce003d353b3411ed6431.png)](../../.resource/remote/ff24de8c8079a63a77b61c1f083e588dfbc6ccb29f60ce003d353b3411ed6431.png)
 
 代码比较简洁:
 
@@ -215,29 +215,29 @@ $thisfile_riff_WAVE['iXML'][0]['data']
 
 最终会作为`XML2array`的参数传进去解析, 那么我们继续回溯下这个参数是怎么来的。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211330-dba8598a-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211330-dba8598a-a9b5-1.png)
+[![](../../.resource/remote/bfd3569a6a69cd19897aa5c5c3e718b12167f45db68313551ff4338dfc9370e2.png)](../../.resource/remote/bfd3569a6a69cd19897aa5c5c3e718b12167f45db68313551ff4338dfc9370e2.png)
 
 继续查找:`$thisfile_riff`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211348-e6b7e688-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211348-e6b7e688-a9b5-1.png)
+[![](../../.resource/remote/1c35d64c771050fd99b8e7de634c133b2bd8f1b25fd8b9dab51c6e04d7b46f7f.png)](../../.resource/remote/1c35d64c771050fd99b8e7de634c133b2bd8f1b25fd8b9dab51c6e04d7b46f7f.png)
 
 然后跟上去发现是继承了父类的构造方法:
 
 `/wp-includes/ID3/getid3.php` 1973 行
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211414-f5ec8866-a9b5-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211414-f5ec8866-a9b5-1.png)
+[![](../../.resource/remote/2529b297194663352d8de3c3b9d234e815c826bd269e653bff2aaa09db2df898.png)](../../.resource/remote/2529b297194663352d8de3c3b9d234e815c826bd269e653bff2aaa09db2df898.png)
 
 那么我们继续回溯`getid3_riff`这个类的实例化就行了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211439-04d3e86a-a9b6-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211439-04d3e86a-a9b6-1.png)
+[![](../../.resource/remote/aebf991762e62528e3d974b168723ac84a3baff27ea0575c725909de46f4faf8.png)](../../.resource/remote/aebf991762e62528e3d974b168723ac84a3baff27ea0575c725909de46f4faf8.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211451-0c0dc8bc-a9b6-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211451-0c0dc8bc-a9b6-1.png)
+[![](../../.resource/remote/6abaecc79df93fd1795909bb39c19276c8510321380baace0894237df069f210.png)](../../.resource/remote/6abaecc79df93fd1795909bb39c19276c8510321380baace0894237df069f210.png)
 
 跟到这里, 其实我已经大概知道了那个信息是来源 RIFF 数据的, 也就是说来自于音频文件的, 那么到这里我心中大概有个底了, 觉得是有机会的。
 
 有了这个基础, 我们就可以耐着性子，开始从函数调用，层层回溯下去了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211512-183c99ec-a9b6-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211512-183c99ec-a9b6-1.png)
+[![](../../.resource/remote/117ed8c3119208e71c96c08599e4523a5529f182eb0666abed093c4a064795ec.png)](../../.resource/remote/117ed8c3119208e71c96c08599e4523a5529f182eb0666abed093c4a064795ec.png)
 
 那么只能搜索`Analyze`, 最终人眼排除 (说一下排除思路，就是要找`getid3_riff`类实例化调用的`Analyze`，不是的话就可以排除), 最终确定了两个地方。
 
@@ -245,23 +245,23 @@ $thisfile_riff_WAVE['iXML'][0]['data']
 
 `/wp-includes/ID3/module.audio-video.riff.php` 1896 行，存在于`ParseRIFFdata`函数内
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211550-2f51d6b0-a9b6-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211550-2f51d6b0-a9b6-1.png)
+[![](../../.resource/remote/b63e792938b38d4c470e00fb57bcfdaafabe920372200a0b3c0abd3946bb7662.png)](../../.resource/remote/b63e792938b38d4c470e00fb57bcfdaafabe920372200a0b3c0abd3946bb7662.png)
 
 第二个地方:
 
 `/wp-includes/ID3/getid3.php` 640 行 在`analyze`函数内部
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430211642-4de1f89e-a9b6-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430211642-4de1f89e-a9b6-1.png)
+[![](../../.resource/remote/b57d81aa98954cad70012efd8b75cc36b680a87c2579165648651b29d2c31ad9.png)](../../.resource/remote/b57d81aa98954cad70012efd8b75cc36b680a87c2579165648651b29d2c31ad9.png)
 
 然后我继续看了下`$determined_format`这个变量的来源, 看他是不是会拼接成`getid3_riff`
 
 选中之后，这个变量就会都被选中，然后前面找赋值
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212257-2d675bb2-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212257-2d675bb2-a9b7-1.png)
+[![](../../.resource/remote/faacf642c27f73e55235f4fcef0e6c8ddf3a26fedf80bae1c0fbf45bf00572e5.png)](../../.resource/remote/faacf642c27f73e55235f4fcef0e6c8ddf3a26fedf80bae1c0fbf45bf00572e5.png)
 
 跟进这个函数`GetFileFormat`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212315-3856c0da-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212315-3856c0da-a9b7-1.png)
+[![](../../.resource/remote/8e38cb3d007b7050a0f8de10a6eed26f7fbcdc8c2606cc933da32f5f8d775fb7.png)](../../.resource/remote/8e38cb3d007b7050a0f8de10a6eed26f7fbcdc8c2606cc933da32f5f8d775fb7.png)
 
 这里我们可以看到返回是`$info`, 然后按照顺序，果断先从文件内容解析格式, 解析失败了再从文件名入手。
 
@@ -289,31 +289,31 @@ public function GetFileFormatArray() {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212344-49687fd0-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212344-49687fd0-a9b7-1.png)
+[![](../../.resource/remote/74f3b70623d5454a1862b01fa2bb685710c81501bda72224882d830980c3992a.png)](../../.resource/remote/74f3b70623d5454a1862b01fa2bb685710c81501bda72224882d830980c3992a.png)
 
 可以看到如果文件内容满足上面规则, 那么最终是有机会调用`getid3_riff`的, 因为其中存在 module=>'riff'。
 
 搜索调用, 同样也有两处:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212356-50e8797c-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212356-50e8797c-a9b7-1.png)
+[![](../../.resource/remote/61cacb2c24c3bd9789eb3c15b9e0c0c354a85771faab9cb0f955f2e56885dfa7.png)](../../.resource/remote/61cacb2c24c3bd9789eb3c15b9e0c0c354a85771faab9cb0f955f2e56885dfa7.png)
 
 第一处:
 
 `/wp-admin/includes/media.php` 3549 行 在 `wp_read_video_metadata`函数
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212418-5dec489c-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212418-5dec489c-a9b7-1.png)
+[![](../../.resource/remote/d1dc21e187082a14aa7a8fcf3e49d4c429e214b3c0a7bd31e0702beca15bbda6.png)](../../.resource/remote/d1dc21e187082a14aa7a8fcf3e49d4c429e214b3c0a7bd31e0702beca15bbda6.png)
 
 第二处:
 
 `/wp-admin/includes/media.php` 3660 行, 在`wp_read_audio_metadata`函数
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212528-877afaaa-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212528-877afaaa-a9b7-1.png)
+[![](../../.resource/remote/9c866f675e8d8081f7a0cd1a25e7a41ad441b2c2414153ccc3b16d1f9d70ef8d.png)](../../.resource/remote/9c866f675e8d8081f7a0cd1a25e7a41ad441b2c2414153ccc3b16d1f9d70ef8d.png)
 
 那么我继续找这两个函数的调用
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212646-b62b3306-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212646-b62b3306-a9b7-1.png)
+[![](../../.resource/remote/4c8c00e8be5b6b51d3ba57c27a65d5365bbf92ea6ec1bc1f2a19240e4479f67f.png)](../../.resource/remote/4c8c00e8be5b6b51d3ba57c27a65d5365bbf92ea6ec1bc1f2a19240e4479f67f.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212654-bae36256-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212654-bae36256-a9b7-1.png)
+[![](../../.resource/remote/8d0deddba1882a4577948d4a73a813385d0db2a66fbc331be241ef0db9ff5aa5.png)](../../.resource/remote/8d0deddba1882a4577948d4a73a813385d0db2a66fbc331be241ef0db9ff5aa5.png)
 
 这两个函数很相似，限于文章篇幅、分析思路雷同，所以这里我只选取一个函数`wp_read_audio_metadata`来分析。
 
@@ -321,55 +321,55 @@ public function GetFileFormatArray() {
 
 `wp-admin/includes/image.php` 489 行, `wp_generate_attachment_metadata`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212745-d93f3626-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212745-d93f3626-a9b7-1.png)
+[![](../../.resource/remote/b2b0f90b7a7e2b3e2c281c6dfaf00d28b387cb9a4b7f02f44491b786baeca0ca.png)](../../.resource/remote/b2b0f90b7a7e2b3e2c281c6dfaf00d28b387cb9a4b7f02f44491b786baeca0ca.png)
 
 第二处:
 
 `/wp-admin/includes/media.php` 321 行 `media_handle_upload`函数内
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212803-e42754f6-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212803-e42754f6-a9b7-1.png)
+[![](../../.resource/remote/aff96e04741f2e57df222e19ab2adb01e56e28915d3b376fe8f0bfe1f8bbdff5.png)](../../.resource/remote/aff96e04741f2e57df222e19ab2adb01e56e28915d3b376fe8f0bfe1f8bbdff5.png)
 
 这个代码可以说已经很直白了, 出现了`$_FILES`全局变量 (在这里，我不会去细究那些细节的实现的，我只要知道是否会经过就行了)
 
 然后继续找这个调用
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212836-f7eabfbe-a9b7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212836-f7eabfbe-a9b7-1.png)
+[![](../../.resource/remote/0b2389edb850a8846dc63886932d7e8ecae615494bdf95e8efd2d8adbcb3e953.png)](../../.resource/remote/0b2389edb850a8846dc63886932d7e8ecae615494bdf95e8efd2d8adbcb3e953.png)
 
 然后找到一处:
 
 `/wp-admin/includes/ajax-actions.php` 2549 行 `wp_ajax_upload_attachment`函数内
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212858-04c7ee46-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212858-04c7ee46-a9b8-1.png)
+[![](../../.resource/remote/88e41fd52047ea85065a09c449e8c4bcabbfc17d35774db9dcb5684fd9610917.png)](../../.resource/remote/88e41fd52047ea85065a09c449e8c4bcabbfc17d35774db9dcb5684fd9610917.png)
 
 然后我们再找下`wp_ajax_upload_attachment`的调用点就行了。
 
 `/wp-admin/async-upload.php` 33 行
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212928-16e92842-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212928-16e92842-a9b8-1.png)
+[![](../../.resource/remote/c789ee765494b5a10374db852e6459726ca4c381e57bbabb0a3e70896484b082.png)](../../.resource/remote/c789ee765494b5a10374db852e6459726ca4c381e57bbabb0a3e70896484b082.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430212944-20668cc0-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430212944-20668cc0-a9b8-1.png)
+[![](../../.resource/remote/a5f5980f6f3456f1aae37103a75df48ea18e19354f5b26fdf39f04be63113c3f.png)](../../.resource/remote/a5f5980f6f3456f1aae37103a75df48ea18e19354f5b26fdf39f04be63113c3f.png)
 
 包含起来，然后调用这个函数, 请求`async-upload.php`页面, 然后`action=upload-attachment`, 就会调用了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213014-31d7d66c-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213014-31d7d66c-a9b8-1.png)
+[![](../../.resource/remote/0a8e20faae05facbad8d049dee3cab082b3b7e5fe915e96134065d894d587c24.png)](../../.resource/remote/0a8e20faae05facbad8d049dee3cab082b3b7e5fe915e96134065d894d587c24.png)
 
 ### 0x4.3 调试过程
 
 随便找一个能够拖拽上传的点
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213038-40a6303a-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213038-40a6303a-a9b8-1.png)
+[![](../../.resource/remote/46be77109743d21d97b232370f00ea20b7036213af153add5d36a8524aa8757e.png)](../../.resource/remote/46be77109743d21d97b232370f00ea20b7036213af153add5d36a8524aa8757e.png)
 
 抓包就会发现, 是符合我们的分析的, 直接开启 xdebug 跟数据流就行了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213055-4abc26ba-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213055-4abc26ba-a9b8-1.png)
+[![](../../.resource/remote/d2ea1b17fc8967931bc2f62fbd989c690462703d5177d72495cb1979091d512e.png)](../../.resource/remote/d2ea1b17fc8967931bc2f62fbd989c690462703d5177d72495cb1979091d512e.png)
 
 断点我下在了
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213130-5f3653fe-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213130-5f3653fe-a9b8-1.png)
+[![](../../.resource/remote/1f80da41da8d63e104057f10161fcb1d3f8f2b1925b27c6c54e2ec72b3f375c4.png)](../../.resource/remote/1f80da41da8d63e104057f10161fcb1d3f8f2b1925b27c6c54e2ec72b3f375c4.png)
 
 然后开始跟
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213146-69297436-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213146-69297436-a9b8-1.png)
+[![](../../.resource/remote/0c5f2289ca97a3a0eb1b7efb52e82c38c9779d94ffb0a2f7399dc8503a105bab.png)](../../.resource/remote/0c5f2289ca97a3a0eb1b7efb52e82c38c9779d94ffb0a2f7399dc8503a105bab.png)
 
 这里有个小判断，可以绕过
 
@@ -385,47 +385,47 @@ Content-Type: audio/mpeg
 
 这里为了不必要的麻烦，我们直接去找一个现成的 mp3 文件就好了 (直接截取前面头一部分内容，emmm，蛮粗暴的)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213208-76104bf2-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213208-76104bf2-a9b8-1.png)
+[![](../../.resource/remote/b02e3df1306105637ba9809c6c406e303a5522792f22fb563f16407f51823e89.png)](../../.resource/remote/b02e3df1306105637ba9809c6c406e303a5522792f22fb563f16407f51823e89.png)
 
 然后我们继续向下 debug:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213226-80903470-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213226-80903470-a9b8-1.png)
+[![](../../.resource/remote/698deb4ecbce13fafe4fb31b9f8b307595088baa7a97180fb44c39913321eca6.png)](../../.resource/remote/698deb4ecbce13fafe4fb31b9f8b307595088baa7a97180fb44c39913321eca6.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213242-8a65aebc-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213242-8a65aebc-a9b8-1.png)
+[![](../../.resource/remote/1d9a9e3263ec59ce427360560fa21d88ca0dad9c328b7d7261f5026b9eb7c4a4.png)](../../.resource/remote/1d9a9e3263ec59ce427360560fa21d88ca0dad9c328b7d7261f5026b9eb7c4a4.png)
 
 下面来到一些关键的地方了，需要认真调试了
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213258-93a80f9c-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213258-93a80f9c-a9b8-1.png)
+[![](../../.resource/remote/4e3d98a0c448498a98f9a0d2a76bb01105104768ea3619fe3b1d4a27a1bebaae.png)](../../.resource/remote/4e3d98a0c448498a98f9a0d2a76bb01105104768ea3619fe3b1d4a27a1bebaae.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213305-98317d96-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213305-98317d96-a9b8-1.png)
+[![](../../.resource/remote/e9fbe14861e242d2a4aa2975bf8d57cee281b93b2c4988285b849ece722d0b17.png)](../../.resource/remote/e9fbe14861e242d2a4aa2975bf8d57cee281b93b2c4988285b849ece722d0b17.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213324-a3288e7e-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213324-a3288e7e-a9b8-1.png)
+[![](../../.resource/remote/6d6b1b688e3418be68a4d30e60ef55e49ad944d3f54eaeaf1643db1a0a37239f.png)](../../.resource/remote/6d6b1b688e3418be68a4d30e60ef55e49ad944d3f54eaeaf1643db1a0a37239f.png)
 
 这里读取了偏移 101B，32kb 大小的头部内容进去，然后这里就可以搜索`RIFF|SDSS|FORM`的数据了，emm。我们构造数据的话, 可以先大量填充，最终找到 101 个字节的位置，然后修改为 RIFF 作为开始就可以进入到关键的地方了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213350-b313e86a-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213350-b313e86a-a9b8-1.png)
+[![](../../.resource/remote/d389e48b1c46fea54e659f8e0df84415034e534367f6a38c585a4010d45f81e2.png)](../../.resource/remote/d389e48b1c46fea54e659f8e0df84415034e534367f6a38c585a4010d45f81e2.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213401-b97964f0-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213401-b97964f0-a9b8-1.png)
+[![](../../.resource/remote/6b4f83610dea93b6909ccb55afe868c4335ff000601ce9c570aff9f3961b591b.png)](../../.resource/remote/6b4f83610dea93b6909ccb55afe868c4335ff000601ce9c570aff9f3961b591b.png)
 
 但是来到这里，我们的数据，依然是不成功的，因为要符合 getid3 库去解析 RIFF 的格式，要不然是提取不到数据的。
 
 第一次构造如下:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213414-c137ae2c-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213414-c137ae2c-a9b8-1.png)
+[![](../../.resource/remote/eaf562ffd11114490e96d5e42e8d31a65d1f212b17495ae2f7948a76eeb77fb7.png)](../../.resource/remote/eaf562ffd11114490e96d5e42e8d31a65d1f212b17495ae2f7948a76eeb77fb7.png)
 
 结果如下:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213433-cc499be0-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213433-cc499be0-a9b8-1.png)
+[![](../../.resource/remote/883c5a47700a4b02cf938e4c044632fbab4798bde14821ebb9f398edf3e2bdf7.png)](../../.resource/remote/883c5a47700a4b02cf938e4c044632fbab4798bde14821ebb9f398edf3e2bdf7.png)
 
 最终进入关键的函数，结合最前面的分析，直接就是`simple_load_xml`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213452-d7c48160-a9b8-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213452-d7c48160-a9b8-1.png)
+[![](../../.resource/remote/822ff533ef127d73ddf12c960747b6edef08216fdbdc9bfc6bd127b9156e986a.png)](../../.resource/remote/822ff533ef127d73ddf12c960747b6edef08216fdbdc9bfc6bd127b9156e986a.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213610-0631fb36-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213610-0631fb36-a9b9-1.png)
+[![](../../.resource/remote/35b5a8c9f69a25f5c945f0b29016d14dda99d3ee359a209a50282966023786aa.png)](../../.resource/remote/35b5a8c9f69a25f5c945f0b29016d14dda99d3ee359a209a50282966023786aa.png)
 
 其实一开始我是没意识到那个位置代表的是 RIFF 的数据大小的，但是肯定有代表大小的区域，且为 4 字节，我试着填 FF 就发现了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213636-15c2aa5a-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213636-15c2aa5a-a9b9-1.png)
+[![](../../.resource/remote/5188b49ddfbf3fa7c7b6daee0606fb6d7b8b5cddb6de34d99890f9a4871e9bcb.png)](../../.resource/remote/5188b49ddfbf3fa7c7b6daee0606fb6d7b8b5cddb6de34d99890f9a4871e9bcb.png)
 
 其实格式是这样的 (感兴趣的话，可以直接跟一下解析就行了，这里直接给出我的结果):
 
@@ -459,11 +459,11 @@ xxe.dtd
 
 POC 如下:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213841-60163e96-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213841-60163e96-a9b9-1.png)
+[![](../../.resource/remote/f10f04da01bf45a548dc77f094dff4bdb7b5dd0746442f500c72febb3b1bfc05.png)](../../.resource/remote/f10f04da01bf45a548dc77f094dff4bdb7b5dd0746442f500c72febb3b1bfc05.png)
 
 结果:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213825-567e1d5e-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213825-567e1d5e-a9b9-1.png)
+[![](../../.resource/remote/f10f04da01bf45a548dc77f094dff4bdb7b5dd0746442f500c72febb3b1bfc05.png)](../../.resource/remote/f10f04da01bf45a548dc77f094dff4bdb7b5dd0746442f500c72febb3b1bfc05.png)
 
 0X5 再看漏洞成因
 ----------
@@ -495,11 +495,11 @@ static function XML2array($XMLstring) {
 
 然后我们再看 WordPress 中的这个函数，是做了 XXE 防护的，原来在 WP3.9.2 的时候确实因为这个库导致过一次 XXE。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213931-7ddffb9c-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213931-7ddffb9c-a9b9-1.png)
+[![](../../.resource/remote/077ab0f498163ebfee7ade5f8e5cd010e807221b34d3d6314e1545a60c757c31.png)](../../.resource/remote/077ab0f498163ebfee7ade5f8e5cd010e807221b34d3d6314e1545a60c757c31.png)
 
 emm，当时做了修复:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430213955-8c85e3be-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430213955-8c85e3be-a9b9-1.png)
+[![](../../.resource/remote/c8ad941f79384286a2c0677dd1fd328b785478cee46d5ed30f44e440fedb0247.png)](../../.resource/remote/c8ad941f79384286a2c0677dd1fd328b785478cee46d5ed30f44e440fedb0247.png)
 
 本来这样就蛮安全的了，为什么 WP 还要改呢？ 这个问题就出现在了 WP 要向 PHP8 兼容
 
@@ -512,11 +512,11 @@ $loader = libxml_disable_entity_loader( true );
 
 有篇文章 [https://php.watch/versions/8.0/libxml_disable_entity_loader-deprecation, 就介绍了如何解决这个问题。](https://php.watch/versions/8.0/libxml_disable_entity_loader-deprecation,%E5%B0%B1%E4%BB%8B%E7%BB%8D%E4%BA%86%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E8%BF%99%E4%B8%AA%E9%97%AE%E9%A2%98%E3%80%82)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430214025-9e57f1a4-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430214025-9e57f1a4-a9b9-1.png)
+[![](../../.resource/remote/37c4af70747433775921312c88ce182c1ba4bb0002cdf6026bdcbcf1bbf543cd.png)](../../.resource/remote/37c4af70747433775921312c88ce182c1ba4bb0002cdf6026bdcbcf1bbf543cd.png)
 
 emmm，是不是，然后我们回头看 WP 的代码，是不是很像，其实文章没有错，只不过，没有解释如果出现了第三个参数情况，那么默认配置不解析外部实体就会被第三个参数更改，导致了 XXE。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430214055-afe9c62c-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430214055-afe9c62c-a9b9-1.png)
+[![](../../.resource/remote/6f4fdc5a6e9ab65b62932e77e7bbc55b091b649cb9c679fa871970db9a12c8df.png)](../../.resource/remote/6f4fdc5a6e9ab65b62932e77e7bbc55b091b649cb9c679fa871970db9a12c8df.png)
 
 然后看这个注释，emmm，只能说，开发者不是神，同样是人，一个应用不可能永远没有漏洞的，这个就是一个很好的例子。
 
@@ -524,7 +524,7 @@ emmm，是不是，然后我们回头看 WP 的代码，是不是很像，其实
 
 其实我对这个函数也不是很懂， 其实也不是很清楚 WP 为何执意用这个，但是查看返回值确实是存在差异的。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430214117-bd8004cc-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430214117-bd8004cc-a9b9-1.png)
+[![](../../.resource/remote/84b215a3c4a91b24f58e84b3ec04ef534123bf2a6bcb3e72219bef0b730b9198.png)](../../.resource/remote/84b215a3c4a91b24f58e84b3ec04ef534123bf2a6bcb3e72219bef0b730b9198.png)
 
 猜想:
 
@@ -540,7 +540,7 @@ $loader = @libxml_disable_entity_loader(true);
 
 不过官方提到这个参数, 说如果需要使用内部实体解析的时候，那就需要带上第三个参数。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210430214144-cd610f80-a9b9-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210430214144-cd610f80-a9b9-1.png)
+[![](../../.resource/remote/1c408f56359c61adbaf59ceebf936a037906fb2fd716975a93999795090a15f8.png)](../../.resource/remote/1c408f56359c61adbaf59ceebf936a037906fb2fd716975a93999795090a15f8.png)
 
 很迷，感觉这个说话不算很可靠，就算不需要这个，也是能解析内部实体的，希望有师傅能从开发角度说说差异。
 

@@ -101,7 +101,7 @@ FOFA搜索语句
 icon_hash="1085941792"
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BOqZXohpWdOwticawLfzcmBeOIWJzicQSA1Ul4XjJ13ur72JJlSHMTKNW6Z0rIGDYQiaicDV5LDIvaB2Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/abf2678053cd1f914adff0e4da0831227c24d3f4880b167a4f166d057f384fb0.png "")  
   
   
 05  

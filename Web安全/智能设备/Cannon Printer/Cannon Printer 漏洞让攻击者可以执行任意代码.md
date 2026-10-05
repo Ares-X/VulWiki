@@ -54,7 +54,7 @@ source_status: "unknown"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8sD1ssAsORFVbleMVzjo0O7ntC6Vzgf5OMRGcTibrn86XOcXTRwU9KDdfKo1t2yGmO09luH0FYZib5A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cd1c6c1f6a570b077216757dfb48d1e0ace98d0f0f20d657749a519f78fe398f.png "")  
   
 Canon 已发布一个重要的安全公告，内容涉及在其多个打印机驱动程序中检测到的严重漏洞，该漏洞可能允许攻击者在受影响的系统上执行任意代码。  
   
@@ -107,7 +107,7 @@ https://cybersecuritynews.com/cannon-printer-vulnerability-arbitrary-code/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

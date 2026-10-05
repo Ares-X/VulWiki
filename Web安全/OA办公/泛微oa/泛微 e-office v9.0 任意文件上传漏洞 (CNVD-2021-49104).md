@@ -65,7 +65,7 @@ https://mp.weixin.qq.com/s/J4R-PRJq_oi58iWKh_1Oiw
 
 **常见 oa 是 ecology，eoffice 是轻量版**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa8dvVXvugicZLoDCDWiaWBWUAmumbdp5oHe5h7pGd4oTh1x4Qwcg5MQnNAVia88sRFyYN4NXUUcwr9xA/640?wx_fmt=png)
+![](../../.resource/remote/1c75a601103cb2d054c929f40fb40c9e50685f4c20d64f5b870088d22b3218b5.png)
 
 #### 一、漏洞概述
 
@@ -107,11 +107,11 @@ eval("$a");//eval会将输入的$a作为php语句执行，因此只要对_赋一
 
 链接: https://pan.baidu.com/s/1i4DQ4YD 密码: fegm
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa8dvVXvugicZLoDCDWiaWBWUAwr1wsBufVn9OGWloOnLHUmwQgZ8IZjOKJWFLn64jpia6TGpHDHzIKDA/640?wx_fmt=png)
+![](../../.resource/remote/6aa8de6e08b73eaca0058e188bb2a1b65c537d54d3002e011bc18121864e51c9.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa8dvVXvugicZLoDCDWiaWBWUAYTkpdHYeZ3Toib4KBgQywGjU0EsoYtw934j1icSYNFnlXoXINBqmoE9w/640?wx_fmt=png)
+![](../../.resource/remote/25a1c47c616735aa6f5f2f775b01b9b778b0ea8daf171c536df4c37cb2d5e308.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa8dvVXvugicZLoDCDWiaWBWUA7UKibwYZicVKMVHDC0q5Rd8vEubc5aE2p9nVC6jcAV4oz3Pd8WiaHUU1g/640?wx_fmt=png)
+![](../../.resource/remote/3d25738badb9507a9a616ace033fe0c574ac62da0e345b9fdfc553cf6f1e61f6.png)
 
 ##### POC：
 
@@ -131,20 +131,20 @@ http://v10.e-office.cn/eoffice9update/safepack.zip
 
 **课程咨询请联系小客服**  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/XWPpvP3nWaic7PmuiclIvD4GdJTRLwCZx3icnFdNc5iatEKWoEwtDiaQaiahUm6fj8nboPicd9vddIo3SYQrqQibtMUwbw/640?wx_fmt=jpeg)
+![](../../.resource/remote/8445238e734258a03a7861abcc6fbc3036550883881f92432fac95d3f3879683.jpg)
 
 **扫描下方二维码加入星球学习**  
 
 **加入后邀请你进入内部微信群，内部微信群永久有效！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa9Y7Ac6gb6JZVymJwS3gu8cniaUZzJeYAibE3v2VnNlhyC6fSTgtW94Pz51p0TSUl3AtZw0L1bDaAKw/640?wx_fmt=png) ![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa9Y7Ac6gb6JZVymJwS3gu8cT2rJYbRzsO9Q3J9rSltBVzts0O7USfFR8iaFOBwKdibX3hZiadoLRJIibA/640?wx_fmt=png)
+![](../../.resource/remote/b820f14e551a923b499945064249ff1e3a1f724030f25ace7d90ab7b842d07fe.png) ![](../../.resource/remote/a7a736314919b9479e47ad0fd2c9a5a4c0435d09b418678ce5883ba961d9827e.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWaicBVC2S4ujJibsVHZ8Us607qBMpNj25fCmz9hP5T1yA6cjibXXCOibibSwQmeIebKa74v6MXUgNNuia7Uw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWa9Y7Ac6gb6JZVymJwS3gu8cRey7icGjpsvppvqqhcYo6RXAqJcUwZy3EfeNOkMRS37m0r44MWYIYmg/640?wx_fmt=png)
+![](../../.resource/remote/8b3ffea64376da7b0cbd4682e05c5c9ec976e87cabd498253fe6747fc7b7208e.png)![](../../.resource/remote/9774307c2691fb7948de42fa391274fd22de1036247bcc00391ef9d0d44f1741.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/XWPpvP3nWaicjovru6mibAFRpVqK7ApHAwiaEGVqXtvB1YQahibp6eTIiaiap2SZPer1QXsKbNUNbnRbiaR4djJibmXAfQ/640?wx_fmt=jpeg) ![](https://mmbiz.qpic.cn/mmbiz_png/XWPpvP3nWaicJ39cBtzvcja8GibNMw6y6Amq7es7u8A8UcVds7Mpib8Tzu753K7IZ1WdZ66fDianO2evbG0lEAlJkg/640?wx_fmt=png)  
+![](../../.resource/remote/d197090b74de6bc04997bc572efc05f5544c7d799d78f4057be75863653cb6c5.jpg) ![](../../.resource/remote/1d5de7fa15d4a3825bad95bbe7760ba6a5b37f81c3ca11b57116cb1e64b1c827.png)  
 
 **来和 5000 + 位同学一起加入星球学习吧！**  
-![](https://mmbiz.qpic.cn/mmbiz_gif/XWPpvP3nWa9FwrfJTzPRIyROZ2xwWyk6xuUY59uvYPCLokCc6iarKrkOWlEibeRI9DpFmlyNqA2OEuQhyaeYXzrw/640?wx_fmt=gif)
+![](../../.resource/remote/3f55c7e6f5f7346de3532c52fac4ff5d0cfa1192be3b7f366113b7a5bf1132c5.gif)
 
 ---
 

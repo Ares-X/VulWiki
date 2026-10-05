@@ -51,7 +51,7 @@ source_status: "unknown"
 
  FreeBuf   2026-04-20 10:04  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
 ##   
 ##   
@@ -75,7 +75,7 @@ CVE-2026-39808 是影响 FortiSandbox 的操作系统命令注入漏洞。FortiS
 攻击者可通过 jid GET 参数注入恶意操作系统命令，利用 Unix 系统中常见的管道符号（|）实现命令串联。由于存在漏洞的端点未能正确过滤用户输入，注入的命令会直接被底层操作系统以 root 权限执行。  
   
   
-![通过 jid 参数中的 | 符号实现操作系统命令注入（来源：GitHub）](https://mmbiz.qpic.cn/mmbiz_jpg/icBE3OpK1IX33FydK8JI217VZf0jxxPibgpkQp7DJYhm1NxyHyAXYQbZibkVRryggsVh3ibmicHwcqMOxCibSe6VcYEeqmBedXX1ohcYOZvAQ6I4M/640?wx_fmt=jpeg&from=appmsg "")  
+![通过 jid 参数中的 | 符号实现操作系统命令注入（来源：GitHub）](../../.resource/remote/80ca7be5dc92432df2fea2b6016db5f81dfa4cd3dc7d5fd194300f9bc160bdc3.jpg "")  
   
   
 经确认，FortiSandbox 4.4.0 至 4.4.8 版本均受此漏洞影响。该漏洞最令人担忧之处在于其利用难度极低——研究人员 samu-delucas 在 GitHub 发布的 PoC 显示，仅需一条 curl 命令即可实现未经认证的远程代码执行（RCE）：  
@@ -119,7 +119,7 @@ https://cybersecuritynews.com/poc-exploit-fortisandbox-vulnerability/
 ### 电报讨论  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

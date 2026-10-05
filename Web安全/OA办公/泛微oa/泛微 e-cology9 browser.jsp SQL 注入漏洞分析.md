@@ -47,25 +47,25 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/17tc4ep83x4243lzr-brCg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRvH06icOMAjUNoAiaevoJbn2uwwuponRyrqXYclYFYJFia2en7GNlR7l6Q/640?wx_fmt=png)
+![图片](../../.resource/remote/1227e46b5aeb445edfefe693e4297d553a6e62d0f9a78a0d7ef30e75fc6b7c1b.png)
 
 由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，雷神众测及文章作者不为此承担任何责任。
 
 雷神众测拥有对此文章的修改和解释权。如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经雷神众测允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 引子
 
 2023-02-23，某站发布了一个关于泛微 e-cology9 SQL 注入的漏洞通告。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRSJRlibtMluNfPoaHHx9icpc0GSD9rnZoG2OASyicBHTeuxNkpKqTWRYEA/640?wx_fmt=png)
+![图片](../../.resource/remote/4f46ef2117a9c0d726379329540838e90868e2b20ac9b23f02cc5c935cfc6911.png)
 
 如上图所示，根据其说明，受影响的版本范围是 <=10.55 版本。
 
 另外，他们还提到该漏洞无权限要求，并不是后台洞。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 补丁包对比
 
@@ -85,13 +85,13 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20230213_v10.56.zip
 
 将两个补丁压缩包分别解压，然后使用 IDEA 工具对比差异。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRYnkmnk0IlOVXlaMjJiaicToAjPnVGia0vrribVfLReqTA3U3zAS28N6GDg/640?wx_fmt=png)
+![图片](../../.resource/remote/2bc3aecac330ed33d1597a4ff50839f3cd0e3e687aa41b04fc30425a04f514a2.png)
 
 这里对比看了很久，但是却没有看出有价值的内容。
 
 嗯？先了解下 web.xml 文件中的内容。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRxKpicGqdYB7rztA1h6L6UYIMsGCWoELz5Rp2m0zamIq6bIyCxOkqBWQ/640?wx_fmt=png)
+![图片](../../.resource/remote/ee4239dbbcfd6edd59db67ff4e23e920be517dfa35b839eba9a6474f8fb426bc.png)
 
 在开头存在一个 SecurityFilter 的过滤器，SecurityFilter 在初始化时会调用 weaver.security.filter.SecurityMain 中的 initFilterBean 方法初始化安全规则。而在 weaver.security.rules.ruleImp 包中的每个类差不多就是每次打的补丁，此包中的类将被重点关注。
 
@@ -105,7 +105,7 @@ security/rules/ruleImp» stat -f %SB----%N *.class | grep -v "2021----" | grep -
 
 这样还剩下 125 个补丁文件，然后通过 jadx 这款反编译工具一次性打开这些补丁文件，然后搜索 Xss(Validate failed 关键词，不断寻找，最终找到了一段 SQL 注入漏洞的补丁代码，下图所框疑似就是本次漏洞的位置。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRCew3fGODlreqVXJyACFmiafFVyEqD3oyeuwxKEtfL6E0GG3uWyIYKCA/640?wx_fmt=png)
+![图片](../../.resource/remote/39588d07eda388e7b45da15a5b53da78e9f74e486cc5db14853ee4995aa1928d.png)
 
 上图所示的补丁代码，所处如下位置。
 
@@ -148,7 +148,7 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20221014_v10.55.zip
 
 在通过关于这个漏洞的通告中的时间线中，大致可以猜测出来，在 2022 年 9 月，正值演练期间收到该漏洞，在 2022 月 12 月上报给监管单位，监管单位应该是收到了该漏洞就立马通知给厂商，在 2022 年 12 月 8 日厂商就已经开发出本次 SQL 注入漏洞的补丁代码，也就是 SecurityRuleForMobileBrowser.class 文件中的内容。但厂商在开发出该漏洞的补丁代码后并未立即发布 v10.56 补丁包，而是先将其更新至 v10.55 补丁包中了。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRhKLA5gLNrOibXSCPwd8XKJfibVkYZ2N2ztYN8QG5u79tibEDIUKwia2Q8g/640?wx_fmt=png)
+![图片](../../.resource/remote/0a8fcac250a183a43dcea8926d06454d7fb46df708ccef8e2f429a3df05ac83a.png)
 
 这也就是为什么用 IDEA 对比 v10.55 和 v10.56 补丁包，却一无所获的原因。
 
@@ -161,9 +161,9 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20220805_v10.54.zip
 
 如下图所示，确实对比出了该文件存在于 V10.56 中，而不存在于 V10.54 中。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR4MMgSQUyr0stXQibJxGoXowmzYlXeLmuib8jM3UcHOrKz7tiboudZgKqw/640?wx_fmt=png)
+![图片](../../.resource/remote/654fe45eb63f8e298b549b2f1deed8d039c2df3014b34f9b01f55b740ebfa96c.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 确定漏洞位置
 
@@ -171,7 +171,7 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20220805_v10.54.zip
 
 我们先来简单看看 / mobile/plugin/browser.jsp 的内容。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRibgjW9tC89Siby3c4Kv8tp5jxdLhBA2vejWM21DxAaWo1N0e7ZPPs5KA/640?wx_fmt=png)
+![图片](../../.resource/remote/c52e83d227c3e5c07e2281ec76b4206ebe815da3a145c879041984eb81d13f44.png)
 
 参数很多，继续往下看，发现一个 isDis 参数及其判断语句。
 
@@ -186,11 +186,11 @@ if (!isDis) {
 
 如果 isDis 参数值不为 1 的话，则进入 if 条件语句之中，RequestDispatcher 的作用是将请求分配给另一个资源，后面使用的是 forward 方法，此处就是将请求转发到 / mobile/plugin/dialog.jsp 处理。那么就看看 / mobile/plugin/dialog.jsp 的内容。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRT3xd0NjvrOwdQFkuTadUObFmmnZMzrkNyS8u7CWwDeqpYuY4IxTGNQ/640?wx_fmt=png)
+![图片](../../.resource/remote/b7e3fa177fbb7f4c9a18ed624a32f41cc712b1adabf49b374f2c3b283f4e318a.png)
 
 发现开头的 HrmUserVarify.getUser，该方法部分代码如下：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRbhvk1TSphVsJeTAoD6j9BWdGhu4VH2KnG7cdySJicCpvDvlcADD1Qqg/640?wx_fmt=png)
+![图片](../../.resource/remote/5b06508b9355852f61da9e33543521cc92a620162b9291a82e9fcc7c332eef62.png)
 
 可以看出此处有个登录判断，根据我们的情况肯定会返回 null 到 dialog.jsp 就直接返回空了。死路一条，弃之。
 
@@ -212,15 +212,15 @@ isDis=1
 
 > 请求长度说明：原资料 Content-Length 为 7；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRF9ibtyywNSy9RyHuW6oibRGWicMqIdd14I8LsibLyvicH5wVPX9YqVMjmBA/640?wx_fmt=png)
+![图片](../../.resource/remote/6b8ac2b1f110b4367ee2c4442f61a3318f37011dd4f2f27bc721f9799cfda63c.png)
 
 与网站放出的测试图相比，是不是就对上了。那么也就能够确定漏洞的路径就是：/mobile/plugin/browser.jsp。
 
 在使用 BurpSuite Intruder 多个不同的目标时，发现除了 200 的状态码，还有很多 404 的，这种情况我们最后再说。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRLWY9pDlYAf3kKbLlZpciamTcCKXoedoXYO5Nibl4HTUSqWkgOuptROVA/640?wx_fmt=png)
+![图片](../../.resource/remote/d3a5dd9020db68fae44e4ba29ab11e7665ec3a3f73e86e7a2b98e189469c426d.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 补丁代码分析
 
@@ -228,13 +228,13 @@ isDis=1
 
 完整补丁代码内容如下。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRWrIzibKvGrkBcFjxo8ibk3NpYduyYxObVpAyZXLhelKB8Xuc1g4zNc3w/640?wx_fmt=png)
+![图片](../../.resource/remote/6eaf33cf53d6ad3b2c2990a0fd69bc0120156d6a553e69d96c8d5882091f9652.png)
 
 对该段补丁代码作简单分析。从第 5 行的第一个 if 条件语句开始，判断如果../、\、十六进制的 00 都不存在于 URI 中，则进入第 6 行下一个 if 条件语句判断，如果 / mobile/、/plugin/、/browser.jsp 都存在于 URI 中，那么获取 keyword 参数值；接着进入到第 9 行 try 语句，首先对 keyword 参数值进行了一次 URL 解码，并判断其中是否有恶意 SQL 注入 payload '，如果有的话，则进行拦截、拉黑 IP，返回 false；紧接着对 keyword 参数值进行二次 URL 解码，并将二次 URL 解码后的值与第一次 URL 解码的值将比较，如果不一致也会进行拦截、拉黑 IP，返回 false，此处判断是为了防止多层 URL 编码 Bypass 的，即第一次 URL 解码的结果必须是最终的的解码结果。
 
 通过分析可以得知存在注入的参数就是 / mobile/plugin/browser.jsp 中的 keyword 参数。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 SQL 注入分析
 
@@ -251,7 +251,7 @@ BrowserAction braction = new BrowserAction(user, browserTypeId, pageNo, pageSize
 
 跟进 HrmUserVarify.getUser，代码如下，这里肯定会返回 null。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRKiaYjYQJoc4Qn7Bn3yJKzJ5wcyLqFcyD5xXTicXg4HyWuoebY9MthQ2A/640?wx_fmt=png)
+![图片](../../.resource/remote/3a018d17955a9ee0760b123f3cbaf3fd6db61777e4e78235a7b870a35d057aef.png)
 
 起初这个地方让我感到很迷惑，误以为这个鉴权会被用到，实际并不会用到，这里返回的 null 作为 browser.jsp 中的 user 变量的值，但是在 browser.jsp 中并未对 user 做检查。如果需要达到鉴权的效果，那么正确的写法应该是增加如下代码片段：
 
@@ -262,15 +262,15 @@ if(user == null)  return ;
 
 如下图所示，SearchSubDept.jsp 正是采用的这种写法。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR26XkqCyX4GYicDvDgsDErXZKn4T66lUojibHib9BoLibGsV3U9SibHHQKpQ/640?wx_fmt=png)
+![图片](../../.resource/remote/60d96e788c62c3a92848211db84657a8fbffb5893e908c30e51a68cae471463a.png)
 
 继续往下，设置了很多参数值，但不过大部分参数都不是必须的。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR6mTiakzpG6xnufuomRqiayfN0x8a8tLnniapUNLGfjsKfqkIID3bIr04A/640?wx_fmt=png)
+![图片](../../.resource/remote/172e7eed2a03fd771b7e589475479f0922712e24d05cb2192df146118707f180.png)
 
 最后到 braction.getBrowserData() 方法，这个方法位于 classbean/weaver/mobile/webservices/common/BrowserAction.class 文件。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRxB30lh93roXdLxmicAEBnLPJXnMd0TKPadzGOAR7ib6JbQChyf6mTqZg/640?wx_fmt=png)
+![图片](../../.resource/remote/ce703e978f24edc1cd6eb47496d4f1b62bc318f457f8bcbb89846d453862123f.png)
 
 最开始有对 browserTypeId 参数值进行判断，以及很多 list 开头的方法，接着还对 method 参数值进行判断，根据不同的值执行不同的 list 开头的方法，那么注入很大可能就存在某个 list 开头的方法之中。
 
@@ -293,19 +293,19 @@ isDis=1&browserTypeId=160&keyword=a%' union select 1,'
 
 > 请求长度说明：原资料 Content-Length 为 54；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR6tyGC6iaZ8w0hiakGpOlhnFjn1NA6c48rZCiaBHNlDENn9hc7zupRGmwQ/640?wx_fmt=png)
+![图片](../../.resource/remote/739e2997fc0a08ec54fc0c8b03d1c29a0f87c43e7c0b4ec283edb13be14dea75.png)
 
 可以发现一些与 SQL 注入相关的敏感关键词（'、select）均被全角化了。那尝试 URL 编码一下，一层 URL 编码的请求如下，服务器直接返回 500 了。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRnq79iboF8EcHib7HO4V5bGN82y3mBFBMJyR4SHz5cHHeMOda8x6QbYlQ/640?wx_fmt=png)
+![图片](../../.resource/remote/7c6d0726ec4b55a19dc43ade2d5be9b2281a43d9bc55ae37d3a49aa274785a8b.png)
 
 双层 URL 编码试试，如下图所示，服务器端依旧做了两次 URL 解码，然后发现'，将其转换成全角字符了，但不过 select 关键词却没有被全角化。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRltlFtxSO9yfnkHic9TaM7BlCxpRM6BLNicI2rgA7f3uP6FWC4I8vK48g/640?wx_fmt=png)
+![图片](../../.resource/remote/3e334316ad70d3fe3274c960695eece9e1531ec5bc0b100051cd08d464fdb54b.png)
 
 继续三层 URL 编码，通过下图可以发现，经过三层编码后的字符串被 URL 解码两次后顺利到达 BrowserAction.getBrowserData()，而在每一个 list 开头的方法中都有一次 URL 解码操作，那么就能确保我们的 SQL 注入 payload 顺利传递到 SQL 查询语句中。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR0WWAw19ic6Infq7HUyQRic8z6xLR7wd0ctNJ5cdHOnJj4oibeEu27I7RA/640?wx_fmt=png)
+![图片](../../.resource/remote/4ec87a7317e9d68c07bb68d7c5c67b99d2484d5b897b6aac9d08ab87a2c491c7.png)
 
 下面依次对各个 list 开头的方法进行审计，最后发现当 browserTypeId 等于 269 时，执行的 listRemindType() 方法中存在一个有回显的 SQL 注入漏洞。
 
@@ -352,21 +352,21 @@ public void listRemindType() {
 
 看到这里就可以直接构造注入 payload 了，最终注入的效果如下所示。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRUl4fVCyQJwZn2Iyfy1VNaQGugEiacIa2oSgHufsiaHg6JMKBpNzGj8rA/640?wx_fmt=png)
+![图片](../../.resource/remote/363ab070db9668ecd016feaf3c6918f060eef3eae49a0c48f0a90373c1305f82.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR9gx0713MwKX40ZRtlggewvicuKuqfu72nia67mPUnaMZGlApYRun1oAA/640?wx_fmt=png)
+![图片](../../.resource/remote/b4f3709a5ef637ce184434649b2897d2a3974ae6c6bfc7272a871055d9461ca8.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
  认证绕过分析
 
 在上面有埋下一个坑，就是在使用 BurpSuite Intruder 请求多个不同的目标的 / mobile/plugin/browser.jsp 时，发现有很多返回 404 状态码的站。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRHAUO964Z8KUOrwvPx7rHW5UMMoW3LOVOCc7gRuHSKKZaKfbFTkRvNQ/640?wx_fmt=png)
+![图片](../../.resource/remote/2781f0d673d063e03fdf22c9a41cb4863929fc426ee70711446cb1d2085d1bbb.png)
 
 我们需要再次对比 v10.54 和 v10.56 的补丁包。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR9pFft7kOuy3KUibFunN4NGALTjJWOA8EH6fOaM6SQQBWbtJLbmsOsfw/640?wx_fmt=png)
+![图片](../../.resource/remote/aee48ca741061ba038dc0a184cd32e8ec119f65b32370ce63e56eb59470e6bf0.png)
 
 找到 SecurityRuleMobile29.class 这么一个补丁文件，再次对比，首先可以发现在 v10.54 补丁包中的 SecurityRuleMobile29.class 文件的最后修改时间是 2020 年 9 月 10 日，那么如果 ecology 没有打过这个补丁则无需考虑绕过的情况，/mobile/plugin/browser.jsp 路径可以被直接访问，这也就是为什么有一些站直接访问该路径不会出现 404 的原因。
 
@@ -377,11 +377,11 @@ Dec  7 20:26:20 2022
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR2wTr27HJvMvFvibRKlTDcDDymIeyQTX2wWXoBAZqlmDS8FGE2vr4Kng/640?wx_fmt=png)
+![图片](../../.resource/remote/9028786f9f92cddf9d727c6622110274cf7c6cdad5bd3992be9fb241cf9ae145.png)
 
 未更新该补丁之前的 validate 方法内容如下图。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRkM4GclyCUakNrcEwf7RuFKnncYJWyIcvGqIgXae66EWMBYCXpiaiaUVg/640?wx_fmt=png)
+![图片](../../.resource/remote/c062b05836ab02246c798bb51f1a789867360f7d08eceb0769e5c3ab511a13e4.png)
 
 我们先从 153 行的 else 语句开始看起。毫无疑问，当请求路径中存在 / mobilemode / 或 / mobile / 或 / cpt / 其中一个，并且请求路径的结尾是. jsp 时，顺利进入到 154 行 if 分支。
 
@@ -424,17 +424,17 @@ else {
 
 接下来，mobileNoLoginUrlList 这个列表中的路径意味着无需登录即可直接访问，如果请求的路径在该列表中，则会返回 true。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRtDNgebsCeZ4HjaiabAKEa6p5nCCeicDtQJMzr4yKM2MeQbREcf88Ydug/640?wx_fmt=png)
+![图片](../../.resource/remote/ed1bdc677a2d629016803a6a0e7f168f4860f9f2e6148c76323ef4336f2194ab.png)
 
 mobileNeedLoginUrlList 列表顾名思义，当请求的路径在该列表中，则是需要登录才能访问的，否则就会返回 false。而 / mobile/plugin/browser.jsp 恰巧在其之中。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRK2utJkDJwr5qRSkYPVWCLARXIAEDbCcZLcCzguvH7TFZJ9rMTydESA/640?wx_fmt=png)
+![图片](../../.resource/remote/350fd98acbf91dc6c09602b9e6f984038c4032c5f3639875c722f5a2e4960d74.png)
 
 当请求的路径既不属于 mobileNoLoginUrlList，也不属于 mobileNeedLoginUrlList，也是会返回 true 的。
 
 那么我们继续看 validate 方法中新增的补丁代码片段：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRzicLXrb05TIibJ5YGR18s9pxajop0Ow9JUkH8kt6RM7l8YsIZJb9uk3Q/640?wx_fmt=png)
+![图片](../../.resource/remote/9af2347912c230ae85f2a516288077de72b6dbf4bbdfdf934c35994e6fde789b.png)
 
 ```
 else if (StringUtil.matches(path, "\\s") && StringUtil.matches(path, "/\\s+/")) {
@@ -448,7 +448,7 @@ else if (StringUtil.matches(path, "\\s") && StringUtil.matches(path, "/\\s+/")) 
 
 在此之前，需要留意 super.path 方法，这个是父类 ParentRule 中的方法。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRmb5Ae2K3Ink7qplTAMOX2WQOVibqwdpJURgGCh9QcNRcMgeuos1rJfA/640?wx_fmt=png)
+![图片](../../.resource/remote/162a7acfca2c13ccd2dbc540b6d88b4b017f1a37aa0815b446e546beb93f69ad.png)
 
 path 方法会对请求路径中出现的一些特殊字符如;、//，那么则会做正则 replace。并且最后还会去除路径中出现的空白字符。最后返回 path.toLowerCase()。
 
@@ -463,13 +463,13 @@ StringUtil.matches(path, "\\s") && StringUtil.matches(path, "/\\s+/")
 
 最后梳理下，原始的请求路径需要先经过 URL 解码，解码后其中不要存在有;、// 字符，然后还要经过一遍去空白字符操作，再然后就会返回最终的路径，最后的路径能到达 / mobile/plugin/browser.jsp。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRPI5vAs5nAhjicr6l1JXRBSzlrHDDX0b5OJKVZ1jpuLAWTibt8jZtJ7ibA/640?wx_fmt=png)
+![图片](../../.resource/remote/da856cd2ba8fe44833d6fef8ab268f070af6ad4353673fd41dd54c2b4255d581.png)
 
 成功绕过后，就能对未打这次最新补丁的 ecology 进行 SQL 注入了。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRUuw4w242C0GGbhvnLa8U21sNWw0kbrHNHibTOibLoo32ucJz5hJO1vzw/640?wx_fmt=png)
+![图片](../../.resource/remote/6588625489a55ac5bb2803210394e5494e111ec74cdb08733c32fe08d43f3fc3.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 修复建议
 
@@ -495,15 +495,15 @@ https://www.weaver.com.cn/cs/securityDownload.html?src=cn
 
 重大活动网络安保支撑单位
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRSibUzTzKqo46ibTzw0YFt9YyybtCGqWHiazNAYNdoJafHwzjPjeob79hA/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/8633f63e3169d60addcd0966918d033052cb2f1630fbebcec35f002795bfbc7b.jpg)
 
 END
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRVrgN0cuGZekJWMcS7cYD8A4zhSzNoEq8y0Cr4QoFPIUMUKEdA6swOg/640?wx_fmt=gif)
+![图片](../../.resource/remote/bd009f28a1feafd068fd1b7b30f3ee84175ddcaac33525b831179a99b6aa3bda.gif)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRRRbHNuPGCcJW30PxBCloCbQ10H4yHupgRRPHPtOpaPuPeAe14GZ32w/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/e4f0475d8bfbb42639ebacd413d12797299c3e8209c7096e8bef78edf706f37e.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR4HmuaNFkhEm55SNRMr0I011J2cwe02ThM3p63Uz2MpAfCE63ty0CLg/640?wx_fmt=gif)
+![图片](../../.resource/remote/de69a03d90463d2f73a695bb9dba6bea64f2d5dc7e5efb2bfe2274065456c583.gif)
 
 **长按识别二维码关注我**
 

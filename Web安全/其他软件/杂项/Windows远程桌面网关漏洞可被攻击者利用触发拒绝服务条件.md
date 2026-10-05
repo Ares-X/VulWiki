@@ -62,7 +62,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8utwh4J8V6MnpUS8iaS8U1hDDKJE8bBeLFFRKWGku6eSHvPM5sGum0ZtLF9mIEKzTW7icy6WgFml0hw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e54be3097fee1ddc354e1be156588cc4886cd3ad2a1295e52e7b0387af0d60de.png "")  
   
 微软安全响应中心(MSRC)已发布重要安全更新，修复Windows远程桌面网关(RD)服务中的一个高危漏洞(CVE-2025-26677)。该漏洞可能允许未经授权的攻击者触发拒绝服务(DoS)条件，潜在影响企业环境中的远程访问能力。  
   
@@ -99,7 +99,7 @@ https://cybersecuritynews.com/windows-remote-desktop-gateway-vulnerability/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

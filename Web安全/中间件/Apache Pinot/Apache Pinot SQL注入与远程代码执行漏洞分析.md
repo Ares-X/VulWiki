@@ -107,7 +107,7 @@ https://docs.pinot.apache.org/users/user-guide-query/scalar-functions#groovy-scr
   
 如果你是一个长期主义者，欢迎加入我的知识星球,我们一起冲，一起学。每日都会更新，精细化运营，微信识别二维码付费即可加入，如不满意，72 小时内可在 App 内无条件自助退款。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ZS0VQrDMfGoa1Yh6UHSvgToDQcqx7RLLnJIWwnw3z5JvaexDaclyMwMial9BMOBqkJESSKALIQHIL6T2xTV9GKw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/7ebcb57cdd75afb0ce105cdcee922967c27c2afc005e8f028fab72a19e466567.webp "")  
   
   
   

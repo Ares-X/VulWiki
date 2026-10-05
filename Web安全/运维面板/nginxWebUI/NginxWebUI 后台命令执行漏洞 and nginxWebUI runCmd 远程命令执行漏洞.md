@@ -86,7 +86,7 @@ nginxWebUI <= 3.5.0
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbW9SHoSkRpEvrjEVm0txjEeDtS0NxXCHFZDWZ30oCw0tA0Jlhmythqakmict4RrhuMicQmObta5Eohg/640?wx_fmt=png)
+![](../../.resource/remote/78d77efd59ba4ced6cfdd13d41e66d0615b9bc1c4df9d9023aee13b82c71b8f4.png)
 
 NginxWebUI 环境搭建：docker-compose.yml
 
@@ -108,7 +108,7 @@ services:
 
 **后台命令执行：**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbW9SHoSkRpEvrjEVm0txjEeDsMa78rQ1w7n4KC0RqOGBqwf5SvLY3tzsgEdaNsYmW3y83ohfmb11A/640?wx_fmt=png)
+![](../../.resource/remote/6bb7e1af2f3910c2bd1badb55e4874465ac94c2cf6f19d835325a94ecf8e7cbb.png)
 
 payload:
 
@@ -130,7 +130,7 @@ remoteId=local&cmd=start|id&interval=1
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbW9SHoSkRpEvrjEVm0txjEeDcXGyYg4oS9PBy79oQPH89AAaUA1F4OhNMVSkHj4TMYcr8KQ5SytvQ/640?wx_fmt=png)
+![](../../.resource/remote/ab3bbd22425aa88869d05054a75d4728e636bc9ade24a08b249d0b4326f44cc9.png)
 
 **前台命令执行：**  
 
@@ -141,7 +141,7 @@ payload:
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbW9SHoSkRpEvrjEVm0txjEexicPBvaNiax4qzCvJz2JXQricby0JfY9OYUqcp38PL13jehELHicAjpgEA/640?wx_fmt=png)
+![](../../.resource/remote/3fa69e475ad5dae1c7093af56a7f330c0eff4645fb73be22d2c8f6075973c377.png)
 
 **修复建议**  
 

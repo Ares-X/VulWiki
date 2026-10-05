@@ -52,7 +52,7 @@ FreeBuf  商密君   2024-09-08 15:40
 近日，Patchstack 的 Rafie Muhammad 在 LiteSpeed Cache 插件中发现了一个严重漏洞，该插件主要用于加快超 600 万个 WordPress 网站的用户浏览速度。该漏洞被追踪为 CVE-2024-44000，并被归类为未经身份验证的帐户接管问题 。随着 LiteSpeed Cache 6.5.0.1 版本的发布，修复程序也于昨天（9月4日）发布。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3iciaZHv8e3qoz13B2w7w92fvMVkwibtKs5407YpE6zFkdmXHic3KOv2ekGTUXGl3lTME0SNU17UibD7og/640?wx_fmt=jpeg&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/b146644030516a56abe8b9cf4375e4f2910ff96bdde19064433510c5f351495c.jpg "")  
 ##   
   
 **调试功能将 cookie 写入文件**  
@@ -109,26 +109,26 @@ WordPress.org报告称，昨天，也就是v6.5.0.1发布的当天，下载LiteS
 大家好，为了更好地促进同业间学术交流，商密君现开启征文活动，只要你对商用密码、网络安全、数据加密等有自己的独到见解和想法，都可以积极向商密君投稿，商密君一定将您的声音传递给更多的人。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1HyKzSU2XXNcXmbiaiaCljdXpwzOEQ9QTBXMibM6rZTOnbTSwTmCXncQLria2vuLGxn8QPtznzBc0as8vBxWIjrWxQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/8b47880946aa17dde18985b61e5ef1968dd79c465776293334023960738ce9c1.jpg "")  
   
 来源：FreeBuf  
   
 注：内容均来源于互联网，版权归作者所有，如有侵权，请联系告知，我们将尽快处理。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1HyKzSU2XXOdeQx0thlyozF2swQTEN9iaaBNDG0jTKfAgqgdesve8x5IEWNvYxjF6sAWjO1TPCZVsWd0oiaDn3uw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/2e4c0e2b07e6d2218296c1c7879a1d272336221ffba41d6ff1278cb96ec082f3.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMyyClGk1cttkSBbJicAn5drpXEbFIeChG9IkrslYEylRF4Z6KNaxNafDwr5ibcYaZXdnveQCNIr5kw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f42000ef0ad7a28d8fbc66db41a23e5121172315b9b07a1a7dc553d3420b58eb.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaMcJkA69QYZ9T4jmc3fdN6EA7Qq9A8E3RWcTKhxVEU1QjqOgrJMu2Qg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/e95bab6e8a2e21887ae7bd2f4bf4109d6d4eab2f18fa7c6853fb9da8fa74d1b7.png "")  
   
 点分享  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaiaRXdw4BFsc7MxzkVZaKGgtjWA5GKtUfm3hlgzsBtjJ0mnh9QibeFOGQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/b94311534c431311a6b30af2eb40adb7d08ac2cc847224be0eca88249eaeb004.png "")  
   
 点点赞  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaeiaNlRO9954g4VS87icD7KQdxzokTGDIjmCJA563IwfStoFzPUaliauXg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/d8f09d4871dad8ed82fb357f065af25d92a2878593cdb206a4e08096012678cc.png "")  
   
 点在看  
   

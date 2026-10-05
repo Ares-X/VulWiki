@@ -80,7 +80,7 @@ schema_version: "1"
 
 3D GPU（virtio-gpu）的架构如图所示：
 
-![](https://vul.360.net/wp-content/uploads/2022/03/architecture.png)
+![](../../.resource/remote/4faa201f6284429d0b2491a6c03bc801df5d374065d978b7602836de0ecf8a77.png)
 
 架构的最上层是Guest系统里的应用程序，它通过设备节点（例如：/dev/dri/renderDxxx）与内核驱动通信。DRM_VIRTIO_GPU驱动支持多种命令，下面列举了最常用到的几种请求命令：
 
@@ -110,7 +110,7 @@ virtio_gpu_ctrl_bh()
 
 上述大部分的命令会被转发到virglrenderer，以VIRTIO_GPU_CMD_SUBMIT_3D命令为例，它的处理过程如下：
 
-![](https://vul.360.net/wp-content/uploads/2022/03/3d-handle.png)
+![](../../.resource/remote/5fbb80a870a7aebfdcf440e8cf6b89dd89304c3b45b2909ecede87570f09200e.png)
 
 综上所述，Guest应用可以通过发送VIRTGPU_EXECBUFFER命令直接请求virtio-gpu，virtio-gpu会将部分命令转发给virglrenderer，这使得virglrenderer暴露了攻击面。
 
@@ -431,7 +431,7 @@ unsigned long leak_address(void)
 
 我使用vrend_resource对象来构造原语，整个过程如下：
 
-![](https://vul.360.net/wp-content/uploads/2022/03/rw.png)
+![](../../.resource/remote/3389900e46ee94d318a7b908b4fcbd298b9c39dde07921680c19714b9ede2290.png)
 
 通过堆风水，受害者对象紧邻越界写对象。我们借助漏洞篡改受害者对象的ptr指针，使其指向power对象。正常情况下，ptr指向数据缓冲区，应用可以写入任意内容。现在我们将它指向power对象，那么，我们可以控制power对象所有的字段。这里之所以没有直接将ptr指向目标地址，是因为我们无法构造出读原语。为了克服这个问题，我们需要通过power对象来进一步转化。具体的方式是使res->iov指向res->mipmap_offsets[0]。逻辑上mipmap_offsets[0]表示iov的起始地址，而mipmap_offsets[1]表示iov的长度。此时，我们可以通过VIRGL_CCMD_COPY_TRANSFER3D命令实现读写原语。要完成上述方法，我们需要解决以下问题：
 

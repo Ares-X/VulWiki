@@ -41,14 +41,14 @@ schema_version: "1"
 
  Ots安全   2025-07-15 10:38  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 2025年7月14日，安全研究团队CODE WHITE GmbH在X平台上发布了一则令人震惊的消息：他们成功复现了名为“ToolShell”的漏洞利用链，这一漏洞链结合了CVE-2025-49706和CVE-2025-49704，首次由安全研究员@_l0gg在今年5月的Pwn2Own Berlin 2025竞赛中展示。这次攻击的目标直指Microsoft SharePoint，令人瞩目的是，整个攻击过程仅需一个HTTP请求，且无需身份验证即可实现远程代码执行（RCE）。  
 - CVE-2025-49706：这一漏洞被描述为一个身份验证绕过缺陷，允许攻击者在未提供有效凭证的情况下访问受限资源。根据相关技术分析，这一漏洞可能涉及SharePoint服务器的认证机制配置错误，攻击者能够利用不当的权限检查绕过安全防护。  
   
 - CVE-2025-49704：该漏洞属于不安全的反序列化问题，原本需要一定级别的认证才能触发，但当与CVE-2025-49706结合使用时，攻击者可以直接在目标系统上注入并执行恶意代码。官方披露显示，这一漏洞允许低权限用户通过网络发起攻击，潜在影响范围广泛。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafXGeOfM5DaiaxmqaQVlialODobzULSEyGOz9HLicPqiaNk2MnicuTcXokYgEjQVtLBWXdLwIeUV1oRTicw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c2be9dbf4e673f1a3670d055173ba12ec132898e264fd0526068e13fe94d4896.png "")  
   
 攻击背景与影响  
   
@@ -64,19 +64,19 @@ Microsoft已在7月8日的2025年7月补丁星期二中发布了针对CVE-2025-4
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

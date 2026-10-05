@@ -106,7 +106,7 @@ Langflow 是 IBM 维护的开源低代码 AI 应用构建平台（Langflow OSS�
   
 获取token后，执行POC发送请求，实现以Langflow 后端进程权限执行任意代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEOfuWO9X6FDR2sRzicf4QMj9onRXm08ia72zyemRvZysMGxF2JDFsa96hyOTJCd8bGAoJXORwVurgxBwjCzPv4PTUQnJsZfzDPFQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a95ca8f9674e95ce26ffc487f26a59dacc8feeb7c860dfd4632ed6365a88f76f.png "")  
   
 修复方案  
   
@@ -141,7 +141,7 @@ S3100184607
 20260916000000   
 可检出。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEP701aR24F7wr2XHzgEJLxnlrh2dcbibAwqD9VmrJko1qNEbPhQuCF47LicXMGNaaRzqYRXp0IO9D4x29dG790UEFLfNNpymCuO0/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2b4f62370b89c078b8d3a07baf3554d14da7af493849e6cdc2e4a9d3059cc3f9.png "")  
   
   
 微步威胁防御  
@@ -154,7 +154,7 @@ S3100184607
 2026-09-16  
  支持检测该漏洞。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/T4OSm0sXdEOxyFcYTNRQkiaIqcSib4jrYovhRgboqJ2tqPj1djg9xx3BicwfoqZ57In17Bm11dhtf0mo7nIefHXvhheAdFoaGkMfjVTFEXxQYM/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a64b6d43301fc816af3ce521bba0c3075ee90fc9d2e43d15de493d436bf2f886.png "")  
   
   
 

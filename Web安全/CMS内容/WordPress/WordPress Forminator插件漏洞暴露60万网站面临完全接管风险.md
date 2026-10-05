@@ -39,11 +39,11 @@ schema_version: "1"
 #  WordPress Forminator插件漏洞暴露60万网站面临完全接管风险  
 原创 NightTeam  夜组OSINT   2025-07-07 08:07  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/GLyX5CgG8A1iaTj8eIk1SSvkOGg93dHicZxnUtJGrfvvT0H05mDuuCv0P7M2EmOeNXcIZXiaqcULl1ic0iaAJiavkc3g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f5aab5cd8b2f97ee689026a3437b887c572aea7894f1154215efc20ea6a4aa3c.png "")  
   
 根据近期网络安全研究披露，广受欢迎的WordPress插件Forminator存在一个严重的安全漏洞，可能导致超过60万个使用该插件的网站面临被完全接管的风险。这一漏洞被追踪为CVE-2025-6463，CVSS评分高达8.8（高危级别），影响Forminator插件1.44.2及以下所有版本。以下是对这一漏洞的详细分析以及应对建议。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/GLyX5CgG8A0Lfcbia8qt8p5xJibWAUlcfvDVEDlDMiblcRSjsiaZibkt6AFVnKL2TNWkD9vgBnmjlS55NkLdj4RSHdw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4599970717d31b4e07c2a475011ab27be72f7f15644310fb48bf0733513ff8f5.png "")  
   
 ## 漏洞详情  
   

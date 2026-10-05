@@ -70,7 +70,7 @@ FLIR-AX8
 
 漏洞复现  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbXYCDO93HxhSwH23K2hYUUdDd5n0SCD2iacLlkEPDMZJndnicVUUiabSP3sBomUic62SVRfEXOOrbqbWA/640?wx_fmt=png)
+![](../../.resource/remote/c7d10eb3459307c32553c1d4d7bb117f5c7cd9b6fa9f2099378ce213111446c2.png)
 
 res.php
 
@@ -186,7 +186,7 @@ action=node&resource=$(id)
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbXYCDO93HxhSwH23K2hYUUdia4FyQrzSYDQxicmwZwdBY9eUx9MfDn9EtCLxOWtHAib5dsadXnQlnkCQ/640?wx_fmt=png)
+![](../../.resource/remote/01bcf272e674cce4207e28948183c31a32e7654add078979bb984b8e1755cfe6.png)
 
 **修复建议**
 

@@ -64,7 +64,7 @@ schema_version: "1"
 ======
 
 某一天 7iny 好兄弟找到一套源代码 (安装包)，看了一下不少问题。就从这套系统代码开始渗透吧。看了一下 fofa, 有一千多个。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46q7KsgZB7pqrIMQT6w2ViabBVvVUUSgiapex1iaKu1Suo6icyuuBGKWicxKzg/640?wx_fmt=jpeg)
+![](../../.resource/remote/f2e79a6fc9ff9452aa558d66698056776e21235f471256ea90b6ede7d6fbed00.jpg)
 
 #### **step1**
 
@@ -73,34 +73,34 @@ schema_version: "1"
 1、`/manage/index.jsp`直接列举出来了所有当前的`sessionID`。  
 有了 session，我们只需要找到在线的 session 然后替换我们当前的 seesionID 可既可以登录当前系统
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qWWhdfThOUXSyphCwvsiccAVE5aUS1icKrSiclTvLotPpyFeoRLv2oQMww/640?wx_fmt=jpeg)  
+![](../../.resource/remote/efa2f7e0de983e58d6013a129d2604ab53447edea1fb0c36253569ec8e2e3f1e.jpg)  
 好家伙。这么多用户，我们可以登录去用户系统了。打了渗透的大门。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qKHNh4v0SCibElzibxIWxM2Q1wgC0KlkaCXtUTlLIdyPFnTduFARxWN5w/640?wx_fmt=png)
+![](../../.resource/remote/ccbf0c54878526d0f2e59891ab179a9c88f04b34ab07c3a0e05e7d871f9b7061.png)
 
 2、进去后发现还有个路径`/mobile/phone/main.jsp`就是手机端的主页面  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qXYABgbf4cNb6HRibjEFHWMJwCC13ZUEENn7PqQKTvd3cEpiaXz8ZdWZg/640?wx_fmt=jpeg)  
+![](../../.resource/remote/7a94e276019f12811f061c2f69e9f03db964a4b8671be46ee857158c79e6c847.jpg)  
 还有一些报表的页面，  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qSaL9uIdeOd8vFibfkDu0fluZQwb2Wzgk5HKQbsk6WNU5n2kAcPljKWA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/694281bddfc41d71a6899d93e821477767204031827e86e826ac320bfff74fd9.jpg)  
 进去后很可惜发现没有可 RCE 的点。
 
 #### **step2**
 
 1.  发现了一个 AXIS 服务。  
-    ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qqzTQVfWbjQvKwgiatwLDENdyZEHCqY9KiaKgD9MA2vEw1dFKaibib8tAuQ/640?wx_fmt=jpeg)  
+    ![](../../.resource/remote/1be6ca38cb6e47e55b7a2ec029cda9da0ae07aff8aacd25e745805dea9fe753e.jpg)  
     axis<=1.4 版本存在 RCE，尝试使用已知 payload 打一下，毫无意外的 remote user access is not allowed.
     
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qaoqIu17fNXibn8WhOwaXMW8pH4zjQQeuecLAWrxrt9cwfaicdzoGdm7g/640?wx_fmt=jpeg)  
+![](../../.resource/remote/431aaa666a7f6f3a5f99e05cfff7580a471bee9bc08317dead4fec3a09c6f708.jpg)  
 也就是说只需要找到一个 SSRF，本地调用即可。  
 7iny 帮我找到一个利用点，`/common/ueditor1_3_5-utf8/` 发现一个 ueditor
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qPyC8SVssLxexicyWpZ1kKhMiciaGxgMxZ9ZLYR4wWecK0Ih9N0L7kxHrw/640?wx_fmt=jpeg)
+![](../../.resource/remote/f5535f4a1163523a60bfde53a5036b9b28e27296cfe5b287079b0369f8abbc8f.jpg)
 
 这个编辑器存在一个 SSRF。  
 `/common/ueditor1_3_5-utf8/jsp/getRemoteImage.jsp?upfile=`  
 使用 AXIS 的 get 型 payload 尝试一下，发现图片类型不正确。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qObCF93HTTqHhiaIz5DjyicicQKZMfeY4gaoE9rqTcmd2WeRPiccR6vakaQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/f7cbbc91dafaea21fbe466895de144d1866e1bfaeb83bb72146f845b34b3b17c.jpg)
 
 #### **step3**
 
@@ -120,16 +120,16 @@ http://127.0.0.1:8080/axis/services/AdminService?method=!--%3E%3Cdeployment%20x 
 
 看一下 remote.jsp 的源码。很简单，就是远程下载一个图片，依次遍历每个参数，并且判断是不是以”.gif” , “.png” , “.jpg” , “.jpeg” , “.bmp” 这些结尾。如果不是图片或者不正确则报错。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46q4Dx9LPTG2EW1DK1puFyzElmfX8aaTQucVBUWmHYy8YIv8nqEJWLticw/640?wx_fmt=jpeg)
+![](../../.resource/remote/660588602f250da53d0f622aa0315812a33252fd586292874c20bc2f55cbf62e.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46q2jJg4KhDUnS6jYA7iavHE9M3LLyRgYdbpC7yRMBA3bNUlIFeiatvQib2Q/640?wx_fmt=jpeg)  
+![](../../.resource/remote/782968762636117d183e58274e6be2131ee00ee7966a4317724a1af726c81932.jpg)  
 现在尝试一下，直接接一个. jpg。看一下是不是爆出” 请求地址头不正确”，这个我们预期的结果。
 
 ```
 http://127.0.0.1:8080/axis/services/AdminService?method=!--%3E%3Cdeployment%20x mlns%3D%22http%3A%2F%2Fx ml.apache.org%2Faxis%2Fwsdd%2F%22%20x mlns%3Ajava%3D%22http%3A%2F%2Fx ml.apache.org%2Faxis%2Fwsdd%2Fproviders%2Fjava%22%3E%3Cservice%20name%3D%22ServiceFactoryService%22%20provider%3D%22java%3ARPC%22%3E%3Cparameter%20name%3D%22className%22%20value%3D%22org.apache.axis.client.ServiceFactory%22%2F%3E%3Cparameter%20name%3D%22allowedMethods%22%20value%3D%22*%22%2F%3E%3C%2Fservice%3E%3C%2Fdeployment.jpg
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qwclico0LibW4o2tEa9XT9aiaibQV18Vq0Eib4icuajGXz1ctDEejG6IYBpRg/640?wx_fmt=png)  
+![](../../.resource/remote/ea9a6a7b6edcbe384397a2b001a2a7d29912bae2472e54c73778d3c9d6876cdd.png)  
 遗憾的是并不是预期的结果，而是报了一个空指针，事实上，看 remote.jsp 的代码是不会有空指针爆出来，那就只能是框架爆出来的，既然是框架一般而言是有不合法的字符出现会出现此类的情况。  
 最后发现是 %20, 不能有空格，因为提交的是 x ml 格式的数据，里面的空格用来做字符的分割，既然不能有空格，那我们直接用换行 %0d%0a，试试看是否可以。
 
@@ -137,19 +137,19 @@ http://127.0.0.1:8080/axis/services/AdminService?method=!--%3E%3Cdeployment%20x 
 http://localhost:8080/remote.jsp?upfile=http://127.0.0.1:8080/axis/services/AdminService?method=!--%3E%3Cdeploymenta%0d%0axxx
 ```
 
-发现还是空指针。后面通过尝试，只有 %0d 可以，%0a 不行。是不是真的能否作为 x ml 的分隔符现在还不知道。![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qkI8q0VdsNhTdRAJ4dXBv7Df8333H0aJ6bt57QxtS5IiaKKkzd1SERjA/640?wx_fmt=png)
+发现还是空指针。后面通过尝试，只有 %0d 可以，%0a 不行。是不是真的能否作为 x ml 的分隔符现在还不知道。![](../../.resource/remote/de9ccd302f495fc001ca6f1b9ed0a2f329192968627be7e3a548fed59da2fbf8.png)
 
 ###### _**第三次尝试：**_
 
 开始绕过图片为结尾的后缀，在 get 类型的 payload 中，发现开头有一个!—>，debug 一下跟到代码处，发现是为了做一个拼合。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qBZeibFQQerHRAsKZicyC5C3ehs0zUKuHib4kwgxmKgbF1icPib9dN6T5VsQ/640?wx_fmt=jpeg)  
+![](../../.resource/remote/63a43ad364e53b3ed5b3f4a479f8986a3b43dfd0131bc5c0c93f489bc948a978.jpg)  
 代码如下：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qiaafOH5Yh1GuOnYMl1oKcbJSZv85JibD3eKEOXhBNykASWibicpsnTe0NA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/babad5f78aa71b69aea525662e22ac764998803a41968f464b08d413a3b81a74.jpg)  
 最终拼接后为：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qW2N03z01gEhrPm9t1F59IKvgNSDClDOhRakQuI8VHPofPsAScL0jww/640?wx_fmt=jpeg)  
+![](../../.resource/remote/ddf788f65480308e6b8efebe2817bd8b52b400c647c67625fc78c03a0f79bfa5.jpg)  
 刚好把第一个 payload 注释，第二个生效。现在我们只需要做填空题。在结尾拼接就行`<xxx.jpg></xxx.jpg`即可，当然结尾的 > 会给我们自动闭合，刚好以. jpg 结尾，所以新的 payload 如下：  
 所以我们只需要在结尾加上`><xx.jpg></xx.jpg` 即可  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qn9WicD1v31WalY5cicLuRBHruLPWH74icgbOmtLTA2DgkOv1CTicfD5rlA/640?wx_fmt=jpeg)
+![](../../.resource/remote/1ca9c70b8e928c438d7f1577d359e81aaa835b83db7faf5bdf605b5064869db1.jpg)
 
 使用 %0d，以及我们拼接的 xx.jpg payload 来提交，debug 后发现 %0d 后的东西丢了
 
@@ -158,13 +158,13 @@ http://localhost:8080/remote.jsp?upfile=http://localhost:8080/axis/services/Admi
 ```
 
 访问  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qTib4ZbtqzI3sfic54vKBl4YcbSnliac6EtEMKaEjmrIrUpnmickEquv55A/640?wx_fmt=jpeg)
+![](../../.resource/remote/433959a90cf5d348a71947acbcceb43ba441a72369ad572b2d6b2e10188a69be.jpg)
 
 ###### _**第四次尝试：**_
 
 咋办??
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qliaKWLG9szVoRTezQCbe3iaqcbgZu4Xzg8Ex0ic35OTDZoq0v2BlZbgeg/640?wx_fmt=png)
+![](../../.resource/remote/438358d095865c41bead71f031655741a79cd25ed23dc0c2931b94c042930b12.png)
 
 最后灵机一动，试一下 urlencode 双重编码, 成功了。
 
@@ -173,14 +173,14 @@ http://localhost:8080/remote.jsp?upfile=http://127.0.0.1:8080/axis/services/Admi
 ```
 
 成功了，出现了我们预期的效果。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qAwP4uKJlyNzHgvjyOETicXYMicqBPQ9XqvLZJPKltBU74HXa96DZsgfA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/cddcaeface465fdca5004cae0d621ac5f50c412573dc52da1d72d4a9a34869ea.jpg)  
 成功注册服务  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qCMkjmliaxmC91AcaYQ7ib5s3Saa9DlLtGe4uphI2ppGFFM8Zp0OosGpw/640?wx_fmt=jpeg)
+![](../../.resource/remote/e6900996d1608056a9ac184d622c2215107deffa1ca82b6c4b60ba79ead4e450.jpg)
 
 ###### _**第五次尝试：**_
 
 接下来，直接访问我们部署的服务即可。执行 whoami。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qHndT3rVTIo5yQ2ZicIsWODRfAyvb3nicyMAQrZgYZtW2BcibBFhOk194A/640?wx_fmt=jpeg)
+![](../../.resource/remote/c2294f365554f47eb8f18e4761e4419a7fd3b7b31af4ec9aedbe87a5e997bde7.jpg)
 
 #### _**总结**_
 
@@ -200,7 +200,7 @@ END
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qxBNY8mz7gxO55npWYtQ37j1uD8RibnKibImO6Og6TeliaYUaTkzvjK1UQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/d32da55dbc689085517bd8599eec892814ce484fb811aac74a93150caefb76ff.jpg)
 
 maoge
 
@@ -246,13 +246,13 @@ maoge
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLFcmlcnz38EApnEkFiaISicklcwbo3gnI17t54PqyYOE8LV4yczIfjdqw/640?wx_fmt=png)  
+![](../../.resource/remote/6976d32db1059770e27d1e93017bde47ee6d5fd3458e3c0864cb98bc88164c4b.png)  
 
   
 
 分享、点赞、在看，一键三连，yyds。
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/FIBZec7ucChYUNicUaqntiamEgZ1ZJYzLRasq5S6zvgt10NKsVZhejol3iakHl3ItlFWYc8ZAkDa2lzDc5SHxmqjw/640?wx_fmt=gif)
+![](../../.resource/remote/c4bdac024f2d01caf3806d4aed292ab79557dcef3cdeae81510fb1da16af2da5.gif)
 
   
 

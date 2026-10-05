@@ -47,7 +47,7 @@ schema_version: "1"
 
 安恒研究院  安恒信息CERT   2025-04-24 10:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/JAzzLj4nXevrbRSvWKlpibU238wmrQ8Fo2AbDkPzia3P6AsR4MxML7J2nQPTkiazI1yJhmKib873btfcAkZ7wocYgA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/b944534c24ca43c3499f3a570eac5e21a32caea97fc4249f91c6aa713fdf5d44.jpg "")  
   
 **漏洞公告**  
   

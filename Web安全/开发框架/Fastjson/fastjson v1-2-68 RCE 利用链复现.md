@@ -98,13 +98,13 @@ https://blog.csdn.net/qq_40989258/article/details/103049474
 
 完成后, 修改 tomcat/webapps/fastjson/META-INF/maven/com.vulhub.fastjson/fastjson/pom.xml 文件中的 fastjson 版本为 1.2.68
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AmgcicX0mzrUEkpVJg8TgicJ9l6n3ibrrrzQ5J4foQ50XyUbY2rOwiaicoCQ/640?wx_fmt=png)
+![](../../.resource/remote/e99f83a2d93c8c1120451ed2c7768465aaeb6943701cbd5c2c6266bb752df7c2.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6A71bwmgXF9ECEjzqxlsADrRI2roUmoK4PYNsae767jpJ1ChAnAySUzQ/640?wx_fmt=png)
+![](../../.resource/remote/9aae3028a1dda6af3552730e9bb6ef8df8f768df8e38bcc29455ed08b30740bb.png)
 
 拷贝一个 fastjson-1.2.68.jar 文件到靶机的 tomcat/webapps/fastjson/WEB-INF/lib 目录下.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AXA5lZOu1LAycJFeHsZQWFFAUr9aedDNibOnEWJpBcQbP6EEFolrFrhQ/640?wx_fmt=png)
+![](../../.resource/remote/3c735dd3801ea81f13d3d3b50742d747d7907c09ad63c64023f4af7bdf4ee4dc.png)
 
 **启动 / 关闭 tomcat**
 
@@ -115,11 +115,11 @@ https://blog.csdn.net/qq_40989258/article/details/103049474
 ./catalina.sh stop
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6Afe7LFHujpibeibUdkfw5TWicRKwObVwvkK8ibPTuOhSgvB39DibqsvoqSMA/640?wx_fmt=png)
+![](../../.resource/remote/1f9f9315504082f55ac9e470e5d988195944a6d6a786e938c7f97039dcce4fcf.png)
 
 访问 http://127.0.0.1:8080/fastjson/ 出现 "Hello World" 即环境搭建正常.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AAM6j81jXvbvkWnGXEiasicP2rDmVpPrxLQXXRUnKjic869XoJBpgViaTkQ/640?wx_fmt=png)
+![](../../.resource/remote/b9bc656653b1bccecb32fa0ff8fc7b1fc60d571c2b1bfc0c4bf26ece741b24ea.png)
 
 **1.dnslog 验证下漏洞环境是否可用**
 
@@ -127,7 +127,7 @@ https://blog.csdn.net/qq_40989258/article/details/103049474
 {"x":{"@type":"java.net.InetSocketAddress"{"address":,"val":"dnslog"\}\\}\}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AWr402M2Sq5IWAHp1Xw75u48U0icibuSuGZBiaPyvaKANGMhqLAyrOShMQ/640?wx_fmt=png)
+![](../../.resource/remote/a03de8567fc0ac2db3dc0f6fbf69591dc159fd81a8bd5b620beec7a72b6e1658.png)
 
 **2. 下载漏洞利用 jar 包做处理**
 
@@ -141,7 +141,7 @@ https://github.com/LandGrey/spring-boot-upload-file-lead-to-rce-tricks
 cat charsets.jar | openssl zlib | base64 -w 0
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6Adv89UoAlMv3RJsWwZzuOXgB71mp8kWqJsHkcSyUEga6OXFCemStlUw/640?wx_fmt=png)
+![](../../.resource/remote/48bc43764b96e0ed5c335dcd625fa394fa91fef6557d63ea1d9aab1745715e88.png)
 
 **3. 确认 java 安装目录, 找到其 lib 目录下 charsets.jar 的位置**
 
@@ -153,7 +153,7 @@ cat charsets.jar | openssl zlib | base64 -w 0
 ls -lrt /etc/alternatives/java
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AGPqia2RXbG8TeIPve0MSq7EjHRhuJ8Mzy1HtRKSUqzNGhfNA45KsTKA/640?wx_fmt=png)
+![](../../.resource/remote/59e5c9494b855b64eefac9aebe593d2b7f600e1edf3ed54622d75a200cf8498b.png)
 
 **poc 改动参数说明:**
 
@@ -161,7 +161,7 @@ file 参数: 靶机上 jdk 中 charsets.jar 文件所在的完整路径
 
 input 参数: 即上述编码处理后的 jar 包内容
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AkybUCaM3IBnmKR54r5UqUicbbSo61fAFkXFhW75c68Sd1eHEg5GsibOA/640?wx_fmt=png)
+![](../../.resource/remote/70660d9d3f6bc5f7b124de703348690565571aa97c25923c4e5cff248e99e09c.png)
 
 **fastjson-1.2.68 版本任意文件写入 poc**
 
@@ -175,11 +175,11 @@ input 参数: 即上述编码处理后的 jar 包内容
 
 (建议将源文件先进行备份)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AAk0stW01MuSBicUp64pnz8c1ehBdV6xe07miagKeIQsF7XWibuxtnfVxg/640?wx_fmt=png)
+![](../../.resource/remote/e77663b8221569da5396bc9d6d06b4b090d1b2142f8e3a2b4bdbdde5e5f86e33.png)
 
 **charsets.jar 文件被覆写前后比对图**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AmcCFhLtJDNhZA1pM3icokSWstG0IwWf8ich9BahCe0yiaF98zLgt1y59A/640?wx_fmt=png)
+![](../../.resource/remote/9732ff8e8ca3f2780ca7b32770a4f22c7276b0d2360caf885a7f71d19198aa43.png)
 
 **5. 触发漏洞**
 
@@ -189,9 +189,9 @@ input 参数: 即上述编码处理后的 jar 包内容
 {"x":{"@type":"java.nio.charset.Charset","val":"500"\}\}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AtC1q5VxmIUswaz8sgMZ7TGuCibjLdJ6mgHPq45zVtX6Gguibf3gNH8UQ/640?wx_fmt=png)
+![](../../.resource/remote/0698f75f431e6a91be6e1a9da8af3a255c5da1e05c477c01a2cb0d08af83fd98.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AicpNjnwbB25mfbiaoY0W6kjIrnaZzLHFW0wQ5IM2ruS1FvAVQkS2niaog/640?wx_fmt=png)
+![](../../.resource/remote/c5dcb65536015dfdca407c8b784006bc05d013b480fa62d8f53eac1e7697445d.png)
 
 **6. 如何修改 jar 包?**
 
@@ -203,31 +203,31 @@ IDEA 新建一个名为 charsets 的普通项目
 
 将 spring-boot-upload-file-lead-to-rce-tricks-main\charsets\src 下的两个目录拷贝进 src 目录下.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6ADIRCRwS6g76Lib3gSjuTktj8xElOUMLQsYYhDOWjv7oibZAoxC9DSGhQ/640?wx_fmt=png)
+![](../../.resource/remote/824d0287930dcba5db4dd6fc5d93474129006d24c5d84e1bcd4c9800c1fccb74.png)
 
 看下 IBM33722.java 文件的源码, 相信这里的代码大家还是都能看懂的.
 
 将 linux 部分中的命令改为反弹 shell 的命令即可.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AWvo2U3ic237Njxo1kUVUEqDyKX7EH3lWbooWrPTiaia9WSDcBkLXsPicFQ/640?wx_fmt=png)
+![](../../.resource/remote/dc4539681e5758df026657b31566d73269a35892738b7d68cf8819bad9649551.png)
 
 重新打包成 jar 包.
 
 ctrl+alt+shift+s 打开项目结构窗口, 配置如下图.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AcSCKxcw8Ngyuau1jILDJ0HBfTwMTxobXvwRK4BGbDvu9wGDibBRXqOA/640?wx_fmt=png)
+![](../../.resource/remote/2ed6140d2e3e5fb1d74797808d087ba144cd25d3864fd4927f14778f4677f9d3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6Aibcr51tf8zTsE2NIBvyz5raptq6ia6S6XbQjerRBe4Ofe1IhWEW87bjw/640?wx_fmt=png)
+![](../../.resource/remote/400b29cd1019337b20325856f0163bed44cb0c4912c738fbb08e15534af22357.png)
 
 这里可以看到你的生成文件路径.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6ATVox8jarO0vtf1S7ZNJuQianIQjXXOXsVZ49lgibRdhIADQjgZ0KW3Ig/640?wx_fmt=png)
+![](../../.resource/remote/135ed0c71eeafb5cb230fcedfd4c23887e5b25c89629d02bbf912d6ef1df6701.png)
 
 生成修改后的 jar 包, 后面的操作重复前面的步骤即可, 不再复述.
 
 最后附张反弹 shell 的截图.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TezRTl7qZQSsXMIRUplPzFB47g84icv6AjuQVsia4bEjST2lO2T4BpcYziayfzAZg25R4WMkViazkZ2R3k2S0LicW3g/640?wx_fmt=png)
+![](../../.resource/remote/c1099f1a64a1ae3cd3bfad4f9267c2467dcb7dec5cc4331865e86c8f7a33d0d4.png)
 
 **常见 jdk 目录记录**
 

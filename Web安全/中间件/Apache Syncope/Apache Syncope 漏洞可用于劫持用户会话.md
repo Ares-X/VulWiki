@@ -45,7 +45,7 @@ schema_version: "1"
 Abinaya
                     Abinaya  代码卫士   2026-02-04 10:11  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -79,12 +79,12 @@ XXE 漏洞是身份管理系统中最危险的攻击向量之一，因为它们�
 运行这些版本的组织机构应当立即安排更新。该漏洞要求具有管理员级别的访问权限才能利用，虽然限制了直接的外部攻击面但带来了严重的内部威胁风险。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/t5z0xV2OYfVKytvw0AvsfHoQZYKG7rtrByMiauv7lzgxDDWe4s0sricFDAa4BicqycQUZJx4kibkicrNT5KUGWImC1oClEp3rTou39fWjFJ66Yia4/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **攻击方法**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfUtfgOyFpq0jw5sxvnW7dIZtoF9K1WK2odBxsvtYia4ibfoIvYPk9HfMPjbvqPVzFU8FxFDvUHXs0J8medFu5fgKP7icZAJloIdEY/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -147,15 +147,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

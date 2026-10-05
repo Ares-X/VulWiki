@@ -42,7 +42,7 @@ schema_version: "1"
 
 THN  代码卫士   2024-11-15 17:35  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -51,7 +51,7 @@ THN  代码卫士   2024-11-15 17:35
   
 **网络安全研究员披露了位于开源数据库系统 PostgreSQL 中的一个高危漏洞，它可导致低权限用户修改环境变量，并可能导致代码执行或信息泄露后果。该漏洞的编号是CVE-2024-10979，CVSS评分8.8。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMSntHyD5OhJGiaoZzSPyf9TekiaibibMvfxdXsmeHh40Sr314ibawYRLg7CLibwGYMBZvhwGBwsS8Xfs3QQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/1290abbb8d216a5148d4570aa830d90fad03bad48fb0961c359b7c1a4ce0e930.gif "")  
   
   
 环境变量是指用户定义的值，它们可允许程序在运行时动态提取多种信息类型如访问密钥和软件安装路径，而无需进行硬编码。在某些操作系统中，它们会在启动阶段被初始化。  
@@ -114,15 +114,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

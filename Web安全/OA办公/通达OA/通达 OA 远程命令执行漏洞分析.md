@@ -72,7 +72,7 @@ www.eansec.com
 
 安装好通达 OA v11.3 版本，安装后在 webroot 目录下找到源代码，查看源码，发现都是乱码，都是经过 zend 加密的，需要解密。解密工具可使用 SeayDzend，因为源码是 php 写的，最简单的是用 seay 源码审计工具粗略筛选一下，查找潜在的漏洞，代码审计时间较长，审计结果取了开头一小段，说明思路而已。如图 1 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAYicox1w3d6dkyP4jpVXl2uiapaibBuI4ibM5APvWI3cSTNKeftTYwDpSsQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/e98ea294b2fdb4b8920b1e74c30e78ccf349761c225ec6e4692c6464cdf4356e.jpg)
 
 图 1：代码审计
 
@@ -80,19 +80,19 @@ www.eansec.com
 
 根据网上公开资料，直接定位到源码路径 C:\phpStudy\WWW\tongdaoa\webroot\ispirit\im\upload.php，查看源码, 如图 2：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAz7rM8ZrrWV0gwQ7nBPwJcFhlW3ZTvL7kX5icn7rmjmsoyf6IU9hDPYw/640?wx_fmt=jpeg)
+![](../../.resource/remote/0ee80233c13e0a0932328ffd30af3393fa6a642717ab09909aa66361bd20f914.jpg)
 
 图 2：upload.php 文件上传漏洞源码
 
 该段源码黑框内部分，传入参数 p, 当参数 p 非空时进入会话页面，否则就进入认证页面。该处漏洞比较明显，只要参数 p 非空就可以绕过认证。继续阅读该段代码，绕过认证后就可以直接上传文件。如图 3 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAYVV1iaGPy9H06vibJucQzGIeX3AENVwzmnksF5LgoKuQSNVftq8jEH1g/640?wx_fmt=jpeg)
+![](../../.resource/remote/2a5a01009fc950853efe2f56445c27654a9e5997baf09f131493a51b6c9c2ce2.jpg)
 
 图 3：文件上传
 
 跟进 inc\utility_file.php 的 upload 方法, 发现有个文件名校验函数 is_uploadable。查看该函数的代码逻辑，如果文件名从最后一个位置倒数三个是 “php”，那么返回 false，也就是不可以上传以 php 结尾的文件。参考源码，这里也有多种黑名单绕过的方法，略过。源码如下图 4：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAZGt8MxR3mVabibNhdEic3uf32P7d2nB14p8oKjU13M90KU1z5JofPwIg/640?wx_fmt=jpeg)
+![](../../.resource/remote/939f0a1a7b75c6a637832c591505ee578daadd9dec690ebc05cff7dc5f3c8afe.jpg)
 
 图 4：文件名黑名单
 
@@ -100,7 +100,7 @@ www.eansec.com
 
 参考资料，该文件包含漏洞存在于源码 ispirit/interface/gateway.php。查看该处源码，如图 5：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAlt3Ny888Hhjwrp0rjh1pr5Ou7vLh0Y2EXDznHviaNWia12Ljt4ibyE2yg/640?wx_fmt=jpeg)
+![](../../.resource/remote/4d87eeb4a2f7dd7b296f4c8492901661bf80329da189d4e5ca97985c3a87de0d.jpg)
 
 图 5：文件包含漏洞代码
 
@@ -135,19 +135,19 @@ www.eansec.com
 
 构造文件上传 payload1 如图 6：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAqU7DJJycwXGDGgIDIDbv6pokJRVhyzicOdicbUls85LGYUysABagTiblg/640?wx_fmt=jpeg)
+![](../../.resource/remote/a448cf0162fc4a05b61387ed072e23228e83b553ea03bbd0a37e90c514756a9b.jpg)
 
 图 6：文件上传 payload1
 
 用 Burpsuite 抓包，修改当前 payload 为 payload1 并重放，文件上传成功。如图 7 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuA1Ct1ic9HbsyGM6iad618dub4JuyV0sibCOk0bUaEE5NNvKI6MrPa0oWSA/640?wx_fmt=jpeg)
+![](../../.resource/remote/03172bbeea59a368ceb8333bc6942d5e7c562ae21ef933ba73f7b78fb470a625.jpg)
 
 图 7：文件上传复现
 
 上传的文件保存在目录 c:\phpstudy/www/tongdaoa/attach/im/2005 / 路径下，如图 8 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAib0UsmH1lUY0bFtXpHRDHU5SZH22OS7jPGt9We3xcONAQj5Nat2jOFQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/be7cfd4ad43c3b5a1a197affc85de100eb95795b5ed65b74ac40dfe47ccbe9fb.jpg)
 
 图 8：上传成功
 
@@ -157,7 +157,7 @@ www.eansec.com
 
 按照之前代码分析，主要是构造 url 的 payload。假设访问 http://localhost/ispirit/interface/gateway.php, 用 burpsuite 截包，发送到 repeater, 构造文件包含漏洞的 payload2，payload2 里注意两处，一处是增加 Content-Type: application/x-www-form-urlencoded，另一处是 json 处 url 的构造。如图 9 所示，文件包含漏洞执行成功。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAwv93HqYU8j5hEXttpXmzBk1poLgttKuNHfHVvekdLVP8yyNxenInwQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/33e021bc0101b4fb84e9dac9583d67042a07d45655faed4008cf9327f8789c0a.jpg)
 
 图 9：文件包含漏洞复现
 
@@ -165,29 +165,29 @@ www.eansec.com
 
 两个漏洞结合使用，可以远程获取 shell。提前准备好 php 木马以及冰蝎等远程连 shell 工具。思路：利用文件上传漏洞上传 php 木马，然后再利用文件包含漏洞，使得 web 访问到该 php 文件，再用冰蝎连接。(注意：不可以直接为. php, 根据代码分析结果，结尾为 php 的文件上传不上去）如图 10 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAMPnkEMqqXZztK9X9905Xl5KjiasfXuesHN2pIA6ojrCP8Iz2R3iauF3w/640?wx_fmt=jpeg)
+![](../../.resource/remote/c68640d68a990099237a8d74dff5d57e0734527395d47d82ace8a8210d29b8ba.jpg)
 
 图 10：获取 shell 步骤 1
 
 在文件夹路径 “C:\phpStudy\WWW\tongdaoa\attach\im\2005” 下找到了该文件，上传成功。如图 11：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAI4nkBJPhUDPsMdXVmuPNMmaSNCJUaxvp8ic4IdlTd4ibnO6J8asGOCCQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/6e19753ae667df1d4df049210026b7fd71a830ff9b8bd65f948a61a1e59e825b.jpg)
 
 图 11：上传成功
 
 然后通过文件包含漏洞访问到刚刚上传的 2125745527.test.php 文件。如图 12 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAbnBmdu0lTeaD6M8x6Kf53raTgREHDByBfz2u0bPjQL8iaJsAw1ayiaiag/640?wx_fmt=jpeg)
+![](../../.resource/remote/8a3805ebea35797bbf8cbcab66ea1bb4220cb38c4717579c22572bba5f71055a.jpg)
 
 图 12：访问已上传的文件
 
 访问成功后，在 \ ispirit\interface\ 目录下会生成 readme.php , 用冰蝎 webshell 连接，成功获取 shell。如图 13：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAIia3wLQXB7okdU09nk5wGgtN49aUZpia0ylNbT9xmH3teRYricTejGmsg/640?wx_fmt=jpeg)
+![](../../.resource/remote/f14487bc6e49f9eef97aa2dea13a790fcbc8902314b422e98b6659261ea1002d.jpg)
 
 图 13：成功获取 shell1
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAkbtIxHgQNxvzgnKz7nbkicqF0I34PQPqcCsy4ywJusD4MIJ78h8vNrA/640?wx_fmt=jpeg)
+![](../../.resource/remote/1d45e42bf9837551cbadf0eedfea350c7826171cd777b4e6de4e4843ca3fa661.jpg)
 
 图 14：成功获取 shell2
 
@@ -202,13 +202,13 @@ www.eansec.com
 
 第一处补丁补上了文件上传漏洞，无论参数是否为空，都要进行认证。如图 15 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuAEfw8xtbpBsm4U9ib1qwTjplNvgXW5q76YGKsphmvUwwQTYyxBh10Nuw/640?wx_fmt=jpeg)
+![](../../.resource/remote/e62572f44278873f9af55169cb0f153711318264ce78430c482cb4d48fda0157.jpg)
 
 图 15：第一处补丁
 
 第二处补丁将 “..” 过滤掉了，如果 url 中出现该符号，认为是错误的 url。这样就不可以执行路径穿越，也就访问不到非 webroot 目录下的文件了。如图 16 所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8uyibUha0rhChyBGh1VhKMuA37mIcqn4icNhm0M9gSAQYC876jbSWSvM3BIQV63MnkWE72JF0NyMeOg/640?wx_fmt=jpeg)
+![](../../.resource/remote/4d8a5a1f01d8b4a4b834588a0ba27f12024f260764ab828407cac68cd93b1cdc.jpg)
 
 图 16：第二处补丁
 
@@ -220,7 +220,7 @@ www.eansec.com
 
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg)
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg)
 
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
 

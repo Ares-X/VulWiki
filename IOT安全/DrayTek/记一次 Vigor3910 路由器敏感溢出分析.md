@@ -65,7 +65,7 @@ https://www.zhiwanyuzhou.com/index.php/2022/09/17/%e4%bb%8ecve%e5%88%b0draytek-v
 漏洞信息
 ====
 
-https://nvd.nist.gov/vuln/detail/CVE-2022-32548![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaN9tNqeTaJtN9Xyx2KQl4AqlJ8Kk4YktXvll9WicxKz1j1op5PtnuzWbQ/640?wx_fmt=png)**Trellix 公司的安全研究员发现一个严重的远程代码执行 (RCE) 漏洞 (CVE-2022-32548)，影响 29 款 DrayTek Vigor 系列企业路由器**易受攻击的机型如下：
+https://nvd.nist.gov/vuln/detail/CVE-2022-32548 ![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1aad1e0f89f6c1a37e790ecaf01d153f59218c1028dc49d0951412052ecb3598.png)**Trellix 公司的安全研究员发现一个严重的远程代码执行 (RCE) 漏洞 (CVE-2022-32548)，影响 29 款 DrayTek Vigor 系列企业路由器**易受攻击的机型如下：
 
 *   Vigor3910
     
@@ -129,14 +129,14 @@ https://nvd.nist.gov/vuln/detail/CVE-2022-32548![](https://mmbiz.qpic.cn/mmbiz_p
 固件
 ==
 
-https://www.draytek.co.uk/support/downloads/vigor-3910/older-firmware/firmware-4311![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaN7vIn20obJcQ3yvZjz7bLOdZxb8FPAflmCMJwDxiawAwuLBZT5pYAUpQ/640?wx_fmt=png)
+https://www.draytek.co.uk/support/downloads/vigor-3910/older-firmware/firmware-4311 ![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3103f5fbfd36fcb0d7d3edb34c899e53f085cca27d72585666410a6ec6d06aea.png)
 
 > vigor-3910 发行说明：https://www.draytek.co.uk/support/downloads/vigor-3910/older-firmware/firmware-4311/send/1143-4311/2592-readme-v3910-4311
 
 什么是. all 文件
 -----------
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNqVwzr8KY1yhd6RDy1rJm1lOg10IU8zSG0HXdHRewQqwBTujLpzxic5A/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/80b7039c0037d3a4933a009ab4738cf1d0129988a79baedef5cc3518cc08f9c5.png)
 
 固件分析
 ====
@@ -146,19 +146,19 @@ https://www.draytek.co.uk/support/downloads/vigor-3910/older-firmware/firmware-4
 
 > 本人的 010 Editor 经过 ida pro 破解了
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNJeA1BJyBicXibBianHHPwXaja7q4QMhQpwC3t9hj7RbSlpCv0yUHqdnkQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/55291f8a5daa7201a1fdc26ba5b5e618a2277b19cc21085b87a7ad3ea65cd246.png)
 
 binwalk 解包
 ----------
 
-`binwalk -Me v3910_4311.all`使用 binwalk 进行初步分析，发现无法解包；发现 enc_image，初步认为该固件是加密的![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNlejQabNPNWIAtfO0IRGdcqMDE8k89YZ6f8dacEY7uOpCVsib5Xoic8YA/640?wx_fmt=png)
+`binwalk -Me v3910_4311.all`使用 binwalk 进行初步分析，发现无法解包；发现 enc_image，初步认为该固件是加密的![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/70cd0a2aaaecbb641f09081de1d012b74d9994b26f38ae7199a01d6cded55e52.png)
 
 > 既然固件加密，可查看旧版本固件是否有不加密的固件进行 “过度” 操作
 
 旧版本固件分析
 -------
 
-递归提取文件：`binwalk -Me v3910_3972.all`![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNX01jTJiaCcicaHHRWA8sf9Iq5Uiav8UrGmVoJHLP3XbCm1QQAGDn1VN8A/640?wx_fmt=png)
+递归提取文件：`binwalk -Me v3910_3972.all`![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/46bd8b42541d0fa994f1d68208ed834400baa7682bc0b5592e77c4784eb955c1.png)
 
 ```
 $ binwalk -Me v3910_3972.all
@@ -336,11 +336,11 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 47200461     0x2D038CD       SHA256 hash constants, little endian
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNhRIhrZE3aL4X5ZtEu9oic4QgK8mFjOVEgiaMHM06V47GW4n8lNStCAiag/640?wx_fmt=png)通过 binwalk 的分析结果可以知道，这个固件应该不是加密固件，但是 binwalk 并不支持它的解包操作，如此我们先大概回顾一下固件的基本结构：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNxSzkHIVnbfNGgnFxJesGMYbLqfR2I2nu3vEeuMKibSYxcRWxVmpNmIA/640?wx_fmt=png)通过以上固件的基本结构，结合 binwalk 的信息，我们可以这样假设：
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4a8e848e04d5d1b3d728b73674ef6e9d7d148d6ce4344122a7aaf0a5c25a433a.png)通过 binwalk 的分析结果可以知道，这个固件应该不是加密固件，但是 binwalk 并不支持它的解包操作，如此我们先大概回顾一下固件的基本结构：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/6ce2d7de147879f4e2ede7a0b8b209dd836b373161a8cfe789e990f0c56ef7cd.png)通过以上固件的基本结构，结合 binwalk 的信息，我们可以这样假设：
 
 <table width="964"><thead><tr cid="n84" mdtype="table_row"><th>偏移</th><th>功能</th><th>备注</th></tr></thead><tbody><tr cid="n88" mdtype="table_row"><td>0-0x205857</td><td>BootLoader</td><td>先大概确定内核，再往上推演</td></tr><tr cid="n92" mdtype="table_row"><td>0x205858-0xEE3DF1</td><td>Kernel</td><td>因为有 LZMA 的标识，可以大概推断为内核，并且这区间有 dtb 设备树、PE 结构等标识</td></tr><tr cid="n96" mdtype="table_row"><td>0xEE3DF2 - 末尾</td><td>Rootfs</td><td>从这里开始有 Executable script 的标识，表示存在实际的 shell 脚本文件内容了，以及后面有图片、网页的标识，可以断定为文件系统</td></tr></tbody></table>
 
-截取 0xEE3DF2 的部分内容，可以看出此的确为 shell 脚本的内容，但是脚本里面充斥着很多非 ASCII 的内容，经过经验分析，此脚本可能被压缩了。![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNdMEibxdNSlmPIuiaYHLKM908vMCkmVnETdiboShKFuVz74wSNcySsZ2NA/640?wx_fmt=png)再来分析 binwalk 的解包结果，在 0xC26BA8 处有个 gzip 的标识，经过解压缩，可以知道其为内核的配置信息：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaN0XuMH5cz1Hf7AibNuk1YQrpiaZXk3T5KTUff0PIuKkEktatg2SXRWEFg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNmQQA5e7bo0GYpLIgCTMlEHT6ok0IlTSrn7b6sgs7fVfVzHgCeYTBBQ/640?wx_fmt=png)知道内核决定了支持的文件系统的类型，那么其配置信息内部可能会定义文件系统的相关配置，如此我们搜索 rootfs 关键字，最终找到了 initramfs.cpio.lz4 的字样：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaN9UktEw6sShYnw7S22PfcLOsQ0PibAtaDkt9kR0SeA2x6FOyIKY4tygg/640?wx_fmt=png)后缀名 lz4，可以联想到假定的 rootfs 区段内 shell 脚本之前有个 LZ4 压缩数据，那么可以断定从 0xEE3C48 应该为文件系统的起始位置。
+截取 0xEE3DF2 的部分内容，可以看出此的确为 shell 脚本的内容，但是脚本里面充斥着很多非 ASCII 的内容，经过经验分析，此脚本可能被压缩了。![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/dcec0b86ebe50bb1bca1569e30c73e57c55b9e34bc949bcca565e000d3b7fc20.png)再来分析 binwalk 的解包结果，在 0xC26BA8 处有个 gzip 的标识，经过解压缩，可以知道其为内核的配置信息：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1aec99537650806b0ab35f87ebb404982f33cfb56e3b9f8c4b2cbc90254bd06a.png)![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/978b74f405f806aacca3dcfe8c2defb63abbed04eda9199bc1df4b04bdd092ef.png)知道内核决定了支持的文件系统的类型，那么其配置信息内部可能会定义文件系统的相关配置，如此我们搜索 rootfs 关键字，最终找到了 initramfs.cpio.lz4 的字样：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5649249651a726514ac8606c05d5216864d1882e20f552909b4a4b47561435f1.png)后缀名 lz4，可以联想到假定的 rootfs 区段内 shell 脚本之前有个 LZ4 压缩数据，那么可以断定从 0xEE3C48 应该为文件系统的起始位置。
 
 ```
 15613000     0xEE3C48       LZ4 compressed data, legacy
@@ -356,12 +356,12 @@ apt install liblz4-tool
 ^lz4 compressed data:lz4:lz4 -d '%e' '%e.bin'
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNkk8PQcpGjzkt6m31GzBmvPk2j6oT3N60IsAkr6oicjkIdza3aubKYIg/640?wx_fmt=png)使用 binwalk -Me 解包固件，获取文件系统![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNZ6ViaKe8w6Ea6UqibnMK5Y51w4UZsgDQR7HpblcgN7mWpHG7r8J6icd6A/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cfb8029d4ae1be7517e4e34a8b554627a1d9d30678d4425e59422a252a8f9e92.png)使用 binwalk -Me 解包固件，获取文件系统![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c378288898add43275ff3088e9e38e315ed899a48363273c5b208c0056968edf.png)
 
 新版本固件分析
 -------
 
-旧版固件是未加密的，新版固件是加密的，那么未加密 ->加密的过程会有个 “过渡” 操作，通过关键字 “firmware” 对整个文件系统进行查找，最终找到一个文件 fw_upload 里面有对旧版和新版固件的操作：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaN4GTv1frInvOqqMU6l9gIicVtLE0zBBiazH2PVJY37NuQ89d9Bfb4ibDRQ/640?wx_fmt=png)通过分析可知固件的结构：
+旧版固件是未加密的，新版固件是加密的，那么未加密 ->加密的过程会有个 “过渡” 操作，通过关键字 “firmware” 对整个文件系统进行查找，最终找到一个文件 fw_upload 里面有对旧版和新版固件的操作：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/df6275c63b42b873481a8c43d39ab873f888317bb9f0e4e57cec529eb6981b44.png)通过分析可知固件的结构：
 
 <table width="964"><thead><tr cid="n108" mdtype="table_row"><th>序号</th><th>偏移</th><th>功能</th></tr></thead><tbody><tr cid="n112" mdtype="table_row"><td>1</td><td>0x0-0x03</td><td>标识，字符串 6216</td></tr><tr cid="n116" mdtype="table_row"><td>2</td><td>0x04-0x07</td><td>填充，值 0</td></tr><tr cid="n120" mdtype="table_row"><td>3</td><td>0x08-0x0B</td><td>header 的 checksum 校验值，值 0x3EFB072A</td></tr><tr cid="n124" mdtype="table_row"><td>4</td><td>0x0C</td><td>值 1</td></tr><tr cid="n128" mdtype="table_row"><td>5</td><td>0x0D-0x3F</td><td>固件版本号，字符串 4.3.2_RC5a</td></tr><tr cid="n132" mdtype="table_row"><td>6</td><td>0x40-0x43</td><td>长度，值 0x5</td></tr><tr cid="n136" mdtype="table_row"><td>7</td><td>0x44-0x48</td><td>型号，字符串 v3910</td></tr><tr cid="n140" mdtype="table_row"><td>8</td><td>0x49-0x4C</td><td>填充 1，值 0</td></tr><tr cid="n144" mdtype="table_row"><td>9</td><td>0x4D-0x50</td><td>未知，值 0x00000059</td></tr><tr cid="n148" mdtype="table_row"><td>10</td><td>0x51-0x54</td><td>nonce 内容的 checksum 校验值，值 0x6B075354</td></tr><tr cid="n152" mdtype="table_row"><td>11</td><td>0x55-0x88</td><td>填充 2，值 0</td></tr><tr cid="n156" mdtype="table_row"><td>12</td><td>0x89-0x8C</td><td>字符串 nonce 的长度，值 0x5</td></tr><tr cid="n160" mdtype="table_row"><td>13</td><td>0x8D-0x92</td><td>字符串 nonce</td></tr><tr cid="n164" mdtype="table_row"><td>14</td><td>0x93-0x95</td><td>nonce 内容的长度，值 0xC</td></tr><tr cid="n168" mdtype="table_row"><td>15</td><td>0x96-0xA1</td><td>nonce 内容，字符串 xRDYwRMx0B7u</td></tr><tr cid="n172" mdtype="table_row"><td>16</td><td>0xA2-0xA5</td><td>填充 1，值 0</td></tr><tr cid="n176" mdtype="table_row"><td>17</td><td>0xA6-0xA9</td><td>未知，值 0x02FD1A51</td></tr><tr cid="n180" mdtype="table_row"><td>18</td><td>0xAA-0xAD</td><td>enc_Image 内容的 checksum 校验值，值 0x26B0401D</td></tr><tr cid="n184" mdtype="table_row"><td>19</td><td>0xAE-0xE1</td><td>填充 2，值 0</td></tr><tr cid="n188" mdtype="table_row"><td>20</td><td>0xE2-0xE5</td><td>字符串 enc_Image 的长度，值 0x9</td></tr><tr cid="n192" mdtype="table_row"><td>21</td><td>0xE6-0xEE</td><td>字符串 enc_Image</td></tr><tr cid="n196" mdtype="table_row"><td>22</td><td>0xEF-0xF2</td><td>enc_Image 内容的长度，值 0x02FD1A00</td></tr><tr cid="n200" mdtype="table_row"><td>23</td><td>0xF3-0x2FD1AF2</td><td>enc_Image 内容</td></tr><tr cid="n204" mdtype="table_row"><td>...</td><td>...</td><td>以下内容以此类推，包含以下区块：</td></tr><tr cid="n208" mdtype="table_row"><td>enc_thunder-bootfs-uboot-t81.img</td><td><br></td><td><br></td></tr><tr cid="n212" mdtype="table_row"><td>fw_release</td><td><br></td><td><br></td></tr><tr cid="n216" mdtype="table_row"><td>fw_ver</td><td><br></td><td><br></td></tr><tr cid="n220" mdtype="table_row"><td>pid</td><td><br></td><td><br></td></tr><tr cid="n224" mdtype="table_row"><td>oid</td><td><br></td><td><br></td></tr><tr cid="n228" mdtype="table_row"><td>uver</td><td><br></td><td><br></td></tr><tr cid="n232" mdtype="table_row"><td>bdk_ver</td><td><br></td><td><br></td></tr><tr cid="n236" mdtype="table_row"><td>linux_ver</td><td><br></td><td><br></td></tr><tr cid="n240" mdtype="table_row"><td>drayqemu_ver</td><td><br></td><td><br></td></tr><tr cid="n244" mdtype="table_row"><td>fw_release</td><td><br></td><td><br></td></tr><tr cid="n248" mdtype="table_row"><td>fw_ver</td><td><br></td><td><br></td></tr><tr cid="n252" mdtype="table_row"><td>pid</td><td><br></td><td><br></td></tr><tr cid="n256" mdtype="table_row"><td>oid</td><td><br></td><td><br></td></tr><tr cid="n260" mdtype="table_row"><td>uver</td><td><br></td><td><br></td></tr><tr cid="n264" mdtype="table_row"><td>bdk_ver</td><td><br></td><td><br></td></tr><tr cid="n268" mdtype="table_row"><td>fw_release</td><td><br></td><td><br></td></tr><tr cid="n272" mdtype="table_row"><td>fw_ver</td><td><br></td><td><br></td></tr><tr cid="n276" mdtype="table_row"><td>pid</td><td><br></td><td><br></td></tr><tr cid="n280" mdtype="table_row"><td>oid</td><td><br></td><td><br></td></tr><tr cid="n284" mdtype="table_row"><td>uver</td><td><br></td><td><br></td></tr><tr cid="n288" mdtype="table_row"><td>bdk_ver</td><td><br></td><td><br></td></tr></tbody></table>
 
@@ -390,9 +390,9 @@ def checksum(data, num):
 解密
 --
 
-> 采用了 chacha20 算法加密了固件，需要两个值进行解密，一个是 secret、一个是 nonce![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaN8MmA937BotQXOntDFaYicvq8Tffa9mAw0aYjAZTfdXQdaroiaiaibB0QIg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNuib8rX05JfTsNiaXNRjWtia7YOIG0Zcr6AJ2oBDaKatnazYdW7SnIUGicg/640?wx_fmt=png)nonce 为 10 78 DE AA 0D 6A F8 F5 A6 DE EF 98，其次也发现了 enc_image，从 0xF3 开始进⾏解密，接下去就是需要寻找⼀下 secret 值以完成第⼀步的解密
+> 采用了 chacha20 算法加密了固件，需要两个值进行解密，一个是 secret、一个是 nonce![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/36f39a90ace1a4f8316414d9a76c5525b44656c2eccc19c10db146c2d35df090.png)![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e5d873968aa4fe03a0a72c9f178fc43e28f9f2cacdd0f9b90d5cc84be04f6ebd.png)nonce 为 10 78 DE AA 0D 6A F8 F5 A6 DE EF 98，其次也发现了 enc_image，从 0xF3 开始进⾏解密，接下去就是需要寻找⼀下 secret 值以完成第⼀步的解密
 
-通过解密之后的固件提取文件系统中⼀个名为 fw_unpacker 的 bin ⽂件中寻找我们需要的内容：①字符串查找 secret 值：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNtAgrvGwBCoibQOSBktdBPqjB2MSsxImaW7edoW2plbEVqP23iajswKDA/640?wx_fmt=png)②需要复制我们需要的 nonce 到⼀个单独⽂件中：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNEmic4zROGvotnmz0oPxD4BfsqcxQvK0Niczf3NfoUicLAJIRhfC7vgdBA/640?wx_fmt=png)③这⾥需要针对 enc_image 进⾏操作，所以需要进⾏分割，将 0xF3 之前的全部删除，然后跑：![](https://mmbiz.qpic.cn/mmbiz_png/GIRBFLSfaJKlDcbA8BwgMI1TmKiaUotaNw92ewPXD5TdMydiaauiaKUJkGsCD56vWuRDta6GqychTRibmja1SBzNVw/640?wx_fmt=png)第⼀次解密的 exp：
+通过解密之后的固件提取文件系统中⼀个名为 fw_unpacker 的 bin ⽂件中寻找我们需要的内容：①字符串查找 secret 值：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3da020e9e37ab66623be67859e452f578f97068a44316c91dea2986ad3b3744b.png)②需要复制我们需要的 nonce 到⼀个单独⽂件中：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f592730ec2909e0357746a470bd2cbe5f7637c80be8a53bffb6f51224b64226e.png)③这⾥需要针对 enc_image 进⾏操作，所以需要进⾏分割，将 0xF3 之前的全部删除，然后跑：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/460c19d7071684b796a2712c626af9932c3348efdc78138c107ccc9ae2ce1b67.png)第⼀次解密的 exp：
 
 ```
 import sys

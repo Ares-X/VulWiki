@@ -56,7 +56,7 @@ schema_version: "1"
   
 蓝网科技临床浏览系统是一个专门用于医疗行业的软件系统，主要用于医生、护士和其他医疗专业人员在临床工作中进行信息浏览、查询和管理。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVfR8wYZUibN5icwIjcUwJ5yicM2vjV8cDeE2NR5cWJkzRJxibcwT6Mw7GEcKnfO7saljmxUfnZTlQYAA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/39b858bbc31e831c4e0e6cd4c9ca3e4e0c1d4baaac96d545fce79125adc3f867.png "")  
   
 **0x03 漏洞详情**  
 ####   

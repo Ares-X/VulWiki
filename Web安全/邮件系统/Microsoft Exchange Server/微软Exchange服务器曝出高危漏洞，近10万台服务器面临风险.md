@@ -50,7 +50,7 @@ schema_version: "1"
 **带你读懂网络安全**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/INYsicz2qhvaeOOTtw9NrgK2nj3g2x0IiarOs3mSricPia6WuzqjlYNfsbXbxKMrZ7iafyHLogmGhHvM22pSFvvzwew/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/0adf61f9f63c86aa7d176802e30f5ae501db40e0700f6e5123b232ea0606ad67.png "")  
   
 微软Exchange服务器近日曝出高危漏洞，编号为CVE-2024-21410，该漏洞严重威胁到全球大量邮件服务器的安全，目前已经有黑客开始积极野外利用。  
   
@@ -64,13 +64,13 @@ schema_version: "1"
 据Shadowserver统计，在总共9.7万台服务器中，估计有6.85万台服务器的易受攻击状态取决于管理员是否应用了缓解措施，其余2.85万台服务器被确认容易受到CVE-2024-21410的攻击。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/INYsicz2qhvaeOOTtw9NrgK2nj3g2x0Iiaon8tEz480mfUGetZDaUGfharx3IoCLXgc14HoABjnDVOkpr1HURehQ/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/ef92276b4ae14cf659bfec5c8450007cf707983a81b825164566d72e444bca05.png "")  
   
   
 受影响最严重的国家是德国（22,903例）、美国（19,434例）、英国（3,665例）、法国（3,074例）、奥地利（2,987例）、俄罗斯（2,771例）、加拿大（2,554例）和瑞士（2,119例），中国也有超过1000台服务器在线暴露。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/eytJa9K5jkrl8YsgavGOkTle0T5UOIEuLsBIgY1Hv9ND1STBTUqA72MC0JqpWBHXfibudiax2YcRYibt5t4oZNNB1qHbxAeiafbS/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/5035c7b2dc3ccc18e759c539789a99143fddc1e6201e2cf3df0bdc6cbe846806.svg "")  
   
 **漏洞详情：**  
   
@@ -87,7 +87,7 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/eytJa9K5jkrl8YsgavGOkTle0T5UOIEuLsBIgY1Hv9ND1STBTUqA72MC0JqpWBHXfibudiax2YcRYibt5t4oZNNB1qHbxAeiafbS/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/5035c7b2dc3ccc18e759c539789a99143fddc1e6201e2cf3df0bdc6cbe846806.svg "")  
   
 **目前情况：**  
   
@@ -100,7 +100,7 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/eytJa9K5jkrl8YsgavGOkTle0T5UOIEuLsBIgY1Hv9ND1STBTUqA72MC0JqpWBHXfibudiax2YcRYibt5t4oZNNB1qHbxAeiafbS/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/5035c7b2dc3ccc18e759c539789a99143fddc1e6201e2cf3df0bdc6cbe846806.svg "")  
   
 **如何修复：**  
   
@@ -109,7 +109,7 @@ schema_version: "1"
 - 微软建议在3月7日之前应用补丁或停止使用Exchange服务器。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/eytJa9K5jkrl8YsgavGOkTle0T5UOIEuLsBIgY1Hv9ND1STBTUqA72MC0JqpWBHXfibudiax2YcRYibt5t4oZNNB1qHbxAeiafbS/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/5035c7b2dc3ccc18e759c539789a99143fddc1e6201e2cf3df0bdc6cbe846806.svg "")  
   
 **安全建议：**  
   
@@ -124,7 +124,7 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/eytJa9K5jkrl8YsgavGOkTle0T5UOIEuLsBIgY1Hv9ND1STBTUqA72MC0JqpWBHXfibudiax2YcRYibt5t4oZNNB1qHbxAeiafbS/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/5035c7b2dc3ccc18e759c539789a99143fddc1e6201e2cf3df0bdc6cbe846806.svg "")  
   
 **额外信息：**  
   

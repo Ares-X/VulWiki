@@ -58,7 +58,7 @@ schema_version: "1"
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-04-24 00:54  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/DYqn7TU9icq1dmGYmSJ2c1QjNQrYhz35WficeXABlJ38L3y2iakfAaFTDiaaY3BmmLTmmbSicNXGnAERrcqsrrFzxANwJcqa3Hvib7wMCibciciahhTU/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/43e496334c7a6be6ebecd84a229239df6eadd506140757537d1dbb6abc72d18c.png "")  
   
 苹果针对 iOS 与 iPadOS 推送更新，修复漏洞 **CVE-2026-28950**  
 。该漏洞源于通知服务存在缺陷，通知信息即便被删除仍会被系统留存。这一日志留存问题可能导致敏感数据被恢复，包括 Signal 等社交应用的聊天记录。苹果通过优化设备端数据清理与处理机制，完成了该漏洞修复。  

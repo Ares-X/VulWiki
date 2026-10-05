@@ -60,7 +60,7 @@ source_status: "unknown"
   
 HPE Aruba Networking Access Points是HPE旗下的Aruba Networking推出的一系列高性能无线接入点产品，旨在为企业提供稳定、高效、安全的无线网络连接，被广泛应用于企业、教育、商业等各种场景。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWpsmBToJ1PmvpWYLUqE5SKz2VpYvZKCBWZTYuxqkuZY3766tMibict8WacvbYoOCibO8QYTUvhMQgpw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bcf06065120ea3619f0d4ab1a7929c5fe0208cbcac8d03e03e443ed0783e35f9.png "")  
   
 **0x03 漏洞详情**  
 ###   

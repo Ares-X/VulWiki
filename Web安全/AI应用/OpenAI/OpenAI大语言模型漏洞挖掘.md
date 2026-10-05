@@ -130,7 +130,7 @@ CVE-2025-37899是一个影响Linux内核ksmbd模块的高危漏洞。ksmbd是内
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/QYjQMklF5V1pMy5hWkibAlZ9oXzZJxVPzcPzp5ECIWeJ6icu4mIWILRecZZSkuzdKyqnACOtPUXPTgvKEY91r4Ng/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d1d24a64f53cdeda7da4057a6360716461b8742a7de43633b6d02a22588e86d4.png "")  
   
   
 基于该案例，o3 展现出优秀的跨路径推理能力，能够识别资源释放与并发访问间的复杂依赖关系。  
@@ -140,7 +140,7 @@ Sean表示：
 “我没有用任何辅助框架，仅通过o3 API对代码进行分析，就准确地发现了潜在的逻辑漏洞。就我所知，这是首例由大语言模型自主识别并被确认的内核级0Day。”  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb7PtlwmMVloJZFVO18VtoNRePzZbbh4CIliaibSv7KeXSiariaEYH9pNtEkCnb83MtpPbJEicKcsm813Vg/640?wx_fmt=jpeg&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/9a82d00110a227336e0277ef9f2863ba16edd9a92c6e04ff80edf6de878b8b64.webp "")  
   
 o3模型作出详细解释  
   
@@ -178,7 +178,7 @@ CVE-2025-37899的发现不仅是一项漏洞披露，更是AI参与网络安全�
 消息来源：https://cybersecuritynews.com/linux-kernel-smb-0-day-vulnerability/  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/QYjQMklF5V1dsxibmUMESFkcBCp9BibHXamUbRZ6iaAo3jib19mMSQPkaqPiaiauS6cLsQUBsFPm6sYdprjV8nbLricAw/640?wx_fmt=jpeg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/394919deff2710dbc5e143d05d7c7039a2433e5d4f0e8563875a9f28c082ce6a.webp "")  
   
 ****  
 ****  

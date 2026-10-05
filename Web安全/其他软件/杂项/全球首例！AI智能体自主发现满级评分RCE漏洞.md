@@ -62,7 +62,7 @@ previous_primary_identifiers: ""
 
  鼎信安全   2026-01-07 08:27  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/M9f1oMd7Vxic2eXcicYMnEBEa4mzm4tnVsA20rqtdzXPCX06vhFZfh2aMr8W56Pya9FMUhiatvib8KBhnxcPDD0lxQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/6841488d2f3536b7212c7b28b19e5af2550afbcbae830fe21573e692118022fb.jpg "")  
   
 近日，网络安全机构pwn.ai披露了编号为CVE-2025-54322的漏洞。该漏洞不仅以CVSS10分满分评级跻身**顶级风险**  
 行列，更重要的是，其发现过程本身具有里程碑意义——这是**全球首例由自治AI智能体独立发现并公开的可远程利用零日远程代码执行（RCE）漏洞。**  
@@ -174,7 +174,7 @@ previous_primary_identifiers: ""
 消息来源：  
 pwn.ai  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/M9f1oMd7Vx9fDjRn57hxiaENCLbZxeR7VGYYib9AZS8U0ZQj4YVM8icicrJMXp6j7wsaBV7BaEfZuQia57xZh6xctHA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/d9f66e0f05737d26f701be0509949e28d5985ecf82587ce93eb6713ea623263c.jpg "")  
   
 
 

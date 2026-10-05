@@ -43,7 +43,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/VGMxrw8HD2ZbQHpyL-V_nQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/zbTIZGJWWSO92ptAseEBBMfHZzG1qsqRdg64cG2Gn7SMXbD29AKjibe2s51gODWXcQJmHrJZN6K8icDVA6ia4Ih1A/640?wx_fmt=jpeg)  
+![](../../.resource/remote/bdbff3f2484986b709656ad0105d719dc134b9d179b3fd2a38b882efca8a1d16.jpg)  
 
 一位苦于信息安全的萌新小白帽
 

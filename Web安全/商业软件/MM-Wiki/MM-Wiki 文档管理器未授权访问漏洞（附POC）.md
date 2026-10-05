@@ -84,7 +84,7 @@ Fofa: header="mmwikissid"
   
 首页  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/fMIPoqZAkaR2xJ7BibAh8qEswvarnD3vRaz7Sr1qrvxzSia3tDAoOdeibfnZhEQD6ARhZfQZ5ajZHu6wuoicX4o1UQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/00ebb6a672886a4b9f1a680d568bceb13f49c13e8bc64d7f40918b66f9a4253c.png "")  
   
 构造payload，发送数据包  
 ```http
@@ -101,9 +101,9 @@ Connection: close
   
 遍历document_id获取文档  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/fMIPoqZAkaR2xJ7BibAh8qEswvarnD3vRE0Lsd2NA5ESfgXCwNWovYbQOCzph6ytjvic6kO296JqpQicZjCYyahkw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f29b275b20ba653f51ecd32a3414b15a9d17cc106688f8b7f7000d988e30d22a.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/fMIPoqZAkaR2xJ7BibAh8qEswvarnD3vRb7U9EemAxyA3RMMH5x4WkFL0sXGGmjDsP9vib9JJ5WI8u72CIomHYXw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d0287ce7ee130526aa558d2385ab91d4649e3ce07cbf49f9e9a33b6c7f160fdb.png "")  
   
 0x04 修复建议  
 ```

@@ -43,7 +43,7 @@ schema_version: "1"
 
 Ravie Lakshmanan  代码卫士   2025-04-16 09:37  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -52,7 +52,7 @@ Ravie Lakshmanan  代码卫士   2025-04-16 09:37
 **基于 Java 的开源博客服务器软件 Apache Roller 中存在一个严重漏洞（CVE-2025-24859），可导致恶意人员即使在密码更改后也可保留越权访问权限。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQRTJVo0mwAWtxgsP3KibZuFnOcZLzq9mrmAM1IwLicq20Z68oBUsibMxdp4BJkaleACIQPNS0AZDu0A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2069adf134a498822d98b9e340a1ef09614dc268f3618e95dc44e85f5dcda62a.png "")  
   
   
 该漏洞的CVSS 评分为10.0分，影响 Roller 6.1.4及之前所有版本。Apache Roller 项目的维护人员在一份安全公告中提到，“Apache 6.1.5之前的版本中存在一个会话管理漏洞，是因为活跃用户会话在密码更改后未正确验证造成的。当用户密码由用户或管理员更改时，现有会话仍然是活跃且可用的。”  
@@ -118,15 +118,15 @@ License
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

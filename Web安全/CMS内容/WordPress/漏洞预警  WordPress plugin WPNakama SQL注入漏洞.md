@@ -49,7 +49,7 @@ schema_version: "1"
   
 WPNakama是一款原生集成在WordPress仪表盘内的项目和团队协作插件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/NQlfTO30MhzVwamuvjE4H90cPvw6SG0FFqPTQo2tNh3GBZFcbS8JlrKpQ8cab0pfhK4uTicYmyfBibWAXQh2z9VaPgYPI2QLibJgCSBp5qs5PE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/98f5cdd45589553d0b85c5c45c7225c66b98f4f86b8b6c54e30813fc895551a8.png "")  
   
 **0x03 漏洞详情**  
 ###   

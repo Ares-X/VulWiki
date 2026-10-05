@@ -61,7 +61,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8sdyR6ic0M2acDAVJDe45WPqMaicruhiaiaN520bgV5SlvgI5wBP67dPKvkB1UR9G1afZ8UtQMIC0yKEg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7dcdb5ab345df0010b6999586efeefcd2f2e9fecd5c05d3624671bc4291ae4f9.png "")  
   
 谷歌在发现两个高危漏洞后，已紧急为其Chrome浏览器推出安全更新。这些漏洞可能允许攻击者窃取敏感数据并越权访问用户系统。  
   
@@ -147,7 +147,7 @@ https://cybersecuritynews.com/critical-chrome-vulnerability-steal-data/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

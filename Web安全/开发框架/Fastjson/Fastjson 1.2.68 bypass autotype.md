@@ -198,7 +198,7 @@ Object、Serializable、Cloneable、Closeable、EventListener、Iterable、Colle
 
 getClassFromMapping在`com.alibaba.fastjson.util.TypeUtils#addBaseClassMappings`被赋值，添加了一些基本类，后续会当作缓存使用。
 
-[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616118023.png)](https://y4er.com/img/uploads/20200616118023.png)
+[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616118023.png)](.resource/Fastjson1.2.68bypassautotype/media/20200616118023.png)
 
 
 这里先注意下`java.lang.AutoCloseable`类。
@@ -207,7 +207,7 @@ getClassFromMapping在`com.alibaba.fastjson.util.TypeUtils#addBaseClassMappings`
 
 deserializers.findClass是在`com.alibaba.fastjson.parser.ParserConfig#initDeserializers`初始化。
 
-[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616119542.png)](https://y4er.com/img/uploads/20200616119542.png)
+[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616119542.png)](.resource/Fastjson1.2.68bypassautotype/media/20200616119542.png)
 
 
 也是存放了一些特殊类用来直接[反序列化](https://www.chabug.org/tags/反序列化)。
@@ -349,7 +349,7 @@ TypeUtils.mappings mappings缓存1.2.47中就被绕过了一次autotype。而这
 
 
 
-[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616112778.png)](https://y4er.com/img/uploads/20200616112778.png)
+[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616112778.png)](.resource/Fastjson1.2.68bypassautotype/media/20200616112778.png)
 
 
 
@@ -357,7 +357,7 @@ TypeUtils.mappings mappings缓存1.2.47中就被绕过了一次autotype。而这
 
 在`com/alibaba/fastjson/parser/ParserConfig.java:826`中对一些基本的类型设置了对应的反序列化实例deserializer
 
-[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616112730.png)](https://y4er.com/img/uploads/20200616112730.png)
+[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616112730.png)](.resource/Fastjson1.2.68bypassautotype/media/20200616112730.png)
 
 
 ThrowableDeserializer是Throwable用来反序列化异常类的，当没有命中之前程序给定的类型时会进入createJavaBeanDeserializer()，其实就是JavaBeanDeserializer。
@@ -366,7 +366,7 @@ ThrowableDeserializer是Throwable用来反序列化异常类的，当没有命�
 
 先看ThrowableDeserializer中
 
-[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616111164.png)](https://y4er.com/img/uploads/20200616111164.png)
+[![image.png](./.resource/Fastjson1.2.68bypassautotype/media/20200616111164.png)](.resource/Fastjson1.2.68bypassautotype/media/20200616111164.png)
 
 
 

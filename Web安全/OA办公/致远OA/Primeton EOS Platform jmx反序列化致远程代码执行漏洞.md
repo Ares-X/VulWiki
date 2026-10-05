@@ -46,7 +46,7 @@ schema_version: "1"
 
 长亭应急  黑伞安全   2024-04-25 08:30  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/FOh11C4BDicR8MyPCDib6oamTNyIg7iaxAeZXLC894lvZia17dJ4q7X6PB8WTrG0BT0ldJqCGQVAT8CAHRIzmicEAibg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/1ec247cc6d40d0f59e192c22c1227182036e2532f7df83fe9f25f40238a07064.webp "")  
   
 Primeton EOS Platform（以下简称普元EOS）是一个由普元科技开发的企业级应用软件平台，旨在提供数字化转型、数据管理和流程优化的解决方案。2024年4月，互联网披露普元EOS远程代码执行漏洞情报，经分析，确认该漏洞由反序列化缺陷引起，且该漏洞在去年已存在在野利用。该漏洞利用简单，建议受影响的客户尽快修复漏洞。  
 **漏洞描述**  

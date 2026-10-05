@@ -57,7 +57,7 @@ source_status: "unknown"
 新的公开数据显示，黑客已开始大规模利用影响
 Ivanti 的企业 VPN 设备的第三个漏洞。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaEkerp0BCUP3s7MNAxdWFB55ZwOdt4QUz1NrbXibiaN7GQPTdFg8fC9ibk7Xl15NiazCsKibwtiahCfTJFQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/085545cf09a9d65c91f38a23a702d8bb842ec0ebd42825dbb6e21cbc1efa64a6.png "")  
   
 上周，Ivanti
 表示，它发现了两个新的安全漏洞（编号为 CVE-2024-21888 和 CVE-2024-21893），影响 Connect
@@ -131,7 +131,7 @@ Ivanti 何时会向所有潜在易受攻击的客户提供这些补丁。
 Fortinet
 周三警告说，APT组织一直在利用两个已知的 FortiOS 漏洞进行针对各个部门（包括关键基础设施）的攻击。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaEkerp0BCUP3s7MNAxdWFB5YcYic6KzibSjYiaWml3tA8GHMJstLExZLovljEamRK76m7KI9icmU6hFfw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/871219980eba7fb601989dc98838de19a80b007e432758b5934137165e9ff502.jpg "")  
   
   
 其中一个被利用的漏洞是 CVE-2022-42475，Fortinet 于 2022 年 12
@@ -165,7 +165,7 @@ https://techcrunch.com/2024/02/08/researchers-say-attackers-are-mass-exploiting-
   
 https://www.securityweek.com/fortinet-warns-of-new-fortios-zero-day/  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/McYMgia19V0WHlibFPFtGclHY120OMhgwDUwJeU5D8KY3nARGC1mBpGMlExuV3bibicibJqMzAHnDDlNa5SZaUeib46xSzdeKIzoJA/640?wx_fmt=svg "")  
+![](../../.resource/remote/0877e2d01c065e08b6bbbf6e0a90a3b1e83a9887e89bf3c0021a85dea378e78f.svg "")  
   
 **今日安全资讯速递**  
   
@@ -343,7 +343,7 @@ FortiOS 漏洞
   
 https://www.securityweek.com/fortinet-warns-of-new-fortios-zero-day/  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

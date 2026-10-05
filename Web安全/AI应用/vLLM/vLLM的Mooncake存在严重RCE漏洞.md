@@ -48,7 +48,7 @@ schema_version: "1"
 
  独眼情报   2025-05-01 01:53  
   
-![CVE-2025-29783 CVE-2025-32444 vLLM vulnerability](https://mmbiz.qpic.cn/sz_mmbiz_jpg/KgxDGkACWnTkNyVdhiaKS1Xiciczy4uFLFtAhMdicSHCMuK2qIBlQymb0BSVRGf9EDD8zuJnPSIXibHzic8ol2CvgYyg/640?wx_fmt=other&from=appmsg "")  
+![CVE-2025-29783 CVE-2025-32444 vLLM vulnerability](../../.resource/remote/636bf7f88410dbf8e652b880a0ed2733f8b975a763a3c9b6ea048f8cf41e4464.jpg "")  
   
 CVE-2025-29783 CVE-2025-32444 vLLM vulnerability  
   
@@ -65,7 +65,7 @@ vLLM 在 GitHub 上拥有超过 46,000 个星标，是一个被广泛采用的 L
  函数。此函数隐式使用 pickle.loads()  
  通过 ZeroMQ 套接字处理传入的数据。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTkNyVdhiaKS1Xiciczy4uFLFtriaW20oH11e0kXD7AZ9fdzZMLdgCMticqmvgn11s4CM2oKeMakMAEL6g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e6638434ecb20be6e51579933f638941c40e1e65dd7d3b519b072d618982cf9e.png "")  
   
 此漏洞影响所有积极使用 Mooncake 集成的 vLLM 实例，版本大于或等于 0.6.5。如果您的 vLLM 部署未使用 Mooncake 进行分布式 KV 传输，则您不会受到此特定漏洞的影响。  
   

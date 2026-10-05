@@ -75,7 +75,7 @@ Mybatis-plus
 
 使用 Idea 打开项目，修改配置文件数据库地址、账户密码、导入 SQL 文件，或在 Mybatis-plus 官网自行搭建，运行项目，访问 selectPage 接口
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpH4tyXcqpIPQO49YuzY9asicafdiaAPzwlekibibZ01VuFlXutVticqX6iaHdg/640?wx_fmt=png)
+![](../../.resource/remote/4834a39fe81650dd860aa76bd470301e2f2979cfa2970a35fce79db887013303.png)
 
 使用报错注入 payload：
 
@@ -83,7 +83,7 @@ Mybatis-plus
 http://127.0.0.1:8081/user/selectPage?ascs=extractvalue(1,concat(char(126),md5(123)))&ascs=1
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHb7s0Xb2IdVxGRlCTTSicqfFKj0QAYvmyzicYbfxpn2QqlWxayGuwooWw/640?wx_fmt=png)
+![](../../.resource/remote/eeace60650fa44defaf2c1a2bbe2bea6c40a78af1575ee85230fbb50b8c0ec57.png)
 
   
 
@@ -91,11 +91,11 @@ http://127.0.0.1:8081/user/selectPage?ascs=extractvalue(1,concat(char(126),md5(1
 
 进入 Page 实体中
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpH0ZiaItIalGBJFdK9DvNZ514Pllibtfwu0bwmAibTsE5lcbpNfUicrGUP1g/640?wx_fmt=png)
+![](../../.resource/remote/bed9005b24f21ce026fe33ee58f0f28493987c33337fd92376ca7571635a1613.png)
 
 255 行断点，此处接收的是个 List 类型参数：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHv6RZALtZialQuoz5KyKBmDicvmV8MuqSkTfsicQKXzpib0Vebnnlk9PY9w/640?wx_fmt=png)
+![](../../.resource/remote/b6b62b18686cf598fe973d5e2788dfb33e0c3291b66b61cadc55091a4dde5f47.png)
 
 我们只发送一个 ascs 参数：
 
@@ -105,7 +105,7 @@ ascs=extractvalue(1,concat(char(126),md5(123)))
 
 可以看到 ascs 被以逗号分割成了 3 份，会导致后续 SQL 拼接的语句语法错误（URL 编码结果一样）：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHiaSPhhIxyK1RtbP5wJNq5E8KujzhwskL2lmbZic29KsBuvVT4DChIWjw/640?wx_fmt=png)
+![](../../.resource/remote/14d6000230f5222c0875b267821cbe55b762cf9eafc7a75acbddc47fcfb489be.png)
 
 因为我们这里传入两个 ascs 参数（至于为什么会这样，推测是 SpringMVC 的设计）：
 
@@ -115,7 +115,7 @@ ascs=extractvalue(1,concat(char(126),md5(123)))&ascs=1
 
 再断点：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHFvwbr39TvWt6v16gCOOeJu7iclAk8IUFI2hcoAJia4oE8YD3dSLPib23Q/640?wx_fmt=png)
+![](../../.resource/remote/adda0a1828d96d1d4bed6cd4a56c9ba2d4e58ada911bb8531740a1755d53b787.png)
 
 这里我们的 payload 就不会被分割了，两个参数成了 List 的两个元素。
 
@@ -127,7 +127,7 @@ mybatis-plus-extension-3.4.2.jar!/com/baomidou/mybatisplus/extension/plugins/Pag
 
 127 行断点：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHGFfBMb6k1qItmA74EVugRN3UcLWso0DiaRdv3Y8qlSiajjOTOj3NRZoQ/640?wx_fmt=png)
+![](../../.resource/remote/34f381094f9c85e068088060f6ecb7f38acc91726bf70d2737477f56f940bc8c.png)
 
 SQL 代码就是在此处拼接完成的，具体拼接流程是这两行：
 
@@ -140,11 +140,11 @@ orderByElementsReturn 就是我们传入的 payload 数组，plainSelect 是 myb
 
 387 行将 payload 加上 ORDER BY 字符串后 append 到原始 sql 中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHxOtP6yffdiaLFrqjbuMuV3WAZp9JN1wwezic2G4xYvoPEjt9BNNyzqPQ/640?wx_fmt=png)
+![](../../.resource/remote/7f3580e499e2c7b7ee539612883b94672def4a053b3fe83cb60fae4f45b6a36d.png)
 
 orderByToString 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHuvQfhz8blxqwUAahxA8nBJYJ1bKgBAQs2Jjhh2Gmeev7BsRtgU3WuA/640?wx_fmt=png)
+![](../../.resource/remote/0bbaedeb9b1279722f5bcc5f773cf835f57ef870bb0455d00c19ddcd0a88339c.png)
 
 至此 Payload 就被拼接到了 Mybatis 原始 SQL 语句中。
 
@@ -152,11 +152,11 @@ orderByToString 方法：
 
 最后再给大家介绍一下漏洞库，地址：wiki.xypbk.com  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHEmc1M8Wz9W8hbIqZ3Pb2IaN9mjicbfVN69EmlWjaSZpjEDhEm42RG3Q/640?wx_fmt=png)
+![](../../.resource/remote/910f58d4bf29e69ca8df349f2405e508b333364acf747911868e192da1160017.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHeGQ0SrdqrjtnVkhVXuvuglVEBL6Cw2XDUDSeguMfx0z74hXY6lMBVw/640?wx_fmt=png)
+![](../../.resource/remote/83a591744021edc0b7632b77a9209efc42ec4cf0e99db11d2fbefd3d82543e9b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibBicTylCoAH2SOf8YWgPVlpHgeRyoZEj4nQ68fCON9iaNrQ8nm1iacaMjk9WNDw0f0CnL2sIVh1vQEtQ/640?wx_fmt=png)
+![](../../.resource/remote/8e820ae6e61b9e898e1024f43ebdc354a21c29c9d03798e3768b0d43559fe07b.png)
 
 漏洞库内容来源于互联网 && 零组文库 &&peiqi 文库 && 自挖漏洞 && 乐于分享的师傅，供大家方便检索，绝无任何利益。  
 

@@ -59,7 +59,7 @@ CNVD编号:
   
 SpringBlade  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5H9micUvdCic9Apoib2pMlx5A570O6BwVsCgI2ARiacyOMJSiauxTGAfiaM8zg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/df4b6e37d42dd3909d2b07b9d3fe6cb4b201aa9e70907e48f852051ce7d3104f.jpg "null")  
   
 SpringBlade list接口存在SQL注入漏洞  
 ## 4.fofa查询语句  
@@ -81,26 +81,26 @@ Blade-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjo
 Accept-Language: zh-CN,zh;q=0.9
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5HJldgglN91l2bX1ruXSQj5ZjMuTu4aZDIOT8n48ya2PvreHPGVgUkrQ/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/f549a3ff4bc1dd5cec5eda77e1f0df34761eb64c2f305abb7af942762c974626.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5HZ7oYiaAmPnrdyfbR3IbFckcI2KVRBSZbzvPENreFbnZrSA0MtgzjoEA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/f882892fbaa7640c33d4d8018a8c894d691d4b87258fef202918776e02257dd7.jpg "null")  
 ## 6.POC&EXP  
   
 关注公众号 南风漏洞复现文库 并回复 漏洞复现126 即可获得该POC工具下载地址：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5Hmv19yEKXibja1SMib99JNJWEuKBfFiaWNTh1T3FXrQoW6ycmekAMYy4Yw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/e69cc266a2dc94a68915c95535490ddf98f1abb6feee8952eb804f6d4cfefeaf.jpg "null")  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5HCavndDvfAWY9YIfOhxHctxmyuibLIAmgpK4yUq4L4R2cSUfz7gvWIibg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/35500e3984c9d7e98b9e6768f9bb2b331443aa68a75c1dc188271d33128fed38.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5H52MwI9fIFDcCKXhAcibG39Q7za4x3K5H7LQ7iaEQGgEhrWkaDY1QCuSw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/5d6a45f25899215706838d7d66ec7f80816d533f1878d3f33dd73027bef1b971.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5HmHUhvuMt1zibhqiaUeBKM3RCNj75TMncKcJYFBDhZiac9jj6nQyhrFy7A/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/31d277a6fa41aea2b7fd0d593be57026d58b7876987c18d87a59ee8ba08134b9.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5HliaudnrpGIOgBKoCeU80MyB6M1ib2KZpM2iaztiaHHybgQvbG9a94tlVMg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/65011a35c2836fc5571df8cee7426ebc5a17f6ba9ca67b14d3c7d9f48aadbf2f.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aTsJRrEsWevJ33FzOEpe5HTGVINIQ7BibgcS1C297DSDKhQQhj3rB0bWZsuZe4vtoCxzF1N7DM1oA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ## 7.整改意见  
   
 ⼚商已发布了漏洞修复程序 请及时关注更新：https://github.com/chillzhuang/blade-tool  

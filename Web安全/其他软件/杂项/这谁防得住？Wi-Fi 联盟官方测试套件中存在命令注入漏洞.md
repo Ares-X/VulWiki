@@ -58,7 +58,7 @@ schema_version: "1"
 
  数世咨询   2024-10-30 16:00  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqq2iapicRLibUerLjfFtibvYgO8VAq9ewTicIfuB5mGYZ6gkwv9WiaHXfpX225LtDia4ib8FNjNp0kHEcrNqA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4c0bfae2b9e448dded7568102d5d028f85c361eabed1aff1773221fd52c84d97.png "")  
   
   
 计算机应急响应小组 (CERT) 协调中心 (CERT/CC) 研究人员发现Wi-Fi联盟测试套件中存在命令注入漏洞，该漏洞的编号为CVE-2024-41992，Wi-Fi 联盟的易受攻击代码已发现部署在 Arcadyan（智易科技）   
@@ -116,7 +116,7 @@ CERT/CC 指出，Wi-Fi 测试套件不适用于生产环境，但已在商业路
 👉   
 扫码立即加入，精彩不容错过！  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqqPJv9p5ibKIhJXQjWHJmSlibSdib80Llfp8mlV0ibf7m47jyaVeGoFeorddtIuxS5liafTJRKHeSdLnaQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/34cae9f3a03dd890c422dd98273c25c67a6070af6b43ffbe1da48a754745a953.webp "")  
   
 😄  
 嘻嘻，我们群里见！  

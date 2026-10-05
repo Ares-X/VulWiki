@@ -91,13 +91,13 @@ Mitel响应非常迅速，并解决了发现的所有漏洞。
   
 在日志上传过程中，命令注入将作为root触发。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ZEkT0Rn34yFBMSdZDRhMFulrFdiao7FDMa8EwTyicCiaiaq4gPe5zvX16pHd8AjfsiaKEQUn1NaoYpL10PQTCZ7fqibQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6233052544f7e74cd3231d0098916e6b051ba44b07a28ef3c0bffe7532aa1ad0.png "")  
   
 alt text  
   
 为了测试这个，我们简单地注入了命令&telnetd;。这样做的原因是，我们可以从多个互联网资源中看到telnetd在设备上是可用的。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ZEkT0Rn34yFBMSdZDRhMFulrFdiao7FDMjaibov3ZQXSez1oUg4obj0F8KcmWicM9UhUkeznVAic4EU0UlYibriaFvqQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0ae61ce8cf36d9db70911335aa8d3c04f1fce8b85af6ad45818713468be6f9eb.png "")  
   
 alt text  
   
@@ -161,7 +161,7 @@ Linux 6867i 3.4.74 #1 PREEMPT Thu Dec 2 00:37:04 EST 2021 armv6l GNU/Linux
   
 这个服务器提供了许多不同的选项和功能，是一个很好的攻击向量的例子。然而，**所有功能都受到基本认证的保护**，因此对于未经认证的用户来说，似乎没有任何功能可用。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ZEkT0Rn34yFBMSdZDRhMFulrFdiao7FDMDBHkEV3Poy9X7FzcZTwV1UYZd5TRFwnG0BalRFEs17vPhbOyUfVjUA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d7aa455b8581b93b9ee6a17fb4bf0f466d85cf5fe5eabaf3f023c2ea2f9e058c.png "")  
   
 alt text  
   
@@ -307,7 +307,7 @@ STACK CANARY 未发现金丝雀
   
 1. 是malloc分配的（即我们可以在没有问题的情况下调用free）  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ZEkT0Rn34yFBMSdZDRhMFulrFdiao7FDMdAQaLDuUztQFwdBBg4tFcUmVVM56oyHDYxz0wy4XdicJlFone1ibDlJQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/28dc4f7da67d4e34ff8e71e12de48f53dd23b86c9463057f76417856d5eb004f.png "")  
   
 alt text  
   
@@ -357,7 +357,7 @@ file命令将加载所有二进制信息到我们的gdb实例。一些gdbserver�
   
 我们现在可以开始调试了：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ZEkT0Rn34yFBMSdZDRhMFulrFdiao7FDMdrD9Puap0OQahJJ2YVgYldD3SbbUxXGia90dFEldeWtCjicL9UzmfBrg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d3f0db676499204f69cde6c24477c54b49a08c989c7b480e7e28ddbb4f2c417b.png "")  
   
 alt text  
   
@@ -404,7 +404,7 @@ except:
   
 太棒了！我们成功控制了PC（EIP）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ZEkT0Rn34yFBMSdZDRhMFulrFdiao7FDMMEQ2Yg8tABwleOl1dib8PIGrCD63E5MibcicaIdSgIzbicwtiaiaAVjzBAQA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ab18d8cfa5b293d9675408c37f02162ff1bb8dc5a4c250daa9ce996d8ad09b64.png "")  
   
 幸运的是，二进制文件崩溃后会重新启动，这意味着你可以测试尽可能多的次数。（但如果你不修复MAC地址，电话重启可能会变砖。）
 

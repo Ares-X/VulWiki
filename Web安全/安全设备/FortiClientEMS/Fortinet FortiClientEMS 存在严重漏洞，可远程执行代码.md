@@ -54,7 +54,7 @@ source_status: "unknown"
   
 Fortinet 发布紧急公告，以解决 FortiClientEMS 的一个严重漏洞，该漏洞编号为 CVE-2026-21643（CVSS 评分为 9.1）。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zdwoicOrrJb1gD7weZOj9Tp5ibib5JyaehN8wiaBOFTECZVqafKp2y1ZXctXPicO9Ne8bicJfcpnX4mibqIiarQrdMMpFPBtNlnCeChfibhfast0Ww8c/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/709da93ea72906eaaca9a0a8090bbe2e9f83e1e5ea6339098385ab6b7a7adf2b.png "")  
   
   
 该漏洞是 FortiClientEMS 中 SQL 命令（“SQL 注入”）问题的特殊元素未得到妥善处理。未经身份验证的攻击者可以通过精心构造的 HTTP 请求触发此漏洞，执行未经授权的代码或命令。  

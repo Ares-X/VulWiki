@@ -50,11 +50,11 @@ source_status: "unknown"
 Superhero
                     Superhero  Nday Poc   2026-02-03 03:47  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkYN4sZibCVo6EFo0N9b7Kib4I4N6j6Y10tynLOdgov9ibUmaNwW5yeoCbQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=8n1b48rw&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/a186c4f5d9d52347540c4cbb93e8961b5ba9c0dd7f4fd061d48211661876676f.webp "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkhic5lbbPcpxTLtLccZ04WhwDotW7g2b3zBgZeS5uvFH4dxf0tj0Rutw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=vx7xykg3&tp=webp#imgIndex=1 "")  
+![图片](../../.resource/remote/77be41dad9935140a4007bdfffbddf41fc1a986a3fecd8c99e21852085b04197.webp "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCk524CiapZejYicic1Hf8LPt8qR893A3IP38J3NMmskDZjyqNkShewpibEfA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=x3261qcu&tp=webp#imgIndex=2 "")  
+![图片](../../.resource/remote/44ad08ffbb51946186bc46c860da341a77d976872c15eb51f56d078afe49905c.webp "")  
   
 内容仅用于学习交流自查使用，由于传播、利用本公众号所提供的  
 POC  
@@ -79,14 +79,14 @@ fofa:
 app="ilevia-EVE-X1-Server"
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLnsvtxQwJTHtGyS0iaB5L86EY06LN2V9npMWI4OGibsa9cYC6TM3IhloqAsUShbibsrVVRZ3Guibw5MA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d8fd93b1b918efec8e4df2d688d6dcdfedd98015b4dc8f6cd8e62bc8a1169afe.png "")  
   
   
 **03******  
   
 **漏洞复现**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLnsvtxQwJTHtGyS0iaB5L86J3OPusMF1dLJgwXCn1Dv26NichkPQZJMOMcfRwIecU1uRAYKXURmDBw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b769b93c9ff3be58c28506f76a2f2f20f341446b4e993a2815afc6578f4894ea.png "")  
   
   
 **04**  
@@ -96,11 +96,11 @@ app="ilevia-EVE-X1-Server"
   
 nuclei  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLnsvtxQwJTHtGyS0iaB5L86w1SpXvNasUyYsOcmqH3H4xAHQliafg4RMMpa4wGTaxcY4RWzK6zWvew/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d346c28d2a01c7b97e28516e1111db147143fcbc46b84fd44493cee21e66dfd9.png "")  
   
 afrog  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLnsvtxQwJTHtGyS0iaB5L86aafIFHMG3icFXXbn3AiaeZic4tU62XFOCQRmbTB7esZyDXIyXdW5Y24Vw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8541f9e7ef93f84a17d643ea337d69d743ec9721f9e08c04d4dc60d4dfa24f87.png "")  
   
   
 **05******  
@@ -154,7 +154,7 @@ afrog
 付款  
 前请评估需求，慎重考虑  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLbKcukWY8OBepTvE7jDLiaJl5niayVibQPWGwTYrrXfIxRLVRxgxzFIyOXYCiasTGCRsl2fzo08HI9lA/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=8 "")  
+![图片](../../.resource/remote/4428dc76d2c013f78f0daa13fca8f149630fb39b622693a7a86d07d5a844544d.png "")  
   
   
 

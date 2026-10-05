@@ -146,15 +146,15 @@ CVE-2026-45504 影响 EWS 请求处理过程中的安全校验逻辑。在特定
   
 360 漏洞研究院已成功复现 CVE-2026-45502、CVE-2026-45504 两个 Microsoft Exchange Server SSRF 漏洞，分别通过服务端发起远程服务器访问与读取 Exchange 服务器本地文件两类利用场景完成了漏洞验证。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/dZ7ia5iaWFzz9fwKyKnhtTjqjmtrx6tcFdd9Yt9e5aTaa7tcnlkCwIttsdVWoBMquG0ic8p1LOrv2KLWHGjkCehww3AcVxuHAD4YzU5Mia7XibxQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fd5b4ba0ef7e8b7c7aa46d2a46bc92e2bb842f6484e728c7bfec67882d69f704.png "")  
   
 发送 Payload  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/dZ7ia5iaWFzzic0cgN1MBA32byQpMSfP6IicT2aOFmFvegKDibQUibrABDibFSjkuMFnZMN2MFTE3W63cwGKBtjW1Tc3ibmBxd3EJXRcoygNuDUkVhw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3f8e8f1b1204d2d8f445b3768ae0ea422e45598570e0dc4d4f41331b89a56c25.png "")  
   
 CVE-2026-45502 Microsoft Exchange Server SSRF 漏洞复现  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dZ7ia5iaWFzziciasoorQkW0icuamrSarIgeyfaqFBNd6k8CGsHvRXLEQf3QBxQWWHW2ov5YkfB7NiakIXYu4wnobtZLhu8FxjC8y0C3gT0zcK85o/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9cdc310c9170dfa9087e84575d8d32057ca0cae8becbbdb41445b23ea6adceff.png "")  
   
 CVE-2026-45504 Microsoft Exchange Server SSRF 漏洞复现  
   
@@ -209,7 +209,7 @@ https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45504
 “扫描下方二维码，进入公众号粉丝交流群。更多一手网安资讯、漏洞预警、技术干货和技术交流等您参与！”  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/dZ7ia5iaWFzz8YToicKab1BicPnEdr7jiatvQUVWSMnYTBeG5ibibgxkGAG1rF4pUdpowPcCmokOO5tp4UjjhUsos4Zf4VwE1aM9NTUz3ogfgdwwFw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/efa33e0c5755999d7e950a6f035d0551872f4b1020f6bf761343227eb0b2f11b.gif "")  
   
   
 建议您订阅360数字安全-漏洞情报服务，获取更多漏洞情报详情以及处置建议，让您的企业远离漏洞威胁。  

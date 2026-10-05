@@ -90,35 +90,35 @@ https://cf-php.fearsoff.org/, https://cf-spring.fearsoff.org/，以及 https://c
   
 **阻挡页面（正常请求）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQoeiaJBO8SPLwUewZib7kbPN0czTtGWYjrkdNhkia0ibvhz99kbAciam4fJQ/640?from=appmsg "null")  
+![](../../.resource/remote/fb8d8193386cec6764a092ca6dd25dcd990e4f69847e083a7899c15e934089f0.png "null")  
   
 **自定义规则 - 拦截包含 cf- 的主机名**  
   
 为了演示，我们创建了一个规则，阻挡任何包含 cf-  
  的主机名。在生产环境中，许多团队会阻挡公共互联网流量，只允许公司 VPN 出口流量。此规则模拟了我们演示环境中的这种配置状态。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ2wDcA45qHURadeE8P8sFXxhZwx2wvZxiaYtX4vaf6s4wQQ5goFOosUA/640?from=appmsg "null")  
+![](../../.resource/remote/5fbc37b61cb1a7d4c8fcaab89fde9d01bf06a9dd299fec5e99f318841efab7cc.png "null")  
   
 **源站 404 页面（Next.js）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQxysTjIuEIUxBic2ibibkCJ7D7Mf5G02JGlpibNs4tLS4nrAe1e71gkkbAQ/640?from=appmsg "null")  
+![](../../.resource/remote/02694587a2a75e7c605d4a9910da9578698fc0e7008519c7665fde074f5b8494.png "null")  
   
 **源站 404 页面（Spring）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ2oRlTT4mJ5kNghkFgpBlB4Y31sqiaicvf8a8pTlxiadcP57wDMW6XWqKw/640?from=appmsg "null")  
+![](../../.resource/remote/260634678afefba8dc484c1fc7eefac9bbac67b18e3d83e541e962376f77cd82.png "null")  
   
 **源站 404 页面（PHP）**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ0RkE3SBFwaXTwib6vndcCmgHXK35LvVweBDJhLW4LIicg3dvIYiaRfWNQ/640?from=appmsg "null")  
+![](../../.resource/remote/cdc7a0eb6c39cd833316579ea4bc8e0c0d34ad1c9c227a847964c38be03058d7.png "null")  
 ## 五、我们如何获取一个稳定的挑战令牌  
   
 为了进行可重复的演示，我们需要一个不会在测试中途消失的挑战令牌。Cloudflare 的 **SSL/TLS Custom Hostnames**  
  功能允许您管理 CNAME 指向您域名的第三方的主机名和证书。我们添加了一个名为 cf-well-known.fearsoff.org  
  的自定义主机名，并明确选择了 HTTP 验证方式。下面的截图展示了添加流程和最终的“Pending Validation”（待验证）状态。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQia1Yl9byT9mJbovIaEgpejFEuEr1MhAEVDbdbELBkHCOoibrk0PqQbNg/640?from=appmsg "null")  
+![](../../.resource/remote/1d1b5bf2ee96b06d09c8a50c852a9722ff860fa4c47f46bd2cacf43993438c1d.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQJEqYV0NJyGX0AUY6iaOzwzlhmTGv6iaicVPibohP9iaehPqwCfl5JqyQzUw/640?from=appmsg "null")  
+![](../../.resource/remote/6135464a3e8cc1835b8057680a291ba3c51409136a7f59850b2df7153e6fcefd.png "null")  
   
 我们故意没有为 cf-well-known.fearsoff.org  
  创建 DNS 记录，因此证书签发过程将无限期保持“待处理”状态。在这个待处理状态下，Cloudflare 会展示验证机器人最终将请求的 HTTP-01 URL，例如：  
@@ -139,12 +139,12 @@ WAF 控制理应是大门。当一条维护路径可以绕过这扇门时，“�
 ），请求可以访问 /actuator/env  
  端点，并返回进程环境和配置信息。这些数据通常包含敏感值——数据库 URL、API 令牌、云密钥——这实质上扩大了对源站中任何错误的潜在攻击面。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQu3dljQjiaObmPHzJ0UAl2bal3tXwMv4De8D0ke3pkFhAg6xiaQ8e3oicA/640?from=appmsg "null")  
+![](../../.resource/remote/78fa631eee4aba941618989a8d4f0fabf75c69c9ffdcaebcee57b90c39acb02b.png "null")  
 ### 6.2 Next.js  
   
 服务器端渲染框架通常会将服务器派生的值发送给客户端，以便进行页面数据渲染（hydrate）。当 WAF 守在大门前时，这没有问题。但当源站直接响应时，同一个页面就可能暴露出本不应从公共互联网访问的操作细节。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQFrWrsPunWKljwkCUVZOZewq7L0tXicswHibnuWcwm8xV2EIo7ZkCKBiaQ/640?from=appmsg "null")  
+![](../../.resource/remote/76c13e65f81afdfd8f9e92f1dfb0a94800422a1949a92e1ca1943c8f367a45a8.png "null")  
 ### 6.3 PHP 路由  
   
 许多 PHP 应用将所有请求都路由到 index.php  
@@ -152,9 +152,9 @@ WAF 控制理应是大门。当一条维护路径可以绕过这扇门时，“�
  就足以证明其影响。在我们的演示中，即使是 404 流程也是通过 index.php  
  路由的，这就是为什么一旦源站开始直接响应，便会暴露出额外的页面。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQxnCLlpzwJiciapglpYZvGNI6LyTwVPIibxpANVI23jxEXyafcusnqEGtA/640?from=appmsg "null")  
+![](../../.resource/remote/973cadf592f79df26489bf59686ffdaeb798a764d8bcbf08404067e5c57a2560.png "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQKc3PuNFfoaVH9PrciaAI84u9q0oycasNHACnCTqRMhwGibX4icIz3XTtw/640?from=appmsg "null")  
+![](../../.resource/remote/ceaf2d3f790cb454434eca5236080eca19e7ac92605480eed2d8c0326d07b0e0.png "null")  
   
 这些演示是后果，而非原因。根本问题在于 WAF 在一个特殊路径上所做的放行决定。一旦那扇门被打开，源站内部任何脆弱的环节都突然变得只需一个请求即可触及。  
 ## 七、不只是 404——账户级 WAF 规则也被忽略  
@@ -237,11 +237,11 @@ SSL/TLS证书[8]
   
 如果此挑战被 Cloudflare 管理的证书订单使用，那么 Cloudflare 将在该路径上进行响应，并向调用者提供 CA 给出的令牌。如果提供的令牌与 Cloudflare 管理的订单无关，则该请求将传递给客户源站，因为他们可能正试图作为其他系统的一部分完成域名验证。查看更多细节请参考下图流程——其他用例将在博文后部分讨论。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ6nk1yTxqKQZGomUPET8JvUbw5LLcY2M9WGWFDRUYuuk2GFXntCpJ7w/640?from=appmsg "null")  
+![](../../.resource/remote/6a414911edb5694ebbb089c8ad10fc6bf7dedb341adfcdaa602e8a94e640960b.png "null")  
   
 （注：译者对其进行了翻译，见下图）  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQsF31tBWy90LtmTwm0CV9aPg4oXMmibemHXkFz1OdEK7n1xiagK5DHvog/640?from=appmsg "null")  
+![](../../.resource/remote/5d617164e2c3b4fdbcb42efe656accce106fe9d837a2174760ffe5aef4855e07.png "null")  
 ## 三、底层逻辑缺陷  
   
 发往 */.well-known/acme-challenge/**  
@@ -284,14 +284,14 @@ SSL/TLS证书:https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate
    
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQmxyKn5K5iaoicneo6AeolKtqFELBOnmvMLhwdibBDLBKsoAK9XVJmLBEg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/cad7850d1297bc1081b791f6640032e46e91c8b7a55f439a51f7f42a118a6704.gif "")  
   
   
   
 **交流群**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQJH7oybackjFVKYtmbrhicE6V505KU56vjwA3j6FKuCvRLAuTaqjzCKQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f143ba51fa85bda43178bbd586b4f34b7cfaff613c5e1d20b6e707844a555ba.png "")  
   
   
   

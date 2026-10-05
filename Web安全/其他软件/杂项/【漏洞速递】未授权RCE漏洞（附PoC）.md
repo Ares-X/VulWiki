@@ -61,7 +61,7 @@ schema_version: "1"
   
 本文主要教大家如何配置Ladon的INI插件，实现快速批量验证POC。该漏洞除了练手或提交SRC，可能没什么用，OWA登陆界面如下  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ESAML7BuCW4YiacmZnh0zcjCFGfthUeZe6KNAUMU4PU1XoJSHQQnGFghmZSicRDkkcvKIGqLDAYCnG7Gt8Qewbxg/640?wx_fmt=png&wxfrom=13&tp=wxpic "")  
+![](../../.resource/remote/15e88a73258ee19602a1815a064976de1b72e4c8ced46139f63d2b006932bb7e.png "")  
   
 **Ladon插件 CVE-2022-24637.ini**  
   
@@ -79,15 +79,15 @@ log=true
 Ladon url.txt cve-2022-24637
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ESAML7BuCW4YiacmZnh0zcjCFGfthUeZenBoaaQ0QjkrQibibYf3jOT3le62CnYHy07NzDIRC96X385BE03ENEesA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/8126eea539c530e6de759037b44d716c26b8fedeb60c8bef40fa22667de50c9b.png "")  
   
 由于本地没搭有环境，EXP也是github上找的，并不知道成功是怎样的，所以没有重定向，先让Ladon跑一些URL，成功如上图所示，检测出漏洞时同时返回密码HASH，当然也有一些有漏洞但无法获取HASH的。重定向后，稍等一分钟，就自动获取了12个密码。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ESAML7BuCW4YiacmZnh0zcjCFGfthUeZeIEmUJVfMcVvCfYjDXd559YtNLoH0wE5XMvXfF60963vWKosia6icmAPg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3cb5952b1d88348006efa97573a45b0486edf6f1533dc2b121fffef86f22f1bf.png "")  
   
 查看密码对应URL，再使用EXP写入webshell  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ESAML7BuCW4YiacmZnh0zcjCFGfthUeZe7ia77w2k1UJibwuQ394WiatthaYZsH27SMJOtD0ib4RkZncHLMGXBahTHg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/234107c7460d3691b0b1886b66c52d8b354fd5967f150be3451fcfbd2aa801c7.png "")  
   
 **批量GetShell配置**  
 ```

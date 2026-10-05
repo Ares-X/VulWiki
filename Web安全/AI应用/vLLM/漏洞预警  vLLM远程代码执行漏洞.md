@@ -56,7 +56,7 @@ schema_version: "1"
   
 vLLM是一个高性能的大模型推理框架，专为大规模语言模型的高吞吐量、低延迟部署而设计。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SW9BialdxKvN1AlcuDRdaLCe2sca1VJ7fwzmrhyCfwW38V19sDxZvb6koPyUBGV4ykqrKucZrRwSMg/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=0 "")  
+![图片](../../.resource/remote/ec6cc3ac4a21e91e209ebced5e3fcb7f9e42fa0a8f160d5cda51bc06cf44a1aa.png "")  
   
 **0x03 漏洞详情**  
   

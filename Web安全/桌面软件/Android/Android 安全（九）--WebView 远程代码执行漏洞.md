@@ -139,7 +139,7 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 ```
 
       利用后的执行结果：   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbDjZfVn0fCOXks02TnNNTXNKXo8niaY13VsuMhYypFLJ6m9CxviaABV1A/640?wx_fmt=jpeg)  
+![](../../.resource/remote/f3c6153203fcf08515948b010f5f4eae2911e894dc41710c26923cf37e6a8972.jpg)  
       3) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令，达到反弹一个手机端的 shell 到远程控制端的目的：  
       EXP 的 JavaScript 代码：  
 
@@ -158,7 +158,7 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 ```
 
       执行后的结果：  
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbCwQFtrwUpmsibaFo9tPchibsUPGIlE7MUOHG3BClF78NuCFVcicvtia7xA/640?wx_fmt=jpeg)  
+ ![](../../.resource/remote/f8f2b60c680fc569acd63cc9735f24df6b7fd7e0419d5ef1e8a46b0047b17e50.jpg)  
       4) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令进行挂马：a 安装木马应用 APK, b 安装执行 ELF 可执行程序；  
       简单的安装发送短信木马 APK，EXP 的 JavaScript 代码：  
 
@@ -180,9 +180,9 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 ```
 
       由下图可得知我们已经拼接成了一个 APK 程序，并伪装成一张 png 图片：  
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbHYfcViaEkMzWicEdzHAjjRCcyLuIqNlN77FYLtpjtalbv0a1BW8nJEhw/640?wx_fmt=jpeg)  
+ ![](../../.resource/remote/e5557c7dad856fbf4832c1c283560af4522deded768d71df8e9b1359a2e0194a.jpg)  
       由下图可知，我们已经成功安装 fake.png APK 程序：  
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbCwj4qzZ5uERCzqSVt75Nv0YGrVtfXIm3gz5pGhr8Ut5Zzu5wtYHy4A/640?wx_fmt=jpeg)  
+ ![](../../.resource/remote/26c81a917f367c39df56b590235136184ef650c17a20275ba06ea51a68072642.jpg)  
       例如网上流行的 Androrat 远程控制程序，攻击者利用上述漏洞即可简单的安装此远程控制木马应用 APK 即可达到远程控制用户手机的目的。     
       利用漏洞拼接可执行 ELF 程序，并执行该 ELF 程序达到为所欲为的目的，博文 Abusing WebView JavaScript Bridges【3】还实现了在非 root 情况下利用 ELF 可执行程序偷取 sdcard 的文件的 POC，由此可见，该漏洞的危害性极大：  
 EXP 的 JavaScript 代码：  
@@ -206,11 +206,11 @@ EXP 的 JavaScript 代码：
 ```
 
       “testBin” 文件已拼接生成，如下图所示：   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbPz9Cm82Y670WnoLDvZ7bx587UTgI6c8TSvibWG573UL710d5tl8siaGA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/8cd012a8667834f29c90c4cbf45e31dca845f74686cb46bef66d9f30f55a991e.jpg)  
 
       执行之后的结果如下：
 
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbULX3HXpLI8petia1EkZSqibPe3Rnuib68pLwlddajshLrjH3SXpmACFaA/640?wx_fmt=jpeg)
+ ![](../../.resource/remote/964fde7100bd0625a8f361df2031332ffbd40ec08ddbb3d9a98ea728141427f1.jpg)
 
 5\. WebView 远程代码执行漏洞修复建议
 ------------------------
@@ -235,13 +235,13 @@ EXP 的 JavaScript 代码：
 removeJavascriptInterface("searchBoxJavaBridge\_")
 ```
 
-一如既往的学习，一如既往的整理，一如即往的分享。感谢支持![](https://mmbiz.qpic.cn/mmbiz_png/p5qELRDe5icl7QVywL8iaGT0QBGpOwgD1IwN0z9JicTRvzvnsJicNRr2gRvJib6jKojzC5CJJsFPkEbZQJ999HrH5Gw/640?wx_fmt=png)
+一如既往的学习，一如既往的整理，一如即往的分享。感谢支持![](../../.resource/remote/211037d888200d42b1eb92ffae26ff2b5a153b59d9a19cb43050f2ade6207c93.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ffq88LJJ8oPhzuqa2g06cq4ibd8KROg1zLzfrh8U6DZtO1oWkTC1hOvSicE26GgK8WLTjgngE0ViaIFGXj2bE32NA/640?wx_fmt=png)
+![](../../.resource/remote/d33c3dc0950d060e5b2763a7365bc9a0bac867bc82a56cc98c4e2a73a642f93c.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/x1FY7hp5L8Hr4hmCxbekk2xgNEJRr8vlbLKbZjjWdV4eMia5VpwsZHOfZmCGgia9oCO9zWYSzfTSIN95oRGMdgAw/640?wx_fmt=gif)
+![](../../.resource/remote/5afbc966f02ec2803e5ae20f3b923894aa50736164b652f7d3d36a79a0624274.gif)
 
 [app 安全之反编译（一）](http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247493235&idx=1&sn=39a28e6b6be63621faba9893bc3549a1&chksm=f9e38928ce94003e8a6fcb2253dfc26276075b3d047600e03ebbc6588d07c0535c23c31e9fda&scene=21#wechat_redirect)  
 
@@ -265,9 +265,9 @@ removeJavascriptInterface("searchBoxJavaBridge\_")
 
 ****扫描关注 LemonSec****  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/p5qELRDe5icncXiavFRorU03O5AoZQYznLCnFJLs8RQbC9sltHYyicOu9uchegP88kUFsS8KjITnrQMfYp9g2vQfw/640?wx_fmt=png)
+![](../../.resource/remote/7711365a57d0a4d227d7f6b3106bdeae9efe7d40b623b7addba9fd960aae9bfd.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/p5qELRDe5icnAsbXzXAVx0TwTHEy4yhBTShsTzrKfPqByzM33IVib0gdPRn3rJw3oz2uXBa4h2msAcJV6mztxvjQ/640?wx_fmt=png)
+![](../../.resource/remote/c205e03e37d6592c189ef998b95ed94833c6177a7d4ba9940a5d3bc204920123.png)
 
 ---
 

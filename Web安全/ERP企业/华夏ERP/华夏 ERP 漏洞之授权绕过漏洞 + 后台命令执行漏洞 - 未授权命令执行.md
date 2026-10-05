@@ -111,13 +111,13 @@ schema_version: "1"
 com.jsh.erp.filter.LogCostFilter
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1lulNzv5KRpVwJSVicg7fDNmibfiaACCKhibngoicFWgRJR5DeaYWfiaiakibBw/640?wx_fmt=png)
+![](../../.resource/remote/ec617e242f3176f8abee6914b7275ae7303ceab2d5f81bbb614eb6e746e060ad.png)
 
 其中值得关注的是 ignoredList，如果 url 中存在 ignoredList 则不需要认证。
 
 我们去寻找 ignoredList，发现它在同一文件内，如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1oNuXzoUPtOslQvkiaIOJg9svB8ynC5N80PWAm0WwvNsMAjYd7QwB33A/640?wx_fmt=png)
+![](../../.resource/remote/4a96fed34dadc934b4ede44132667d858eac9b281b7bf09aefc9567b19bea18e.png)
 
 可以看到匹配的值为：
 
@@ -133,7 +133,7 @@ com.jsh.erp.filter.LogCostFilter
 
 如未登录查看系统配置：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1AZnXKmRytNy5nmnwyN5roTvW2IlJ0GFzQibH3M0FeeqYqM0uUzBXV8g/640?wx_fmt=png)
+![](../../.resource/remote/9aae5774687c703994d8f73c6fda9d82662cd895ab4b0456578d1880ac3de55b.png)
 
 以上数据都为测试生成的数据，为虚假数据，如有雷同纯属巧合
 
@@ -185,23 +185,23 @@ com.jsh.erp.controller.DepotHeadController
 
 pom.xml 文件中引用了 fastjson，且版本为 1.2.55  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1WyEC7eKX1f1ZqLwZyIBKMcEf4zfRPk5WnRKTnz1CXqiaglgEtPwc7Dg/640?wx_fmt=png)
+![](../../.resource/remote/af5d1c868bdb97df01278f051e365674a671685dab9bb4ddebe183dfd283b7dc.png)
 
 查看代码发现 com.jsh.erp.controller.DepotController 存在反序列化
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1E2N9U6NT4YvEHeab9Vqk9uu9xicLFUVpZ80zerTfiaSicFqyP6oia5xzFA/640?wx_fmt=png)
+![](../../.resource/remote/1f0acdfdf117ff18ead6a38f8aacbbfa683ed1eb72ba87c4732a5a4867e79f03.png)
 
 但在靶场站点未找到该接口，推测靶场站代码未更新，发现流量中存在另一个使用 search 参数的接口，进行反序列化测试：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1OUTXicM95CXMicg3tpucqzQZ6a8JkLKFB5zovH1rrqib2FeuxmjkPgG9g/640?wx_fmt=png)
+![](../../.resource/remote/bfd09c3d37d568444b46cffaebf354ea8a667cc767284c6d068466cee4c90a94.png)
 
 对了要 URL 编码一下。。。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1cQQlsibC7weuRfXcHxYcvYaQ2AGQial1NXje3icyvxCjibJibysLjryzLGA/640?wx_fmt=png)
+![](../../.resource/remote/d4d74eeab2b84beb988d4064828e5cd519f3e227501ea15a603d41efc1c8587f.png)
 
 接下来就是见证奇迹的时刻，dnslog 收到 dns 请求！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn169oG7ibicZvvnuNToAj3iaXoOjf04yZicHRibe2f9fMR9hqbWdyzj5Rmiacw/640?wx_fmt=png)
+![](../../.resource/remote/d471f26666b0449e49ceee31f1616593f7e34622870f298a299d52f456532e8a.png)
 
 三、组合拳 - 未授权命令执行  
 
@@ -209,11 +209,11 @@ pom.xml 文件中引用了 fastjson，且版本为 1.2.55
 
 很简单，就是两个漏洞合并一下，如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1CP9YjJibpxp9U0Hq3GfGANLNQofDQJzjtBh49VHU3XaibXyqxYJrsib4w/640?wx_fmt=png)
+![](../../.resource/remote/1462fd2e24065865dbf2c8276395cb45abe2f012f5df79d69a148921b378d24e.png)
 
 可以看到我是没有携带 Cookie 的，dnslog 依然收到了请求  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1E0Oo36VuxIf469XCMEsPypJmmrP1akRTpw2RlpIQ4hZ7E0icOCGgyiaQ/640?wx_fmt=png)
+![](../../.resource/remote/7fe0a71c467360665567c549e5f3a36015a4ed772b2c534525a7062772417e6f.png)
 
 组合拳的 POC：  
 
@@ -258,13 +258,13 @@ main(sys.argv[1],sys.argv[2],sys.argv[3])
 
 最后再给大家介绍一下漏洞库，地址：wiki.xypbk.com  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1GjZWV69BXhbVdDPh2GNcQzoTyXn20iaOhsIGsxPPicJz6u7Rkq5weKmQ/640?wx_fmt=png)
+![](../../.resource/remote/f441435c425c073de3003c2ada025189291166f71165e8096503acb35e801735.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1vUPmy8nUyUcxBicqJEtxo3ib4YzTQQEWd5cotecmuB0pZy4AKgAdhapg/640?wx_fmt=png)
+![](../../.resource/remote/7210ad732d40f6018a3c3546c6c8f677ddc9a5e9c9689de960e43105a3f1491f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1SjnVpDzicoVx6nMShk1Ou1jtKYYicsvNHt3DCWZnM5bvTnW56wcFwD9Q/640?wx_fmt=png)
+![](../../.resource/remote/fe77202c8dba688b8b104ca7f3453aa0058406b081353419d7140e5241765e8d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1Hxk0rhBSk7Oib2ZiafD0w9T9YBDffv171WjmnvFxlktv5UZiahYwytZ7w/640?wx_fmt=png)
+![](../../.resource/remote/ea640a79c5b1f90cd3cc504868da75fea23d132c0bf2f4a85c27b2620272d39c.png)
 
 本站暂不开源，因为想控制影响范围，若因某些人乱搞，造成了严重后果，本站将即刻关闭。
 
@@ -276,21 +276,21 @@ main(sys.argv[1],sys.argv[2],sys.argv[3])
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Yzhia63knJ4QJFvO4WBfd6KQazjtuPC7uqNBt5gE06ia7GjOVn2RFOicNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/edbe746b63d462b8264c4cdc8bdb6f3eea3031d4a274e271cfb03ab17b8f24e3.jpg)
 
 扫取二维码获取
 
 更多精彩
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TlgiajQKAFPtOYY6tXbF7PrWicaKzENbNF71FLc4vO5nrH2oxBYwErfAHKg2fD520niaCfYbRnPU6teczcpiaH5DKA/640?wx_fmt=png)
+![](../../.resource/remote/ab6c5ecbc93adc192adef1b7c05ca25153b4fc3f9c4963f72d75fa0a3aaee299.png)
 
 Qingy 之安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
+![](../../.resource/remote/7b68c0062559511a9826e83699fc6bc7773c7080beb677ea03e8c7544a564dd5.png)
 
 公众号
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
+![](../../.resource/remote/8e57ad757dd628c11c5d5fecfeb91ca234ca60712b2f65d6b1294044233f5a75.png)
 
 点个在看你最好看
 

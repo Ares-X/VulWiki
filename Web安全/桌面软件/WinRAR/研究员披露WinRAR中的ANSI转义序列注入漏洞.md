@@ -59,7 +59,7 @@ schema_version: "1"
 近日，安全研究员Siddharth Dushantha发现WinRAR这款流行文件压缩软件中存在ANSI转义序列注入漏洞，可能被利用来欺骗用户或是导致系统崩溃。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8Gia7p0Adib7Vc2ajS825U9iaquhJDfDL3Q0TVb2gtxOAodRUjXhOCQXJDj2GeVRYZZ06wrUCF6o807w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/164e962a323ed829937fd7271323d875ee933bab053e18705bc11ff8a30244c4.png "")  
   
   
 该漏洞（Linux、Unix系统：CVE-2024-33899；Windows系统：CVE-2024-36052）影响早于WinRAR 7.00的版本，允许攻击者使用ANSI转义序列伪造屏幕输出。问题源于WinRAR在ZIP存档中未对文件名进行适当验证和清理。当使用WinRAR提取特制ZIP存档时，该应用程序无法正确处理转义序列。相反，它会将其解释为控制字符，允许攻击者操纵显示的文件名，并有可能欺骗用户运行恶意文件。除此之外，特定的ANSI序列也可以在系统上触发本地拒绝服务，使终端无法使用。  
@@ -90,24 +90,24 @@ schema_version: "1"
 ﹀  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/067b16256e0ba673a1adf65d982af935c9dacaa6db0fe2765439200e9725754c.jpg "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8E9S6vNnUMRCOictT4PicNGMgHmsIkOvEno4oPVWrhwQCWNRTquZGs2ZLYic8IJTJBjxhWVoCa47V9Rw/640?wx_fmt=gif "")  
+![](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif "")  
   
 **球在看**  
   
 ****  
 ****  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/1UG7KPNHN8FxuBNT7e2ZEfQZgBuH2GkFjvK4tzErD5Q56kwaEL0N099icLfx1ZvVvqzcRG3oMtIXqUz5T9HYKicA/640?wx_fmt=gif "")  
+![](../../.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif "")  
   
 戳  
 “阅读原文  

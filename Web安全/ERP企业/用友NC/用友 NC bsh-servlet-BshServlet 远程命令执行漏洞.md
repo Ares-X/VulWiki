@@ -49,9 +49,9 @@ previous_fofa_unverified: "icon_hash="
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/FvqC1I_G14AEQNztU0zn8A)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -69,7 +69,7 @@ FOFA: icon_hash="1085941792"
 
 **访问页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4lnhQIaJmttclv4dRBhmx5OXia3OuCBZ8K5Vgfdh8T5Q5RJvwsYAv7QJlGHFV8tLCLGyV7nzR8PFg/640?wx_fmt=png)
+![](../../.resource/remote/e0b0ad54fecf39798ca1eec6b6ac9396ec05b3db8f3c98c73eafa4b6a805ce6d.png)
 
 **漏洞 Url 为**
 
@@ -77,7 +77,7 @@ FOFA: icon_hash="1085941792"
 /servlet/~ic/bsh.servlet.BshServlet
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4lnhQIaJmttclv4dRBhmx53yfqX114sCTNAicMiafQvRnsibyJOviaDp4fFONZj6elbcPQgFhsOVlNAw/640?wx_fmt=png)
+![](../../.resource/remote/4c53b29f8800bd89e2a8e2995447d6da1031e72380579acf247e3bec3763c9da.png)
 
  ****四:  关于文库🦉****
 
@@ -89,7 +89,7 @@ FOFA: icon_hash="1085941792"
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -106,7 +106,7 @@ FOFA: icon_hash="1085941792"
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

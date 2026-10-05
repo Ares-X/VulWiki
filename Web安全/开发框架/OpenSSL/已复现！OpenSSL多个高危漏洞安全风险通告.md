@@ -60,7 +60,7 @@ OpenSSL 是用于传输层安全 (TLS) 协议（以前称为安全套接字层 (
   
 奇安信CERT第一时间分析并复现了**OpenSSL远程代码执行漏洞 (CVE-2022-3602)**，复现截图如下:  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs49vXGibPBYEssNog2hTiaTZe3p3AQRsOT7Gmpzs3QqK3SaJZ9B5bZBwxLf3pXvSVYiaWUa9GXO847E4w/640?wx_fmt=png "")  
+![](../../.resource/remote/308f10c094fdcbc88c77049b7a1b452e6aa3403b9aa2c876ccbab283b142498e.png "")  
   
   
 威胁评估  

@@ -126,7 +126,7 @@ public partial class hello : System.Web.UI.Page
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEbtHiaicJvOMne1duibJnbWmYV62lIwR7J7n1cZ0WggfHtpsUZXH8pNs4g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/73753cf86710e458e3b4df5bec1e5ffa739b172add5fded0f627151f0c96e576.png)
 
   
 
@@ -144,7 +144,7 @@ enableViewStateMac=false，viewStateEncryptionMode=Always
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEOWKAEqMCkS5fIlRPuCPEecpsspBicXjw02GZUnDicSAH8KIKZUN62cvQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/329bbce3e4d578f195ca0cc1b24726356823b72a33621f948811a1b2754ff6de.png)
 
   
 
@@ -154,25 +154,25 @@ enableViewStateMac=false，viewStateEncryptionMode=Always
 
 访问目标网站的一个页面，打开浏览器的开发者工具，查找 HTML 源代码中的`ViewState`字段。通常该字段以`<input type="hidden" >`的形式存在。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEVfhCGduFreXyzzx1jGBNm1zxarpibSNg8Phb8wyuSlsYTUG7qmKywPQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/32339bae1185f1a294310b6d86c07291fb1781bee58b7fdb2781f83ae43f5a04.png)
 
 **ViewState 插件安装：**
 
 viewstate-editor 是一个可查看和编辑`ViewState`的 BurpSuite 插件，低版本 1.7 默认自带该插件，新版 2021 需在`Extender`->`BApp Store`安装（**注：**安装不了时需上墙安装）。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEdIiaEb05Dv92OVejMNRI2I9d9j3wPCx8eEyF55QWKLEBw4Fk2cXJOlg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c638264b6a3919df396646e4b33132a716867b3284433c189765e87b97ff109a.png)
 
 **ViewState 插件使用：**
 
 BurpSuite 设置好监听并开启抓包，访问测试地址 http://192.168.1.110/hello.aspx 提交数据包，然后点击这插件的`ViewState`，如果是`MAC is not enabled`说明`ViewStateMac`已禁用。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEcU3rhE8icJAqmO3ib25W4ODlzcO4w7sDm6Krlq2XGU9QAaGqkCHjdLiaA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ff939edfaa15c136ecaadb56a33b5281c3b17acd84ad9323920528ad9fdcd8a7.png)
 
 **解码 ViewState 内容：**
 
 ViewState 默认是`Base64`编码的字符串，使用常见的工具（如：BurpSuite 的 Decoder 或 Python 脚本）将其解码，得到序列化后的对象内容，如配置启用加密后则需要 Key 才能解。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKE2SDgqbqEHdjRYts9YiaDOBGxHE4HMibLmdlDx0icz6WJm4Al7Eer5EpBw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2786b17add29261d0eacec4e21c7098aa175c0b2d9ee19004490923f601c7904.png)
 
 **0x03 攻击过程**
 
@@ -204,7 +204,7 @@ ViewState 默认是`Base64`编码的字符串，使用常见的工具（如：Bu
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEpdId3Bh9RBibgDbreFg7JbZunZib7LXsQ1uu5vmEA0ic4vNT43JurmiavA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5cecd7b8612a3f0b468c1c5fa475ada0690e2175f2b2ead91fc1247cb59f0417.png)
 
 利用`BurpSuite`或`Postman`工具发出修改后的请求，观察是否可以通过篡改后的`ViewState` 提交数据，并成功反序列化执行。
 
@@ -222,17 +222,17 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f LosFormatter -c "echo 123 > C:
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEsfYOIquZsjOibONMqicMovrmt2SHbTSjvsnufENeVRqPu0weEiafn3dEQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/f3fcfe7cf8789cf89871c9288fef5e5a23c5f32a56b80a3405318047ae4d53ad.png)
 
 **替换 ViewState：**
 
 将生成的载荷替换原始页面的`ViewState`字段，然后将整个请求通过 HTTP 工具发送给服务器。此时如果服务器的`ViewState`签名和验证不安全，则会执行恶意对象内的代码。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEwfCdwvDicPBq22kHsZFIP1mIB4ywQ5cKaNOdicW68aggnPX8jjDWmD7Q/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9cd39bc1440f6b87cc81b8cc63d677547514628c7a28c97c0da7464b378d45cb.png)
 
 如果使用生成的恶意`ViewState`载荷成功进行反序列化攻击后会在`C:\ProgramData\2\`这个目录下创建一个`testing.txt`文本文件，其内容为`123`。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEKFj0QKcqADTwSZ7hibvLcLZHHgHko9IIDh8FVKXQP6JAXlU5F8S5Pkw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/e54ff6e976208d8c45c3bcd7404e2c1e2453d1b3ecd48eb86b7645766b431557.png)
 
 **第三步：利用提权**
 
@@ -242,7 +242,7 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f LosFormatter -c "echo 123 > C:
 
 这里推荐下 @Rcoil 师傅的`SharpViewStateKing`利用工具，已将`ViewState`反序列化的多种场景实现自动化，并且完成了命令执行、文件管理以及. NET 内存执行等常用功能，我们可以使用`Load Assembly`加载`.NET`土豆提升权限。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEUCWmp8ia0JbNcrLwkpanKIh5GEwQoycAR6wkTpeXh0jJnvDMxiaaYOkw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c268b9cdb65664d21be002bec47ac1362fcb275a876b101096ba24d8191789fd.png)
 
 **持久化攻击：**
 

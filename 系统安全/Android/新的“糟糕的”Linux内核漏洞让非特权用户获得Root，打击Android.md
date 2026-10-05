@@ -57,7 +57,7 @@ schema_version: "1"
 HackSee安全团队
                     HackSee安全团队  HackSee安全生活   2026-07-06 07:42  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/oPZcPicUADs9ibQfTThibMYCkpqqIicCYt4S4ib8ibHAmDW6CZ4gmDNmQlSnBiaq54feOiaibcZ1gbHXNVXuNic6ZywTEWnQ7jWxc1VKtap5yBDYLcdlk/640?wx_fmt=gif&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/53165aac60946fa4e7188878373292c68be9e74f30a14ab957ba200589f9c9ba.gif "")  
   
 最近披露的一个名为Bad Epoll的Linux内核漏洞（CVE-2026-46242）允许没有特殊访问权限的普通用户以root身份完全控制一台机器。它影响Linux桌面、服务器和Android，并且已经发布了修复程序。  
   
@@ -82,7 +82,7 @@ Chung将该漏洞作为零日漏洞提交给b谷歌的内核ctf程序，完整�
 Anthropic曾单独表示，mythos发现了Linux内核特权升级的漏洞，尽管它没有公开将这项工作与Bad Epoll联系起来。找到第一个bug是一个真正的结果，因为竞态条件bug是出了名的难以发现。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/oPZcPicUADs9hGlEdqpnYI5Tia6hIRdib6ptpibDrOr6Jl5Ijh7LdianWJB5MnqcAEgl5IicTicu9mm4FGpffoibxibmTevBqGHiaibGbLV6BpibxbmxmGk/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d8873b5252255b7495787c1725f7b787708989b5ac6d976259c0a06c5b01454d.jpg "")  
   
 那么，为什么同样的人工智能没有发现同胞缺陷呢？Chung提出了两个可能的原因，并谨慎地说没有人能确定。  
 - 首先，时间窗口很小，所以即使盯着代码看，也很难想象事件的确切顺序。  

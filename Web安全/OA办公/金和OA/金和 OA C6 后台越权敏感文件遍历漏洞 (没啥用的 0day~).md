@@ -46,7 +46,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/90HM3LqODBN35iqRBRE1HA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -60,21 +60,21 @@ schema_version: "1"
 
 **登录后点击信息交流，发起协同页面**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE81lTSgMMVhy6ReN0Lyt8giaKYFxhvKUic2icCGEOkSmxKA1FPjwKDMQ0xg/640?wx_fmt=png)
+![](../../.resource/remote/ff219f345ca0f0e7793ea85a34982e61a4f3e9f9fc70ce9d9941bf33761a1318.png)
 
 **上传附件并上传发送给目标**
 
 **这里登录权限为管理员，我们自己发给自己就好，前文只是展现漏洞挖掘思路过程**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE83DzIqZ6Wbd9gkT8LtOB3MCbMnibfianzgVZR8oCP2TPg5ThF315hcywQ/640?wx_fmt=png)
+![](../../.resource/remote/3f1b00b30111b790565e05ea7be9eda910e865d883570b3f7459c30a5307344d.png)
 
 **成功收到上传的附件**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8RCz7Vlyty8NMRsmZaPHiapoKTIl0UbREoauEW6OvIKvTnz6xCpXlGVA/640?wx_fmt=png)
+![](../../.resource/remote/229e585f5de1bf20547395e3f62af6e6347515001d90cbdd44214828f328f73e.png)
 
 **点击查看时抓包，发现一个带有文件 ID 的请求包**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8GZyibbvH1ZcGksYutiaGrbr3ZDStCymUCXQkHlUxOXgJ4t4kPGahlmbw/640?wx_fmt=png)
+![](../../.resource/remote/69ca8ac1d56fbc084342b6ed2b1724833f86f1677f88d7c7f4aa1b729bdd7df5.png)
 
 **返回了几个参数**
 
@@ -91,7 +91,7 @@ var MD = '';
 
 **其中我们注意到 strFilePath 为文件的存储地址，我们更改 id 参数为另一个值，且测试后发现 name 文件名参数无关紧要**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8XZbeIibBXyKvpr0FQliaSyW0MiaNyJicnAPP7libC5hy7sJgmO89GERibItw/640?wx_fmt=png)
+![](../../.resource/remote/d52e60522387259b10724dcfb88b12d02ccd455e974c9a176b6dfe976a4acfb1.png)
 
 **更改 ID 后发送请求包发现获得另一个文件的信息**
 
@@ -101,19 +101,19 @@ var MD = '';
 http://xxx.xxx.xxx.xxx/C6/control/OpenFile.aspx?id=1200&name=&type=pdf
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE81gjFPdWwrZBqxVmksGJ2yB6DRwk35qZStjicuicUZp5DDFcsLxGR8tgQ/640?wx_fmt=png)
+![](../../.resource/remote/6bc3f5157d5ff996016660ef3ae676a37e6a153b5869c591adee9e70a999932e.png)
 
 **这里更换一个普通用户测试是否可行，尝试遍历 id**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8MtWRKdbSB0euicFwsahVqVXOonjtNvmjY08E2UuRsJjgQe08DHQkBVA/640?wx_fmt=png)
+![](../../.resource/remote/25e154083ebaa66fe5e7365f671432c7e019e691aa5c2b3841f33c2688295583.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8moxMia8nNAUHbwtialrfLiaOo5ZgkOrGpFskNQia50RV6YuqoUTHlPicBHw/640?wx_fmt=png)
+![](../../.resource/remote/b3e2e2ef37a10ef23d10ce5a86d1b94cb6de8d15645b2239d9c0dbc8a7625229.png)
 
 **存在 **strFilePath 参数** 则是存在文件，为空则是文件已经不存在**
 
 **同时抓包下载文件页面也可以看到可获取的参数** ****FileID 与 FileIDCode****
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8GETdfeqB4mlBYppx2kI48zFrpClGyPaozgUuJZ6XKqqdA9nAibzlQCg/640?wx_fmt=png)
+![](../../.resource/remote/b9a85a9321a0092975417f3dc02e5f16d20ffde8b02f4b0dec5ab0fd62cfee7c.png)
 
 **于是只需要通过刚刚的 ID 遍历，获取两个关键参数就能下载其他人发送的敏感文件，且只需要普通用户权限**
 
@@ -180,7 +180,7 @@ if __name__ == '__main__':
     POC_1(target_url, file_id, cookie)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8dsvhF7kytMNZGyREG9Uia7R8BxlAUv7gFZCxicNJia3ZJAxRv4XCZoiaNg/640?wx_fmt=png)
+![](../../.resource/remote/0b1cb6f7e9209b23ee2515e18425d86ce953696543a86528fcebcbfbe6247caa.png)
 
  ****五:  关于文库🦉****
 
@@ -207,11 +207,11 @@ if __name__ == '__main__':
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8XYThWYX7FkzmperVYOAZHCgj1U2LkYZCIeu3b8wk0hGnziamefb5h2A/640?wx_fmt=png)
+![](../../.resource/remote/c3677e8766ca6b035226cc31c68c80d727f0a90a30e64af46a958046afb26fba.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuCFdyVD9UlKcV0COuXd5oajiacmB5LB71gLdCaEhRaiaicMTS8oq55s9pA/640?wx_fmt=png)  
+![](../../.resource/remote/3914e71324224f4bac05f0dc2326c9432c42e6b795e6d4f34e56a2e8f7306936.png)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZu0SvJFXqSugecfEnJujNOic73ouoGndJPRvezpAstLqLJDqe6JqJsf2Q/640?wx_fmt=png)
+![](../../.resource/remote/f35ee01effbbc009d67ee0ea679f43bd06adb2af75da7958bf86f4b0acbaee1c.png)
 
 ---
 

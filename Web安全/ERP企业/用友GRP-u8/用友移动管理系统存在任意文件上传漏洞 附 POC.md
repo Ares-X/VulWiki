@@ -77,7 +77,7 @@ CNVD 编号:
 
 用友移动系统管理旧版本 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUFPnmrchcPr8s2W0LvyJhyKCgdFXibhxnuic26cf3FaTyyMIVNV051avw/640?wx_fmt=jpeg)
+![](../../.resource/remote/e2da776116d6535f742ff0fb387408f6384b518297c161a419b4ed8fd37349e2.jpg)
 
 4.fofa 查询语句
 -----------
@@ -116,26 +116,26 @@ Content-Type: application/msword
 
 如果返回字符 {"status":2} 证明上传成功 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUoCMBopmVILXeV7Sg5OyuhxG6qZfgwHw63fMqvqgyGlRgeLiaNAexdcg/640?wx_fmt=jpeg)
+![](../../.resource/remote/fb3842defc9ccc639af1f8ad9df44c76e83f815b8e0a8fb74202691281288461.jpg)
 
 上传的 shell 地址拼接：
 
 http://127.0.0.1/maupload/apk/59209.jsp
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUjrfu11SGJTmdY3MW3vLVtsxGbicoVu9sYEf7a86hxkqibTq9NIdf6TfQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/64272b214e5d09567ee38bae69f1d98e281708365c8342964b44bca9985829da.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号  南风漏洞复现文库 并回复  漏洞复现 56  即可获得该 POC 工具下载地址： 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUAt9L6sWCuD8QPJLgLhlyKk90icKZhXqSbp3yPcBcc1VWTTJHS7CfaJA/640?wx_fmt=jpeg)
+![](../../.resource/remote/3367eb3c9567eff130f99985e253dab6476703898f1fbc9469b5ebe891d84edf.jpg)
 
 本期漏洞及往期漏洞的 nuclei 批量扫描脚本已经上传知识星球：南风网络安全 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUPFbD0Vt8PR7fLRkdRKqdNRhKSUYBHMQD3VmGhlmlzew9icVLktdWzvA/640?wx_fmt=jpeg)
+![](../../.resource/remote/d9571d12a7efad0b648439b9653d102397579aa139b4ac2b107878e9ce656f9d.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUB5EQ8DUSzdlsEtAogq7JSe0AwvicOw4hvq69OgfGQ8TJJrZibTRWiaKaA/640?wx_fmt=jpeg)
+![](../../.resource/remote/f3e4dac9e64ee2366fc7176e2c80ea8d293e3fd6d38a5f723ca74bad19dfa9e2.jpg)
 
 7. 整改意见
 -------

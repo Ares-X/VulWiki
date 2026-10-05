@@ -79,7 +79,7 @@ CNVD 编号:
 
 用友 GRP-U8R10 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpaTTj11QjH4IvgnNa8FZPvicHkMMOmHdIowiaMiafkQBow4ia2hLhxfkcdVA/640?wx_fmt=png)
+![](../../.resource/remote/3cd8df45eb6deb0f64fdc50c0eded1f824848418a999541d4145adc7744a847b.png)
 
 4.fofa 查询语句
 -----------
@@ -114,13 +114,13 @@ Content-Disposition: form-data;
 
 > 请求长度说明：原资料 Content-Length 为 177；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpa9VZLpV6pst5MXENicalOrn5tmI9uy48Mkd7DhapVvg1JSQic0X2PhLwA/640?wx_fmt=png)
+![](../../.resource/remote/fcba7fdb47edffc12bd10577b7b81573ea12bf50c1bf7e62e210ac94fc436fea.png)
 
  上传成后 webshell 地址：http://127.0.0.1/R9iPortal/94156577.jsp
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpaUw6smsms1JYxI6uauAo2eTrl6yjNcNaz093W3Bpu8TuFlBlDcln0Iw/640?wx_fmt=png)
+![](../../.resource/remote/30e97419dcefcdc2891ed8486de37e80da31cf988761c9b858f07533e3f94be0.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpaCbzR1iankNltaJvnV4rfjKUUicma6mmicaqBXnecU4Munow1uQMoxaX4g/640?wx_fmt=png)
+![](../../.resource/remote/3b3997cbc2767bf39728d4ead930997cdaf728cc9ed73b95833481d09979a6d5.png)
 
 6.POC&EXP
 ---------

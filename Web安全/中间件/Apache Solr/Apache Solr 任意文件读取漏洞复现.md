@@ -50,7 +50,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/SFC8X7o2kfFASHmLeD3-UQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOia4Iz81C9898tEbINfoo337nSZ9WT6bposJiazmRMcSSIw6LlT0MZk3g/640?wx_fmt=png)
+![](../../.resource/remote/1c07f88d7c3879bba950c2f8dbdb2ff81f928f021779d3afdbcad745f36bcaf4.png)
 
 Apache Solr 任意文件读取漏洞复现
 
@@ -74,11 +74,11 @@ Solr下载地址：
 http://archive.apache.org/dist/lucene/solr/
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOIc3BfVY5kT0P2VRLVMIXX9LJ0BYkNv72uWdwCcRIZYnfFPTIibiatzHA/640?wx_fmt=png)
+![](../../.resource/remote/db880026fb60afb06e4f5b7a11160d22b38f200337f590d7aca14cfe43b9d33d.png)
 
 访问页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOvFfvrBPpGJeqWs8ibxSotTrGPZ3Aljcvx4jmSPYQFXxBY3daHjoppJw/640?wx_fmt=png)
+![](../../.resource/remote/e03eab7203c66fe68828a86d16534162a6b33503f6da7ecfafb252924648a0ba.png)
 
 第一步：获取 core 的信息：主要是 name
 
@@ -86,7 +86,7 @@ http://archive.apache.org/dist/lucene/solr/
 http://xxx.xxx.xxx.xxx/solr/admin/cores?indexInfo=false&wt=json
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOo7jWsWFgQgURGlvhdlEqLaoUzZQnsTNnp03XzyaPsEUqicHicQyTTWHQ/640?wx_fmt=png)
+![](../../.resource/remote/396e0253a50e90fa4ddfc4473e4adeb2cd3f0b3542eab54c134d9cb2337c5e89.png)
 
 详细数据包
 
@@ -103,7 +103,7 @@ Connection: close
 
 第二步：判断是否存在漏洞: 返回 200 并且包含 This response format is experimental.  It is likely to change in the future 可能存在，需要进一步的去读取 / etc/passwd 或者其他进行确认最终是否存在读取漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOniaWmgChzgtUvEhOTXqp5dNQe35hiaxuXHt8oojwu6EAXLLbY2JOMrmQ/640?wx_fmt=png)
+![](../../.resource/remote/22f2d99ed583e9689f247084e9ee60f1d93cba3ac5b198627c3e6fd0abce7604.png)
 
 详细数据包：
 
@@ -127,7 +127,7 @@ Connection: close
 
 第三步：读取文件 / etc/passwd:  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOkSywylZM8EqCVMXs7cTbfhByBDrKT2TKbRZ7poJwib2twsxOohY8Gqw/640?wx_fmt=png)
+![](../../.resource/remote/acb41537f2595c1de31ca41818aec1925c956677bb860c960975ba2c2d8429f9.png)
 
 详细数据包：
 
@@ -153,13 +153,13 @@ stream.url=file:///etc/passwd
 
 显示读取内容：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOKLx81Uy8DYeK59H9R3MFGmyLQvpOZrgT0kXe3RKqRicxZHmrX0IvyAA/640?wx_fmt=png)
+![](../../.resource/remote/b81c4acb3459bf9ba8eb305665810ddeac6aaa28c84d73402153ffe60f0de603.png)
 
 直接跑存在不现实读取内容：  
 
 批量出来效果还是不错的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibO2ricKTuB0trqmwuw351UYoz59GBvR9EibF9pvibqtl3GQXQYgv4QwdbDA/640?wx_fmt=png)
+![](../../.resource/remote/e2dfa148327bd963525aaf1925c01133d3a6d1467dea79907cafabe43d0576f4.png)
 
 参考：
 
@@ -175,7 +175,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -189,11 +189,11 @@ FREEBUF 主页：https://www.freebuf.com/author/thelostworld?type=article
 
 语雀博客主页：https://www.yuque.com/thelostworld
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 欢迎添加本公众号作者微信交流，添加时备注一下 “公众号”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcSQn373grjydSAvWcmAgI3ibf9GUyuOCzpVJBq6z1Z60vzBjlEWLAu4gD9Lk4S57BcEiaGOibJfoXicQ/640?wx_fmt=png)
+![](../../.resource/remote/9255e3712e3885c431d5087872642f32c2e71629b39b93e381a5a147814af2d4.png)
 
 ---
 

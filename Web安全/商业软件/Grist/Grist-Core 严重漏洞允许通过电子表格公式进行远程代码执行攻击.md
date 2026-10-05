@@ -60,7 +60,7 @@ Cellbreak 被归类为Pyodide沙箱逃逸漏洞，与近期影响 n8n（ CVE-202
 简而言之，问题根源在于 Grist 的 Python 公式执行，它允许在 Pyodide 中运行不受信任的公式。Pyodide 是一个 Python 发行版，它允许在 WebAssembly ( WASM ) 沙箱的限制内，直接在 Web 浏览器中执行常规 Python 代码。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/mibm5daOCSt9S9F3EWmsZysfbCfyfpup56x0icm4u6cztxMV0iagL9XHxFsAicbZ7JACVaLpan6cxpMhicCroZRu1Qg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5a7784f23a2ec4c2543e7ea07bf11d9016c19a7ec8d5defb013eed28fd41a98d.png "")  
   
 虽然这种思路的目的是确保 Python 公式代码在隔离的环境中运行，但 Grist 使用类似黑名单的方法，使得程序有可能逃逸沙箱，最终在底层主机上执行命令。  
   

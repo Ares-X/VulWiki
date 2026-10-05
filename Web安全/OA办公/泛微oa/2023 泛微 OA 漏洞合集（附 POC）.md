@@ -53,7 +53,7 @@ schema_version: "1"
 
 最近整理了 2023 年泛微 OA 存在的相关漏洞（附 POC）  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVxibng7uofM7anSF8GXbEDP7AiazgDJM3XCyAbSB0u481oYpLaSaGfjRYiaWWVkrwwVtFsk43u3qL72A/640?wx_fmt=jpeg)
+![](../../.resource/remote/99750b772d65ab06142730cc1519de52bfb4e10a24da541adb1dee4de92f447e.jpg)
 
 *   泛微 E-Office 文件上传漏洞（CVE-2023-2523)1
     
@@ -423,7 +423,7 @@ https://service.e-office.cn/download
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVxibng7uofM7anSF8GXbEDP7SPyNaQ77MUVWyf4u2ia1lgZlHI0BaicTG3XLgOHEY4FBjKIdOgLp2ztw/640?wx_fmt=jpeg)
+![](../../.resource/remote/ff6536650dd5b077340d3d7e0e2f9a9a470cfbf41f9e7b001bd3e41b3197fe5f.jpg)
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

@@ -66,7 +66,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [paper.seebug.org](https://paper.seebug.org/1848/)
 
-![Seebug-logo](https://www.seebug.org/static/dist2/images/seebug-logo2.png?v=2)
+![Seebug-logo](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a3085d8eb6e31ba75e6f3b953781ccdef555e1345556b719746f62b38e9d49c3.png)
 -------------------------------------------------------------------------------
 
 ### Paper - 安全技术精粹
@@ -120,7 +120,7 @@ v8 漏洞在 windows 微信下利用的研究
 
 由于**无法绕过沙箱**，该漏洞已被忽略。
 
-![](https://images.seebug.org/content/images/2022/03/faf23d94-1160-419f-b023-508acd2a29c0.png-w331s)
+**原图暂未找回**（原引用：` ![](https://images.seebug.org/content/images/2022/03/faf23d94-1160-419f-b023-508acd2a29c0.png-w331s) `）
 
 谷歌在V8相关漏洞修复一段时间后，会公布（[https://bugs.chromium.org/](https://bugs.chromium.org/ "https://bugs.chromium.org/")）漏洞的poc，有些漏洞有exp。但是公布的exp一般是存在漏洞的最后一个版本，由于不同版本V8的数据结构有变化，造成**堆布局不同**，公布的exp在**非实验环境往往不能直接使用**，本文以最新版微信远程命令执行为例介绍了从exp到实际环境利用脚本的构造过程中可能存在的问题及解决方案。
 
@@ -129,7 +129,7 @@ v8 漏洞在 windows 微信下利用的研究
 
 微信3.5.0.46
 
-![image-20220303151505447](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220303151505447.png-w331s)
+![image-20220303151505447](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ce78a81557a11c995dff11b0ba3d15ae728873a48fa9f3ef5950df9a181e973d.png)
 
 UA：Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x6305002e)
 
@@ -601,7 +601,7 @@ app.listen(443,function(){
 
 在微信里搞个连接，他会自己帮我们转成link。
 
-![image-20220314165920485](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220314165920485.png-w331s)
+**原图暂未找回**（原引用：` ![image-20220314165920485](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220314165920485.png-w331s) `）
 
 EXP分析
 =====
@@ -612,15 +612,15 @@ EXP分析
 
 2、利用obj array to double array构造**任意变量地址读**。该漏洞没有修改array map，而是通过double array覆盖obj array，原理如图所示：
 
-![image-20220314144612380](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220314144612380.png-w331s)
+![image-20220314144612380](../../Web%E5%AE%89%E5%85%A8/.resource/remote/510624e05d8555aefc203d60e74d6fef078458b8ee8b3111473b51cbf9741d48.png)
 
 3、利用double array to obj array构造fake obj，实现**任意地址读写**。该漏洞同样不是通过修改array map，而是通过堆叠array的方式
 
-![image-20220314145500497](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220314145500497.png-w331s)
+![image-20220314145500497](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9aefb3e1e2b8cd31fad516b1c7b93c39023960f6491e40a9f1e3066f380105f4.png)
 
 4、把ArrayBuffer的buf_backing_store地址修改为WebAssembly.Instance的buf_backing_store，因为wasm申请的内存是可读可写可执行的。原exp没有用这种方式，但是我觉得这种方式比较容易理解，所以把利用脚本改成了这种。
 
-![image-20220314150251712](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220314150251712.png-w331s)
+![image-20220314150251712](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c4b908eae58dbcce0ef63b42d9b016c0ab2c432c916cc14dc82ba1a981d2684f.png)
 
 下面分析一下实际环境中exp的改造过程遇到的问题，及解决方案
 
@@ -654,7 +654,7 @@ print("anchor data = 0x" + (ftoi(res[0])).toString(16) + " | " + res[0]); //这�
 print("array_map_leak = 0x" + (ftoi(res[1])).toString(16) + " | "  +res[1]);
 ```
 
-![image-20220314153250764](https://images.seebug.org/content/images/2022/03/15/1647314517000-image-20220314153250764.png-w331s)
+![image-20220314153250764](../../Web%E5%AE%89%E5%85%A8/.resource/remote/84de26ecf6fc36c3d6479a60074118d69c7c40ff76d463f6a6f774e863f6151a.png)
 
 addrof:
 
@@ -676,7 +676,7 @@ if (l == (0x1337 << 1)) print("[*]lower data match"); //在v8里，small integer
 ...
 ```
 
-![image-20220314154258461](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220314154258461.png-w331s)
+![image-20220314154258461](../../Web%E5%AE%89%E5%85%A8/.resource/remote/50c1a882f76031b315dd2f751482fd5f102eeadb213a4c0dd8b7c972003ad968.png)
 
 fake_obj_helper:
 
@@ -699,7 +699,7 @@ print("[*]res[0]:"+res[0]); //这里应该是5
 ...
 ```
 
-![image-20220314155121448](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220314155121448.png-w331s)
+![image-20220314155121448](../../Web%E5%AE%89%E5%85%A8/.resource/remote/36ae5fa4b15286348f58aa4597bc6d774f2500b72afd969392efcc514151c911.png)
 
 至此堆叠array读取时通过迭代器（iterator）读取偏移量已经确定，还有一个问题，**怎么确定buf_backing_store_addr相对ArrayBuffer和WebAssembly.Instance基地址的偏移量**，虽然在实验环境这个值可以通过%DebugPrint和读内存轻松获得，但是调试过程中发现，ubuntu 18.04下编译的v8 8.1.307.32 32位的buf_backing_store_addr偏移量和微信的实际环境中的并不相同，不能拿过来直接用。
 
@@ -721,7 +721,7 @@ for(var i = 0;i < 20;i++){
 
 （显然是他）
 
-![image-20220314163919375](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220314163919375.png-w331s)
+![image-20220314163919375](../../Web%E5%AE%89%E5%85%A8/.resource/remote/214370e1048c7aea583cb23413c0c4166bd478f2c3d8469facd0ce10ebc6e7ac.png)
 
 再确定**ArrayBuffer**的buf_backing_store_addr偏移量，因为wasm instance的偏移量已经确定了，由调试经验知，ArrayBuffer的buf_backing_store地址以0结尾，同样循环输出，找到疑似的偏移量挨个尝试即可，如果偏移量正确，以下代码的第二个alert应该不会执行，因为偏移量正确时wasm里已经成功写入我们的shellcode了，执行的是我们的shellcode；而偏移量不正确时wasm里是空的，f()会直接返回，什么都不发生，第二句alert成功执行
 
@@ -745,43 +745,43 @@ WebAssembly.Instance的buf_backing_store_addr偏移量为：base_addr+0x40
 
 ①在代码执行前alert一下，卡住进程
 
-![image-20220303151938278](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220303151938278.png-w331s)
+![image-20220303151938278](../../Web%E5%AE%89%E5%85%A8/.resource/remote/6246f3e3a359f41623386f07cef9ff7c4f27beaeb27f9f6a922e818e77210cb7.png)
 
 ②windbg attach进程
 
-![image-20220303152113696](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220303152113696.png-w331s)
+**原图暂未找回**（原引用：` ![image-20220303152113696](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220303152113696.png-w331s) `）
 
-![image-20220303152254640](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220303152254640.png-w331s)
+![image-20220303152254640](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d094b6c6567ca8c006f62e0361b10e2830c74e461483a9332672c9ecba493c97.png)
 
-![image-20220303152335209](https://images.seebug.org/content/images/2022/03/15/1647314518000-image-20220303152335209.png-w331s)
+![image-20220303152335209](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4fbb89c4722f23297795cef3f445eff537fe41d74787a4897d51fb65eb21a4b3.png)
 
 ③内存下断点，放过后点击弹窗，让进程继续运行
 
-![image-20220303152509971](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303152509971.png-w331s)
+![image-20220303152509971](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3d463f7409e249b844ebb6e47c8a464399c11550a667f697663773553ef3b36d.png)
 
-![image-20220303152522053](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303152522053.png-w331s)
+![image-20220303152522053](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5c2cad31b3baea993c02cffe1f6c1468bb4a8db62d698d2f57cfc745f1ef1a2a.png)
 
 断在了我们写入的内存：
 
-![image-20220303152605812](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303152605812.png-w331s)
+![image-20220303152605812](../../Web%E5%AE%89%E5%85%A8/.resource/remote/118b2a7ebdfbf1512f14cc5c63b92bfc955976d7edae4c4e2b4790a01254d183.png)
 
 ④因为shellcode是执行了system("calc.exe");，在msvcrt.dll!system 的入口处下断点，继续跑起来
 
-![image-20220303152755939](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303152755939.png-w331s)
+![image-20220303152755939](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4f284191d0e4a2c3ed7118751bd6b341cd7d8417bde5b5616f28ca62bc43a3c4.png)
 
 断下了：
 
-![image-20220303152913936](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303152913936.png-w331s)
+![image-20220303152913936](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9ff2ee61f7326713716c1f0f4bcdca54bedd75b79a806da019071ce10160772d.png)
 
 kb命令看下参数：
 
-![image-20220303153010321](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303153010321.png-w331s)
+**原图暂未找回**（原引用：` ![image-20220303153010321](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303153010321.png-w331s) `）
 
-![image-20220303153027735](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303153027735.png-w331s)
+![image-20220303153027735](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2547602e21c1c26dc1cbbd7d3d9acd13516162dcaace64e0aba28cad2b2d798e.png)
 
 入参设置没问题，pt跑到函数返回：
 
-![image-20220303153111875](https://images.seebug.org/content/images/2022/03/15/1647314519000-image-20220303153111875.png-w331s)
+![image-20220303153111875](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9c6b9a58519dfb4320a37e09de153a089298f877e65c0334577316d4ff00fd75.png)
 
 很可惜，system函数返回-1，代表执行失败了，多次更换姿势后推测是存在沙箱，需要借助一个穿沙箱的洞才能构造完整的利用链
 
@@ -794,7 +794,7 @@ kb命令看下参数：
 
 * * *
 
-![Paper](https://images.seebug.org/content/images/2017/08/0e69b04c-e31f-4884-8091-24ec334fbd7e.jpeg) 本文由 Seebug Paper 发布，如需转载请注明来源。本文地址：[https://paper.seebug.org/1848/](https://paper.seebug.org/1848/)
+![Paper](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a6e53a0be256061c6a0f237d6a8cf74dee28885911b12d2ab2b2c1acd3d57dd1.jpg) 本文由 Seebug Paper 发布，如需转载请注明来源。本文地址：[https://paper.seebug.org/1848/](https://paper.seebug.org/1848/)
 
 [← 俄罗斯新雨刷恶意软件: 深入研究 RURansom 恶意软件](/1847/) [关于乌克兰网络攻击的网络研讨会 -- 摘要和问答 →](/1849/)
 

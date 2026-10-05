@@ -61,7 +61,7 @@ schema_version: "1"
 
  Ots安全   2025-01-23 05:04  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 **CVE-2025-0411 详细信息**  
   
@@ -85,13 +85,13 @@ schema_version: "1"
   
 该方法是双重压缩触发漏洞的可执行文件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/rWGOWg48tafia8VicgibPGDmQPcA8SOV9JJIXypabGzAj43ALLsYjZIyEfmxUmO2VUehicP2Hv3xaGOJOCrFjzVEuQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/481de9e8e24ac625ba7e9346630334a84a9869cbbb4b3f70455d139cbd0422a5.gif "")  
   
 **送货**  
   
 接下来，将双重压缩的 7Zip 文件上传到有效载荷传送服务器（在本例中为 MediaFire），并通过提供恶意 URL 的网络钓鱼电子邮件传送给受害者。下载文件后，可以看到“MotW”（Zone.Identifier - 下载来源）：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tafia8VicgibPGDmQPcA8SOV9JJYiaYrck7VDPmWqTbQ3JINpzich5oMibkIqSum89lTTseDicSJLUBIrq4bg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c8e64f7647315e609a041ddd8e688494e0c647a04813e648be2a66ed5c82a26d.png "")  
   
 **执行**  
   
@@ -101,13 +101,13 @@ schema_version: "1"
   
 在这种情况下，使用 7Zip 24.09 版本（已修补），它显示 Windows SmartScreen 警告，该文件来自不受信任的来源（因为它包含 MotW）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/rWGOWg48tafia8VicgibPGDmQPcA8SOV9JJWBavmLqZkibTg18GuGZqddbKicKjhicfNblWBibBN557z848XxG1swMRdg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/777b436d69e17ce024ddbdbec4e24b13387f2ee2ddfe98d40e9339d8d9c76486.gif "")  
   
 **存在漏洞的版本**  
   
 在这种情况下，使用 7Zip 24.07 版本（易受攻击），它允许直接执行可执行文件而不显示任何警告（因为它不包含 MotW）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/rWGOWg48tafia8VicgibPGDmQPcA8SOV9JJz2k1MWv9dIxtmWwicQOxXsyMbjlxeCUib25042vkRicaDfWN4TXr665Fg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/4b4a1c5e15481b652cc0a2f127ef57afd0545000f1d562c4a28f769faca2ffcd.gif "")  
   
 **参考**  
 - https://www.zerodayinitiative.com/advisories/ZDI-25-045/  
@@ -124,19 +124,19 @@ https://github.com/dhmosfunk/7-Zip-CVE-2025-0411-POC
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

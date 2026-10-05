@@ -59,7 +59,7 @@ Telegram 移动客户端中存在一个隐蔽漏洞, 攻击者只需一次点击
   
 关键在于，这次探测会绕过用户配置的所有代理，直接从受害者设备发起请求，从而暴露其真实IP。整个过程不需要任何密钥，类似于 Windows 上的 NTLM 哈希泄露——认证尝试本身就会暴露客户端信息。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/0nJYWtDC09djXWkc12Dh6qLGN3dEMNPrxIfJHC1JfPfBFCwfJOH9xodeIUnFDNw0e0959Biaw4wgAvuoeVgmVMg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5b7dc4eda098feb0dce115b2d44d1d72c93d9a6ee15363476beab9c21abf6ecd.png "")  
   
   
 攻击过程还原  

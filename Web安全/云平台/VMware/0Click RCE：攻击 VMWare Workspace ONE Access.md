@@ -148,7 +148,7 @@ SAML 全称是安全断言标记语言（Security Assertion Markup Language）�
 
 SAML 解决的最重要的需求是 Web 端应用的单点登录（SSO）。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnSVkcaTkRAQv5de5aP1SnYvshxolMToGlrsQHZlFPKicC8DzKGGrNJwVI387dv6PiaHv1I8PUZEKzfQ/640?wx_fmt=png)
+![](../../.resource/remote/7685927a9aecdc44df00ba324756a368b3f55446e0b5d533270cf41a921a412d.png)
 
 如图，认证流程入下：
 
@@ -190,7 +190,7 @@ OAuth 2.0 主要有 4 类角色：
 
 **认证流程**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnSVkcaTkRAQv5de5aP1SnYviafn703LmZDJU6cHkqmCqnM6Fwc4eWoojiaz1ZmibV72tMSuXJT0cC5eA/640?wx_fmt=png)
+![](../../.resource/remote/150a674d1437a3546da6ea1c6e85b8113ba7a4fa3dfffdefcb2ed1ecd83b2fe5.png)
 
 如图，验证流程入下：
 
@@ -397,19 +397,19 @@ Oracle Access Manager 是 Oracle 公司的产品，并与 Oracle 的 Weblogic AS
 
 简单说下这个漏洞的原理，oracle.security.am.pbl.transport.http.AMServlet 调用 `handleRequest()` 然后调用 `PBLFlowManager.processRequest()` 来处理我们传入的请求，如果我们传入的是 / oam/server/opensso/sessionservice 这样一个 URI，会 映射到一个名为 `OPENSSO_CHECK_VALID_SESSION` 的事件名称 (eventName)，然后根据这个名称创建一个 EventHint，然后使用该 eventHint 从映射中获取 requestHandler
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnSVkcaTkRAQv5de5aP1SnYvwOOQVHj1wGUaLoeciadgzRAyXvp7wskxZresEtArAynoMUXqNmdSsqw/640?wx_fmt=png)
+![](../../.resource/remote/9b03649a9f0009b2e8a50a238fda800a08770bc73705e8ba3ccf0c3b058906f1.png)
 
 获取的是一个 AgentRequestHandler，然后会去调用 `AgentRequestHandler.process()` 解析、验证传入的 XML 数据，如果传入的 xml 请求包含名为 `requester` 的属性，则其数据将被 base64 解码并设置为名为 `Requester` 的属性
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnSVkcaTkRAQv5de5aP1SnYvtOJJdDqmg3c8iaXzYY9ical5zq2t4l5UeibIuEC2tuBagEVwmnWlH2XmA/640?wx_fmt=png)
+![](../../.resource/remote/991ea27c010722f07543c3e450ac3a9d71a9df7dbdd98626f3bdb5f205ad7ff8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnSVkcaTkRAQv5de5aP1SnYvS3YVicwBrgm2wZVbSV9DQRXqlv44eNlP5IxSpgicwAunUdtY9FO255Zw/640?wx_fmt=png)
+![](../../.resource/remote/fade0074a22a3b1d92b06bb628cb15b93f02faa82acf71495ce1b854e5ac957a.png)
 
 接着，PBLFlowManager.handleBaseEvent() 将继续调用 delegateToMasterController() -> MasterController.process() -> MasterController.processRequest() -> OpenssoEngineController.processEvent()  
 
 然后这个过程中会根据事件类型来触发不同分支，上面这个例子会触发 OpenssoEngineController.unmarshal() 方法的调用
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnSVkcaTkRAQv5de5aP1SnYv7FRxZVDr7Q1QicWPTrFrCibxzIU3Db7lyZkIKCQuPlH8Dqibao4WE5KaQ/640?wx_fmt=png)
+![](../../.resource/remote/c635345c89c21abd33b2d440baed66d5017460f57132a643f41de312edfd04ac.png)
 
 没做任何过滤就对数据进行了反序列化。
 
@@ -444,39 +444,39 @@ protected void deserializePageAttributes() {
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4TstRMRAXNsGmiaLA9ktSwJcWJHjRNe7PFGuCmcRUrHpiaoRVn8lXHibmQ/640?wx_fmt=png)
+![](../../.resource/remote/2d3df51bc99d373800295feac0716d43f22a734f59c1fa02462dc2f5742fe4b4.png)
 
 也就是说，如果我们的 get 请求中包含了 jato.pageSession 的参数，jato 会将其反序列化成为一个会话，并且这里没有任何过滤导致反序列化漏洞。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4GNMkGMIMu8jV9183HcQd9LCJxwf18whcXiagMjJoYwTSxqsJc1kic4HA/640?wx_fmt=png)
+![](../../.resource/remote/c87a338c7f967c7b4ff120a41c1bc4c59baa0aca08fc5b8d1463a78cce6bcbf8.png)
 
 补丁修复方式：
 
 增加了白名单限制，通过只能反序列化白名单内固定的类来修复。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4Y6KboNdsxCx56PtH08ibvFzWPu6D3ow9lIB25C4OLEIHt0QsOiaO9WqA/640?wx_fmt=png)
+![](../../.resource/remote/a77f9266340c4eb67fb00059ea9c42845772c2bea9b5f8d2a1d5d1d3bcc46003.png)
 
 **(3) CVE-2020-4006 VMWare Workspace ONE Access 命令注入**
 
  漏洞位于 /cfg/ssl/installSelfSignedCertificate TLS 端口 8443 上的 “Appliance Configurator” 服务中的端点中:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4IBQGI5c5Sicic4TicHWvTyMcVptniak6zxaLeiayasGXCmFztZszJWwOicjA/640?wx_fmt=png)
+![](../../.resource/remote/b724b93075a2333755b3845c660a9f693daff3484614e2dca584824a1e2eade2.png)
 
 通过 san 参数在 POST 对端点的请求中指定恶意参数，可以执行任意 shell 命令，如下图。注意该服务可能会重新启动。  
 
 这些会记录在 / opt/vmware/horizon/workspace/logs/configurator.log 文件中。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH46DbEU3YmK58TZSSRBmCBSZjhyMtNic75tMkNbtkwEl9VarsfsAWPAbQ/640?wx_fmt=png)
+![](../../.resource/remote/7f8d78234d7d39ea13929ce899fb1dc4f726ddcee50002512cbe8def8cbd9249.png)
 
 补丁修复方式：
 
 通过增加了正则匹配来先限制参数的输入，如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4ZF7CwibBlBnQbNlLTscc35Yb8hLs7b5HUSmTZriagPAjxbuwEUkIAwYw/640?wx_fmt=png)
+![](../../.resource/remote/2a85e70e284561573b89a62ae109b4554ed2912e17c0afdb96d1a789417c71cf.png)
 
 isValidSAN 方法内容如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4wibGlz9iajcXupntz3h8GQcl1icIFiclialISibicABQ4IkL8Ut2vbGpG0DzQ/640?wx_fmt=png)
+![](../../.resource/remote/2a6fcadb411350125ac4f0463d8590c22f678d4263c86fcb305af107415340db.png)
 
   
 
@@ -492,7 +492,7 @@ isValidSAN 方法内容如下：
 
 该产品技术负债（Technical debt），VMWare Workspace ONE Access 最初是由 TriCipher 开发
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4gs7G7fxdQdGym1no0QVjYWiaaeOWT7DgwLHN072mdlWUicpa3Tm1c5yA/640?wx_fmt=png)
+![](../../.resource/remote/3d5890de7a5089aaf7a773a03b414e347cce98e28d2b3d3cec574276d5bdedc1.png)
 
 比较复杂的技术堆栈和协议
 
@@ -520,13 +520,13 @@ isValidSAN 方法内容如下：
 
 一开始在常规测试的过程中，是在目录后面加个 “;” 符号进行例行测试的时候发现异常，返回了 500 状态
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4oqTa8f2YlR0SvOG2xtKpFfcqU5uQnwMcTdx6K00Hb03kxmNxadaz3w/640?wx_fmt=png)
+![](../../.resource/remote/930d40d65ba823330e815ecfc88c7ccffcd9a8859ab01d22f0c86d3024a36adc.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH44VIHhYxnQMxsJvrRfuEG5EGhicyzouGzEGXgI3FxRJXzRD8Gq1EZjvA/640?wx_fmt=png)
+![](../../.resource/remote/61991c412afdd7b71a24c035c24c53706cd0a0a3b516630a0e597bc967e174d5.png)
 
 并且在返回包中存在相关报错信息：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4xUV7jZw2sdbtInjq47EwRia6rdBxSpxmw4NJO4gyeq72ccIrBGEMWrA/640?wx_fmt=png)
+![](../../.resource/remote/b7801044bbb132b382a25c153f31ae8da6eb946d78f4059d120287fa554826e7.png)
 
 就是在这里发现可能存在 FTL 注入，并且可以发现该模板引擎存在自带的 customError.ftl 文件。
 
@@ -538,29 +538,29 @@ FreeMarker 是一款模板引擎，即一种基于模板和需要改变的数据
 
 简单说下原理：当服务端接收了用户的恶意输入以后，未经任何处理就将其作为 Web 应用模板内容的一部分，模板引擎在进行目标编译渲染的过程中，执行了用户插入的可以破坏模板的语句，因而可能导致了敏感信息泄露、代码执行、GetShell 等问题。其影响范围主要取决于模版引擎的复杂性。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4nVVz0D4yHMRwVUCj2VJbLoHBYdHN032zjJwCpwVU0juaXPvY9ibo6Mw/640?wx_fmt=png)
+![](../../.resource/remote/ebc79cf68013739424ccfd96ae2a7e737e67ce16eda6b5bede6341bf7232543c.png)
 
 通过报错信息可以发现漏洞触发点可以为 errorObj?eval
 
 参考官方文档：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4yuXHF9RrvhGIDkYll5VTUqJgaupFREBMj9kmzwcr1TB1T51pkWM92Q/640?wx_fmt=png)
+![](../../.resource/remote/e6429563ca3b1c5af2724527e0b82bcb7b87682dd0caaebdbbaedd1cfa306b1f.png)
 
 通过搜索调用关系，在 UiErrorController 中发现了对报错信息进行处理，首先这个路由是可访问，参数也可控，通过调试这个接口确认了触发点：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4G7vRUR3sun5yVEn6jUPDITHbYBspwQAbiayKN1QT8n3zTWlRiaaUMPqQ/640?wx_fmt=png)
+![](../../.resource/remote/1e76e8c492f551127d5fd44f563646a0d421ebaf086325ff83c04603cdaddef0.png)
 
 跟进 getErroPage 函数查看，调用了 handleGenericError 函数  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4kvWHY2NOnbia0zRj5S11SFibbl7FxJj9Inj2fRqfPic297wRibnpjk0DhA/640?wx_fmt=png)
+![](../../.resource/remote/822258198d8a1e387674dcd6d20de5c9dadfe9c745d99c6150cc2ce042dfe665.png)
 
 再跟进 handleGenericError 函数，发现直接将错误错误信息装进 errorObj 中，并且将 errorObj 渲染在 customError.ftl 模版中。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4fI33hBTGpfU7SPMMiaePqLup2PHlibfqo45mldt2ZtuMsOYCd5IDEMLQ/640?wx_fmt=png)
+![](../../.resource/remote/6f89f349df717479078fa96fb2e54e05b52705d20943b485249b5d8e3cba35c1.png)
 
 也就是说现在已知的利用链如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4ja5owQXicPicZZXUYjYlb6nKYpBBlOkIsHsq7gftic0WefmDvBhiaFPSlg/640?wx_fmt=png)
+![](../../.resource/remote/238fb1cc6cf34bf17bff06798cd785473332eb5807231fcfb890501da78f9ada.png)
 
 但是直接访问这个 requestMapping，我们无法控制 javax.servlet.error.message，也就无法控制 errorObj。
 
@@ -572,25 +572,25 @@ FreeMarker 是一款模板引擎，即一种基于模板和需要改变的数据
 
 所以现在问题是怎么找到一条可控制的、未过滤的异常数据包含去触发漏洞代码，也就是如何找出一个符合预期的 Exception 来触发漏洞利用。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4WQstEYA41RwtFFZgWxrDibcrU2WhZHnCouw4Ml2yRJhL2aTOz3SDutA/640?wx_fmt=png)
+![](../../.resource/remote/07836feba1a3534798f2a68b2d4131a7f82019f42456d7fcccd04c4087bba207.png)
 
 所以这里要把目标转向 Spring 中的拦截器，从中尝试找到可利用的 Exception 线索：
 
 在 WebConfig 类中使用特定的 URI 匹配为 web 应用设置拦截器 AuthContextPopulationInterceptor：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4lgfX2PTEM5XicCyDD4ajp5S4YJ1As0eFKp2eYbcvyEXvmkdvjicib0ibYw/640?wx_fmt=png)
+![](../../.resource/remote/8bda9a0a80abeceb3aad24003cc0dd9a67ff92043a59d63b40c29844c2e51ae0.png)
 
 其中该拦截器处理中 deviceUdid 和 deviceType 参数 用于构建身份验证上下文，并且是可控的：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4YZWs5swicunwIFbxFwxZ3Lw43rWcxWBgP62eEmZC6LWzib8sOu5EcUsw/640?wx_fmt=png)
+![](../../.resource/remote/afb8c515188d206fc9df4d5af797325b58d835aa396c34ae9c96ccc1c53ad6c3.png)
 
 然后将输入的数据未过滤直接使用在抛出的 InvalidAuthContextException 异常中  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4lzyrgDfYnqXdemRibKDY88QsUdyxJo1VNRFiafvbq6QtjhsVlYtryS8g/640?wx_fmt=png)
+![](../../.resource/remote/af4c1838edda554c8dea6a4fc80a5e3df50592bdfb6cba1a6c17ab622728c516.png)
 
 最后一步就构造触发这个拦截器的 URI，并且根据参数植入 FreeMarker 模板注入的 payload：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4w6qBNcFsD2eusEFiaz1Dd5enrV5Z7diaQXz8pSfJKaVUZjPjGEUovZww/640?wx_fmt=png)
+![](../../.resource/remote/31475b0be1ff9ae74d11baa00e6d31439de6544f252c393346d4338788e37892.png)
 
 **3.3 漏洞组合拳构造 0-click RCE**
 
@@ -641,7 +641,7 @@ if (client == null || client.getIdUser() == null) {
 
 所以这就足以让攻击者通过 client _ id 和 client _ secret 获取 OAuth2 身份令牌从而实现身份验证 bypass。不过这个攻击利用成功需要一个前提条件就是存在默认的 OAuth2 用户，如果没有如下两个默认 OAuth2 用户存在的话则无法利用：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4ZWrom4ApWCEFmQLVHZqsqkjTCT99ayiaBqVuweib7BBBSkyZMGDBgMAg/640?wx_fmt=png)
+![](../../.resource/remote/6553b823667bc28359d6fca6ccdfe7c3159c604de214bae807ecc9dd448d723e.png)
 
 系统默认用户是在 com.vmware.horizon.rest.controller.system.BootstrapController 这个类中默认进行创建的：  
 
@@ -791,7 +791,7 @@ sodu 的执行原理：普通用户执行命令时，首先检查 / var/run/sudo
 
 sudo -l 列出当前用户可以执行的命令:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4XmuibPdxNxMuKuBt11RoBSDFLX3bTTm53lhCT3gictaeSsFl6zCbBjhw/640?wx_fmt=png)
+![](../../.resource/remote/96fc4b8e562b93eab7e53d583174ecf5b3a879800d3bfed43186cf9f37f3eaf3.png)
 
 这些脚本可以由 Horizion 用户通过 root 权限执行，并且不需要使用 sudo 密码。Horizion 用户无法编写这些脚本，因此需要利用这些脚本里面的代码漏洞来进行提权。
 
@@ -904,7 +904,7 @@ eyJvdGEiOiJiNmRlZmFkOS1iY2M3LTM3ZWUtYTdkZi05YTM2ZDcxZDU4MGE6c0dJcnlObEhxREVnUW..
 
 由于存在 JDBC 注入，所以可以通过 MySQL JDBC 驱动使用 autoSerialize 属性进行 RCE。服务器将连接回攻击者的恶意 MySQL 服务器，然后可以传递任意序列化的 Java 对象，该对象可以在服务器上进行反序列化。打的话可以通过 CommonsBeanutils1 利用链进行攻击。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4ibE8rNb2IJhB4JNJOKx2qSxKMVHg3LCVm8SEiakAW7SfvvibZ8mU5PicQw/640?wx_fmt=png)
+![](../../.resource/remote/fe004aba3bdb05804d0c556258d0b27621d96f18d5eb87a6bb0b18f0f708375b.png)
 
 或者还可以通过 PostgreSQL JDBC 驱动的 socketFactory 属性执行 RCE。通过设置 socketFactory 和 socketFactoryArg 属性，攻击者可以触发任意 Java 类中定义的构造函数的执行，条件是该构造函数具有可控的字符串参数。所以可以构造如下 poc：
 
@@ -933,7 +933,7 @@ jdbc:postgresql://si/saas?&socketFactory=org.springframework.context.support.Fil
 
 挂载在 VPS 上即可：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4K1IXlL634dMHPibuxLKTodrEriazaYmudT61GPm3uVb9ahFhhB32SHGQ/640?wx_fmt=png)
+![](../../.resource/remote/db6234429dee363283f30aac70da76dde45210702d36e7093b9bdecdcb7807c3.png)
 
 当然样的话就比较受出网限制，如果目标没法出网的情况下，还得思考下如何进一步改进利用，这里用到了 com.vmware.licensecheck.LicenseChecker 这个类：  
 
@@ -1072,9 +1072,9 @@ public class Poc {
 
 jdbc:postgresql://si/saas?socketFactory=com.vmware.licensecheck.LicenseChecker%26socketFactoryArg=yv7a3gAACwQAxxxxxxxxxx
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4Gbciat3UYVoZicGuO47eWNYmOEvAkTAnuIsFJ4ibuxj7LEr0wD9s5Iwxg/640?wx_fmt=png)
+![](../../.resource/remote/72d0a944afa579f143fc1ce0bcea222f5fbce2af74d39c4f83fe00c0195b111c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4JPyfQWlmL4ic2ATfQ7Ga9nODsHFIdo7fZL2P1LibbaB2VLvsl5z0oBYw/640?wx_fmt=png)
+![](../../.resource/remote/a58fee200f7158a812f999409d4d1e76a4c02db7a743b8c5606bf905e556eb9c.png)
 
   
 
@@ -1097,7 +1097,7 @@ sudo /opt/vmware/certproxy/bin/certproxyService.sh
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4whpwSVP7jK5mD6tM6A16s5Gxgibs3mPhDZwjoqDqnL7koFNbYl1c4Kg/640?wx_fmt=png)
+![](../../.resource/remote/8c7a3dff363531dbd14b9191e0a75c14ec1af3107cd76dfea2bb10ebc44beac0.png)
 
  **Reference**
 ==============

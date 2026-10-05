@@ -48,7 +48,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/FtDYKhKlCC8pCshM6Q-1AA)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 **STATEMENT**
 
@@ -58,7 +58,7 @@ schema_version: "1"
 
 雷神众测拥有对此文章的修改和解释权。如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经雷神众测允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 **漏洞介绍**
 
@@ -66,7 +66,7 @@ schema_version: "1"
 
 2023 年 05 月 15 日，泛微官方发布 10.57.2 版本安全补丁。其中修复了两个漏洞，分别是信息泄漏和任意用户登录漏洞，两个漏洞可以被攻击者组合起来利用，从而能够使攻击者进入到系统后台。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 **影响范围**
 
@@ -93,7 +93,7 @@ schema_version: "1"
 *   <10.57.2
     
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 漏洞分析
 
@@ -117,9 +117,9 @@ https
 
 不过我在 04 月 20 日及时下载了 v10.57 版本的补丁包，所以拿其与现在的 v10.57.2 版本补丁包对比，是能够很迅速地发现新增的漏洞补丁文件。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhS0hgbU2Wn8MKHl6wFJSrjGMhfnozJptWVibSqmFRd2rJFum9iayhmOfrQ/640?wx_fmt=png)
+![图片](../../.resource/remote/04e304832b8e7cd44e4253e7ddea8109339e500d485c16436202a7df281a6eb9.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSzicPj6Uo0m8ial5wUQhSpOBTdn4SqsYegIfB9EsS8JpxNSI3sU6GmBew/640?wx_fmt=png)
+![图片](../../.resource/remote/7a63325e48bdeaf7296032527d03c5260aecd5c30507be6f9801909d9808a8c9.png)
 
 如下是第一个漏洞补丁代码，暴露出的是 `/mobile/plugin/1/ofsLogin.jsp`文件与 `syscode`参数，并且还检查 `transferE9`文件中 `secretkey`的值是否等于 `u6skkR`，如果是则提醒更改密钥，且产生漏洞利用安全警告。
 
@@ -176,7 +176,7 @@ if (path.contains("/mobile/") && path.contains("/plugin/") && path.contains("/ch
 
 首先先进入 `mobile/plugin/1/ofsLogin.jsp`文件，如下图所示。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhS8x23v84tTr5aUzwSRpOkghYK4xmMJdFJthcrAib6uNXN2kh5Vureic1w/640?wx_fmt=png)
+![图片](../../.resource/remote/cca8d46ca9e6d66d459c4c38823341832d48a0602b4a858dd9043c14063cc7c9.png)
 
 最开头根据 `syscode`、 `receiver`、 `timestamp`、 `loginTokenFromThird`、 `gopage`参数接收相应的参数值，然后对 `loginTokenFromThird`参数值进行判断是否等于 `loginTokenFromThird2`的值，如果不等于则会登录失败跳转至 `/login/Login.jsp`。
 
@@ -220,11 +220,11 @@ loginTokenFromThird2 = AESCoder.encrypt(receiver+timestamp, syscode+"u6skkR");
 
 继续看 `AESCoder.encrypt`方法，一种基于 AES 算法的加密方法。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSiapL5FibpSYFhBCulJpdfT3FBDicnHxLCnC9bgI2AM4GEGKlbCJBbDeDA/640?wx_fmt=png)
+![图片](../../.resource/remote/9d19a2e05e6ee8427673f08a8b5ea40d084920dcb88da04c2a49cea3feeb7a0a.png)
 
 那么当 `loginTokenFromThird`参数值等于 `loginTokenFromThird2`的值即 `AESCoder.encrypt(receiver+timestamp,syscode+"u6skkR")`时，则继续往下进入到 else 分支。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSgZaWtuuOOWiaxO2KQOJIbTNibMQKRLcySwOGhV2pdOCcdtECnlunapVQ/640?wx_fmt=png)
+![图片](../../.resource/remote/915ff7e079369ddf9ef141751a236bacba8fb5ad067c3e34bb3d55c70470e766.png)
 
 首先是根据 `syscode`参数值进行的一句 SQL 查询，根据 `syscode`的值从 `ofs_sendinfo`表中查询 `hrmtransrule`的值。如果从表中查询到的 `hrmtransrule`的值为空，则赋值字符串 `"1"`为 `hrmtransrule`参数的值。接着根据 `hrmtransrule`参数值的不同，对 `rule`参数赋不同的值，当然如果 `hrmtransrule`参数值不等于 `"0"`/ `"1"`/ `"2"`/ `"3"`/ `"4"`其中一个，它就默认等于 `"loginid"`。
 
@@ -261,7 +261,7 @@ id  syscode  serverurl  classimpl  isvalid  sysdesc  hrmtransrule  send_type_set
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSMJydllbltM3sPjuP9UMUX5I7lmEKicRjSWnOM6Lw1JfmAU1LE3PHxwQ/640?wx_fmt=png)
+![图片](../../.resource/remote/5b989a339746197929b59f1cfdade1f741fe2146ff4c00ee37f3a5b2afa3c195.png)
 
 之后，根据 `rule`参数值等于 `"loginid"`，又进行了一次 SQL 查询，这次是从 `HrmResource`表中进行查询。此处的 `?`表示一个占位符号，在这里意味着 `receiver`变量的值。
 
@@ -306,13 +306,13 @@ id  loginid  password  lastname  sex  birthday  nationality  systemlanguage  mar
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSQvkwpMmciasPvlE8BYnly5kIPEBXn8JQOJMVicJFeObk3OwyaibluVEbQ/640?wx_fmt=png)
+![图片](../../.resource/remote/074c491875cc85f343430f733a71b05bbe36f09322a8fd94aae026ed8ebe93cb.png)
 
 登入系统后台新建一名人员，再看 `HrmResource`表发生的变化。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhS1O0uKQTIWKsrsC63KLbOvxtFJzMsAaCcPPkTTBWA1N7iaSQrGAhVaTQ/640?wx_fmt=png)
+![图片](../../.resource/remote/68bfca11abed9417bf1df899f2231c3e6ab21cba7ec59fdf42e974b9a15139bf.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSDp6RPyfOkOiaE7ENFmNeqHgK8R9ZT84sQbB4H7YXs8zTzkAF6W66GBQ/640?wx_fmt=png)
+![图片](../../.resource/remote/b8546f4303377e653bded8902a2fc657c785eb3f9ca450fd08476259c03dc3fe.png)
 
 如上图，其中 `status`字段代表的是人员的状态，有试用 / 正式 / 临时三种状态，显然 `1`对应的是正式状态，只要满足这个值小于 4 即可。
 
@@ -417,9 +417,9 @@ Date: Fri, 19 May 2023 01:42:50 GMT
 
 在这种情况下，是可以利用 BurpSuite 的 Intruder 做进一步模糊查询移动电话的。如下第二张图，存在一个包含 17 的移动电话，以及多个包含 18 的移动电话。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSibFkadoemiaNHuNX2XzdmlsjibNPdM4pLBmVqfmUP97p2eKmic0icShiaWqA/640?wx_fmt=png)
+![图片](../../.resource/remote/f7fc1ea702e1c1d0a1cdfdb3372bf85451b3b8b58b54408224fb905391e53c76.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSnnRsUiaia8skEVNjs1mqXd6Y5dLgHyaCLiazqKJJK5KzwqTPATpN46QSw/640?wx_fmt=png)
+![图片](../../.resource/remote/ea0c46301d5e68cce3636c89ef57c63ae1ac069cf6adc111f352e7515b9d3673.png)
 
 当等于 1 时返回 `{"status":"1"}`以及 `loginId`及其值，在这种情况下，我们就可以直接获取一个 `loginId`。
 
@@ -559,7 +559,7 @@ Connection: close
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSIMoe4X14VO7pLo8eLCVmZssePoYSMK2ly8WuE5wKTgibRA1DcKHpyzQ/640?wx_fmt=png)
+![图片](../../.resource/remote/f46756fbe64a5950b185698e0b64d0b60ee82df5eaea5ca5762e3f4c91ccb519.png)
 
 当 `type`等于 `getUserid`时，代码如下。
 
@@ -600,7 +600,7 @@ public int getUserId(String var1) {
 
 根据此差异，此处同样可以被用来爆破 `loginId`。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhS8MdCULU3KiaIA9n7cswAOibmicGDcqw7CW4RrJPGcGZs9YwtqQjywF5Aw/640?wx_fmt=png)
+![图片](../../.resource/remote/70cd9bc65c9facf0a1c117e24f5404178b1905b40cc88e8a2136aa855a208a74.png)
 
 在新建人员信息时，相比于移动电话，登录名的存在更为必需，也就是说在数据库表存在数据的情况下，每条数据它的 `mobile`字段可能为空，但是 `loginid`字段为空的概率更小。不过第一种利用模糊查询 `mobile`的信息泄漏利用手法，比后两种爆破 `loginId`更好利用，因为仅仅涉及到数字。
 
@@ -608,13 +608,13 @@ public int getUserId(String var1) {
 
 ‍
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 漏洞利用
 
 在已知一个 `loginId`值为 `"user1"`的情况下，首先通过加密算法生成 `loginTokenFromThird`的值。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSs7aqA7B5yibUjDLviakL6g3eoklmicLrbVPCAERibL49WhuQexQrwFL18g/640?wx_fmt=png)
+![图片](../../.resource/remote/581ed8d20433ee8aa87c8a6078f053b1f4c336472826810d9c1ba1a8469fa86c.png)
 
 然后作如下请求，便能成功进入系统后台 `/wui/index.html`页面。
 
@@ -627,9 +627,9 @@ Connection: close
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSibAqdbOibsnRQmDOD4LHdMPzRgSus9GxczvhEpJEF5guGX0MSpHISdvw/640?wx_fmt=png)
+![图片](../../.resource/remote/26e7527e14f45ea83cfe726f4935eda3774d988976a279cb5651d8178461c4e3.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
+![图片](../../.resource/remote/7c444e22ddf98252dd175307e42698917557f2cecdcae414f8560b3fd61e308e.svg)
 
 修复建议
 
@@ -655,15 +655,15 @@ https://www.weaver.com.cn/cs/securityDownload.html?src=cn
 
 重大活动网络安保支撑单位
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSwDwaYKXaMF6jL5G6a7jFJMucPoc1Sz0yed69qibYWBXXV95d2hUXShw/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/b37302a94fff2277964dbb750c9cea27cc25d327a57246731dc73e8f1749deaf.jpg)
 
 END
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSJ8rRUKmSfP558lqFEMsV3vNicAk73icy3eQU10RDicCiaRNYBOibJUQnZWQ/640?wx_fmt=gif)
+![图片](../../.resource/remote/218f9c584354482ec8653a2599102b72ba6263dbc5a84aaa4eb61880c7cdb88f.gif)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhSQibdelJU8PDDXtIibTjFWg3kmrB9GHiaFM5iaicuPMDkMmsrkMeGMLUAtCQ/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/e4f0475d8bfbb42639ebacd413d12797299c3e8209c7096e8bef78edf706f37e.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/HxO8NorP4JVgUyFfE1kRjc9DQssCcdhShSsnIq0ibibhFYWcbrrtwvrcAQAL6MFMJzpDj1N2pvCMicKa1JkFibYfAA/640?wx_fmt=gif)
+![图片](../../.resource/remote/ae02a071ff23a041fa9adf82a08ee54e715d5687204f31ff1a5bf0a8482d2b26.gif)
 
 **长按识别二维码关注我们**
 

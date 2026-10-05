@@ -88,13 +88,13 @@ canonical: "Web安全/CMS内容/骑士 CMS/骑士 CMS 模版注入 + 文件包�
 
 官网下载 6.0.20 版本  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVshdYRYdia9CuMTowIjuIoL4J2AcAdgiaQ1G0YD1RgtdEauyuUmp5e56tWfxty2REX0AULFhiaGInWyhQ/640?wx_fmt=png)
+![](../../.resource/remote/b1b7493ac9bcb76acafb4417122a18bee79502751540a9a8829ab2ad2e675b5b.png)
 
 将源码放在 web 根目录下，访问 / index.php 进行安装
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVshdYRYdia9CuMTowIjuIoL4JBQy1darxxXDQon2CE4jKtwDhz8Z0AVFYLhiaD1WoYyTMO4A7NReQCVg/640?wx_fmt=png)
+![](../../.resource/remote/355b87cd3e9698f855ff7b08aabefe7d92f283ec804ed9d5eea8e891cda272e7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVshdYRYdia9CuMTowIjuIoL4JlMbSFgAo7zI2xbrqQYNfrSy1GsMTD9WFDPxX9CG9yZDOlPZmdCGDqA/640?wx_fmt=png)
+![](../../.resource/remote/d118a09cfe21bd0290c2f1aa53e5bef041e1dad0b14342358601b0d31f8dcb92.png)
 
 **0x05 漏洞复现**  
 
@@ -108,12 +108,12 @@ POST:
 variable=1&tpl=<?php phpinfo(); ob_flush();?>/r/n<qscms/company_show 列表名="info" 企业id="$_GET['id']"/>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBaGQKSAO4ZUuWJtzkouWoDuUYqibIAMiahXCWBw6Y977yXGyOicTRTqt7ng/640?wx_fmt=png)  
+![](../74cms/.resource/74cmsv6.0.48%E6%A8%A1%E7%89%88%E6%B3%A8%E5%85%A5%2B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%ABgetshell/media/640.png)  
 
 2. 查看日志会发现已经记录了错误  
 位置：\phpstudy_pro\WWW\data\Runtime\Logs\Home  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBakOur98RFUZZjaOZD1KFDl0Gm8fLcrPFZ6BibBM8KBrXWDJ1eK1TpHhw/640?wx_fmt=png)
+![](../74cms/.resource/74cmsv6.0.48%E6%A8%A1%E7%89%88%E6%B3%A8%E5%85%A5%2B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%ABgetshell/media/640-20201214112713818.png)
 
   
 3. 包含日志
@@ -126,7 +126,7 @@ variable=1&tpl=data/Runtime/Logs/Home/20_12_12.log
 
 日志名称就是当天的年月日，直接包含即可  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBalA7gJ0bWUNibTECsEEnvIltKwrowuUaB5jt258XR1qLYFzu1ZSicSCxA/640?wx_fmt=png)
+![](../74cms/.resource/74cmsv6.0.48%E6%A8%A1%E7%89%88%E6%B3%A8%E5%85%A5%2B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%ABgetshell/media/640-20201214112801787.png)
 
 **0x06 漏洞分析**  
 
@@ -244,7 +244,7 @@ ERR 代表一般性错误，会直接写入在 y_m_d.log 当中
 
 确实存入了  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBaibhFwZEDDAib47Ttibmrq5zR4ibqL6CCFYZDcEYhE0clIKmpduiaCAndCzQ/640?wx_fmt=png)
+![](../../.resource/remote/adccb6f03c07db699e4ec03a9dd61563a3b467ad5498d545c93b1f3b87dfb990.png)
 
 模板解析：
 
@@ -457,7 +457,7 @@ content 为空进入第一个判断，判断模板文件是否为空
 由 ThinkPHP/Conf/convention.php 可知  
 默认值为 think  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBacVsfibibEyibhZIM5ge8ewMtZZerPtabnUJueibVhO7O0Szib7plDU0uicBg/640?wx_fmt=png)  
+![](../../.resource/remote/a5c9f48c823d8429815f7f8803b705b53d209a639d17f85469fbb0100d3a2b66.png)  
 
 于是走入 else，调用了 Hook::listen，继续跟入  
 位于 ThinkPHP/Library/Think/Hook.class.php
@@ -513,7 +513,7 @@ content 为空进入第一个判断，判断模板文件是否为空
 
 view_parse 的行为定义如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBaVGFvLshJmyPNgT72wr5icsgztPzgZmr129tygXibBH1axKcQA1dVFgbA/640?wx_fmt=png)  
+![](../../.resource/remote/1fc0b8de14f077225b272db4fc3c88c88fc045fa0437db41be48e38cea529257.png)  
 
 exec 会进行判断，当其值中含有 Behavior，其入口方法必为 run，我们跟入到 ParseTemplateBehavior 的 run 方法，其位置在  
 ThinkPHP/Library/Behavior/ParseTemplateBehavior.class.php
@@ -603,7 +603,7 @@ ThinkPHP/Library/Think/Template.class.php
 
 精简了下代码，先获取文件内容，然后存入 $tmplContent 中，关注最后三行，调用 compiler() 方法对模板进行编译，做一些简单处理：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBaumrL2ckWbxh4IIXh3ntib5kNhsR3bJqRhoNO3LdQ44pBch0qAibuCVuQ/640?wx_fmt=png)  
+![](../../.resource/remote/06c2f32fa3668cde0974219fb31792d568186cb371bfa1f482de497ef2aadbc3.png)  
 
 存入缓存文件中，然后返回，于是我们再回归到 fetch() 方法，调用了 Storage::load，位于 ThinkPHP/Library/Think/Storage/Driver/File.class.php：
 
@@ -635,7 +635,7 @@ ThinkPHP/Library/Think/Template.class.php
 
 为什么不能使用 get 来请求，因为 url 在提交给后台处理会被进行 url 编码，从而造成包含不成功，因此要采取 post 方式发送 payload  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsj834jw1HQjHYLQjnWLrvBaXB2ygPhXHQPqTUw9ThccaOemGIkg8CokBvibO8L9ibY80K6IaEG6TNDQ/640?wx_fmt=png)
+![](../../.resource/remote/3583fff7189992684b0b3cc4ac9833e1d85921f8a5ea33929c274ae59346558f.png)
 
 **0x07 修复方式**  
 
@@ -653,11 +653,11 @@ https://xz.aliyun.com/t/8520
 https://www.kancloud.cn/manual/thinkphp/1827  
 https://xz.aliyun.com/t/8596  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章  
 **

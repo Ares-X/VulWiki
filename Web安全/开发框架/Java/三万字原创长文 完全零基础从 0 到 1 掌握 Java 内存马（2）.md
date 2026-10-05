@@ -184,11 +184,11 @@ https://mp.weixin.qq.com/s/hdqwsYtBN_IpaH2DGZLPoA
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGCNdFKoyicemOtiaYEXewePPJcpUJhDb7icvzGNk8AF085OudVNPtMuRtA/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGnRia9gZuLicllmqJGDkRgCGlWClaxibXMQ5gcw2dw1AwZX8CobY306NMQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a7833a51a43a2c5ad3fb4fe8cba9b6cc909c4b1a7a435533256f44d7253e74bf.png)![](../../.resource/remote/1132ac0b9e0bb2ccc5e4ff17ca086afab6560bbf3865108943f7afb35f2a98bc.png)
 
 访问，执行任意命令：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAG0xBPhEod2ETzl86ke5iaIgQvM09kicVqRI0DTemNibvTD1Fvic8gKKyhZQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/3c6b848e32229a63b76f2c9d61936766cad6178a317039d9597103affee34eab.png)
 
 ### 3.1.2 servlet 内存马 demo 代码分析
 
@@ -250,13 +250,13 @@ Servlet servlet = new Servlet() {
 
 那我们就来试试看注释掉之后会怎么样：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGV9etCFKnVhzgBzETAvdJdrYFvianGDPicU5kJ8MEJm8QwibHWNqEsqwGg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/7307f992541018f8205e338b664198034020ccbb44cff648a2baab1da82bf586.png)
 
 报错：`Class 'Anonymous class derived from Servlet' must implement abstract method 'init(ServletConfig)' in 'Servlet'`。
 
 我们直接跟进`Servlet`类，可以看到其是一个接口：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAG8Hr2uV7TZibtV9DkLWmib8xtCc5nhHInibm8zZqrwKW4TlRibmrjSDgcibw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/e2782455af13ce2a88cb845664387d7efbe33129f7d279025be9898f409f69d9.png)
 
 原来，在`Java`中，接口中的方法默认都是抽象的，除非在`Java 8`及以后的版本中使用了默认方法。并且，如果一个类实现了某个接口，那么它必须提供该接口中所有抽象方法的具体实现，这就是我们必须要写出上述四个方法的原因。
 
@@ -286,7 +286,7 @@ dynamic.addMapping(servletURL);
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGMTicjjGU7PssoWpUgodvSrJiaQibmKMCWPGKPCJVjCNRjx1YAiau72ic2Ow/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/4962794178cc64a12ddbc3a7868eda3fd086666b652ecc5d3fdcbb92f3538fc2.png)
 
 ### 3.1.3 关于 StandardContext、ApplicationContext、ServletContext 的理解
 
@@ -455,7 +455,7 @@ dynamic.addMapping(servletURL);
 
 效果如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAG0sgMxNT7TJbXa18SjP60fbSsgMCCop9sLCjzYNV26LibFYg5FNRPpdA/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGvEnSkNh8Mv0qjibSMWIBLHMotHKacRib5XyEdwxx9ccrzb7ib6rq6xApA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/4fe8c1099adb4ee39f12f8fdada0b18f3c22613580987f080e25b99cf82259e2.png)![](../../.resource/remote/94cdc253b2f38dbd952c2cfbcd5c2583006539263b59e7df520374fe0751d92b.png)
 
 同样的，这里我也适配了中文编码，和一些提示性语句的输出。
 
@@ -610,7 +610,7 @@ filterConfigs.put(filterName, applicationFilterConfig);
 
 效果如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGDXblMxhmW9N1RFTMwN3st5ibNOlwyhnz8TVhbgx0ovwT6aiaY1POpntg/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGKnau3q6tWKuicMo3WCTgDPJ3JIfwEx01ofUCMWfsjssL1DmiaVUBKfGg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/8468fa453c8700911879183f0987d33a0e2b2fe00c04f0daa7d503b905f6f55f.png)![](../../.resource/remote/6fa600fc37f9ed13e5af1159ba9f4640d6d4ddae7ea681f7a0c3c15807f9f038.png)
 
 ### 3.3.2 Listener 内存马 demo 代码分析
 
@@ -729,7 +729,7 @@ public class TestEvilController {
 
 运行效果：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGQUClibsLyQxq2TLEyBohgKmCtgY6twwer0BYGqPns9p42gm6icSZPFcw/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAG6b2Rvh458KGHB5OZJj7WAsiadsaibRqXWyquGX80O056BHxI6Nwoq7uA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/7cc0c6e3823f79fe5a3f06456e22de01e8bed43a1ec204bd1e059ec499c5dacb.png)![](../../.resource/remote/906d4adcda744ca6af2b63dd5ccea6e18dde87b3b3600050677015a83af12c1d.png)
 
 ### 4.1.2 Spring Controller 型内存马 demo 代码分析
 
@@ -893,7 +893,7 @@ public class MemoryShellFilter implements WebFilter{
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGTD5tQsT0tFKWia6jQ5Ka4Z8mNmlep8MeiaVhZnfeVNWSZnXbhh0vGDug/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6153799b9848a6fa5d3d4c7804a4a7e650f1f04ca5fcf7937a2f00413b083959.png)
 
 ### 4.3.2 Spring WebFlux 内存马 demo 代码分析
 
@@ -966,7 +966,7 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 
 > 如果 idea 启动 tomcat 报错，可以看看是不是你开了网易云哈哈哈：
 > 
-> ![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGVzpEnhLqQPTIPicPwJC1BfwhAILZkcsxbD3k4vlAj0WpDn1aocgYLZQ/640?wx_fmt=png&from=appmsg)
+> ![](../../.resource/remote/40eb1988e75acb7f2374dd21102053e39fe56fd2e648151bfb4257cff99fec82.png)
 
 在`web`目录下新建一个`666.jsp`：
 
@@ -1021,7 +1021,7 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 
 上面的这个是采用了从`StandardContext`反射获取`StandardPipeline`的方式，效果如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGeQmXjy8S2rhe1gEej4VkTsyyKZ2449RuE6Z6vGr0xPfPAcVRftzc7w/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGr2AibAOyedaKR8Y7yzet1WRFS0pPI2pb9exF48SvqT1aZ5xTm4LCElw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c89428b5c8485695fbf6ee8af904608f8bed3ccb7ae2861051116df5a5d828ba.png)![](../../.resource/remote/66c680a58a471f71a82dd7f9e6f08db5b337d44050d860ddbdf8d9819b9f4016.png)
 
 下面的则是调用 `standardContext.getPipeline().addValve`实现的：
 
@@ -1076,7 +1076,7 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 
 效果如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGOrE7LHibYosAMSV4hCMUKicRiadgMgbLwfMLZCicoJvEPXBCqGnJSxz2Zg/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAG4ribvGxz7ntiaGYQBSvonIgxPsd0LALQot0uxaviaSjzkn74jNS8qCO0g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ebc127cc80fae530425e7a7d7621abffeb3b38c53c7ca861d61a6872fa60052b.png)![](../../.resource/remote/af57a1e46968ec5bf86eb38d1b1f4ea4843ec03e17523456af0433c4631d240d.png)
 
 5.2 Tomcat Upgrade 内存马
 ----------------------
@@ -1182,7 +1182,7 @@ public class TestUpgrade extends HttpServlet {
 
 运行之后执行命令`curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost:8080/evil`，结果如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGma8ic6GDsgukrr79I14rpnUaUIib4V3TYFSpaIWkG4RBhMWopN1fjqPA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/628900bf9bf8ee4e9a53cf350d91dd75ecca2b4821f3eaba813eda08ef77a965.png)
 
 `jsp`版本为：
 
@@ -1267,7 +1267,7 @@ curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGccoxy3WicRLiahgARJUev8JicLFLnoygOhCwlD3TzGDU2Rsz9AhQf4wcw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0b0bd796f1e3c42fa4ecb1a4d70c083aaa19bfcf6aa3b49815c8957d549739f6.png)
 
 5.3 Tomcat Executor 内存马
 -----------------------
@@ -1430,7 +1430,7 @@ curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost
 
 效果：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGicuUzSDaEwiaWJ6ib3ib8eVcLS8KwF8Zibpia1MK7uLszAPujFZeGwe2uakw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ba229c94547f54ef7c681f46b0b1a3904c3bd8fe0a20af8161cbe08132aa16cd.png)
 
 需要注意的是，原文中的代码没有考虑到命令输出结果中含有中文等字符的情况，所以需要`url`编码，这一点我在上面的代码中已改进。
 
@@ -1617,15 +1617,15 @@ curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost
 
 先开启监听：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGBpjmTQEiaAfELyQLgCsIrib05OBnyxC5fB3o2k71kQUMUvJ90tSyY1uw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/7b30a94cc638007557d816c12f25f1b5bb657b3f2b81305b367fdc471317b886.png)
 
 然后发送两次数据包，第一次是为了访问`888.jsp`，第二次是为了执行命令：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGQKa75WlE4uWXkh90Kvjf4kYqb8wJJIDalnVj0zsknnvibiahVlY456Ug/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2350a9b8ac68dd9178f1cd527f3ef932e4b9c3d34b55e28f51fdd22f42671eb5.png)
 
 可以看到数据已经传输过来了：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGJbRYObVjTaalghCUL84aoPfvlkugy4sXODyGyp7ephffnukHtTLeJw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/f9858fa6228b37a886cfad4e87d07be487742b2b0b9b6c544946b0cb5e0967dc.png)
 
 当然，用`yakit`自带的这个是有缺陷的，就是不能持续接受，因为不能返回自定义的状态码，因此我们可以`python`自己写一个：
 
@@ -1651,11 +1651,11 @@ if __name__ == '__main__':
 
 然后修改`jsp`代码中的`url`：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGmIibXQyZAf6cfpxDgC0S1ytC0Y3Tr8j7kS8T5k49YiaPeez5mUmbHJmg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/19c551468de708e6ba601fb591e24d2fa91601d5924a6a71820778e1ee8b7f18.png)
 
 最后效果如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGeaYtdbdSH7Dgz9mcBWd626zE59E8tz2Zg2JicY8kmR1mibvtJPyxnibuA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b0f8ae1aac07941ccb521013c4178b890ea49f25b47a69253edab24b69541b65.png)
 
 六、致谢
 ====

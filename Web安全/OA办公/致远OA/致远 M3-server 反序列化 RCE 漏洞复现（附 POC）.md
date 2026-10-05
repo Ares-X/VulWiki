@@ -70,7 +70,7 @@ fofa: "title=\"M3-Server\""
 
 致远 M3-Server
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNib8C8LR01ncic8o7dZSH4WxtGibeWheOHyhFrZiadRqDc4TrwLBuRJUsicXFkDqe45hvt7w4MlGlHYyQ/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/d9666303fa41e9923d688aceedab9074d28931f8efc219f1135818f3c99ee2d0.png)
 
 03
 
@@ -93,7 +93,7 @@ title="M3-Server"
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNib8C8LR01ncic8o7dZSH4Wxiax4bgmcYJwS18o3w5gRMoX3LJrMibcA5zoK8rc9y2TMyNTo8wcYiblkg/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/b7faca87077c84b4aa8de2a71f327f8dc1b79a7a6194e0cd7e577207b907568d.png)
 
 05
 
@@ -249,7 +249,7 @@ nuclei.exe -t mypoc/致远/seeyon-m3server-mobile_portal-rce.yaml -u http://X.X.
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNib8C8LR01ncic8o7dZSH4WxH1pa1rSD9l8H8XRFK6Ey6AwibckcGsjP7ydjWSrsUXc0hvicPqMjNX5Q/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/4e40eda9cc3b8477b5f50c73c076e8f824fdfaa87d46c846d691344807d0c43f.png)
 
 07
 

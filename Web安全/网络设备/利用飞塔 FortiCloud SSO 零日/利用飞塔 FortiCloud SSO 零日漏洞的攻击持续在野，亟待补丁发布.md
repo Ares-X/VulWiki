@@ -54,7 +54,7 @@ source_status: "unknown"
   
 飞塔已确认存在一个新的、正在被积极利用的 FortiCloud 单点登录 (SSO) 身份验证绕过漏洞，编号为 CVE-2026-24858，并表示已通过阻止运行易受攻击固件版本的设备建立 FortiCloud SSO 连接来缓解零日攻击。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/mibm5daOCSt9S9F3EWmsZysfbCfyfpup5y6JPImHvHsUWrhoLQP2Z6Cwqzfw3m9PQicU7QjXQft8OpvU9T7S35jw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d1857f3115196b0c853ba927d203e0735859a49ee85d4796aef4d45145b83c54.png "")  
   
   
 该漏洞允许攻击者滥用 FortiCloud SSO 来获取对其他客户注册的 FortiOS、FortiManager 和 FortiAnalyzer 设备的管理权限，即使这些设备已针对先前披露的漏洞进行了完全修补。  

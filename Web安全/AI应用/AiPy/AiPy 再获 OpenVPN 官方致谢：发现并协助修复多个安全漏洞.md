@@ -65,7 +65,7 @@ openvpnserv
   
 OpenVPN 官方在安全公告中明确致谢：  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/mVOy0n0uJdjkHLwmdicH1XeR7riamwwt54ERaNsRbkNyxIu2iaO10ra5X22Q3nD01wMHH2rQm8AFMrmtHibg3o18sLLCqDRvmCJPppQvGL0SkII/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/095c1ec7e8e320b546041a8a8e31a1dcb1c6e93577610a062a41ca72c5b98f1f.jpg "")  
   
 Bug found by 章鱼哥 (www.aipyaipy.com)  
   

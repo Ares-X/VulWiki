@@ -53,7 +53,7 @@ schema_version: "1"
   
 Apache Pulsar是一个多租户、高性能的服务间消息传输解决方案，数据持久化依赖Apache BookKeeper实现，支持多租户、低延时、读写分离、跨地域复制、快速扩容、灵活容错等特性。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUO3SpCmTBT2fkibqHkeH2N1wcEPAX006UJzfGEbdG0kwq03vP5kicbOiapWKwcnrz2lWePJMDmsVtuQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/549f68bff58d5243f6a3284a6b6908cafba0549cd4a8ce028fda57e76f0f9d10.png "")  
   
 **0x03 漏洞详情**  
 ###   

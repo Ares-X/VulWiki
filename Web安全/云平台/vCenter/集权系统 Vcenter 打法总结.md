@@ -187,7 +187,7 @@ https://x.x.x.x/statsreport/gsl.jsp
 
 C:/ProgramData/VMware/vCenterServer/data/perfcharts/tc-instance/webapps/statsreport
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLEuQfQ9KLQyb08fhmuJFEdTGEPgLvCibhNdG4Fjq7FM1yufXic6FeYG0vA/640?wx_fmt=png)
+![图片](../../.resource/remote/88a7d39b00da69f6ffa9012b71a0da77e6a7c19425a506dc1809eaa689575438.png)
 
 Windows 路径
 
@@ -226,7 +226,7 @@ Linux  shell 路径
 
 https://github.com/NS-Sp4ce/CVE-2021-21972
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLElvicAIIfictzqnicLDjfh5NzFS537ARYYmjhkoaXMUCZq39IQhuicwSzmw/640?wx_fmt=png)
+![图片](../../.resource/remote/507d7c56ab410630a86dee1796b4f09bd16a77ea29ec4e474a1e2b058066f17a.png)
 
 **CVE-2021-21985 rce**
 
@@ -317,7 +317,7 @@ exploit_userspec.py
 
 我们可以通过更改写入的路径和写入的内容，写一个 root 权限的 webshell 到 vCenter 服务器上
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLEb2VPFOFibXiaVnLMr345GdZ2ibtnicSzKibicqcN8Xg4osiceA3ld45VAuKBg/640?wx_fmt=png)
+![图片](../../.resource/remote/5c1b0c2c7bb2e6f384d8d38986bd1141d7bfe4af85a2c6d29f721126d13ad9bc.png)
 
 改动：
 
@@ -440,11 +440,11 @@ dcAccountDN
 
 截图如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLELtYZJXvQTp719BTTof5ibw2yEnqA7VpicELGgKv2J3LtEECP0xGxx3IA/640?wx_fmt=png)
+![](../../.resource/remote/e55e71e41e914c1bb9b1794dbe78dd064004838fecbdc9a221d0394012917724.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLEnIA3vyJtuTzWWVDFyFtlCmWt2tLYQTYBMj7uZEcw5IibWshmmdwvGicw/640?wx_fmt=png)
+![](../../.resource/remote/f876abbbeb423fc663404284a828eee73a719d8a53c3d8f8389a1cd3ff02f90d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLEIw2EeOdxpp6EOmABA8gxnA5C7175VjoeJVCuF8cjKkKeB8rkgeQQFQ/640?wx_fmt=png)
+![](../../.resource/remote/2caaab5a42d0779801ddb5b28e9b010c264df0754cd6124fe48e448c19c9cbac.png)
 
 老规矩：  
 
@@ -477,13 +477,13 @@ python vcenter_saml_login.py -t <目标机器内网ip> -p data.mdb
 
 获取到 cookie session
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLEAWyuGibicvhAw9cQiaE2xMFhHKGhNC04xKz1neQZrFEVSY9UmqAbSoDuw/640?wx_fmt=png)
+![图片](../../.resource/remote/8256fee1c825b6c62d2567e81dca0206248100167784d9490e24f41628f510c6.png)
 
 直接使用生成的 cookie 访问 vcenter 服务器：http://xx.xx.xx.xx/ui
 
 直接利用修改 cookie 工具进行修改 cookie, 进入后台。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrlc4t92YtuAp0YAyGw6NRwLEdy2zX0HubuHR2W3RGSNbKhwL9psrH6vp8MXDzzx18A3MMjsicxHicvSA/640?wx_fmt=png)
+![图片](../../.resource/remote/4864a071167d6cca7816f067e96f2f0ef62d3a1654362c1f03c57a0eb59de3b0.png)
 
 **方法二 用于 data.mdb 比较大的情况**
 
@@ -512,11 +512,11 @@ python vCenter_ExtraCertFromMdb.py /storage/db/vmware-vmdir/data.mdb
 
 创建快照  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVdqaZTpuQGjib6sAPK8DW0gR2Z456zZlOG5byx2mDECX0Hezdo78CvKQ/640?wx_fmt=png)
+![](../../.resource/remote/78e32214d4f4fd4915f1d42128c80b7281e3c91a1c3fd975c84ec12bdd719662.png)
 
 下载 .vmsn 和. vmem 文件到本地
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVpPl6vmyLaPaTtXXdGy2BYZ5ZZSuORgnTsGJSekAKQwBPRylB5ibg8wQ/640?wx_fmt=png)
+![](../../.resource/remote/f5cade043d1dfee3246b4a1f03b8bd96d29dee4f1de912934f6cb0a9e89505fb.png)
 
 vmss2core 工具对其进行文件格式转换
 
@@ -527,13 +527,13 @@ vmss2core 工具对其进行文件格式转换
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVZZ6xDgf84Plicuj2qZh0qCwqPszFVia17IAwnP19JTZO3ErnOmvPY7PQ/640?wx_fmt=png)
+![](../../.resource/remote/18f00fb9e1534ac68f034ed66a606595d2e86b46725bf32147e3285536bfc8bc.png)
 
 成功获取到内存文件
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqV6QibWIJ0weicEicVfTRG7GrBjwOnJbniam56Glnic7emHicUfV902dHL9Y7w/640?wx_fmt=png)
+![](../../.resource/remote/278f757cb2e7a9ab48226c29548e2ad5dd25ea56c5360f4137fd5033add782df.png)
 
   
 
@@ -545,14 +545,14 @@ vmss2core 工具对其进行文件格式转换
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVDn06PhN4gHPwsxzRGcibNgTibNm3ibnCA5lPxUFcdHeEB8pNDXatn3lDQ/640?wx_fmt=png)
+![图片](../../.resource/remote/837d3f8831448c4ca97a7f82d1efb210c9e6a9b0248dc35fce0007c92e47dd8b.png)
 
 ```
 .load D:\Download\mimikatz_trunk\x64\mimilib.dll
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVUfZcAhhX4LvRphNSfkaJxt9ibOM0vx9TWS0WzZZPtmWRibVQyGIiadFdw/640?wx_fmt=png)重新加载
+![图片](../../.resource/remote/573f99c9a24713648871fd5cfcf244d3be4502207a6b8c259b45c21b5ac9af0e.png)重新加载
 
 ```
 .Reload
@@ -566,7 +566,7 @@ vmss2core 工具对其进行文件格式转换
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVibVRBTz8TGE2libFFicWdphFydlYQI4zQJUT7wMS4xiaYqSeXmR0cAYb5A/640?wx_fmt=png)
+![图片](../../.resource/remote/e86a145da6d2e71c41fbaa0a37526ebe5c7d2d1e5b567a1b7935d4db6bf5404b.png)
 
 切换到 lsass.exe 进程中
 
@@ -575,7 +575,7 @@ vmss2core 工具对其进行文件格式转换
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqV4WUI2rtsNL3dKBd0J5g5sLl2h5xXoeLvAuxQQtyZWALJZv2Gluiav7Q/640?wx_fmt=png)
+![图片](../../.resource/remote/f0359b8dac1b831e37c503cc705540ee6b8abaea89251fdd8d49dd76c3c39813.png)
 
 运行 mimikatz  
 
@@ -584,7 +584,7 @@ vmss2core 工具对其进行文件格式转换
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/915rEXjQrle40uXN8II5YJtS3fOhRhqVciatQIOBrt9Y52eP1nheXartC4WwkIl6kHjsiaMu9xutsBH1KGudCffg/640?wx_fmt=png)
+![](../../.resource/remote/8f16c91294e8688d03e3bcb0af3a3717f1ec0468f9796e2e2c0004f76f10e87e.png)
 
 ****方法二：******KonBoot 引导**
 

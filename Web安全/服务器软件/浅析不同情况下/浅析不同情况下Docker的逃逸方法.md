@@ -79,7 +79,7 @@ git clone https://github.com/vulhub/vulhub.git
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaQ7rBEAia4uxQ0D9CnqHibxJnQlic6ibkQeXuOVwkZLyUBqiaFQAtnqlTYU61E3icS2Iicxaic9siaiapooz8hQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/bb570134a81d303f02c74ade98fe58a0acf3957b4030249908a98e13bf958ff3.png)
 
   
 
@@ -89,11 +89,11 @@ docker-compose build docker-compose up -d
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaQ7rBEAia4uxQ0D9CnqHibxJnrG0da4ydcffkLibLS6LCzics0qorRqqkZHGQAR0faDMSaR16Onhdm4NA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/427d5aa4b1a4cb75a55a72fffef37fad738b63f28ef6b09cd3128f04072c1f5e.png)
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaQ7rBEAia4uxQ0D9CnqHibxJnBEibrxeYkLEibiaOiaSnwFJzNUVHLPGBZzMBPXDicgrjddDQgibDP4htHLibw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/e493ab53455ef5690c25903fb117d11210c8a11623c90fb2cc4fe79bf2f0fb5d.png)
 
   
 
@@ -103,7 +103,7 @@ docker ps -a | grep rce
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaQ7rBEAia4uxQ0D9CnqHibxJnS2nbIp22MRSBOfibTNzUHiccJPW6KQ1ic74g5VIqlicENiaLYqHfaNkNvqg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/679e1469246604b21b7bddf5e1c4c03c46005a9df47708712203a375e4038c40.png)
 
   
 
@@ -111,7 +111,7 @@ docker ps -a | grep rce
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaQ7rBEAia4uxQ0D9CnqHibxJnLHu5QhxI8cue8eFqfMtPcqD2EdokcmbOMuhUIzxZcpxEHRQg9ttfAg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/f24aaa2c84114ef6af29e67f0e7078dfedcfed0c80d89dfafe75b2dc6a23aa96.png)
 
   
 
@@ -125,7 +125,7 @@ docker ps -a | grep rce
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaQ7rBEAia4uxQ0D9CnqHibxJnsUsd5dFiaxR6ePYLQlT8PpzAqjF9nCm8C9VC1dCMqmtdklkkl4qDv7A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/c40bfc029170746bf0f7e4e1a2d11bd64924c1e13da69fde58f5523bc910d094.png)
 
   
 

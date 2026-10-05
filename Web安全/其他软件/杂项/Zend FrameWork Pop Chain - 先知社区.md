@@ -74,7 +74,7 @@ schema_version: "1"
 
 其实一开始照这个框架就找了我一阵，因为`zend framework`已经到了`zf4` (laminas) 了，而这个反序列化链子是`zf1`，所以我们需要先从`https://github.com/zendframework/zf1`中下载到源码，然后使用
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114058-7f4170d0-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114058-7f4170d0-48be-1.png)
+[![](../../.resource/remote/dbc2e1e77329e8dbc2f0db5c628a43d7e211a6304bcc68d589dc2f19a6e81221.png)](../../.resource/remote/dbc2e1e77329e8dbc2f0db5c628a43d7e211a6304bcc68d589dc2f19a6e81221.png)
 
 然后进入`bin`目录使用如下命令，来创建一个项目目录`web1`。接着我们把`libary`中的`Zend`目录移动到项目目录`web1/libary`中
 
@@ -82,7 +82,7 @@ schema_version: "1"
 zf create project web1
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114138-9733dd86-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114138-9733dd86-48be-1.png)
+[![](../../.resource/remote/4641bf4ea55d9a51475c51c0b254cb6fae13732fd97ec84ae4500f596906e1fc.png)](../../.resource/remote/4641bf4ea55d9a51475c51c0b254cb6fae13732fd97ec84ae4500f596906e1fc.png)
 
 这样我们就得到了一个`zf1`框架。接着我们修改一下`application\controllers\IndexController.php`
 
@@ -128,15 +128,15 @@ index.php:26, {main}()
 
 整个 pop 链切入点在`library\Zend\Log.php`中的`__destruct`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114157-a2832516-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114157-a2832516-48be-1.png)
+[![](../../.resource/remote/9542ef9b0c624bf759121de349ed8942241e23a21bb5c8b383c78463dc6d96f9.png)](../../.resource/remote/9542ef9b0c624bf759121de349ed8942241e23a21bb5c8b383c78463dc6d96f9.png)
 
 这里遍历了`$this->_writers`，并且触发了其中对象的`shutdown()`方法。这里我们使用的是`Zend_Log_Writer_Mail`这个类的`shutdown()`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114244-beed1d4c-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114244-beed1d4c-48be-1.png)
+[![](../../.resource/remote/bbc7347affbc65d9d135bfd963bbeca401318d68fe7cf690629e3832c949c79e.png)](../../.resource/remote/bbc7347affbc65d9d135bfd963bbeca401318d68fe7cf690629e3832c949c79e.png)
 
 接着跟进这个`filter`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114313-d03765e4-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114313-d03765e4-48be-1.png)
+[![](../../.resource/remote/5812ff71280377c4f250637b1b09bdf5e435b05baf24d370868d715c8613001f.png)](../../.resource/remote/5812ff71280377c4f250637b1b09bdf5e435b05baf24d370868d715c8613001f.png)
 
 这里其实可以看到这个链子的亮点就是，两个`filter`函数的调用。以及最后的`create_function`的命令注入。给人的感觉就是这个链子非常连贯。赞
 
@@ -163,7 +163,7 @@ index.php:26, {main}()
 
 我们使用`public function render\(\)`这个正则来搜索一下，有没有可以利用的`render()`函数。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114335-dd30efae-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114335-dd30efae-48be-1.png)
+[![](../../.resource/remote/007cbf2300ce3f9182213ffefc29776a2cc697fbc4e5ed972fb78a1dca369b36.png)](../../.resource/remote/007cbf2300ce3f9182213ffefc29776a2cc697fbc4e5ed972fb78a1dca369b36.png)
 
 最后锁定了`library\Zend\Config\Writer\Yaml.php`
 
@@ -202,21 +202,21 @@ public function render()
 
 这里我们可以看到，最后的`call_user_func($this->getYamlEncoder(), $data);`。其实这里我利用的`可变函数`这个点，来扩大利用。看下面这个`demo`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114356-e9b7987c-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114356-e9b7987c-48be-1.png)
+[![](../../.resource/remote/ca29f13e1b0c8bf0ea8c3155b6732ae9253ed2657b39c904a75ba39e74d2573d.png)](../../.resource/remote/ca29f13e1b0c8bf0ea8c3155b6732ae9253ed2657b39c904a75ba39e74d2573d.png)
 
 跟进一下`$this->getYamlEncoder()`函数。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114422-f93917f8-48be-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114422-f93917f8-48be-1.png)
+[![](../../.resource/remote/b654a95a09fe7f011ef15e8c4cdb2867798e7d75baedfa2e18d6d1ebaf19312e.png)](../../.resource/remote/b654a95a09fe7f011ef15e8c4cdb2867798e7d75baedfa2e18d6d1ebaf19312e.png)
 
 可以发现这个可控的，所以我们可以另其为一个数组，其中第一个函数是类，然后第二个参数是类中的方法名。那么我们就可以利用这个技巧，调用任何类中的任何方法。
 
 所以这里我们找一下，有没有直接写 shell 的点。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114446-073093cc-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114446-073093cc-48bf-1.png)
+[![](../../.resource/remote/4fdf0d66cf5331c9c4e4389cc69588a1797711aef19513a297c440b506ddd501.png)](../../.resource/remote/4fdf0d66cf5331c9c4e4389cc69588a1797711aef19513a297c440b506ddd501.png)
 
 这里通过搜索，我们找到了一个，没有参数的`write`方法，并且这个方法中的一些参数，都是我们完全可以控制的。我们接着跟进一下`$this->generate()`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114519-1ad988ac-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114519-1ad988ac-48bf-1.png)
+[![](../../.resource/remote/fe1b20ecbfe05f32d2ec7af8ecc18fd64787d45c568fc048898f567fad01bcec.png)](../../.resource/remote/fe1b20ecbfe05f32d2ec7af8ecc18fd64787d45c568fc048898f567fad01bcec.png)
 
 这里我们可以看到，`body`是我们可以控制的，并且直接拼接到了`output`当中, 所以我们写入的内容也是可控的。所以答案也就呼之欲出了
 
@@ -321,7 +321,7 @@ Vulnerability verification
 *   并且安装`laminas/laminas-log`
     
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210101140100-b918cc3c-4bf6-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210101140100-b918cc3c-4bf6-1.png)
+[![](../../.resource/remote/77b8fd273caae3c2d16f35e74d0445763242423da689eaa57fec1e4f910fba07.png)](../../.resource/remote/77b8fd273caae3c2d16f35e74d0445763242423da689eaa57fec1e4f910fba07.png)
 
 ```
 Would you like to install logging support? y/N
@@ -339,17 +339,17 @@ Would you like to install logging support? y/N
 
 搭好环境之后，我们在`module\Application\src\Controller\IndexController.php`设置一个反序列化的点。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114610-39672734-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114610-39672734-48bf-1.png)
+[![](../../.resource/remote/b3c3d379a9dfc92fb65f59a154161d0b03530d230baff7f9b6dc5116138c05fa.png)](../../.resource/remote/b3c3d379a9dfc92fb65f59a154161d0b03530d230baff7f9b6dc5116138c05fa.png)
 
 然后碰到的最多的一个问题就是，怎么访问到这个 Action。这里翻阅一下开发文档就知道，这个框架的路由都是写在`module\Application\config\module.config.php`中的。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114633-47199c2c-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114633-47199c2c-48bf-1.png)
+[![](../../.resource/remote/6d4ba8b1356d970b9ee402451bcaaa1e9665a769151f9b613cd365d5378f2b3f.png)](../../.resource/remote/6d4ba8b1356d970b9ee402451bcaaa1e9665a769151f9b613cd365d5378f2b3f.png)
 
 其中就自带了如何访问这个`Action`。但是我们如果直接访问`http://your-ip/public/application[/:action]`会发现 404。
 
 其实稍微熟悉 mvc 框架的同学一定知道，大多数的 mvc 框架都有一个入口文件, 而这里的入口文件就是`index.php`。所以我们要通过这个路由文件去访问路由才能正常访问到。所以我们访问一下`http://your-ip/public/index.php/application[/:action]`就可以顺利访问到这个`Action`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114649-50df2e84-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114649-50df2e84-48bf-1.png)
+[![](../../.resource/remote/7520a08845a3abac1ffe1e99ba1d33cf386878d7b7d3ec44e5963a385669035f.png)](../../.resource/remote/7520a08845a3abac1ffe1e99ba1d33cf386878d7b7d3ec44e5963a385669035f.png)
 
 至此，我们就找到了我们的反序列化的点。
 
@@ -358,13 +358,13 @@ Would you like to install logging support? y/N
 
 这里其实可以找到很多链子，有很多师傅也找到了一些 rce 的链子，那么如何 GETSHELL 呢?
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114710-5d4c9cce-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114710-5d4c9cce-48bf-1.png)
+[![](../../.resource/remote/87f6e5cb0c373efbdc1bf8c43cae97a3cb222bda5b63e8ffecb292b841fb09e5.png)](../../.resource/remote/87f6e5cb0c373efbdc1bf8c43cae97a3cb222bda5b63e8ffecb292b841fb09e5.png)
 
 可变参数我们屡见不鲜了，已经在很多场 CTF 中出现了，这里就不在赘述了.
 
 这里我们已经可以执行任意类的任意方法了。所以根据题目描述，最终的反序列化的重点是 getshell，所以我们需要找一条可以直通`file_put_contents`的路。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114750-74f781fe-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114750-74f781fe-48bf-1.png)
+[![](../../.resource/remote/63c4eba6c43d61dca1ae63f5eb545f85fc46325806399892221f38a368a9a6bc.png)](../../.resource/remote/63c4eba6c43d61dca1ae63f5eb545f85fc46325806399892221f38a368a9a6bc.png)
 
 所以整个的答案就呼之欲出了，下面给出调用栈。
 
@@ -394,7 +394,7 @@ index.php:42, {main}()
 
 exp 如下：（代码有点冗余，所以这里就不给文本了）师傅们自己复现一下吧
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114807-7f669314-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114807-7f669314-48bf-1.png)
+[![](../../.resource/remote/740e2f1d798ac3625f2e727654e99e08e7cac63633b63b281b6a2cf955829759.png)](../../.resource/remote/740e2f1d798ac3625f2e727654e99e08e7cac63633b63b281b6a2cf955829759.png)
 
 运行得到：
 
@@ -410,7 +410,7 @@ TzoxNToiWmVuZFxMb2dcTG9nZ2VyIjoxOntzOjEwOiIAKgB3cml0ZXJzIjthOjE6e2k6MDtPOjMwOiJa
 
 另一条写 shell 的链子
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201228114846-9646f5c4-48bf-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201228114846-9646f5c4-48bf-1.png)
+[![](../../.resource/remote/2c7e16b798c58409336536b7f1268b96c427849a4674f71a14cd50f4e79020c2.png)](../../.resource/remote/2c7e16b798c58409336536b7f1268b96c427849a4674f71a14cd50f4e79020c2.png)
 
 以及一些师傅的 RCE 的链子
 

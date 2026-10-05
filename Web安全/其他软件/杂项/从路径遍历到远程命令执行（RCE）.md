@@ -131,14 +131,14 @@ incident-report-xxxxx.zip
  和密码 Glglgl123  
  登录：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/VVS29J221xQNRqnicIicFkg1cYqxhw6eFGs0fK4MtOC3WMPNwJl8JNdR8k7e97B5RsvwrgMqquAPsAPe057hSolQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/83dd460b9013f3614280d4b27b9634f7f91b2225473fb3f484e442539ec7214e.png "")  
   
 http://admin.target.com:8443/admin/faces/jsf/login.xhtml  
   
 **成功登录后台！**  
  拿到了完整管理员权限！  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/VVS29J221xQNRqnicIicFkg1cYqxhw6eFG7EmfR4zeZA0sHwHSvBy4OhA4yaicL3JkEPuuG9wa02GZzUsO5cu7nBg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6fc0d2a44f95753350d7f51e1adcabbead7b388d7d8a6326e87c8f8dfec858af.png "")  
 ## 后台发现 groovy console —— 开启 RCE 的大门  
   
 在后台页面中，我发现了一个功能点叫：  
@@ -158,7 +158,7 @@ print "id".execute().textprint "cat /etc/passwd".execute().text
   
 但是……命令执行了，却没有返回任何输出。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/VVS29J221xQNRqnicIicFkg1cYqxhw6eFGkhJQhwxw0OzL5S4k7y0ymTIicpN53FaNNhL34Ej12ZztbNjibqSjEm0Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f1e05d17578fa152fe3197de35486410aeb9d020ef00a13f2c32351b1fa774b7.png "")  
 ## 关键突破：RCE 输出藏在日志文件里！  
   
 这时我突然想到前面提到的 /admin/incident-report  

@@ -39,7 +39,7 @@ schema_version: "1"
 #  黑客利用WordPress 插件中的提权0day攻陷网站   
 Bill Toulas  代码卫士   2023-07-03 17:37  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -49,7 +49,7 @@ Bill Toulas  代码卫士   2023-07-03 17:37
 **黑客利用 “Ultimate Member” WordPress 插件中的 0day 漏洞 （CVE-2023-3460），通过绕过安全措施和注册恶意管理员账户，攻陷网站。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRiclUq6AFPWFj3Nw1aaySdZRJ5Sra2GrBIShsCicIN72s2Lib5QeqC60JFF9VPVMVrbfDgFeyicylNIA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
   
 Ultimate Member 是一款用户资料和会员插件，便于在WordPress 网站上进行注册和构建社区，目前的活跃下载量超过20万次。  
@@ -59,7 +59,7 @@ CVE-2023-3460的CVSS v3.1评分为9.8，影响 Ultimate Member 插件的所有�
 Ultimate Member 的一名开发人员指出，“自2.6.3版本开始，我们收到一名客户的报告后就开始着手准备与该漏洞相关的修复方案。版本 2.6.4、2.6.5、2.6.6部分修复了该漏洞，但我们仍然一起与 WPScan 团队致力于获得最佳结果。我们还收到了含有所有必要详情的报告。之前所有版本均易受影响，因此我们强烈建议将网站更新至2.6.6版本，并在未来持续更新，获得最近的安全和特性增强。”  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRiclUq6AFPWFj3Nw1aaySdZRJ5Sra2GrBIShsCicIN72s2Lib5QeqC60JFF9VPVMVrbfDgFeyicylNIA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
 **攻击活动**  
   
@@ -144,15 +144,15 @@ https://www.bleepingcomputer.com/news/security/hackers-exploit-zero-day-in-ultim
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

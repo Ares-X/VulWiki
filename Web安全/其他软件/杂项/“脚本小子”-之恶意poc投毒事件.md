@@ -76,7 +76,7 @@ schema_version: "1"
 CVE-2020-35489（https://github[.]com/gh202503/poc-cve-2020-35489）  
 的poc。这个仓库乍一看挺合理的（现在已被删除），因为我也确实有点累就跳过了检查poc是否恶意的环节，直接clone了这个项目并且在个人vps上运行起来。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJiaM5rmxvGgiaWlViaZwr5Iics7HakNNXicAltibQBzbjxicFJY1LyK64DdlVQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6e20af2e43a948e8b73e5b32d27b588db118384c2875ded68a370418c0206053.png "")  
   
     图一   
 恶意代码库删除  
@@ -91,7 +91,7 @@ Codeberg
 仓库中，  
 我无意中想攻击者交出了对我系统的控制权限，现在是时候收回了。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJTNibarA99wCwYXdTMqpj5otTgFSYeqUSPbf1gVaOG6TWicPwReQTdRaA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/72df6dc8b5ff1076a623108e27bb1be89d1683c39dc118dd8cf8e5e362b7bf8a.png "")  
   
     
  图二   
@@ -178,7 +178,7 @@ cd sink
   
     在这个私有仓库内，我发现了超过123个被窃取的压缩文档，命名风格如下  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJ8L3ibEHTMiaVia9ibMHleGGya7zHPRm6wjeKwujOrPO9e6Wj85AzKAhenw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b84aca8c1184b2753c5f0c00099e9a5217bcbe55b360e3acb363c19edb0a05e6.png "")  
   
     这些文件内容都是高度机密的，全部是来自和我一样的受害者（我删除掉了我的相关信息但是其他受害者的就不在我的权限范围了）  
 - 研究攻击者的其他仓库  
@@ -187,9 +187,9 @@ cd sink
 Codeberg  
 的仓库，但是都因为权限不做失败  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJqxadDX9D142ce0CKJQRibrPcjjZYibmFQt7wBDVkFicjIyXl2x0NbHhtA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/428511b27726181f8295a703ee264ac3c849e2ebc59c8db6badff23e058f79bc.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJQc85PBYX3RNlcibI9tD2HO1liamsQZUtavPYEJib4NgOgEArFklsr2hIw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4c96cce1c3a0e7e7fcb3b66fb6430b8d5ba5d50e29c7ab3edd79c27e4658154b.png "")  
 - 我是如何控制黑客的  
 Codeberg  
 仓库的  
@@ -202,7 +202,7 @@ Codeberg
         为了彻底清除攻击者仓库中被窃取的数据，我不仅删除了文件——还执行了一次完整的 Git 重置（Git reset），确保提交历史中不留任何痕迹。我没有使用简单的 `git rm`，而是选择了硬重置（hard reset）并强制推送（forced push），确保攻击者无法回滚更改。  
     
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJpWFPiatbJ5AREfKV4zf3WkYqiaiakRUIM5P3wW79YGwicoZp6X2KbKjVBg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4d66dc4ef7d6447e4103e51e7a12c39d81f7c9326e34a1865992df7379061473.png "")  
   
     ✅ 该方法可确保整个 Git 历史记录被彻底清除，之前的提交将无法恢复。  
   
@@ -214,17 +214,17 @@ Codeberg
   
     确保黑客知道我做了什么（挑衅他/她/它），直接在仓库建个文件  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJcrKvwZaXibnEw6vgUia0xeZK9edn83dKTKWzVSdC9F0u861f14JnTySw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fd4d03baac90915445c17d4359072960fdde8039ff5b4f5c755b9abc4613e834.png "")  
   
     文件内容  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJTL9EDicOxRsnHUt51zyloEvKWW0ico8cbOG6ZicLAgUWqLKbJcXJu3s4w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/579dcdc0233093838d736d0e9ce33e64db4c18b8c97531a8cdafb26baf4d86e8.png "")  
   
     现在，代码仓库里不再有窃取的文件，只剩下这条消息——明确宣告他的攻击行为已被发现并且反制。    
   
     3.验证数据是否真的被删除  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJ6YZIUZIFG5gTdkmcPnumqLXU8DHSPrf6ONHcicT7aIX4sICWvJ4mGFg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cee6cfa58021288c7c18fbf1bb02a7f3149aa471ceea802d9322f762af22e292.png "")  
   
     如果仓库里仅剩的文件是 “  
 hacked.txt”，且所有历史提交记录都被清除——那就意味着清理行动已大功告成。    
@@ -236,7 +236,7 @@ hacked.txt”，且所有历史提交记录都被清除——那就意味着清�
      
 如果只是删除窃取的文件，还是太便宜他了，所以我选择向仓库上传无数看着像真实数据的垃圾文件，让他彻底沦陷  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJxZYfTfwhN5MoyGHDaprLTjpkJFjRDa7Q7lTZ6dAswSibx1vMaBnsib1w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/776a9a5b43742ba0fcc685b88868a47f6bccc996f24b8acabefb89a88fc22599.png "")  
   
     同时在分析 **  
 Xsession.sh** 脚本后，我发现攻击者对其恶意负载进行了混淆处理，以掩盖真实目的。以下是该脚本的逐层解析，揭露其恶意行为及采用的技术手段。    
@@ -245,17 +245,17 @@ Xsession.sh** 脚本后，我发现攻击者对其恶意负载进行了混淆处
     在彻底重置仓库并清除所有被盗数据后，我注意到立刻就出现了新的提交记录。攻击者竟在仓库中留下了一条消息，显然对刚刚发生的一切了如指掌。    
 我竟然是小丑？  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJyu036w8rkDVTX0esuNIBWeyVMTYObxZpQ1sYgoo7efdRXc3zAYaUjg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cde2bdf1dc346177c5492fdf4c1f50564ebfc7d062d55472d54aa27bcba35491.png "")  
   
     黑客回复如下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJIEficadkxWtUwr66ZAtjlm8qDgOM4ualrGad2jhiaBtlxRJy4DBibEJdQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1b864362c63e0b66c12168e23212ba91988443ba124548b0f83e1a8fef0df4de.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJ4pDGxY2Y572GtlFfKEOx8VuVVT45onBY0G8FYywJVywjYvUyEqGh8w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6c81acfd2394df467fb382e76e8897492c301429a5f9f64d53ffc56bf60542b1.png "")  
   
     通过git提交历史也能确认攻击者的是已经发现了我的操作  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJzbYKy8P2wS4RHzqZpBpjZYNEx0pXC1vEzdpg8ibGoBcTerUTeF0nkkg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cbf3d070db880518cc5a08521b7b8203a4c066cd4abb4daf463bbde9ddaa3c60.png "")  
 - 所以这意味着什么？  
   
     1.攻击者正在实时监控他们的代码仓库。我的干预措施被他们瞬间察觉，这说明对方部署了自动化监控或人工值守机制。    
@@ -276,15 +276,15 @@ PoC），但实际上暗藏恶意功能。它滥用PDF文件作为恶意负载�
   
     由于疲劳，我在执行前没有仔细检查文件内容，误以为这是个合法的PoC。虽然我平时经常分析和开发漏洞利用PoC，通常会逐行检查相关的代码，但这次我还是过于轻信了。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJ3VMiaTwK4REnczOZJFGUkGgRZxpxJeU1gmjrwW3iavwibnuhKqxn7jang/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/677cbe88e8fabceef8fff0ea65f89ee4bbc05a44911c65b358b0c4bc6447318f.png "")  
   
     运行结果如下，其实也能看出混淆逻辑还是很简单的  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJvNhAD4Gics6iby1d3XYcDtXkQdyS2KyWehicQbPXXnRgEIaNJSrFF3NtA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d7f3345cf60be25c8e0004cef22f2a364385aa021f7410a2f34f91bb2a856448.png "")  
   
     反混淆  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJWHVj9fTnxRSxnlIgictH0J2CIOdy9VrV34sWfVFsweCFX7ROOrlBoyA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5acee5619c2d22404bf0e19613d452c06436fc4963032c958567039d80f64526.png "")  
   
      
  1.这段代码做了什么：  
@@ -303,7 +303,7 @@ PoC），但实际上暗藏恶意功能。它滥用PDF文件作为恶意负载�
 Xsession.sh  
 ，反混淆如下  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJajsB9eLP1UNBwNMjA3pPyOWFRD0SRAWIj1syDA1mKTtqpCFaHRcxQw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/83b8b41271ed872592361a67df34e8567939b889fd87e32b4369f728360ab192.png "")  
   
     核心代码中的发现：  
   
@@ -320,7 +320,7 @@ glances的进程时结束自己
 file.io  
 - 如何移除这个病毒？  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/lmvdhjeZU1X8IQfp2s8Pre1s0rjCnQpJQ2FmM4qejliaiaEy7DrMGklzoW3Ffw0Hq8bywjJFpP58rw3cSRiabBJpQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/90c3d98350423ec08f6619a5b0e305312fcdd56e645651eb1b3f7d510827cb3d.png "")  
 - 总结  
   
       

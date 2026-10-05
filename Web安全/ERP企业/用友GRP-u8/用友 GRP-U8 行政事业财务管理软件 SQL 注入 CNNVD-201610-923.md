@@ -48,7 +48,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/3Tevu8dc_Cin6MTEUZvxFg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -78,19 +78,19 @@ cVer=9.8.0&dp=<?xml version="1.0" encoding="GB2312"?><R9PACKET version="1"><DATA
 
 请求后按 F12 查看源代码可以得到 SQL 语句查询结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7pCmG9kTVVuzBDdQgkQa6qDWfWEcn9ouZicLReHKCQlY5N0KsBxY2PZgWkIIhENR0tMYddRujbs2w/640?wx_fmt=png)
+![](../../.resource/remote/577f533eecc09b40b3e6689676ba580ec4e3b7195223d9f0c318b5169eb7f233.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7pCmG9kTVVuzBDdQgkQa6qc205lSqDwt8yQMu2ofsicDOBtg4FMPiaV4P5aXtSWCeTL6d8p35mo7ww/640?wx_fmt=png)
+![](../../.resource/remote/3f7803ae1b0979cc54439cdf575cf21c173b5a05ce60cf798006ed44789d9ac3.png)
 
 也可以调用 **xp_cmdshell** 来执行系统命令 (大部分此系统为 **windows**)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7pCmG9kTVVuzBDdQgkQa6qObKCadHMc25vOph5tvvzwiaEgdqKZt5gmkf27a1nvK1C7375zBUKpuQ/640?wx_fmt=png)
+![](../../.resource/remote/08893cb51581dd14dd0e42271429a7a288a6dfa29e98fae6ad02cdd296702871.png)
 
 ```
 注意：大部分默认是不开启 xp_cmdshell 模块的
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7pCmG9kTVVuzBDdQgkQa6q3Kp1iapYcpGgQXaHCibWz1icY6CLRbRDibQwoTauT0sfNtc4vypF8oMu5g/640?wx_fmt=png)
+![](../../.resource/remote/a841240723be7ed9bf533dc4125850069ce59fea9b8bd676233c39b472e980a3.png)
 
 可以使用如下方法打开 **xp_cmdshell 方法**
 
@@ -275,7 +275,7 @@ if __name__ == '__main__':
             POC_3(target_url, cmd)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7pCmG9kTVVuzBDdQgkQa6qzL2N1ia9Coib9JKMHwusJVguicvR9jjhUozGtZgvGQbTD92wYs04hzRug/640?wx_fmt=png)
+![](../../.resource/remote/d1e0ccbde79000cab458f625f0af16f406a8aade57c918aff8a63dce462ccaf5.png)
 
 最后
 --
@@ -284,7 +284,7 @@ if __name__ == '__main__':
 > 
 > 别忘了 Github 下载完给个小星星⭐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6wnKTQvK0n8sFOQEEFQro75IHato7k7WJakCwObVtic8kOiagRSTylHIhHxg4DVKOhBFDazKkCMgvw/640?wx_fmt=png)
+![](../../.resource/remote/db24e7036c6033b3096cc6bcf3daa42f7778b91d944c595acd55b7a1b0302046.png)
 
 ---
 

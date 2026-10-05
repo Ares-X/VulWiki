@@ -54,7 +54,7 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ub8eg5NABy61YPxSB0Fu6Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjc8pmcbcoe9PdiahIebL3sncnu9SsUErjXu1l0oE45vFroVLzRS6UBe4MfObxHDVYiaSEwcJIVjUEUA/640?wx_fmt=png)
+![](../../.resource/remote/da36a1883cf94b4590c9f57aa2925d7043a6a76e7948ac0846111f69e980d52b.png)
 
 FLIR-AX8 任意文件下载
 
@@ -70,9 +70,9 @@ FLIR-AX8
 
 访问主页：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjc8pmcbcoe9PdiahIebL3snceLd3qhHgPMbTSEiaLDw2b73KP9BQfxxrujBfL97SoZGicPf3FbAaTibAA/640?wx_fmt=png)
+![](../../.resource/remote/7186d402c99adbc1fd1cccbba54f0949e5f8bad27d50a10ce7bda7c6cd3efb6c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjc8pmcbcoe9PdiahIebL3snclNBlxugkiaYMcuqEibriaLNx2bPmPS7vNlSRyBktnpkzMpqZnqnlPTBvg/640?wx_fmt=png)
+![](../../.resource/remote/c5a3f35eaabf98713294c49a61a5a258cedc3d510c1bc2bb72cbc98a9497a1cc.png)
 
 详细数据包：
 
@@ -93,15 +93,15 @@ poc：
 /download.php?file=/etc/passwd
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjc8pmcbcoe9PdiahIebL3sncOPUhoTJxY9sY2rRaQiaG1MWibLT8ePDoFk7KlozJR2gz1rypTRfnqVJg/640?wx_fmt=png)
+![](../../.resource/remote/996b05270ed75b9177102f868d148fcf59500c5e5aa29e2f01b3743037825aa7.png)
 
 直接浏览器访问下载，请求文件  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjc8pmcbcoe9PdiahIebL3snczMdicJGibfEXlyggI43r8w27esf2520r9dlYvddjNvhWRMzjibX3rghbw/640?wx_fmt=png)
+![](../../.resource/remote/ac624ce9365107563791659baeee9a838cd885fd56e8729581546c4d8df1de99.png)
 
 尝试批量脚本：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjc8pmcbcoe9PdiahIebL3snc21PFMeaKchbjBjItU1R7RIA0QMr9FClDjiawefFAtNm5s6Zz0N8icMkg/640?wx_fmt=png)
+![](../../.resource/remote/f957896990e20a46149b6a6668cbb5cd7993c03c828ecb54631f3de6ce6bfe33.png)
 
 参考：
 
@@ -119,7 +119,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -133,11 +133,11 @@ FREEBUF 主页：https://www.freebuf.com/author/thelostworld?type=article
 
 语雀博客主页：https://www.yuque.com/thelostworld
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 欢迎添加本公众号作者微信交流，添加时备注一下 “公众号”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcSQn373grjydSAvWcmAgI3ibf9GUyuOCzpVJBq6z1Z60vzBjlEWLAu4gD9Lk4S57BcEiaGOibJfoXicQ/640?wx_fmt=png)
+![](../../.resource/remote/9255e3712e3885c431d5087872642f32c2e71629b39b93e381a5a147814af2d4.png)
 
 ---
 

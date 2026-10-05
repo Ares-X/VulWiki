@@ -56,7 +56,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2024-08-07 10:04  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceibXXic2V7XWPF80libk2UCibQ8e3ibDCO8YfFd3GegYMzq7TsTNoETtCbvZkaBpH3kPklNDDAQqPFcstA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/24120d0af1689ca7b78965426b2f0987f2d60e84b4b33b32eb858a41179de065.png "")  
   
 谷歌修复了 Android 内核中的高危漏洞，编号为 CVE-2024-36971。该漏洞是一个远程代码执行漏洞，攻击者可以使用它来执行任意代码和获取root权限。谷歌知道这个漏洞已经被活跃攻击，但没有分享相关攻击的细节。  
   

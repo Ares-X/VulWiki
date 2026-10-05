@@ -75,7 +75,7 @@ ANSI 转义序列是用于控制命令行界面和终端中文本格式和外观
   
 Dushantha表示，WinRAR 的 ShellExecute 函数没有启动预期的文件，而是收到了错误的参数并执行了隐藏的恶意脚本，例如批处理文件 (.bat) 或命令脚本 (.cmd) 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/Ok4fxxCpBb7tUnqMrZqAVneiajSxlibcxskn4cW9PGjDIZ5iaSSam0JKOs5huMvZtFEX5xHzsRicibXlZNPXMLrmmzg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/a5d625143dd629898a3f088af642af0a68b14481948fe9f1500fd60f84a2fc48.gif "")  
   
 然后，该脚本可以在受害者的设备上安装恶意软件，同时显示诱饵文档以避免引起怀疑。  
   
@@ -103,7 +103,7 @@ WinRAR 的 Linux 和 UNIX 版本也容易受到通过 ANSI 转义序列的屏幕
 **【免费领】**  
 **网络安全专业入门与进阶学习资料，轻松掌握网络安全技能！**  
   
-****![](https://mmbiz.qpic.cn/sz_mmbiz_png/Ok4fxxCpBb4N2VUg5icoU6eUKJ14GUznZiaB5GRRWfKMn3k9mc03BRO6zB0LoPzN4UFb1vIKXwibvsEkPLy6ozj8Q/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+****![](../../.resource/remote/3fbc37318b227816fbcbe83c2ef4ca0516b980d91853f31e4ee6b7e9983f42de.webp "")  
   
   
   

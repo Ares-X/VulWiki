@@ -37,9 +37,9 @@ schema_version: "1"
 #  Deno曝出高危漏洞可导致密钥泄露与任意代码执行  
  FreeBuf   2026-01-19 10:32  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
-![banner](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibofXkkXsibM0gxKLeZpLUxEic0goZbrHpiaHa1XicDpV2ntzzKd0T3hf2UMuphAJBYhfwrJUFWF03IVw/640?wx_fmt=jpeg&from=appmsg "")  
+![banner](../../.resource/remote/ff351d4efbdf316ab3ed429c38c834420ed49b136b89ef6a1e75741648befe1a.jpg "")  
   
   
 以"默认安全"架构著称的现代 JavaScript/TypeScript 运行时 Deno 近日曝出两个重大安全漏洞。这些漏洞分别影响运行时的加密兼容性和 Windows 平台命令执行功能，可能导致服务器敏感密钥泄露并允许攻击者执行任意代码。  
@@ -96,7 +96,7 @@ https://securityonline.info/critical-deno-flaws-risk-secrets-cve-2026-22863-exec
 ### 电台讨论  
   
 ****  
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

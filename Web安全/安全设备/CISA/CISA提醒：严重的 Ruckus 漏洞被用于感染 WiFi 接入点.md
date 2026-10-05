@@ -51,7 +51,7 @@ source_status: "unknown"
 
 Sergiu Gatlan  代码卫士   2023-05-15 17:27  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -60,9 +60,9 @@ Sergiu Gatlan  代码卫士   2023-05-15 17:27
   
 **美国网络安全和基础设施安全局 (CISA) 提醒称，Ruckus Wireless Admin 面板中存在一个严重的远程代码执行漏洞 (CVE-2023-25717)，已遭近期发现的某 DDoS 僵尸网络利用。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMRuQDkjrn90BU9uy6w6tibv8p43uRkfKCRI3S6WVjfDzt1m0ib0cLM3fH2VicBzfPJwn0lZR9BfNxAnw/640?wx_fmt=gif "")  
+![](../../.resource/remote/a30fed81cdf23b9d636f02bf82b7343e4da217170c559c9c069d680f6287a2ab.gif "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRuQDkjrn90BU9uy6w6tibv8Taa3larbf2kynMcYHica91TpsACtkb56gDQyiayqgD5lg5eBs5DZe68A/640?wx_fmt=png "")  
+![](../../.resource/remote/9b14ca2623a936c3f3032fb8d42d04c68fb0e440d37b42715e2cd79b48e0ae91.png "")  
   
   
 虽然该漏洞已在2月初修复，但很多设备所有人可能尚未修复无线接入点。另外，目前尚未发布针对已达生命周期型号设备的补丁。  
@@ -83,10 +83,10 @@ CISA 要求美国联邦政府民事行政部门最晚于6月2日修复该漏洞�
   
 ****  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQZeSribxs2yU1w56EMvgX9cDBCiabniazxdxtQ25cBCAd5vBJIM2sOv1khjzwwViaT0pS74U6piaiauiaGA/640?wx_fmt=png "")  
+![](../../.resource/remote/66b1ac947994df6ffca93aa0695c4d5878660931663fdc6f9bb6359a33c59e8f.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMTBzmfDJA6rWkgzD5KIKNibpR0szmPaeuu4BibnJiaQzxBpaRMwb8icKTeZVEuWREJwacZm3wElt7vOtQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/7ac0e4dd5ecf5ae15d5f5eede1491e723925c4ff6a4ed491da1c31ac64c5b113.jpg "")  
   
 ****  
 代码卫士试用地址：  
@@ -141,15 +141,15 @@ https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-ruckus-bug
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

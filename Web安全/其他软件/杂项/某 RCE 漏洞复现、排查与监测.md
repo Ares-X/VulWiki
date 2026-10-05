@@ -68,7 +68,7 @@ previous_primary_identifiers: ""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/46bVlM0J1m04UMpb5rSoKg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouBVkbbkcibM9FaCwnkdK9xtYHmYNBAA85NaKmQ5DoaJe9OdNm5coxzaA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/f306e6cd2e4e2f45cfd6418fd5b53e4e5b988e0696614d5d6eaaece4d122f85b.jpg)  
 
 本文为看雪论坛优秀文章
 
@@ -90,9 +90,9 @@ EXP 下载地址：https://github.com/Mr-xn/sunlogin_rce （感谢开源作者�
 ----------
 
 在 Win7 虚拟机里执行 SunloginClient_11.0.0.33162_X64.exe  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ou9G5xBiaKrn0c8GiagH1DZaibzsY8rAxszicqvsaXZZDJednA3Rfxl1khkQ/640?wx_fmt=png)  
+![](../../.resource/remote/deb2f12f8bb5f3b35d10b0b4b2f8ec754d9b1fcd0f0a19264d9bcd657d828732.png)  
 查看对外开放端口，这里为 49218，这个端口不是固定的，重启程序会变。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouujogF0r7tTYl14YTGauYAlq0amNgm60RTz8qlHsjskfFAxiaDuwfkoA/640?wx_fmt=png)  
+![](../../.resource/remote/7488802b7208d723f84d888f427b395188579fa509ccb3e2b5c669a64cc3b6d2.png)  
 配合查找的命令：
 
 ```
@@ -100,7 +100,7 @@ host 192.168.220.134 and tcp port 49168
 ```
 
 测试 exp，命令执行成功，是 system 权限：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ousfajhibhLYyrX9wJYYxdOicazIwZ8mgkic05qQKOMvnibXCcXGsWrkO12Q/640?wx_fmt=png)
+![](../../.resource/remote/04209286ccbb63d127df095ee27496c75380f21ce8a487da55df22003eba7071.png)
 
 ```
 PsExec64.exe -i -s cmd
@@ -111,9 +111,9 @@ PsExec64.exe -i -s cmd
 其实直接看 exp 源码，也能猜个差不多，莫过于：  
 （1）授权认证出了问题，任意用户可以获得访问令牌；  
 （2）存在命令注入问题。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouicdy1N6rEx7NPXYicSD6PnxAwAvd8WSBKg92gG2bmbw4zTLOFLql5yzQ/640?wx_fmt=png)  
+![](../../.resource/remote/dee5dbfe4b5fc91367c9cf7ca854981a27409a64762fc016ff1d881ecc2c397b.png)  
 对导致命令执行的 url 进行 url 解码可以看的更清楚些：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouiacE5l7MpMxfF9bpOPIMLHShfYPOuL4CQflibetBV0k7YXdOLJgggplg/640?wx_fmt=png)
+![](../../.resource/remote/704f1c02f3f4e37f8251eb01c5ea1d8c1888a8f38b932a82742b2294e1bb6cf1.png)
 
 **2、流量分析**
 ----------
@@ -127,12 +127,12 @@ PsExec64.exe -i -s cmd
 调试->高级->隐藏调试器（PEB）
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouXgCLVGkqwwt0iaSfXKnDznEZfvVyDnE3Nic0knJ10xfuicDNa5cTiayOgw/640?wx_fmt=png)  
+![](../../.resource/remote/e8ba611765810f37aafce359593a4edadca559e2b0188192796339a613692df6.png)  
 
 对抓包结果进行分析，请求令牌，存在未授权访问的问题：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouZOg1BEl3eVnXgdMrqjuqKJVeUpn0MAaaQYkYibRpibyj9cSLKQGyyx0A/640?wx_fmt=png)  
+![](../../.resource/remote/115e4ef97667bd0de0f93e81a60e8165bab6bd76588d955b77df3ff70c9b10e3.png)  
 命令执行，存在命令注入的问题：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouCStTb1EnTyxxGFPeUesd7wKZMia0ANEianoHOH5ibPeuickPurg3pTsgKw/640?wx_fmt=png)
+![](../../.resource/remote/f6aaa4cde13ec4e0b7d234081a286eb88ebd3e5e3faac43c2400fc58bf08eef4.png)
 
 **3、为了定位命令执行的关键代码位置**
 ---------------------
@@ -141,9 +141,9 @@ PsExec64.exe -i -s cmd
 
 使用 Procmon 对程序进行行为分析，找到命令执行的关键函数，CreateProcessA。其实不用找，大概也能猜出来，可以把常见造成命令执行的函数都下个断点，断下来之后再进行判断。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouyvu1WxYAnh3fspRXPLTvTc9WozE4tz4rTlqjDsE6poAsewkrtPd7kw/640?wx_fmt=png)
+![](../../.resource/remote/dc3647554de032da2795152354a7319ae12c953378cd640b702f40b3cc47d0df.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ou3ZjX2kdYwRQCja6dHzUFxp2BaAfmGKicydkxJ2fYyW2p7SMiaOiczmBpg/640?wx_fmt=png)
+![](../../.resource/remote/67e3b29dea9fcbe565615f06d18e1b6c93c848502b9452b7a132af7da26565cd.png)
 
 ### **（2）动态调试**
 
@@ -154,7 +154,7 @@ body="Verification failure" && body="false" && header="Cache-Control: no-cache" 
 ```
 
 以 system 权限启动 x64dbg，以方便附加调试目标进程：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ou2vOPYsxXdbIJiazd85sVz5icibbEcTkYeTk7f4TRK2IS8aSWOv0PNO6cw/640?wx_fmt=png)  
+![](../../.resource/remote/32ed0d98bd9b3927e16a792e041010b03439308990c5587340f0304f5138c779.png)  
 
 在调试时需要隐藏调试器，否则在调试过程中会报异常：
 
@@ -169,18 +169,18 @@ print(res)
 
 对 CreateProcessA 函数下断点，然后执行 exp 触发断点：  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouLg7w3QpRpZIcc27eY7qQGHhVVliaw2JBBicHWMxYoicUK9DmPtTiaMIY6g/640?wx_fmt=png)
+![](../../.resource/remote/014914c99a87e9e72526ed51630b7481ba3c5071eceadfbb19c1d120dfd152e6.png)
 
 ### **（3）静态分析**
 
 有个 upx 壳，使用 “upx -d” 直接脱掉。脱掉后的程序直接运行的话，还是会报错，没有探究原因，不过 ida 可以正常分析了。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ou4QTDmg556KnDF3iaqeN5TOoEGL1Et4WEUZ5zxByXmkcaZV7ANfXUTUg/640?wx_fmt=png)
+![](../../.resource/remote/07ae666bd2c509f379b1b3af1cdbb5a4621696e7364ad45f215ab912f760e854.png)
 
 根据动态调试的结果，可以很快定位到关键代码位置。找到 URL 路由，这可以用来分析其他 api 功能。另外，发现除了 exp 里提到的 ping 可以导致命令执行，nslookup 也是可以的，可以自行编写脚本测试。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouIw1XguWayRt09ZSYfYcUtBxYch8Zlaw0ZKptcR9Dsy2X7Kpibr84sibQ/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouo5hH1Ey7w6ILY95eUm59hJ8YkAtsM9XCl6tTbYgiaLcQibcBKzt1gLRg/640?wx_fmt=png)
+![](../../.resource/remote/64758916cfa841db4fa01ad25726789c40d1c32e51b8b97c63ae6bab279a315a.png)  
+![](../../.resource/remote/a891a0c5b864c8776a0d447778d2d8b5db49293ca7fc701595b29a10cc361a7f.png)
 
 ```
   /\/check?.*cmd[\s]*?=(?:ping|nslookup).*?(?:\.\.\/|\.\.\\)/
@@ -190,7 +190,7 @@ print(res)
 
 ### （1）配置 “漏洞信息”：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0oubb57iafFLAyUxiapZLXta8OUMf4SNhErgSZpCabZLL2p9ibO5fQrlibGDA/640?wx_fmt=png)  
+![](../../.resource/remote/29cedb986077317687b54b37d905bae6cc98dbf469e839c7b421a930ce844aec.png)  
 这里的指纹信息十分关键，Goby 在扫描的时候，会先扫描资产，这个指纹就是用来判断资产种类的，匹配上指纹之后，才会打对应的 poc。指纹的好坏，直接决定了扫描速度。
 
 Goby 语法和 fofa 是一致的，这里匹配的是 "GET /" 的应答，因为 Goby 在做资产探测的时候不会探测太多 URL。
@@ -208,9 +208,9 @@ Goby 语法和 fofa 是一致的，这里匹配的是 "GET /" 的应答，因为
 #### Test1
 
 访问获取令牌的 URL：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ousSAxG1wyHBCc8LicicugnCcucTfehlJFsffdjibY1WicXL7iaiao7BtQkUtA/640?wx_fmt=png)  
+![](../../.resource/remote/c61f2f49c9e81adc8d73981fd097541aee9755df688eae97d0d667b8eeac6ca5.png)  
 指纹判断，如果访问成功，则根据正则提取 CID：  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouHT7v6YJ2WPVSUJB77ruhgyA4AVr965CrxpGDOuZTcIGtiaUEBsev9hA/640?wx_fmt=png)  
+![](../../.resource/remote/d770f3803a90ee485965fa6ffab84f7138ce7e991bf3f0ff47283729ce85df07.png)  
 可以用 python 快速测试正则：
 
 ```
@@ -221,16 +221,16 @@ pcre2test
 #### Test2
 
 带 Cookie 访问命令执行的 URL，上一步设置的变量 CID 可以套三个大括号来使用，即 \{\\{\{CID\}\\}\}  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0outCfBzuLANRsy3cV0bo1zWbSMWjgVB3ZF8HJyBKZ2mtRnibuTUXiaDeSQ/640?wx_fmt=png)
+![](../../.resource/remote/30fddb33c5bfdd9f29118b9e26ef74c1dfac341aa620f1ba554d0273cd2585bd.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouZeOia5DYLEIjpCBOordOFOWt7icPraaNmflhfHrh3bHtW2EatPtJAurw/640?wx_fmt=png)
+![](../../.resource/remote/2a5868fdefc0adb81a9d2d74714563fcbc594356e9121d95a9da6e2605e8a2bb.png)
 
 ### （3）测试效果
 
 测试效果，发现漏洞。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouUCiazibjLmy8B4jdcacguud18Yt8xaXcK8As4nF61RtJGEqzrYWzJFwA/640?wx_fmt=png)  
+![](../../.resource/remote/65912851557490777b70dde673ad8351f0dfb58afa53ca0884667828a5584df5.png)  
 测试过程可以使用 wireshark 抓包来辅助 poc 编写，也可以参考老的 poc 脚本，其目录在 goby-win-x64-1.8.293\golib\exploits\user，或者通过 poc 管理导出来也是可以的。  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouibDIB4xZEBt4rhlIhuk1l39DXctJsY7Kojf3JMyHGu2YfQt08r99ACQ/640?wx_fmt=png)
+![](../../.resource/remote/3e98e212e19c4e59e5d4933e377ef108bbced43d841e2e027debb53443e7c162.png)
 
 ```
 alert http any any -> any any (msg:"CNVD-2022-10270 SunloginClient RCE"; pcre:"/\/check?.*cmd[\s]*?=(?:ping|nslookup).*?(?:\.\.\/|\.\.\\)/U"; classtype:attempted-admin; sid:22022801; rev:2;)
@@ -242,11 +242,11 @@ alert http any any -> any any (msg:"CNVD-2022-10270 SunloginClient RCE"; pcre:"/
 
 ### 考虑合理变形，尽可能多的生成多种形式的攻击流量，以便用来测试检测规则。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouv8xA33Eohia5a9IukcQLmAGbo8dT5pL0ZE9dmskOVg0aszGKM2HGxicQ/640?wx_fmt=png)
+![](../../.resource/remote/900df517c7f8b7f9fcf640185de07e68d33adb585e0f0112f0d729b4895c8bca.png)
 
 打 poc 的同时，用 wireshark 抓包，这里得到攻击流量包 sunlogin_rce_multi_payload.pcap  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ou1VRUzZia8Kbvn4kbCJCjnYWUUPg5jbExJDgPW9CXXCKiacb8qAAibuDbQ/640?wx_fmt=png)
+![](../../.resource/remote/0e0ff81394a8734163a91dc0c699d508f5c94aaf03646c576c66d9dad26082d9.png)
 
 ### （2）编写规则并测试
 
@@ -272,7 +272,7 @@ suricata -r sunlogin_rce_multi_payload.pcap
   Sysmon64.exe -i
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouEYmvmFZBPNdytB6cIssvfoTqUQwmQzleBwIWmnsXuRtYX4ruUhHv0g/640?wx_fmt=png)
+![](../../.resource/remote/edcb8e90e033ebc415eabf3626f7b067ca999c21e71c1543db45dc85eae20e86.png)
 
 编写 suricata 规则
 
@@ -302,7 +302,7 @@ rule-files:
 suricata -r sunlogin_rce_multi_payload.pcap
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouOPgP3TCebJb2ntm1rGYYr6d6wnDCc23twgJIspZZGCUJC9S39u89icw/640?wx_fmt=png)
+![](../../.resource/remote/9015528347a71b4eab3e001366dfe881a92a1765d91340ce6af71474b2554c68.png)
 
 流量监测相关资料  
 https://suricata.readthedocs.io/en/suricata-6.0.0/rules/  
@@ -318,20 +318,20 @@ windows 下的事件监控可以用 sysmon，Linux 下则可以用 auditd，然�
   Sysmon64.exe -i
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouqCjMM6baxHOH2Gic2lkAs6znd8jiaedaUkSYY81Dibk1euaL9Vlgnb1Uw/640?wx_fmt=png)
+![](../../.resource/remote/09d28f30d16978729772a8aa731b2dcb03cabb6b21d477bf546f647dd6f6abaa.png)
 
 ```
 事件查看器 ->应用程序和服务日志 ->Microsoft ->Windows ->Sysmon
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ou4AjPZiawjuciaEbOib6yz6RXAycwAibX3ztnOlfsW0QP6vwtH1nNibS4npw/640?wx_fmt=png)
+![](../../.resource/remote/412874af1952027dcaab8a82a9c3f3572196d8c5720708d7ef8d137921760030.png)
 
 终端监测相关资料：  
 _https://www.sysgeek.cn/sysmon/；  
 https://www.maliciouskr.cc/2018/11/15 / 使用 OSSEC 构建主机层入侵检测 /  
 https://blog.csdn.net/single7_/article/details/110038117_
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouicGMLYOxU6GtNyuxuyMRl7MxRBtAiakEPn0uwSZ0H01bGJicickDXvkZXw/640?wx_fmt=png)
+![](../../.resource/remote/e53ff3900f3837b80f1a21a8263915fa74ece23f17d413da34c8a464806b88dd.png)
 
   
 
@@ -341,7 +341,7 @@ https://bbs.pediy.com/user-home-598931.htm
 
 * 本文由看雪论坛 Jtian 原创，转载请注明来自看雪社区
 
-[![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1UG7KPNHN8Eqic51RIXYMYyr8uCAmQoDubsFXxyY3Ho3cdR2wngOXH6zbZEVTzspwK7pxktkxv93fmA5Eib7pYlw/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458489324&idx=3&sn=3643f4f46671c220cbede17182f292d5&chksm=b18ea16686f9287098b2a18599b60fc790b66c114880203b7956a913ad3e2e1d3cdfc9f8a2e7&scene=21#wechat_redirect)
+[![](../../.resource/remote/cce2652b8211d7b50efbadf1fc2f862e5c5f0567c9e75809be89c454d994e521.jpg)](http://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458489324&idx=3&sn=3643f4f46671c220cbede17182f292d5&chksm=b18ea16686f9287098b2a18599b60fc790b66c114880203b7956a913ad3e2e1d3cdfc9f8a2e7&scene=21#wechat_redirect)
 
 **#** **往期推荐**
 
@@ -359,21 +359,21 @@ https://bbs.pediy.com/user-home-598931.htm
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=jpeg)
+![](../../.resource/remote/067b16256e0ba673a1adf65d982af935c9dacaa6db0fe2765439200e9725754c.jpg)
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8EbEJaHl4j4oA4ejnuzPAicdP7bNEwt8Ew5l2fRJxWETW07MNo7TW5xnw60R9WSwicicxtkCEFicpAlQg/640?wx_fmt=gif)
+![图片](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif)
 
 **球分享**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8EbEJaHl4j4oA4ejnuzPAicdP7bNEwt8Ew5l2fRJxWETW07MNo7TW5xnw60R9WSwicicxtkCEFicpAlQg/640?wx_fmt=gif)
+![图片](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif)
 
 **球点赞**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8EbEJaHl4j4oA4ejnuzPAicdP7bNEwt8Ew5l2fRJxWETW07MNo7TW5xnw60R9WSwicicxtkCEFicpAlQg/640?wx_fmt=gif)
+![图片](../../.resource/remote/4e3876be761e4f79f0c933682019a1857fba4714aad61870eb5a22911a0ac008.gif)
 
 **球在看**
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8EbEJaHl4j4oA4ejnuzPAicd7icG69uHMQX9DaOnSPpTgamYf9cLw1XbJLEGr5Eic62BdV6TRKCjWVSQ/640?wx_fmt=gif)
+![图片](../../.resource/remote/1de07e9d8330e27982e7f37f3d5c4e32a49c50b95fac7e53954869c33a6b0f16.gif)
 
 点击 “阅读原文”，了解更多！
 

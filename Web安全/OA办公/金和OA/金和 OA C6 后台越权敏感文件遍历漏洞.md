@@ -48,7 +48,7 @@ schema_version: "1"
 
 **点击蓝字**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif)
+![](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -96,21 +96,21 @@ _**
 
 登录后点击信息交流，发起协同页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibx7FHwGq3r8M5EtNkCI9vjoARubyqWvxGHHZZXD1Gq1qw7yOUPSicGYw/640?wx_fmt=png)
+![](../../.resource/remote/7cfe2e3a6402db15de21f8766c4ee37f682df18eefb28a83bf9a191e25f05df9.png)
 
 上传附件并上传发送给目标
 
 这里登录权限为管理员，我们自己发给自己就好，前文只是展现漏洞挖掘思路过程
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibjVWrfXlIQAbiaCJPia5qEyMRzHBA7lf5Ex0k7KicT0lwiakcrWnNZm3s2Q/640?wx_fmt=png)
+![](../../.resource/remote/78a5444739ec327f3031b4787f44ddfe65b1ab069b3b9644bb3a82560150c5fc.png)
 
 成功收到上传的附件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibBWWystq5plxa58b4iazWnS4B2icgosCywoO4TWRibJP1KE0fUE0qwuasg/640?wx_fmt=png)
+![](../../.resource/remote/6c9e18bb8855b7dc35033d730c536c15b48bb83b39a7ca4d3b58beeaf2a537af.png)
 
 点击查看时抓包，发现一个带有文件 ID 的请求包
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibWIVTpV1gNQAheSvPzfibT1KUgod5GP8puK2gHo2pOibiayPiaFmhUEkYfg/640?wx_fmt=png)
+![](../../.resource/remote/ef3bec157b0ad2482b6767d0faeed5c5497d8f9c5a502222d00cd4c82db21c79.png)
 
 返回了几个参数
 
@@ -127,7 +127,7 @@ var MD = '';
 
 其中我们注意到 strFilePath 为文件的存储地址，我们更改 id 参数为另一个值，且测试后发现 name 文件名参数无关紧要
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicib5mBKIZolNNwmB9UCtw7uwdkleJIicGy6JIickArHXBFx1zJmVlZLkYzw/640?wx_fmt=png)
+![](../../.resource/remote/4cead31410e778fb4847de9b16c5025522caa0c08c2a0f8aa6b9c833e2f89315.png)
 
 改 ID 后发送请求包发现获得另一个文件的信息
 
@@ -137,13 +137,13 @@ var MD = '';
 http://xxx.xxx.xxx.xxx/C6/control/OpenFile.aspx?id=1200&name=&type=pdf
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibJO59L1KWoMT9cJrictAia0UN5h7IADkmmv4MiaHgTkzycnjZnYFENxpHA/640?wx_fmt=png)
+![](../../.resource/remote/2a8671a830ae6a654efbf6fe8d96bd889b46df708e6289eefcf172868e03b147.png)
 
 这里更换一个普通用户测试是否可行，尝试遍历 id
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibgDkoTXed9CKruMZ41Sts06DGT1FD6cxYa30iakuJQ8RXgIvNDhbbwvg/640?wx_fmt=png)
+![](../../.resource/remote/8ac588e5e4e062d271fb0fcc638cf4bc26f4c85f79d6d63faaa08f3c96d68c9c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibvPcHib8wB4ibwmh73LDqxobYGFK36etWBNoPV9Vl79brl46RmcOv0mCg/640?wx_fmt=png)
+![](../../.resource/remote/a14fad8c86f0fde2302781d90bb62a9a2e5c3e505e74c8ecabebd759a24fbfcf.png)
 
 存在 **strFilePath 参数** 则是存在文件，为空则是文件已经不存在
 
@@ -151,7 +151,7 @@ http://xxx.xxx.xxx.xxx/C6/control/OpenFile.aspx?id=1200&name=&type=pdf
 
 **FileID 与 FileIDCode**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibrcy8gr2ialmBcmxlAJetV8JFicZOb0EYQr7JToYAT3Uf0v2NcVqcNicIQ/640?wx_fmt=png)
+![](../../.resource/remote/f44f7a0812dbe05b3b2f318b7f12afa44dd548c84df76303bd2a082609854c52.png)
 
 于是只需要通过刚刚的 ID 遍历，获取两个关键参数就能下载其他人发送的敏感文件，且只需要普通用户权限
 
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     POC_1(target_url, file_id, cookie)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCcJfxe2zdty9zuqcIUBibicibLAV2Z7DssubXxoLCTQr9iaHyYLBQhbCqjtVwa1CCctl1cjWvH6jvVWg/640?wx_fmt=png)
+![](../../.resource/remote/0e66edabfcd87c7ef478d58cdcbe7c6ad96288b58afd7e5e5bb10dacc36f4957.png)
 
   
 
@@ -228,7 +228,7 @@ if __name__ == '__main__':
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzDCc55WbFiasXQV2ZDzFo8NclAZ2LicCiaeLqxOD3AticSzDm7rRACia7M9m4pickkG8pXR2w1L8maEoBSw/640?wx_fmt=png)
+![图片](../../.resource/remote/40b4bb848be8a556d4672c1284770f77f3c63bcb7d7d5bab550fac31288d8b51.png)
 
 推荐一下 PeiQi 的个人公众号~
 
@@ -256,9 +256,9 @@ if __name__ == '__main__':
 
 Twitter：@wgpsec
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4LicHRMXdTzBhAsD8IU7jiccdSHt39PeyFafMeibktnt9icyS2D2fQrTSS7wdMicbrVlkqfmic6z6cCTlZVRyDicLTrqg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b9e1284285c5071573cdab2007195e695eb9d397834bf8ada6d0ffc6fb61d537.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/gdsKIbdQtWAicUIic1QVWzsMLB46NuRg1fbH0q4M7iam8o1oibXgDBNCpwDAmS3ibvRpRIVhHEJRmiaPS5KvACNB5WgQ/640?wx_fmt=gif)
+![](../../.resource/remote/bd8c348cdec726a3436db5005b7a9fce34d12de57cac8d2d94ac31a1c423b221.gif)
 
 ---
 

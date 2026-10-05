@@ -79,7 +79,7 @@ fofa: "body=\"/Scripts/EnjoyMsg.js\""
 
 捷诚管理信息系统
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPLL9c69bXbFkybJLTY26xm8KiaCQwOYGFTIwchqpEZ4iaUsqHmWCAbT8nm14Cjrud3Gwia5wVOOmEBA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/476a5f445ccde3ccb073bdc84f1adb0e3abdd7c2dc4a732c87dd0a1db1dbf2f3.png)
 
 03
 
@@ -100,7 +100,7 @@ body="/Scripts/EnjoyMsg.js"
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPLL9c69bXbFkybJLTY26xmLnprpQACzC91K0J2ENZuhletwCwMclzkmpe3997qmpE5yyiccCbNt1A/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/915d879172e6a880913a958f5e8c1b244380e284aae7d78a0bdfb767bf5df5a0.png)
 
 05
 
@@ -131,7 +131,7 @@ Accept-Encoding: gzip
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPLL9c69bXbFkybJLTY26xmou8LgiaLYiawvEhZmWNfHZ7PavBH16gIWJcVXOfNTqfYYAcw7G98iar8A/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/928283c3bef3129c5e5b8eed2cabf124b02e0866078c287b1eb0ac2ce61cb712.png)
 
 证明存在漏洞
 
@@ -180,7 +180,7 @@ nuclei.exe -t mypoc/其他/jiecheng-CWSFinanceCommon-sqli.yaml -u http://192.168
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BPLL9c69bXbFkybJLTY26xmW9cibECib2CDpgy8icjPSrHZ9cA1J9CFj0ZJaSpAHTlmsbG5LCuSUhXEw/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/7902df411083fbe9b11b3aaa4b0272346201a59531e5ec8f44e7cfe7fdb03ccc.png)
 
 07
 

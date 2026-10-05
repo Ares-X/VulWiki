@@ -78,7 +78,7 @@ CNVD 编号:
 
 全版本 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3b8sCa3Pb0uLRwM6DpygSwJLFjbdH38vx9jIVpXzsU1npFD5ZoFx29d1uicSjG6y2v3WsRtH7JibUJg/640?wx_fmt=png)
+![](../../.resource/remote/b40469468ca008d7fb795b5d25da8674008adc6f9bfe567100abe930b250bfd9.png)
 
 4.fofa 查询语句
 -----------
@@ -133,14 +133,14 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
 > 请求长度说明：原资料 Content-Length 为 98；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3b8sCa3Pb0uLRwM6DpygSwJABdyoNHowTp6wEWmMeC5O09YXupl644heib02aeRol1aBYCEuGDEaow/640?wx_fmt=png)
+![](../../.resource/remote/8992437fb87b23ac65609e886e04868479c613e12c6871b41b3605bb89a26c48.png)
 
 6.POC&EXP
 ---------
 
 关注公众号  南风漏洞复现文库 并回复  漏洞复现 43  即可获得该 POC 工具下载地址： 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3b8sCa3Pb0uLRwM6DpygSwJ9h1cx03CSDQY33TBzlUiblojxNZn6CibWPiauf56qA2oaQMkR4iccSYFLA/640?wx_fmt=png)
+![](../../.resource/remote/84c96928bceb3c219fef8a5e6b17af6c12c4fe0c6c28d54450256db825f576a2.png)
 
 7. 整改意见
 -------

@@ -50,7 +50,7 @@ MyuCMS v2.1
 
 通过搜索定位到 **bbs** 模块下的 **Index** 控制器的 **download** 方法。
 
-[![img](./.resource/MyuCMSv2.1前台任意文件下载/media/rId24.jpg)](https://pic.downk.cc/item/5e4266e52fb38b8c3c9e7e3d.jpg)
+[![img](./.resource/MyuCMSv2.1前台任意文件下载/media/rId24.jpg)](.resource/MyuCMSv2.1%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/media/rId24.jpg)（原外链图片暂未找回，点击查看已存本地图；原链接：` https://pic.downk.cc/item/5e4266e52fb38b8c3c9e7e3d.jpg `）
 
 **download** 方法接受三个参数，这三个参数我们是完全可控的，单从
 **download** 这个方法来看，无任何参数内容限制，直接将 **\$url** 和

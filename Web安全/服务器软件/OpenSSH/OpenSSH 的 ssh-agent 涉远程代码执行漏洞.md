@@ -45,7 +45,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/1erfTwXhvClzH8Jc5SqNig)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVwr9VJibBZMia5WI5aibHTQdwrcu4ugbYPj6VLCPfJBzyvrPeNjGeqr5MfVpQ7wj1JeQf5ybicic1zJyIw/640?wx_fmt=png)  
+![](../../.resource/remote/33098f55293be6fd08512641d79133e624d9e431bb2f40f171b7282e5bbd5a4e.png)  
 
 ==================================================================================================================================================
 
@@ -75,7 +75,7 @@ SSH 代理通过管理身份密钥和密码来简化用户身份验证，发挥�
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVwr9VJibBZMia5WI5aibHTQdwrVaKkjAmQJoMN93FuRGXgLuPy04HssRLNENkGxq5WTawFm08tkibia1rw/640?wx_fmt=png)
+![](../../.resource/remote/7d7102eaf0f628487be127966ca960ee9f53b0197729d9579e6fba096bf8a98d.png)
 
 **影响**
 ======
@@ -110,7 +110,7 @@ https://github.com/snowcra5h/CVE-2023-38408
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVwm8c9xddClZDNW2s8GsicyO1NKrSWUc4JcSvkvKSEWNB0NEcsXj0SmRHgksoOiaLfmbib3icF8g9MMVw/640?wx_fmt=jpeg)
+![](../../.resource/remote/0fae810828196437a3e27f124232b818b08e90b4cef5743dc22904564cff7b5a.jpg)
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

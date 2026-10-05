@@ -33,6 +33,18 @@
 
 ## 本地检查
 
+### 图片须可离线读取
+
+本库是离线资料备份。新收录或修订文章的实际图片必须保存到库内并用相对路径引用，不依赖微信、图床或原站在线返回图片。来源文章、原图完整 URL 与下载对应关系保留在资源出处记录中；代码里的 URL 和普通来源链接不作为图片下载或改写。
+
+图片包裹的原图或高清图链接也须指向本地图片；缩略图已在本地不能代替这一检查。指向作者主页或来源文章的普通链接保留。
+
+原图链接没有图片扩展名、且与缩略图地址不同的情况，需要核对原站响应或出处记录来判断它是图片还是来源文章；离线检查不能仅凭 URL 猜出容器类型。
+
+共享图片可按原始文件内容 SHA-256 存在 `Web安全/.resource/remote/`，重复图片复用同一份字节；保存格式与实际容器一致，GIF 动画保持原始字节，不缩图或重绘截图。下载成功和文件签名不足以证明原图恢复成功，还须排除防盗链提示图、错误页并核对可解码及原引用对应关系。
+
+原图确实找不到时，在该位置说明缺图，并把完整原图片引用作为代码文字保留，停止远程加载；不猜配其他文章截图，不用提示图冒充原图，也不删除仍有技术价值的正文。提交时运行 `python scripts/resource-audit.py --require-local --report <库外报告路径>`，CI 同样阻断新增远程图片引用，以及本地 SVG 中检出的外部图片或样式依赖。
+
 全库精校、分片审阅与围栏修改还应遵循 [内容维护与验收流程](docs/REVIEW-WORKFLOW.md)。其中明确区分机器扫描、全文阅读和抽查，并要求完整请求体与可复制文本的验收；不能将候选片段校验称为整篇审阅。
 
 ```sh
@@ -40,7 +52,7 @@ python -m unittest discover -s tests -v
 python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
 python scripts/wiki.py build
 python scripts/wiki.py build --check
-python scripts/resource-audit.py --report /tmp/wiki-resource-audit.json
+python scripts/resource-audit.py --require-local --report /tmp/wiki-resource-audit.json
 ```
 
 生成器只改索引和 docs/generated 派生数据，不改正文。不要手工维护生成结果。提交正文及对应索引变化；README 中的历史时间线不是 CVE 核验记录。

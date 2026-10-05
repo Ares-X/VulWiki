@@ -99,11 +99,11 @@ Android系统实施了多种保护机制以防止跨用户的非法资源访问�
   
 具体代码实现如下：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57OVOf3dCbicru9OR8U9z05AeSzIh6QEsSXUvPGrnwetiaFzebOFy2gwsSOvycDEiacwWPzjr6Dw4SYoQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/08e43dc5678b60e0684c43bc560f9f812f45e1688cfeceb5c6850ce32bc96bc5.png "")  
   
 这个函数首先检查应用是否携带了"@userid!=currentuserid"的标记，以此判断是否存在跨用户URI访问的情况。如果确实涉及跨用户访问，则调用checkCrossUserPermission来检验是否有跨用户访问的权限，并同时确认访问是否来源于system/root用户ID。如果不是system/root用户，函数将继续检查该应用是否拥有INTERACT_ACROSS_USERS_FULL或INTERACT_ACROSS_USERS系统权限。若上述条件均未满足，则不允许进行跨用户URI资源的访问。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57OVOf3dCbicru9OR8U9z05Ae5yasFclUAR2ykW0l3HhBLNJv88ey4IicbHHiar4rCvwiaKd4JngpdJUWQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7b802bd9a7a131fdf373a17f766a94eb18ead0c5e1bb0be915b1826c383ee833.png "")  
   
 如果同时满足以下三个条件，系统可能存在跨用户的资源访问漏洞：  
 - 系统应用中存在设置为  
@@ -164,7 +164,7 @@ alarm.alert
 URI  
 ，从而引发权限绕过或信息泄露等风险。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57OVOf3dCbicru9OR8U9z05Ae3S9UOExD5LNm4rN16TLQnNeAibXSydfM51BnE83nR8sZHPdHgjwjHQg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b3d983115d72d09463881ff1a1a1620d8ca6ea540973d01ef82e62e3e8d7c152.png "")  
   
 攻击者可以构造恶意调用链，通过传入特定的  
 URI  
@@ -188,9 +188,9 @@ _id
 Google Android  
 安全团队对启明星辰ADLab提交的漏洞报告进行了评估，确定该漏洞为高危级别。鉴于修复存在的困难，在最新发布的版本中，已弃用了存在漏洞的组件，并在新版本中采用其他组件进行替代。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57OVOf3dCbicru9OR8U9z05AeHZjbTq2pEnFbqe9jtWzEIxazoQTUwXGM1WYFGg33DWUSNJD3ttzthg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/996cbe76576b1b4d6a8f01b72db8f3656db7094f7b10d6706cadceaeeb3a5b52.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57OVOf3dCbicru9OR8U9z05AeYZ6C0eKCVfdTQub7YD1m2aYtByRRJL1t82qNbwMW6O51lRBhOBBJlw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/96f424a7a8950e980c0552551eddf4dac8775eff280098ee66f2003c7e008e86.png "")  
   
   
 **五、小 结**  
@@ -264,7 +264,7 @@ ADLab成立于1999年，是中国安全行业最早成立的攻防技术研究�
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57ONOtW3DSPMEXiaLPqrs8a20KxsFg78IaJzyEf51AIjLGNkDG5tsCH76Qo7PoVz74JGQqKJbCh5PdQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/80a6f7bf64401bfe34fa64559b387ee8ba378c610db730081de09a128573a62f.webp "")  
   
   
 

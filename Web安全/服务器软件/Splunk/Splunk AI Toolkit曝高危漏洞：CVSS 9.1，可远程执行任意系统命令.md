@@ -55,13 +55,13 @@ schema_version: "1"
   
 对于大量依赖Splunk开展日志分析、威胁检测和安全运营工作的企业而言，这并不是一个普通漏洞，而是一次对AI安全能力本身的警示。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/g5KiabmYVDH0fXkvMERlfeRGC39em4UpQoUAOohAcJyY81AhmEqvMZwO2mRpic3XJBVMUan9ibAf88E6PykGAF9zbuhlLINJcyTw3fyoIMT3CA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d396dcf8e3182cf3b2ab0de0e32bfab26c2073dbe1dbe08c9a4147d11df29ac1.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/8mNQnqC0Gu0qjIy2q5wCqtudeuMeBdEqy6XziaYUnCpn0VNX9aibXMw46p6J2wrHhX6QwrHU63cf9jlvsSwHKNDSFCTzaxliagWrbEyC9ZrxfY/640?from=appmsg "")  
+![](../../.resource/remote/8d3af3f8b1e1cf44fa173f6025b9b907fa9cefa6e94a1d3c20bece2fea43f45b.png "")  
   
 一个AI组件，为何能拿到9.1高分？  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/zPoRRgvicUMTKqiaXrOufFdX1sSN5dbkfVwDERkUqpj1dQlOViaVs0KHteErLKwYQDhIzOVsSJVKlxm5a5iaHicDCkGN9zuibic5r1CPmeXs1UoaVs/640?from=appmsg "")  
+![](../../.resource/remote/51a4f70a5d8626abe197be9dbb0d4c9f0f4a39a55b50c9aa409844bd3628baaa.gif "")  
   
   
 根据Splunk发布的安全公告，该漏洞属于经典的CWE-78：OS Command Injection（操作系统命令注入）。  
@@ -89,11 +89,11 @@ os.system(command)
   
 系统就可能在执行正常配置命令的同时，执行攻击者植入的恶意指令。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/8mNQnqC0Gu0qjIy2q5wCqtudeuMeBdEqy6XziaYUnCpn0VNX9aibXMw46p6J2wrHhX6QwrHU63cf9jlvsSwHKNDSFCTzaxliagWrbEyC9ZrxfY/640?from=appmsg "")  
+![](../../.resource/remote/8d3af3f8b1e1cf44fa173f6025b9b907fa9cefa6e94a1d3c20bece2fea43f45b.png "")  
   
 利用门槛不低，但后果极其严重  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/zPoRRgvicUMTKqiaXrOufFdX1sSN5dbkfVwDERkUqpj1dQlOViaVs0KHteErLKwYQDhIzOVsSJVKlxm5a5iaHicDCkGN9zuibic5r1CPmeXs1UoaVs/640?from=appmsg "")  
+![](../../.resource/remote/51a4f70a5d8626abe197be9dbb0d4c9f0f4a39a55b50c9aa409844bd3628baaa.gif "")  
   
   
 从CVSS向量来看：  
@@ -143,11 +143,11 @@ AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
   
 一旦获得管理员权限，CVE-2026-20266就成为攻击者横向移动和权限扩张的重要跳板。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/8mNQnqC0Gu0qjIy2q5wCqtudeuMeBdEqy6XziaYUnCpn0VNX9aibXMw46p6J2wrHhX6QwrHU63cf9jlvsSwHKNDSFCTzaxliagWrbEyC9ZrxfY/640?from=appmsg "")  
+![](../../.resource/remote/8d3af3f8b1e1cf44fa173f6025b9b907fa9cefa6e94a1d3c20bece2fea43f45b.png "")  
   
 为什么Splunk失守比普通服务器更危险？  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/zPoRRgvicUMTKqiaXrOufFdX1sSN5dbkfVwDERkUqpj1dQlOViaVs0KHteErLKwYQDhIzOVsSJVKlxm5a5iaHicDCkGN9zuibic5r1CPmeXs1UoaVs/640?from=appmsg "")  
+![](../../.resource/remote/51a4f70a5d8626abe197be9dbb0d4c9f0f4a39a55b50c9aa409844bd3628baaa.gif "")  
   
   
 与普通业务系统相比，Splunk承担的是企业安全运营中心（SOC）的核心职责。  
@@ -220,11 +220,11 @@ API密钥；
   
 攻击者一旦控制Splunk，就相当于拿到了整个安全体系的中枢控制台。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/8mNQnqC0Gu0qjIy2q5wCqtudeuMeBdEqy6XziaYUnCpn0VNX9aibXMw46p6J2wrHhX6QwrHU63cf9jlvsSwHKNDSFCTzaxliagWrbEyC9ZrxfY/640?from=appmsg "")  
+![](../../.resource/remote/8d3af3f8b1e1cf44fa173f6025b9b907fa9cefa6e94a1d3c20bece2fea43f45b.png "")  
   
 AI工具正在成为新的攻击面  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/zPoRRgvicUMTKqiaXrOufFdX1sSN5dbkfVwDERkUqpj1dQlOViaVs0KHteErLKwYQDhIzOVsSJVKlxm5a5iaHicDCkGN9zuibic5r1CPmeXs1UoaVs/640?from=appmsg "")  
+![](../../.resource/remote/51a4f70a5d8626abe197be9dbb0d4c9f0f4a39a55b50c9aa409844bd3628baaa.gif "")  
   
   
 值得关注的是，此次漏洞并不发生在Splunk核心引擎，而是出现在AI Toolkit中。  
@@ -272,11 +272,11 @@ CVE-2026-20266再次提醒行业：
   
 AI功能越强大，安全边界就越需要前置设计。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/8mNQnqC0Gu0qjIy2q5wCqtudeuMeBdEqy6XziaYUnCpn0VNX9aibXMw46p6J2wrHhX6QwrHU63cf9jlvsSwHKNDSFCTzaxliagWrbEyC9ZrxfY/640?from=appmsg "")  
+![](../../.resource/remote/8d3af3f8b1e1cf44fa173f6025b9b907fa9cefa6e94a1d3c20bece2fea43f45b.png "")  
   
 如何应对此次漏洞？  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/zPoRRgvicUMTKqiaXrOufFdX1sSN5dbkfVwDERkUqpj1dQlOViaVs0KHteErLKwYQDhIzOVsSJVKlxm5a5iaHicDCkGN9zuibic5r1CPmeXs1UoaVs/640?from=appmsg "")  
+![](../../.resource/remote/51a4f70a5d8626abe197be9dbb0d4c9f0f4a39a55b50c9aa409844bd3628baaa.gif "")  
   
   
 Splunk官方已经发布修复版本。  
@@ -326,11 +326,11 @@ AI Toolkit 5.7.4及以上。
   
 建立独立的AI应用安全基线。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/8mNQnqC0Gu0qjIy2q5wCqtudeuMeBdEqy6XziaYUnCpn0VNX9aibXMw46p6J2wrHhX6QwrHU63cf9jlvsSwHKNDSFCTzaxliagWrbEyC9ZrxfY/640?from=appmsg "")  
+![](../../.resource/remote/8d3af3f8b1e1cf44fa173f6025b9b907fa9cefa6e94a1d3c20bece2fea43f45b.png "")  
   
 结语  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/zPoRRgvicUMTKqiaXrOufFdX1sSN5dbkfVwDERkUqpj1dQlOViaVs0KHteErLKwYQDhIzOVsSJVKlxm5a5iaHicDCkGN9zuibic5r1CPmeXs1UoaVs/640?from=appmsg "")  
+![](../../.resource/remote/51a4f70a5d8626abe197be9dbb0d4c9f0f4a39a55b50c9aa409844bd3628baaa.gif "")  
   
   
 CVE-2026-20266本质上并不是一个新型漏洞。  
@@ -348,7 +348,7 @@ AI是否足够安全。
 信息来源：  
 https://cybersecuritynews.com/splunk-ai-toolkit-vulnerability/  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/e8XlCTfPrcM4SD27bheY74gn8dPagfIOekOMj8iapjKdXVeHY08GT5wjvb73xa77ZwB1FseR8zphAc9pMg7icqx4t2AmAvLQiaibZR5IGmEWc18/640?from=appmsg "")  
+![](../../.resource/remote/17272bcea36de9a6f2a5493bcd661a0bdb0082212d53a18623cc4adaa9c59265.png "")  
   
 END  
   

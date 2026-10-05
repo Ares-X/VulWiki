@@ -63,7 +63,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8v7T54TklESlCO3EibopMCrug5Pf5d76p968QInbg0RtKWpHj243lLfDfJ8Vlto45Fpyd07FMqlthA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8c9e03f374902b0648f37a6d9bf2b822baae67f9839d0315c1cb9dfe30a516b8.png "")  
   
 Microsoft 已发布有关 Active Directory 证书服务 （AD CS） 中一个新漏洞的安全公告，该漏洞可能允许攻击者通过网络执行拒绝服务攻击。  
   
@@ -122,7 +122,7 @@ https://cybersecuritynews.com/microsoft-warns-of-ad-cs-vulnerability/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

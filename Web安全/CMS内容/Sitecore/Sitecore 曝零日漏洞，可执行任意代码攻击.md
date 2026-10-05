@@ -52,13 +52,13 @@ FreeBuf  商密君   2025-03-09 23:55
 关键问题在于，反序列化操作发生在解密之前，这使得攻击者能够直接将精心构造的负载注入到处理流程中。  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ib5uR1uuYphkz6JyavO9icTgB2iafTWMSORibJrw1yGddicndH26w7WWPLISP3TMA5u8fAMM35gIn2lNA/640?wx_fmt=jpeg&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![图片](../../.resource/remote/d6300c62fa366b0b13244ad4db4a9c6745a22ccba3159b109bce4eba2d57307d.jpg "")  
   
   
 攻击者通过使用ysoserial.net等工具生成恶意的序列化对象，并利用WindowsIdentity gadget链来执行操作系统命令。例如，以下负载可以创建一个文件以确认代码执行：  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ib5uR1uuYphkz6JyavO9icTg0rBsT1HwuXlVmlbAcfeON0TmJicsYqIhzSr1bKtdzFSKMGdmbfWRQpQ/640?wx_fmt=jpeg&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![图片](../../.resource/remote/99d9f944b2daed9bb1e97d71df30c393ecb764d12d15fefa975ad73db99125b3.jpg "")  
   
   
 生成的Base64编码负载被插入到ThumbnailsAccessToken头中。Sitecore的AuthenticateThumbnailsRequest HTTP处理器（属于httpRequestBegin管道）会在没有身份验证检查的情况下解析该头，导致立即进行反序列化并激活负载。  
@@ -105,26 +105,26 @@ Sitecore已发布补丁来修复CVE-2025-27218，并敦促客户采取以下措�
 大家好，为了更好地促进同业间学术交流，商密君现开启征文活动，只要你对商用密码、网络安全、数据加密等有自己的独到见解和想法，都可以积极向商密君投稿，商密君一定将您的声音传递给更多的人。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1HyKzSU2XXNcXmbiaiaCljdXpwzOEQ9QTBXMibM6rZTOnbTSwTmCXncQLria2vuLGxn8QPtznzBc0as8vBxWIjrWxQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/8b47880946aa17dde18985b61e5ef1968dd79c465776293334023960738ce9c1.jpg "")  
   
 来源：FreeBuf  
   
 注：内容均来源于互联网，版权归作者所有，如有侵权，请联系告知，我们将尽快处理。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1HyKzSU2XXOdeQx0thlyozF2swQTEN9iaaBNDG0jTKfAgqgdesve8x5IEWNvYxjF6sAWjO1TPCZVsWd0oiaDn3uw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/2e4c0e2b07e6d2218296c1c7879a1d272336221ffba41d6ff1278cb96ec082f3.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMyyClGk1cttkSBbJicAn5drpXEbFIeChG9IkrslYEylRF4Z6KNaxNafDwr5ibcYaZXdnveQCNIr5kw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f42000ef0ad7a28d8fbc66db41a23e5121172315b9b07a1a7dc553d3420b58eb.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaMcJkA69QYZ9T4jmc3fdN6EA7Qq9A8E3RWcTKhxVEU1QjqOgrJMu2Qg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/e95bab6e8a2e21887ae7bd2f4bf4109d6d4eab2f18fa7c6853fb9da8fa74d1b7.png "")  
   
 点分享  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaiaRXdw4BFsc7MxzkVZaKGgtjWA5GKtUfm3hlgzsBtjJ0mnh9QibeFOGQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/b94311534c431311a6b30af2eb40adb7d08ac2cc847224be0eca88249eaeb004.png "")  
   
 点点赞  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaeiaNlRO9954g4VS87icD7KQdxzokTGDIjmCJA563IwfStoFzPUaliauXg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/d8f09d4871dad8ed82fb357f065af25d92a2878593cdb206a4e08096012678cc.png "")  
   
 点在看  
   

@@ -40,7 +40,7 @@ schema_version: "1"
 #  Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开  
  网络安全与人工智能研究中心   2025-06-28 02:39  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/ezpQRXtYHibykdgfR7Bfd3D5gQ9smYkhUSicwuicfUyAydJhQTRo5N6XPD9LxvGALWdC7ZZVI2R6skN0r8WUhrjcA/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/3ca45517d5f3bee59ed2167cbcba57c90815064de62d730cc2c63f818ae33d04.gif "")  
   
   
 安全研究人员发现Python标准库中的tarfile模块存在高危漏洞（CVE-2025-4517，CVSS评分9.4）。该漏洞允许攻击者通过特制的tar压缩包实现任意文件写入（Arbitrary File Write），目前概念验证代码（PoC）已在技术社区流传。  
@@ -74,7 +74,7 @@ filter
 时，会受到影响。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ezpQRXtYHibwpXMNl16ibj6lYK4CFmqtsXptrYBNCCLiaAS1ICWE7IsJB4tJ0wX7COEXicoUvODyapo06zNt7evBwg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0094cc23460472a456325e5857cc3b7b0997957e5693994ca5e29c4ccb99ec44.png "")  
   
   
 **Part02**  
@@ -227,7 +227,7 @@ Critical Python Tarfile Flaw (CVE-2025-4517, CVSS 9.4): Arbitrary File Write, Po
 https://securityonline.info/critical-python-tarfile-flaw-cve-2025-4517-cvss-9-4-arbitrary-file-write-poc-available/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ezpQRXtYHibykdgfR7Bfd3D5gQ9smYkhUMk71re53Z8Xju62nS9agGCNgUNjPibQP7YZthr22UXppftxLN0kp97A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5190898c9b53c038958a0997928960c935b7fccf1b85421b398ddc1b99c36358.png "")  
 ###   
   
   

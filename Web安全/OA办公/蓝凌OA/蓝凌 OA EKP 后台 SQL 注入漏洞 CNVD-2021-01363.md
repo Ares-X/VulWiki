@@ -46,7 +46,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/hA7aWTTSb6TIR4Ki1ND2sw)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：关于文章🐑**
 
@@ -54,7 +54,7 @@ schema_version: "1"
 
 编号为 CNVD-2021-01363, 欢迎各位师傅前来投稿啦~
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4MRe1rOJkEO8WLb9kXMsicKgHXyeyunkicNEgxkTXfChL5JIDygCsZEz4QwqH0TCYHFKfKw7JupkMQ/640?wx_fmt=png)
+![](../../.resource/remote/219aae79964a82101571d1405a663a94a066349bebf5dd3ab5b7cbcdf362cd90.png)
 
 **二：漏洞描述🐑**
 
@@ -97,7 +97,7 @@ Cookie: UM_distinctid=1785f7392888e1-02ece8c7e9a996-5771031-1fa400-1785f73928943
 sqlmap -r sql.txt -p orderby --dbs
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4MRe1rOJkEO8WLb9kXMsicKn1BNZ9TKmGj96AnQia9JmtUfYHyEBPfDx2iadXn9NWUtjEAbsQIOUVxw/640?wx_fmt=png)
+![](../../.resource/remote/2d3114080b037f97f4c733075cf30d2ca9043a1fc9dcfe3ec2afa66ec0841661.png)
 
 **经过测试，还存在其他地方的多个 SQL 注入，等收录了在公开出来啦~**
 

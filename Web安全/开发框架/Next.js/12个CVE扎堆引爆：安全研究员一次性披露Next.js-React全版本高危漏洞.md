@@ -47,7 +47,7 @@ Jack Stone
 ：2026年5月8日，安全研究员 dwisiswant0 在 GitHub 公开发布 Next.js v16.2.4 安全 PoC 合集，一次性涵盖 12 个已修复 CVE（涵盖 CVE-2026-23870、CVE-2026-44574 至 CVE-2026-44582），其中 3 个高危漏洞（SSRF、认证绕过、DoS）可直接影响几乎所有生产环境部署。补丁已就绪，但大量系统仍未升级。  
   
   
-![12个CVE漏洞概念图](https://mmbiz.qpic.cn/mmbiz_png/nGzNudUIJ6PLIbiapo2YV2kVBm2BGm3MZHg1vZ3UFWqCOvxibKtQgpHddIqWUFlbpo6h6FCMW3rrUYdsO1LyQLMKnqDFFrm7cYhKtJibKwKA98/640?wx_fmt=png "12个CVE漏洞概念图")  
+![12个CVE漏洞概念图](../../.resource/remote/683f41c457f0c003aa226709176c7e41714aa1f5639e4a61255c36c19a527b4f.png "12个CVE漏洞概念图")  
 ## 事件时间线  
   
 2026年5月7日，Vercel 核心维护者 Tim Neutkens 通过 GitHub 安全公告系列（GHSA 编号范围：GHSA-8h8q-6873-q5fj 至 GHSA-3g8h-86w9-wvmq）发布了 Next.js 安全补丁，修复版本为 15.5.16 和 16.2.5，覆盖 Next.js 13.x 至 16.x 全分支。  
@@ -74,7 +74,7 @@ Jack Stone
 <table><thead><tr><th style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;text-align: center;font-weight: bold;color: rgb(72, 112, 172);background: rgb(247, 247, 247);"><section><span leaf="">CVE ID</span></section></th><th style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;text-align: center;font-weight: bold;color: rgb(72, 112, 172);background: rgb(247, 247, 247);"><section><span leaf="">GHSA</span></section></th><th style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;text-align: center;font-weight: bold;color: rgb(72, 112, 172);background: rgb(247, 247, 247);"><section><span leaf="">漏洞类型</span></section></th></tr></thead><tbody><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">CVE-2026-44582</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">GHSA-vfv6-92ff-j949</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">RSC 缓存破坏哈希弱化</span></section></td></tr><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">CVE-2026-44572</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">GHSA-3g8h-86w9-wvmq</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">redirect 缓存投毒</span></section></td></tr></tbody></table>  
 
 
-![Next.js漏洞全景影响图](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6OkqJ8BiaibIicOtFibML1p8WFfuJOowf13gZXavEEelvbf4NesOibJ9uxAovSOOUy5Baad4zg3ZBAZ2t4autfA1Ir4ZYia5cdd0G3Bw/640?wx_fmt=png "Next.js漏洞全景影响图")  
+![Next.js漏洞全景影响图](../../.resource/remote/2e04ce92099013d9cfa7619291ecd06360fe203934cee2a5b1f5186d44ed232c.png "Next.js漏洞全景影响图")  
   
 值得注意的是，CVE-2026-44578 在评级上虽为 High，但其攻击面（无需认证、可探测内网资源）在实际威胁评估中接近 Critical 级别。  
 ## 三大核心风险详解  

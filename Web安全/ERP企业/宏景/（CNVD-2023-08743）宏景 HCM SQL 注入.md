@@ -61,7 +61,7 @@ schema_version: "1"
 
 **漏洞复现**  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUEOYibcaRpvON41MibqI1jCGoqoctyEFo2Lv0vFgb9bY5W5iaIyNFoMVrwPM2ziaibbDA5PYZe1EXesjw/640?wx_fmt=png)
+![](../../.resource/remote/64c118ed0af7fd76a93fceb14f43a31c9f16cf4c8369ecba9b0601fe8cc70452.png)
 
 payload:
 
@@ -81,7 +81,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUEOYibcaRpvON41MibqI1jCGOV3Ul4ylLI5yk2MMJNukV2CZictvxWhibGic36Bmdow2MMU8Lib74k3bWA/640?wx_fmt=png)
+![](../../.resource/remote/34cd8b595dbbfbd8579ad177b3044befbf48f0c7c2bab1e3cb43817ab76163fd.png)
 
 **修复建议**
 

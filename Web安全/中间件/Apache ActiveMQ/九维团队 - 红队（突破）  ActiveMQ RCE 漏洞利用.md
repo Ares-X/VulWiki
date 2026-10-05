@@ -53,7 +53,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Dv4ENwD5_dW5DnS79S5ITg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/hiaiaLeG6N1zItD3hicyicTUxCsdYyvSZWKOQ4y3CslMX5EINOxRsoicGxHxJnwtXjIau4usI94yHUKXTqh4LyuVL4A/640?wx_fmt=gif)
+![](../../.resource/remote/5b10f034761100b4ee075fb18da4c900365a736783c27a56435d646416f0e19b.gif)
 
   
 
@@ -69,11 +69,11 @@ Apache ActiveMQ 中存在远程代码执行漏洞，Apache ActiveMQ 在默认安
 
 **影响范围**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
   
 
@@ -94,21 +94,21 @@ _**二、环境搭建**_
 
 **1、java 环境 11**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zKibUcoLia7icnGrOF30fjwVKAHXJrFQrvNSyMYe9xvSRd1fv1ia8H43gKIK7nF3wksTg1qSdbUBe6icBw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/c07ac3f91397de4ea427ba5eb1059301bab81e3608c3b526750cb4bc9357a233.png)
 
 **2、activemq5.17.5**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
 链接：  
 
@@ -128,7 +128,7 @@ cd /root/apache-activemq-5.17.5/bin
 
 * 左右滑动查看更多
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zKibUcoLia7icnGrOF30fjwVKATfQQeJQ7ZpXg0X52v2ugYZcsFn9icIO1EMQIeIDaQ5Kf7F2E6wQgtvA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/374b320afef02a2590c35a1b1d50ffc4833caec7665bda34eed3d04de7a3a87c.png)
 
   
 
@@ -143,11 +143,11 @@ github.com/Hutt0n0/ActiveMqRCE
 
 **1、回显 exp**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
 ```
 hx.html
@@ -173,21 +173,21 @@ hx.html
 
 * 左右滑动查看更多
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLRpDwWkdwPr9WOL1YL3Rtordd7jomOMO9EqMn1jvrxrSiadGvlAqRvov5Ysb7H52ibJ7rhLgufubaQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6dd4e4327e9b926da15778edcd2e27e1c1112dcffcfc9412e70c9b25d0d07f67.png)
 
 **2、内存马 exp**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
 **前提：注马前需登录**
 
 1、ActiveMq 默认是只允许 127.0.0.1 访问 8161 端口，管理员如更改 / conf/jetty.xml 才可利用。
 
-<table><tbody><tr><td width="557" valign="top"><p><img class="" src="https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zKibUcoLia7icnGrOF30fjwVKAmb5vca6hSxG4GzPBy6eq90xcV8a0S3fX2xk4ovUic0evJXPx5GVuvlw/640?wx_fmt=png&amp;from=appmsg"></p></td></tr></tbody></table>
+<table><tbody><tr><td width="557" valign="top"><p><img class="" src="../../.resource/remote/7fc7d61f7c9b6bfbc3820726ba0b4573d0aa688db74c32c5901ba18bc863c504.png"></p></td></tr></tbody></table>
 
 2、默认密码：admin:admin、user:user 未修改，利用回显读取密码。
 
@@ -218,19 +218,19 @@ memshellnject.xml
 
 * 左右滑动查看更多
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLRpDwWkdwPr9WOL1YL3RtoFJWcnbjo6GXzzY4uUibIkrjdg5FCYGliaIzykiaicHt000k3UvW2HbS04w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/22189b8d605e8d5f313a7729c99be2139a7ead1c79980bd21cd0743a0053fde6.png)
 
-<table><tbody><tr><td width="557" valign="top"><p><img class="" src="https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zKibUcoLia7icnGrOF30fjwVKAWBkFwtZGajhMugsQvZuiapBN7XzaRknJG62l3W4ly25HBIJBJrP4scw/640?wx_fmt=png&amp;from=appmsg"></p></td></tr></tbody></table>
+<table><tbody><tr><td width="557" valign="top"><p><img class="" src="../../.resource/remote/b72dc9242fed0ba374caf294786b4df68cd5ba23e37d1c8d1f615db87f569018.png"></p></td></tr></tbody></table>
 
 内存马如果自己要更改路径需要在 idea 中设置 sdk 11。
 
 **3、反弹 shell**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
 ```
 pox.xml
@@ -256,13 +256,13 @@ pox.xml
 
 1. 利用 python 开启 http 服务。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zKibUcoLia7icnGrOF30fjwVKAAnOtI3sXT7RR0rc2t2ichXoR8oLIVqqPDJxibrNS2FjoBXNNOozo3jicQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/da516547e19cf68d367e7c5cfaec37c0f742803ee80ff746c7833df29200b615.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLRpDwWkdwPr9WOL1YL3Rto6VCHHYJgw8e7MlhM8ib0yIiaAMsKGqTvtagfdrLLV6QicmJ9pfeXbfjCQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/f2c8c5b7d46791413d36d214d2c80bcfddbf2b996a24668fc93845be662262d1.png)
 
 2.nc 进行监听：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zKibUcoLia7icnGrOF30fjwVKAecR1ic7tUkYaJpibvsFbfrWytdGe15M3icRXRIuF3eg3xLnKUQ5qOUpug/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/bb56fed5d98917c0ea153cb9668e48dba08e8791fc3677d801f5b1a1a649ba78.png)
 
   
 
@@ -270,21 +270,21 @@ _**四、修复建议**_
 
 **1、临时缓解方案**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
 ACL 策略限制访问来源，例如只允许来自特定 IP 地址或地址段的访问请求。
 
 **2、升级修复方案**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7LqjLJQe1cF5X8rc9XslxaqglwAAxEUuaDCQvdH1RSQ8tynL7j7d5uicbOAdeHHGLr5frbLIwloIQ/640?wx_fmt=gif&from=appmsg)
+![](../../.resource/remote/99b00368cbc438c9d0089d66ea27201496cee241664cf9951a9839321de10904.gif)
 
 ```
 Apache ActiveMQ >= 5.18.3
@@ -307,17 +307,17 @@ https://github.com/apache/activemq/tags
 
 **往期回顾**
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zKVB50N4cjEzibJPjvc0gIYCY6W3yu05xgh2d26JEjWcFAVekYqrYfTYib7IjZsGDHN0yBic6IyiavM0A/640?wx_fmt=jpeg&from=appmsg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539894&idx=1&sn=7715898a00176f861d005f503cf8efb1&chksm=9ae11d8ead9694986ee9dff792bdce831a6f8fdd092fb72d057967d3f9012bdfaa91ffc4904d&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/160df96534d70ba83438288ecb9c997510d2295c20d4476e01a7142ca20218fa.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539894&idx=1&sn=7715898a00176f861d005f503cf8efb1&chksm=9ae11d8ead9694986ee9dff792bdce831a6f8fdd092fb72d057967d3f9012bdfaa91ffc4904d&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zLoETGZobhTo3FjYzLWbHaLtcYfXaeNBSLN83jCKR7AzxY9qjBpHKIwg1weJNGyt3n2iay5wD1nWkg/640?wx_fmt=jpeg&from=appmsg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539457&idx=1&sn=68d05d625840d8689e5b60ca666909d3&chksm=9ae11a39ad96932f697c69d880fe024456da19689aa874b6c12d9f7d247beba24d5e98b4f16f&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/3bb48ffc1ca5326d78ae2e7cbcec7ddd664db6860e9656af141e02f0a73447aa.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539457&idx=1&sn=68d05d625840d8689e5b60ca666909d3&chksm=9ae11a39ad96932f697c69d880fe024456da19689aa874b6c12d9f7d247beba24d5e98b4f16f&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zIDT0MMVb2hD0Rz7ibKZAb9Qc5ibO7W0E9yOG8CUhnwzVN0YP8QFemOf2bA3DVsoxKZlHib03GN7CRsw/640?wx_fmt=jpeg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539446&idx=1&sn=d48318ec8d4c3e1d3f2c157527bef21f&chksm=9ae11bcead9692d8668051b5f438b782b6e9ce5e5eb426878771e9869267e32807e4081a56ef&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/c4853c41aaca9691f67ebd51a5bad3098dfc2c91d1ac1a4e2abef3d4ebc8b737.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539446&idx=1&sn=d48318ec8d4c3e1d3f2c157527bef21f&chksm=9ae11bcead9692d8668051b5f438b782b6e9ce5e5eb426878771e9869267e32807e4081a56ef&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zKpMfbQQjPCFYxSwkLMmCWznhas4ADTHH6PFELMD4ItNkXekcvvI4rxCls2ibwAD1eUPPYQz5av8zw/640?wx_fmt=jpeg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539408&idx=1&sn=04048cf946c281bcf74fe0b8032e5f9b&chksm=9ae11be8ad9692feac0640f04d06e3781259eac8beb3c91e23a7d27862371e8078eb6fed1075&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/e9db3f522102022b438b4060d176abf54148b7c7c028b1f8a92a5d64996852de.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539408&idx=1&sn=04048cf946c281bcf74fe0b8032e5f9b&chksm=9ae11be8ad9692feac0640f04d06e3781259eac8beb3c91e23a7d27862371e8078eb6fed1075&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zK0JQQ3JGicRTTslHsDxDdMuDhwHhPicH0b9ylxOK8dAu9pH3jXMpEBEDycRP0iboHdkVYvUSqMibcTKw/640?wx_fmt=jpeg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539397&idx=1&sn=cdee15f1067bd33ee71e11ccbbf70bdc&chksm=9ae11bfdad9692eb94b15ca4e0b3efe72f86b71322ed2f556e953fe97e373fb906f67503ba42&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/a35ee9cd183731aaa7a0b8fe27b5e2fa02a38c08720afa80b5b26f7287378fc2.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247539397&idx=1&sn=cdee15f1067bd33ee71e11ccbbf70bdc&chksm=9ae11bfdad9692eb94b15ca4e0b3efe72f86b71322ed2f556e953fe97e373fb906f67503ba42&scene=21#wechat_redirect)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Ljib4So7yuWjVsaTygX5CCGxuYZaPeibrpfOOGAjXfTkTp3AIPeXv08iayGTH94Xcmvk4RJxs9NNSc2vzCoCiaXOSQ/640?wx_fmt=jpeg&wx_co=1&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/f7ca1dd32fea5f7064899e26e060835e28574d1e652535bb2121c186b056f435.jpg)
 
   
 
@@ -325,11 +325,11 @@ https://github.com/apache/activemq/tags
 
 **安恒信息安全服务团队由九维安全能力专家构成，其职责分别为：红队持续突破、橙队擅于赋能、黄队致力建设、绿队跟踪改进、青队快速处置、蓝队实时防御，紫队不断优化、暗队专注情报和研究、白队运营管理，以体系化的安全人才及技术为客户赋能。**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zIFIDZlXFuQeZrcKrV7Zd8Aeg98Fw5jzbGBgUW1hVQXIV3YpLZncEYibgw7MFwWtDU5vwnE2QFVP7A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/b2e01b3db8b52ca4debf6e4ebf993d14390b365d946d233beae8d0b81c12ebcd.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zL31gt4m6YIRLh7wJeOSwYPOIblCvhN6OgHhV9NMJNH0TBianlpMmRbaKG1ia7iaPsWb4UX4ImgfEJ0A/640?wx_fmt=jpeg&wx_co=1&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/d5cbcbaa43264750129ccd42b437a977a594dd8e9039c2d52d7e7c258f081fb2.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/hiaiaLeG6N1zItD3hicyicTUxCsdYyvSZWKOCUgD3ep5Jp4DE8e2S2Y3WnxsKjicicOg3OsGGRc9NPibQ61aRAqNXZQDA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/16f8f9c08357b833a89ba1c12f47c5778d7dbcb63b4d19ab0dfa0dea3d015fa5.gif)
 
 ---
 

@@ -72,7 +72,7 @@ schema_version: "1"
 
 比如下面这个 GitHub 上面的项目：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1Kiaolucq7rT2FYNajNfAC1qCntsWqVVWn7LTY6NpzRqUH7MXkbZHR2ia2RHpQ/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/83aff2b6824ab7b7e02bcbee57ee65f561f5d3d7f576c0b832aa7ce471690070.png)
 
 你可以执行一下下面的命令：
 
@@ -80,7 +80,7 @@ schema_version: "1"
 
 不出意外的话，你的电脑将会弹出计算器程序：
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluXEGwx84gvTwF3HDCVGwMbdUllvbIrQy9Q4srXrc8SVt5icdIm126qlA/640?wx_fmt=gif&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c60d52d04d063451184be3dc0f863df01f3e046f09c80731395df61982480fbf.gif)
 
 能让你弹计算器，就能执行其他更危险的操作，比如给你种木马等等。
 
@@ -120,13 +120,13 @@ Git 钩子分为服务端和客户端钩子，在咱们程序员使用的 Git �
 
 大家可以去看一下自己电脑上，不管是从 GitHub 克隆的项目，还是从公司的 git 服务器克隆的项目，你们的代码目录下，都有一个叫. git 的文件夹，它的目录结构大致是下面这样的：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoludrtvpsBp7wVvnofM3aJHUIlcicZNNN9tkfsx8ia6GDnwYjldAskwoib5Q/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f1b1a24df4c94d549a04562e37cd39b8f569bd048820c74d7d2009c0606fccfb.png)
 
 当我们创建一个新的 Git 项目时，执行完`git init`后，git 就会为我们创建一个. git 目录。
 
 而我们刚才说的钩子脚本，就放在. git/hooks 里面，git 默认为我们提供了一些钩子脚本的示例。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaolucsLKhV6v0mUCfWgFxYYNy39UcCvibbEe8jFEsyibictoOstN06gDmKb4Q/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4cbf596d73683e51f48aaf419b141c6ab20967dff33a54e4e659b67dcc6cd54b.png)
 
 你可以在这里面添加一些自己的脚本程序，这样当你在执行对应的 git 命令操作时，对应的脚本程序就会得到执行。
 
@@ -145,7 +145,7 @@ Git 钩子分为服务端和客户端钩子，在咱们程序员使用的 Git �
 
 在这种情况下，主项目下面会存在一个. gitmodules 文件，里面会记录该项目包含的其他 Git 项目的信息。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1Kiaoluhh7N8Kyvs1X1icIUcYBsiaaticbVtibGVAjz7e40CQTUT3A1eNEZIic4KIg/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/700ea4145f80e914813c9dd54b4add24b3a36f74e2617a979445478568a63611.png)
 
 其中，path 指定子模块存放的位置，url 指定子模块的 Git 仓库地址。
 
@@ -175,13 +175,13 @@ Git 钩子分为服务端和客户端钩子，在咱们程序员使用的 Git �
 
 攻击者准备一个 Git 项目，在这个 Git 项目中，又依赖一个子项目。当采用`--recursive`参数的时候，递归去拉取对应的子项目，放到对应的位置。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1Kiaoluhh7N8Kyvs1X1icIUcYBsiaaticbVtibGVAjz7e40CQTUT3A1eNEZIic4KIg/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/700ea4145f80e914813c9dd54b4add24b3a36f74e2617a979445478568a63611.png)
 
 就像上面这样，它指示 git，把 url 中的项目拉下来放到`A/modules/x`目录中。
 
 然后骚操作来了：在这个项目下，有一个名字叫`a`的符号链接，并且让它指向了. git 目录。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluSxqrnuadDwsyAu0mY2oHxwB4zGzONia1OuQ1HsUjia6lapjzcL7jKyqg/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/513342428d25f0fb2be571b917c42b676cb665a6e30c85d45bad5045131cdb61.png)
 
 因为 Windows 和 Mac 平台的文件和目录名称是大小写不敏感，注意这点很重要，导致在放置子模块到`A/modules/x`的时候，实际上就是放到了`.git/modules/x`目录下去了。
 
@@ -191,7 +191,7 @@ Git 项目内容写到. git 目录下了！事情就出在这里了！.git 目�
 
 还真不行，我试过了，git 直接报错了：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1Kiaolu8IGtRCePtsnAvZmxJ4dMApHGaKJXdEwxibcRNGmdmBHRen0V4VN5WUQ/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f94a3d4c46127a41ed65646ddc2bb9473efbdec748ef48cdff93ee0e06c838dd.png)
 
 看来，git 基本的检查工作还是做了的，只是疏漏了大小写不一样的情况。
 
@@ -199,11 +199,11 @@ Git 项目内容写到. git 目录下了！事情就出在这里了！.git 目�
 
 而且关键是它闯进来的位置是在`.git/modules/x`下面，前面说过，这个目录下面，是子模块所属的. git 目录，然后这个闯进来的家伙，还按照. git 目录的结构，里面放置一个 hooks 文件夹，里面放上相关的钩子脚本，等下 git clone 完成的时候，就会去执行这里的脚本程序了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluJDtN9bhk6YSAVISnqMZto2oFW3IBlSU7B2icQmib5jABhVKvcOWuonUA/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/800cc6c75d4f8b11ee41a615bbac4a4da4bf83cac8f30c37fafb666dad70738e.png)
 
 克隆完成之后的整个目录结构变成了这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluFg6QHEHCxwlg47ZVeZDHB4fISCicok2Z0EXA9PgWp1LxXfNg4lSuWww/640?wx_fmt=png&from=appmsg)![](https://mmbiz.qpic.cn/mmbiz_jpg/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluZJ6XhGlH6xtiaFMVJch2b8bzTsau7UuKtKr5ZMrB0ZHEnT9Hs7jwMJA/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/fe3116f59703a7ba73edfd68f39ec4b39392a6e190b2813c7faaf021fb751248.png)![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9ba0f35e2b2768fe34bc93f2fe55c6bbc7fbf0c44497daf14d9aa41597d29a5e.jpg)
 
 我用 procmon 抓了一下执行下面这条克隆命令到弹出计算器进程中间的过程
 
@@ -211,7 +211,7 @@ Git 项目内容写到. git 目录下了！事情就出在这里了！.git 目�
 
 大家从进程的父子关系树和进程的命令行参数，就能看到这条攻击链路了：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaolusvwBrtYmuIfwicrWVcGlgfibQhrSkcn3icZswkwWubyNzn1fKns35XqEA/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ef4692fb322e27d1d90c95811f318f0369e1d75e4b253e1fa3bd49290df6dd21.png)
 
 最后总结一下：
 
@@ -227,11 +227,11 @@ Git 项目内容写到. git 目录下了！事情就出在这里了！.git 目�
 
 Windows：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluAiaZAOffjhRI4Oq39iadYhlCicqS4wbA3KUb4LsoY5WIf5Xo9fcicDmLiaQ/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e9a6127749436ee01f0f78144960e56d2bf0e59082f3852bacc4fe6123808cfc.png)
 
 Mac：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluA7wZnVcd32Ig105tRToDVcydXmRXDCf0gFLfCLe5FgLjpzXdEheQnw/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e4e3927f5cf132c9d42da996b529b538385195056410f0543a67f8ef6fe2e8ac.png)
 
 以上就是本次漏洞的大致过程了。
 
@@ -254,7 +254,7 @@ Mac：
 
 赶紧来执行 git --version 看看你的版本有没有在上面的范围里，是的话赶紧升个级吧！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jXQDbLkGBYV3UXdz8XD7ibvM75X1KiaoluSSeS1ISaibuOPNrVz4I7AF6hDx104QBkT9O1Ccx9K6KuiaNYEz1QKy9w/640?wx_fmt=png&from=appmsg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a2c6826ef9a05493070846fbe664f1741e3ae8f61ecb602936e4353594208570.png)
 
 温馨提示：**陌生人发来的 Git 项目链接，不要随意去克隆，小心被攻击哦~**
 

@@ -56,7 +56,7 @@ fofa: "app=\"畅捷通 - TPlus\""
 
 **FOFA:** **app="畅捷通 - TPlus"** **使用量: 10W**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwImibPjwWMCbpa0c9c3sGzZj62M3iciadGKyUzvHcLrZVb3RiaBVWQ9K1NQ/640?wx_fmt=png)
+![](../../.resource/remote/996d5106d0d08fe1bb4be2b51d7d9969fd16d3219d18d640f3b6c7867bd82625.png)
 
 **畅捷通 T + 这套系统有十分完备的 Ajax 接口 然而大部分接口都是可以无需鉴权即可使用 也导致了更多的 Bug 下方为所有 Ajax 接口作用及其更新版本号.**
 
@@ -67,13 +67,13 @@ fofa: "app=\"畅捷通 - TPlus\""
 
 **/tplus/BaseInfo/DownLoadWmsUploadedFileLog.aspx** **反编译相关 Dll 发现其存在 fileName 参数可进行传入.**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwGLVz91qlB6Un82s1yGP96Eib3gIv1UBN4V56460InJSS8jdIa13P94g/640?wx_fmt=png)
+![](../../.resource/remote/3a54edd7183bcb7a148ad3914378876c2df15cf4cae2b66b0b0b3ca07e54f3c0.png)
 
 **通读代码 发现该代码执行逻辑为 先下载位于 \ Templates\WMS\UploadLog \ 下的 fileName 文件 然后将其删除 可以通过../ 跨目录.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwCfhoLt5a8jIbAaK389KqZ7fMWTKkIibITqRRbM2IibIEdS6niaUAPoMWw/640?wx_fmt=png)**
+**![](../../.resource/remote/d3f8170483da54e63c977b7f24ef1084e9a13ae2d005ee98456dec403897934e.png)**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwK9OyumNcjeUA0W61xnHMwt1v5FclzbORZ1SkBZ805zNRVaWaOoYWxQ/640?wx_fmt=png)
+![](../../.resource/remote/9740c748aaa5ef36225a15d9ce018e5aaf733f1924c4b8692c983d8ed243b515.png)
 
 **Payload:**
 
@@ -87,7 +87,7 @@ http://127.0.0.1/tplus/BaseInfo/DownLoadWmsUploadedFileLog.aspx?fileName=../../a
 
 **位于 Ufida.T.SM.UIP.Tool.AccountClearControler 的类存在未授权访问 路径泄露漏洞**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOw9cG9sBBHJcUILBhTZ5LrzfgeXmqZUJ0NJicXdnohuvZgClzM5iaUrg6g/640?wx_fmt=png)**
+**![](../../.resource/remote/f5fcde5c95e9aa5dd37c3cd7f9408ce4ca82d77bf1c838717f87f216e7195638.png)**
 
 **Payload:** 
 
@@ -96,16 +96,16 @@ http://127.0.0.1/tplus/BaseInfo/DownLoadWmsUploadedFileLog.aspx?fileName=../../a
 
 ```
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwdH1IrjVUjZm8Hdv9IKfiad5Vuiam2icgVNBPejFrFW00MZgRBmofP0FYw/640?wx_fmt=png)**
+**![](../../.resource/remote/776d703c7fbfab2be7dd32d05ed1732809c778b1b5a0689a9fdb72a514f3fc09.png)**
 
 **0x03 前台 SSRF 漏洞**
 -------------------
 
 **在** **Ufida.T.SM.UIP.UA.AddressSettingController 的类中存在 TestConnnect 函数 调用了下下图 CheckConnnect 方法 导致了前台 SSRF 漏洞.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwyzic3AdMEvhqk8WRhR3nlX2XQMdGL2tWia0wMFRicgX84qsrTyHLsHAag/640?wx_fmt=png)**  
+**![](../../.resource/remote/95491582ab89697556d66ce72f481c18075b9ea16bb35ab71f118333fbec1426.png)**  
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwbnY2KUFfhZrIKbeiaFxvc2xficPzJY5sQiadSgIIf56Eot9sH8q4JBCcg/640?wx_fmt=png)**  
+**![](../../.resource/remote/405c5d7a436a60bcd5e04c84a2d99f6d198c5abc153b817e8a55cd161daf0eed.png)**  
 
 **Payload:**
 
@@ -130,14 +130,14 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwWaqQjMl2lZERRmJZWS3u6hTVzvBYTJuI1NdS6PrzrpsQPTFxqnmKuw/640?wx_fmt=png)**
+**![](../../.resource/remote/23c0da37f6620e713132332902a036a20c7c2513da0238d8d66a9cfcccae9d28.png)**
 
 **0x04 前台任意文件删除漏洞**
 -------------------
 
 **在** **Ufida.T.EAP.Voucher.WebController.AjaxImageService** **的类中存在 DeleteSingImage 函数 调用了下图 DeleTempImage 方法 导致了任意文件删除漏洞.**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwayJnDknkqG0zuXNcVq9EzsbGaqEzp91xlPkSgOZBFHtEwvMPhHeJUw/640?wx_fmt=png)**  
+**![](../../.resource/remote/2509a5d2aab2de876f30403cf842828139063c7b80d6a03c7d0bf2b938ac7d1e.png)**  
 
 **经检查发现删除目录为 /UserImages 使用 ../ 可进行跨目录 **Payload:****
 
@@ -162,7 +162,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-****![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwXautvxlOuJ5oHniarP8wjVYLcVweZeI4WvibpVB4Nttia0FREoFNdLfXA/640?wx_fmt=png)****
+****![](../../.resource/remote/6cc9e3458b9ac7f9483bac0a18db4011a9a49fa56a4f47d6023fddaacee11734.png)****
 
 **0x05 前台 Sql 注入漏洞**
 --------------------
@@ -171,9 +171,9 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 **位于 Ufida.T.SM.Login.UIP.LoginManager 的 CheckPassword 方法存在 Sql 查询操作 且未作任何过滤 导致注入漏洞产生.**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwVBG3ISgF4gw72XKcS7ByoiasiaR8EaD1ichE4OQGSapBELCb8Wr37MXrg/640?wx_fmt=png)
+![](../../.resource/remote/84db4cf1eabdc90659d23b48900d9cf0c0edab169dff3a388d3dc2c3bd429587.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwibKf80lo53uVB78GAGEhRAnz0e6CibDIbEfNXicZoHvciafhbAUqHkSkUA/640?wx_fmt=png)
+![](../../.resource/remote/d89fa90b5e5deb625265fa87c80fb0c11fda80eb23c3cad3e3561d71c3561777.png)
 
 **Payload (放入 Sqlmap 中跑即可):**
 
@@ -212,26 +212,26 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwYXFnibZgfCneDg2LPG7wU69a5RtNtUgHe8FnKEhZ5ET5za7e0FQ3GSg/640?wx_fmt=png)
+![](../../.resource/remote/af0c6d6a7dcf5eafa50692fdd233c827421461c033d13a66d530fc7bc445257f.png)
 
 **SQL 注入畅捷通小 Tips：**
 
 **先执行个 --sql-shell 然后直接用语句查询** **select * from eap_configpath**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwq7wcKSFH6K8Wp1M6icDplM2kzPOCKKZlDBfeoiaDiaZpicicE9swkkzDRnQ/640?wx_fmt=png)
+![](../../.resource/remote/db0afdcdbf89fb08c916feadc3234f60d21f6ca47d1a420d40d5ae67ef02e085.png)
 
 **即可出来管理员账密 + 数据库账密**
 
-**![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwWpOzxrBRcB99Opf9nhEcA0g0L0hqJh1k67IaEdsROMqic0aibOjVc1HQ/640?wx_fmt=png)**
+**![](../../.resource/remote/c3762e72b828aba4661637b9359d7b7b5f31f64e35bd9137a8ec1aeed3091b77.png)**
 
 **0x06 后台任意文件上传漏洞**
 -------------------
 
 **/tplus/CommonPage/UserFileUpload.aspx 文件中含有 UploadUserFile 函数 导致了鉴权任意文件上传（v17<= 版本可 ?preload=1** **绕过）**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwZ5kdT9KsEl7SHotWZ4Z77P52ibcWF0vCjyY1nF6yicicZpw6504BnXmWA/640?wx_fmt=png)
+![](../../.resource/remote/54258b65c1f6f6c99ebf714bbe7c055328d625097b1171a0ac5a552387e38d7e.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOw1wxiaZnicC9dteceSUoWg20lI34sfSeEPT2nEVkxx7TpDiclwq2tjwDqw/640?wx_fmt=png)
+![](../../.resource/remote/35249e8421f6a29eef1e4d59d3dfba75805a0eeb1c348b2ac48c3051f386868a.png)
 
 Payload:
 
@@ -259,7 +259,7 @@ Hello Hack
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwkwr8jl9ia2oVgNyhoL3xTwIQiauedicrY7E1hnH78AMg9QK36nvlUuu0w/640?wx_fmt=png)
+![](../../.resource/remote/8710bc7b04873cee424489b71a9acfd428fe9dadc900eec453742a73de2a723c.png)
 
 **免责声明：****文章中涉及的程序 (方法) 可能带有攻击性，仅供安全研究与教学之用，读者将其信息做其他用途，由读者承担全部法律及连带责任，文章作者和本公众号不承担任何法律及连带责任，望周知！！！**
 ======================================================================================================

@@ -62,7 +62,7 @@ schema_version: "1"
   
 更多全球网络安全资讯尽在邑安全  
   
-![image](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8ukBKAeiabDibCCVWMV36eiam3K4qhd28pIfCoqw4ibTKMcehOP5IWth0GQfSpEFETt0M3P6xp8xXHskg/640?wx_fmt=jpeg&from=appmsg "")  
+![image](../../.resource/remote/a0bce128318a3aec38e3d8d933d85bc34006e6913b34f0a31ecd71e98d1fca47.jpg "")  
   
 Google 已针对 Chrome 稳定版发布关键安全更新，修复了两个高危漏洞，这些漏洞可能导致用户遭受任意代码执行（ACE）和拒绝服务（DoS）攻击。  
   
@@ -100,7 +100,7 @@ https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

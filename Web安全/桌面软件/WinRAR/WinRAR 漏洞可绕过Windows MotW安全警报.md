@@ -61,7 +61,7 @@ schema_version: "1"
 
 Ionut Ilascu  代码卫士   2025-04-07 18:20  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -71,7 +71,7 @@ Ionut Ilascu  代码卫士   2025-04-07 18:20
 **WinRAR 文件压缩解决方案中存在一个漏洞 (CVE-2025-31334)，可被用于绕过 Windows 设备的MotW 安全警报并执行任意代码，影响除了最新版本7.11以外的所有版本。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMSVjfRX1yxKEcF4mOAk1cjXzKthI8cfbsu831G7FMc9eVqqMibicc2fGJ3mfaOETdyFMD32hohWB7pw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2069adf134a498822d98b9e340a1ef09614dc268f3618e95dc44e85f5dcda62a.png "")  
   
   
 MoTW 是以元数据值形式（交换数据流 “zone-identifier”）存在于 Windows 中的一个安全功能，用于标记从互联网下载的可能不安全的文件。  
@@ -79,7 +79,7 @@ MoTW 是以元数据值形式（交换数据流 “zone-identifier”）存在�
 当通过 MotW 标记打开可执行文件时，Windows 会提醒用户称该文件下载自互联网，可能是有害的，并会提供继续执行或终止的选项。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMSVjfRX1yxKEcF4mOAk1cjXMdMEMQ6wPZogw4E8vaSQpkzbkcYMrIPicvPMialyzKcY0uZJ6iaPO8CyA/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/27f03c817f6e300abd6362af595633d5d9a4f72cca70667b043fd9f78e75a4df.gif "")  
   
 **从符号链接到可执行文件**  
   
@@ -132,15 +132,15 @@ License
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

@@ -63,7 +63,7 @@ schema_version: "1"
   
 该插件使用设置中生成的密钥对 $key 值进行 RSA 解密。如果值不正确， $key 则此值为 false。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/BicXBAdicJy7O10NHKe8Rxm3YQ1sIic0FDKAcTib68seR80UkIqq3aW5D7dI1jusNRjtrdrU2vvS6MqjSRcXLEOdfIGQ5tKzicgVVOAsicC3eVx44/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/a728057e3fa02954fc3fb73eb9bb753986fa8792f3ed6dc5f74bbb5703d8cc5d.jpg "")  
   
 然而，对于明确启用了允许其他网站使用生成的密钥发送备份功能的网站所有者来说，这种风险最为严重。该功能默认情况下处于禁用状态，密钥的有效期最长为 24 小时。  
   
@@ -73,7 +73,7 @@ Wordfence 于 2026 年 1 月 22 日发布了一项防火墙规则，适用于其
   
 $key 供应商通过在 函数中添加对值的空值检查来修复此问题 decrypt_message() 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/BicXBAdicJy7OIvBef9iahicDk6ryNb05X1UAjAqBHUpOibzDbRFMCCPicqxdwIOd1T7Gh0k8kccb7XPxYFX54hYV5nXo7kWbOCFW7l9Idg4ibmRps/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/d466ddc355afeacd725607b4fd61585c3273461af78d3c248caa751535939584.jpg "")  
   
 在 1 月 22 日接到联系后，WPvivid 开发团队于第二天做出回应，并于 2026 年 1 月 28 日发布了完全修复的版本 0.9.124。  
   

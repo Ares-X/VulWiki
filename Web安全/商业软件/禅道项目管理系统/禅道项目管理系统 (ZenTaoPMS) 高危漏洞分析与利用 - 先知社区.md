@@ -75,13 +75,13 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 （4）禅道集团版（2019-2020）主要包含主站平台和子站点两部分。集团版用户可以通过主站平台给旗下的 部门、 子公司或者第三方开发团队分别开通一个独立的子站点进行项目管理。集团版的子站点由禅道项目管理软件企业版提供项目管理服务， 每个子站点的数据都是独立且互不影响的。
 
 版本细分如下图所示：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162133-8926c6d0-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162133-8926c6d0-4365-1.png)
+[![](../../.resource/remote/48ad7fe661cb81e48f88592206afcb5e71392980ad50da2ee1e30834c087b87c.png)](../../.resource/remote/48ad7fe661cb81e48f88592206afcb5e71392980ad50da2ee1e30834c087b87c.png)
 
 #### 1.3 使用量及使用分布
 
 根据全网数据统计，使用 ZenTaoPMS 的网站多达 4 万余个，其中大部分集中在国内，约占使用量的 75% 以上。其中，广东、浙江、北京、上海四省市使用量最高，由此可见，ZenTaoPMS 在国内被广泛应用。通过网络空间搜索引擎的数据统计和柱状图表，如下图所示。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162154-955aab60-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162154-955aab60-4365-1.png)  
+[![](../../.resource/remote/dc7cde4795b5f69afd82660fcbb13f85fa870b9da64837be9978f65e8d872601.png)](../../.resource/remote/dc7cde4795b5f69afd82660fcbb13f85fa870b9da64837be9978f65e8d872601.png)  
 （数据来源：FOFA）
 
 二、高危漏洞介绍
@@ -104,7 +104,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 
 ##### 3.1 无需权限
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162258-bbc70618-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162258-bbc70618-4365-1.png)
+[![](../../.resource/remote/5475fdac912e7e3380b2c77aae5493a30b4209932b496a9a42593bd4354362d5.png)](../../.resource/remote/5475fdac912e7e3380b2c77aae5493a30b4209932b496a9a42593bd4354362d5.png)
 
 **ZenTaoPMS (8.2-9.2.1) - GetShell**
 
@@ -113,7 +113,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 
 ##### 3.2 仅需低权限
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162341-d5151de4-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162341-d5151de4-4365-1.png)
+[![](../../.resource/remote/333aeda994db24094a8fde51f081068582b1fd174603e4d5860627dd2779b1ab.png)](../../.resource/remote/333aeda994db24094a8fde51f081068582b1fd174603e4d5860627dd2779b1ab.png)
 
 **ZenTaoPMS <11.6 - GetShell**
 
@@ -122,7 +122,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 
 ##### 3.3 需要管理员权限
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162415-e9bef332-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162415-e9bef332-4365-1.png)
+[![](../../.resource/remote/6fe8e6a397b597a0f8791bc65cce78837531383f932916302065ac1a2e2a4aba.png)](../../.resource/remote/6fe8e6a397b597a0f8791bc65cce78837531383f932916302065ac1a2e2a4aba.png)
 
 **ZenTaoPMS < 12.4.3 - GetShell**
 
@@ -147,7 +147,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 
 我们从禅道的入口 index.php 文件来进行讲解：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162447-fc6cd9fe-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162447-fc6cd9fe-4365-1.png)
+[![](../../.resource/remote/2c3f45534fcb00bef0450935c4bbeb1b2b5e6b0a1385444a4491feaba3ca4b7d.png)](../../.resource/remote/2c3f45534fcb00bef0450935c4bbeb1b2b5e6b0a1385444a4491feaba3ca4b7d.png)
 
 从`index.php`文件，首先看到加载了一些 framework 中的框架类，然后声明了一个路由 $app，之后就做了一些系统的基本判断，最重要的就在最下方的三句话，分别是三个功能：解析请求、检测权限、加载模块；
 
@@ -159,37 +159,37 @@ $app->loadModule();
 
 即 parseRequest() 函数就是路由解析入口。进入到`\framework\base\router.class.php`文件中的`parseRequest()`函数：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162528-153de46e-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162528-153de46e-4366-1.png)
+[![](../../.resource/remote/dbe7c5928148273334a2f5904312b2a71891ad8d7d1804c247904a2f23ff1da7.png)](../../.resource/remote/dbe7c5928148273334a2f5904312b2a71891ad8d7d1804c247904a2f23ff1da7.png)
 
 parseRequest() 函数首先用于解析判断 url 是否采用了'GET'或者是'PATH_INFO'模式，其中有一个点就是`isGetUrl()`函数，该函数用于判断 url 是否采用了 GET 模式，具体有以下三种模式：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162617-3210d77c-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162617-3210d77c-4366-1.png)
+[![](../../.resource/remote/efcfdd66e7e18cbe81e7159c87a360c01f4b1703b4df809a5ce515f555c0617e.png)](../../.resource/remote/efcfdd66e7e18cbe81e7159c87a360c01f4b1703b4df809a5ce515f555c0617e.png)
 
 我们回到 parseRequest() 函数中可以得出，如果系统的默认解析模式是 PATH_INFO，而你的 url 采用的是 GET 模式，系统则会将此次访问的路由解析模式配置修改 GET，故当你的 url 模式与系统默认解析模式不同，系统也会解析，不会报错。所以禅道系统的两种路由解析模式可同时使用。
 
 （1）路由解析中，GET 模式属于非默认模式，但是该种解析方式是 PHP 类 CMS 的常规解析模式，即 m=block&f=main，m 参数负责传递模块名（module），f 参数负责传递方法名（method），由此就可以定位到对应 module 中的`control.php`文件，以及该文件中对应的 method。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162720-579ed4da-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162720-579ed4da-4366-1.png)
+[![](../../.resource/remote/a418b85c2f1f3651ae21f357d40208ae9fdc9c32c4baa22db1f238bfbcb8a1bf.png)](../../.resource/remote/a418b85c2f1f3651ae21f357d40208ae9fdc9c32c4baa22db1f238bfbcb8a1bf.png)
 
 （2）路由解析中，PATH_INFO 模式属于系统默认模式，我们在配置文件中可以看到系统默认模式以及对应的分隔符、参数含义:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162750-69d59882-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162750-69d59882-4366-1.png)
+[![](../../.resource/remote/361865776c017196375f50775d299221003c0b112a464ae40797db9098f94386.png)](../../.resource/remote/361865776c017196375f50775d299221003c0b112a464ae40797db9098f94386.png)
 
 我们可以看出 PATH_INFO 的默认分隔符是 -，然后我们进入到 path_info 模式下的`setRouteByPathInfo()`函数，通过分隔符将 url 分割后，第一个值为模块名称`module`，第二个值即为方法`method`:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162816-7974b6b0-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162816-7974b6b0-4366-1.png)
+[![](../../.resource/remote/9b1c79e50610ab816b2e8ae93b1bcc026d9bfa270e85c6e157d3100fb56333de.png)](../../.resource/remote/9b1c79e50610ab816b2e8ae93b1bcc026d9bfa270e85c6e157d3100fb56333de.png)
 
 总，两种解析模式解析后获取的最终 module、method 通过 `$this->setControlFile();`方法来寻找对应的文件：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162941-aba2fee4-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162941-aba2fee4-4366-1.png)
+[![](../../.resource/remote/b0ed09c8ef226fc80f80fe9fd4d883e46d363000debf362e4447635a8fc45313.png)](../../.resource/remote/b0ed09c8ef226fc80f80fe9fd4d883e46d363000debf362e4447635a8fc45313.png)
 
 自此路由解析结束，定位到对应的模块方法后，就进行了权限验证，即使用者身份是否可以调用该模块与方法，`$common->checkPriv();`，文件`module/common/model.php`:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163002-b829f7da-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163002-b829f7da-4366-1.png)
+[![](../../.resource/remote/fa170565fa006054b01aba236cb057aa19a03cf273d0a89344096bfef76005f0.png)](../../.resource/remote/fa170565fa006054b01aba236cb057aa19a03cf273d0a89344096bfef76005f0.png)
 
 从此方法看出，除了`isOpenMethod`之外，均需要登录后具有对应权限才可访问，不需登录的方法如下所示。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163025-c5edc7ca-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163025-c5edc7ca-4366-1.png)
+[![](../../.resource/remote/67bfeee4f9d88bb15422ff5d3fd822e393331f3a1aeaba5486197d390b743c5f.png)](../../.resource/remote/67bfeee4f9d88bb15422ff5d3fd822e393331f3a1aeaba5486197d390b743c5f.png)
 
 #### 4.1 禅道 8.2-9.2.1 SQL 注入漏洞导致 Getshell
 
@@ -239,47 +239,47 @@ http://siteserver/zentao/index.php?m=block&f=main&mode=getblockdata&blockid=case
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 block 模块中的 main 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块，如下图所示：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162855-9055d76a-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162855-9055d76a-4366-1.png)
+[![](../../.resource/remote/ab789a072dc5572d4290085e2a54fba1d077f8f26fcbf73691f16dc774d884b9.png)](../../.resource/remote/ab789a072dc5572d4290085e2a54fba1d077f8f26fcbf73691f16dc774d884b9.png)
 
 在处理完 url 路由后，就开始处理方法中的各种参数，通过 setParamsByGET() 函数将参数解析：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163106-de538c78-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163106-de538c78-4366-1.png)
+[![](../../.resource/remote/6b2a692da7a5d11ac506705faa17d4c67ee70c01e1036073fd3e8018e57e1b0e.png)](../../.resource/remote/6b2a692da7a5d11ac506705faa17d4c67ee70c01e1036073fd3e8018e57e1b0e.png)
 
 在参数解析后，就对各个参数进行过滤检测，若没有问题，最终将解析过滤后的参数进行保存：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163134-eefbff9c-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163134-eefbff9c-4366-1.png)
+[![](../../.resource/remote/79f566fdcde3b0d3f016f2746ce13daadb00e02644f36c2fff7ffe1cd06f5861.png)](../../.resource/remote/79f566fdcde3b0d3f016f2746ce13daadb00e02644f36c2fff7ffe1cd06f5861.png)
 
 在路由解析和参数解析过滤完之后，就需要通过 call_user_func_array() 函数来调用对应模块的对应方法，然后就进入到 block 模块中的 control.php 文件：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163157-fd341e00-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163157-fd341e00-4366-1.png)
+[![](../../.resource/remote/b0615347b495877393e0a3c8678c76beabbcd80dcd828514c8c2c19843d77a80.png)](../../.resource/remote/b0615347b495877393e0a3c8678c76beabbcd80dcd828514c8c2c19843d77a80.png)
 
 在 module/blocak/control.php 文件中的构造函数中，存在一个判断，即需要存在 referer，否则无法执行对应模块的函数。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163225-0d630dfe-4367-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163225-0d630dfe-4367-1.png)
+[![](../../.resource/remote/a06a77191184d5d0c944a716244d80c6e10d7db2addc287307b90a81c60bed7d.png)](../../.resource/remote/a06a77191184d5d0c944a716244d80c6e10d7db2addc287307b90a81c60bed7d.png)
 
 在进入到 block 模块中的 main 函数中，通过 mode 参数进入到一下 if 分支，在该分支中，首先对 params 参数进行 base64 解码
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163911-fff5309c-4367-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163911-fff5309c-4367-1.png)
+[![](../../.resource/remote/37136bc402a576344d559a6d50b3ae1ecc438ba4e679a421b6a9f6688cd21f62.png)](../../.resource/remote/37136bc402a576344d559a6d50b3ae1ecc438ba4e679a421b6a9f6688cd21f62.png)
 
 然后通过进一步的解析参数，获取到执行 getblocakdata 操作的的函数为 printCaseBlock()
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163947-155f03b8-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163947-155f03b8-4368-1.png)
+[![](../../.resource/remote/bde6f35d75ba2cba1c81b94be3b9d1224f3a9681f106b6a6cbf2f47c2333617e.png)](../../.resource/remote/bde6f35d75ba2cba1c81b94be3b9d1224f3a9681f106b6a6cbf2f47c2333617e.png)
 
 然后进入到本文件中的 printCaseBlock() 函数中，通过解析 params 参数后，得到 type 属性为 openedbyme（可构造），进入到下面的 elseif 分支，我们可以看到参数要进入到 orderby 函数中进行处理，继续跟入到 orderby 函数中：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164035-31c9cd6c-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164035-31c9cd6c-4368-1.png)
+[![](../../.resource/remote/0c2b67325d73a2995fdc9472f037b01f9eb5a7d7b7deb6f287abfac8ba1efdfa.png)](../../.resource/remote/0c2b67325d73a2995fdc9472f037b01f9eb5a7d7b7deb6f287abfac8ba1efdfa.png)
 
 在 oderby 函数，系统将 oder 参数进行解析，获取到 orders 和 limit 参数值
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164059-3ff970d6-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164059-3ff970d6-4368-1.png)
+[![](../../.resource/remote/cbb37d1f05164a2758add0e382eeb86033039907ecd530e49d31234ebc4b6f98.png)](../../.resource/remote/cbb37d1f05164a2758add0e382eeb86033039907ecd530e49d31234ebc4b6f98.png)
 
 接下来就进入到了漏洞产生的关键，即`$order = join(',', $orders) . ' ' . $limit;`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164128-5192a736-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164128-5192a736-4368-1.png)
+[![](../../.resource/remote/d86b552a55681419e8b4ce9aa67ffcb1182122dffd99c7c57a3a2e2816a4f80d.png)](../../.resource/remote/d86b552a55681419e8b4ce9aa67ffcb1182122dffd99c7c57a3a2e2816a4f80d.png)
 
 在该 SQL 语句中将 $limit 直接拼接到最后，导致`limit 1;`闭合了之前的 SQL 语句，而之后的攻击 PoC 就可被执行，由此就造成了该漏洞的 SQL 注入，该 SQL 注入可以写入文件，导致最终的 getshell。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164155-61b3cf28-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164155-61b3cf28-4368-1.png)
+[![](../../.resource/remote/00860ef84f5277482947c9cdc9023edbc9f89e2daaa0ac1bbba7ee53478b6ec6.png)](../../.resource/remote/00860ef84f5277482947c9cdc9023edbc9f89e2daaa0ac1bbba7ee53478b6ec6.png)
 
 #### 4.2 禅道 后台代码注入漏洞
 
@@ -315,35 +315,35 @@ CVSS 评分：无
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 api 模块中的 getModel 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块，如下图所示：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164253-84402abe-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164253-84402abe-4368-1.png)
+[![](../../.resource/remote/b301453c1d81b3e96714f95ea24746bd598109805d742d2376752a163ce0b99c.png)](../../.resource/remote/b301453c1d81b3e96714f95ea24746bd598109805d742d2376752a163ce0b99c.png)
 
 进入到 api 的 getModel() 方法中，获取到需要调用的三个参数 module：editor，method：save，params：filePath。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164315-90f6ef72-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164315-90f6ef72-4368-1.png)
+[![](../../.resource/remote/2f103d2e387bc7ead36b9cba20df0171f1c78738837fd246c8c41b348643eb4d.png)](../../.resource/remote/2f103d2e387bc7ead36b9cba20df0171f1c78738837fd246c8c41b348643eb4d.png)
 
 然后通过回调函数 call_user_func_array 进入到 editor 模块中：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164349-a5726026-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164349-a5726026-4368-1.png)
+[![](../../.resource/remote/d485a2fb94ba78f45b7ba24cb28a223c982c00f9986e4f12ec21b5561e508841.png)](../../.resource/remote/d485a2fb94ba78f45b7ba24cb28a223c982c00f9986e4f12ec21b5561e508841.png)
 
 进入到 editor 模块中的 model.php 文件中的 save() 函数，通过 save 函数的 file_put_contents 将 fileContent 内容生成为一个文件，
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164424-b9fb84f0-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164424-b9fb84f0-4368-1.png)
+[![](../../.resource/remote/ae969f5e04c8d90bb9c282f7d20424afe4c55a799ba549fb4d04c48c4dd69c59.png)](../../.resource/remote/ae969f5e04c8d90bb9c282f7d20424afe4c55a799ba549fb4d04c48c4dd69c59.png)
 
 最终将输出结果后，进程结束。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164445-c6cb2d3e-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164445-c6cb2d3e-4368-1.png)
+[![](../../.resource/remote/68af4cebd2f7b22bd84bbc190a5656103bbc125a2c8f335b8c554cf3f1894838.png)](../../.resource/remote/68af4cebd2f7b22bd84bbc190a5656103bbc125a2c8f335b8c554cf3f1894838.png)
 
 然后通过访问 api-getModel-api-getMethod-filePath 文件，解析出 module 为 api，method 为 getModel()，在 getmodel() 函数中又调用了 api 模块的 getmethod() 方法，
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164515-d88a54aa-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164515-d88a54aa-4368-1.png)
+[![](../../.resource/remote/e1f68e725e6254b130ef763750f50d125251a9661c6f1d8fce49923ade991d32.png)](../../.resource/remote/e1f68e725e6254b130ef763750f50d125251a9661c6f1d8fce49923ade991d32.png)
 
 进入到 getMethod 方法中，进入到 import 方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164621-ffed3bca-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164621-ffed3bca-4368-1.png)
+[![](../../.resource/remote/70189f1552c70f31adf3467436f422128f9b614742b21ee8fe070a65b1decbdb.png)](../../.resource/remote/70189f1552c70f31adf3467436f422128f9b614742b21ee8fe070a65b1decbdb.png)
 
 在 import() 方法中，通过 include() 函数包含了 filePath 下的文件，最终执行 PHP 代码
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164644-0d87fd1a-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164644-0d87fd1a-4369-1.png)
+[![](../../.resource/remote/0f98ce8e67b36a3fe11a3b913f44704601f4a0daa4d623e39a19d1f5ec07a6a5.png)](../../.resource/remote/0f98ce8e67b36a3fe11a3b913f44704601f4a0daa4d623e39a19d1f5ec07a6a5.png)
 
 #### 4.3 禅道 后台文件上传漏洞
 
@@ -381,21 +381,21 @@ CVSS 评分：无
 
 进入到 client 的 download() 方法中，获取到需要调用的 2 个参数 $version 和 $link
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164728-27a93592-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164728-27a93592-4369-1.png)
+[![](../../.resource/remote/8425166186eaa1b633a445355333fd6e973cb4c504c2c62c85ce46597d106bea.png)](../../.resource/remote/8425166186eaa1b633a445355333fd6e973cb4c504c2c62c85ce46597d106bea.png)
 
 然后跟进到 download() 重点中的 downloadZipPackage() 函数，全局中共有两个 downloadZipPackage 函数，其中一个在 module/client/ext/model/xuanxuan.php：进入到该函数中，我们发现该函数首先将 $link 参数进行 base64 解码后，然后通过 pcre 进行过滤，即路径的协议无法使用 [http://，但是我们可以使用 HTTP 或者 file、ftp 等协议绕过该限制，然后返回到正式的 downloadZipPackage 函数，parent::downloadZipPackage($version](http://，但是我们可以使用HTTP或者file、ftp等协议绕过该限制，然后返回到正式的downloadZipPackage函数，parent::downloadZipPackage($version), $link);
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164749-343e8852-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164749-343e8852-4369-1.png)
+[![](../../.resource/remote/357ab5b86046828fb9702c5a3e0ee5b1ab786241fb1ad818a1ee9d1764d60bd5.png)](../../.resource/remote/357ab5b86046828fb9702c5a3e0ee5b1ab786241fb1ad818a1ee9d1764d60bd5.png)
 
 接下来进入到 module/client/model.php 中的接下来进入到 module/client/model.php：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164845-56062b8e-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164845-56062b8e-4369-1.png)
+[![](../../.resource/remote/87b6b9454b2ef1268b759dc098221b5c1e7d17dbe27c1d53359ef437ad3464c6.png)](../../.resource/remote/87b6b9454b2ef1268b759dc098221b5c1e7d17dbe27c1d53359ef437ad3464c6.png)
 
 在该方法中，我们可以看到 version 参数用于创建一个新的文件夹，即 / data/client/${version}，
 
 然后将 link 参数值进行 base64 解码，最终在新建文件夹下新建文件，然后将远程文件写入到该文件中，最终达到远程文件上传漏洞的目的。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164913-669385fa-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164913-669385fa-4369-1.png)
+[![](../../.resource/remote/2732cde5cee315acd81aae1c92dad574ab2712a51c812daedd7f4133b5ea307b.png)](../../.resource/remote/2732cde5cee315acd81aae1c92dad574ab2712a51c812daedd7f4133b5ea307b.png)
 
 #### 4.4 禅道 Pro 版本任意命令执行漏洞
 
@@ -441,31 +441,31 @@ SCM=Git&name=test2&path=C%3A%5CProgramData&encoding=utf-8&client=cmd2
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 repo 模块中的 create 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块，如下图所示：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164940-76d44382-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164940-76d44382-4369-1.png)
+[![](../../.resource/remote/70d8157ec69e06b5e20a68cf25938b1f773e7b2696a01585ac4aafde64df4ed6.png)](../../.resource/remote/70d8157ec69e06b5e20a68cf25938b1f773e7b2696a01585ac4aafde64df4ed6.png)
 
 然后通过 call_user_func_array() 函数调用对应模块以及对应方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221165040-9a284676-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221165040-9a284676-4369-1.png)
+[![](../../.resource/remote/8dea2886d7c805a3390821b46aedc3e736d5d45ff7202e8897c40313eda5d7f4.png)](../../.resource/remote/8dea2886d7c805a3390821b46aedc3e736d5d45ff7202e8897c40313eda5d7f4.png)
 
 在 module/repo/control.php 文件中的 create() 函数中，如果是 post 的数据，首先进入到`$repoID = $this->repo->create();`该处的 create() 方法是调用的 model.php 文件中的 create() 方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221165106-a99c5dea-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221165106-a99c5dea-4369-1.png)
+[![](../../.resource/remote/dad1117ed96827d8f7f7a872d338affe80d0daa3bd74d2397ffd779cfbfb0eec.png)](../../.resource/remote/dad1117ed96827d8f7f7a872d338affe80d0daa3bd74d2397ffd779cfbfb0eec.png)
 
 进入到 module/repo/model.php 方法中，首先进入到 create() 方法中，发现第一步需要执行 checkConnection():
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221170320-5f9bf4e2-436b-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221170320-5f9bf4e2-436b-1.png)
+[![](../../.resource/remote/a537d018cd2316e273e3b740f2bdf3cfa62e8af28037b3a3fe68d0252d333a99.png)](../../.resource/remote/a537d018cd2316e273e3b740f2bdf3cfa62e8af28037b3a3fe68d0252d333a99.png)
 
 在 checkConnection() 函数中，首先获取到对应参数值，由此发现参数在此未做过滤，继续往下看：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221165233-dde7d6c4-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221165233-dde7d6c4-4369-1.png)
+[![](../../.resource/remote/b34aec713b388ecf5f9593b17f9379d258cabd476f0f602a65e089298a3069b8.png)](../../.resource/remote/b34aec713b388ecf5f9593b17f9379d258cabd476f0f602a65e089298a3069b8.png)
 
 如果 SCM=git 的话，则判断 path 下的文件是否存在，如果不存在则返回 false。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221165311-f42d3514-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221165311-f42d3514-4369-1.png)
+[![](../../.resource/remote/fcc29426e265b7b82092f926a28c8d41d052c7fdaa0d48236be207ca0297e2f2.png)](../../.resource/remote/fcc29426e265b7b82092f926a28c8d41d052c7fdaa0d48236be207ca0297e2f2.png)
 
 然后进入到本漏洞的触发点了，command 参数直接与 tag 2>&1 拼接，带入到 exec() 函数执行:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201221165344-0849ff64-436a-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221165344-0849ff64-436a-1.png)
+[![](../../.resource/remote/d0e53f21068863515e367a661a1250f5c3afe1db4009822258a2ebb8e2dec819.png)](../../.resource/remote/d0e53f21068863515e367a661a1250f5c3afe1db4009822258a2ebb8e2dec819.png)
 
 五、漏洞利用
 ------

@@ -56,7 +56,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2024-04-04 13:00  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEce91msiaK4yu85KZzM2b6EnjY39lBz9SHXzNa1I8icBAaUGImMnWjC2DE6XHfq0BdmUSkfwqZMtsdJSw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/999edaca47f531c4f26011312fefea54896af1d69cdf4b6b6ec1ea53cefdfba1.png "")  
   
 谷歌已经解决了Chrome浏览器中的另一个零日漏洞，该漏洞被标识为CVE-2024-3159，于2024年3月在Pwn2Own黑客大赛中被利用。CVE-2024-3159漏洞是V8 JavaScript引擎中的越界内存访问。该漏洞由Palo Alto Networks的Edouard Bochin (@le_douds)和Tao Yan (@Ga1ois)在2024年3月22日的Pwn2Own 2024比赛中展示。这对组合展示了他们针对谷歌Chrome和微软Edge的漏洞利用，赢得了42500美元和9个Master of Pwn积分。@le_douds和@Ga1ois来自Palo Alto使用了OOB读取加上一种新颖的技术来击败V8硬化，从而在渲染器中获得任意代码执行。他们成功利用了相同的漏洞攻击了#Chrome和#Edge，赢得了42500美元和9个Master of Pwn积分。  
   

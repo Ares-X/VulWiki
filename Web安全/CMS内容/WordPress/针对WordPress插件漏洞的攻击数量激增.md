@@ -46,7 +46,7 @@ schema_version: "1"
   
 Wordfence表示有超过1000个安装了该插件的网站正在受该公司的保护，而自本月开始该公司平均每天阻止了443,868次攻击尝试。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icRuS6hacDibIlHxIjhG8AjUloaLguqPboM3GmibIRvALtlh8KGTXCGDE5ZCGMP4bjdl2zVU5HxLF1Q/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/ea7204b3a0656a1e4a5f250599e13e8df879b639ee5162396edc15784bdc8d92.jpg "")  
   
 【图：WordPress Page Builder插件漏洞】  
   
@@ -67,7 +67,7 @@ https://thehackernews.com/2022/07/experts-notice-sudden-surge-in.html
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176njVOPvfib4X3jQ6GIHLtX8SSDvbpmcpr4uu3X7ELG7PDjdaLVeq4Er02ZoicTPvxrC6KCVH3bssUVw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
 
 
 ---

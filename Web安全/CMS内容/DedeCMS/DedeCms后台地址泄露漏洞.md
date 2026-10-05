@@ -155,9 +155,9 @@ Common.inc.php 是被全局包含的文件，只要文件php文件包含了Commo
 
 当目录存在点时候： 图1
 
-[![img](./.resource/DedeCms后台地址泄露漏洞/media/20180123000649-4080b60c-ff8e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20180123000649-4080b60c-ff8e-1.png)
+[![img](./.resource/DedeCms后台地址泄露漏洞/media/20180123000649-4080b60c-ff8e-1.png)](.resource/DedeCms%E5%90%8E%E5%8F%B0%E5%9C%B0%E5%9D%80%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/media/20180123000649-4080b60c-ff8e-1.png)
  当目录不存在点时候： 图2
- [![img](./.resource/DedeCms后台地址泄露漏洞/media/20180123000533-133714d4-ff8e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20180123000533-133714d4-ff8e-1.png)
+ [![img](./.resource/DedeCms后台地址泄露漏洞/media/20180123000533-133714d4-ff8e-1.png)](.resource/DedeCms%E5%90%8E%E5%8F%B0%E5%9C%B0%E5%9D%80%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/media/20180123000533-133714d4-ff8e-1.png)
 
 ### EXP：
 
@@ -218,7 +218,7 @@ while($nn){
 ?>
 ```
 
-[![img](./.resource/DedeCms后台地址泄露漏洞/media/20180123000746-62cc9f96-ff8e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20180123000746-62cc9f96-ff8e-1.png)
+[![img](./.resource/DedeCms后台地址泄露漏洞/media/20180123000746-62cc9f96-ff8e-1.png)](.resource/DedeCms%E5%90%8E%E5%8F%B0%E5%9C%B0%E5%9D%80%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/media/20180123000746-62cc9f96-ff8e-1.png)
 
 ### 感谢
 

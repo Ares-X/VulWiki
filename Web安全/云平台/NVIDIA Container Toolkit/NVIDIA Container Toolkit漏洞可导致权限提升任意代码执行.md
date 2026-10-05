@@ -46,10 +46,10 @@ schema_version: "1"
 
  FreeBuf   2025-07-18 10:31  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR39qt8cDGMxraNibg1nP3VsQJRjYawcr1a3QVO6BPcOfBplfbB35UHIAibEES8yFgcbvPbolMY1YyQxw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9fe20b85ec39fea7c924367e02fb59e641ca1ac7e16b5bf2a0d4208acf7d036c.png "")  
   
   
 NVIDIA已发布关键安全更新，  
@@ -98,13 +98,13 @@ NVIDIA Container Toolkit
 运行时（Container Runtime）用户，需要编辑/etc/nvidia-container-toolkit/config.toml文件，将features.disable-cuda-compat-lib-hook功能标志设为true：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR39qt8cDGMxraNibg1nP3VsQJzoB9EuDIPRsiaOhllFx1zzYgVV47bQVeEK0P71uDFtHX2t6eRoZWmpA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/e7a104c6415dfd161e24ac13948fc89034d8c19889c6d49d27654004ccd08016.jpg "")  
   
   
 GPU Operator用户可通过Helm安装参数实施缓解：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR39qt8cDGMxraNibg1nP3VsQJXhwBVOibwyTiby6dvphk2Re4GpKicGSziaOMlgb9FAuOk3IPEAjGCfY2TQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/088df6db656afc4d6032ef656d80727243d1444db00b0efa213b2403b60c07e8.jpg "")  
   
   
 NVIDIA强烈建议用户按照官方  
@@ -133,7 +133,7 @@ https://cybersecuritynews.com/nvidia-container-toolkit-vulnerability-2/
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
    
   

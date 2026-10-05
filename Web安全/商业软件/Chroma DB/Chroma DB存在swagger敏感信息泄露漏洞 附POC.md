@@ -74,7 +74,7 @@ CNVD编号:
   
 Chroma DB  
   
-![Chroma DB存在swagger敏感信息泄露漏洞](https://mmbiz.qpic.cn/mmbiz_png/b9KQYsB8q6xeSBhtUzUib93iapQu8cP5GGY613b2uEr5ZWM7wSMJxywt3IXl3rqCPk6YUp0aHfshB3ZyGUIiarHakkOD2Qu0SaPxb9KN81uS38/640?wx_fmt=png&from=appmsg "")  
+![Chroma DB存在swagger敏感信息泄露漏洞](../../.resource/remote/e895f98c465293068ea01163ceceef7c576f5a5ce9f604fc0ec6ca63c23e7d5d.png "")  
   
 Chroma DB存在swagger敏感信息泄露漏洞  
 ### 4.fofa查询语句  
@@ -94,12 +94,12 @@ docs/
 openapi.json  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/b9KQYsB8q6xVibLRxumAD4Of4iagflOsql4zojdEqfWX0or3FbYgbhbDVjUd3W6YecOMGHBONBeiay1EfGT2OU2Az1tabdWicwNRuVNaAeuCsYM/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/9f5e7f891992eb5fd80561fe5b9cbdf64f03402cb34acd21aea7f6dcb515d71c.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9KQYsB8q6zqAKdjhE1oYkjsaCQMRNjgicHzAujhzY0b6StGgUw3QW5nhH9RNgx08T2TWCSXrtAl8H4icKY54TomkYqhrQaZiciccZGTlSzDkl0/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/11bb903b9fc5d8e2efb3776e9051624307a480195bb4ab017fe35ae5c334da41.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/b9KQYsB8q6z3crqhCxCvPvBS0aBAiaoz8tc0shy7edOKaHb9PBByFdVhNyZVdsJgcaicNiaIuJDGqo060LELH2OSEXBFwjd1l30dWMpZibDHXTs/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/74c2555e98c006a16d26b6bbb70880fc950c80a021247f69f7ac4dac8effffcb.jpg "")  
 ### 6.POC&EXP  
   
   
@@ -117,19 +117,19 @@ openapi.json
   
 4: 免费指纹识别，持续更新指纹库。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/b9KQYsB8q6zBu0J3YRBPTib0jAftsv6R7sTic0jibbgicHW1ItBTd5OHI4JB5RJs8LOvFzn8Y6xThPM7AcT0Guzzzq0SUqnOjChTO3ibWoMmR57E/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/38011978b04684b3757530d33f3b44f1e3a8600a87b61154fca86a95fd7ec03b.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/b9KQYsB8q6wwGRFu6RDmxQibzG5Sq5UeqbBOg97BzBEygHxYdvxcG4DNaEzDLsEqQ2dgictia5NaHcpgba5oMlJicxzl6OkAq4FyX46Cnrk7icqA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/5d6a45f25899215706838d7d66ec7f80816d533f1878d3f33dd73027bef1b971.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/b9KQYsB8q6yB5Xb7kBODVEfCrcRbibYygRSlLn2oh3HbDmg5Oib9VNt1Dic4dMh4E3eWhFAhZBo4NU27vUqq3BicTOreHoniaGp34Z66u96ad8hY/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/31d277a6fa41aea2b7fd0d593be57026d58b7876987c18d87a59ee8ba08134b9.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/b9KQYsB8q6woZHd9iavOWic7u47H6iceiaqS2iaWoqmiaWbtUVasPibjRGJzGGKTj5XwicPqjeMqH8zhgLhOHmUtD3Pfjxy9ibFafSicVICQGUY7yDTns/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/65011a35c2836fc5571df8cee7426ebc5a17f6ba9ca67b14d3c7d9f48aadbf2f.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/b9KQYsB8q6xVax8TVxYHYvf6NLyQVK9JgIr6Ma1N5n2ypkazSEaXbcNdVKVPg1rE9S2DgXpg506rNQwOwc6rZ08M5j473KVJP2okBS8Wwq0/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "")  
 ### 7.整改意见  
   
 打补丁  

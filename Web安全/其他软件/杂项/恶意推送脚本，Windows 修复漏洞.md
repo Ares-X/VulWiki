@@ -76,7 +76,7 @@ Windows 用户报告称，在尝试安装更新时收到“0x80070643 – ERROR_
   
 “安装更新时出现一些问题，但我们稍后会再试。如果您继续看到此信息并想在网上搜索或联系支持人员获取信息，这可能会有所帮助：（0x80070643）”，Windows 更新错误显示。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/JqliagemfTA6IE0dGnJy5O2hVsY9icD5fvezVcclIOb6fMGEFK0zw3vxOUvciaPUro0ia0JBHgutUfy6BOrqDKXzQg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a5037aa4b70b2af905f6e1058ae7db500763e123ac69eb2ce7b43c4d62e03d22.png "")  
   
 Windows 更新中的 0x80070643  
   
@@ -105,7 +105,7 @@ eSentire 为 PCHelperWizard 拼写错误网站找到的其他视频一样，研�
 这些网站都提供了修复方法，要么要求您复制并运行   
 PowerShell 脚本，要么导入 Windows 注册表文件的内容。无论使用哪种“解决方案”，都会执行一个 PowerShell 脚本，在设备上下载恶意软件。eSentire 的报告概述了 PCHelperWizard 网站（不要与合法课程网站混淆）如何引导用户将 PowerShell 脚本复制到 Windows 剪贴板并在 PowerShell 提示符中执行它。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/JqliagemfTA6IE0dGnJy5O2hVsY9icD5fvRz92mNiaN2SL7gOfEfpOgBXYvoFIubDw7vznbyPMFKIkCeuVr1icA6HA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/caf3d6db2dc358f9a4606f2ad264305b3864c1aad7a8793d5d8e591f5046f2c2.png "")  
   
 伪装成  
    
@@ -114,14 +114,14 @@ Windows 错误修复程序的恶意 PowerShell 脚本
 该   
 PowerShell 脚本包含一个 Base64 编码的脚本，它将连接到远程服务器以下载另一个 PowerShell 脚本，该脚本会在设备上安装 Vidar 信息窃取恶意软件。脚本完成后，它会显示修复成功的消息并重新启动计算机，同时还会启动恶意软件。FixedGuides 网站的做法略有不同，它使用混淆的 Windows 注册表文件来隐藏启动恶意 PowerShell 脚本的自动启动程序。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/JqliagemfTA6IE0dGnJy5O2hVsY9icD5fvegxBuqah4A0nxBqp46oTicOsI095wiaTn4ZcxGd4PvnzkaNt6k72MgoQ/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/56df4d3d5b9e7512be218038e7d0b57d077dba27f16cef08f494c955233dacef.jpg "")  
   
 混淆的 Windows 注册表文件  
   
 但是，当从上述文件中提取字符串时，您可以看到它包含一个有效的注册表文件，该文件添加了运行   
 PowerShell 脚本的 Windows 自动启动 (RunOnce) 条目。该脚本最终会在计算机上下载并安装窃取信息的恶意软件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/JqliagemfTA6IE0dGnJy5O2hVsY9icD5fvuE0bOqc1rL5rKIGbibFvo69xkibyVOOtxdsbgtFfzUD2rjo6facHe22A/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/f4ee4ebdc1ecd761d1c985fbb819527eb83660f847df3a397d6dd81ab5de3bd5.jpg "")  
   
 未混淆的 Windows 注册表文件  
   
@@ -147,7 +147,7 @@ Windows 错误可能令人烦恼，但至关重要的是只从可信赖的网站
   
 获取免费咨询和安全服务  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/JqliagemfTA5OxIlGh6IbpxrTJHkcY5DZ4O80nevX4Ev7IHvjZfPZDDMxibSVWk4IdYfaYpuhBgz2iaWS5tzXZLJw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/396c6c1e582fe7106413e1361e0478cb82d63662d432871e1fa160f844c53a79.webp "")  
   
   
   

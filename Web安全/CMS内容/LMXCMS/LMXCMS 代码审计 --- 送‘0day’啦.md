@@ -49,13 +49,13 @@ schema_version: "1"
 
 下载地址：大家自己找，ahhhhhhhh
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sSdunmd6D9iaJX5lpXibH4FQZdgGLFTr1AnIlJStAHsZNc03f62uSvD6A/640?wx_fmt=png)
+![](../../.resource/remote/258994eec5bbd7e5de21c45612e535c4f672c8440c442834747731d155f7b4bc.png)
 
 **审计版本：**
 
 注意看图 V1.2
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417s9xE21CITLekaNKk9UlHBp49fPF73yW48RltcykbUibsBAAf6XA1ntlg/640?wx_fmt=png)
+![](../../.resource/remote/f7de29d4524d32d541c698ae6c73be39a39b057ee1e093d663039a572cd2c700.png)
 
 **安装步骤：**
 
@@ -64,7 +64,7 @@ schema_version: "1"
 *   按照提示下一步下一步即 ok
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sX84jYhFQuC5kE3MejAqOFFQfibHXEuYeyolmib7jeH2eVSoXsEC3S30g/640?wx_fmt=png)
+![](../../.resource/remote/baec8ae665eee3819725c2bb2db97d55b2ba4276d96afd963be6643623403084.png)
 
 _**插曲**_
 
@@ -72,7 +72,7 @@ _**插曲**_
 
 设置 -> 配置文件 ->vhosts.conf
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417s9xE21CITLekaNKk9UlHBp49fPF73yW48RltcykbUibsBAAf6XA1ntlg/640?wx_fmt=png)
+![](../../.resource/remote/f7de29d4524d32d541c698ae6c73be39a39b057ee1e093d663039a572cd2c700.png)
 
 选择 xdebug 的站点的配置文件添加
 
@@ -82,7 +82,7 @@ FcgidIOTimeout 600
 
 这里的配置应该是设置的超时时间是 600s, 单位为 S(秒)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sQ8A5VhFp3ANTpwJ9AnGVb0fQvLm0CyYDQMYfJtt5UBWHj2hA4pSPTA/640?wx_fmt=png)
+![](../../.resource/remote/44c836b2ebaf44dabc8a853e60394a9006da5958d56ae2cb6d46fd54ae1faa3e.png)
 
 重启服务器即 ok。  
 
@@ -92,7 +92,7 @@ FcgidIOTimeout 600
 
 源码结构如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417ssaHbNFwWogjIA2doRsavXbPTslA8hgmht6Ics6S1jTp2Hbr3TJGNag/640?wx_fmt=png)
+![](../../.resource/remote/a2ea6ce46298649d131dccdb73fbffce1781872b36174c2386440238dca22945.png)
 
 如果说想要直接了当的去分析，去找漏洞，怎么找？命令执行漏洞？
 
@@ -102,7 +102,7 @@ FcgidIOTimeout 600
 
 怎么设置 debug 呢？差不多过程就是下面的了，反正是我一直是这么审的，除此之外，我发现一个问题，很多小伙伴都比较喜欢代码审计工具，工具只是起到辅助效果，个人觉得审计的魅力不就是在 debug 么。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417stACAlcJOicUUriaDScWJJfhG6dA9vY2J4ahenibMMZ87oXwz7PsC5WuzA/640?wx_fmt=png)
+![](../../.resource/remote/0f75baa0c483f03a093d3c54e115f3988bf11602d497e2ffa15c46a67120a24e.png)
 
 **php 环境配置**
 
@@ -112,7 +112,7 @@ FcgidIOTimeout 600
 File->Settings-> Languages&Frameworks->PHP
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sAViapN2JBGUH8nSXwvscblSk5mUdjGzAfggIO6iaaJTe9ZpTVLibBUUzA/640?wx_fmt=png)
+![](../../.resource/remote/5027140212153714249c1ab4a7ead0eb75c6aa811ed60823503f2d9dacf41536.png)
 
 **安装 xdebug 扩展**
 
@@ -122,7 +122,7 @@ php-5.6-xdebug
 
 放在对应的 php 文件夹执行程序的 ext 文件夹内
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sUOryK51z8211s6En13dlnDK2RvFdic9mTXZlPlPYrw3uZK8k8px0ribg/640?wx_fmt=png)
+![](../../.resource/remote/9a42446df73fe4ba2fb638ea08399a802654b1bfcc2f7b9d7cada58ede4ea5b7.png)
 
 接着修改 php.ini 配置文件，添加 xdebug 配置内容
 
@@ -164,27 +164,27 @@ xdebug.idekey = PHPSTORM　　;指定传递给DBGp调试器处理程序的IDE Ke
 
 在这里尽量根据访问该 xdebug 网址去识别对应的 xdebug，否则无法启动 debug，或者选用路径为对应 php 版本下的 xdebug
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sWuSicGuswibUH8NnBiaBrhbib1Ao7tgfrVsYsYSrKqqyNSbOzK02D2rgsQ/640?wx_fmt=png)
+![](../../.resource/remote/2a53f36d7c470caff2ea461caf92afdfd7e632a468f2b2e0fcf62c08b4d68ca9.png)
 
 验证 xdebug 安装成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417smOwibS8H2XJbKHOJyibiaicXByjDnM9L6Ds0BBRVJHeR9uVmuvWxFibbV3w/640?wx_fmt=png)
+![](../../.resource/remote/26296dc8d0106c4e246a0e34a19d28b667a5d2ef81154fee5f4ba3ab18d83b14.png)
 
 phpstrom 配置 debug 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417smNCWQZ2LSJ9RoqFbWWfovIUZYicbJkpEkE210jprKPkJyL8Gddsib9ZA/640?wx_fmt=png)
+![](../../.resource/remote/395939fa027ff3d727958c69902a871cbec07f0d32fe37268fb290e090ca2d97.png)
 
 配置 server
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sVx6VHPpnr3H1nVQRnaRfBjIm9y4bG1Ahm7f2Fqm1qxN9xokJLU0F1A/640?wx_fmt=png)
+![](../../.resource/remote/0cb548e1c7105816bc1bbd7b56b4e9f9c5caff91984ff84e878d3d0131f7baa1.png)
 
 运行时选择配置的 servers
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417shwNiaQ4J8licGwAecHzchDfL5LloeZdooKMWqiaxzvYVKx2HWOAVKWGTA/640?wx_fmt=png)
+![](../../.resource/remote/384009bc62875603a718732f7be08fedea3c4fafa52b9c432e28741b08ae3a17.png)
 
 浏览器安装插件方便使用进行 debug 测试
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sRqP7YUicktJLf5rhkRicibkAerC2vwTLd5ibsNBdCPu5qdksdFrTWypq9Q/640?wx_fmt=png)
+![](../../.resource/remote/4d03a0ee01842571c865882b65f57bc7fdf83ec9d4b842afb34bf025c3a4fcbb.png)
 
 **审源码继续**
 
@@ -198,13 +198,13 @@ c->class->db.class.php
 
 至于为什么看这里，看截图应该不用解释，sql 注入常见的问题点。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sSz7O5vdfzuN8tY4ibtwInsYlBZ8RG6aTVO3aaB4I7sCRjmwMmRVVmcg/640?wx_fmt=png)
+![](../../.resource/remote/2ae5e2f6eb176dd3f2ddae81101f65e71883dc96e899101c962680da9f6e915e.png)
 
 基本上关于数据库的类文件也都在这个位置，那么不考虑 sql 语句在查询过程中的路由，直接看这里的 sql 语句的话那么问题已经来了，如果能直接实现闭合的话是就可以实现注入了，增删改查的所有语句也都在这里。
 
 那么直接寻找查询的位置进行测试，纵观后台功能，查询点开始测试，追踪路由，后台功能页。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sQkn05rx05akqf7EH4LeUAbuFGiaKFdkMNgVhS9C0cwl0V3MxvN8icaicQ/640?wx_fmt=png)
+![](../../.resource/remote/f0a97df2ee4e1d3414f42c42124c7e3bc92bd05fcaee636d584e1a1f6f936ef2.png)
 
 ```
 c/admin/BookAction.class.php
@@ -212,11 +212,11 @@ c/admin/BookAction.class.php
 
 因为直接调试函数跟进调用的就是上面的函数语句了，下断点调试。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sB6VN1NiapsLfhG5g2hYcbWiaaabDIuBuzH2ZDMPXwj8IgHoTZFiaZI3Xw/640?wx_fmt=png)
+![](../../.resource/remote/9036ded0de9894ef95a02ba862d3d197579dcb5f9001fcdd0f34fba9f14d4da7.png)
 
 猜测没有问题，并且测试的时候发现，有报错。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417s74szTxicaRLRWwTADRAJmcYkiccDib4dcEkaeMr6sLYcf9mV8P7KWXrBw/640?wx_fmt=png)
+![](../../.resource/remote/9aef0992f2d1578a8cbe9e55da40bf38af407d46151a8611fc92214371896d18.png)
 
 那么构造构造报错语句 payload 即可。
 
@@ -232,37 +232,37 @@ id=11 and (extractvalue(1, concat(0x5c,user()))) #
 
 okk, 注入存在
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sRncLjhrSmlpiaM0SHNjNliaEfUySTG6IGeKLZAeFjDdepFOlT7IGVicjA/640?wx_fmt=png)
+![](../../.resource/remote/90d072db5e45d5a0f01523a4626c54715a294824d8a3069400674825948f1840.png)
 
 接下来，大家自己发挥，送 0day 的时候到了，ahhhh。
 
 简单翻一翻功能，其实最直接了当的就是上传点了，就比较离谱。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sa7enRrBLyIy1Kibj3IuyHPwfylXg3SCVCpFvfs17H89AzdFfpFu2JUA/640?wx_fmt=png)
+![](../../.resource/remote/d31df7534049b5afc2518e7d059a99739bbad6c347364a2b0becfe4a1532d94a.png)
 
 webshell 不必多说了，就比较奇怪的就是这个上传的点的按钮点击没啥反应，可能版本的问题吧，自个花卉
 
 源码的上传以及文件类型的检测是这样的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417s3YjUFSWAL7Y09cn0uUoGfz9WicYyv1udBHs5tSRtzNl1L5XOmNpeGxA/640?wx_fmt=png)
+![](../../.resource/remote/8248851027d04ad0c32ca247eb4da8129ff35874bdde3fcf43eeede11375678c.png)
 
 在 upload.class.php 中对上传单个文件多个文件进行了控制，上传成功命名做了设定。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sfxtJoHHjuaswf3FmXO9WX7WrCNicoNFtt2ib98iaNYhAzFqwlePicMnpPQ/640?wx_fmt=png)
+![](../../.resource/remote/82299eadfc90123c0885c909eed56a96eff0b3cb874390d006e1fd7be2b55b9b.png)
 
 在 check 方法中也只是对文件类型做了简单的校验，所以文件上传这块儿也是比较好利用拿 shell 的。
 
 后端多个地方明显存在 XSS 漏洞，简单测试一下，顺便追踪一下路由。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417snTBz6yxibgrlBj5DKqvQQRxsTS6KLuiahXwQWKJl37CiaxEvNpIAFfTUg/640?wx_fmt=png)
+![](../../.resource/remote/bbc398e38e5c925f7ec49d169255329cab9b938b5e45997e5d7cd5663839ae5e.png)
 
 效果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sybQRCP75ciaSsb3bm6CANEVUzzJGpPzoAENHuAUBgKpOQ4ZCY3M8rYA/640?wx_fmt=png)
+![](../../.resource/remote/20ca5461a65f3fbacc454356673f6e4334d4f3d317a4ae94bc954f0c858920ca.png)
 
 存储型 XSS 一枚，追踪分析如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417s2QktcfCbylVMiaSROsUSFFXQib4Ep9Fx9effgWd2yVMbjLanXdmeuqRg/640?wx_fmt=png)
+![](../../.resource/remote/bcbcfae2cef83f5225b2bbaeef2ba368e989cee4fafeca9edb1f3725e6c3f6d3.png)
 
 确定漏洞位置，定位控制层
 
@@ -272,7 +272,7 @@ C->admin->AdAction
 
 修改广告时，传入的参数为 13 个。POST 传入的数据，在修改的时候调了 function update 方法， 同时调用了 check 方法对传入的数据进行过滤检测。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaScGzM8hJRDDwtdelmd417ssa6cbTqLKmjLoyZqJU1iaYia74hJzEyUzxFvbkw4v6tPs3DQUWx4V1kg/640?wx_fmt=png)
+![](../../.resource/remote/67b39ded73564efe16dd7fb1a401aee8315f23aa0386c4484730d919ed31aa2c.png)
 
 验证文字数据的时候正则太过简单，对于 remarks 值来说，也就是备注没有对数据做任何的处理，所以也就造成了 XSS 漏洞的形成，类似的位置很多，可做扩展。
 
@@ -290,35 +290,35 @@ C->admin->AdAction
 
 识别二维码回复【**交流群**】进群
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/27gyKJMBMtuVONoDeF9Ub9RJwcJZy2GqDInd6oJscwa4tGkibUqKibXefUnRPVkK7hc62XoYUCYZPtdSQEhR66eA/640?wx_fmt=gif)
+![](../../.resource/remote/6b335d30371f118581d2e9b3874325a5d3dd36b87792c2a10d65c1a3402f9625.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/0Z0LqMyVGaSbIbiaOU7llGXHgQPdKE9pFatLqbadicicDlEqzHphY8OzzVibyzkE1phBhNp9W39ib68m70Ke4msJx4g/640?wx_fmt=jpeg)
+![](../../.resource/remote/b8bdb67a0603b5716cd0b3d55dc8d0214fbd90dc211a6021275141e6d4e1a932.jpg)
 
 **【火线 zone 社区周激励】**
 
 2022.1.10 ～ 2022.1.16 公告
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaSbIbiaOU7llGXHgQPdKE9pFISfhCxw8TO0mOEPIsJyTNEC7w14DaukLiaVa8dmmNtLgrtry19kWq5Q/640?wx_fmt=png)
+![](../../.resource/remote/d6dfad0a49dc2311d49d15c6a13002b56ece338d2a433a16ec7131e4340a0956.png)
 
 **【相关精选文章】**
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/0Z0LqMyVGaScGzM8hJRDDwtdelmd417sciauHmwVvJPlHo22L2OOXicD8wpyNM7qx5nRhQBJVcK4D1icYOEsomRRw/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247491223&idx=1&sn=bd7cc7f0bb2ab2c9ee78c8e9f0e55e35&chksm=eaaa96b7dddd1fa1efa2b5b962b32dfa86af1f5436d2896c26ff44057b0c7da0b47caa2b83fe&scene=21#wechat_redirect)
+[![](../../.resource/remote/d5838c90515d5cebf876c25a685192c9f31ce1156dd54c6bdac5437a5a875799.jpg)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247491223&idx=1&sn=bd7cc7f0bb2ab2c9ee78c8e9f0e55e35&chksm=eaaa96b7dddd1fa1efa2b5b962b32dfa86af1f5436d2896c26ff44057b0c7da0b47caa2b83fe&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/0Z0LqMyVGaR4AyaYaj5cLicykkxNgArPbPeAyoWhIk8icaaDm9biblwf25iapCXvnVh6Ee4j0ZRKHKJqrUu4JQCDKQ/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247491090&idx=1&sn=aafb889ea73225d6bf44f24292e8fb25&chksm=eaaa9632dddd1f248d7e7dba2ce06c78e28d966a78c686496b80d4f034903174d706954b00de&scene=21#wechat_redirect)
+[![](../../.resource/remote/3e91429ed9d2b8c138dd155e847ab260aa4c766b7a96ad727e7d8ffa02ca2ded.jpg)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247491090&idx=1&sn=aafb889ea73225d6bf44f24292e8fb25&chksm=eaaa9632dddd1f248d7e7dba2ce06c78e28d966a78c686496b80d4f034903174d706954b00de&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaSbIbiaOU7llGXHgQPdKE9pFibLkiaE2rHiaTwqdtKtiap8vYl2SD5hRpyOxGnCibHKvz77QOFYXWiaCxibqA/640?wx_fmt=png)
+![](../../.resource/remote/bfcac79ca4742df63cb5d5c588012d1fbc0753a387fcca236aa91c810c65a264.png)
 
 火线 Zone 是 [火线安全平台] 运营的封闭式实战安全攻防社区，研究讨论实战攻防技术，平台向顶尖的白帽子提供安全测试的云端基础设施，目前火线的高级白帽子数量已经近万人，欢迎具备分享和探索精神的白帽子加入火线 Zone 社区，共建一个有技术氛围的优质社区！
 
 如需转载火线 Zone 公众号内的文章请联系火线小助手：hxanquan（微信）
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/0Z0LqMyVGaSbIbiaOU7llGXHgQPdKE9pF42ibIPFic3eBEKaspqXnAmkwicbVzJF4YEq4DUjUaspFdfBLxyaDs0U3w/640?wx_fmt=jpeg)
+![](../../.resource/remote/9a404012d0a9c6f0c928880896c296674d827493530f90895029cc1faedfdd63.jpg)
 
  **微信号** 
 
 huoxian_zone
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/YxSSnpu6MW0CIoKC0f9U1ALN0bHmzzVfdqHmAlujAniaYos5t6H3zUomx1QoILFNCMdeV5eknVH2AfsYvjfV6iag/640?wx_fmt=gif)
+![](../../.resource/remote/5beccf12fc2400c4701e8c943a54863646ed4b844ba3a7b8f4340679363e180a.gif)
 
 点击阅读原文，加入社区，共建一个有技术氛围的优质社区！
 

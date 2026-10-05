@@ -54,7 +54,7 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/CRdxeWMr8g3kid_JTBV0zQ)
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/clzRUb1MQV79iagNr9ib0kEETyFLJeZNL9D25e5V88oElPIliaypfvgqtVztpJoDcNLpRmyDlpicmn8UOO37WiaEMSA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/c89f9b630b8eed9a7d1831dc884a1928ced80f9be92ea44fdca8244acd5a0963.gif)
 
   
 
@@ -92,7 +92,7 @@ source_status: "recorded"
 
 工程工作站的核心是一个完全工作的集成开发环境(IDE)和PLC程序的编译器。在PLC上执行逻辑的过程包括四个主要步骤：开发、编译、传输、和执行。
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/clzRUb1MQV5PZaT7gtuDqaYv1DZOhzHCfciaRGaeEgWP6YnqhL6Ek69ry5NqHn8341ruRMmibrDDDq7Vxia2PSQXQ/640?wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/7a1eabe6b2dfbcf122661035f7fac308e4ff0b5b1fd9411346d433689811ac44.png)
 
 图1 在PLC上执行逻辑的四步骤
 
@@ -104,7 +104,7 @@ source_status: "recorded"
 
 **执行**：一旦字节码成功传送到PLC，逻辑将被执行。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/AXGiacwo977WbFfxknh5bu1KrrtfG1BxqD1EeG1mUBFgf4qG9dDxdLXjyrBaE8lqaBeQOuFtK9Tsh3BmywJuOwQ/640?wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/d53393f971779efec07ef056cb131e6bfa40439a641fa257d0db0853b315db56.png)
 
   
 
@@ -112,7 +112,7 @@ source_status: "recorded"
 
 第一个漏洞CVE-2022-1161是CVSS得分为满分10.0的严重漏洞，被发现在ControlLogix、CompactLogix和GuardLogix控制系统上运行的受影响PLC固件中。该漏洞允许攻击者将用户可读的程序代码写入与执行的编译代码不同的内存位置，从而允许攻击者进行修改。为此，攻击者可以使用Team82先前披露的Logix控制器中的硬编码密钥漏洞与罗克韦尔自动化PLC通信，并修改用户程序，而无需使用Studio 5000 Logix Designer软件。  
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/clzRUb1MQV5PZaT7gtuDqaYv1DZOhzHCysTVDdhth75EfZHsVRITX7icTtHqY4qDWWpWiaVA8A6Y1tZakE4NVd1w/640?wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/13d3f512d02a351507dc7a6b99bbe42ed742650e91c0ceb37e09a181933578e4.png)
 
 图2 攻击者可能会在PLC中隐藏代码，这些代码将在不被检测的情况下运行
 
@@ -122,7 +122,7 @@ source_status: "recorded"
 
 第二个漏洞CVE-2022-1159在Studio 5000 Logix Designer应用程序中发现，该应用程序在工作站上编译用户程序。此编译过程为Logix Designer应用程序用户程序下载到Logix控制器做好准备。要成功利用此漏洞，攻击者必须首先获得对运行Studio 5000 Logix Designer的工作站的管理员访问权限。然后攻击者可以拦截编译过程，并将代码注入用户程序。用户可能不知道已经发生了这种修改。  
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/clzRUb1MQV5PZaT7gtuDqaYv1DZOhzHCwTt1iaPFuSs1rRE3l6tornVicAiakYLHmVuP69N4eVzqCU5w0Y0uzoQ9w/640?wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/67e2d3a841a3d9f24d5b7b3620f7ed9d542a59f0f01cce3d3ad46155dff536ce.png)
 
 图3 被劫持并修改后的二进制代码，以及工程师认为在PLC上执行的原始代码对比
 
@@ -136,7 +136,7 @@ source_status: "recorded"
 
 例如在PoC中，研究人员修改了二进制代码，悄悄地将某些自动化流程变量（也称为标签）修改为不同的值。在现实生活中，这些更改的值可能会对自动化过程造成极大的损害，例如控制引擎速度的标签。
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/clzRUb1MQV5PZaT7gtuDqaYv1DZOhzHCYGeV7nfjI85vZ5SK11C8TysTanqRw7q1ze2thIk4icPc0lMROxnACdQ/640?wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/2c180d8d2b682d74cef60ad3025dff676bde334bb7b1d3465a9860e637e8c9f0.png)
 
 图4 PoC表明，虽然工程工作站显示良性代码，但在PLC上运行的实际代码是不同的，并且会悄悄地改变一些标签的值
 
@@ -212,7 +212,7 @@ Studio 5000 Logix Designer在工作站上编译用户程序。此编译过程为
 
 Team82与罗克韦尔自动化工程师密切合作，以了解这些攻击的根本原因。对此，罗克韦尔工程师提出了复杂的解决方案，通过分析和比较PLC上运行的文本代码和二进制代码来检测运行在其PLC上的隐藏代码。如果检测到不匹配，该工具将提醒两者之间的差异，表明隐藏代码正在PLC上运行。
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/clzRUb1MQV5PZaT7gtuDqaYv1DZOhzHC7Efl6j4fxguteRSaibw09KyE7ROEfBAMgf5yBA8yGFBYbhicI07jSaIg/640?wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/37a6f502914941bbe7ed183329ba1502e8afd2cf7b67a4e24718aedb79ae352c.png)
 
 图5 检测结果
 
@@ -259,7 +259,7 @@ Team82与罗克韦尔自动化工程师密切合作，以了解这些攻击的�
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/JaFvPvvA2J29bK0FrDXSwIjZJrXwLTxPzXS6rtEQBVcQdLARVrbW95m2SPBB6sTiads7dAO06Hb6DXhib60nQAdQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/33332d215d6da6600fdb27376f6110ddbd96670afc0e80d608126d6f048627d6.png)
 
 **END**
 
@@ -267,7 +267,7 @@ Team82与罗克韦尔自动化工程师密切合作，以了解这些攻击的�
 
   
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/clzRUb1MQV5PZaT7gtuDqaYv1DZOhzHCmfBVJ6T59btPEqRUbVLtiaOUZMKTj8hFnoaSjIB9xiaQGfGWw9mJLISw/640?wxfrom=5&wx_lazy=1&wx_co=1 "公众号底图-3.jpg")
+![图片](../../.resource/remote/7321551a385c73026698cccb71525813579077157864696e1644e1ed687154d1.jpg "公众号底图-3.jpg")
 
 
 

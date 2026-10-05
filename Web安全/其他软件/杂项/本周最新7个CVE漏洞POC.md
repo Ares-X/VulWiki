@@ -62,7 +62,7 @@ previous_referenced_identifiers: ""
 
 原创 Fighter001  重生者安全   2024-05-26 13:17  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7TX3vdfb7rcBt6ictlV3xxPdcVS8cXFG8Tq6TicR92PHnFDmnsu2icKf7A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fad51b4b4402fb0f031a4de30fed82e64c5d15a93b35d0ada303a3f0dd1c49a1.png "")  
   
 **0x00**  
   
@@ -92,7 +92,7 @@ CVE-2024-22120 POC EXP
 **0x07**CVE-2024-4323  POC EXP  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7KLRE6NxNK9w6J4bAMqaUCzzsp3t7IWxr1ibTcch3adgLOm6xWhFjaCQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/db47ba10f3f37f8821e272853bc405b9d703119cd17596f5d47a702078302e6e.jpg "")  
   
 [一个在 JavaScript 文件中查找端点的 python 脚本](http://mp.weixin.qq.com/s?__biz=Mzg4NTczMTMyMQ==&mid=2247486038&idx=1&sn=6c2ffb10cdd3c8fa9704515957991bfb&chksm=cfa530c0f8d2b9d6284c46a06e4dd3f0a3c41d92ce4f32a4d7a8780d8cd34190bdade86bd288&scene=21#wechat_redirect)  
 [【车联网】车载应用RCE漏洞扫描神器Mariana使用心得](http://mp.weixin.qq.com/s?__biz=Mzg4NTczMTMyMQ==&mid=2247486025&idx=1&sn=4a12225651757ea77daf3c9fa21fc16a&chksm=cfa530dff8d2b9c93ff633fabb5f8a6ad0e55e43eb977439d4befe849dd01cdff9fd17ab0dfb&scene=21#wechat_redirect)  
@@ -132,17 +132,17 @@ CVE-2024-22120 POC EXP
 [大佬使用的顶级SQL注入异或盲有效payload](http://mp.weixin.qq.com/s?__biz=Mzg4NTczMTMyMQ==&mid=2247485872&idx=1&sn=8dfae692fa05e3e6a003352661f9c17e&chksm=cfa53326f8d2ba3034f92fd939ae3d9172f2cf36f987c9d2da4bb8258fe35adef2278ab2de24&scene=21#wechat_redirect)  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7EoXVnjl2TLtoKZPLuuic5QJFhTIHKuClkF6tyovqF8A1aD1ibT2IUzVQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/253eb920d5b5d3f0215c7545d7ce546bebb7d8e6bb2caa9b47661dbd56c3368a.jpg "")  
   
                   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV71Iib6iao3ITicrXIicQBhom8mN6WXiacJDDf2GVsT02tg6dcgmN1UywFTwg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/9813447e5b6471f825a5387a8a398f0bfb23f0310da29425f60b5006858ed061.gif "")  
      
 **请扫码关注“重生者安全”**  
-   ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV71Iib6iao3ITicrXIicQBhom8mN6WXiacJDDf2GVsT02tg6dcgmN1UywFTwg/640?wx_fmt=gif&from=appmsg "")  
+   ![](../../.resource/remote/9813447e5b6471f825a5387a8a398f0bfb23f0310da29425f60b5006858ed061.gif "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7AKkJumlqDKTY37vPfLHIrianwiatvVxlQiaAUyAfOUfHZ1tvFU1n8tW6Q/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/41d79af32b8bbc585efb45197c847956c88327d6d0f6e43bae06f88a4f65129e.jpg "")  
   
 知识星球：【  
 漏洞挖掘，内网渗透OSCP，车联网，二进制  

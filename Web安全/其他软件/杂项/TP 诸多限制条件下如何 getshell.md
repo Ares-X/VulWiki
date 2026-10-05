@@ -82,22 +82,22 @@ schema_version: "1"
 *   对于包含文件增加了限制
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76oz1BTPY06CevPicYWQ4B8ceaEJQ1qmevllxDn6BbFs41m1oY4icB6cqQ/640?wx_fmt=png)
+![](../../.resource/remote/8c1b2eada6592d4b4fc64ad89889d2f85efa52f6a0c7dd99c91eea1c23255603.png)
 
 *   ban 掉所有的单参数危险函数
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76qHSFaKIMxoPDJHkm3rt9QH18ibbmJ91V8rKwdAxQ7KlcdN9sSaV847Q/640?wx_fmt=png)
+![](../../.resource/remote/6e07e2f680c0fd5f32b64d795f589172e68a6de02d92247eb036b1dcb24ac615.png)
 
 *   设置 open_basedir 为 web 目录
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76aicTKibwWISlWPlNiaRdVKcyL8c80uCs3lxlicK2Xq1xKcafKSaOPicjJNw/640?wx_fmt=png)
+![](../../.resource/remote/26f0aa44122edf3a172cc6a29c8ede75d4761842c5b3fcf18c8b24a650cf5bc7.png)
 
 *   设置仅在 public 目录下可写
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76hyvUGFcH0M3icwHOtmGMpEn7TicEnEsv5hD9GNYzLcfIaSsWiaKJhnnvg/640?wx_fmt=png)
+![](../../.resource/remote/2cce36043a7379a09b42ab83c2fce38462e820c7e98f7c2b43db729f35acecda.png)
 
 在 TP5.0.0 的中，目前公布的只是存在利用 Request 类其中变量被覆盖导致 RCE。如果 ban 掉单参数可利用函数那么只能用文件包含，但是文件包含做了限制不能包含 log 文件，所以只能从别的方面入手。
 
@@ -105,49 +105,49 @@ schema_version: "1"
 
 首先 TP5.0.0 目前只存在通过覆盖 Request 中的某些变量导致 RCE，其余细节不再赘述，我们看看大概代码执行点在哪里。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76GllddgaRDLxK8qF1EXPcQhWNTj0PwbvdVL0SXcWSCftaMaSeqOjm4A/640?wx_fmt=jpeg)
+![](../../.resource/remote/78d6c6c61a88bb63af224360e730ed69bd65574a1b2c9172ecdcbef5c576cf5b.jpg)
 
 call_user_func 是代码执行点，我们基本上所有 PHP 自带的可利用函数基本被 ban 掉，所以我们需要从自写的函数调用来入手，首先我们需要看下这个点。可回调函数不仅仅指的是简单函数，还可以是一些对象的方法，包括静态方法。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76yicLxyP6JJN4flhvRbqDMQv0NSrD1vP6hNTeNM9KqDbaXUWEgleWuHg/640?wx_fmt=png)
+![](../../.resource/remote/a0ee355df54db5884d500b3ee6be69ba25a836abe131a95551fea87ef5fc8226.png)
 
 **方法一 thinkphp\library\think\Build::module**
 
 我们可以这样通过调用这个类的静态方法 module，来实现写文件的操作。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76YXz5ISlwibnuxhic9XmFwpdQicr6CrU43Z2ogH9FrY7YeKgST8FGOR20g/640?wx_fmt=png)
+![](../../.resource/remote/2054d93e6862bd13db7bb1daf89ea6be25bc329ed40e4af7a48e26d3d6497b89.png)
 
 我们先看看这个该怎么走，我们看到这个 mkdir 是在 application 创建目录，但是由于权限问题肯定无法创建。根据 TP 报错即退出的机制从而中断执行。那么我们可以通过`../public/test`来创建目录。
 
 我们会进入到 buildhello 函数中。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76Rb8aW5FExCF1Lk4HbpJAzicF6jgZ0iaXAKYj9AD43euOILLzXiaflVzcw/640?wx_fmt=jpeg)
+![](../../.resource/remote/e507537c03a2591b6bd29507fa2742355380f1a0916c487855fdd5b3b5f5bec2.jpg)
 
 走完流程发现我们可以在 public 创建了一个 test 模块，同样看到`test/controller/Index.php`中我们所写的`../public/test`保存了下来那么我们就绕过，但是执行完之后会发现一些语法错误导致代码不能执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76snVHzILiaPGZvBRoaQ7fliblicoCSW4UrmqWUfEfKgpTF10ohlxFgL32A/640?wx_fmt=jpeg)
+![](../../.resource/remote/59ac5c0435830fa94a514ce96aff7d543b0a2cfb14450a579f3b7ada88204cec.jpg)
 
 由于这部分内容可控那我们就把他变得符合语法执行，我们可以这么做`test;eval($_POST[a]);#/../../public/test;`，这样就符合语法。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76BVRU8s6zUQicybDsJfUqdCxrgJu57aNq2qysFm2KUHbEYErGZXLC1icg/640?wx_fmt=png)
+![](../../.resource/remote/6794118909be1521e09089c006d6afe3c024d2c8e1b1a578832460bf1598df3b.png)
 
 但是还有一个问题需要解决，就是我们这样的 payload 会设置一个不存在目录从而可以符合语法并且加入 eval 函数。但是现在还存在一个跨越不存在目录的问题。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76ricsHkRiaB2azTRAp0SNmhfnmXQpMvT7iaPoyicdaHLicvJj0PpCAsIR10Q/640?wx_fmt=png)
+![](../../.resource/remote/9c746bfee99b8a9ce45ad22ac1d99af8d4615d69f64d8c1893f10ab1cf056775.png)
 
 *   linux 环境
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76c70BibM4XFBmpq7pawB9Xyia53uLW9werfc1icDZ7Lf4FLy1ia6usAdBdA/640?wx_fmt=png)
+![](../../.resource/remote/a94bf14353816bdca34d7d63572c1ca9b25ce7c67d7845a822244e6c81d67511.png)
 
 *   win 环境
     
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76Gib0x0ibHoHpyPBDW9TBAArk2mdic7do8prL0T6u0pnwK1dIYqqVqFvJw/640?wx_fmt=jpeg)
+![](../../.resource/remote/1b83d4967c4274de405c1b56bed269194f44164e6feed3ddada5add8d5d8dfdc.jpg)
 
 在 Linux 中不能创建不存在的目录，但是在 win 下就可以。但是报错是 warning，并不会中断执行，并且在 bindhello 函数中我们会看到：  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76Ce6V20mvibW8L7GaMQSmeJib3UAgaYIxPaoqf4gaNXa4PGibcoP8Apybg/640?wx_fmt=jpeg)
+![](../../.resource/remote/d32c556fa646440e959291e0bee8c05c8c8008d1a5e89a67c15fea314e85049a.jpg)
 
 其中 mkdir 函数存在 recursive 参数为 true，允许递归创建多级嵌套的目录。这样就可以使 mkdir 中使用不存在的目录就可以进行绕过。但是现在有个问题：前面的 mkdir 中的 warning 报错被 TP 捕获到直接会退出无法执行后面的内容，那么我们就需要使用一些办法进行抑制报错。我们经常做题会用到一个函数`error_reporting`，我们可以使用`error_reporting(0)`抑制报错。
 
@@ -161,15 +161,15 @@ call_user_func 是代码执行点，我们基本上所有 PHP 自带的可利用
 
 payload 如下可示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76lc0onjD3lSCJ7q868YwFtLpwbMBlCZP3EYMQxf8SAicLsREwKt8xCicg/640?wx_fmt=png)
+![](../../.resource/remote/f1e1054e4c5995744cace669091892ef5f04912e27796bf1e537625eb687c689.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian762SqbKccRrCXqyhBH4miaX6TaEaJUyeSnKwvYbS8gE9Z1HaHgR0bA5ZA/640?wx_fmt=png)
+![](../../.resource/remote/6b48ce2870473813a37f05ced840f4250d9fb5e6ffd8562de6c1a5476897820e.png)
 
 **方法二 使用注释符绕过语法产生的错误**
 
 payload 如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76ovGKkyQ4vjibvkLbdkXyLN1AS9uUj48sRCUiaGprC0aeQYNibNbQgZUyA/640?wx_fmt=jpeg)
+![](../../.resource/remote/890d662facd9d29e40d4b45cfbfcf1e6545bcf303ba17fe191e97cdc26e53f06.jpg)
 
 这样就会使用注释符注释掉后面的语法错误，然后使用`?>`包裹住，后面跟上自己用的 payload 即可。但是这样会产生一个问题，无法在 win 环境下使用，win 下文件夹中不能带这些字符`/ \ : * ? " < > |`
 
@@ -177,9 +177,9 @@ payload 如下：
 
 这种操作就是，我们通过之前的`think\Build::module`写文件进去，写入的内容是我们 rot13 编码过的。然后通过`think\__include_file`调用我们写入文件的内容，因为这个过滤不够完全，可以让我们包含我们所写的内容。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76kYYz8ibK1pzEtXic4GbOCuiaTtJROgpRq0BvLtLFMTAJrmiaOBvsvjWa5g/640?wx_fmt=jpeg)
+![](../../.resource/remote/87b9504309cdef3faa75d0d428685ba86c23b63613ec499becd90dc5f583a5df.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian768etE6NDibc6aRwicuC6nSjoo6ib9a4OXbgJamCWl2huGGnd1HJ8xLviaJQ/640?wx_fmt=png)
+![](../../.resource/remote/3584f0abbd1f15c6fb99065d02587aa2ad8e8bbb8149d84457dec440ddf8bbca.png)
 
 **方法四 覆盖日志路径写入**
 
@@ -187,7 +187,7 @@ payload 如下：
 
 payload 具体如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76VFQFqMtpv7ib5HN2krZhib0YpeUGmy3Kd8RaI9SnYr7N2ZgXZp5VOIcw/640?wx_fmt=png)
+![](../../.resource/remote/1b0d5d0a437fe042083eeb17a037a758eeff4afbe656be5bec8117ea94770016.png)
 
 1. 通过`json_decode`使得我们传入的`{"type":"File", "path":"/var/www/html/null/public/logs"}`转换成内置类 stdClass 的一个对象。
 
@@ -195,23 +195,23 @@ payload 具体如下：
 
 3. 在其中会 new 了一个`\think\log\driver\File`，并且传入的参数是我们的`'path'=>/var/www/html/null/public/logs`，那么会触发类中的__construct，将其默认的 path 给覆盖掉。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian7621G2wRXqicE7wcfVlt4clNOfmkBcU97f4VUCwlZItmDc99R0mte5zRQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/3f918a9f2a76caf6987e3ee6cd6a5c40e9a31e4636d71761555db72667a000d3.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76BZMgN0zia4CXiaoScHDhrNFZkzQdCgLicFh1XoUGnHJVoibbFpXRv5F9xQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/757fc587d76b6266675fd8cdb9f1efe52e7ff9afb9fbb80b0c229daa24690744.jpg)
 
 4. 最后因为我们触发漏洞点的特殊性，肯定会报错使得报错信息可以被计入到 log 文件里。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76gvhwInUasMMElJ6EKSkwH7wyicyDNPKfDJEpNHr3Nm7DuuzibTgV23Iw/640?wx_fmt=png)
+![](../../.resource/remote/a801649a9b04461d47fecf10947cc153d2129fb972d9eefaa6a03f98270bead7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76uZoa8yy1oolZeuBYVr8Boia53dvYehSLBd4qEaJKq1O6IRZGiabUiaadQ/640?wx_fmt=png)
+![](../../.resource/remote/c102f89e95b8ea24bac9765380bc354a84f8d401d79761ca00f26692b7926695.png)
 
 5. 之后再通过`think\Lang::load`包含。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76S4YquZ4osEqoZEicJHlVlY6re2z8pFs2zEe2McdXvXWwTV6U1uyBaibQ/640?wx_fmt=png)
+![](../../.resource/remote/e279a5098afec1fc94f7a9910af268523f2a5f8678a01b6f7728ae006cf19d75.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76kElKv77mABjgQ5pOqVBq9YbtiaHRSxic8dLGOudMFkW57dHCzHfIBXgQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c877c813e88458cfef5d6f8e68a756f7a1405d0588b2749bd7b600ea8b846cf6.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76CmzzSRhtgAtfzsukRVrYicDiaahS5ohlsCttPQtnLRcDHNDMI1CUcKSA/640?wx_fmt=jpeg)
+![](../../.resource/remote/263753615a59dfffc5183ee6a9530cc691c0c2050030535eaa9d71672f4ce453.jpg)
 
 **方法五  :: 竟然可以调用非静态方法**
 
@@ -246,31 +246,31 @@ echo "</br>";
 
 我们看看会怎么执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76xYnANFJkmWXSXTcULPboFX1epfeGia3A1nD88d0G7ZRlqbGVj4Phqkw/640?wx_fmt=jpeg)
+![](../../.resource/remote/3705a2dc025ae68827f6ec157353b0217fe523ba6fca9c368200db1ceb493327.jpg)
 
 会发现使用:: 调用了 public 类的方法并且能够成功执行，但是会报错。并且:: 仅仅适合在方法中没有写`$this`的情况，因为`$this`指代的是这个对象，找不到对象自然会报错。那么我们看一下下面的 payload 就会一眼明白，payload 其实用了跟上面预期解抑制错误的另一种方法，然后抑制报错让 TP 不会遇错停止执行。
 
 这个题解的 payload 如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76PwbicHnWg7acJISV4xb5CQfXCHkCcQOAz0RvibBHXGCTXlzCoIc4vayg/640?wx_fmt=jpeg)
+![](../../.resource/remote/dda6ad4cee075575592708ae94e0c1011fc12fc016da1778d14e44be335cc9ac.jpg)
 
 1. 因为 PHP 本身的错误处理被 thinkphp 所替代进行处理，所以上面就是将 thinkphp 所替代错误进行处理的方法给覆盖掉导致没有办法正常执行。
 
 2. 调用`self::path`方法，可以抛弃掉我们上一个执行的返回值，并且返回我们所输入的`path`。为什么会返回 path，path 为什么是我们输入的值，这个就是之前提到的代码执行点他是覆盖了 Request 类的参数，所以方法返回的是`$this->path`，这个我们可以控制。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76I1nPW7gHMLMN03zZjgscwP0CcicNZf4Wt7ia0SnAiaN4eUpfFUM8icISpQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/932c844f062c882f9272ba7ed19ab9802a4bc366dbc2287d5fbcf5ae9e781932.jpg)
 
 3. 之后调用 base64_decode，返回值就是我们 base64 解码的内容。
 
 4. 解码后的返回值就会进入`\think\view\driver\Php::Display`中，然后进入 eval 执行代码。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76tW9PjFkvxG2lQYmGhicxiaibP1gekOvR1rD5WglgXTHndhj7Y9yFGtx6Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/5437f3f1a1796599da244b68b414a23e71675309288c067eed4fd80532db6d9c.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76xTvOWVNONDruCmnySDictIibkbLXJIeOXDoGtnFXO5iaUxjuIpDYzGsIQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/a8e2cccc79a86a6b1a5e6d386c8a1f35b7e6b08524d9bf6800a4b8edff916fdc.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s564Abiad4b2nUggeFBz8QyCibrB2hkibsg5ZLYOlXSrUKT2VLkgse7b8AZQWNnw4Rycf242E1UVABDmQ/640?wx_fmt=png)
+![](../../.resource/remote/e21415430c3451f1bbf196969cc7a0d8bac704eb69fb391cca738e01544978ab.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s564Abiad4b2nUggeFBz8QyCibiaRBNn0A5YI88OyFjU8fn2Isf9bat4vQn18NwG6cXxVOSuKiapNm2nibQ/640?wx_fmt=png)
+![](../../.resource/remote/2059465b7bd80a6250b182c6ef4fc0e145e0d8d74a1683e56d48f6f2e33a8c75.png)
 
 ---
 

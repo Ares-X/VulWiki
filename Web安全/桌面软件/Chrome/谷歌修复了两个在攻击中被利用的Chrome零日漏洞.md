@@ -64,7 +64,7 @@ schema_version: "1"
   
 **漏洞攻击**  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/zNsFJyIuL0FZ4JhcVfv826mc5OzkCoh5M9JGoMiau3jIvESesIa0ACKeAnzxHtTAlOUpG3P5RjGJejwMLCciaGCiajmyk4cupw5eCZhXrw82Ao/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/f074c8dce012990c3b5ef3339f16d861f4959f637a8e9ea575d48de16e4ea8f4.jpg "")  
   
   
 谷歌发布了紧急安全更新，以修复Chrome浏览器中两个在零日攻击中被利用的高危漏洞。  
@@ -94,7 +94,7 @@ Google 发现了这两个安全漏洞，并在用户报告后的两天内对其�
 **END**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/zNsFJyIuL0FyMhz3P4Em0hibfUWQJEYxa2ibwibvaM93L9bzsgVnUicibWx6f6TG7S0Myd6SjRibI7F1t50DUzbpQay0t05YwzmZ3ZFXiavTVyzFzw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1f17faf71551225e041e505881a367a59f7a24d3aa6362c013322aaeb7efe4d9.jpg "")  
   
   
 公众号内容都来自国外平台-所有文章可通过点击阅读原文到达原文地址或参考地址  

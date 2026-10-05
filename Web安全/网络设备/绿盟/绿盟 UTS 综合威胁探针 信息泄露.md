@@ -74,7 +74,7 @@ previous_version: "绿盟 UTS综合威胁探针"
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbWDKnUyX8O1UK7ibVrzzIibMWIaul38qiaMAicZEslXT5MoBd7iavNYSeeX79YAopgRfLY0h4wnDkArOVQ/640?wx_fmt=png)
+![](../../.resource/remote/b511bfad558e2278a2be580d649ea2fd7addf81ab7d8f49bc2a6daefcd5cdee4.png)
 
 默认账号
 
@@ -110,7 +110,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbWDKnUyX8O1UK7ibVrzzIibMWicH7tuiaUk2tZRecYyKq9gNKf9ibM7RlsHEvHIvBT2BoEEYFD5hibBI4bA/640?wx_fmt=png)
+![](../../.resource/remote/85e286d8618054cf3753fb4e474aea7ed3050f8191499a6be6a4849969153011.png)
 
 密码为 MD5 编码，解码后可进行登录  
 

@@ -78,7 +78,7 @@ CVE ID：CVE-2025-21420
   
 风险等级：高危（可获取SYSTEM权限）  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ndxZsFvkmpwJFReVRm1pkicv9xfCrFLBXw1j0MlTF6X0r0qD3GVZ2aGM4dk22aE6zF1jfJKiaicWJY1ibgJ1dmQanw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f81d894e31110e54b36f5545b1c735319a727d0b3d5c11bd74444931a5f9e2ee.png "")  
   
   
 漏洞机理深度剖析  

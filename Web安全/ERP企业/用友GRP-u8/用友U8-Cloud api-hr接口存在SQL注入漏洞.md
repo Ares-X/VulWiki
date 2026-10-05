@@ -64,7 +64,7 @@ CNVD编号:
   
 用友U8-Cloud  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM3tCjFsZadttSkrNTmtZLQag4ThjEzxtJIWAdKmfKgo5sJY31mPvqETg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/6dbd221e37441bc46d31e4ab6e11d025e8af48f80adafc45c1a1fbcb48d1d8ee.jpg "null")  
   
 用友U8-Cloud api/hr接口存在SQL注入漏洞  
 ### 4.fofa查询语句  
@@ -93,23 +93,23 @@ x-remote-ip: 127.0.0.1
 x-remote-addr: 127.0.0.1
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM374BXLqricOhGhvszicn2Ks9FUMBrVTeGFxicA5uDtYuq2DF6A3aCicUDtg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/64fa83e69997633033f1d1c117a057ede94da1a2bdaae6dbd695ca25c7a83279.jpg "null")  
 ### 6.POC&EXP  
   
 本期漏洞及往期漏洞的批量扫描POC及POC工具箱已经上传知识星球：南风网络安全1: 更新poc批量扫描软件，承诺，一周更新8-14个插件吧，我会优先写使用量比较大程序漏洞。2: 免登录，免费fofa查询。3: 更新其他实用网络安全工具项目。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM3wGSsnSl5uWTZmbnbncqM4nHTSeNcnGukiaNWmg72f8iad3gRQoJc4sYg/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/aeedb7323bf219cd364a9eef627802cd214fce4b91c1f99987c1db426746e0f0.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM33hnZADg8p59wVe0y28YSIJgH54FibFU7bqEicncKYuz2A9fF0TibzQRjg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/e797982c042b8c31ff7fb3fbc3429a5f4a3749c9a005e7b747bfd0c6800527c1.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM356IwM0372RYVgWluAf5eNNXavOXC01XJUqYYncWHkMRsrbpHe0aWCw/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/5d6a45f25899215706838d7d66ec7f80816d533f1878d3f33dd73027bef1b971.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM35iaNkcoKgdF1L1zicCX8eUx7jx03xeV51SiaTiaQkI3Bdlk7fzvTvYd53g/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/31d277a6fa41aea2b7fd0d593be57026d58b7876987c18d87a59ee8ba08134b9.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM3g5RLL5K80xDV1PQUlvIFG0TJADd2WBuk2c6ynYLKnictsgaPqibfp1vA/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/65011a35c2836fc5571df8cee7426ebc5a17f6ba9ca67b14d3c7d9f48aadbf2f.jpg "null")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3aBMkv7Hmu4bqwPZiaXlPLM3KC8jibv6wmD90BxcV9CmOgh19QbokJpAOlaJWlJkMNFFoysMfgQJib0w/640?wx_fmt=jpeg&from=appmsg "null")  
+![](../../.resource/remote/0370ece5ce7c33e3ba3ecf6ac87537032b0463d5e5afdc00f069b451547c6fb8.jpg "null")  
 ### 7.整改意见  
   
 打补丁  

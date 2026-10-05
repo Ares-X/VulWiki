@@ -37,7 +37,7 @@ schema_version: "1"
 #  Spring Security@AuthorizeReturnObject权限绕过漏洞风险通告   
 你信任的  亚信安全   2024-08-22 16:55  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbEpd2Pwxbqg6RhiakjENAWL8Ruux75fibNb7TWzOyASPpDMHAx24b4DRVfUvXib097z6sRFJEx3lqHRw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/910b335a6458065a123b5445f0459f4d8dc81af9c689989162e42cebb2e4cad3.jpg "")  
   
   
 今日，亚信安全CERT监控到安全社区研究人员发布安全通告，披露了Spring Security @AuthorizeReturnObject 权限绕过漏洞(CVE-2024-38810)。该漏洞发生在应用程序使用@AuthorizeReturnObject 或 AuthorizationAdvisorProxyFactory @Bean 来包装对象时，关键的安全注解（例如@PreFilter、@PostFilter、@PreAuthorize 和@PostAuthorize）可能无法对这些包装对象实施预期的安全限制。  

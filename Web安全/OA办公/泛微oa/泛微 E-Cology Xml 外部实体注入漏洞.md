@@ -55,7 +55,7 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -65,7 +65,7 @@ schema_version: "1"
 
 **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -77,7 +77,7 @@ schema_version: "1"
 
 泛微厂商发布安全补丁更新，修复泛微 E-CologyXML 外部实体注入漏洞。由于后台逻辑对 XXE 漏洞防护存在缺陷，导致远程未授权攻击者可绕过现有防护实现 XML 外部实体注入，最终可能造成敏感信息泄露，且进一步配合其他漏洞可能导致 RCE 等危害。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -89,7 +89,7 @@ schema_version: "1"
 
 泛微 EC 8.x 且补丁版本 < 10.58.2
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -99,7 +99,7 @@ schema_version: "1"
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDDhQ452oF7S2OCgueQ13cb1TuOC6ibiavCCIRcwQLKTBV45oS69QW6w0JKNHd64N8eFicgrSrznuAAA/640?wx_fmt=png)
+![](../../.resource/remote/e732f9422bdf0c90a5ed248b17f130d8a87b0d1d3cc93e0ca011510bf0cc261c.png)
 
 2. 对漏洞进行复现
 
@@ -125,17 +125,17 @@ Accept-Encoding: gzip
 
 POST 请求，响应存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBfmeoArW4W8GWqtARyCPAnuqo9b4hyiatpPnwOlVUuibZuDYOPVe6UAAJLQgGDaYdVEstXyxfskp1A/640?wx_fmt=png)
+![](../../.resource/remote/7a2e10efccad423b71195ab301e28a2a13112b58643a4557ae96962acba63033.png)
 
         yakit 生成测试域名
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBfmeoArW4W8GWqtARyCPAnHJrlkWuF9SUlLSMHLz5BjwDFDDVEics12LBCT5AVicl3AoHsOGcHEFKw/640?wx_fmt=png)
+![](../../.resource/remote/b4205e46e484230af7cb07c1aba44fb1c38164c89998353324f5d38655522bd9.png)
 
 3.x-poc 测试（漏洞存在）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBfmeoArW4W8GWqtARyCPAniaMPhZvW2zr4AnCTOSVLppz7e8vCsaV2dbcAvgMTYx9eAZickbWzticdA/640?wx_fmt=png)
+![](../../.resource/remote/e43b832dbd58d71c05d578801291fc696bbfb453480fe294ca1db83677efbf50.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -158,7 +158,7 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20230711_v9.0_v10.58.1_det
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](../../.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -174,7 +174,7 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20230711_v9.0_v10.58.1_det
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

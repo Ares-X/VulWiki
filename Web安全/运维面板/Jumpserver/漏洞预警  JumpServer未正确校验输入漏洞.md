@@ -54,7 +54,7 @@ schema_version: "1"
 Jumpserver是一款使用Python, Django开发的开源跳板机系统, 为互联网企业提供了认证，授权，审计，自动化运维等功能，基于ssh协议来管理，客户端无需安装agent。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SU8Hf5YibCK8obmSCq5lcwuicicV90ZnoN4iaM5UuGVX1SM0IoejjglOk9icZK6JQn3DI9qgiaqL3tClf5w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/1665b2811d023f5e9fada112b0b091754a4f60c2f207211c12d530b0c4c33c61.png "")  
   
 **0x03 漏洞详情**  
 ###   

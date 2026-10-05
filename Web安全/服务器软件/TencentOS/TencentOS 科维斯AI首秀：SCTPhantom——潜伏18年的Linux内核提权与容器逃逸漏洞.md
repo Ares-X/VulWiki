@@ -54,7 +54,7 @@ schema_version: "1"
   
 在这18年间，Linux内核经历数百个版本迭代，接受全球数千名开发者审阅，被Google syzkaller等顶级fuzzer反复测试，也经无数安全研究者与 Agent 反复审计，却始终无人发现。我们将这个漏洞命名为 SCTPhantom（SCTP 协议栈中长期潜伏的幽灵般漏洞）。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvZJy1tTsfsLbhOxjXYEGn5TVQfyaBVK9kmtIbLD617IAiangjqalkO9tePDzCL5b2UNB7Yr0xvStOTm9QqxaMuia3eY6kYgdYCVY/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/08b4577cf206bc0887f8547bafde5b9e3d40dc32c4010535ed99a98a4b7545f7.png "")  
   
 发现它的，是TencentOS安全团队打造的内核漏洞研究智能体   
 —— 科维斯 AI (Corvus AI）。  
@@ -62,7 +62,7 @@ schema_version: "1"
 这是科维斯 AI 的第一次公开亮相。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvaGGo8vYYuBAVOyFJQyIYoFxuVmb88ZmLeTGn8VFHk4L9iaJOh8IvsichpG45RxIzu2T6ffEH7cyKcQ3aoO6Vnib0eOx01p45VpMU/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f2f12316c1324273cead75bf8e782daa77ce1eedfbd3f4c3c394fe3e7301441b.png "")  
   
 2026年，AI能够编写代码、分析代码并发现漏洞，已经不再新鲜。  
   
@@ -74,12 +74,12 @@ schema_version: "1"
   
 Agent Harness框架保障长链路研究的连续性，多Agent协同扩大探索与验证能力，安全专家负责方法指导与关键判断。三者结合，将模型能力真正转化为可持续、可验证、可规模化复用的内核漏洞研究能力。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/9icASLQUQzvaNfwKzsfWZpDOj6NRorH7ALibVeglRo9VPfcwrzpq32v2IIwD7kID8j31IqbkW7myIeibWUaUnk7ibIMOhS0uqKUD7S1sjdBn9mg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8957e3b633bf4e5f58c20142441bf4e4a390c6b1988fa9140d7c3c6f075eb4b0.png "")  
   
 依靠这套体系，科维斯AI完成了SCTPhantom从漏洞发现、稳定root提权到跨发行版迁移的全链路研究与验证。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvYXE7HO25epaZqQrdHSPhU38fB44Tzbe4LEFSm7ia5MEpu5iaIKFkKeibhgxTtOLdvPLbmD8JeC40kicJcUGx6iciaaJwXbkGLrsHkj4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/197e89b00196fe4ad2af902cfd75d4dc030d09e53cdaf41ff24e79090c0d32f8.png "")  
   
 SCTPhantom位于Linux内核SCTP协议栈。  
   
@@ -89,7 +89,7 @@ SCTP常见于电信、专用通信及部分基础设施场景。与普通TCP连�
   
 单独执行时，相关操作都符合协议规则；但当三个特定参数按照特定顺序出现在同一条消息中，前一个操作已经释放的内核对象，会被后一个操作继续使用，由此形成内存释放后使用漏洞（Use-After-Free）。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/9icASLQUQzvYE4myumaUG6A5N01uKoYgJnXu3iae0Pm7TGVpfkbsFlPAjkn4xCiaHwlhPEuOwP0zXRUWWqYcHQzpPwfP54C12VNmp0nG7gJzbs/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9c34528ebe1cfa2e9da8182e82d26d50d731dd45926597cfd01d0ad3b73b5354.png "")  
   
 这类问题难以通过单次函数检查发现。研究者需要同时理解协议状态、参数执行顺序，以及同一个内核对象跨越多个处理阶段的生命周期。   
   
@@ -98,7 +98,7 @@ SCTP常见于电信、专用通信及部分基础设施场景。与普通TCP连�
 直到科维斯 AI 进入这条此前没有被充分探索的执行路径。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvbvrhZK2FYaibRtfGNl1MPia5tss4rqLicicic3RKfdic5DFMN8wCr5icrMk5MZboRoAndSybfh02wW0iblicoQpMH09l7qJcAy6Zt9taBs/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e9f9ae6fdcc4a0f8f4e712e937b3ff3fcdca37d23b6cc03735aa604266543337.png "")  
   
 围绕这条路径，科维斯 AI 自主编写 PoC，并在真实内核中反复验证。第一版 PoC 就触发了系统崩溃，但一次 crash 只能证明问题可以发生，还不足以确认它的可利用性和实际危害。  
   
@@ -114,7 +114,7 @@ SCTPhantom 属于本地提权漏洞。攻击者先取得服务器上的普通用
 可以把它理解为：坏人原本只有一张普通访客卡，利用这个漏洞后，却可能拿到整栋楼的总钥匙。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvbUsgibJN7nOkoibSSWhWvue7XdcGezBuMhvRCCUFW7IUNMKFUfCCODZ2PW50MLz3nNpW3RRpaN2kbKUlICzSHibvdLYWFpjSpZVE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b9eecb265f681cee8725e392e023b9c3b4f324eecf05b536fef52a83b145b8b2.png "")  
   
 能够在一套环境中完成利用，不代表已经掌握漏洞的实际影响。  
   
@@ -128,12 +128,12 @@ SCTPhantom 属于本地提权漏洞。攻击者先取得服务器上的普通用
   
 最终结果显示，SCTPhantom 自 Linux v2.6.25 起长期存在于上游代码中，影响面极大。除了TencentOS 与 Debian，我们还在 Ubuntu 和 RHEL 上完成了提权验证，其中 RHEL 环境需要预先加载 SCTP 模块。Docker 环境中，SCTPhantom 还可以进一步完成容器逃逸并获得宿主机 root 权限。截至目前，已完成以下验证的环境如下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvbJgRn87lTaUZ3GNjicttgibmrudictngquQ3JdmXnf1hG3UbvSzVq4lbd5Gr9eEPQbUZV9IqDsghwSa7oWynf9yflqTFBw75OibJw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3e1b3f5ad3049b6f1c750ff79ecdbbc41f2074aa082cb85229095ad4e8a9e87b.png "")  
   
 需要注意的是这些仅是我们已经完成的真实环境验证，不代表漏洞影响范围仅限于这些版本。实际影响面还和发行版采用的内核代码、补丁状态和SCTP功能配置相关。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/9icASLQUQzvYDaMn4x3a3Z6Zq7fiaEZZAV2v9LD4g9ra00Kia35hhPCPibHTRiaSJLhurJ0lCYy2CH6yvjgeIEyicF42RRfdic9dkADfwLcKadFeDE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d8bdf0442c993a1a15532517a156a68f6fc049ce4ecb5ec90d7118769217cca8.png "")  
   
 Linux内核拥有数千万行代码，覆盖网络、文件系统、虚拟化、驱动和权限管理等多个高复杂度子系统。仅靠研究员手工选择目标，很难形成持续、稳定的漏洞发现能力。  
   
@@ -148,7 +148,7 @@ Linux内核拥有数千万行代码，覆盖网络、文件系统、虚拟化、
 科维斯AI探索的是一条更具挑战性的路径：在没有漏洞描述、没有触发样例、也没有标准答案的情况下，如何让 Agent 在真实 Linux 内核中规模化发现未知 0-day 漏洞，验证其可被稳定利用，并推动社区与产品侧完成修复。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvYpwIonhX0V0FgibV8czao5LSqkfiba651MGSZ81u981tr1WxXJ4a1oE4fZ1y173FE06mJy50d8xdZ1drWDv7gpYmoQU4jjTMRZI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3b858d32c1f2f74f49e305832d63766b7ab4a22a1b17e58471c8ba77156e4caf.png "")  
   
 传统的操作系统漏洞响应，通常从外部CVE开始：收到漏洞信息、判断影响版本、回补补丁、完成测试，再向用户发布更新。  
   
@@ -158,7 +158,7 @@ TencentOS安全团队正在把漏洞响应起点向前移动。
   
 SCTPhantom的响应时间线如下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/9icASLQUQzvaIhVuxeaOtj4aeqFJMiaEgwtGglBZ2uBAiatghtW6oAAxIIzqp0jJVJmFgp86L7aoibIibSyTJ841IkBgeDhQCBdXNd0RF9vhXc4g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b3eca4880e4657bf90b6a6b2423040e4f5514b26d829db8a025394ae40222f7c.png "")  
   
 从发现到上游合入主线，11 天。CVE 分配当天，TencentOS 的修复包已经就位。  
   

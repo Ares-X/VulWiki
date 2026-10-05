@@ -57,7 +57,7 @@ schema_version: "1"
 
 wpDiscuz 是 WordPress 评论插件。创新，现代且功能丰富的评论系统，可充实您的网站评论部分。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNedSIwiax8Ez4MicN8WE4SgAYMNqicVtnJ4Pp1SZjI6IxVMtqOr1Z7KUrgQQ/640?wx_fmt=png)
+![](../../.resource/remote/497d58c8de82d4f9ba104dfae0e16960097a5e7fb23c934e8b07193f0bf29ca3.png)
 
 **0x02 漏洞概述**  
 
@@ -90,23 +90,23 @@ https://downloads.wordpress.org/plugin/wpdiscuz.7.0.3.zip
 用 phpstudy 搭建 Wordpress，然后将 wpdiscuz 放到 \\ wordpress\\wp-content\\plugins 目录下，进入 Wordpress 后台插件页面启动即可。  
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNedS7PCYvI83GAbJkqfibke6Von4vXfDGK67ZelaFUBs6KvFse9zTPor4Q/640?wx_fmt=png)
+![](../../.resource/remote/9f131ffd34bc63bdac510929e5375346fb5670edaa14d53abcfe33122b686583.png)
 
 **0x05 漏洞复现**  
 
 1、进入首页默认文章的评论处。点击图片标签。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNedL38Mjt3qMhftoEuT3By7N0wKJRtzytpnvxC7p3mL5MEeSiaBjagK9IQ/640?wx_fmt=png)
+![](../../.resource/remote/d9fa4db460653af61323edf80084c4c08f043340524c45c55cce21646bc6d647.png)
 
 2、wpDiscuz 插件会使用 mime\_content\_type 函数来获取 MIME 类型，但是该函数在获取 MIME 类型是通过文件的十六进制起始字节来判断，所以只要文件头符合图片类型即可。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNedRN9R7XGEmxUiaQnxfIpic18d7aSUwFtDWuuDGdMXX2Ihz1gC9zuqicUkg/640?wx_fmt=png)  
+![](../../.resource/remote/c4b86b453aa870578c369d2f5b469342326fd790236a2851b46ff32cb9823496.png)  
 
 3、访问上传的文件。
 
 http://127.0.0.1////wordpress////wp-content////uploads////2020////09////1-1600845408.8181.php  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNedoanJqY0obOWlwoqoiaZkKAibzickibYticVDmvD1lTXnibWicYvDwtmKKNxAQ/640?wx_fmt=png)
+![](../../.resource/remote/54e4005881134aa836b88d2d1080162d5a0a64c1090ff4a5148f2f91c310c508.png)
 
 **0x06 修复方式**  
 
@@ -119,7 +119,7 @@ https://downloads.wordpress.org/plugin/wpdiscuz.7.0.7.zip
 
 isAllowedFileType 函数中对 extension 后缀进行了检测，当 MIME 与后缀不一样时会在进入最后一步之前返回 False，也就是说使用 MIME 的白名单来对上传文件的后缀进行了限制。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNed5EoodOicC1ZROl5ylUlBxrIaFictPEjC55wGcicD8bAMIgIqNSnWq3Z8w/640?wx_fmt=png)
+![](../../.resource/remote/e2d54e317b59a22b9b4a6cd5327d4d6f31f3fe6b9e4abce0b797fa312a5d370e.png)
 
 **0x07 踩坑经验**  
 
@@ -127,11 +127,11 @@ isAllowedFileType 函数中对 extension 后缀进行了检测，当 MIME 与后
 
 1、搭建 wp 的时候，getMimeType 函数的前两个 if 判断默认函数是否被定义都返回 False，然后跳到了 wordpress 自带的 wp\_check\_filetype 函数中，就会绕过失败。后换了一个工具搭建 wp 就没有这个问题。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNed4kCRvBjSOHz7ibAwycrvuDnicfKBXvXaibza1pINtH3ia2s2HZXAGmMcGA/640?wx_fmt=png)
+![](../../.resource/remote/76ce4a8eef1ac9cac56df0f7d4a8e4cebcf2cecad2c226719e9294cbf9f2c189.png)
 
 使用其他版本搭建  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsjUjLNWCFbQOJddxUUjTNedDWqnkLYqicINI7KP365Ly1Nk9cfgpHemB0n8kTdMyIRjiac71ooK878w/640?wx_fmt=png)
+![](../../.resource/remote/810969394eb3678d998dc2743de32b4696067f10d313e7a789eb9f28377a374d.png)
 
 ```
 参考链接：
@@ -144,11 +144,11 @@ https://xz.aliyun.com/t/8138
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章  
 **

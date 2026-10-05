@@ -50,7 +50,7 @@ source_status: "unknown"
 
 Bill Toulas  代码卫士   2023-05-05 17:32  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -59,7 +59,7 @@ Bill Toulas  代码卫士   2023-05-05 17:32
   
 **思科披露了 SPA112 2-Port 电话适配器 web 管理接口中的一个漏洞 (CVE-2023-20126)，它可导致未认证远程攻击者在设备上执行任意代码。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQiaeicwYwMniaooQ9Ya2AGniapicIGZzn0tibjSbD0eXaybxZj8FTj6WcF6L14dnAVkIQmPmFBILO5HkCw/640?wx_fmt=png "")  
+![](../../.resource/remote/cd0c5e75c20dd68311f507cef9a3c569c1db69279d5eb6d2f33eb382a147c6fc.png "")  
   
   
 该漏洞是严重级别的漏洞，CVSS评分为9.8，是由固件升级功能中缺少认证流程导致的。思科在安全通告中提到，“攻击者可将受影响设备升级至构造固件版本，利用该漏洞。成功利用该漏洞可导致攻击者以完全权限在受影响设备上执行任意代码。”  
@@ -75,10 +75,10 @@ Bill Toulas  代码卫士   2023-05-05 17:32
   
 ****  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQZeSribxs2yU1w56EMvgX9cDBCiabniazxdxtQ25cBCAd5vBJIM2sOv1khjzwwViaT0pS74U6piaiauiaGA/640?wx_fmt=png "")  
+![](../../.resource/remote/66b1ac947994df6ffca93aa0695c4d5878660931663fdc6f9bb6359a33c59e8f.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMTBzmfDJA6rWkgzD5KIKNibpR0szmPaeuu4BibnJiaQzxBpaRMwb8icKTeZVEuWREJwacZm3wElt7vOtQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/7ac0e4dd5ecf5ae15d5f5eede1491e723925c4ff6a4ed491da1c31ac64c5b113.jpg "")  
   
 ****  
 代码卫士试用地址：  
@@ -130,15 +130,15 @@ https://www.bleepingcomputer.com/news/security/cisco-phone-adapters-vulnerable-t
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

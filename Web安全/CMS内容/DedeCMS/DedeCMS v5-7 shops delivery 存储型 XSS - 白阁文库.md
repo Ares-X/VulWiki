@@ -1412,15 +1412,15 @@ PoC[¶](#poc "Permanent link")
 
 1.  后台添加 配送方式
 
-![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS_v5.7_shops_delivery_%E5%AD%98%E5%82%A8%E5%9E%8BXSS/add_delivery.png)
+**原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS_v5.7_shops_delivery_%E5%AD%98%E5%82%A8%E5%9E%8BXSS/add_delivery.png) `）
 
 1.  添加成功后直接展示配送方式列表，触发 XSS
 
-![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS_v5.7_shops_delivery_%E5%AD%98%E5%82%A8%E5%9E%8BXSS/show_delivery.png)
+**原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS_v5.7_shops_delivery_%E5%AD%98%E5%82%A8%E5%9E%8BXSS/show_delivery.png) `）
 
 1.  此外，这个 XSS 在前台用户购买东西选择配送方式的时候也会触发
 
-![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS_v5.7_shops_delivery_%E5%AD%98%E5%82%A8%E5%9E%8BXSS/front_xssed.png)
+**原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS_v5.7_shops_delivery_%E5%AD%98%E5%82%A8%E5%9E%8BXSS/front_xssed.png) `）
 
 References[¶](#references "Permanent link")
 -------------------------------------------

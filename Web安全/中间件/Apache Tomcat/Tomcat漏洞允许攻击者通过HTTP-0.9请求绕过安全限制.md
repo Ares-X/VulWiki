@@ -54,7 +54,7 @@ schema_version: "1"
   
 pache Tomcat 已披露 CVE-2026-24733，这是一个低危安全约束绕过漏洞，当某些访问控制规则以特定方式配置时，可通过 HTTP/0.9 请求触发该漏洞。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zdwoicOrrJb1p92I9icD3icv3m5d6cPm7KLIwibXYBz2nftHhLOqbDxuOSibs1lWw4YrUrLiaOTRqUJy8DSYIrMichwxA03iaWHBoNdibaicQ4kNpLrUc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1cd0b69dbd880baec99e66ee7ab7233ef0d3df44f46500488b5bf8f5866de1bd.png "")  
   
   
 Apache Tomcat 安全团队发现了该问题，最初的安全公告于 2026 年 2 月 17 日发布。  

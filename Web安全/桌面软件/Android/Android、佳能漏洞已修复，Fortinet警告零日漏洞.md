@@ -63,7 +63,7 @@ schema_version: "1"
 
 原创 何威风  祺印说信安   2024-02-19 00:00  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rTibWNx9ARWmFDREcQO6P5V4u2M1YnDFZoLrFQcy9ibg4kz4lEbpX591P0E5trazfJPicpN0T92q1FMmJeVXlVSZw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/30626e56fddebc092beb8add3127474e2bb03a10660907811dd200679184e61e.png "")  
   
 **谷歌周一宣布修复 Android 中的 46 个漏洞，其中包括一个导致远程代码执行的严重错误。**  
   
@@ -127,7 +127,7 @@ NIST 公告显示，这些缺陷是在 CPCA PDL 资源下载过程、地址簿�
 Fortinet 修补了 CVE-2024-21762，这是一个可能已被广泛利用的关键远程代码执行漏洞。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rTibWNx9ARWmFDREcQO6P5V4u2M1YnDFZJAH82JkyWVhkyyia6d1LtiaV86LTJd0UaRHjnO0Hib4LfseTpibfCXe8zw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/5ac97af1b69abd7b7201921328e929d4a2b05859e5feb59250d89a43e6328756.jpg "")  
   
 **Fortinet 周四发布了针对 FortiOS 中可能已被利用的关键远程代码执行漏洞的补丁。**  
   
@@ -157,7 +157,7 @@ Fortinet 尚未分享有关可能利用 CVE-2024-21762 的攻击的任何信息�
   
 **—END—**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWhJou9CCpqmibD6ldgHL2ONAnycCV5yOcv7NiccibzQb5oMWLVmYhwK6jQaSapdQNKVoTAePYIKqmmicA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/26cfcf7750897e7e1503a35f82c6709cbec87a670e1b4a9faf99b997a2a0dd30.gif "")  
   
 **精彩回顾：祺印说信安2024之前**  
   

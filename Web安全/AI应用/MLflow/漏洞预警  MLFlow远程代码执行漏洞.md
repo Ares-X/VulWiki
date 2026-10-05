@@ -55,7 +55,7 @@ schema_version: "1"
   
 MLflow是一个简化机器学习开发的平台，包括跟踪实验、将代码打包成可重现的运行，以及共享和部署模型。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/7stTqD182SWp47HSOuYhlXtZAxx6hxsWxNf3I8bRCDiap7kxqibf6Aia4Xct7MmeqoEVmicgjFAoSmEjgUhPWpo7qg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/0a37e0b8e2d5c73fbfafdc69d490bfa96e113349c0e4da2fcf41a13a2e872c9d.png "")  
   
 **0x03 漏洞详情**  
 ###   

@@ -52,15 +52,15 @@ payload
 
 会被程序跳转到 [http://php.local/public/index.php/home/user/login/from/6/pbid/0](http://php.local/public/index.php/home/user/login/from/6/pbid/0) 登录页面
 
-![20191210205508](https://y4er.com/img/uploads/20191210205508.png)
+![20191210205508](../../.resource/remote/99877a7cdc0ae6a1e45d65b03f36b4eb6bb6a5940f84d5d66647c13314c06500.png)
 
 但是随便提交post请求就会返回页面
 
-![20191210205611](https://y4er.com/img/uploads/20191210205611.png)
+![20191210205611](../../.resource/remote/4549450475633127d3e54ff1055dc1276057c68d9d9e12bffdff520f536f1ca6.png)
 
 再来一个
 
-![20191210205611](https://y4er.com/img/uploads/20191210205828.png)
+![20191210205611](../../.resource/remote/0ac60f073d93a3bbc7b74e411ec9986dd9b9354c19e9473da72b2af5e0abd5b8.png)
 
 随意提交POST数据导致未授权访问，分析一下。
 
@@ -263,13 +263,13 @@ function is_login()
 } 
 ```
 
-![20191210211940](https://y4er.com/img/uploads/20191210211940.png)
+![20191210211940](../../.resource/remote/0b91ad5dbc75783de4ed25d1519a02acf39f9b6e452763496401c10e75fb141d.png)
 
 那么此时跳不跳转就取决于`!$guest_login`和`IS_GET`
 
 `!$guest_login`取决于`$index_1` `$index_2` `$index_3` 打断点看下他们是什么
 
-![20191210211210](https://y4er.com/img/uploads/20191210211210.png)
+![20191210211210](../../.resource/remote/a48da47fffaadc9cbc2f48afbcac4e4ef22f819f6736fd768bf07994193ab6c2.png)
 
 可以看到他们三个分别对应`模块/控制器/操作`，根据访问的路由来决定是否登录。
 
@@ -279,7 +279,7 @@ function is_login()
 
 此时我们第一时间想到的是通过未授权来访问管理页面获取更大权限，很遗憾的是并不行。我们继续分析下。后台页面在admin模块下，除了`Publics`控制器和`Admin`控制器继承了`WebBase`类，其他继承的都是`Admin`控制器
 
-![20191210212901](https://y4er.com/img/uploads/20191210212901.png)
+![20191210212901](../../.resource/remote/4e0d40e053edb5a88a3dac1727a38b1879a9e07bf4de66fac074fb64161b5110.png)
 
 而在`Admin`控制器中
 
@@ -347,7 +347,7 @@ public function initialize()
 
 所有继承webbase类的页面，几乎所有模块通杀。
 
-![20191210213504](https://y4er.com/img/uploads/20191210213504.png)
+![20191210213504](../../.resource/remote/a117a5adca8f67c87ab7a49496b4028150e0216806155fdba70afaa2ff06f0f1.png)
 
 **文笔垃圾，措辞轻浮，内容浅显，操作生疏。不足之处欢迎大师傅们指点和纠正，感激不尽。**
 

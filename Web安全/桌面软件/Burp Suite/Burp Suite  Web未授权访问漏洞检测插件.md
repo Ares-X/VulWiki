@@ -75,13 +75,13 @@ sh2493770457
 否则可能就看不到了啦！  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WrOMH4AFgkSfEFMOvvFuVKmDYdQjwJ9ekMm4jiasmWhBicHJngFY1USGOZfd3Xg4k3iamUOT5DcodvA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ef3de906fd21ae799bf08e48c543ddb2fbefbeffaec6316a2c26f9a25b42ba1f.png "")  
   
 ## 工具介绍  
   
 这是一个Burp Suite扩展工具，用于自动检测Web应用程序中的未授权访问漏洞。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUTF92njNZtpVZNGJODibO9D5AiaoGqmK9x3Hn2ILHw5n2Fibicuib28ibzu4g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cc6282de76379b8394be3c90fe9ddb5a86f1eb8ee0d49dafe4fb0c05d453ded0.png "")  
 ## 功能介绍  
   
 未授权访问漏洞是Web应用中常见的安全问题，当应用程序未正确验证用户权限就允许访问敏感资源时，就会出现这类漏洞。本插件通过以下方式检测这类漏洞：  
@@ -96,7 +96,7 @@ sh2493770457
   
 ## 主要特性  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUwgw9bOWZIMnFjibvFuqjHfvmRhkZOXaoLkd6HW25JBdGIicmianpGM9NQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/64b5918297360eac8c385082232c45d95097486a90f62a87727e98b676b3a69e.png "")  
 ## 安装方法  
 1. 下载最新的release版本JAR文件（unauthorized-access-detector-1.0-shaded.jar  
 ）  
@@ -166,16 +166,16 @@ sh2493770457
 - 其他格式：导出为_raw_body  
 字段  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUt2BTou5dia0WLGpqcMtNeIuspdMBvpicp6UD2olAswImLPOe9Eiag3tzg/640?wx_fmt=png&from=appmsg "")  
+![图片](../../.resource/remote/ceda2f47c8199ccc5ab31d1ccc4ff53c8bf7055e2148288d14146ab53f7edfb3.png "")  
 ## 使用效果  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUTF92njNZtpVZNGJODibO9D5AiaoGqmK9x3Hn2ILHw5n2Fibicuib28ibzu4g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cc6282de76379b8394be3c90fe9ddb5a86f1eb8ee0d49dafe4fb0c05d453ded0.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUt2BTou5dia0WLGpqcMtNeIuspdMBvpicp6UD2olAswImLPOe9Eiag3tzg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ceda2f47c8199ccc5ab31d1ccc4ff53c8bf7055e2148288d14146ab53f7edfb3.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUApxgcpLCL2SqaEugFRVodiaBupnNNb1EAgugIrUInr3RSoevmRkqLeQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ee5a52c94db4d55441b37b5ac9cc4426e896911ea9f896f6b46d699a53390b97.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/icZ1W9s2Jp2WebaolxDYLiaviaH1tFyvsOUUufKicuLh8I9icd0vQ6V2FtnQqC4rNJ8p1asjuc7dkgmibdlMv9Pyokdg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/942cfe5f9afa59382a151b3fbafcdae6f78d05831d1812ff03f21b1f39e48cd6.png "")  
   
   
 ## 工具获取  
@@ -201,7 +201,7 @@ sh2493770457
 [GUI | CVE-2026-24061  telnetd 身份验证绕过漏洞检测与利用工具2026-01-28](https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496195&idx=1&sn=f2688674fc322b4513d7895fdbde7aa6&scene=21#wechat_redirect)  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAmMqjhMehrtxRQaYnbrvafmXHe0AwWLr2mdZxcg9wia7gVTfBbpfT6kR2xkjzsZ6bTTu5YCbytuoshPcddfsNg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&random=0.8399406679299557&tp=webp "")  
+![](../../.resource/remote/23cb00bf164247fc6ac092464e4dec54de381bcea36ec15475d86c1b0cee1b0d.webp "")  
   
 
 

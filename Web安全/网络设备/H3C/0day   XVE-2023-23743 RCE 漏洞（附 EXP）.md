@@ -78,7 +78,7 @@ iDocView < 13.10.1_20231115
 
 登录界面
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zHibqAQoXRagX4Mos9eUlbRVEsPJpDk78FZtkIAUYcE21sEZSiaHl0FJ7j2mCGHN9rbzXQ6u41HOibWYMqkCyNe1Q/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/3ed4341a2a82c5ca830dcf1faf55af7d984501f6b5c87b518b5fc29609529b4f.png)
 
 直接利用网上已公布的脚本进行复现
 
@@ -132,7 +132,7 @@ Connection: close
 
 **success！**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zHibqAQoXRagX4Mos9eUlbRVEsPJpDk78OWAibTUFLLspFqCnM17mgYYU96SETCajSibS9qnMOA9d4ChLib9Ca25Hg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9a092f205f78ca086c40c9686a26eb032280647faa3362f49a4e20e3dcdabc92.png)
 
 ```http
 GET /aaaa.jsp HTTP/1.1
@@ -154,7 +154,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zHibqAQoXRagX4Mos9eUlbRVEsPJpDk78Ex8yn7XqOTDMTjSVsws9D5FDEu7w744iaLZQEBv04FtMAxVheeARrrg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ee6be938b02ed45ae414ee80a488dcff077bcdcd9e8b1c17469f1cf1ba217a7e.png)
 
 **0x04 修复方案**
 
@@ -169,7 +169,7 @@ Connection: close
 
 **回复【********idoc********】获取指纹语法**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ib745vqibLBGIeAicnHiag9GCzTYjeicic5IWPqfyjLajDuwtJdNCAnCgcolqY8ROaE5CsEXR5zbjCU9aVl3WfkZpnDw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1947b585fe7b608d903f64f5ac64faa427d13b3b7fe0b983bbde290202a00c7c.png)
 
 往期推荐 · 值得阅看
 
@@ -195,7 +195,7 @@ Connection: close
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/kuIKKC9tNkAfZibz9TQ8KWj4voxxxNSGMAGiauAWicdDiaVl8fUJYtSgichibSzDUJvsic9HUfC38aPH9ia3sopypYW8ew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=wxpic)
+![图片](../../.resource/remote/620de6d79ea7210621f5bbf709ca9ed4633a23e731207fe8d4aa27cfc0a776cd.gif)
 
 ---
 

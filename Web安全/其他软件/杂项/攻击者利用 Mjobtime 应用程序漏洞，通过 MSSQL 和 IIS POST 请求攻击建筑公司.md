@@ -74,7 +74,7 @@ Huntress 分析师注意到，在 2025 年，三个不同的客户环境中都�
   
 在第一个例子中，他们记录了威胁行为者使用 xp_cmdshell 运行诸如“cmd /c net user”之类的命令，以及对外部 oastify.com 域的 ping 操作，这清楚地表明了从受感染的数据库服务器进行发现和回调测试的过程。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/pcgSUGCDdKJ0dIickQf0lhnxiadDYqggHMpNicvjFdkvON28U7mqd8ibQbmoAAXp7XCgRzuGSjXmEhrbJUJwOvnyVQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1af400ae99e33eb8edf83212e52191c01ce01eae3ffe373d9ffb7344043bc211.png "")  
   
 在另外两起案例中，攻击者试图使用 wget 和 curl 获取远程有效载荷，但在完成后续入侵步骤之前就被阻止了。下图展示了其中一台受影响主机上与这些命令相关的进程树。  
 ## 从 IIS POST 请求到 MSSQL 命令执行  
@@ -83,11 +83,11 @@ Huntress 分析师注意到，在 2025 年，三个不同的客户环境中都�
   
 由于存在盲注SQL 注入漏洞，Web 应用程序会将攻击者控制的输入传递给 MSSQL 后端，而没有进行适当的检查，这使得入侵者可以操纵应用程序在数据库上运行的查询。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/pcgSUGCDdKJ0dIickQf0lhnxiadDYqggHM3ob3N4HT3X7OJxYzKic5nzzJsRJoZCa6MgPibNLjCZ43nyy888L2vuXQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/771e769e64a30fb9647cb44fad31850ea4f4652559135a4e5d71a70d135b3335.png "")  
   
 攻击者通过多次请求，利用此控制在 Mjobtime 实例上启用 xp_cmdshell，然后执行系统级命令。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/pcgSUGCDdKJ0dIickQf0lhnxiadDYqggHMGg6W1cqkf6abDXE5icL1OLRPwdwAeQ9BnIqo8wd3OZPJicSw2wwGtSZA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/38c5eb8ec08fd0db15c3fc6cd300bff5b7e84cdbf5cb0bf62be74cc272e6df9b.png "")  
   
 它展示了来自 InfoGuard Labs 研究的概念验证有效载荷，这些有效载荷反映了 Huntress 案例中观察到的行为。  
   

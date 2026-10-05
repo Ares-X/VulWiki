@@ -37,7 +37,7 @@ schema_version: "1"
 #  Python URL 解析漏洞可导致命令执行攻击   
 THN  代码卫士   2023-08-14 17:46  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -47,7 +47,7 @@ THN  代码卫士   2023-08-14 17:46
 **Python URL 解析函数中存在一个高危漏洞，可用于绕过通过拦截清单实现的域或协议过滤方法，从而导致任意文件读取和命令执行后果。该漏洞的编号为CVE-2023-24329，CVSS评分为7.5。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRBGNwgicSuTe4Y4rEOSqVh2Oh4ehfs24kGuWSkdIa78Lfyy14XNT1icYGk0XVHJgBEkia0R3jwibEVjg/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
   
 CERT/CC 在上周五发布安全公告指出，“当整个URL以空字符开头时，urlparse 就会存在一个解析问题。该漏洞影响主机名和图式的解析，最终可导致任何拦截清单方法失效。”  
@@ -128,15 +128,15 @@ https://thehackernews.com/2023/08/new-python-url-parsing-flaw-enables.html
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

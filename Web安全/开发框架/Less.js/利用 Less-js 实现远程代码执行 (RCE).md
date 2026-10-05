@@ -49,7 +49,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PVgOU22JX4xTigL1HdbApg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OhKLyqyFoP9mJwX65uY3o0wwuMo2eWPeFuDIhxJlAjMcIicKFSYLVZ6fjicY0dNle24gfmiaVpwCcP2PeZuZyaRzw/640?wx_fmt=png)点击上方蓝字关注我们
+![](../../.resource/remote/f5f21bb3cfa60f2a8e5b92d63ade1d41c6e41adebb8bbb153345b0a7cd1ce1a9.png)点击上方蓝字关注我们
 
 Less(less.js) 是一种流行的预处理器语言，可转换为有效的 CSS 代码。它提供的功能有助于简化网站 CSS 的编写。研究人员在 Less.js 中发现了一个漏洞，攻击者可以利用该漏洞针对允许用户输入 Less.js 代码的网站实现远程代码执行 (RCE)。
 
@@ -176,7 +176,7 @@ color: cmd('whoami');
 
 请注意使用 lessc 转译 less 代码时的输出：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DQk5QiaQiciakaz0IQibwTRzD6ROzrQOyt5qgs4Lia3Cb2dvxneXg616V9ITY7HA4qapR6E268nANWET4VNTvicQpREw/640?wx_fmt=png)
+![](../../.resource/remote/ba585e69cec5a0bf54328d7a6e253a9704106aaf7f7ee70b4f770e70d00be936.png)
 
 以下是 3.13.1 版本的等效 PoC 插件：  
 
@@ -223,9 +223,9 @@ sbx_user1052:x:992:989::/home/sbx_user1052:/sbin/nologin
 
 以下屏幕截图显示了如何使用 Less 插件功能来实现 RCE：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DQk5QiaQiciakaz0IQibwTRzD6ROzrQOyt5qrO0VAb7swhwTRpHRxeaiaSUOzXgiaOn4o9TZC6XL04okTHgryR1zKIxg/640?wx_fmt=png)
+![](../../.resource/remote/e41726caddf21cc58b331e98ef4a7a1706c082d2ccc850acabe2f87aa3e5e59e.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RQoDdorCu0V5znWFiaMBVWiaibdvAvmGeUvfC5LJ60x1Kq5wiaQ5UtMKEDcwQJ3ibicBdGBKxGs1V2AuZcg3ISoDto1g/640?wx_fmt=png)
+![](../../.resource/remote/2b9ebbb9f7095be9642b969cd29b74426a76f5b6bf67c715aa544bd83a28e0e3.png)
 
   
 
@@ -233,7 +233,7 @@ END
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DQk5QiaQiciakarCFnYafgYGpNRiaX2oibtiawYX92ytrKp9MpmQeOqARcreRBybBX1fDbv2guZxExicn7f0wn2dkVwqw/640?wx_fmt=png)
+![](../../.resource/remote/27bd22eff31ef627b0b2886e14b119abed731665aae0ae469170008207932976.png)
 
 好文！必须在看
 

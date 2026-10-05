@@ -106,11 +106,11 @@ vendor\laravel\framework\src\Illuminate\Foundation\Testing\PendingCommand.php
 
 进入这个类中, 看到结尾有个__destruct() 方法, 可以作为反序列化的入口点
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213338-4bdf51f8-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213338-4bdf51f8-4df4-1.png)
+[![](../../.resource/remote/f9c51062d2efb290fb8fb7f8057dbda3847e8cecb8f320fda134ad2728299726.png)](../../.resource/remote/f9c51062d2efb290fb8fb7f8057dbda3847e8cecb8f320fda134ad2728299726.png)
 
 $this->hasExecuted 的默认值是 false
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213346-50dc61a0-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213346-50dc61a0-4df4-1.png)
+[![](../../.resource/remote/e45b0b2129ed6ead6afc362310719fb9693b192ab5e9d798677cd5323c727adf.png)](../../.resource/remote/e45b0b2129ed6ead6afc362310719fb9693b192ab5e9d798677cd5323c727adf.png)
 
 那这里就可以直接调用 run() 方法
 
@@ -208,11 +208,11 @@ private function createABufferedOutputMock()
 
 DefaultGenerator.php
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213400-595a2f6a-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213400-595a2f6a-4df4-1.png)
+[![](../../.resource/remote/d06069362fbb672ec959a6549d7b976d535ce8da314a8bc85e7019b5f25567b0.png)](../../.resource/remote/d06069362fbb672ec959a6549d7b976d535ce8da314a8bc85e7019b5f25567b0.png)
 
 GenericUser.php
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213406-5ce81a2a-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213406-5ce81a2a-4df4-1.png)
+[![](../../.resource/remote/bf916f52c2c132ae552d1ea05843090462d42e1ae6397def4535448889c38cfd.png)](../../.resource/remote/bf916f52c2c132ae552d1ea05843090462d42e1ae6397def4535448889c38cfd.png)
 
 随便用一个就行, 只是要注意这里是 foreach, 所以我们要返回一个数组
 
@@ -220,13 +220,13 @@ $this->default=['T0WN'=>"hacker"] 或者 $this->attributes['expectedOutput']=1
 
 回到 mockConsoleOutput 方法，也进入了应该 foreach 循环
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213415-6202b9ca-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213415-6202b9ca-4df4-1.png)
+[![](../../.resource/remote/085f0d67880503b5c98e01c7a5af6216b2740bddb49f9939c162e232c02026a1.png)](../../.resource/remote/085f0d67880503b5c98e01c7a5af6216b2740bddb49f9939c162e232c02026a1.png)
 
 这里的绕过方法和刚才一样去调用 get 方法, 为了一次性控制, 我就采用 DefaultGenerator.php 的 get 方法, 然后走完这段代码回到 run 方法
 
 但是这里的 $this->app 需要赋值为一个类, 不然会报错
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213425-6800b958-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213425-6800b958-4df4-1.png)
+[![](../../.resource/remote/8fada6cd1ab4bf0ec8ebc713d5ec3e43e430eb43a24d899e6a9bc191b2bfe0e6.png)](../../.resource/remote/8fada6cd1ab4bf0ec8ebc713d5ec3e43e430eb43a24d899e6a9bc191b2bfe0e6.png)
 
 在注释中说了这里的是应该为 \ Illuminate\Foundation\Application 类
 
@@ -303,7 +303,7 @@ $exitCode = $this->app[Kernel::class]->call($this->command, $this->parameters);
 
 或者直接跟进 $this->app[Kernel::class] 这段代码
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213436-6ee9c12e-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213436-6ee9c12e-4df4-1.png)
+[![](../../.resource/remote/14b5295c90872a3f0ea11ae155548721341a3301a062ac80549ea4fde580dc62.png)](../../.resource/remote/14b5295c90872a3f0ea11ae155548721341a3301a062ac80549ea4fde580dc62.png)
 
 跟进 make
 
@@ -357,13 +357,13 @@ protected function resolve($abstract, $parameters = [])
 
 一直跟到 resolve 的这没报错, 但是继续单步调试又报错了
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213452-78618fac-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213452-78618fac-4df4-1.png)
+[![](../../.resource/remote/84e3c96e16826cb6445e6424187cd4d7ba8619fbc8e042cfce85f9eb94041ec6.png)](../../.resource/remote/84e3c96e16826cb6445e6424187cd4d7ba8619fbc8e042cfce85f9eb94041ec6.png)
 
 那就接着跟进 build 函数
 
 在里面的这个地方报错了
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213506-8085c176-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213506-8085c176-4df4-1.png)
+[![](../../.resource/remote/8dc6580e69a711c0ec3281317336c0f9d92788b758a0298d629b0f05a5bb5e7f.png)](../../.resource/remote/8dc6580e69a711c0ec3281317336c0f9d92788b758a0298d629b0f05a5bb5e7f.png)
 
 if 判断这个类是否能够实例化, 当前类是不能实例化的
 
@@ -375,7 +375,7 @@ interface Kernel
 
 定义为一个接口类, 可用在 PHP 官方文档看到一个例子的输出
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213515-86179c36-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213515-86179c36-4df4-1.png)
+[![](../../.resource/remote/b6afb93b5ca0eb688ab56f11255c825c4d44c5eef2490d60a0b8ac949b8a7822.png)](../../.resource/remote/b6afb93b5ca0eb688ab56f11255c825c4d44c5eef2490d60a0b8ac949b8a7822.png)
 
 我们看输出效果就知道了, 接口类和抽象类还有构造方法私有的类是不能实例化的, 接口类的子类, 抽象类的继承类是可以实例化的
 
@@ -404,7 +404,7 @@ protected function notInstantiable($concrete)
 
 回到 resolve 方法
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213524-8b35df3e-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213524-8b35df3e-4df4-1.png)
+[![](../../.resource/remote/496ff4df3e3972868f84e24ba2dff5ef0a6b347a31007d4bd58519c24d3894e7.png)](../../.resource/remote/496ff4df3e3972868f84e24ba2dff5ef0a6b347a31007d4bd58519c24d3894e7.png)
 
 跟进 getConcrete 方法
 
@@ -438,7 +438,7 @@ if (isset($this->bindings[$abstract])) {
 
 我们通过断点调试可以清楚的看到,$abstract 的值是 Kernel 这个类
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213535-91f43ac8-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213535-91f43ac8-4df4-1.png)
+[![](../../.resource/remote/fa30b6839dc8f5ecac3fe6cae4c5bb24919aa3feb9c73ce3524f33e989a273f0.png)](../../.resource/remote/fa30b6839dc8f5ecac3fe6cae4c5bb24919aa3feb9c73ce3524f33e989a273f0.png)
 
 先来看看 bindings 属性, 这个是 Illuminate\Container\Container 类的属性, 不过我们这里的 $this->app 是 Illuminate\Foundation\Application 类, 这个类刚好是 Container 类的子类, 可以直接从 Illuminate\Foundation\Application 类来控制 $this->bindings 属性
 
@@ -448,7 +448,7 @@ if (isset($this->bindings[$abstract])) {
 
 到了这儿的 if 判断
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213545-97ed37f4-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213545-97ed37f4-4df4-1.png)
+[![](../../.resource/remote/1684ec5891c063f66b5c23df4d4be69a5f3056d948f0dc94d82dbf12b315c4d4.png)](../../.resource/remote/1684ec5891c063f66b5c23df4d4be69a5f3056d948f0dc94d82dbf12b315c4d4.png)
 
 跟进 isBuildable
 
@@ -477,7 +477,7 @@ $reflector = new ReflectionClass($concrete);
 
 执行到了刚才报错的地方
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213606-a4734f86-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213606-a4734f86-4df4-1.png)
+[![](../../.resource/remote/aca60644d6838059dbecce582b75ef4ae92dd7d6ca442e2e408ecf67bfda30e0.png)](../../.resource/remote/aca60644d6838059dbecce582b75ef4ae92dd7d6ca442e2e408ecf67bfda30e0.png)
 
 当前类是可以实例化的, 直接跳过 if, 然后层层返回, 最后实例化了任意类
 
@@ -511,7 +511,7 @@ public static function call($container, $callback, array $parameters = [], $defa
 
 跳过了第一个分支语句, 来到 return 这里
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213617-aad69036-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213617-aad69036-4df4-1.png)
+[![](../../.resource/remote/4777f5abab792b0643be66b3dca868bbe62f8d4c482f130351680a9c25cb606b.png)](../../.resource/remote/4777f5abab792b0643be66b3dca868bbe62f8d4c482f130351680a9c25cb606b.png)
 
 ```
 return static::callBoundMethod($container, $callback, function () use ($container, $callback, $parameters) {
@@ -521,11 +521,11 @@ return static::callBoundMethod($container, $callback, function () use ($containe
 });
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213627-b0e45418-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213627-b0e45418-4df4-1.png)
+[![](../../.resource/remote/617b5b96fb31a7c3d7ecb9e39efe4ad19d2d2e6c766b2548d89893933bdc4132.png)](../../.resource/remote/617b5b96fb31a7c3d7ecb9e39efe4ad19d2d2e6c766b2548d89893933bdc4132.png)
 
 跟进 callBoundMethod
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213633-b4a3dcae-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213633-b4a3dcae-4df4-1.png)
+[![](../../.resource/remote/9c3d9fe71c19b8b2519487f307e776d2d87c887ceb0f279130b096d935fe3861.png)](../../.resource/remote/9c3d9fe71c19b8b2519487f307e776d2d87c887ceb0f279130b096d935fe3861.png)
 
 判断 $callback 是不是数组, 从上面断点调试的时候的值来看 $callback 是传进来的 system, 并不是数组所以很顺利进入了这个 if, 返回了 $default
 
@@ -556,13 +556,13 @@ protected static function getMethodDependencies($container, $callback, array $pa
 
 就是返回一个合并数组, 因为 $dependencies 是空数组,$parameters 是我们传进来的 whoami
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213643-ba477d0a-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213643-ba477d0a-4df4-1.png)
+[![](../../.resource/remote/da91817a960b7d8889386b17ee672b811e6c30a3ee9c1a6eeb836b74fa591daf.png)](../../.resource/remote/da91817a960b7d8889386b17ee672b811e6c30a3ee9c1a6eeb836b74fa591daf.png)
 
 所以返回值就是 whoami
 
 那 $default 的值就是 system("whoami") 了, 单步跳过, 会到了 run 方法发现命令执行成功
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213651-bf0c32cc-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213651-bf0c32cc-4df4-1.png)
+[![](../../.resource/remote/53e58959afded6aa63e9a44e4688ba92a492a51d11b61d88d665534eb821ceb4.png)](../../.resource/remote/53e58959afded6aa63e9a44e4688ba92a492a51d11b61d88d665534eb821ceb4.png)
 
 POC1
 ----
@@ -624,9 +624,9 @@ namespace Illuminate\Foundation {
 
 这里 $this->parameters 需要是一个数组类型才行, 不然在这里在第一个对象模拟这里就会报错
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213705-c79e4a74-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213705-c79e4a74-4df4-1.png)
+[![](../../.resource/remote/df04b9bb2abb32cf78c4176473a56ec6ade2f2e22a1dead5a451a4504d2ea248.png)](../../.resource/remote/df04b9bb2abb32cf78c4176473a56ec6ade2f2e22a1dead5a451a4504d2ea248.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213710-ca2dc1ca-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213710-ca2dc1ca-4df4-1.png)
+[![](../../.resource/remote/642e59cf540708f0166cd88599bf019bac8af8fc43771795d77bdd1734f3d3c6.png)](../../.resource/remote/642e59cf540708f0166cd88599bf019bac8af8fc43771795d77bdd1734f3d3c6.png)
 
 POC2
 ----
@@ -635,7 +635,7 @@ POC2
 
 但是回到 resolve 方法
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213719-cfc86c0c-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213719-cfc86c0c-4df4-1.png)
+[![](../../.resource/remote/fb59b5edd0d677182157adb6e31472438c71138d7c045353de4a1926d157cf3e.png)](../../.resource/remote/fb59b5edd0d677182157adb6e31472438c71138d7c045353de4a1926d157cf3e.png)
 
 看看这里的 if 语句, 先看后面 $needsContextualBuild 我们打断点的时候可以很明显的看到他的值是 false, 所以如果存在 $this->instances[$abstract] 就会直接返回 $this->instances[$abstract], 这个是可控的, 所以就可以直接返回一个实例化的 Application 对象了
 
@@ -694,7 +694,7 @@ namespace {
 }
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20211125213730-d65ae748-4df4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20211125213730-d65ae748-4df4-1.png)
+[![](../../.resource/remote/d3354aa21b651df98b8cbb791a6f9e5b6b7444fd74df91689da74ff5336c1db6.png)](../../.resource/remote/d3354aa21b651df98b8cbb791a6f9e5b6b7444fd74df91689da74ff5336c1db6.png)
 
 laravel5.7 的链子肯定是不止这一条的, 例如 [https://xz.aliyun.com/t/9478](https://xz.aliyun.com/t/9478)  
 这篇文章里面有几条链是在 laravel5.4 到 5.8 是通杀的, 还有 H3 师傅总结的链子 [https://www.anquanke.com/post/id/258264](https://www.anquanke.com/post/id/258264)  

@@ -80,7 +80,7 @@ F5官方披露BIG-IP Access Policy Manager（APM）存在一处高危零日漏�
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Cpo2XCpI7K1ORQRERwZnoUpnP9ZPJNyd0Gcxc8gHfxKXztCCSPCKItB3MmPUuju2v0SZjvpu9SnVogPQeVSza5HQp44d9CDyqm6fV3dZe8o/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5da7ca8f2cde5cf656c385a11ee165e4fac4e53b9f13c0c58c0dd883fdb2785b.png "")  
   
 已经修复过往CVE-2025-53521的系统，依然需要安装本次新hotfix。  
   
@@ -124,18 +124,18 @@ F5给出可用于自查的可疑指标**，同时出现下述多类日志特征�
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cpo2XCpI7K1LajIfpic7FHZmADuUcQnjnbs7YdakwiaLEyVkenqCLY6sic92IXoA4skE5j9RnzxicUb1acJXq1shXPibKAicKnbCte55j9pOWpQ9c/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1174aba2fd2940bc43d2ae24fb3dc5445254a6d40df4c96dc10b062e956cbbfb.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Cpo2XCpI7K2dIbfG9qupEmM0bjaehjd6icuJ8MPWvtwTN73PAjpyHmiaX5gVDqqovN9nGdIBwX4icFvO8NNOp9CtnibPOQLoWvLygwuibDcIyI10/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Cpo2XCpI7K0LsoTiacYHSFPQibryBXJuAjZPNUdQgUeP4O8p783AOiaCLUnfh3fKGF3rY866uJKI8fcUAOLTKgy7jKY2jaiaPvJicFickwUIntzLE/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Cpo2XCpI7K1owiceT0ia8Kv98cSLmw2A9Bza11E65PJpd1pKI57LhibqAibvKiaDtNTZsRxBazQiakcxtuGm10LibJnHPWkbuichbJQ4GLXlk3OHvzQ/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球在看**  
   

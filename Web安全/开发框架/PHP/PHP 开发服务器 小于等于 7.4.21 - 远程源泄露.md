@@ -67,7 +67,7 @@ GET / HTTP/1.1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2HS0XhrmxsGdvDx4JozEGJSicNTLawhCWXyjPWbibI4FTXI4JvseVFy6WAY2iczTibbrwEUL78PTtSlA/640?wx_fmt=png)
+![](../../.resource/remote/7bb57b3da6771df04fe8e01f4ef4b0bbc5eaa1edc26c00c47c18455358340a26.png)
 
 ---
 

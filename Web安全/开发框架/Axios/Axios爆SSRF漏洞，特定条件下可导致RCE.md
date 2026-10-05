@@ -40,7 +40,7 @@ schema_version: "1"
 原创 微步情报局
                     微步情报局  微步在线研究响应中心   2026-04-14 07:06  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/94ba548e30fedc16feb634026eb27963411675ba9137220d7e4638955a9d68ae.png "")  
   
   
   
@@ -80,11 +80,11 @@ Axios是一个基于Promise的HTTP客户端，广泛应用于浏览器和Node.js
   
 SSRF:  
   
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEOWOF2FLM2CZYetvVqWyVVr80kCiciaaELBZU8mje80zs0wtyoc5AjZaIfBVicY7HtLaAMn94ZoTALDCA3zUJ80eMuGeWea5mo9ibo/640?wx_fmt=png&from=appmsg "")  
+![image.png](../../.resource/remote/d246823e18f17c9f183d8543a62035d003ec1169c8a1d222967183b21a073fb7.png "")  
   
 RCE:  
   
-![image.png](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdENOVLI2BQMNUAu1uzfotaQMRfEAJjf8kqbc8qTicH3S7kn4otFwWwrbrASVBunA9qV5FZoibyjfQMjSYT0J2282sA7J4bFfWUFk0/640?wx_fmt=png&from=appmsg "")  
+![image.png](../../.resource/remote/d2792b3a759fe33fb48c418edc3df1e1bce6eeef46a4163ec7ff6eb7df10e0a1.png "")  
   
   
 修复方案  
@@ -115,7 +115,7 @@ S3100174564，
 20260414000000  
 可检出。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEP6FiaxPJFz6ghhzYSXb7Tf6wJucTibgibFQaWW4fdWJG7co93IMib5hk1fkH4zuiczQn4hmkZS08akoYcv9zWPl9fg2KBQLpu4D7BA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cc556296fdcb5d4e8ed496db7950bc7be426ea07442ab32e5e1e17fc4218e254.png "")  
   
   
 - END -  
@@ -138,9 +138,9 @@ S3100174564，
 ↓  
 ↓↓  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hQl5bZ5Mx6PTAQg6tGLiciarvXajTdDnQiacxmwJFZ0D3ictBOmuYyRk99bibwZV49wbap77LibGQHdQPtA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/af2820a378c199548053d385bda4250d7d50a5a22d6bbb58a06bceb40d5e843e.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hTIdM9koHZFkrtYe5WU5rHxSDicbiaNFjEBAs1rojKGviaJGjOGd9KwKzN4aSpnNZDA5UWpY2E0JAnNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/c4634cd583acfab3faf2a0b9edd62202d8949eb72b8c2d639482249716277ac2.png "")  
   
   
 点此电话咨询  

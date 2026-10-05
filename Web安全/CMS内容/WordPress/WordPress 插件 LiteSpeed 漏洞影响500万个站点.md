@@ -37,7 +37,7 @@ schema_version: "1"
 #  WordPress 插件 LiteSpeed 漏洞影响500万个站点   
 THN  代码卫士   2024-02-28 18:01  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -47,7 +47,7 @@ THN  代码卫士   2024-02-28 18:01
 ****  
 **WordPress 插件 LiteSpeed Cache 中存在一个漏洞，可导致未认证用户提升权限。该漏洞的编号是CVE-2023-40000，已在2023年10月的5.7.0.1版本中修复。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ4zIy76t10f0MIkt8mmz9TMloBuicjvRJIg1jIvBUP28hp9DFvf0j2s85ecuavtLSXwpnyhsxF58A/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/6d3f7e916bbe35b224ca66ba30e01dd07863a835801368bf111628bc49f6c22c.gif "")  
   
   
 Patchstack 公司的研究员 Rafie Muhammad 表示，“该插件易受未认证的站点存储型XSS漏洞的影响，可导致未认证用户窃取敏感信息，在本案例中这样做的目的是通过执行单个 HTTP 请求提升在 WordPress 网站上的权限。”  
@@ -111,15 +111,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

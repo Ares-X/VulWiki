@@ -41,9 +41,9 @@ schema_version: "1"
 
  FreeBuf   2026-01-21 10:31  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibqicrdic5icku8cXyORbJUic2v8iaYRibWNlMia9AI2P2flCzVvEwGMrhoJPwKGicCvJExr3uQ6jd2LEvFdg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/c2c611089a9868f9bf3a62459622e7dee5564a51233f4fa6a610942106a08e4b.jpg "")  
   
   
 Cloudflare Web应用防火墙（WAF）存在一个高危0Day漏洞，攻击者可借此绕过安全控制措施，通过证书验证路径直接访问受保护的主机服务器。  
@@ -62,7 +62,7 @@ FearsOff研究人员在审查WAF配置拦截全局访问、仅允许特定来源
 为确认这不是租户特有的配置错误，研究人员在cf-php.fearsoff.org、cf-spring.fearsoff.org和cf-nextjs.fearsoff.org创建了受控演示主机。对这些主机的正常请求如预期般遭遇拦截页面，但ACME路径请求却返回了主机生成的响应（通常是框架404错误）。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ibqicrdic5icku8cXyORbJUic2vpjFbF5m5mdUQHPJibvF9dOSpmQ0WUmRCcn6D3OYaN5JH7iavGH2frjXA/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/dea98e9568f67e287888c590c5f41aede3ee0793a2753eaf660d9f5dd683996f.jpg "")  
   
   
 该漏洞源于Cloudflare边缘网络对ACME HTTP-01挑战路径的处理逻辑。当Cloudflare为其托管的证书订单提供挑战令牌时，系统会禁用WAF功能以防止干扰CA验证。但存在一个关键缺陷：如果请求的令牌与Cloudflare托管的证书订单不匹配，请求会完全绕过WAF评估直接转发至客户主机。这一逻辑错误将原本有限的证书验证例外变成了影响所有Cloudflare防护主机的广泛安全绕过。  
@@ -112,7 +112,7 @@ https://cybersecuritynews.com/cloudflare-zero-day-vulnerability/
 ###   
   
 ****  
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

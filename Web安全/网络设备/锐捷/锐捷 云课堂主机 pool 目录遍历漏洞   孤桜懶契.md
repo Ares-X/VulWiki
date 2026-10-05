@@ -84,7 +84,7 @@ Filename	Size	Last Modified
 Apache Tomcat/6.0.24
 ```
 
-[![](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220409082939453.png)](https://gitee.com/gylq/linkimage/raw/master/img1/image-20220409082939453.png)
+[![](../../.resource/remote/6844f93f80644f44b2e5edf22b05783b06e22a366b1e45a536963350704bdb0e.png)](../../.resource/remote/6844f93f80644f44b2e5edf22b05783b06e22a366b1e45a536963350704bdb0e.png)
 
 > [](#孤桜懶契：https-gylq-gitee-io-time "孤桜懶契：https://gylq.gitee.io/time")孤桜懶契：[https://gylq.gitee.io/time](https://gylq.gitee.io/time)
 > ---------------------------------------------------------------------------------------------------------------------------------

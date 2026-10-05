@@ -62,7 +62,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5B7f4v_CVmp8SehduvFq0g)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjglKHc5s9PRxvJg3mCYibSl8nNpbwzRNTWkTPru7nPicOhEhV1OmN02BQ/640?wx_fmt=png)
+![](../../.resource/remote/c1a5f7de5e9f849d7e9c82375c86559f4578913507224266f843997f12935619.png)
 
 **0×0** **前 言**
 
@@ -77,23 +77,23 @@ schema_version: "1"
 以我所了解到的，一般虚拟机逃逸类的题目都会给一个虚拟机环境（没错就是虚拟机套虚拟机），然后给一个 patch 过的组件，本题就是 vmware-vmx-patched。  
 用 010editor 进行比对。比对结果如下。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjiaicMkbPAJ3OIXqc0db1Gea4AiamuzLXmRBATWBib1eaZKeWKZDkCXpc7Q/640?wx_fmt=png)
+![](../../.resource/remote/bfa076098de4b18747f10c77e6de990988be93dfabe327a670fd8e824f3af016.png)
 
 发现 patch 后的组件与原版本的组件有三处区别。IDA 打开后，跳转到三处地址查看改动。第一处改动将 jz 改为 jmp 无条件跳转。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjibGFEmYcnj8LjHzqXbHLxNTte1dSrIicfJ1SQJ3eK6iacPLtricSdtFAwQ/640?wx_fmt=png)
+![](../../.resource/remote/b2c6c5400caf5ae4659f8ac4fee1d7aa57d7ad36428bf759ff410ac41bc443cc.png)
 
 第二处将跳转条件由 ja 改为 jnb。即大于改为大于等于。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjZx6SbcVN7ZOvTbiafe5NSjZKTS1pPdvW0XxTibeTHBbvGWgwcHngOoWg/640?wx_fmt=png)
+![](../../.resource/remote/2aaa10a189e8964a141d3f9b210ad0f4362edd64179c40555c06bdea674446b3.png)
 
 第三处将 realloc 传参时 size 由 dword 改为 word，即四字节变为两字节。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjwibDNs3gkIH6KRVbt2KrkibtMQTCJDeFUttU3nEuehOWvBickWUBBvcBA/640?wx_fmt=png)
+![](../../.resource/remote/9ae0e5ab464e09d1031eb287d63b11b1fb0e4775a693ac0fd977a9c3927f4641.png)
 
 分析到这里就感觉这是关键漏洞点了，realloc（ptr,size）函数当 size 为 0 时功能相当于 free（ptr）。再看一下伪代码。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjqG1q5R1Rv2ak9tvicgWWiboK8G04CaNLn0BEGUBOt0d0wicju1aMdBv4Q/640?wx_fmt=png)
+![](../../.resource/remote/19a74bbd321cab20e171ffbd0c4dbb01622d3d5bd7daa3d462bba20aede92bd6.png)
 
 这段代码在处理 Send_RPC_command_length 过程中，在发送 RPC_Command 前会先发送 RPC commad 的长度，接收 size 值后，会先判断是否大于 0x10000，然后判断是否大于 RPCI 结构体中记录的 size，注意这些比较都是以四字节 int 的比较，但是在给 realloc 传参数的时候却以 word，即两字节传入，会导致一个问题是，如果发送的 size=0xffff，可以通过第一步 size<=0x10000 检查，并且在 realloc 传参时，LOWORD（v31）= (0xffff+1) & 0xffff ，即 v31=0 。
 
@@ -104,63 +104,63 @@ schema_version: "1"
 
 Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x189370
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjSbkuspUAFPwUbRw2Aokcm67kIibVL2vII9vPeZMNvKYFoPjwSaxdsEA/640?wx_fmt=png)
+![](../../.resource/remote/bc8683d7f8ee51a020f12b935d52b180d212fdd0b32eb25e8b847d5cc2d7fb5a.png)
 
 其中的符号为我手动添加。其中的 getrpccap 函数功能为获取 rpc 通信数据包，、根据参数不同获取 rpc 数据包中内容、大小等属性该函数共有六个 case，与 rpc 六个指令一一对应：
 
 #### Case 0，open channel：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgj33wib5nvWvyzs2ISSFeur0PC16egpsKOM3qCMn99icn5MGTrHLoRh6Qg/640?wx_fmt=png)
+![](../../.resource/remote/7a49f6416fe8d672c7170e55dd28cf34e147341b41ddafbef1a3382f2a01e27e.png)
 
 该功能比较简短，读取了发来的 rpc 包里的 magicnumber
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjr10YKFjw7eGWgT4GicMhibx0oziaroBq6WpcU4DxZ5Vx3j9kCRDoKl8DA/640?wx_fmt=png)
+![](../../.resource/remote/2f63fd72533f1af18b328bd2bc3f0d3c75adc9e710efabf4f31575ea6dbbc596.png)
 
 然后在后面进行了 cookie 的设置和时间的设置
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjwVIUcSFQMfMlx6icVuzNZwsVw91cUZZz8lAiarVEuSsR4s4F4TP9BO4g/640?wx_fmt=png)
+![](../../.resource/remote/217e51c30aa929e254c24e7b3c0f03356dbbf1b1e1611265e11e9aa8d1d1d4b0.png)
 
 #### Case 01 set len
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjnFNUNs7DibvblDwUqOe1VcQ3RT7bsqLu5JKM6K1qNJDpDe2UHbuhHpw/640?wx_fmt=png)
+![](../../.resource/remote/c5ef9618a4e9184195746a0ec1ac09367d272a91e57e2f4a6169b59decb482bf.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjDdshq0ibhbKg8YCnKttJVfVOiazick7oMoJVoTzP9IOFp8iaicfzAHuN8ug/640?wx_fmt=png)
+![](../../.resource/remote/ac91a5f302f8962aa0b6a81a96a6ad768d771b48235d1f090c634082584da70c.png)
 
 该指令的内容部分对应的是长度，长度在接受包的时候就已经经过处理，如果超长会直接处理成 - 1，但后面也有个比较，推测这里是开发人员在扩展开发时未删减的部分。同时，在最开始会有个对 fe9584 处标志位的判断，推测为包内容错误的判断标志位，若内容接受出错则直接结束。下面有个对设置长度和现有长度的判断，若接受长度比现有长度小就会调用注册的函数表中错误处理的部分。比现有长度大则会进入空间扩展，会调用 realloc 进行堆操作, 修改 rpc 结构中的数据缓冲区指针。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjcOwicclWhOL89LfH7L07dicqaa5EAkosd8ibR7hkts6ia9HgWvG8dDiaCUA/640?wx_fmt=png)
+![](../../.resource/remote/b8c193dd4e9d9a6aa065939c4871ebe2af8f53a5f722a363bb29cdd64555b567.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjwk65b1j9icBFNtTDiaFOXHib8icoDYchiaxwKAVfia3H9nVAKdTPFt8l4uCQ/640?wx_fmt=png)
+![](../../.resource/remote/bdf3e9063c501ddf1c640a995c325446af97b4e05fe01ad5a0f3d9645ff9c87f.png)
 
 #### Case 02 send data
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjcia13hficJezNtu0oial2icwTCtZgEiceyLWGQhRAia7SiatOS6TQIRmoJy2Q/640?wx_fmt=png)
+![](../../.resource/remote/c871122b3c5ad481adc93b278f4d3731a7b894e87f35f3532e0e9056ce611d23.png)
 
 该 case 开头先调用函数获取了命令包的内容，v21 参数里面存的就是发送的内容，内容一次最多四字节，v22 里面是打开的 channel 的命令数据缓冲区，后面会判断 chanell 的状态，如果不是待读取状态是不会开始读取的。读取时会根据发送时指定的长度来进行复制。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgj0TR9jsjDv8rUEOO5UwHaGialCQickcyXlLd7QdWbcZYv8U9CfdmC0c9g/640?wx_fmt=png)
+![](../../.resource/remote/4625fc4daaae69a180d25bfc8a158ab5cc0d6fc9cd8c0b5005e3248391e7a682.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjkkxhPex0B9q3DZSqxj3RHS06wDgk6L9phnRRqLiacMeS8jOVbdJwTyA/640?wx_fmt=png)
+![](../../.resource/remote/0bf1fddb1c7914655251c3b8295d97c0bc4fcbd8e30e0667efc7a08d956d6f26.png)
 
 可以看到把我们发送的四个字节指令（在 rbp 中）复制到了 rdx 指向的地址中
 
 复制完后会把 rpc 结构体的一个代表未接收长度的属性减去接收的值，如果已经接收完了，会根据一个类似虚表的东西来调用对应的命令处理函数，然后把 rpc 状态修改为 1。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjIB9yzgbS2NlgzMDrFib53c6U9UO8wKchWDpBnmSRjx12EPvV5MIRqMA/640?wx_fmt=png)
+![](../../.resource/remote/8085723087f506869e6c4dc3886235a92e9703df2c18835e31874817a9554e0e.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjcN9JkCg4oPqlwAPDlN2Q294NTT7tXSWlHDkU1mBwOGcIPyY2MQ9xMw/640?wx_fmt=png)
+![](../../.resource/remote/bbe7be7703050f29a1265873e6c7c76306ae6db2d90d7e923eb9013078c13f5b.png)
 
 该函数的参数为指令本身以及指令长度，寻址方式为将命令与存在表中的字符串比较，找到对应的处理函数，调用以进行处理
 
 安装函数的函数为下面这个，地址为 0x114866
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjFzJlEE3AkXDgvvqh2HYdianYElx39LpxPz3aHzKgibGg4QticVMD5ZQZw/640?wx_fmt=png)
+![](../../.resource/remote/affd4322517954aebd4b6283a04dfd28471cd3afe63d4762cfb4827d5b701b67.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjfA1UAWmqvDVGEcs2IewCWE7DhA5c13y1bMWr1TjicmpMsPATfibjt0jQ/640?wx_fmt=png)
+![](../../.resource/remote/e18426a5c1948ca4dc767d6f1ea70b5d99de7fa6f49f173fd34920196a7ebf2c.png)
 
 存储字符串指针的表位置为 0x111df80, 存储函数的位置也在附近，不过寻址方式不太一样。存储区域比较大。在执行指令时，会申请一个 0x20 大小的堆
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjobmcNqJx0cfVIAsUYPlnC75FZibWIEHic6o3ibf5rRKvEwZ2eMDlEqqMg/640?wx_fmt=png)
+![](../../.resource/remote/be1f78c7fd8cf1102df8b41aec437011c408d996027373845f5e413f385578f7.png)
 
 寻址函数地址为 0x177d61
 
@@ -168,7 +168,7 @@ Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x18
 
 该 case 功能为发送给客户机返回数据的长度
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjjYHggEHc3PevgxVauic49bQ11iauxMiaRdPMLgqG3kE0fLDrqeojGBASQ/640?wx_fmt=png)
+![](../../.resource/remote/51d1b8e9cba28961c821e92a4f8751d102cc2bd3785ace3fb5028310b21a32fe.png)
 
 功能也比较简单，得到对应 channel 的指针，判断是否为接受完数据的状态，然后设置发送长度和发送数据缓冲区
 
@@ -176,23 +176,23 @@ Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x18
 
 这个功能为发送执行指令后的返回数据
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjtx78fMCMbhr0hMN4UZD40v3BuNmeP3yyTNHEYumtJr48WCxibVZ29Hw/640?wx_fmt=png)
+![](../../.resource/remote/d7fc47b30da1031e0e0f227e55b75d8c5d7131b35492b1ff6be40065b238a408.png)
 
 开头也是获得 channel 指针，然后设置 channel 的发送缓冲区和发送长度，一次同样只能发送四字节，如果最后不够就会发送剩余长度的数据
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjbg1BROuQu3fFys9wqcqtjXH0h2oZHdyxWA4YF9DRD1UOIN1yoDI42A/640?wx_fmt=png)
+![](../../.resource/remote/7910859a8c704c5355066183b635b9ae9e958e7eb2245b835c5b741a21453c0b.png)
 
 最后会把 rpc 的状态修改为发送完毕
 
 #### Case 05 finish receive reply
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjrnMv2fUNibOGRc0b4z7IChpUCKrDyNLbF7JkApRlGbKrW0K6wxzBLbw/640?wx_fmt=png)
+![](../../.resource/remote/c91cecb9e5c5fb17ecb6719d253686b1159b219e7919545a09285b63f2c7ec36.png)
 
 该功能为结束接受返回信息。读取 rpc 指针，判断是否为发送完毕状态，然后会设置状态为 1，完成状态闭环，出错的时候会有错误处理，输出错误提示
 
 #### Case 06 close channel
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjEIUO4vSiab5esYtl7kNbUjic9xhZp9YqTFPB5gB2MBnJ7mIr9q6zvQFA/640?wx_fmt=png)
+![](../../.resource/remote/35c1f3e25702353f291af457aafc19a4317c3583ae1482f35270791df873e6a5.png)
 
 该功能为关闭 channel，获取 rpc 指针后判断其数据区指针是否为空，为空说明它非开启状态，不为空就调用函数进行关闭处理。
 
@@ -212,21 +212,21 @@ Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x18
 
 所以 leak 基地址思路与 rwctf 类似。使用 run_cmd（info-set guestinfo.a xxx），预设一个 0x100 的 guestinfo.a。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjmFGTqC9d2KjPAD96V2xCM3SKicZHMOkkDDsgof0dXAMyqymfypPrzbQ/640?wx_fmt=png)
+![](../../.resource/remote/9dcae1f0440659b01234f8a4ffee5d76329d2e8e085835d6ce09b1624c4e8cc7.png)
 
 打开一个 channel_0，先通过 Send RPC command length 申请一个 0x100 大小的堆块。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjibhpczykIHZyQVGeaJzTbRN4el7FHHM59UumSCicHVuILicj2AxxX3FSQ/640?wx_fmt=png)
+![](../../.resource/remote/7bef618a8189070c7e887dbbdf32e4f4074957f8f6ef1bb8ea5a9a430496e331.png)
 
 然后打开 channel_1，发送 info-get guestinfo.a 命令，这里有一个小 tip，Send RPC command data 时每次发送四个字节，并且在接收完完整的 command 后才会执行命令，为了防止 Send RPC command data 的过程中有其他堆操作影响漏洞利用，先 send command 的前 strlen（command）- 4 个字节，然后 channel_0 发送 Send RPC command length，设置 size 为 0xffff，释放掉 channel_0 中申请的 0x100 堆块到 tcache[0x110] 的头。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgj54WjRick3dSrwRyP9gYziaeV5kIlBFEuIKx0d697zW9JX38u3MPAGmFA/640?wx_fmt=png)
+![](../../.resource/remote/8d0e78329b11faa9fc1fe7c34acff961b36fe88f02794de373c371437a558bf1.png)
 
 发送完 info-get guestinfo.a 命令后，会 malloc(strlen(guestinfo.a))，作为 output 缓冲区，因为此时 tcache[0x110] 头是我们刚刚释放的 channel_0 的 command 块，会将该块分配出来作为输出缓冲区，但是 channel_0_struct_RPCI->heap_ptr 中仍保存了堆指针，此时 guestinfo.a = channel_0_struct_RPCI->heap_ptr。
 
 然后下一步就是与 rwctf 相同的思路，再次释放该堆块到 tcache[0x110] 头，利用 vmx.capability.dnd_version ，将 obj 申请到 guestinfo.a 的 output 缓冲区，利用 obj 中的 vtable 泄露 testbase。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjAibNtNlAvFiaqvtrmibtO7EuynNjbribGfMlW910Ps2YZu8U0ebBQiaRwyQ/640?wx_fmt=png)
+![](../../.resource/remote/2d8537fa79d01fa8f74608878dfcfee58f76fadc744ca88a3a3643674c06b105.png)
 
 *   ### **exploit**
     
@@ -235,17 +235,17 @@ Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x18
 
 那么如何伪造 fd。调试中发现，在 后，会 call [r8+rax*1+0x8] ，并且第一个参数 rdi = [rdi+rax] 。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgj5nFw1k39SSDoQn500oMAuJljG7A5T2AQ3argotphaicKic5Q7u18d6yg/640?wx_fmt=png)
+![](../../.resource/remote/0e5515379ab3fc7769f9d96b029b014457ca41b590aa870f323cce88ffd53a10.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjatlVGXdNBj8ib3zxXcEH396dFEBY9AicygMJUokyRTEn4r9BIw25enicA/640?wx_fmt=png)
+![](../../.resource/remote/48ecdbc56cb6291ea1c7440cef25f94b81e10d6db6ca5c801259ac128517e564.png)
 
 Rdi 与 r8 寄存器中地址相近，rax=0，那么如果将 fd 伪造到 r8 处，在 r8+8 处写入 system 地址，rdi 处写入 gnome-calculator\x00 即可弹出计算器。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjapqMaR6OXblqXfcVt98wFvfVEOoJwiaVQWTZcrzOzmNVdjVZialAGdEw/640?wx_fmt=png)
+![](../../.resource/remote/100b19cc636408142ff253537c672564b058037990db610126e8f916ba1e0a35.png)
 
 最后效果演示：（妈妈我也会弹计算器了！）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjTmp70qO2WiaVwG0u8HibsEa9gicHvq5lvSV5gmwlRD5ZgFKw1U1XNpw4A/640?wx_fmt=png)
+![](../../.resource/remote/6bf8994c4553a61829c8b2b020e17ee17e6836adfff5c403a766d2f8e5ca71f3.png)
 
 **0×3** **完整 exp**
 
@@ -672,7 +672,7 @@ void main(){
 
 （点击 “阅读原文” 查看链接）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png)
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png)
 
 ```
 - End -

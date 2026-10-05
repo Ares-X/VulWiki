@@ -54,7 +54,7 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/WZq_E9MxenTeIF5juckTrA)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/PrTu58FA79YzG1Ts908ZPb0HkU5HQdsFVlxQsh2fDKaY9rktCN869WvlMIvTpjFgJwAlGPw62qVMRDYjVZMrtw/640?wx_fmt=jpeg)
+![](../../.resource/remote/309b8b6713db0953afa51029155a992841c1c5e0f87b9f6e52f75353669d29e4.jpg)
 
 Modbus Slave 7 概述：
 

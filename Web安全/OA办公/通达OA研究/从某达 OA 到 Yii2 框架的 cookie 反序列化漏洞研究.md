@@ -51,9 +51,9 @@ schema_version: "1"
 
 免费 & 进群
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSFJNibV2baHRo8G34MZhFD1sjTz4LHLiaKG9208VTU6pdTIEpC9jlW6UVfhIb9rHorCvvMsdiaya4T6Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/182cd2bef2aff60ee2c18eda46281be247ad9bf4259dade0a1ab67cba02dd747.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fchVnBLMw4kTQ7B9oUy0RGfiacu34QEZgDpfia0sVmWrHcDZCV1Na5wDQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/96f7f735433653a7bae273af3b5d4a1b84375ce8867fcc82bd28527cfb2a0bac.png)
 
 序言  
 
@@ -68,7 +68,7 @@ schema_version: "1"
 
 我们在 cookie 处提交的参数，被送到了这个 validateData 方法处，在这里 $data 的内容会被拆分。在期间其经历了一次 hash 值校验。我们只要用它提供的加密算法和密钥进行加密，生成数据，就能通过所有的校验，然后进入我们期望的 `return $pureData;` 环节。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9FEsgIhyhSVPqFlGicPv5zQNAjmf7pthNIiaBDGEYJQN4rRwbJlNqLMzg/640?wx_fmt=jpeg)
+![](../../.resource/remote/f240831037fd638a6b3da8c47a0a1c1b6936fffe02010a688f05560a042a3144.jpg)
 
 源代码如下：
 
@@ -100,7 +100,7 @@ public function validateData($data, $key, $rawHash = false)
 
 上面的 validateData 方法，返回结果后，就回到了 loadCookies 方法。这里存在一个反序列化入口，就是下图 else 分支的内容，我们上一方法得到的反序列化数据会进入我们的反序列化入口（注意，allowed_classes 被设置为 false，则在反序列化过程中不会创建对象，只会还原基本数据类型，例如字符串、整数、数组等）。所以我们可以发现，在 Yii2 框架默认的环境下要进行这个反序列化操作，对 php 的版本是有所限制的，如下图，可以发现我们的版本中 PHP_VERSION_ID 要小于 70000 才能到达我们期望的反序列化入口。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9ZPjqcAibe8nvepth4wEUViax7z70z22l6n8RYuOhXsnvQewkYNH3edeA/640?wx_fmt=jpeg)
+![](../../.resource/remote/3f520d6956f5d29e26c68fc68a22cdfd5f8fb0ada59118161d025804b9c98a83.jpg)
 
 源代码如下：
 
@@ -138,7 +138,7 @@ protected function loadCookies()
 
 下面我们先直接展示漏洞利用结果。我们可以从调用栈看到已经在进行我们的反序列化过程了。最终弹出计算机验证确实存在此漏洞。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9lftXFVoOyEXA7oGQFm816b1vBVoj4978tGfMBOeTibYHmjvIibLmKZ5w/640?wx_fmt=jpeg)
+![](../../.resource/remote/44e7bc0d32e32a662d8c23602510d4c37ffa8f1e6c335cccfd1735e7df780ec7.jpg)
 
 run 方法如下：
 
@@ -158,7 +158,7 @@ public function run()
 
 例如下图中的 "demo2"：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9EAOqlzxXlTLYibvEjZvq29GxJ16KpbFMBEK8ZYMeGOea6APWRI6dfXw/640?wx_fmt=jpeg)
+![](../../.resource/remote/2ec3d97f3a2cf4ed356052ace261fe4d6f6f872c75408ffa877076667db1e986.jpg)
 
 我们掌握了加密密钥与加密方法，也就可以编写自己想要用的反序列化数据。如下是简单编写的 cookie 加密程序：
 
@@ -185,18 +185,18 @@ echo $hmac.$encodedata;
 
 效果如下:
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9ehtN2aw2yibLnhNx7EZZY70aGbzU4P3A9oeib4MbrHcXJgHLTJ4BxXOA/640?wx_fmt=jpeg)
+![](../../.resource/remote/99cfd1694097a4d43883268e5fdf5605a65a148b1b118e26d48543ccffa09653.jpg)
 
 三、将反序列化数据从 cookie 中提取出来
 -----------------------
 
 从前面反序列化的入口与条件看过来，我们这里进行更为细致的研究，看看我们的反序列化数据是如何被提取出来的。下面的 $test 值可以被视作测试数据，没有什么输入，目的其实在于输出适用了 macHash 算法后加密数据的长度。这个长度被用作分割我们 cookie 里的提交的数据。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9xM8QHfcls4orSicXEb4nmeicIUicnKKKibznpRvSaeoGiaIBCtBjibj0YdvQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/f8fd994071a5bd9d13651022b72cc29e774ffc053248a5af5c3d0f893074bd68.jpg)
 
 我们提交的是两部分，反序列化数据和在它前面的 hash_hmac 方法加密的 hash 值。由测试数据计算出的 hash 长度为 64，那么后面会将 cookie 提交的数据中的前 64 个字符赋值给 $hash，然后将剩余的赋值给 $pureData。（我需要注意，这里获取的 $data 数据会被默认 urldecode 解码一次。）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9UrIaLB1UjSeqeQ0BlmlKWJFwwYeNeqKA7cVBrnHhxEiaEAEhjXayIzw/640?wx_fmt=jpeg)
+![](../../.resource/remote/a04f550e9739717faa552e4a5164124be83078aaa560b9ea0c858641076bd424.jpg)
 
 最终对比提交的 hash 值与计算出的 $pureData 的 hash 值是否一致，一致则会进入我们期望的步骤。
 
@@ -212,9 +212,9 @@ yii\db\BatchQueryResult->yii\web\DbSession->yii\rest\CreatAction
 
 其反序列化过程会触发对 PHPSESSID 状态的校验，含有 PHPSESSID 才能成功命令执行。先看一组对比图，第一个图添加了 PHPSESSID，则进入了 composeFields 方法；反之第二个图直接跳到结尾了，那么自然出现我们预期外的结果。如下两幅对比图：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y99JXKbcWK4ibg3m0a9waImpj2icZ4IHjrvKibTRVz7kRQxeXASqTXAyskQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/59fe0f7f66811500e6ea012e63a635a7f80fffd05732b523b9ba46430781ee3e.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9H2YicfpVvUDbPqWIP58dweqqLPNqLLibLFMpp4lWXvVUNWcUp7ULeJqA/640?wx_fmt=jpeg)
+![](../../.resource/remote/ba4102dc96e19dc0dd97a44d3ed4a5c5846063d988532d31d03aa965aa39c4d3.jpg)
 
 这个什么原因我们看看 getIsActive 方法:
 
@@ -235,7 +235,7 @@ define('PHP_SESSION_ACTIVE', 2);
 
 如果没有 Cookie 中添加 PHPSESSID，那么我们看看图：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9cJyj3uk1grKvMCXbaGFsGhWOsia4CwaclHqOIr2BEONhfhxVrBMdAvA/640?wx_fmt=jpeg)
+![](../../.resource/remote/ed2b0b1c2f516a3c61b5249b8922b9e20723c7ddd18bdb9cef9031f49282184f.jpg)
 
 所以会返回 false，我们无法进入条件为 true 的语句内。
 
@@ -271,7 +271,7 @@ namespace {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9rgv2LJsN1SaIzWu3FvgtkyzSice8JAx66JmC4Xvp3zIHRTvsf01YAVQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/0f79b635f9b5e067bb910d9cd4bb4ba4398d79af094f4ae1b5ed8b17eac0d714.jpg)
 
 返回 500，则我们可以继续测试：
 
@@ -312,7 +312,7 @@ namespace {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9aHrLXv54icngbECpia7y2cj4QDAGFqHg4Vp5LO6OlV60mcKBIcrH9qeA/640?wx_fmt=jpeg)
+![](../../.resource/remote/2c0df9bfe8ecb4f8a47d50ba86117fd024f6c8147656b97c670333ed9b0736be.jpg)
 
 又为 500，我们继续进行 payload 测试，进行到下面的测试我们已经测试出一条链了。
 
@@ -364,7 +364,7 @@ namespace {
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9L5t4go9Ywic74WEAbzJPUuaBxhzq508j4ngtFsRB3msVLBaa4HRvD3w/640?wx_fmt=jpeg)
+![](../../.resource/remote/2e5888472a93f061b3498fa8e1f9567d10132da58011f3fcf19514bb5573b205.jpg)
 
 这个思路可以用来生成我们的 payload 探测工具，可以来查找可以被利用的反序列化链条。
 
@@ -375,7 +375,7 @@ namespace {
 
 某达 oa 默认密钥 "tdide2"，使用了该密钥来加密利用链。我们在 cookie 中提交反序化数据，利用上面说的 500 状态来判断，可以判断这条链是存在的。不过 system 函数应该是被禁用了，需要使用网上公开的 POC 进行检测。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9BxxpI8yHuapA8e488hvH8Re06fLiabFZLC2ibSoSx9A3DLy0ibibPeoIqg/640?wx_fmt=jpeg)
+![](../../.resource/remote/fda66ed6372b4e5dda30fdfe74df9f2e2e8d79a73d0de4d8d4250f367b0f852b.jpg)
 
 下面是测试出的一条链条：
 
@@ -486,11 +486,11 @@ O:23:"yii\db\BatchQueryResult":4:{s:2:"db";N;s:5:"query";N;s:4:"each";N;s:36:"yi
 
 因为如果我们使用 yii\redis\Connection 类来进行中转，那么 $this->redisCommands 这个参数就很关键，研究这个参数我们可以帮助我们找到其他的利用链条，所以在这里来说明一下 ["CLOSE CURSOR"]。我们观察下面，当调用栈到达 yii\db\DataReader->close() 的时候，会调用到 yii\redis\Connection 类的 closeCursor 方法。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9V6Nh654ZKJUHU8Dv4Ec5HU4IuBN6q71pMQuUxrTDxzHWEj4gms2Fgg/640?wx_fmt=jpeg)
+![](../../.resource/remote/5e7955305d8ed732a0a4fd00e25d33ac3a2e5748d493b4b710f51e0a28efa699.jpg)
 
 由于 yii\redis\Connection 类不存在 closeCursor 方法但存在__call 魔术方法，可以观察到如下传值，closeCursor 被赋值给 $name。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9QuGQC8Doicf8uu0Thwg4xNsyTEMy2wUEl0mqZic5j7cOibzRhYAzxFRBg/640?wx_fmt=jpeg)
+![](../../.resource/remote/0e9378584c697f6575a7c60ad13e30781260423b257d87e0b6f74e73f9c94389.jpg)
 
 camel2words 方法：
 
@@ -544,11 +544,11 @@ preg_replace 函数使用正则表达式来处理驼峰命名。它通过正则�
 
 所以从上面的代码演示，我们可以看到，如果想使用一条其他的利用链，我们需要寻找到一条包含形如 `$this->_statement->closeCursor();` 语句的类。由于会调用 camel2words 方法来处理 yii\redis\Connection 类的__call 方法的 $name 参数，所以我们需要根据自己找到的 $name 参数，来定制 $this->redisCommands 的值，来进入我们期望的方法。（closeCursor——处理方法——> ["CLOSE CURSOR"]）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y9bULNJRkfib9hI4U8bUicFpAoToV89IQoRFppyX18QrkjI22xRAsps2Ow/640?wx_fmt=jpeg)
+![](../../.resource/remote/ab17a996f686a1c11aa1d047090f2e8dbd1c56ed2a78ed0fe8fcc95375dbd3f6.jpg)
 
 如果自己设置的 $name 参数能够成功通过条件语句，进入到 executeCommand 方法，后续会按照我们期望的方法顺利地进行代码执行。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/CBJYPapLzSFBicO0BElLZHhUVskuIH3Y97VCqCTwQiacCJMK4CJ5ss7JkQAdGuiauZibIkoxYia0Hia52t13qM6pSQ5A/640?wx_fmt=jpeg)
+![](../../.resource/remote/b046e3b02095eb7c664ebf6d469ea8f9ee3bd65d90dbac3c16fd82984f685b88.jpg)
 
 七、我们如何预防呢？
 ----------

@@ -53,9 +53,9 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/SQGnMXYJADEqTZpRE69vHg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/ibicicIH182el4ZtwUTIlboZYRXjrRmK33Z3PMgtzbIn6N90u65gaT5swNxWFd56DlRDd7Ixz2MSMzVicHZKHdonpA/640?wx_fmt=jpeg)
+![](../../.resource/remote/e2d4a13e58aaec619b1f14de57af61649ad7cc27919ffa8d0f6869164bc2deca.jpg)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -73,7 +73,7 @@ app="HUAWEI-Home-Gateway-HG659"
 
 **登录页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6rDLq3fMxBFycSZ15UYADJUBef6Ld8ypg8xaOJicm1766guY7y0ewzKxNYdga644p8cQjt2RNvGZg/640?wx_fmt=png)
+![](../../.resource/remote/7ba027fe3d80db92c987222218565e923f7088d8289570d5e093e9649211848c.png)
 
 **POC 如下**  
 
@@ -81,11 +81,11 @@ app="HUAWEI-Home-Gateway-HG659"
 /lib///....//....//....//....//....//....//....//....//etc//passwd
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6rDLq3fMxBFycSZ15UYADJ2eGwh0QczdP7mJnqu5plJWx8LjdOibcOHR6Vfm90cqvB6Uel4dSbH0A/640?wx_fmt=png)
+![](../../.resource/remote/f524bba90a1f10ac374b608d2386ccd115f31427854a1869fed3b842608819f9.png)
 
  ****四:  关于文库🦉****
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6rDLq3fMxBFycSZ15UYADJj7ruJokEib2icTNw5HjpkOB0AM8Je6ZBm0Aa00wf63SIPgSBOibR90zfQ/640?wx_fmt=png)
+![](../../.resource/remote/2b46ddb897fd91945918752c16042c85b597a5fc746b1317d83e6f15a55d8852.png)
 
  **在线文库：**
 
@@ -95,7 +95,7 @@ app="HUAWEI-Home-Gateway-HG659"
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -112,7 +112,7 @@ app="HUAWEI-Home-Gateway-HG659"
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

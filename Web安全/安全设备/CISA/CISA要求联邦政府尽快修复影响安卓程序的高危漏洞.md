@@ -53,7 +53,7 @@ source_status: "unknown"
   
 近日，CISA要求联邦机构尽快修补一个高危的内核驱动特权升级漏洞Arm Mali GPU，该漏洞已被列入到其积极处理的漏洞列表中，并在本月的安卓安全更新中得到解决。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/QmbJGbR2j6x3ziaY5hg4ibnljsxOvdwEV11oZ1R3sq6aTBm4WtFYALD3ZwqD8AEy0qlb81oms9mKCEcgTEiatficKw/640?wx_fmt=png&wxfrom=13 "")  
+![](../../.resource/remote/8a52de38e13882f64292ab3282ed3f0817a6f504f9a1e6e1ef2e0395279afbe4.png "")  
   
 该漏洞（被追踪为CVE-2021-29256）是一种在释放后使用的漏洞，通过允许对GPU内存的不正当操作，让攻击者升级到root权限或者访问目标安卓设备上的敏感信息。Arm在公告中写道：“非特权用户可以对GPU内存进行不当操作，以访问已释放的内存，并可能获得root权限或披露信息。”此问题在Bifrost和Valhall GPU内核驱动程序r30p0以及Midgard内核驱动程序r31p0版本中得到修复。如果用户受到此问题的影响，建议他们尽快升级。  
   
@@ -84,7 +84,7 @@ CISA也表示，分布式拒绝服务（DDoS）针对性地攻击美国多个行
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f3ab05c36341863ed9d85136ffb4fb0121c50bb24dd77865ada8e50ae835d232.jpg "")  
   
   
 

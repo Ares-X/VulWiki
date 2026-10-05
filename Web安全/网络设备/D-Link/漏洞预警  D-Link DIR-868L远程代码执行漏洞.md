@@ -61,7 +61,7 @@ source_status: "unknown"
   
 友讯DIR-868L是友讯D-Link品牌旗下旗舰级双频千兆云路由器。  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/7stTqD182SV90bMc5WoLO2MWk19OYOxbsgnvt73eSeN4Ch58icIbibC5iaEIPb28epc1upxS5xHBkewm3TKDibLnvg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0 "")  
+![图片](../../.resource/remote/d84dcd665e4a67d4b5f0db400fa174b147d4201804aa08f9880aba94b05eff16.png "")  
   
 **0x03 漏洞详情**  
 ###   

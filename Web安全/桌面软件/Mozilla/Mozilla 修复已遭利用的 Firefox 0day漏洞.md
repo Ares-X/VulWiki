@@ -63,7 +63,7 @@ schema_version: "1"
 
 Bill Toulas  代码卫士   2024-10-10 18:16  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -72,7 +72,7 @@ Bill Toulas  代码卫士   2024-10-10 18:16
   
 **Mozilla 发布紧急安全更新，修复了 Firefox 浏览器中的一个严重的释放后使用漏洞 (CVE-2024-9680)，目前该漏洞已遭利用。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMSAsjnjia0h6rTzh5oDdsH9vf0WibkPfqYxJGHw5Tu0pG6PT1lBNysZPfVppZ8KFvaAeIZvTlGLoJ3A/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/bc9a7ac91a512648339d4e6a885fd3428b3997cdaafef57cec962bca8029ffd1.gif "")  
   
   
 该漏洞由 ESET 公司的研究员 Damien Schaeffer发现，是位于 Animation 时间线中的一个释放后使用 (UAF) 漏洞。当被释放的内存仍由程序所使用时就会发生这类漏洞，可导致恶意人员将恶意数据添加到内存区域，进行代码执行操作。Animation 时间线是 Firefox Web Animation API 的组成部分，用于控制和同步网页上的动画。  
@@ -143,15 +143,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

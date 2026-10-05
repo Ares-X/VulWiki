@@ -59,7 +59,7 @@ Citrix SD-WAN 安全功能
 
 大概长这个样子  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iadHz4YCpfgPiahzQQCKjYEmUU1b5pSFIRrDvPPiaTibSnkuNpOMg8PwbIQ/640?wx_fmt=png)
+![](../../.resource/remote/60774366cccef4a16bb55476068aa2200709aa117b64bb8e5bcecd2799a18b9c.png)
 
 2 影响范围
 
@@ -75,7 +75,7 @@ Citrix SD-WAN 10.2 before 10.2.8
 
 python url 'whoami'  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/7XAvvlbibo1QLSJeewYic79537eaQABI0iaibk3jUibKfNFwqqawhOgn0QlQtnXakC3IvBhkmkbdtxxU0ROtiatDJ7GA/640?wx_fmt=jpeg)
+![](../../.resource/remote/2e1b516431ab334e786393062a430818dbb0ada875144d1d958ea21862ad71fa.jpg)
 
 4 修复方案
 
@@ -89,33 +89,33 @@ https://support.citrix.com/article/CTX285061=
 
 暂时没有盈利例如公众号接一些广告 知识星球 昨天就出了一个神人 喷我公众号接盈利性广告  还有 2 个啥都不知道就就在那跟风 既然说从我公众号进来的 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iagPZMRCLlibZPqRPEkFXd0D1eQvZic8b8qq73IEmFOXWJuq5ykdrtCL6g/640?wx_fmt=png)
+![](../../.resource/remote/cb52adaf1d363f2cb2f84061be3f5036ca016a620d2fe420d115a89ebf4958da.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iafwER4NtL7FATUtFyyZEFFJPIfXibwicclsRsyndkEOZtLf9wrLU569Kg/640?wx_fmt=png)
+![](../../.resource/remote/8e62ace27d8197cd464d85491cf2300effc209d98c3da173296f03fdebc2c534.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaG9rORTwlNrVheUzIQwkh7lrgl5Ric2y25lls55guYwsCECh1WfpANLA/640?wx_fmt=png)
+![](../../.resource/remote/93f7c848c6142639c9643d0cb59097800b17eea3b252b950109cc21cccd9154c.png)
 
 微信公众号有一个功能 就是被删的文章 也有记录 我就全部截图出来
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaicicUhRUMA1VKVBibU7qibWLsaWia4uMxibJNVPX0PgZ5TuU1Ukf55pozpag/640?wx_fmt=png)
+![](../../.resource/remote/3b300f57d42b75a3eaf5daf34619e9376da3529cb9d74ac8be5dfdb916ad9ade.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0ia7FGKoENS9icBGCibpLdwFTYAeUqU3wypX7hQk5DDFw5WvAibEUTRvnGeg/640?wx_fmt=png)
+![](../../.resource/remote/d2110947386f99a6bea2aa8700a2a9aa1a76b8855a7dfed965101e18363cdee8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0ia2255x3urVzho9qt8tpzm3kQiaGbk4K1UftXEiaT9II5uj1iajicMd4655A/640?wx_fmt=png)
+![](../../.resource/remote/77a4afd834b4eb4f4b17b9214b77b33e185dc8ee249d86f465fcdc118686cd98.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaBfhzgic46ILfIYv047WXb3FPUG2HkPVsD9XyMz7TjiaQgshuraEsfH5Q/640?wx_fmt=png)
+![](../../.resource/remote/34b6323eb3c2ae83e61d25272b922bda94210582b71c73d07b759de0f185f217.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0ia5NAWVAnKfMOEOJMULYbcuzwpPzGzKVd6yypZCse8TJXGicDMzDEfWdg/640?wx_fmt=png)
+![](../../.resource/remote/99a002f56caf698a529959a79d44bc4698d64e1e25198c58673346f8e61a48b8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0ianU6vBaphv0txM8cv76VLX9Vyia0eYTxnM2giag99ovByQnmtHVlmSENw/640?wx_fmt=png)
+![](../../.resource/remote/6d89764da3bdd26abf011483fbb683368b0ffef73f391b40497a10df12eaea5a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaEQnVS0sbQw1ojo7R3Raata31w9Np755tvicicgaNppM3JX7ia34icInkibQ/640?wx_fmt=png)
+![](../../.resource/remote/8a7100378d78761e65f85c87328e003b3464888c8019214cab4be2e4e8cd88e7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaZx9YqUOvlJOYvGbK9iaGN01DMlWsPAnd98xjx3dTH3qYYHyqZrpiaxhQ/640?wx_fmt=png)
+![](../../.resource/remote/5e0b6b690e18a0853be5daad9286dbcacc19e1fcd4751824c8be88201d52aaf7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaMYz6cQjOePrMHvfrYyVEZOH2sZU9tyxa2mMPjXNPeE60AjpKn5DRkw/640?wx_fmt=png)
+![](../../.resource/remote/984e5dff952301f1bf05eeb7f570397675845b45849fa419c42e493f4d330323.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iaqE7Isw6HRe1xVno02ZpNQz016I11wQKOuxc2aJYp26DHrN9F98zpJg/640?wx_fmt=png)
+![](../../.resource/remote/1f4640a97ef003b6ed072c8844cd6ef461a4c1871ab2682677497c68acf58361.png)
 
 借用乌云的一句话  
 

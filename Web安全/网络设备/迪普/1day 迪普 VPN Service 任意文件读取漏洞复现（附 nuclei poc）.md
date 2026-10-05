@@ -77,7 +77,7 @@ fofa: "app=\"DPtech-SSLVPN\""
 
 DPtech-SSL-VPN  
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMaUuvQibAF4BnZvtkz9wMCKXdicYIQLOoTu2jldYo3J1Z9qfroNFgCyfPNpDBKzNUqZYqe1ZP0Ljvg/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/6375e0f8e9fd014edb21c64ed9281d914a64444dfcd9870ec5a975c0d5e91b29.png)
 
 03
 
@@ -100,7 +100,7 @@ app="DPtech-SSLVPN"
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMaUuvQibAF4BnZvtkz9wMCKWsZ29wBibiaTlnVQsHfFBiau4CTg65AG80DfFZicqqHJdLt3mTkDD27VRA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/a7b42e8d0b5f4a730aac91d1e2be597374ec09bfe58d6289bd56e9159cc43399.png)
 
 05
 
@@ -117,7 +117,7 @@ POC 如下
 
 使用浏览器访问
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMaUuvQibAF4BnZvtkz9wMCKSMJGfUZCKkL9niczjgZyMUibbPFaVrqcvDjEicgCuOIyicYXEBTFEmW47Q/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/520082cb9924920b36436d3db6d34f049c8a603a597dc6da46280d867ec56ec1.png)
 
 证明存在漏洞
 
@@ -155,7 +155,7 @@ http:
 
 运行 POC
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BMaUuvQibAF4BnZvtkz9wMCKPM5hrBCr5ribqIcjG6DXDYnTt6icwiadZPxvDZKoh1rox78E8bH0SF2RA/640?wx_fmt=png&from=appmsg)
+![图片](../../.resource/remote/df53d169085c1c1b0fc5f8f939cd17de552c9e4bb2307f7d879418619fec3eca.png)
 
 07
 

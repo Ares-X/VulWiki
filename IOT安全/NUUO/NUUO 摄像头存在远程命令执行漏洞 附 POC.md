@@ -84,7 +84,7 @@ CNVD 编号:
 
 NUUO 监控摄像头
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiayEZPBb2mawMCffeDyl3K338ibiaWCz4vjOkkQs0Sym5n9uYgGJmw9Iiatw/640?wx_fmt=jpeg)NUUO 摄像头存在远程命令执行漏洞
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/43d2fd9c0b2321ca86f62b65359ca70c50d177a6045c2bd6c3111a38e3bae874.jpg)NUUO 摄像头存在远程命令执行漏洞
 
 4.fofa 查询语句
 -----------
@@ -107,18 +107,18 @@ Connection: Keep-Alive
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiaynte3o3PRrYiaQeYia62N2d0FxPdZVv3HYUDE17kL8TJia5Chz6KJntq8g/640?wx_fmt=jpeg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiay2APpV6kXTrO3q7ctw9OObJZ1xS2lqLjcO9pkdzGBnVJwB0pESsUUxw/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b71c8145d35c88d3dbb2fb1e12aaf909cc83d0e7f910e49236e7dc80b0d97ba9.jpg)![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0ff88613e5fcd0aff26511470e090bc0af39498d21e49b7509247c66b6eada36.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号 南风漏洞复现文库 并回复 漏洞复现 63 即可获得该 POC 工具下载地址：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiayJfoRTgqgwTCwFokibVs4whveLlPLkIWwNS4Uusz5FHlx1HnRx2Ca3zw/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4b61b81d95b013429b92682e95593bfb273d6631776e261f191c420a25f35861.jpg)
 
 本期漏洞及往期漏洞的批量扫描 POC 及 POC 工具箱已经上传知识星球：南风网络安全
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiayLeVuQnrStHKxNnXHpVaibTPkIPPks24EIh5H1DqibyVHtdJu47cTGkAA/640?wx_fmt=jpeg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiay5pfBAE37ZVHcKlmSwic092vmXPJ7UmEDaEsbkEtHibryFbEH2iaodQxuA/640?wx_fmt=jpeg)![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3Yia93EUve4rq1icyDRkdSiaiayjDibaSG4fanj7xEQTYGbzpENkX0DgxJzjFJ2QwEMU7W6BvKrowS4ERQ/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c0836fdf71b3de411c16a8f8b6aa67f466b6bcdc33fffdcb93e17a684b663393.jpg)![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9a342e702a55bd6fb6155fd3cdc4eb090b53923e4bfe419fb287366b9cc3085a.jpg)![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/60edce5f69691f2dd9e2149ac02fae513695a58c7a68b13d3a8b737b35d64f02.jpg)
 
 7. 整改意见
 -------

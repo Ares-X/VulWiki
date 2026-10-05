@@ -110,7 +110,7 @@ action=test&configuration=O:10:"PMA\_Config":1:{s:6:"source",s:11:"/etc/passwd";
 
 `[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
-![](https://img2020.cnblogs.com/blog/967964/202003/967964-20200327095005500-1274656986.png)
+![](../../.resource/remote/757841f7648cc1719a0998366a99766c196973d32c42316d3d0e3addebf6201e.png)
 
 ---
 

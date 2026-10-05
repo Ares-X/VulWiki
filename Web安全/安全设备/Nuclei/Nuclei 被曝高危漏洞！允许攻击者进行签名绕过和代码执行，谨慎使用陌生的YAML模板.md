@@ -52,7 +52,7 @@ source_status: "unknown"
 
  WH0sec   2025-01-07 03:30  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/myic1rJ84UQib1h8I5Re97yPxU4o2fzIk9oZ62CvkvzianGcPoDtrqFdXWicFKmKdvPyCWibpfmHYy3JFpkiatI1ImiaQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/98c0a29c150468ea369770557d60f2d9c549a7941b44a15d1ae9b9f19171c226.gif "")  
   
 “ Nuclei 被披露了一个高度严重的安全漏洞， CVE-2024-43405，CVSS 评分为 7.4 分。它会影响 3.0.0 之后的所有 Nuclei 版本。”  
   
@@ -61,7 +61,7 @@ source_status: "unknown"
   
 Nuclei是一种用于自动化漏洞扫描和发现的工具，它可以帮助安全研究人员和渗透测试人员快速识别和验证网络上的漏洞。Nuclei支持多种协议和服务，可以通过预定义的模板（YAML）来检测常见的安全问题，也可以根据用户的需求进行定制化配置。使用Nuclei可以帮助发现潜在的安全漏洞。Nuclei 在网络安全领域，尤其是在渗透测试和漏洞扫描方面，已经成为一个相对流行的工具。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/myic1rJ84UQ8PZWMIvALc17Yr6oib4reYauprsCLo0UOciajDlFYFfiawvxXxBicB5xM4XY0d6Sn3ZmkaZCHicwcwWZA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4d6cd98154f54ea7bebc3c65c1a57389d75ddf653ac03870c5800fa1d191ba4b.png "")  
   
 Nuclei 被曝高危漏洞  
   
@@ -69,7 +69,7 @@ Nuclei于2024年底被爆出一个新的高危漏洞，它被跟踪为 CVE-2024-
   
 该漏洞产生于签名验证过程与 YAML 解析器处理换行符的方式之间的差异，以及对多个签名的处理方式。这使得攻击者能够在模板中注入恶意内容，同时仍然保持模板的合法部分具有有效的签名。  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/myic1rJ84UQ8PZWMIvALc17Yr6oib4reYa8Qoo3HaXVZjcWVMTqCZ682B10HV2m2sOqFZ2C8nuJ46LW2e8tY3sPA/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/0b4e4be92dc570ef1fbf46796bfc76e78a5716cbedb7f716a687d49b4c5742db.gif "")  
   
   
 漏洞细节  
@@ -92,15 +92,15 @@ Goldenberg 还提到，“验证逻辑只检查第一行的“# digest:”，后
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/myic1rJ84UQ9tkmbgPnwvcekWSnVDhGrcp255vKxWPgcZra8l1gzL9ibN7MOWPesgkoVTAzsm6iaicJUjrx5I54djw/640?wx_fmt=png&from=appmsg "")  
-![](https://mmbiz.qpic.cn/mmbiz_png/myic1rJ84UQicYaPaTeJcNOszM43NvF6J8AlDDSETRG8FtyKjAI5fkfAjibTjNrqwkiaicIibjSJwzYyW4FYBEMtKxTA/640?wx_fmt=png&from=appmsg "")  
-![](https://mmbiz.qpic.cn/mmbiz_png/myic1rJ84UQicYaPaTeJcNOszM43NvF6J8XMnCjlRPA94oicBClUx79hib1ZnJj6CSmQBpMv96EXl6IxOsIBTeulNQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1a5f2a759d4ce16600d27dc6fd195ef2c8886a1a0ed81b7f32b8f3f4331c11b9.png "")  
+![](../../.resource/remote/a22a8c98d779731316ec5f5de5927e1676e48f74f9f6640d3da3f80352122bcb.png "")  
+![](../../.resource/remote/a0b30eebabf02113507ee087c12b51b245760079da7676e44e74183e24fb3ce7.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/myic1rJ84UQib8G9YWAjAJNlhX1Wzmb7gpHLnoov6uvXfnyrfaUibbZexLulXjzVQ5B4zv1QpddvuyJTEghvDyuMw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1168fce22e6fee3f054c9949c7a5c93ffad8831d424ba20b0ef9dc2e421a8fa5.png "")  
   
    
-![](https://mmbiz.qpic.cn/mmbiz_jpg/myic1rJ84UQicYaPaTeJcNOszM43NvF6J88CEtytnRDQFhIaP9S6PoyVrOhehRWcPz4iacSbJoian440fYTx8OGvSg/640?wx_fmt=other&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/74df1f87e1b52249b3cc4710b1674bfd64c791fdec5047e87891515bc7748366.webp "")  
   
   
   

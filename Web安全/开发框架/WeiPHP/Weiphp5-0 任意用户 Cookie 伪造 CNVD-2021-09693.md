@@ -47,9 +47,9 @@ relation_type: "duplicate_of"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/aklOSIWUJ2Bzmqwjj845TA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -67,7 +67,7 @@ FOFA: app="WeiPHP"
 
 **首先需要得到数据库配置文件中的 **data_auth_key** 密钥**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7BOfhicicJoxHr1usVqItYugCeSoMkmdS02ZGR4ibZHyeiaicgLZEXVGYb7tphKqSTIeZ5QZict9hibTYaw/640?wx_fmt=png)
+![](../../.resource/remote/f96849b5c3cba6716e4f841a28cd43ca066ac191b9f11b0a036d38af520fcb4d.png)
 
 **得到这个配置文件可参照上一篇 **Weiphp5.0 前台文件任意读取****
 
@@ -77,7 +77,7 @@ FOFA: app="WeiPHP"
 
 **全局查找下使用了这个密钥的地方**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7BOfhicicJoxHr1usVqItYugKibxB8mXxfKIDjbmQ0rGiaHCImUvmGibibPDDdm7nyztjr36wB4JAIJkNQ/640?wx_fmt=png)
+![](../../.resource/remote/47d55ba6b544d9f4f3b83f55a3713542d4056c3544f0cbb1bdc7448ed518f1d2.png)
 
 **找到了跟据这个密钥的加密方法和解密方法**
 
@@ -242,13 +242,13 @@ echo 'user_id = ' . think_encrypt($_GET['user_id']);
 ?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7BOfhicicJoxHr1usVqItYugFwwO0qwD86gZibiaMftoVGqa3RGg3hBic4uicBMiaibdSf1jIYmibEQic6xUeQ/640?wx_fmt=png)
+![](../../.resource/remote/7909d9f159d88fd2898550c74664a4b27fe15be57a7ac82d78de3ecf16559ac3.png)
 
 **添加 **cookie: user_id=xxxxxxxx** 即可成功登录**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7BOfhicicJoxHr1usVqItYugmDaphJAdPU6RkJL5tws0fXfgwdKETOLNvfbTribZkU3VqkFTURngH4A/640?wx_fmt=png)
+![](../../.resource/remote/8ac5428c3a087458bcd894eca1ffd9ff2765c53b0681fa3f05537c9c195fa869.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7BOfhicicJoxHr1usVqItYugPe4ar27laRN5jAaA4UgPqQHmvENydk4f9S7GqkNy8SILJEEZoJoESA/640?wx_fmt=png)
+![](../../.resource/remote/dd4ba4ec33159ec3b6ca8bb7b440394f253d2a996b3fecc5f284203aa9b6db03.png)
 
 **获取密钥的方法参照公众号上一篇 Weiphp5.0 审计文章**  
 
@@ -262,7 +262,7 @@ echo 'user_id = ' . think_encrypt($_GET['user_id']);
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4cpD8uQPH24EjA7YPtyZEP33zgJyPgfbMpTJGFD7wyuvYbicc1ia7JT4O3r3E99JBicWJIvcL8U385Q/640?wx_fmt=png)
+![](../../.resource/remote/b429b9cbd75e2cfd9120725a6fe2e76b51d832d671e09e333c40dae5e398356c.png)
 
 最后
 --
@@ -279,7 +279,7 @@ echo 'user_id = ' . think_encrypt($_GET['user_id']);
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

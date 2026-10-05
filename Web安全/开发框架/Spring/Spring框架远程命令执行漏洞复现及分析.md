@@ -50,7 +50,7 @@ schema_version: "1"
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/XwsrahE41AbuvviceVHjHOevlGiawNtp4NYRA1NsspxLfeYdcPo1GticwYSAdXy52wP9Ficj1aWibKGgwQDVgjkiak0A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/402f30fa7d789e969db22faa5a3a1eb04a0d656e315fcf3e677edc4cb6bb608f.png)
 
 **Spring框架远程命令执行漏洞复现及分析**
 

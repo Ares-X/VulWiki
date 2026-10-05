@@ -43,7 +43,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/mw7o3go3oviybCMgqrsOkw)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA2ogDX4yMVb4YGtrsPzUTBzRzC1uvjd7MjTEl0mkPMKsXERWRRu9u987r6zE3YmibzrQDfeheHeXhA/640)
+![](../../.resource/remote/5f8d325f6ff0f41a6db3542ef3f5601402106715c0ec48dae2c8a8a3cce79fde.png)
 
 ```
 本篇内容非作者原创，收录于先知社区：https://xz.aliyun.com/t/6228#toc-6
@@ -80,15 +80,15 @@ EmpireCMS<=7.5
 
 首先看一下 getshell 的流程，这个洞有点像黑盒 to 白盒
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlsedxnDzY0ia34CsLYg89BrBLLnBsKlce75jrKW83VWIgXgod5EqDzFw/640?wx_fmt=png)
+![](../../.resource/remote/d81692c53f5852a34853fac9f6b37310baea982b1c8a42e5a7303d321dbb728d.png)
 
 **增加页面**功能，会在程序根目录生成一个 shell.php，访问为 phpinfo 结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlnkIg3xOKf1Ysbyygyw8zU8iapicUGjpg7pN0ORdZliaEzibDmEBtYRgHGA/640?wx_fmt=png)  
+![](../../.resource/remote/3f4d3a4cca302c45294c90331727fe0381b2d516825a686a2986ba6fdb1f0a1b.png)  
 
 但是在我写入其他木马时，例如 <?php @eval($_REQUEST[hpdoger]);?>，根目录却生成了一个空的 shell.php 文件  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSl7fricUeguwribicHGcAewSbAY3NrgAPiaccyjw3JwwwTibSaqoBLoZHF0wg/640?wx_fmt=png)
+![](../../.resource/remote/5948d639259addec9a1a61c58a67fb5a8e00e038388efc5429605694219ba3af.png)
 
 此时就有些疑问，推测真正的漏洞点应该不是在根目录写入一个 php，应该另有它径，这里分析一下漏洞产生的真正成因。  
 
@@ -98,7 +98,7 @@ EmpireCMS<=7.5
 
 在后台模版功能处，选择管理首页模版，然后点击**增加首页方案**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlsZCbVXTkK1ribUUqyibCl86CeujOnfgcWLSjX7YjCGKG3WKYSdczG0Yg/640?wx_fmt=png)
+![](../../.resource/remote/9d88c90dc9e6c65fc378451f7c23d98a9dfd30c5b1a5ed0bb6bdd084c9f903c0.png)
 
 复制下面的 payload，填写到模版内容处，点击提交。  
 
@@ -107,7 +107,7 @@ EmpireCMS<=7.5
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlQ5ZjOibWbF1GG4vsxeucn4wDzL6jEko6sWxRO8ucib6JyT13ib58icFnRw/640?wx_fmt=png)
+![](../../.resource/remote/ac6bc1f66e9fb14235784f21fe0c03c599d42b4e0212c919d346977ffed5b191.png)
 
 ```
 ZWNobyAnPD9waHAgZXZhbCgkX1JFUVVFU1RbaHBdKTsnPnNoZWxsLnBocA
@@ -118,9 +118,9 @@ echo '<?php eval($_REQUEST[hp]);'>shell.php
 
 再点击**启用此方案**即可 getshell，在 e/admin/template / 目录下生成 shell.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlnHvKxuiahhJUtLqNnKN25GuMexx4YFcAiaT1KFStqnsPyobbQ3kqsNhA/640?wx_fmt=png)
+![](../../.resource/remote/654a91c2a2c9c8ad97ef71efe9fdb49a49f2d19177ce0e345ecc73abaa1e3b64.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlLIbB81PRbZgbCfGXTcjRNUzIxGoRRibt5e5Wx7wxxBx5EEXOT20KaxA/640?wx_fmt=png)  
+![](../../.resource/remote/119d3d36a3802e93ecfe911273a4019d62971ac4f538adef0ddaea6cf08b0b26.png)  
 
 四  
 
@@ -130,11 +130,11 @@ echo '<?php eval($_REQUEST[hp]);'>shell.php
 
 入口在 e/admin/ecmscom.php 代码 48 行，跟进函数 AddUserpage
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlJCjdUynE2Km2MbX9NOM9S13QWyYE6ibs6zs0ASXqcGgnhKaWFYfLW6g/640?wx_fmt=png)
+![](../../.resource/remote/e46ef537bc7809f76918487dc452fbd7c83a6fbb14862f5d2b9e00565eb9d970.png)
 
 重点关注两个参数的流程: path、pagetext  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlVC46nTLvB0hby4FQBVnVsSxEYIEibryr4K8FWJj5NjGvq4TSWicgIaeA/640?wx_fmt=png)  
+![](../../.resource/remote/c7f19d7fa533de1c4a3308cc5d0703c74b61d53a1a7aee5d7966638103d7bf64.png)  
 
 步入 RepPhpAspJspcode 函数  
 
@@ -162,13 +162,13 @@ function RepPhpAspJspcode($string){
 
 继续回到 AddUserpage 函数，接着步入 ReUserpage 函数，在 e/class/functions.php 的 4281 行  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlib0Sf5aJuVR9RVAev4YDeI9VCKUMKwmXLXUEiaFonFaNvDJFuUt1ktow/640?wx_fmt=png)  
+![](../../.resource/remote/c91baad5e3d09c2feed9eb640f9294a9923ac2abe1b70441cf62549795e14d47.png)  
 
 获取程序的根路径后拼接传入的 path，而后 DoFileMKDir 在根目录建立了 shell.php
 
 接着步入 InfoNewsBq 函数，也是这个漏洞产生的函数。关键代码在 e/class/functions.php 的 2469-2496 行  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlibUowY9q4tGfhoJlXvzkGiaBlic19mvY2AfMTiay0V9EzNtvY8n6FrPy4g/640?wx_fmt=png)  
+![](../../.resource/remote/2389647b56b542c5742dec133395e02da104f899da9d735fc5ec9f4a1e12e36e.png)  
 
 $file 参数以 php 结尾，通过 WriteFiletext 函数向 $file 中写入上一步的 pagetext(这里为 $indextext)，而 WriteFiletext 是没有任何过滤的  
 
@@ -189,25 +189,25 @@ function WriteFiletext($filepath,$string){
 
 于是在 e/data/tmp 目录下，以模版文件的形式写入 webshell，同时也将 AddCheckViewTempCode() 返回的权鉴方法写了进去，所以我们不能直接以 url 的方式访问这个 webshell。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlgHJxLCia4xGfxgM7evT94icIOPBmsQOTj4RZribrGptKsRwPAXoMs7jKw/640?wx_fmt=png)  
+![](../../.resource/remote/2f62a05c3d745f05e4a5fed2a8f0d94e51820ad26649491a15d7bbb5705541a9.png)  
 
 但是仍有方法使这个 webshell 执行并将结果输出。原因在下面这几行  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlTlpyxrBnJLVM2m5QEUdWGwthXjEv3gUUREP43MlkUgciat4RQiciaeOTA/640?wx_fmt=png)  
+![](../../.resource/remote/4c0d339ec76cc4bced5ebf18ccd8a4960d5d208a9708d95436650dbd200184f5.png)  
 
 由于入口处定义了常量 InEmpireCMS，ob_get_contents 可以读取缓冲区的输出，而输出正好是刚才我们包含进去的 shell 的结果。因此执行了 phpinfo() 后将要输出到浏览器的内容赋值给了 $string 变量并返回，在 ReUserpage 函数中又进行了一次写入，缓冲结果写入的根目录下的 shell.php，造成一个表面 getshell 的现象，其实是一种 rce。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlnrOraicD0OBI3p3oHH7qg4krcSd15cX5XdxWzblWJQkYA6gzr4mkicsw/640?wx_fmt=png)
+![](../../.resource/remote/548bd7b2bd902638d6aff5218613d5ea422202e9768e980829a7c849ed3a6937.png)
 
 ### **任意文件写入 2**
 
 在 e/class/functions.php 的 NewsBq 函数中调用 WriteFiletext 函数向 / e/data/tmp/index.php 中写入文件并包含
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlxccj1SHB5OHQwibYWmCQ0ic7Pty6eLoXzicR8HRwvNjWkXPWKQGr6kmRw/640?wx_fmt=png)
+![](../../.resource/remote/377171776ab862acbd7aea0566006791c02262b453d4128b32d31cb47a839820.png)
 
 查找一下哪些地方调用`NewsBq`函数，最后锁定在`e/admin/template/ListIndexpage.php`的`DefIndexpage`中
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Iwic48fpkwA3RVjSgSpd26tn3mI3yicHSlPFDE3CIwDlGsy7reenyRgN58icBLv0iaY561Pibvv5qvNbBvMzoIrbEVA/640?wx_fmt=png)
+![](../../.resource/remote/8d26a4f6ecd4b114025f1467e19dce85dc9af0d250157752ffa8b5b232e65c38.png)
 
 首先从库里获取得到 $r[temptext] 作为参数传入 NewsBq，此时 $class 为 null。那么文件内容可控吗？查看一下入库的语句，看看存不存在任意写入，全局搜索 enewsindexpage
 

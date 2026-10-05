@@ -74,7 +74,7 @@ RustFS 控制台将高度敏感的 S3 凭据（包括 AccessKey、SecretKey 和 
   
 至关重要的是，攻击者必须将文件的 Content-Type 元数据设置为 text/html。当管理员尝试预览这个看似无害的 PDF 文件时，浏览器会将内容解释为 HTML 并执行嵌入的 JavaScript。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/BicXBAdicJy7OwZQAIedKenurSbP0ficakQOQVswDWSbAoWwvNtqiaTU2ibniaKEhICVvaZlgvDWCzwHjP1neJTp7Ymjb0V0r24yBPib5oYkGLVqPM/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/a4f8c42e1c6bfcb69da08dc02b48cc268c60027eef8fc779da6408efe504c504.jpg "")  
   
 概念验证 (PoC) 证明了这种攻击的简单性。  
 1. 攻击者创建类似这样的有效载荷 `<script>alert('XSS Success!\nLocalStorage Data: ' + JSON.stringify(window.parent.localStorage));</script>`。  

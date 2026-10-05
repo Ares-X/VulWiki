@@ -50,7 +50,7 @@ source_status: "unknown"
 Do Son
                     Do Son  代码卫士   2026-07-10 07:40  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -74,12 +74,12 @@ KEV
 目录。这一前车之鉴提高了快速修补的紧迫性，尽管该漏洞目前尚无被利用的迹象。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfWqYfaUve45wyHhzYqFYrd7Zz3XkuWsDLuRplt0ibMxmiaF7CiagmwBQMTuodgsVB0G3gE4qy6AL0D7CY5FNs82ISUloic2YTzS854/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **攻击方式**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfUXRrNAaI05W4icvLumsXvacqB2Prxf3o7OnkiaNH1kJL84tyP2XibhstJpFw8tWSicBsgMUDicubZBdrFDSVVfzjFsfXibApQf9b0Yc/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -98,12 +98,12 @@ TSA
 下进行确认。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfVkQby0J2FXwcL8mMXW8nSdHpSic3xDKUUYV9fq1ugoXoYnVOMPASM7EjlvIFY9cUp5c6NGe8AHpNCicibfzypK28qgqYjtyNHR1Q/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **受影响版本**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfUDQeBgGRgHhcXkzGsbeW1lBp5ic1VfvIcHn7IoLyBLicMErLP4ricggjuDba7ia0woq5xmIXBhtenubXhDYkD0VEV51NlyrI7CkuI/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -124,12 +124,12 @@ Prisma Access
 有两个分支被评为中等严重性。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfWHY4RiaY1kmtJUaEmZWNvNicDByD4vXPubKluy1fLUYdtUwlnypM1D53WBics4ap10J8KpfjNgkw9SgibAKBLPibrXv8g3psQrALp0/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
 **补丁与缓解措施**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/t5z0xV2OYfXAXAZ0iauNR2pIkgy6u2dOdCsHIqrfpdc6KObX8H5uZB4Idpvriacv6REs3ZrT7ga6o71ZQ1uTx5BZReoUDk1HwnDkZc6CEcazg/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ae040977292eb5987d2738c4f8833ef44f371aa27dcf1f9c58858ae713f6dfce.gif "")  
   
   
   
@@ -199,15 +199,15 @@ e
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
   
    

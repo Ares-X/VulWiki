@@ -101,23 +101,23 @@ CVE-2022-23277:
   
 访问目标https://10.0.102.210，发现跳转到office365,推测可能为exchange与office365混合部署环境  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagf3yPLtVXb4gt4OGLhMp1wgibfS1ib2Hw3Wl9iabZEtpdb1hJ6wEo2zKjw/640?wx_fmt=png "")  
+![](../../.resource/remote/5a95c4981c0857128759a855cb6790895e13b5209048d23c1bb9779b4df3910e.png "")  
   
 经过探测目标仅开放了autodiscover/ews/powershell/mapi等接口，没有owa/ecp等图形界面。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagJ8E52n1WLHslIyS7eWU4wPmhx8alRwiaHNH2cYWCtDQFUUpk0VGpxaQ/640?wx_fmt=png "")  
+![](../../.resource/remote/3f6ad403ad32a5a46bfc501a229aff3659e175c626d318954ea4e8f3c0fa8ebf.png "")  
   
 直接盲打一发proxyshell，成功执行了部分流程。  
 ## 获取内网域名版本号等信息   
   
 通过autodiscover接口的ntlm认证信息获取内网域名等信息：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagc2Ier4r9Bux1ZsjGO08ib2KaRLCH0Fd95PC8L8d5s4ghgkDDE3wPaKg/640?wx_fmt=png "")  
+![](../../.resource/remote/6c1a6d178c7f2259fcba343eae576747eeb71a01692dc55be632610a93c9637b.png "")  
 ## 获取Administrator用户的DN   
   
 通过ssrf调用autodiscover接口，获取administrator用户的dn，发现无法获取：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagx1gF2YvpcmcibhE5HL4mMP63WF9t9MJsuAHAdibdgyYSib9VD0ybVQU4Q/640?wx_fmt=png "")  
+![](../../.resource/remote/ec7c2d47e0eaeb5dd93f2b8a75aa8c87717176141800846f13550b92db842bbe.png "")  
   
 这里获取dn是为了获取邮件管理员的sid，但这个环境并不存在Administrator用户。  
 ## 获取内置用户的dn   
@@ -137,46 +137,46 @@ BUILTIN_EMAILS = [
 
 ```  
   
-但在这个环境中，这种方法也不适用：![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagY1fpmHql6ZZN4icflTFInnBrRWHpFsq8DytT4LqQ7JqtVD0vztzPrkg/640?wx_fmt=png "")  
+但在这个环境中，这种方法也不适用：![](../../.resource/remote/ef6d995b6bd58231666bc6b472469c4f875866079b5896ca2aa58d2522dc1184.png "")  
   
   
 https://github.com/dmaasland/proxyshell-poc/blob/main/proxyshell-enumerate.py 提出一种方法，使用ews接口的功能获取到邮箱列表，默认情况下会获得列表：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibaglr4a3wncnQlCRSIx2cOJuWlhCUbSC9PR74IKUmLTsqHDR11llibib2gg/640?wx_fmt=png "")  
+![](../../.resource/remote/41f09b2c65ac23202e87984658d8a870b3ffcde1f5c58973ece1f6160751f647.png "")  
   
 实战情况也可能遇到无法获取的情况，我们可以通过外网搜集到所有的邮箱进行爆破直至得到dn，但实际环境中，很多邮箱位于Office365服务器上，无法通过autodiscover接口获取dn。通过邮箱获取到dn：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl87964RAf0NgqMwOicaqwrgS1ZOybicPrnHfk5s7fx1CupIAFfquDUEKyB2YLDqiaibaa1XP6dmBJE9tnYHQ/640?wx_fmt=png "")  
+![](../../.resource/remote/805b5bd7c808a1f77b6793a7362849143c7aab877aac06b608508f1365d18055.png "")  
 ## 获取sid   
   
 这个mapi接口从CVE-2018-8581就已经被利用，当有账户dn的时候可以获取到sid：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl87964RAf0NgqMwOicaqwrgS1ZOGMkCicZkjzYYEcOrg4BjlyoJJibr63Cia4GfVEibwxM10zxep1rwdQZTow/640?wx_fmt=png "")  
+![](../../.resource/remote/77f2a8eb65633920aba7f2e1e6604b2e42abfede84010bcb1d960c0c55d7f06f.png "")  
 ## 伪造powershell接口token   
   
 powershell接口的判断用户身份是依赖于X-Rps-CAT参数，主要通过里面包含的sid判断身份：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagzjRuvLv89dZKhdpDFAssdicsYiakVov7iae6KQZEvmH4m5gkoptozW7oQ/640?wx_fmt=png "")  
+![](../../.resource/remote/09176fa40528004ab6c538904b59e51634002bb3b2ff410f6181fe1e13df7a03.png "")  
   
 我们可以构造这个X-Rps-CAT参数：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagxwRW3tHYLaddUCNI2cSQzkibZfoBKhPzX5Kru11t2HBFRs2PqXo5iauQ/640?wx_fmt=png "")  
+![](../../.resource/remote/faa436dd9b92d797075d706bc8a705cf78555f01b35de6130010e80745dae4a6.png "")  
 ## 调用powershell执行   
   
 主要依赖于pypsrp库调用powershell执行New-MailboxExportRequest命令。该命令将某一邮件导出，这份邮件的附件由我们精心构造，其附件中包含我们的c#代码。构造成功的邮件导出到web目录后不影响正常解析。  
   
 同时我们可以通过ews接口给某个邮箱的草稿箱发包含恶意附件的邮件：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagONYUmgmjLCyLmzdZmHwXvC2EvomyLSToOnDARVXLZRLpDmSHiasRSIA/640?wx_fmt=png "")  
+![](../../.resource/remote/a99c7454e8b4956100187d428df8a618e7752041b04e023a575c9d7fc47517e1.png "")  
 ## 导出邮件   
   
 直接使用exp，会报错，发现无法写入文件：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibag7tvD9iadIKichAKbq9iagh0Y89SKUibocAqGKjrvia5v6Za1THictoV0YBxQ/640?wx_fmt=png "")  
+![](../../.resource/remote/eeff67cb5fc1c8e5675552e7c5e53514ae306f2581be4edd735b27729e12445a.png "")  
   
 抓包看响应发现没有导出邮件相关的命令，疑似这个账户的权限不够：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagUSzK6LMOdiaDobfLiaia5wKohiaaozFIFflrCI1TBiajQTia32UicKyvCuzXw/640?wx_fmt=png "")  
+![](../../.resource/remote/f09878476b9bf2746f84020ebea48ffb86667d67689b8c0dcf494c22bf42ec68.png "")  
 ## 遍历sid   
   
 尝试proxyshell-enumerate返回的邮箱，发现都没有成功执行。推测可能是返回的邮箱不全，既然一系列操作都是为了获取一个sid，我们直接对sid进行遍历即可。  
@@ -185,11 +185,11 @@ powershell接口的判断用户身份是依赖于X-Rps-CAT参数，主要通过�
   
 发现Administrator用户的权限确实很低：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagaJMSPXDD3DhEC3phAXNHX2CkPiaSAQxXe2SJgpOG03CuNp5d9fghnSA/640?wx_fmt=png "")  
+![](../../.resource/remote/63e66e2421331cd11cfc04d30ceabbc50723e06fc2f5e37a9976474583938474.png "")  
   
 我们可以遍历sid直至找到支持New-MailboxExportRequest的账户，但在这个环境一系列尝试后无果。使用getmailbox获取到的所有账户也没有高权限的：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagFKXzlIIDSrmaLRFp4iaAib5bAdmHO0iav5zNpo3ugQz0ts993xUx7L8gg/640?wx_fmt=png "")  
+![](../../.resource/remote/e0a9b3f4b377255baad87a6da4d5a4146c92265c8f436629c5942da385388e35.png "")  
   
 实战环境中也可能遇到这样的exchange环境，实际邮箱都在云端office365上，本地并没有被频繁使用。导出邮件需要用户为exchange管理员，在域中为organization managemen组成员，极端的情况下会出现organization management组为空的情况。  
 # SSRF2RCE  
@@ -202,8 +202,8 @@ powershell接口的判断用户身份是依赖于X-Rps-CAT参数，主要通过�
   
 原始脚本直接使用账户密码认证，再利用反序列化漏洞进行攻击，这里我们需要修改成使用ssrf漏洞结合X-Rps-CAT绕过认证的形式：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibag5Wj93OCtSox3EicicYx7dJSRbRVGu7JCMmQNvalYicX0Mh2wGiawkeFKwg/640?wx_fmt=png "")  
-其中X-Rps-CAT我们可以使用proxyshellwithsid.py这个脚本获取：![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibag12UCjz6C5pcUPFL4Bfvgl83oEicKiarmmpWFfwoJ9libhQ1tnsb3GhmKQ/640?wx_fmt=png "")  
+![](../../.resource/remote/c3ece06f3b8643db27259225a9841195c87634dbf02b37fc37fd1db2799ffb6f.png "")  
+其中X-Rps-CAT我们可以使用proxyshellwithsid.py这个脚本获取：![](../../.resource/remote/1737d65ea85560de590249a1e35711492879a6aeb42d3063c1b53db90185ac40.png "")  
   
 # ReSSRF  
   
@@ -225,20 +225,20 @@ print(r.text)
 
 ```  
   
-可以借助ssrf绕过认证访问到autodiscover目录下的资源了，进行进一步利用：![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagWU3ibJhFWPeEh5oVHo9ICJVVFiaIkvXCGms7jKa6889y28NBzGAQYjgw/640?wx_fmt=png "")  
+可以借助ssrf绕过认证访问到autodiscover目录下的资源了，进行进一步利用：![](../../.resource/remote/57b7afe024c44bea9e2757d5acf1c00c2d06c496e1453afb50faf709f28b88ed.png "")  
 多次尝试后发现无法成功写入。尝试了多个可能问题，包括命令的转义等情况，最后得出结论可能是被目标杀软拦截了。  
 # 反序列化利用写文件  
   
 之前在很多场景下遇到了限制w3wp.exe调用cmd的情况，之前也介绍过TypeConfuse的写文件，这次使用ResourceDictionary写文件，主要可以参考头像哥的文章https://www.t00ls.com/articles-55183.html#tls3，需要注意转义，路径带空格等问题：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagiaFOhaRyLxM9SzOVEQfSoqG82ic5sZtH7MEgk37ia5P3OricDVcb9jk6Rg/640?wx_fmt=png "")  
-修改poc后写入使用https://github.com/7BitsTeam/ProxyMaybeShell/blob/main/proxynotshellfileWrite.py访问，写入成功但报错：![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagedTR75SbiaAevyqf6ib4QAbbf0TXvL4ybMwITXgsXwIRszULibkPTSXWg/640?wx_fmt=png "")  
+![](../../.resource/remote/67a0ac103cf7e7ee173b1448b40d25fe09ebe2ced2a462effaafe755d70766c8.png "")  
+修改poc后写入使用https://github.com/7BitsTeam/ProxyMaybeShell/blob/main/proxynotshellfileWrite.py访问，写入成功但报错： ![](../../.resource/remote/0fc8d45265426c85ed344995631232f98416fb8c05b961a1e6fac0e9881a8df7.png "")  
   
 # bypass windows definder ATP  
   
 更换多个shell后发现列目录等文件操作没问题  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagSiaichFNHD1xCbXxvcCibFoNj92bGAkoyakFbYqoiauXc84zibPDdo5R0XA/640?wx_fmt=png "")  
+![](../../.resource/remote/1d7424a17be17066e6cff4122296e0615a720d90a0a64b738522fd1e027b7505.png "")  
   
 但执行命令就会被拒绝，查看目录可以发现存在较新的windows definder atp，使用https://github.com/ThePacketBender/webshells/blob/master/POWERshell.aspx可以通过调用c# powershell相关的dll绕过definder部分限制。在这个漏洞利用的情境下使用控件表单的webshell非常麻烦，稍微修改一下webshell：  
 ```
@@ -287,10 +287,10 @@ print(r.text)
   
 可以执行部分powershell命令：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagCynrgDEDUNsLgG7bX2FNPHYdLsy1nrPiaO7ImbHFAYJY32MriauApQ4w/640?wx_fmt=png "")  
+![](../../.resource/remote/dd0d52159437a88284a78e1dc569d2186ab9d28156c9c93378268e5d25a7f143.png "")  
 启动敏感进程依旧被拦截：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/PLeCXQl8794MAKtoeuG5HUkZdibEKFibagOcCfBT56rp1cSxC8KrDr2G319dvpjlw9iaDtbiaF8wENgO8wUNZE8gUQ/640?wx_fmt=png "")  
+![](../../.resource/remote/1529efe7a520e33de2eff676b525526e99ef9bd92ea22a3fafe9f3f91a6564f2.png "")  
 # MORE  
   
 通过c#调用powershell相关dll可以实现绕过ATP执行部分命令，但这样还不足够。我们可以使用powersell关闭definder的一些功能：  

@@ -48,9 +48,9 @@ fofa: "\"NCCloud\""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/jb7XeLGvdyNrF1xQFsXDjA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**
 
 **一****：漏洞描述🐑**
 
@@ -68,7 +68,7 @@ FOFA "NCCloud"
 
 **登录页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmCpgjFoDgTNHthDhaUDAS6JvIZ5zPS9Yhhthbb3t9kyyXRqKibEo1diaQ/640?wx_fmt=png)
+![](../../.resource/remote/d0e2048d670e88ed1573042e46e0a25a9e813c103839edb287e3a7aff1fcea04.png)
 
 **在应用中存在文件服务器管理登录页面**  
 
@@ -76,7 +76,7 @@ FOFA "NCCloud"
 http://xxx.xxx.xxx.xxx/fs/
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmWkGZJLeey1GNGMAprdopzSSYsJ9jJEdiaCI27xCmSibial79MD3uokOkg/640?wx_fmt=png)
+![](../../.resource/remote/f60d4c4e2e26f7942504837e7af14b6b99cbf2fe3ef35744566dfba4d8166802.png)
 
 **登录请求包如下**
 
@@ -98,7 +98,7 @@ Connection: close
 sqlmap -r sql.txt -p username
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmQ11KDar2tiaHBtnNQIbN0pjBcpmPicEW7pbVLwArvRSEiagXKDnUlDW3g/640?wx_fmt=png)
+![](../../.resource/remote/2fbb1265ad69aacf9d28ca288ef9edd0084334797ee45c1d25f4c6f24a1446f2.png)
 
  ****四:  关于文库🦉****
 
@@ -106,13 +106,13 @@ sqlmap -r sql.txt -p username
 
 **http://wiki.peiqi.tech**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmvfI5iaWc3vnKX1V2RQeXnCoLUaHMsjxxhuUc3K2wu9v5DmRW0MhXmrw/640?wx_fmt=png)
+![](../../.resource/remote/52415b2d7f2ff92ded16f97aa9aa7275eabe982c56505632fce543b8b2928f98.png)
 
 **Github：**
 
 **https://github.com/PeiQi0/PeiQi-WIKI-POC**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmeShfVkfwQS8Oet0CwZ4pagFfNNcia9s6g4bSEIibEukYyRQzR6WVia4eg/640?wx_fmt=png)
+![](../../.resource/remote/b15aaada1ba0151fca75f4a3a891adc2ba64378562c6feb2834e3808aed22bf8.png)
 
 最后
 --
@@ -129,11 +129,11 @@ sqlmap -r sql.txt -p username
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mm6ndgMqZlfq7MQ5H27d7lZlWEVG4VEGJjteefhdpJqqWaNR0JBNibjLQ/640?wx_fmt=png)
+![](../../.resource/remote/03ea78918a771e15c79df3cde08650b239c6c4185c99328f39ef4a120fa8921a.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmXickEs50QRGo5geOBjIBOlbeTOic9GvR3hGBvFsgibgP2FGplVQBr2yIQ/640?wx_fmt=png)
+![](../../.resource/remote/6b06d9ca6e4952eb552ee14df1cd78b00822d73c74b09410b7e73a8cee32b290.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmNwJOPmSFkgjk0tAuSP3kHryDjyUia6Zfia1tmPVD2ibYALahPVicmFXopQ/640?wx_fmt=png)  
+![](../../.resource/remote/e2a9bb88b3c7c94ca72d1af705fcf699c1bd885a8926b2c60c508ffbe3d2ff9a.png)  
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

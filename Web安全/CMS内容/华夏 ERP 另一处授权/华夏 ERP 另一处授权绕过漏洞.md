@@ -108,13 +108,13 @@ schema_version: "1"
 com.jsh.erp.filter.LogCostFilter
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAHZf0xlShnFVN9xMZdhQHyiavcXdedib1vGxecoxdo6Pk2jY5kibOXtU4zyA095RMCYX45WNgMYVwbQ/640?wx_fmt=png)
+![](../../.resource/remote/66253d27d969a1d666c16936f65d7d840e7cce8d8b3b2e59274cbca1b3986ab6.png)
 
 如果 URL 开头匹配到了 allowUrls 中的内容则不跳转登录界面
 
 追踪一下 allowUrls 的值：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAHZf0xlShnFVN9xMZdhQHyHh4byXb6DibHEo7bwqC6WNSV1eHuIiahMwb4pn47iaB7gbzrapWI6pdKQ/640?wx_fmt=png)
+![](../../.resource/remote/7a052e356a894054d2d546314ebe0e929b194e01adc61d7d0038e45ce830c310.png)
 
 ```
 [“/user/login”,”/user/registerUser”]
@@ -128,11 +128,11 @@ python3 华夏ERP授权绕过2.py http://ip:port
 
 就比如 / user/login/  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAHZf0xlShnFVN9xMZdhQHy3icskL9Brzhyicw14IhNtKypGbym1k8j889U8rTgWsiaziaXaepb2Y2z0g/640?wx_fmt=png)
+![](../../.resource/remote/a6531c6b820a7926dcb5a054c9a1f659dad08bdc214cc22095246a13062bbd05.png)
 
 或者设置为 / user/registerUser/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAHZf0xlShnFVN9xMZdhQHyElwRHr1ZdEsibsVBNmdeaYw8iaYDI68hytnLhNibc72IlF8QoCAnwQBYQ/640?wx_fmt=png)
+![](../../.resource/remote/988f3c84c08f19d7784cfb20c5821aa0fc2328167ea1b4a373ad247608a0eccd.png)
 
 POC
 
@@ -163,13 +163,13 @@ main(sys.argv[1])
 
 最后再给大家介绍一下漏洞库，地址：wiki.xypbk.com  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1GjZWV69BXhbVdDPh2GNcQzoTyXn20iaOhsIGsxPPicJz6u7Rkq5weKmQ/640?wx_fmt=png)
+![](../../.resource/remote/f441435c425c073de3003c2ada025189291166f71165e8096503acb35e801735.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1vUPmy8nUyUcxBicqJEtxo3ib4YzTQQEWd5cotecmuB0pZy4AKgAdhapg/640?wx_fmt=png)
+![](../../.resource/remote/7210ad732d40f6018a3c3546c6c8f677ddc9a5e9c9689de960e43105a3f1491f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1SjnVpDzicoVx6nMShk1Ou1jtKYYicsvNHt3DCWZnM5bvTnW56wcFwD9Q/640?wx_fmt=png)
+![](../../.resource/remote/fe77202c8dba688b8b104ca7f3453aa0058406b081353419d7140e5241765e8d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDrnboUobzRQh0afompnvn1Hxk0rhBSk7Oib2ZiafD0w9T9YBDffv171WjmnvFxlktv5UZiahYwytZ7w/640?wx_fmt=png)
+![](../../.resource/remote/ea640a79c5b1f90cd3cc504868da75fea23d132c0bf2f4a85c27b2620272d39c.png)
 
 本站暂不开源，因为想控制影响范围，若因某些人乱搞，造成了严重后果，本站将即刻关闭。
 
@@ -181,19 +181,19 @@ main(sys.argv[1])
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Yzhia63knJ4QJFvO4WBfd6KQazjtuPC7uqNBt5gE06ia7GjOVn2RFOicNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/edbe746b63d462b8264c4cdc8bdb6f3eea3031d4a274e271cfb03ab17b8f24e3.jpg)
 
 扫取二维码获取
 
 更多精彩
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TlgiajQKAFPtOYY6tXbF7PrWicaKzENbNF71FLc4vO5nrH2oxBYwErfAHKg2fD520niaCfYbRnPU6teczcpiaH5DKA/640?wx_fmt=png)
+![](../../.resource/remote/ab6c5ecbc93adc192adef1b7c05ca25153b4fc3f9c4963f72d75fa0a3aaee299.png)
 
 Qingy 之安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
+![](../../.resource/remote/7b68c0062559511a9826e83699fc6bc7773c7080beb677ea03e8c7544a564dd5.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
+![](../../.resource/remote/8e57ad757dd628c11c5d5fecfeb91ca234ca60712b2f65d6b1294044233f5a75.png)
 
 点个在看你最好看
 

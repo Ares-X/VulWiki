@@ -57,7 +57,7 @@ source_status: "unknown"
   
 对于无法固件修复的核心漏洞CVE-2024-51978，Brother及安全研究人员强调，用户必须立即更改设备的默认管理员口令。同时，Brother已发布固件更新以修复其余七个漏洞，强烈建议用户尽快安装。其他受影响的制造商（富士、理光、东芝、柯尼卡美能达）也发布了安全公告，同样要求用户更新密码并升级固件。此次漏洞披露是Rapid7自2024年5月首次联系Brother起，通过日本JPCERT/CC协调，历经近一年协作（至2025年6月）完成的结果。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/0KRmt3K30icVhzT8rFMgL2eXAv5rR69miahzdx6ibTrvCIr61snNfNRfibibIAHwICepic2Urk9397mNvZcE0srHbibibA/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/8bdc6c3e9ec196a55aa8649a69bff5f2c0123e4a921f5d50bf52dce9c7d77bb9.jpg "")  
   
 情况概述  
   
@@ -105,7 +105,7 @@ Rapid7对兄弟工业株式会社 的多功能打印机 (MFP) 进行了零日研
 ，而**208个型号受到拒绝服务漏洞CVE-2024-51982的影响**  
 。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/0KRmt3K30icVhzT8rFMgL2eXAv5rR69miaavkicdg8qicc1rRrTWSx9bH48Uu0Sf1eDB1OYdfQyPic6PCXO1ZHSPdWg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bb5eea23872dc46860acee381e3f4d074f1c20950d2dbcc98dc0e8aa83d1628e.png "")  
   
 作为此次披露的CVE编号授权机构（CNA），**Rapid7**  
 已在所有8个CVE记录中填充了每一个已知受影响型号的信息。由于数据量庞大，该博客中未复制完整列表，建议安全从业人员直接查阅各CVE记录作为关于受影响型号的权威信息来源。  

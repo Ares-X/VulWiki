@@ -69,7 +69,7 @@ CVE-2024-36404 是 GeoTools 组件问题，组件版本与 GeoServer 2.x 产品�
   
 GeoServer是一个用Java编写的开源服务器，它允许用户共享、处理和编辑地理空间数据。为了互操作性而设计，它使用开源标准发布来自任何主要空间数据源的数据。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWd1a3VRIeVBRap94GX4e5Smoro5Q6WzIBM9gzltID0XJbfoJyUshz5xFNMgQKkjk03e0maUSWSMg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ac030ab07d4440e8b1704808896afe95629c13147dfe6d15557530237f431c5a.png "")  
   
 **0x03 漏洞详情**  
 ###   

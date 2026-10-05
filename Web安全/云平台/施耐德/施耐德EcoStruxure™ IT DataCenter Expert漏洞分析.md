@@ -86,9 +86,9 @@ CVSS v3.1 Base Score 7.2 | High
   
 代码执行（使用反弹shell为例）的效果如下：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57Pekpnybu4qLmvFpVt35rHUWSm2UbYXSA4ezbI8CaBy5LZBaTV0voR19IANkMzicFbGFEfQJnibbiaPQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ff55ca0deb1d568fe0e34ffddebb72310890315c48f8e836ce95c4c9c0a66837.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57Pekpnybu4qLmvFpVt35rHUSze2Lt7Ceicmje87I8Wia3HgEqUiaulqfJDbdjjn0mJQDWqvnesjcK9Iw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/57053cb4a0f0c4f24d75d6436262ddf57de426ace9e38b210f84ecb70824cdb4.png "")  
 - 解决方案  
   
 施耐德在EcoStruxure  
@@ -96,7 +96,7 @@ CVSS v3.1 Base Score 7.2 | High
  IT Data Center Expert 9.0  
 版本中对该漏洞进行了修复，受影响的厂商应及时更新到该版本以防止相关的漏洞利用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57Pekpnybu4qLmvFpVt35rHUaEa9Pv9o0A399Ll18viaJB5q9K5nqSvMLq92WMxJeBoUcdg0YGic9zicQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c467312a57afde053b2135937dd367f518b81cf9ed4441604e576fd6ee9dc7fd.png "")  
   
   
   
@@ -121,7 +121,7 @@ ADLab成立于1999年，是中国安全行业最早成立的攻防技术研究�
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57ONOtW3DSPMEXiaLPqrs8a20KxsFg78IaJzyEf51AIjLGNkDG5tsCH76Qo7PoVz74JGQqKJbCh5PdQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/80a6f7bf64401bfe34fa64559b387ee8ba378c610db730081de09a128573a62f.webp "")  
   
 
 

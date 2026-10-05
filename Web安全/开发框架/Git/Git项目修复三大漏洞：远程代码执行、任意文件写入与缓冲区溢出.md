@@ -37,10 +37,10 @@ schema_version: "1"
 #  Git项目修复三大漏洞：远程代码执行、任意文件写入与缓冲区溢出  
  FreeBuf   2025-07-09 11:01  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR39cPekeVE3FtOdaG3YichBgNotyibxazZgmWCHJL0bCkGHfJPkS4Br52FhciayfKdoMAImAVlp7uwyGA/640?wx_fmt=other&from=appmsg "")  
+![](../../.resource/remote/382e55b9c6eff74173937337d8d57fa33d688a070d339e1d1d15353446eaf711.jpg "")  
   
   
 **Part01**  
@@ -158,7 +158,7 @@ https://securityonline.info/git-project-patches-3-flaws-rce-arbitrary-file-write
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
    
   

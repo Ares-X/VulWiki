@@ -61,7 +61,7 @@ schema_version: "1"
   
 PostgreSQL是一个免费的对象-关系数据库服务器，它的Slogan是“世界上最先进的开源关系型数据库”。它具有强大的功能、稳定的性能、高度的可扩展性和丰富的数据类型。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SXtAPtWzrWO4iaJicvAtMDHxcJ1wNUyZjooXdR3ibtC0YXmxQeUSBP1YI9bnGdnhKsCI8pz0se8xXXLQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f14bb0cd5e027708f4058534a886304105acb4ede94bf64e58f302fa001b4ab.png "")  
   
 **0x03 漏洞详情**  
   

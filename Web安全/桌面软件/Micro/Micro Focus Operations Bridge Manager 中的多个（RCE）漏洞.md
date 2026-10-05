@@ -83,7 +83,7 @@ Micro Focus Operations Bridge Manager(OBM) 是一个复杂的产品，用于监�
 
 下图显示了该产品如何集成到复杂的 IT 环境中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV12oQHay11l64GR1Ospcakd6WiaHd544K0XMwib3p069G8FiaxLbbYdAPylAEPwqYHiclCCpHvsfQSwJA/640?wx_fmt=png)
+![](../../.resource/remote/56152ad69fe3e854db7d7ca3b4ea9658ddc6e130b577c4c53d6fd0296d3caf28.png)
 
 该产品本身由以下部分组成。
 
@@ -419,13 +419,13 @@ python3 ucmdbPwn.py 10.10.10.99 ysoserial-master-SNAPSHOT.jar calc.exe
 
 ...... 将导致 calc.exe 在运行 OBM 的 Windows 主机中以 SYSTEM 的形式执行，10.10.10.99：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV12oQHay11l64GR1OspcakdPVk6lBsTp1txcXBIOicf8UTY0slF9QdjaEGRIhLQicIDreibeyRib9icgsQ/640?wx_fmt=png)
+![](../../.resource/remote/dbd44e41a0adb826c7a9cc36d3739a2df6537336547ca97e45c9bce1eaca2d6c.png)
 
 Linux 和 Windows 版本的 OBM 都受到这个漏洞的影响。下面的 asciinema cast 显示了 Linux 版本的 OBM 上的漏洞利用情况：
 
 演示视频：https://asciinema.org/a/376442
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV12oQHay11l64GR1Ospcakdzm4kZo3EcsSLfGGsdlU50km1mBYVPNibMrDpwicGUbfWM6h0DBIRo4gg/640?wx_fmt=png)
+![](../../.resource/remote/eb650e646a13cb7cbc88b3ab819edc5ffe1327890442c700dd9a15b6645a79ee.png)
 
 **3：RegistrationServlet 中不安全的 Java 反序列化**
 
@@ -807,11 +807,11 @@ OBM 默认将自己安装在 C:\HPBSM 中。安装完成后，这个目录及其
 
 特殊权限位可以从下面的截图中看到：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV12oQHay11l64GR1OspcakdDOzgwnFGoXjcUH6qAKhqOGw0bQP2lB2iaWB2hMgfyQKo1ORwtpShBWw/640?wx_fmt=png)
+![](../../.resource/remote/91aea48b1f947276a74d124f5caf5b6305f85598a43409777c067b37f0f8e43d.png)
 
 如果我们进一步钻研，我们可以看到 "普通"（非管理员）用户的实际权限：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV12oQHay11l64GR1OspcakdqLDRNicMRmYH34UTpn5ooou5D0ggfgBtKuznhBSQnV8h4ImWbzTRDdQ/640?wx_fmt=png)
+![](../../.resource/remote/19263a91b30229220143a78ff2b5011a84192f15c5f167766433e1ed6bbbbc60.png)
 
 因此，显然 "普通" 用户可以向 C:\HPBSM 和它的所有子文件夹写入文件。
 

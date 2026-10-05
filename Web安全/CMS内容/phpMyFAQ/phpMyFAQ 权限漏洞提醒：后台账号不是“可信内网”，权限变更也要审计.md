@@ -38,7 +38,7 @@ schema_version: "1"
 原创 tcode
                     tcode  字节脉搏实验室   2026-06-22 02:34  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nOo5YmK1PHxIxJkPbEPgkibYxDQJfnzFK5m0H34K60IAHdjkC2qMZNEc0hPLsfvJ8Po1cNJ7Zib8HaWHseAQQSxxFcqJCS3MnMRK1f2ullegI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7b494698f23d64a637c3ceb85ec039ead991f7e29459ccf6b7a6eb4012c93fe8.png "")  
   
 事件概述  
   
@@ -49,7 +49,7 @@ schema_version: "1"
     本文不提供接口名称、请求路径、复现步骤或利用细节。对公众号读者来说，更重要的是理解这类漏洞背后的治理问题：只要后台系统允许普通账号影响权限配置，内部授权边界就已经被打穿了一部分。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nOo5YmK1PHztsZpuoPSfFGUuUe3yyX3IMFjic3LZfmHia79HDZPlDbskCu61ibktIIE5nuLrjcKzK6cmtiaQYwgJR9rleUSXKLcLfoF4aB9b1us/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4bd96e010517b264e497394f288b26f500243614d91b5d4958f24a7430576302.png "")  
   
 核心事实  
   

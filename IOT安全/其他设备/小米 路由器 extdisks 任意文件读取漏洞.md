@@ -76,7 +76,7 @@ previous_version: "小米 路由器"
 
 漏洞复现
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUEibicEdnok5YnKC2ewdxTn6M75xhRPxcfqf2F4Ryubrcs1MXiblRvgUBRQnpUqbXpgcESNiabRfqCkQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0682aec5ce04d101c2a5a5eae1e62503e33894639f8e4ec79a5fe5f025aa260a.png)
 
 payload：
 
@@ -122,7 +122,7 @@ nobody:*:65534:65534:nobody:/var:/bin/false
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbXX1S8Cos228ay1hib0OLD27f8XlBKHVfg3iasqtfhptvOjfLbRwUMRjLuX48KTx30V9GF7Wv4lsRFg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/accbf9e1bd9d8c08bef6905f0c808755e366ab13b027e6aa32ace7af169ec799.png)
 
 **修复建议**  
 

@@ -60,7 +60,7 @@ schema_version: "1"
 原创 tcode
                     tcode  字节脉搏实验室   2026-09-20 02:33  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nOo5YmK1PHzLF60TESibwuRG1rxJaDvWRLkBNy05x6uCDSJDKldml6h6JtQVkX9ibHviaTgsW5p8XA6IcTl9IHQHmudqsibYwqhAgwXvaGKYcvA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3a2c16de0019c8bb6b8a405483adcdf7cbb80a02b0f2b0431b84d35208fb2eaa.png "")  
   
   
     一个本应编排微服务和后台任务的工作流平台，被提交一段看起来像正常流程定义的JSON后，却可能在服务器上执行系统命令。Orkes Conductor的CVE-2026-58138正是这一类问题：无需登录，攻击者就能通过工作流API提交内联脚本表达式。公开漏洞利用代码在8月出现，Empirical Security在8月21日观察到实际攻击，Fortinet随后发布了持续利用告警。  
@@ -85,7 +85,7 @@ schema_version: "1"
   
     先封到达路径，再判断是否已被利用  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/nOo5YmK1PHy2srSKzJeBhNMOsKZuB2dN8Z6LbZtMaFfZ0UrwQbeEWsKd5XeJ04iabxbpq80eeMBTFWNTCHwL7BwDHFHIVtrCZekJoCicNGXwk/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6a7a53776cf1ea8a2029a3a02ba823f93d23ba4f8f9398626c7431f167fd247d.png "")  
   
     如果资产表里存在Conductor，第一步不是慢慢研究PoC，而是确认版本和网络路径。查询实际运行版本，低于3.30.2的实例先在网络层限制工作流API，只保留明确需要的调用方，同时安排升级。对暴露到互联网的实例，优先封堵比“先观察一天”更合理，因为攻击尝试和业务请求可以通过日志区分。  
   

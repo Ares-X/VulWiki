@@ -61,7 +61,7 @@ schema_version: "1"
   
 Apache ZooKeeper是由集群使用的一种服务，用于在自身之间协调，并通过稳健的同步技术维护共享数据。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWJkBhlicYtEdFMCXic0K33Fvia5DAYx9VtxSA42pkdl6wu4QQCvF1p0uSlCP6v7LL9tvkYfjZh5BoRA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/1673dcf6be30dc2299481c03c50f30128701f1fedb700a792f1f325005b6da85.png "")  
   
 **0x03 漏洞详情**  
 ###   

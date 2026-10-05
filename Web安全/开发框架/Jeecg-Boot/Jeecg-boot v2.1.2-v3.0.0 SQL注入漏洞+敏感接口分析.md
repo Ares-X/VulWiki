@@ -42,13 +42,13 @@ schema_version: "1"
 #### 该系统在v2.1.2-v3.0.0版本中存在SQL注入漏洞，还有其他敏感接口，下面就分析看下  
 #### Jeecg-boot是北京国炬信息技术有限公司开发的低代码开发框架  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVycrdsFdBNMwuZWg7hibXCmMGPklHq9yicyG4W1kYDoAAAPpuHCQPMTXQQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3bdc3c5bc096cc627fd25b5e27c0923130ba6c268cd57f99a4211e4164f8caec.png "")  
 #### 框架只是个后端Java框架，前端都是不一样的，唯一能判断的特征可能是系统自带的验证码接口，如下  
 ```
 /api/sys/randomImage/一串数字
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVylgTcQBo9ltRjJczK6v7Z9QicCWFGwIWGiaRb4X0XKE6ibj1r7USy7gaNA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/df8d698e9f1f0c561d01b1408f4362aceda7b6878c3e790668af6822e9ba8d5e.png "")  
   
   
 然后直接来到漏洞接口地址  
@@ -59,7 +59,7 @@ schema_version: "1"
 方法位于  
 NgAlainController当中  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyQtLE4Y1GWBNJ7nrEiaIDIibAbic3QvhLMlN3ceOAgWOqHh0q2S7TFCPHw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/68f99ec88e496a9e130d70eb3a650700b411e9c589c849175c7f41c3f93d3442.png "")  
 ```
 @RequestMapping(value = "/getDictItemsByTable/{table}/{key}/{value}", method = RequestMethod.GET)
 public Object getDictItemsByTable(@PathVariable String table,@PathVariable String key,@PathVariable String value) {    
@@ -69,11 +69,11 @@ public Object getDictItemsByTable(@PathVariable String table,@PathVariable Strin
   
 然后根据service层追踪到mapper层  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyJyKPEnc8WShbxDL9cqgzYzeIUw1kxD4ZCga8x5ws5wqT62mjaCQwLw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/13d633e69704435d2df4c097b4c870b04c03269c643ed0eb246d4ec33e579a2a.png "")  
   
 可以看到参数直接可以指定查询的数据库  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVychp9ceM1UPdicSsFicdVKXG4LDaprRg8yEdiaJlPOBv0HR0Dpp9hywxmw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8b4a5b2a3a204f8cfce2e53d5575f6251e3c5ca3eb46b9056c550ba8a804da01.png "")  
 ```
 @Select("select ${key} as \"label\",${value} as \"value\" from ${table}")
 ```  
@@ -88,7 +88,7 @@ public Object getDictItemsByTable(@PathVariable String table,@PathVariable Strin
   
 通过斜杠传参，而看系统放行配置，存在匹配任意URL，只要结尾是文件格式的即可放行  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVysPc7qm0jml6zxbtbG1q2MibVVpWwLzXuAgUh0IdE7f68DfibJCPJJXow/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4309890d899d5c535639abac3f5c5491a8a291e56cae6d975afca2f1efd441da.png "")  
   
 两者结合一下就能造成未授权的SQL注入漏洞了，一般都是查sys_user这个自带表  
 ```
@@ -106,7 +106,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 sec-ch-ua-mobile: ?0
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVy7YWCW3KZAIV4Ioib1wlobbekaqEoyzkTnSkjIu05Wp0CUAnV8MMCDrQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/baed6dba57d0166c5ae48f9bffe4e89d791bd4f0d8409bad4d5c55d9021d300a.png "")  
   
 不过你懂得，这些密码是带盐值加密的MD5，逆向推出明文需要先生成数据库之后碰撞，而系统里面的密码是这么个加密逻辑：  
 ```
@@ -119,21 +119,21 @@ PasswordUtil.encrypt(username, password, salt);
 然后下面一个接口是  
 /api/sys/user/checkOnlyUser  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyvicWyKKGP5xlIHlxa5CNiccMTp5rDTKOXsfdib1oYqjbahDSroATYNMBw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8c31d420fc0acdcbf37603e9e3d99144b21c9d79c99825fe99558ec12d6f482b.png "")  
   
 同样无需鉴权，很简单用QueryWrapper查用户  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyL8xvEfjMB4UULYWjEmlVPQmf825nWicg2N7YF5SBFxVVVeCj2HFMfLw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c197159c7ac4f683decddf41ce8cdcbbddde3afa55ac820e817b5bdbdfb1e1bb.png "")  
   
 只要是SysUser里的字段，你都能查询是否有对应的用户有这个字段的值  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyxY4yKbheUXsHbOeUtqvmniaGEGULYatvzQvXbWVzcNlN6frBAPJPg3Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/90306bb860a5f637de3e83f6cd86226696723cb3b35c6778ade881f359957298.png "")  
   
 username、realname、password、salt、email等等，都能爆破是否存在  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyYo7qzDetWgVqGibRXXZMoz3vicPibXhInC0z6ticHDR2sJ2zgDTfFciaZXg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e653ff702f2977c1b1828897111e5d3370357e28cfd0cedc4db2a5522e998396.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyZpFRZNks09rlnDicCbiat89W5vjXajSricRrbhUnhRQuLAsfx14EGeeQg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/be6b49a9abbfdc2d4ee214075906b34a79d96640743d7281c1b88664261af51e.png "")  
   
 但是用处不大  
   
@@ -149,7 +149,7 @@ username、realname、password、salt、email等等，都能爆破是否存在
 **加入团队、加入公开群等都可联系微信：yukikhq，搜索添加即可。**  
   
 ****  
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/EXTCGqBpVJQSCTuiawtOw7G9JFaBeBc06sHdBhSTMMClOr5wLWmLYIl6Yry9n3ZIL97tylQib5YLOuJFxndeFMEg/640?wx_fmt=gif&from=appmsg&wxfrom=5&wx_lazy=1&tp=wxpic "")  
+![图片](../../.resource/remote/55259e9e53edfa43284d3246bc0572f6a983228f256b9c58334940d20b14bd07.gif "")  
   
 END  
   

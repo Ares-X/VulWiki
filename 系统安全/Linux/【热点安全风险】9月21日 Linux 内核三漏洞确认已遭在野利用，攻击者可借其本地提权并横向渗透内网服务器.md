@@ -230,9 +230,9 @@ https://feed.craftedsignal.io/briefs/2026-09-ibm-guardium-rce
 以上内容基于公开信息整理，仅用于网络安全防护与管理决策参考，具体影响范围与修复方式请以厂商官方公告为准。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/iaPgUxMqaSAhoh0qmQmVFSZR5CZH6zqTtXJAnxcsIYOGT6gdZxjJicvloaqjr7XhADDbc0IfHy7SYHoDKfQR3bwwRZoz58vxD8YkL4E1S6uKA/640?wx_fmt=png&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a3f3a4b3de615915686aa846b1a7ac233c29628bb2de882291076cff139f46a7.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/iaPgUxMqaSAjLgib6qPpqOw0kZlYBRwrY4qLM4trxNBkSLlZECbuuGKGnia3DwZZQC5lGe1z03Dqc22xCwc0UrhAHkJiaLQdKpCz24b18P4B6Ow/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2b3cfe37d8a711b48f7113a5881c281ea7a816db13ce043475449ca00c96a19a.jpg "")  
   
   
   

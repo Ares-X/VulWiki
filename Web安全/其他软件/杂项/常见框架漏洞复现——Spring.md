@@ -84,7 +84,7 @@ Spring框架主要由七部分组成，分别是 Spring Core、 Spring AOP、 Sp
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/0Z0LqMyVGaTBgBz7xSOV436m9iaBRO1TqNLF1CTdaoTJYtgESiamibNpEMI7GRSkBWokwkOhV3KoFINnuqicbvUcfw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/cec1e82e48395e413be85c16f6b97fb04511737e57f3855a34a6cf3bfe3dfd2e.png)
 
   
 

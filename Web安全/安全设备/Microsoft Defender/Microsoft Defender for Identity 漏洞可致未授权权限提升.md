@@ -52,7 +52,7 @@ source_status: "unknown"
   
 更多全球网络安全资讯尽在邑安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1N39PtINn8vMlQicGDibZXZLarrZLBK1DLG1RaHZ1l2KiaibUv7LIxZqRqqXsGjvlVrAP4TzibVicIRYQZllkbcD3X6g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1948bc2f832d866eabfde35a2ae03339ce0ec652f03d9fbe8d6099f6b5c4b0ab.png "")  
   
 NetSPI 研究人员详细披露了 Microsoft Defender for Identity（MDI）中的欺骗漏洞（CVE-2025-26685）。该漏洞虽无法单独利用，但与其他漏洞结合时可能使攻击者无需认证即可在 Active Directory 环境中实现权限提升。  
   
@@ -96,7 +96,7 @@ https://securityonline.info/microsoft-defender-for-identity-flaw-cve-2025-26685-
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1N39PtINn8tD9ic928O6vIrMg4fuib48e1TsRj9K9Cz7RZBD2jjVZcKm1N4QrZ4bwBKZic5crOdItOcdDicPd3yBSg/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/83ae91c3bc56f5917ffcf104a4039d82991163da413f4c7ceb47ecc7293d366c.jpg "")  
   
 欢迎扫描关注我们，及时了解最新安全动态、学习最潮流的安全姿势！  
   

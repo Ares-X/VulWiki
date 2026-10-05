@@ -59,6 +59,105 @@ class ResourceAuditTests(unittest.TestCase):
         result = audit_tool.audit(self.root)
         self.assertEqual(result["files"][0]["status"], "missing")
 
+    def test_offline_archive_rejects_remote_images_without_rewriting_source_urls(self):
+        target = "https://images.example.invalid/raw.png?token=public-test-value&part=one"
+        self.article('![remote](' + target + ')\n\n<img src="//images.example.invalid/other.png">\n')
+        report = self.root / "report.json"
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(["--root", str(self.root), "--report", str(report), "--require-local"])
+        result = json.loads(report.read_text())
+        self.assertEqual(code, 1)
+        self.assertEqual(result["counts"]["remote_images"], 2)
+        self.assertEqual(result["remote_images"][0]["target"], target)
+        self.assertIn(target, (self.article_dir / "entry.md").read_text())
+
+    def test_offline_archive_preserves_remote_sources_and_code_examples(self):
+        target = "https://images.example.invalid/raw.png"
+        self.article('[原文](' + target + ')\n\n`![example](' + target + ')`\n\n'
+                     + '```markdown\n![example](' + target + ')\n```\n')
+        report = self.root / "report.json"
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(["--root", str(self.root), "--report", str(report), "--require-local"])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(report.read_text())["remote_images"], [])
+
+    def test_responsive_image_candidates_cannot_load_remote_assets(self):
+        self.article('<picture><source srcset="https://images.example.invalid/a.png 1x, '
+                     '//images.example.invalid/b.png 2x"><img srcset="https://images.example.invalid/c.png 2x"></picture>\n'
+                     '<video><source src="https://media.example.invalid/movie.webm"></video>\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual([row["target"] for row in result["remote_images"]], [
+            'https://images.example.invalid/a.png', '//images.example.invalid/b.png',
+            'https://images.example.invalid/c.png',
+        ])
+
+    def test_offline_mode_requires_resolvable_repository_image_paths(self):
+        self.article('![site](/assets/image.png)\n')
+        report = self.root / "report.json"
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(["--root", str(self.root), "--report", str(report), "--require-local"])
+        self.assertEqual(code, 1)
+        self.assertEqual(json.loads(report.read_text())["counts"]["missing"], 0)
+
+    def test_local_thumbnail_cannot_hide_remote_full_image_link(self):
+        (self.resource_dir / "pic.png").write_bytes(b"\x89PNG\r\n\x1a\nfixture")
+        self.article('[![preview](.resource/pic.png)](https://images.example.invalid/full.png)\n'
+                     '[![author](.resource/pic.png)](https://author.example.invalid/article.html)\n'
+                     '[source](https://images.example.invalid/source.png)\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual([row["target"] for row in result["remote_images"]], [
+            'https://images.example.invalid/full.png',
+        ])
+
+    def test_html_code_markdown_example_is_literal_but_html_img_still_loads(self):
+        self.article('<table><tr><td><code>![a](/uploads/example/../../etc/passwd)</code></td></tr></table>\n'
+                     '<pre><code>![example](https://images.example.invalid/literal.png)</code></pre>\n'
+                     '<pre><code><img src="https://images.example.invalid/active.png"></code></pre>\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual(result["reference_review"], [])
+        self.assertEqual([row["target"] for row in result["remote_images"]], [
+            'https://images.example.invalid/active.png',
+        ])
+
+    def test_identical_opaque_original_link_is_an_image_resource(self):
+        target = 'https://images.example.invalid/open?id=42'
+        self.article('[![image](' + target + ')](' + target + ')\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual([row["target"] for row in result["remote_images"]], [target, target])
+
+    def test_local_svg_cannot_load_external_image_or_css(self):
+        for source in ['<svg><image href="https://images.example.invalid/remote.png"/></svg>',
+                       '<svg><style>.pic {fill:url(//images.example.invalid/remote.png)}</style></svg>']:
+            with self.subTest(source=source):
+                (self.resource_dir / 'local.svg').write_text(source)
+                self.article('![svg](.resource/local.svg)\n')
+                report = self.root / 'report.json'
+                with contextlib.redirect_stdout(io.StringIO()):
+                    code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+                self.assertEqual(code, 1)
+                self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 1)
+
+    def test_svg_namespace_and_embedded_image_are_offline(self):
+        (self.resource_dir / 'local.svg').write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg"><image href="data:image/png;base64,fixture"/></svg>')
+        self.article('![svg](.resource/local.svg)\n')
+        report = self.root / 'report.json'
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 0)
+
+    def test_svg_source_anchor_and_url_example_text_are_not_loaded_images(self):
+        (self.resource_dir / 'local.svg').write_text(
+            '<svg><text>fill:url(https://images.example.invalid/example.png)</text>'
+            '<a href="https://author.example.invalid/article"><text>source</text></a></svg>')
+        self.article('![svg](.resource/local.svg)\n')
+        report = self.root / 'report.json'
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 0)
+
     def test_nonfatal_format_review_and_full_html_text_in_report(self):
         png = b"\x89PNG\r\n\x1a\nfull-signature-fixture"
         unknown = b"\x00opaque non-image signature fixture"

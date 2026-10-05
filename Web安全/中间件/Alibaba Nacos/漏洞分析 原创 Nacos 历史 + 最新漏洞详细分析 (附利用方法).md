@@ -63,39 +63,39 @@ schema_version: "1"
 
 通过代理下载 nacos-server-2.2.0 传到服务器：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9MB5WsA6uhsJrbiazWPVs5Eic4dJtYx3KTpbAF3gp67xJBHWFR0iaibbypQ/640?wx_fmt=png)
+![](../../.resource/remote/2abfa1fc4f0db9fc97d323d6e605373e8329b9852e8524d3ee350400bf5cd0fd.png)
 
 解压后进入 bin 目录启动
 
 bash startup.sh -m standalone
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9PzBnyY0cEBbs6Jzt1rWt2Y9hStWUD6xneoCJwURiajCv6RVf5d9HlBg/640?wx_fmt=png)
+![](../../.resource/remote/2fad7f39d97447365dc779e580c0d5b82f1618191d1347c37c306ad0f12a50a9.png)
 
 浏览器访问：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9eWGO8icVM1bBgsWZ1szfHnfMAGY0WEN625EBmiaFyoVRPk0F6vwbCYibg/640?wx_fmt=png)
+![](../../.resource/remote/41fffab6bc00c9a5c9f6d92ae319c6dc725930c493a79d9c118cd1a4f8bd54c2.png)
 
 **开启鉴权**
 
 修改 nacos.core.auth.enabled=true
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9R8B81flMOdGALacBDkurZHUfycUTel1sISPI6celRparuofU0WA9gw/640?wx_fmt=png)
+![](../../.resource/remote/3370f6cc3eec1d8ed264987fbaa5b422216bff0852cb7e2d571c53f84f5b0d71.png)
 
 ****漏洞利用****
 
 使用默认密钥生成 token 查看用户：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9OiawQbwTQM98IygOOUMULH2Ya7xQanbP0aPDwcRjrAZAY6kuXawAWBg/640?wx_fmt=png)
+![](../../.resource/remote/4734dee335c1f119f51833e3cd4b17a40316e1cea721ad90704b1321fe8f9338.png)
 
 使用默认密钥生成的 token 创建用户：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW90f8uicAqTNoqiaia5cyXfnZm5MXLjuhSs2OVsZdWygBianusKem2t6Picvg/640?wx_fmt=png)
+![](../../.resource/remote/a0ded4df2aa406e00fd058d6a7be5e2175da89522b0dbb8904b4672e09ffc567.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9AlSa0g5gQwnhKAVHtdcFY6knMD8ueZB3KjgL6SkeCMmVt2XDMMsicRQ/640?wx_fmt=png)
+![](../../.resource/remote/6c145f5673e1b6317826f4e1aab4b70d6f46c3fae995c1845e13adea7e68ebc1.png)
 
 如果不添加 jwt 则提示 403：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW94XUX7HQYwSbsIdNF3kiasYgYbDiafia85gcAnQXqKRyDiaZuVf6fxfxE7w/640?wx_fmt=png)
+![](../../.resource/remote/0630c6147b4ca10b1ecd510b04775de9d6ed53206ade38af4814d44d1a55c398.png)
 
 ##### ****漏洞分析****
 
@@ -110,7 +110,7 @@ SecretKey012345678901234567890123456789012345678901234567890123456789
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9yRibIDzB4BsoXTYvfE1QJgUyBmdgKgKSndwEIuRuhpkcLTiauCuJAtgQ/640?wx_fmt=png)
+![](../../.resource/remote/f96209699cc06d76a6dbd420b78ca56c3c97168b2074b610085c38e72ea90306.png)
 
 官方说明也在 application.properties 这个文件中，如果没有手工配置，那默认就是：
 
@@ -119,7 +119,7 @@ SecretKey012345678901234567890123456789012345678901234567890123456789
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9Mdb9tDCkLTGrzuBLToicUibdic74icHGkOl7b1SoarKeWich9hv3iaNqVBHw/640?wx_fmt=png)
+![](../../.resource/remote/5177bf57532b154b3bba922bc328d0a25a349b1753f7c1fa358db4901f3ac82f.png)
 
 ###### **设置远程调试**
 
@@ -130,35 +130,35 @@ SecretKey012345678901234567890123456789012345678901234567890123456789
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9tHlmZABs6ItEhd1HvkUUcMnNR3rIkhncQRLjIuyX4zNpDdo6Wznuibw/640?wx_fmt=png)
+![](../../.resource/remote/cbda4430280ad8a0ac2c7e2688a532b0f8287b0dbdf62eaf56058f3e254705b3.png)
 
 在 idea 中添加调试设置：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9p7CGp3nqQLreL6k1j1dZ6LHVYAv8aEoqPp9ffkjh6tyg9LGe606x5g/640?wx_fmt=png)
+![](../../.resource/remote/6c282869ccd30f622601a76c839f88888d5fe3c5cba7cd01f32b6c93fa5428a0.png)
 
 ###### **鉴权 filter 配置**
 
 通过下断点在 jwt 认证的地方，然后通过调用栈查找 Filter，把断点下到 JwtTokenManager 的 validateToken 方法上：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9ARO2LVN7K4JU3HhbVAibMhuFn6xhlfT2dBZKQibBW6oDibiagoNmJW5pmw/640?wx_fmt=png)
+![](../../.resource/remote/fc32c9bc2e603a11837193cb0f27d6d7dbc2e8e0ae73e8b89713f430a8d9458d.png)
 
 通过栈找到 Filter 为 com.alibaba.nacos.core.auth.AuthFilter
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9IlibHr2lIs9Aiaj2Y4m5tBxdNkXBurgsqngGNvTXC2CDTZtCC0Zo0Vew/640?wx_fmt=png)
+![](../../.resource/remote/e2532340316075c593d252207628cf302050c6181439a0babf5be4db8f27bff8.png)
 
 通过 com.alibaba.nacos.core.auth.AuthFilter 查找 springboot 的配置类为 com.alibaba.nacos.core.auth.AuthConfig：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9Tp4TG51dB58Mo4QqpkcxuyUCMZeDjzvEIZ8fPvglibmpBibq9RTzCkPg/640?wx_fmt=png)
+![](../../.resource/remote/60cc71d1aa554e51f7ededce4d0a5d0eb3474944737b1f086cc1aa5499b7502a.png)
 
 ###### **鉴权过程**
 
 进入 com.alibaba.nacos.core.auth.AuthFilter 首先读取配置文件中的鉴权开关是否为 false（这是再配置文件中设置的 nacos.core.auth.enabled 配置项），为 false 则直接进入下一个 filter，也就不需要鉴权：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9JbdibquV5OtnE2tug6ZFCOMSlic7MNk2sTQCY8tvytVYG6JyKehv0L8A/640?wx_fmt=png)
+![](../../.resource/remote/701bc7e828cafdf0022f43bc90e5bfa042cf598dbe6dfe0ecbc16f07fea61a63.png)
 
 接着会检查是否配置了 userAgentAuthWhite 配置项（这是再配置文件中设置的 nacos.core.auth.enable.userAgentAuthWhite 配置项），在 nacos2.2.0 中默认为 false：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9RKWRoYbO8Ch1gBtd5OrWbq4ysrmoCrFIpRVt7eeI67fEEw5ic8IIQ4Q/640?wx_fmt=png)
+![](../../.resource/remote/4297d13f9eafac7df701f245812a5adf3b5a2f63c8f371dda93b66275fc15ef0.png)
 
 接下来会检查配置文件中是否设置了
 
@@ -169,11 +169,11 @@ nacos.core.auth.server.identity.key和nacos.core.auth.server.identity.value
 
 如果配置了这两个参数，则去判断在 header 中 nacos.core.auth.server.identity.key 对应的值是否为 nacos.core.auth.server.identity.value，如果是则直接去下一个 filter，就造成了权限绕过：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9FJqJmzTdI8gE7psbqgwTrOIYPg0XC9NoWIAd1LQwJRcib5vCy7ZXYzA/640?wx_fmt=png)
+![](../../.resource/remote/37368c8e7dc74ceebe7024d416de28e3b8dc00a48db7d34695a4294917ca69a7.png)
 
 接着判断请求中的方法是否在需要授权的 map 中，如果不在则不需要授权：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9vOB9MhdM3T3gaXib4lzNqk4uv5p9rHDCMX1DusOrUicxiaaibteyCJQKGw/640?wx_fmt=png)
+![](../../.resource/remote/f08d94d071795bfcc169d3a2563b3a077c6f59c5a687134576c1374e6dcaead7.png)
 
 最终会走到如下方法：
 
@@ -184,7 +184,7 @@ com.alibaba.nacos.auth.AbstractProtocolAuthService#validateIdentity
 
 这个方法是对 jwt 进行验证的操作：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9mohzOKUykgulwcsBcXk97yoYHpeicLG1wXVib6hicSGiazfyMyX4nBD0xA/640?wx_fmt=png)
+![](../../.resource/remote/215d7f63ef5d17052bb13090f5cd2046654b5ed9d372cd7c4fb2a0324641283b.png)
 
 通过调试也可以将 jwt 通过普通的 jwt 认证方式进行认证
 
@@ -193,7 +193,7 @@ com.alibaba.nacos.plugin.auth.impl.NacosAuthManager#resolveToken(com.alibaba.nac
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9WpMdskfdjCRansiaVgH9cl0pCy4u2hhbZwhv6PsepW5fz6bTbjTn7yQ/640?wx_fmt=png)
+![](../../.resource/remote/22871a68acf43d6878fad3f5b4c20d12593bb038a68b97a5be4d512ee4be7ec9.png)
 
 最终走到
 
@@ -204,7 +204,7 @@ com.alibaba.nacos.plugin.auth.impl.JwtTokenManager#validateToken
 
 这里直接使用 jwtParse 对 jwt 进行验证：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW93XQlzHRXVqlwncsh2R8uC0LVV88wiaoZzlQdO4BaC2Gq3127Z4T9E9Q/640?wx_fmt=png)
+![](../../.resource/remote/d6c0cd7041b73ece544ad31b6ca73da8ea0e17ea0d8df912cc57276d5aafeaea.png)
 
 ###### **jwtParser 设置密钥**
 
@@ -226,11 +226,11 @@ this.jwtParser = Jwts.parserBuilder().setSigningKey(this.secretKey).build();
 
 来设置密钥：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9iazicogDvVDflhOBsK3sOnb3az2rajicsHVntB9SfHY1zUqMwcHezudrw/640?wx_fmt=png)
+![](../../.resource/remote/6ef6873089287a2f747afa72c828f1d072c46351c26f29813f4753b47b472001.png)
 
 然后 this.secretKey 是从配置文件中读取 nacos.core.auth.plugin.nacos.token.secret.key 之后进行 base64 解码之后作为密钥：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9L2BKY4AbiabicmzMtJOeCCINnY1sK5gx7lEYEojqXhIHoYSF0WEJLyIQ/640?wx_fmt=png)
+![](../../.resource/remote/d998af662e4cf656d1ede5f9ecc08e56ec3c930e35f9b19001de7076dda503af.png)
 
 **0x02 Nacos2.2.0 权限绕过**
 
@@ -238,11 +238,11 @@ this.jwtParser = Jwts.parserBuilder().setSigningKey(this.secretKey).build();
 
 Header 中添加 serverIdentity: security 能直接绕过身份验证查看用户列表：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW96zPR9xC1ibE7ZskhC6ldKMJcsDwO16Ghc93fU4QZiaB8DLdQibx4gAHZQ/640?wx_fmt=png)
+![](../../.resource/remote/567275a997019f05652a947f66d487b216d53c47f5243540d15f5b19f3bb177b.png)
 
 如果没有或者不对应则返回 403：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9icciaBhLLKia4LoV4ibe3Qx4IcJG4dv0IrUj1SZahgkP4nunTfnjSUvv0Q/640?wx_fmt=png)
+![](../../.resource/remote/c4b861f2e07efdf40dde0defe8604d3c4e1f2181f3f903852e9b91bc5eb2c737.png)
 
 ##### ****漏洞分析****
 
@@ -255,11 +255,11 @@ nacos.core.auth.server.identity.key和nacos.core.auth.server.identity.value
 
 如果配置了则判断 header 里面的 serverIdentity 是否为配置文件中的 security：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9vUbAMDiaxA3ltm0jcdJePkC0Gs5xXSpEOzVDibfP4YSjhQ00HficZNSkQ/640?wx_fmt=png)
+![](../../.resource/remote/3f6742568d2517ec83720cc92a0fceaf75758895efd9c7d6bb0780972d15efe6.png)
 
 如果是则进入下一个 filter，就不需要对 jwt 进行鉴权
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9kibECmgA4TjskgaM5XOln6ozoSEDagXVIhdwyWLxFxocywYyEfF3JnA/640?wx_fmt=png)
+![](../../.resource/remote/07f08dd7ed4f86cb9542d07e519be0708a3be449dc78841ecbf8e58d061e245a.png)
 
 **0x03 Nacos 默认配置未授权访问漏洞**
 
@@ -274,23 +274,23 @@ http://10.10.84.207:8848/nacos/v1/auth/users?pageNo=1&pageSize=9&search=accurate
 
 能够直接查看用户列表，不需要添加任何身份标识:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9YHIkElnlRV021BvZxUCHEGqMHmFrSLboYciazp0f8jbfkuWiae0uQlGQ/640?wx_fmt=png)
+![](../../.resource/remote/09d5eae76246a05739c6e16031c443328f97532961a75665b850b4d49a050f88.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW956JdY3ZwRnNezK3uRR3k1vBr1F5UZrL7GT48u6CYiayFp2Kkkt5gLHA/640?wx_fmt=png)
+![](../../.resource/remote/2412bcdb37356a0128db00400a6b4b2f9e0200f0c79c19cf9e4bc3ea13a4abef.png)
 
 ##### ****漏洞分析****
 
 再配置文件中 nacos.core.auth.enabled 的值默认为 false，也就是不需要进行身份验证:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9x8p9dGUBwELhXoDdnQktPr0ibibwciakFGibOtSCxbIwZRXPzrWBCyibfRQ/640?wx_fmt=png)
+![](../../.resource/remote/09628e9babac3a55aa8cc3d636c89e7b5e9c952b134efb39800ba3f3e8faba49.png)
 
 在代码中就是 com.alibaba.nacos.core.auth.AuthFilter#doFilter 中的第一个判断，如果取值为 false 则直接进入下一个 filter，就不需要身份验证:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9Mibw3ATJL4MwWzPF5Tsz8ia8ZDTvF81F0mJtUmyicXHckVDxvhJZ7yLNw/640?wx_fmt=png)
+![](../../.resource/remote/fda4f53f18f9d0b4ce98d944641166a354f1c6ccfacb4a64902928c233800db3.png)
 
 this.authConfigs.isAuthEnabled() 不论是在配置文件中还是在注释中都为 flase，不需要进行身份验证:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9sgKjPA16sLBaB53Ks78qhCBHNP4IjzE3aabfER4mPmMITRSkm6HKXQ/640?wx_fmt=png)
+![](../../.resource/remote/b914363e9eb3d3df1dfda178a7727c1d6f36a24750912e52869b66e7fe9ca03b.png)
 
 **0x04 Nacos1.x.x 版本 User-Agent 权限绕过**
 
@@ -298,11 +298,11 @@ this.authConfigs.isAuthEnabled() 不论是在配置文件中还是在注释中�
 
 从 GitHub 下载 1.3.2 版本，并修改系统授权选项为 true：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9mKgP7TlAFd88FFovIB1EHoW7SsI590b8kdic9lrhmlApnlK4LvaetwQ/640?wx_fmt=png)
+![](../../.resource/remote/5826ec919f87e7b5e60b217cbcfc2b68f3957e8ad76c02fdd397677f492abad7.png)
 
 设置远程调试参数：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9oLx9EufPiaHtGRL3jEvWDibIkDRXrbI2DWvOQ4gAwwtl9Id5Sjzbic2Dw/640?wx_fmt=png)
+![](../../.resource/remote/85c75f4f6f617dfe28ccb6760db7d6d70686e7d9b4b28b4a206ce3ac9ccddcc6.png)
 
 使用 curl 命令进行复现：
 
@@ -311,21 +311,21 @@ curl 'http://10.10.84.207:8848/nacos/v1/auth/users?pageNo=1&pageSize=9&accessTok
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9Gu4zW6Rxebctv8j8Z0edibAqexef0qC61mcAXWSibuZ2hsmd7sOxnEUg/640?wx_fmt=png)
+![](../../.resource/remote/95e9ad6c10f04699120779d725cece187195c288bf2826ee4f4e8171a3b1dc72.png)
 
 ##### ****漏洞分析****
 
 进入 com.alibaba.nacos.core.auth.AuthFilter#doFilter 的第一个 if 语句是判断当前是否开启鉴权：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW92Z1wOydxJialstArdtI9g5nGZmHXnIGU9KekX7d6bSx5ib6R2aCjB6Ag/640?wx_fmt=png)
+![](../../.resource/remote/4766b7c7a739e2e46d938c9109efa50f50d16620aa3d9e8125c4c0acd9894be3.png)
 
 首先通过系统配置读取 nacos.core.auth.enabled 设置的值，如果没有找到则通过配置文件读取该配置：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9SnibJQhllZ1jWVboonQ7jPzNMxVOiaDOuVe0oOCRdPU5EcJibgM8qfc0A/640?wx_fmt=png)
+![](../../.resource/remote/71e16ad82008224d29789aad713dc59e5d076ed106fa83630bf25eaeaed4d194.png)
 
 接下来读取 header 中的 User-Agent 值，如果 User-Agent 为 Nacos-Server 则直接进入下一个 filter 造成了权限绕过：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9qDkiasNtYIQIslg7L6hHQSpWDngF0sRMxyQl542hVhTrnw2LlOiaGoMQ/640?wx_fmt=png)
+![](../../.resource/remote/954b5925cd51aac6109498b61739b9e5a0b5f112bc1d5fb4d20e71a79aa04b22.png)
 
 **0x05 Nacos-client<1.4.2yaml 反序列化**
 
@@ -333,19 +333,19 @@ curl 'http://10.10.84.207:8848/nacos/v1/auth/users?pageNo=1&pageSize=9&accessTok
 
 选择使用单独的 nacos-client 1.4.1
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9FWlr3qKWJw5aSURXCUibVXvZIKiaNV5GWGkUAbGMLVAmzrAdTS7E0qgA/640?wx_fmt=png)
+![](../../.resource/remote/9c3163da8c88dd9691e90899f65d902500208b65ace491315012d5777e9e079f.png)
 
 客户端连接服务端，使用官方的示例：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9nl7HLvgdeg3hmzN8wWRGyxBoibNMvq1icOIymc57KGlwr1kic3XiczsPeg/640?wx_fmt=png)
+![](../../.resource/remote/72473a92dbd53021254a3b9d0ab06f493f6fcd8c9f3e3fc1037df981cc19af12.png)
 
 将 yaml 配置修改为 yamlpayload：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9VxqTmnNtpUn4odMvmP6gEIexy1j3bFJN5AoxbTmiaKRKqCiaDS3ia642w/640?wx_fmt=png)
+![](../../.resource/remote/15155ab293d92513cada99d28bd3048b45c39e4e83ab5d886633541be34682dc.png)
 
 然后在客户端就能够执行命令：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9QqvkiabY72NwScgV8v2Fp2iaicNshicVXmwAQt9eNaCy4f6doRqOibaGjtA/640?wx_fmt=png)
+![](../../.resource/remote/748d0f95e33d509ddda83b4c71a2a661d969cf46b75733eb5a3faaefbf3fbaad.png)
 
 ##### ****漏洞分析****
 
@@ -363,7 +363,7 @@ com.alibaba.nacos.client.config.impl.ConfigChangeHandler#parseChangeData
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9VZ9xYdVx5NqDTv0UibdkaJBLNAJLKicUSNnlziacZ18n0L0caDzDnXSug/640?wx_fmt=png)
+![](../../.resource/remote/41dd04e4dbf9c329b5feef6e54e18c2ce1c5663c5feaaea67b44021e9eef6b96.png)
 
 在
 
@@ -374,7 +374,7 @@ com.alibaba.nacos.client.config.impl.ConfigChangeHandler#parseChangeData
 
 会根据配置文件类型进入不同的处理方法里面，这里进入 yaml 的处理方法，其中 newContent 和 oldContent 分别为配置内容：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9MQYAdrkAjubfiaFukMo75Gicj8YiaLL1xKtDHOW1AUmBN8GNwsOD8pwzg/640?wx_fmt=png)
+![](../../.resource/remote/59f78025f8d0d7beb21ee961176d3283824d5a8299667926a6f29b70043d5566.png)
 
 进到
 
@@ -385,7 +385,7 @@ com.alibaba.nacos.client.config.impl.YmlChangeParser#doParse
 
 不论是新改的配置，还是原来的配置都会经过 (new Yaml()).load() 方法，最终造成命令执行漏洞：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW946NgUT1FvjA6RmBVLibMOUgh6L4dickmicXSCcUJhDfMaCEibkVHU1E7oA/640?wx_fmt=png)
+![](../../.resource/remote/59b023a77224c76222c54fa881aca5165790069602f80957b120143044d574c6.png)
 
 END
 
@@ -449,7 +449,7 @@ END
 
 点赞是鼓励 在看是认同 分享是传递知识
 
-**看完点个** **“在看”** **![](https://mmbiz.qpic.cn/mmbiz_gif/8gt9uOic7ib7Puxs35EZDJOvFZ9Mq3IictsibD3HNIwVics6uoEbOkGAsBB3sKlwxYUT6BiaibwZ0NRMWHM7u6jMNROVA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 分享给更多人![](https://mmbiz.qpic.cn/mmbiz_gif/WvOwYJPuJLcBglNp6W9DN3Hibico0cg75E2jukNE8PiamQzSPjdRPbPicnFHjGRW3VUZajianYDCaFiaicoTCQibgex5wg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)**
+**看完点个** **“在看”** **![](../../.resource/remote/eeafab41bae8306776aac50b5ff39f33935ad86ca0e52fa481508d7df8f94f21.gif) 分享给更多人![](../../.resource/remote/2632adf453e3f9063edcd8d072d74644bc8c7fc253d869eba3313b6f8eb5252b.gif)**
 
 ---
 

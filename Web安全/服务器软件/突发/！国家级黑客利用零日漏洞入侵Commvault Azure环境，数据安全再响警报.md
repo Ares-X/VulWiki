@@ -53,10 +53,10 @@ schema_version: "1"
 **“**  
  CVE-2025-3928。**”**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/L369x9IF3yPA9bic9zzTydWv4XTTHH2NAiamMp8Kxsh4s2lukPuyuwnia3NiaHkiaU8a3JGFhLvNnYvtLvHTFAd91Rw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fad51b4b4402fb0f031a4de30fed82e64c5d15a93b35d0ada303a3f0dd1c49a1.png "")  
   
       
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/L369x9IF3yPMwVHx9iaPDKDhBJiajRW2DIdq0Wxe7JcpgKDia3zMfgicaaD6Auwn6Q3GGm2vI0eNh1Qic6OUhHMjE7g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4dc7909428a4995b2d8577454ed1aee38936be0ff1381d6c9cb212ed7d559537.png "")  
   
   
   

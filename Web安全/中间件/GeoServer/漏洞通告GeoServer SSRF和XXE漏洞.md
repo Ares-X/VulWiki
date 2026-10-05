@@ -44,7 +44,7 @@ schema_version: "1"
 
 原创 微步情报局  微步在线研究响应中心   2025-06-12 09:55  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/94ba548e30fedc16feb634026eb27963411675ba9137220d7e4638955a9d68ae.png "")  
   
   
 **漏洞概况**  
@@ -91,13 +91,13 @@ XXE(CVE-2025-30220)影响范围：
   
 SSRF：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6LcPuI8NZqCUmibaUlwZUWw5dxeLmZLN9Q0gyrsz5hcKZIUFrudFcaibg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c24d16cbf3b5289f02a5bbe41d15cd1b56bd4143959fc10ca9204eb05cc92bbb.png "")  
   
 XXE：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6OPb7jbeQSc8xLwGVXSXSfA65iaqia4EHcbQhp58w9yx0WLeUlhNWvezA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f48f6cb0ba87003fd5bb1c40384b0c96493208a1712810643346f53815eba20c.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6HaN55XsZYGrJGuQUkPx6voTu1LQzf5ApZHkwQicLfjqLk0pgKJz5sMA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9487390ca91cbd392ea61de99aeb7dcaa6262e280017246121e4718782805366.png "")  
   
 **修复方案**  
   
@@ -117,7 +117,7 @@ SSRF(CVE-2024-29198)临时缓解措施：
   
 没有代理的情况下直接使用GeoServer 时，请通过编辑 web.xml 文件来阻止所有对 TestWfsPost 的访问，在文件末尾添加以下代码块：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6ZIDjRaL7Y3PO0QZsyPSROys989SicmLoR4P967iavhWPMTpWLCkCVNZQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3d8cd81b4733b82b522689667ecf9289524129ecf80ff7bf1addbe6154e413b9.png "")  
   
 XXE(CVE-2025-30220)官方修复方案：  
   
@@ -151,7 +151,7 @@ XXE(CVE-2025-30220)临时缓解措施：
   
 将 EntityResolver 提供给以下方法：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6E6s0YWPLluo2eUnPia5qb0hxU8fib2SQFzPXlvlO82Kj4YoyjVxtNVfw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/881af3bb6d0f9529819e634b85c12db399bf07cc9ad88346b87fb778d7b94101.png "")  
   
 **微步产品侧支持情况**  
   
@@ -161,18 +161,18 @@ XXE(CVE-2025-30220)临时缓解措施：
 TDP规则id：S3100151638、 D24136 ， 模型/规则高于20240724000000   
 可检出。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib61Ru6kGFjKm9f8DWzKAUUGq3XcOdEicmA6H1hOr0RIbx7vk1cLeANwXQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/81c130dec652776e3c3e4d91633d604ed8225ab89efc99e5e9179aaec11bc81c.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6nHro59ohyMhCNFicWNbE5ex80Qv8zFb1BCCf9peYVFicHBkRk6IYicfXg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6939584a9905f7dd81dc3f62ae239389384dac9706033228f477948651296c70.png "")  
   
 微步威胁防御系统OneSIG已支持防护，  
 规则id：  
 2020010021、3100144365。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6RlB7QovwnoornUkyibcUUE49nf2LE85o82KgM8qtcEpfCvD0bNASMibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/04ac42b31f018229a4116ca9bccd8f6e7ddd755932ac20bfc245f23b10b0dca3.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKDZku6cSf5VfuXInJll0ib6UudQiciapDQQKMP77GxRaMfz8g2OSG91HslKcyzCdU4nTOl38nic8hicrg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e5e50719f12a60733c27aa4b0ea33109ced16fd33ff631c6609da34de26f1a39.png "")  
   
   
   
@@ -200,9 +200,9 @@ TDP规则id：S3100151638、 D24136 ， 模型/规则高于20240724000000
 ↓  
 ↓↓  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hQl5bZ5Mx6PTAQg6tGLiciarvXajTdDnQiacxmwJFZ0D3ictBOmuYyRk99bibwZV49wbap77LibGQHdQPtA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/af2820a378c199548053d385bda4250d7d50a5a22d6bbb58a06bceb40d5e843e.png "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hTIdM9koHZFkrtYe5WU5rHxSDicbiaNFjEBAs1rojKGviaJGjOGd9KwKzN4aSpnNZDA5UWpY2E0JAnNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/c4634cd583acfab3faf2a0b9edd62202d8949eb72b8c2d639482249716277ac2.png "")  
   
   
 点此电话咨询  

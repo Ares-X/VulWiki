@@ -47,7 +47,7 @@ schema_version: "1"
 
 DO SON  代码卫士   2023-12-26 17:29  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -56,7 +56,7 @@ DO SON  代码卫士   2023-12-26 17:29
   
 **开源通信框架 FreeSWITCH受严重漏洞CVE-2023-51443影响。该框架是全球很多电话基础设施不可分割的一部分，由 SignalWire 维护，对于在云中部署电信解决方案至关重要，每天全球各地的5000多家企业都有赖于它。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRDxTbVlXiaIw32jphC9MWVZ0lcDsOzKNkbotLhFa4Pzmz26p6bgDbic6ibH3bQom1psfgQ6oFgmhMVA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/51f9bc7c97b2363d1ca65fc261db46a9b8553a7dc105073d5f153b43522d898b.png "")  
   
   
 CVE-2023-51443的CVSS评分为7.5，导致 FreeSWITCH 在用于媒体设置的SRTP中 DTLS 协议的握手阶段易受拒绝服务攻击。该漏洞由条件竞争引发，可导致持续攻击，中断新的DTLS-SRTP 加密通话。  
@@ -116,15 +116,15 @@ Pixabay
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

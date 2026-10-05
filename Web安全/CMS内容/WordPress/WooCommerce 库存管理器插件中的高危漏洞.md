@@ -41,7 +41,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/60cG_ySte890v09ItNPRAg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OhKLyqyFoP9mJwX65uY3o0wwuMo2eWPeFuDIhxJlAjMcIicKFSYLVZ6fjicY0dNle24gfmiaVpwCcP2PeZuZyaRzw/640?wx_fmt=png)点击上方蓝字关注我们
+![](../../.resource/remote/f5f21bb3cfa60f2a8e5b92d63ade1d41c6e41adebb8bbb153345b0a7cd1ce1a9.png)点击上方蓝字关注我们
 
 概述
 
@@ -104,7 +104,7 @@ if(isset($_POST['upload'])){
 
 本文中，披露了 WooCommerce 产品管理器中的一个漏洞，攻击者可以通过诱使站点管理员执行某个操作来触发该漏洞，该漏洞使攻击能够上传恶意文件以实现远程代码执行。该漏洞现已在 2.6.0 版中被修复，建议受影响的用户立即更新到最新版本。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/RQoDdorCu0V5znWFiaMBVWiaibdvAvmGeUvfC5LJ60x1Kq5wiaQ5UtMKEDcwQJ3ibicBdGBKxGs1V2AuZcg3ISoDto1g/640?wx_fmt=png)
+![](../../.resource/remote/2b9ebbb9f7095be9642b969cd29b74426a76f5b6bf67c715aa544bd83a28e0e3.png)
 
   
 
@@ -112,7 +112,7 @@ END
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DQk5QiaQiciakarCFnYafgYGpNRiaX2oibtiawYX92ytrKp9MpmQeOqARcreRBybBX1fDbv2guZxExicn7f0wn2dkVwqw/640?wx_fmt=png)
+![](../../.resource/remote/27bd22eff31ef627b0b2886e14b119abed731665aae0ae469170008207932976.png)
 
 好文！必须在看
 

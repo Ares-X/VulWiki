@@ -76,7 +76,7 @@ LD_PRELOAD 环境变量的开关在编译生成 ulibc 的时候指定，当关�
 
 在 ELF 文件中，存在 DYNAMIC Segment,ld.so 通过该段内容来加载程序运行过程中需要的 lib 文件，图 1 为在 IDA 中反编译后查看的 DYNAMIC 段的内容。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2aUQtjtlFeQlsKiaykExoQTSz1S8Q9CFbDg99U3TsiaPBLr0NPoEDVQxw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5d55c3460f289b98cf83f2464b209721873cbfbb27727206e3fc6ba8c8eea080.png)
 
 图 1 Elf32_Dyn 结构体数组  
 
@@ -111,7 +111,7 @@ d_tag 字段保存了类型的定义参数，详见 ELF(5) 手册。下面列出
 
 共享库文件名对应的结构体的类型值为 0x01, 如图 2 所示，0x4001C4-0x4001E4 保存有 5 个二进制文件所依赖的共享库名字，其 D_VAL 的值是指向 string table 的偏移量。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ23hum7nsOgd5ev6fGVGcdjKBMBVp1ZvyZ6Uuf2NKyTyCibicVicq7mhpVg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e18f97bbebef3f1ec1b0180a51917be66a7e0b4af664ef5c00db275bd47abd35.png)
 
 图 2 DT_NEEDED 共享库依赖图  
 
@@ -123,19 +123,19 @@ ELF_HEADER->Program Header -> DYNAMIC Program
 
 ELF_HEADER 中保存有 Program Header 的偏移
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2QRduUQX6C8eqO11m5GxulMU4WfaXyDMib2ArRica3dr5bFlCdxX68S2A/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2a40779d67c982f9a68cf56733956f6669b14f4957e6e119db56d6cda857628e.png)
 
 图 3 ELF Header
 
 Program Header 中保存有 Dynamic Segment 的相关结构体信息
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2RHtytO0ntic5TodSGlHN3vSYY5nSA9AFHskQajTMwWX3EhWxHZeOGrQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/77b4b42945e0ad6855e55c61903b15da0a74791c8869849522f41d92d1511676.png)
 
 Program Header 结构体
 
 展开该结构体，可以找到 Dynamic 段在文件中的偏移量 0x140h 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2jS65RNw7l4vXj3fIr7ibRKydKJWoENmy03mKbudL2wjxvbu9icyzibibpw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/66b4963271b5bcf17de625965fb70a11f8f3fca5c268fee14173d79f85b1ea1f.png)
 
 Program Header 结构体
 
@@ -143,21 +143,21 @@ Program Header 结构体
 
 动态段由 dynamic 的结构体数组组成，dynamic 的结构体定义如下:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ23Fxzu5rcKqEJBTY1B032W6F9YPjSiaHkd6nryia7yCtRrrxSt3FZZFicQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1079a25168515a60f141825d359e04d50da46d803df7fed53afbf8d677f1b379.png)
 
 在 dynamic 和 elf_hash 之间仍存在一段空余空余可填充空间。本文利用该段空间填充，实现特定 lib 的加载。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ217B1IpvUQtaIHwyeyEe8s8ywX1L940g371m57lddv0zuLqbY9cdeqg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/294cf2462d9055d81a1e766428f99c25d1f8a926c81a550e47801c2b8c4a8252.png)
 
 **本文方案实验与测试**
 
 利用 dynamic 和 elf_hash 之间的空余区域，在该区域伪造出新的 dynamic 的一个数组。如下图，不修改二进制文件大小，伪造增添 ibcjson.so, 使得二进制文件加载 ibcjson.so。在 ibcjson.so 中编写对应的劫持函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2F4s6AXicgjpdLOKxuN8t8UphVh0hMAYxkwDSa22XbjIZkENDUv8cQicA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a956ddb67c621961b6e3f329feb81d290ca9ebaa9b87dbc9f2596f5ddc38fa30.png)
 
 思路：将原有的 Elf32_Dyn 数组元素依次后移，并在该数组的首部添加伪造的 ibcjson.so，该 lib 的命名可以选用 string table 中的任一字符串即可。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2yx7S3ojuqjl0K6vrUCFukHR8ibuglkQpyPt4QTgHAbtzjPxuY8KFxIg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c27bbab88e73a79e422e1b02752dc8a8d7b2d99d30ff52729da83d48497547dd.png)
 
 核心移动代码，将 Elf32_Dyn 中的元素依次后移一个，dynamic 段 dynamic[0] 元素作为要伪造填充的数据，在本文的实验中，将 dynamic[0] 中的 value 值加 1。由于在 MIPS 下存在大小端两种架构，在小端机器上的代码解决大端架构的填充伪造时要注意大小端的转换问题。
 
@@ -347,7 +347,7 @@ all: elf.h analyse_ph.c
 
 针对 N210RE 的测试截图如下，通过 export LD_LIBRARY_PATH 使得程序加载 ibcjson.so，成功劫持 boa，输出 helllo
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2J7pRfib1CyvGNbXa7sMuo8wiaEN8DXZLGoH0fhJ1iaicfAe7v0yW5jBNcA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4dfccbc27b4b6717cc792eacdf0625a75121cce95da02d580177a683eea7c4d2.png)
 
 **Ubuntu 下 rand 函数劫持测试**
 
@@ -380,15 +380,15 @@ int rand(){
 
 使用 LD_PRELOAD 测试，成功实现对该函数的劫持
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2WzjKJYNLK5XtOoeDXBg2YZRlbQXiazmfGMy8f9Qkvus93vSTfa2BsMw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d293ff60dcf0074e267cb166b3a523e2abc7944ff2ecd75403e481e9431eff04.png)
 
 使用 patch，针对 dynamic 段元素添加伪造，测试 rand_patch，依赖的库文件增加了 ibc.so.6，ibc.so.6 需要通过 export LD_LIBRARY_PATH 导入 ibc.so.6 的文件路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2FNzUGqZr3vxpmjsdvQG9eaXzNibvMurRpQVCeCwyxS0HzBGdee7pSRA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/26ae7ceb27d2148422cda3cfd0945145dd756ef0fd10133118cafc8abc0df304.png)
 
 实现对 rand 的劫持
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2Q8JYYCwly0kn39sAYXryowCVNyHjMf0PDH1PVQpZbqmNxBAE1EsW2Q/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d6313909196abf4b93d13bca5532c3908ed3806320a23551825232ec8e2b389b.png)
 
 **总结**
 
@@ -412,7 +412,7 @@ int rand(){
 
 [更多详情，点我查看！](http://mp.weixin.qq.com/s?__biz=MjM5MTYxNjQxOA==&mid=2652885477&idx=1&sn=39e97a60d7b68d19569284654e74ffa1&chksm=bd59ad288a2e243e4d89b7c456fbd44a93d241c881075b342af22431d93dca56e52076ed75ce&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC6iavic0tIJIoZCwKvUYnFFiaibgSm6mrFp1ZjAg4ITRicicuLN88YodIuqtF4DcUs9sruBa0bFLtX59lQQ/640?wx_fmt=gif)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/53ae67ca79c9a2422ea2e38e0ee3f05d07bfeb4c69c90b406949962917ec18f0.gif)
 
 靶场实操，戳 “阅读原文 “
 

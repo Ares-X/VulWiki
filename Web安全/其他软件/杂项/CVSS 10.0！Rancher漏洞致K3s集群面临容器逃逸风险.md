@@ -265,7 +265,7 @@ CVE-2025-62878[2]
   
 借助 Orca，受 CVE-2025-62878 影响的客户能够快速识别其暴露面，并确保安全团队优先聚焦于最关键的 K3s 集群及边缘部署。  
   
-![Orca 平台中的新闻条目](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5DlmrG9JftWg3oPJmo2sW5TDiaYRGNC5Lib0wFbCvB187V4l2QPBlrMXiagWPrFMJXeZFb7RE6lThV4qwk6wQovhLoZ4bCkTmBXZc/640?from=appmsg "null")  
+![Orca 平台中的新闻条目](../../.resource/remote/6deea6921e3e83c2f7cc1aa51d7c6096fbf9d0280a012e62ebaff991ad7ecbb8.png "null")  
   
 #### 引用链接  
   
@@ -299,14 +299,14 @@ CVE-2025-62878[2]
    
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Kric7mM9eA5Cu9xJ4h79YqXSbnMOBP4iaNKAG0wj9dc82fuYFO1Cva4teFHZUZR5G8e4icJ0Nlb2GH6SGlHdNNT5FEGib94m3XZNIwRbwl0ibxE8/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/cad7850d1297bc1081b791f6640032e46e91c8b7a55f439a51f7f42a118a6704.gif "")  
   
   
   
 **交流群**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/Kric7mM9eA5Cd2lxCnbia2TzapMsXzIfdg9BBI5g8lSDo2rWuSCI1esnxpIiav3L6bLalVDD0q3KAXsAxmxxjgvjZibWVgpMAToCx5Pc2cJC4ZI/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7f143ba51fa85bda43178bbd586b4f34b7cfaff613c5e1d20b6e707844a555ba.png "")  
   
   
   

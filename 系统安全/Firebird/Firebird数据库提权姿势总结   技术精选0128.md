@@ -65,11 +65,11 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Jgj-It1ONQApWPLVt6ZdCg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/WTOrX1w0s56SCcicutqYiarKB82TYibkfpj8icy0Bm6eo7bwVWibicT0bdCOBB3ichDQCgsHGx6baib5wqsz6hEh24WQlA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/92b23d98a505f0656256959764cf9c4ed76ffddeda5ae0cb73cf9e88318eac99.gif)
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56SCcicutqYiarKB82TYibkfpjSagSTADBichxZLfAwVG9sBfAbuy69DsxzuTVc7Yuxes0c5hnicTVTJLQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/bd1d295134a66151424c176075e16d7966514f5871d6063b47162ad8f0d670f8.png)
 
 本文约3500字，阅读约需9分钟。
 
@@ -158,9 +158,9 @@ sudo apt-get -y install firebird3.0-utils
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s565S7a27YGv36L4GU6gXIb98vUjnq0qeiazrsaqOxGnUFyMABlgjPor25OCqhucrSvqGjLMRFnPfyw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2bbdff049d30f9ea1ecda8a41abdb86ef6d02ee9fcc6956f8b63408b97b0ba06.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s565S7a27YGv36L4GU6gXIb9HuibUxHqGtM7efLssIK4MibbWV4sCicVbibUNtiakOibP8td4iajRUtlkmJHA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/887e674c498ab0c7db52323fe2ffc1345b5ec891fd2eb42c8fe506b3ff31c512.jpg)
 
   
 

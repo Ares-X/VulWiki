@@ -54,7 +54,7 @@ source_status: "recorded"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Bmn4w_OGMnC4PFKJX85p8A)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -68,11 +68,11 @@ source_status: "recorded"
 
 **登录页面如下**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el71T1D9H7abWI76W4qH8CmuXMGe3wQ4HB9ClfUJNbp1ibTKX5oQDLGuWWvV6JRibOLPFvrFOian4UxLA/640?wx_fmt=png)
+![](../../.resource/remote/81b317ac50b4d7085a5fb396dc70f304c163ff9f2beeea94a0da832640c1e2fe.png)
 
 **其中抓包过程中发现请求的一个身份验证 Url**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el71T1D9H7abWI76W4qH8CmuURmFgoeJERTcW1gDYI0XDA7OvZgZnibCTuzk2pXRicn5umMUALMuWr6A/640?wx_fmt=png)
+![](../../.resource/remote/f9aa1042ff676aee00c8694429034889dd1187b9345fe7aaa418ea376e94a97e.png)
 
 ```
 {"role": "", "login_status": false, "result": "ok"}
@@ -80,15 +80,15 @@ source_status: "recorded"
 
 **其中 **login_status 为 false**, 将参数使用 Burp 替换响应包为 **true****
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el71T1D9H7abWI76W4qH8CmutQJIXZc9VhvJ8DaKh18A1TPAOs0d63vINpkb8VsvpHvRrmWiabQicPmA/640?wx_fmt=png)
+![](../../.resource/remote/c22c49fd84d0f53272e8c42fdc7153b0b4a55964551afb3d161a78245ddfc988.png)
 
 **请求 **/api/user/islogin** 时成功越过身份验证**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el71T1D9H7abWI76W4qH8CmuLExxbVuI7WJDPib0rzPwvNWKC0Ng9Jk2epC39LbJguNriaYCEwyiatIYg/640?wx_fmt=png)
+![](../../.resource/remote/22f484f2b2ad34a649211e4abb0c98dd4c2eee681cf22b8c9f0325749900c8b7.png)
 
 **再次访问首页验证越权漏洞**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el71T1D9H7abWI76W4qH8Cmu1jlzI618ZZicIXqT0ygK1UsAnH7MZIibxbGACqjHicaOTAk82QWTLOQjw/640?wx_fmt=png)
+![](../../.resource/remote/5e5dc8d56d30e5e0863d59ba350af64191868124df93c3d08f3924690f9b9fdb.png)
 
  ****四:  关于文库🦉****
 
@@ -117,7 +117,7 @@ source_status: "recorded"
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

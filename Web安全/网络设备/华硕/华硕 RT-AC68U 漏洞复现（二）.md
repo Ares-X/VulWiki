@@ -397,7 +397,7 @@ reply_size= len(dns_header)+len-1+4
 
 **EDI 安全**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/rJALXSMzgel3K4wjBfL4CI1kyTgKR7eKK4icWK8mYgJXexTqEgrJYxLJPBnhXbOXDRkIYiclVkRYXCXz5VdQQtMQ/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/e8b0568005557e1391f7eab5821ee0206ef88107813a1e6bcdb68d1269f259ea.jpg)
 
 **扫二维码｜关注我们**
 

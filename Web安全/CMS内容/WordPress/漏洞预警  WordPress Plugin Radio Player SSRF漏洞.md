@@ -48,7 +48,7 @@ schema_version: "1"
   
 WordPress插件Radio Player是一种简单而有效的解决方案，用于将实时流媒体音频添加到您的WordPress网站。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWialcP9Ix17EIaWIoaRFb6kWCfvicDlBDxW1CgNlqXWiaPMG8Mr6N29MRCibBEu89jwcqiaPzibxmKKkrA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3d62a90148b340b8babe66709262e5c54dc42d80831c1b3c566e773a0a5c694c.png "")  
   
 **0x03 漏洞详情**  
 ###   

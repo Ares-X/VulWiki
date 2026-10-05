@@ -70,13 +70,13 @@ schema_version: "1"
 
 锁定 delSqlFiles() 函数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu29OqIdZFcM6QibGQDvIP82C8cQgdzHR0pOXLgxibPxibPibaXm8D6YYBXLg/640?wx_fmt=png)
+![](../../.resource/remote/acdfe9b1f3f7fd1e338f09719641826db3d00d6a91a758ab5a642b0b26ac1505.png)
 
 #### 漏洞复现
 
 1. 进入后台
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2iaibx5qPYcmuDcic1SEia1JLc5miaJWyQAu4W2fsOtXHYRicQ4bDM8Jx83uw/640?wx_fmt=png)
+![](../../.resource/remote/04d20dd52ffcfdf504577c02eed16f97dbd2c08f0b5d59e6dd13b67c4ee68637.png)
 
 2. 删除安装锁文件
 
@@ -103,7 +103,7 @@ http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/xyhai.php?s=/Database/downFile
 
 http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/install 重装 cms
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2vmuE6BoXNuNgVZZ7urzQcPpjGriabWjF0Zfd3k9n4vNBxlGLsr0EdXg/640?wx_fmt=png)
+![](../../.resource/remote/72fd1aa1ee683df54f3e4181d3ae10e4c016fc0f4a2d361f238b98e224f497e0.png)
 
 ### 二. XYHCMS 3.2 后台任意文件下载
 
@@ -119,14 +119,14 @@ http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/install 重装 cms
 
 锁定 downfile() 方法下载函数。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2Arn8lgISZyqkDuI9icibPx5S7spLF5ALW3KyPnD33ruK1Am0XRfMtmEQ/640?wx_fmt=png)  
+![](../../.resource/remote/1224f2be70709a8a086a8a34fc92b1275a38d50348754ad49fdac7bddc9da22b.png)  
 这里并没有对下载的文件有限制，所以我们可以通过这段代码去构造 poc。
 
 #### 漏洞复现
 
 1. 进入后台页面。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2ZACcuczvEiayHho3jGZv4JLX2TnmredqTZkZVTDc14Yx2R2iadHQnsYg/640?wx_fmt=png)
+![](../../.resource/remote/67addb1edfa75668ca2d62d9675b6cdff30bece67fbb8d6205f49e0e4ffdba4d.png)
 
 2. 构造 poc
 
@@ -134,7 +134,7 @@ http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/install 重装 cms
 http://127.0.0.1/XYHCms_V3.5/uploads_code/xyhai.php?s=/Templets/edit/fname/Li5cXC4uXFwuLlxcQXBwXFxDb21tb25cXENvbmZcXGRiLnBocA==
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2zNnXHO9C0oSUSGqGtIKd4RYtkD0YqGmwbXqdsu1j0N0eSd0zXAIricA/640?wx_fmt=png)  
+![](../../.resource/remote/3fceccd6c35ffcb0aaf2d43fcc3914e2cd6e0c468dfb4c7ba7e235c0bc83561c.png)  
   
 
 3. 数据库配置文件就下载下来了。
@@ -149,7 +149,7 @@ XYHCMS 官网：http://www.xyhcms.com/
 
 程序源码下载：http://www.xyhcms.com/Show/download/id/2/at/0.html
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2Hfvu66rDicbiaPkqZDWxL1WbL5RGuILibRkiakHrrbRcajSic7ibxicwYR9Iw/640?wx_fmt=png)
+![](../../.resource/remote/caaf434d8079961e3635616e02b7c29ad3c2f5481cbabbe8d08342abafa1b5ae.png)
 
 #### 漏洞分析
 
@@ -157,7 +157,7 @@ XYHCMS 官网：http://www.xyhcms.com/
 
 第 59-83 行：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu25XJe6tVEKRoVxiaIKpzhyqcicJc9Kkemohb7EU1mL7gdMFBmEiarOx7OQ/640?wx_fmt=png)  
+![](../../.resource/remote/65462db1377d3ed4ef6e84c2d72dc8116154245f541455db9f705ab963c0e1f7.png)  
 声明了 3 个变量：
 
 $ftype 文件类型；
@@ -170,7 +170,7 @@ $file_path 文件路径
 
 如果有就进行保存等，如果没有 POST 数据，将跳过这段代码继续向下执行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2pibNiav7gSCctpw9gN20g0VBt1DAqGdAF30TpibULBWkLOuDBTyh9gLGA/640?wx_fmt=png)
+![](../../.resource/remote/01baa4eb2d95a582f914e0364d3a8fea0c2d8b90d5b809fb66cb1e8dbce8f839.png)
 
 通过这段代码，我们发现可以通过 GET 传入 fname，跳过前面的保存文件过程，进入文件读取状态。
 
@@ -188,7 +188,7 @@ $file_path 文件路径
   
 数据库配置文件路径：\App\Common\Conf\db.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu29yH6xVibica8DnQh8X1ibAcov7SjsMKCZ8oDHicOFeKDYcITTYNmPNiaiaLg/640?wx_fmt=png)  
+![](../../.resource/remote/8c90b41828487df0ddb38343d190dc6282f71b7f0dff403ec7226b5f8513d668.png)  
   
 
 我们将这段组成相对路径，..\..\..\App\Common\Conf\db.php，
@@ -205,7 +205,7 @@ if (stripos($data[$key], '<?php') !== false || preg_match($preg_param, $data[$ke
                 }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2BSheDZuictY4jSTrPfddpa4ZbuHoOiaXl5ib5WzH1f0UPjgHNdSK9Ua3g/640?wx_fmt=png)
+![](../../.resource/remote/6793e54739e1189bb397f8f4c7e46380b0d2285cce772390385efcef2f226674.png)
 
 #### 修复建议
 
@@ -228,13 +228,13 @@ XYHCMS 后台存在代码执行漏洞，攻击者可利用该漏洞在 site.php 
 
 按步骤安装好网站之后，找到../App/Runtime/Data/config/site.php 这个文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2icgiawq7hPkpFPPYXZYibdviad8hKiaL3ib583pr7s0hpRMn4esazovc3X4A/640?wx_fmt=png)
+![](../../.resource/remote/b47466e8f92de673e88e7910d5dfbd41c2ffbb629c91371d9ceb36e192441126.png)
 
 找到对应功能看他是怎么控制的。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2iaqaibSAOt5f4sibby4UPImzcYMLibxm8ulbGkoQnc0PVl85cBz5bBQwjQ/640?wx_fmt=png)
+![](../../.resource/remote/4c4ec9f50d600d3de73a187d281576f125ad466757169d5293df881811382681.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2TsS5FLy6hIqdzxF4kSusyZvFEiaBVbr6vE15iaxQsKrKpfSGV3bbtKcA/640?wx_fmt=png)
+![](../../.resource/remote/8ba3bfcbd623fc0359eeb541b2a92ee1d182640582c286ef12500687854d1eec.png)
 
 很明显，我们要去找一个 System 相关的控制器。
 
@@ -242,7 +242,7 @@ XYHCMS 后台存在代码执行漏洞，攻击者可利用该漏洞在 site.php 
 这里可以锁定 App/Manage/Controller/SystemController.class.php 这个文件。
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2Uic43X4CtxgFU603eQJZEiafic2wicDlIxW3nibVLyu9fa8j7GLKVwHyicEw/640?wx_fmt=png)  
+![](../../.resource/remote/9f6fd406814ddd31d22325971d96576f580b0378201a799ba081d1c52b6c26cd.png)  
 
 ```
 <?=phpinfo();?>
@@ -255,7 +255,7 @@ XYHCMS 后台存在代码执行漏洞，攻击者可利用该漏洞在 site.php 
 
 找到后台—系统设置—网站设置
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2iaqaibSAOt5f4sibby4UPImzcYMLibxm8ulbGkoQnc0PVl85cBz5bBQwjQ/640?wx_fmt=png)
+![](../../.resource/remote/4c4ec9f50d600d3de73a187d281576f125ad466757169d5293df881811382681.png)
 
 ```
 if (stripos($data[$key], '<?php') !== false || ($short_open_tag && stripos($data[$key], '<?') !== false) || preg_match($preg_param, $data[$key])) {
@@ -265,7 +265,7 @@ if (stripos($data[$key], '<?php') !== false || ($short_open_tag && stripos($data
 
 就可以很简单的绕过限制。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu22ia1E1J3aLTG59y60jkcCgIzSZcfpR5AjZU2EocGNMsaicTicuSuicG9fw/640?wx_fmt=png)
+![](../../.resource/remote/9361d6a99af0102c21e6a36680ffdeb710a23ee24a7db921e81209a8c5de03ab.png)
 
 #### 修复方法
 
@@ -342,7 +342,7 @@ if (!empty($data['CFG_UPLOAD_FILE_EXT'])) {
             }
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2icHNWPzOcjonNDLxbrjhSXoWial7h7U5nWougicYcUp4posNg29wuRwLQ/640?wx_fmt=png)  
+![](../../.resource/remote/a3bd3dbae8f0091411ace1575816c0af687eb8908cb70cf1e3a46522026a0a02.png)  
 会看到她不允许的文件后缀有：php,asp,aspx,jsp。
 
 我们可以通过这个思路，上传 php3-5，phtml 文件后缀的文件就能够绕过限制。  
@@ -357,7 +357,7 @@ if (!empty($data['CFG_UPLOAD_FILE_EXT'])) {
   
 3. 添加类型 php3 或 php4 或 php5 或 phtml
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2qNs3QJibmiajZG2HHYCw883eBH6MWbYhYWia2oSDZrQpGspEficPEqicrvw/640?wx_fmt=png)  
+![](../../.resource/remote/ded347350a3a5faa2a79f62a6a3cd18239285c2ab263ec7421244c743627d5f3.png)  
   
 
 4. 点击下面的 水印图片上传上传以上后缀 shell
@@ -365,7 +365,7 @@ if (!empty($data['CFG_UPLOAD_FILE_EXT'])) {
   
 5. 之后会在图片部分显示上传路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2WKwjJY5f5OHyee3Z7ePBCCia8bMhQu2BEe84yWrxOU0wPJL45zicxXxg/640?wx_fmt=png)
+![](../../.resource/remote/9b4e263443f02ba15f29943cc86dfea7c4afc45aa3762e25a40e30ab609a347e.png)
 
 ### 六. XYHCMS 3.6 CSRF 漏洞
 
@@ -407,13 +407,13 @@ poc：
 
 1. 修改前如下图所示：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2TR1LDqF7rkDDic6HibhzeicJQCZtnA4LdSQp6HwmXDeJYPYWw1acB548g/640?wx_fmt=png)  
+![](../../.resource/remote/ff9d9f33c2f8e5a7fe32f43cb0dd3a72a503ddc27e9f6503d1efd2de6fdf856c.png)  
 2. 打开 poc.html
 
   
 3. 修改后如下图所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2lnRibHy2lDVjL2tYVXsiaghTfyEN1IXLxJ64plPZFmxUCETkaicFiaVcKg/640?wx_fmt=png)
+![](../../.resource/remote/db73bcf8bac98e84a0e9e0dc85951700c75b3c6af08ad76521723a69a0704c2f.png)
 
   
 
@@ -432,13 +432,13 @@ poc：
  [代理池工具撰写 | 只有无尽的跳转，没有封禁的 IP！](http://mp.weixin.qq.com/s?__biz=MzUyODkwNDIyMg==&mid=2247503462&idx=1&sn=0b696f0cabab0a046385599a1683dfb2&chksm=fa6bb717cd1c3e01afc0d6126ea141bb9a39bf3b4123462528d37fb00f74ea525b83e948bc80&scene=21#wechat_redirect)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWaCD3pqD9SSJ3YMhuahjm3anU6mlEJaepA8qOwm3C4GVIETQZT6uHGQ/640?wx_fmt=gif)
+![](../../.resource/remote/553ceefc3b1479cc862f6f8900857ffa3da4352fd66ccb41e13c9b73baff07fa.gif)
 
 扫码白嫖视频 + 工具 + 进群 + 靶场等资料
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpx1Q3Jp9iazicHHqfQYT6J5613m7mUbljREbGolHHu6GXBfS2p4EZop2piaib8GgVdkYSPWaVcic6n5qg/640?wx_fmt=png)
+![](../../.resource/remote/cfe2acf01f76856e34009a3a3c80c59c96367595d7f9dcf72cf3031cd3ac7641.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWFyt1RHHuwgcQ5iat5ZXkETlp2icotQrCMuQk8HSaE9gopITwNa8hfI7A/640?wx_fmt=png)
+![](../../.resource/remote/cc23fa1d3e8157e15633c47bc376e29fa74b67c7beeba492c693ff51db3d83c5.png)
 
  **扫码白嫖****！**
 

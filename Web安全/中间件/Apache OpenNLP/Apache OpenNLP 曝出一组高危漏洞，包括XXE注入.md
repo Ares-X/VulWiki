@@ -75,7 +75,7 @@ CVE-2026-40682 是 XXE 外部实体注入，这是最值得关注的。Dictionar
  或 ENTITY  
  引用的恶意 XML 文件，诱使解析器读取服务器本地文件或发起内部网络请求。  
   
-![Apache OpenNLP XXE漏洞示意图](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6O1MlaZ9zn4rSCstcyIbuEDoEzcibXe5MuJCNtIwZ8fMQwprk38fyo0cKbRjAChA7k31LfMHlfEPKwCMRSP8bTDI3FH5IibFdeicQ/640?wx_fmt=png "Apache OpenNLP XXE漏洞示意图")  
+![Apache OpenNLP XXE漏洞示意图](../../.resource/remote/89533ad5514d9d3297a6caf6cecc9a6b9e199a00fe9ae9a9c7d3e7a016fb9cca.png "Apache OpenNLP XXE漏洞示意图")  
   
 典型攻击 payload 是这样的：  
 ```

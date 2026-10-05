@@ -62,7 +62,7 @@ schema_version: "1"
 
 流苏  FreeBuf   2024-08-19 18:44  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
 WPS Office作为一款用户基数超过2亿的广泛使用的办公套件，被发现存在两个关键漏洞（CVE-2024-7262和CVE-2024-7263），这些漏洞可能导致用户遭受远程代码执行攻击。这两个漏洞的CVSS评分为9.3，表明它们的严重性很高，且易于被利用。其中CVE-2024-7262已经被武器化，ESET的安全研究人员发现它正在野外被积极利用。但也有圈内小道消息称，该漏洞只会影响国际版，国内版本不受影响。  
@@ -140,16 +140,16 @@ FreeBuf盲盒、大象公仔......
 扫码添加小蜜蜂微信回复「加群」，申请加入群聊  
 】  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ich6ibqlfxbwaJlDyErKpzvETedBHPS9tGHfSKMCEZcuGq1U1mylY7pCEvJD9w60pWp7NzDjmM2BlQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/c756b5fb2e446e8a46aeb976861dc8502220a41de5fd7e545c0fa98a66cefe23.webp "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oQ6bDiaGhdyodyXHMOVT6w8DobNKYuiaE7OzFMbpar0icHmzxjMvI2ACxFql4Wbu2CfOZeadq1WicJbib6FqTyxEx6Q/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/af824128f3c655f23db4a009f5f2a753c9c7e209ababffdeaf5e18432c146adc.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ61icYlLmBLDpdYEZ7nIzpGovpHjtxITB6ibiaC3R5hoibVkQsVLQfdK57w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/f6fba0392477c2656e3f6b5c30fa49b30de791784846cdb1161c166e4b14e541.webp "")  
 > https://securityonline.info/wps-office-vulnerabilities-expose-200-million-users-cve-2024-7262-exploited-in-the-wild/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ7JfyOicficFrgrD4BHnIMtgCpBbsSUBsQ0N7pHC7YpU8BrZWWwMMghoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/0bffd438af0f544d8aead12bdd40b183fc2d88caa433e43fbd4152d042609e5d.webp "")  
   
 [](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247494753&idx=1&sn=a9ee1d680adf601e9ee212fc3841387f&chksm=ce1f16fef9689fe8ad2926bc3739025b04955e5c29fee949f44be9fe8262d8723110eb50b6b9&scene=21#wechat_redirect)  
   
@@ -158,7 +158,7 @@ FreeBuf盲盒、大象公仔......
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect)  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
 
 

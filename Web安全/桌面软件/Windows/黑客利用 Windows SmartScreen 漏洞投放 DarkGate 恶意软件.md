@@ -77,13 +77,13 @@ SmartScreen 是一项 Windows 安全功能，当用户尝试运行从 Internet �
   
 当受害者点击该链接时，他们会被重定向到托管互联网快捷方式文件的受感染 Web 服务器。此快捷方式文件 (.url) 链接到托管在攻击者控制的 WebDAV 服务器上的第二个快捷方式文件。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wpkib3J60o29icMdbc1L10wvbNbgKP1ZZUlZ3SR3Cq7I4SjdP644lnDLibHhH16lvVUn0ic9vYIiaic01iaNmasNMHlIw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3ab4e171e02e063a94784960d14ef3b02bfae800e4352372f94f3ffff8dc3672.webp "")  
   
 利用 CVE-2024-21412 SmartScreen 漏洞  
   
 使用一个 Windows 快捷方式在远程服务器上打开第二个快捷方式，可有效利用 CVE-2024-21412 缺陷，导致恶意 MSI 文件在设备上自动执行。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wpkib3J60o29icMdbc1L10wvbNbgKP1ZZUQ0wz2J8oHRq38V8CZkI9E9B9scZ6iantnYpqukLMCCPaULAV0Fl0vIg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/f485af487c5e0e321c2a475ab8c28174d80f1f78dda85a66ba888bbd50d35f2b.webp "")  
   
 自动安装 MSI 文件的第二个 URL 快捷方式  
   
@@ -95,7 +95,7 @@ SmartScreen 是一项 Windows 安全功能，当用户尝试运行从 Internet �
   
 自 2024 年 1 月中旬以来，DarkGate 运营商采用的复杂且多步骤的感染链总结如下：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wpkib3J60o29icMdbc1L10wvbNbgKP1ZZU3O6nYpb78NnaFPGNVHRorj4EAY7xKic6cnbvwK8cdtqx1jz0ROHUKrQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/89506e53570acbb98fc1b4efada1c66e495c48bd5504f4b4f81f2642b8198756.webp "")  
   
 DarkGate感染链  
   
@@ -103,7 +103,7 @@ DarkGate感染链
   
 DarkGate 6 中提供的配置参数，使其操作员能够确定各种操作策略和规避技术，例如启用启动持久性或指定最小磁盘存储和 RAM 大小以规避分析环境。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wpkib3J60o29icMdbc1L10wvbNbgKP1ZZUIVuQWvfV5nkTCNbBMT0zo7Fx0rY3NVQFnYFoetDAqMajib3BSHXichtw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/72d00498b17949dfe069e11a80c8c5d3c275b299fddac71463d1ec3774cedf9d.webp "")  
   
 DarkGate v6配置参数  
   
@@ -120,7 +120,7 @@ https://www.bleepingcomputer.com/news/security/hackers-exploit-windows-smartscre
   
 “投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/a19b6177177a076d21c922db56b3cbd4151953bc7149b79ed6d6adff52797176.webp "")  
   
 
 

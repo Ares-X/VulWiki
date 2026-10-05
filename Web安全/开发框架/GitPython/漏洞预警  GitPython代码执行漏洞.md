@@ -48,7 +48,7 @@ schema_version: "1"
   
 GitPython是一个与Git库交互的Python库，包括底层命令与高层命令，它可以实现绝大部分的Git读写操作，避免了频繁与Shell交互的畸形代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUnic7IH0FOic1Hr7L5YByMl1lfVia5Q0UZicfKrSFUOAGoUTGFsHdBiaYHXeUkbCsRTBO1WH72ib1zWX6Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b9ee04f348cc750e335e62b9cbcaeb7c2efba1d288c17d2b10fa091f0c84268b.png "")  
   
 **0x03 漏洞详情**  
   

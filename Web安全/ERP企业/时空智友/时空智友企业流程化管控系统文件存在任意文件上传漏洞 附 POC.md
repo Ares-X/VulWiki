@@ -79,7 +79,7 @@ CNVD 编号:
 
 时空智友 V10.1 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXNb9X0QPte86VpIXlic6J0DBERbmgXbec9fHibsojia0WTMxlq33xfCeJA/640?wx_fmt=jpeg)
+![](../../.resource/remote/c0631b9cad050b02e1d318872abcb68a7d3f03ca1a66f25a62ee44104abda68c.jpg)
 
 4.fofa 查询语句
 -----------
@@ -110,20 +110,20 @@ Content-Length: 9
 
 上传成功后，会返回文件名。 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXedOLDZNgicDMWdbfdytmF5NlTE8ZCvJkv5eiafAJPs52tOibeBNwfaT1w/640?wx_fmt=jpeg)
+![](../../.resource/remote/c44547e155d58826e4f6e396c1597e49b510cc36ce23dc829ee6fa439dd5452a.jpg)
 
 shell 地址：http://127.0.0.1/form/temp/202309212fq81zoqchav2jlq_a.jsp
 
 这里最后的文件名拼接上面返回的文件地址 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXKEoYia63rRsTWtwIEX9vQcpByoTQ2XYn36LuWXLqhIsOINapxOmibKYw/640?wx_fmt=jpeg)
+![](../../.resource/remote/edaf6834a5924abb963103b5554fe6989a6d7c8d6b4de44b4dd8e4df90685296.jpg)
 
 6.POC&EXP
 ---------
 
 关注公众号  南风漏洞复现文库 并回复  漏洞复现 49  即可获得该 POC 工具下载地址： 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXQictPiaM5t18eu8plVOKG2Y4eUjqsALibz1muuNHj9DziaM6hGOiaMB1wNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/615dbaafcae023a762acf8f592589a4d4cabfc6afead23d3aba89fea1ade235c.jpg)
 
 7. 整改意见
 -------

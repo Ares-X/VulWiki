@@ -57,7 +57,7 @@ schema_version: "1"
 
  船山信安   2025-06-14 16:01  
   
-![WebDriverManager漏洞示意图](https://mmbiz.qpic.cn/mmbiz_jpg/7nIrJAgaibicOOXBIy7QQJSff8bu78vbeib6jABNLfBT5vU37L5mBiblIfqqghAAjLicJB8j9SC4KZDMxwgz4RKbcow/640?wx_fmt=jpeg&from=appmsg "")  
+![WebDriverManager漏洞示意图](../../.resource/remote/f4b98efa6952843961868949b5802ded91b38c306b82a685398ed4c88b7ed73e.jpg "")  
 ## 漏洞概述  
   
 安全研究人员在WebDriverManager中发现了一个严重的XML外部实体（XXE）注入漏洞。该Java库被广泛应用于基于Selenium的自动化测试框架中，漏洞编号为CVE-2025-4641，CVSS评分为9.3分，表明其对Windows、macOS和Linux平台均可能造成严重影响。  

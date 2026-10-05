@@ -66,7 +66,7 @@ ActiveMQ < 5.15.16、ActiveMQ < 5.16.7、ActiveMQ < 5.17.6、ActiveMQ < 5.18.3
 
 把 poc 导入到 idea 中，这个 poc 必须使用 jdk11 才行。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aYLtCGDrJ11AXWvpWYYJSnpAG8ommHPv4LdvibLX9WJUle3UKwiaoRV4DribKlUuB14a8eow5RvBHv61OG7jk8SXw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/aYLtCGDrJ11AXWvpWYYJSnpAG8ommHPvfMuaaVT0t3bacWCX0K6n5ZfowcVXBHxuJ8jwKHzEFuEBCuPSGKgtgQ/640?wx_fmt=png)
+![](../../.resource/remote/68464bccdfe2273a47c4c2c8a1bf02439b7fd0f65ea6a370e7ed5bfb198ca0d5.png)![](../../.resource/remote/f06338dd87b8ac99e5032500f7aad8a0b4644d4dcbd7a6f7a63c3514d4b10993.png)
 
 恶意的 xml 如下：
 
@@ -117,11 +117,11 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 然后在 xml 文件的目录下起一个 Python 服务，如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aYLtCGDrJ11AXWvpWYYJSnpAG8ommHPv8ftTLscpEx3jPs5V5ZGUaPLicRGiae2gKicEa7l8WibEicyEib1GUxotgg3g/640?wx_fmt=png)
+![](../../.resource/remote/3b5c25d1c9939d6399593fbbf424425fa53654234298c9c86cffaba8f6a20030.png)
 
 然后去运行 main.java 文件，成功弹出计算器。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aYLtCGDrJ11AXWvpWYYJSnpAG8ommHPvCrAaYhkKJ1Oq7Y0iat8zOh0ibo5IeZD6QhoStbXzWkxCpzrMYibPvPwAw/640?wx_fmt=png)
+![](../../.resource/remote/b83c5be91755f77e34b9d0a777c7fb555951205db03202a50565f85aee769bca.png)
 
 其他师傅写的漏洞代码分析很不错很详细推荐
 
@@ -133,7 +133,7 @@ https://mp.weixin.qq.com/s/4n7vyeXLtim0tXcjnSWDAw
 
 技术文章仅供参考学习，请勿使用本文中所提供的任何技术信息或代码工具进行非法测试和违法行为。若使用者利用本文中技术信息或代码工具对任何计算机系统造成的任何直接或者间接的后果及损失，均由使用者本人负责。本文所提供的技术信息或代码工具仅供于学习，一切不良后果与文章作者无关。使用者应该遵守法律法规，并尊重他人的合法权益。
 
-**获取漏洞利用工具公众号回复 "MQ"，是大写的 MQ 哦![](https://res.wx.qq.com/t/wx_fed/we-emoji/res/v1.3.10/assets/newemoji/LetMeSee.png)**
+**获取漏洞利用工具公众号回复 "MQ"，是大写的 MQ 哦![](../../.resource/remote/ddfb43b7bea9f9cf29af8f7935884ddcc49f88ad5660be2be7f33b1aa5050ffc.png)**
 
 ---
 

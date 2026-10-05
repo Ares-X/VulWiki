@@ -57,13 +57,13 @@ schema_version: "1"
 
 跳舞的花栗鼠  FreeBuf   2025-01-15 10:57  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
 微软披露了其Windows远程桌面网关（RD Gateway）中的一个重大漏洞，该漏洞可能允许攻击者利用竞争条件，导致拒绝服务（DoS）攻击。该漏洞被标识为CVE-2025-21225，已在2025年1月的补丁星期二更新中得到修复。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38Z4Ib79ibLryEA60eyDs1Sh1icNN80mwL3Os3otqLUibXnZz7X6daDdXUotBRXZsSohfQ4f6LRxNGVg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/5846d002822621922fc29e22c4096480f5bb76345ed53237e26b9671ab98e3a7.jpg "")  
   
   
 竞争条件漏洞是指系统行为依赖于并发操作的时序或事件序列，攻击者利用这种同步缺失。在CVE-2025-21225背景下，当RD Gateway服务处理网络请求时，会出现竞争条件，导致漏洞产生。  
@@ -144,10 +144,10 @@ FreeBuf盲盒、大象公仔......
 扫码添加小蜜蜂微信回复「加群」，申请加入群聊】  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ich6ibqlfxbwaJlDyErKpzvETedBHPS9tGHfSKMCEZcuGq1U1mylY7pCEvJD9w60pWp7NzDjmM2BlQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&retryload=2&tp=webp "")  
+![](../../.resource/remote/c756b5fb2e446e8a46aeb976861dc8502220a41de5fd7e545c0fa98a66cefe23.webp "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ic5icaZr7IGkVcd3DT6vXW4B4LOZ1M7YkTPhS1AT2DQJaicFjtCxt5BRO7p5AOJqvH3EJABCd0BFqYQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/550c384107beaf189c3fc4790e360c6fe7bc2da72b731e0458273c873e3e9555.webp "")  
   
   
   
@@ -157,7 +157,7 @@ FreeBuf盲盒、大象公仔......
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect)  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
 
 

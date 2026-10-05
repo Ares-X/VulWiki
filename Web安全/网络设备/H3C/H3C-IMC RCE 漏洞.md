@@ -84,7 +84,7 @@ body="/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyHwKsSBjdzf685Rj7EIOfthp0icqIzK5vmib6icgCemuichWZ3slibnibSbwOguGxINrHiaOBkq1sJiclNcg/640?wx_fmt=png)
+![](../../.resource/remote/77b12f2475e6657a9942a9baa49f69776f2d3db9b0b886c876d96998ef10b1a4.png)
 
 POC：  
 
@@ -100,16 +100,16 @@ pfdrt=sc&ln=primefaces&pfdrid=uMKljPgnOTVxmOB%2BH6%2FQEPW9ghJMGL3PRdkfmbiiPkUDzO
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyHwKsSBjdzf685Rj7EIOftMjFLonibqVagibxVSmW34mWQA4amhZ7BtmyKnfLYf9vicJo6SnEG21nTQ/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyHwKsSBjdzf685Rj7EIOftbAAWToicibuefoej4xfzIKjq1GTEbscTRaWNweibSoFpMnRBxBZMMUHvQ/640?wx_fmt=png)
+![](../../.resource/remote/29167608fb5b56ea6903a7f6b6179df7680d827d4d6b6d41497b615d360acaf7.png)![](../../.resource/remote/7d3ad8bd2a9066b867096368e3ad81792cbe255a594fac8090546ff0823109fc.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyHwKsSBjdzf685Rj7EIOftnK9bQBMsdsQYKTEGjtEmmIrnoPoaNwpDibFqLqZmb9wHCvxTSPXRzQw/640?wx_fmt=png)
+![](../../.resource/remote/618a31a042be5eba7ebf4290d6fb82822c2752f088f983c8d338a17875e269b0.png)
 
 **修复建议  
 **
 
 进行权限控制  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYa0PicnDzIv4xibegRTm4976s4ZMcq0Ke9uH8TG8RqC4ZbaXK33IrmicxA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)  
+![](../../.resource/remote/a42c9c7ebb117f1b9d9d8da381ddae972cc83b939df4fabf72bbb68309698bca.jpg)  
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

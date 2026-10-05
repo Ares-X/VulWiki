@@ -60,7 +60,7 @@ _本公众号致力于安全研究和红队攻防技术分享等内容，本文�
 
 https://github.com/geoserver/geoserver/security/advisories/GHSA-9v5q-2gwq-q9hq
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicCrxIZNgLqTqAvCeBly7XT8k9rwpkoGOt7Agcyic0XmlqeC8zb67nTXw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/91bde2642e265ac39a4c7422bb77482a8c5ac6302c1b088666a59dc6864e017d.png)
 
 本来以为当个伸手党随意复现一下得了，没想到这给的什么鬼 poc，能复现才怪。翻了半天安全厂商的复现公告，给的一张 POC 截图还打了厚码，捏马的，这我能忍吗，自己动手吧。
 
@@ -84,25 +84,25 @@ docker run --mount type=bind,src=/MY/DATADIRECTORY,target=/opt/geoserver_data -i
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeic7QZ1HtVDT613bHYgficNHoEm76XZ17bHu7UXgl3FLiaOoxrtRfuibqbYg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ca22634def2e7817929fb6ab08be44b9acce77ce9c3122da3b2c3eeef8b51dac.png)
 
 **0x03 审计过程**
 
 首先跟了一下 github 的补丁提交记录看看漏洞触发点在哪里，乍一看非常的 easy 嘛，不就是文件处理函数没有对路径进行校验和过滤嘛。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeic5MaLOhibDsica06H1XQ7qlAHYFviaHgZq3oYAo6v0ib9E6A3vpHcyz664A/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/f71f21948c8b892ef538064f764ea824f8412a49da8e5f814caaa379d9352016.png)
 
 根据官方给的 poc 提示，该漏洞最后一步应该是发了一个二进制的 post 包触发的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicdANDXxWP5AvBrCbbH9TqvARyt2d0OAZpZak3uo3To8xAXB8SDTWGSw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2fd7ea8908cab6afa2bcdf086c6b6650a19a616c75751b0dfbe7bbdfbb28ac26.png)
 
 回到代码中来，如下图，代码中的该接口与 poc 的 URL 接近
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicFNXn8LutKZshmXmS9Lbfa5KrMFmZhe74H5J7xMBhrghQ2mk5WuNpKg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/1038591f3416762a1fd4a247f8572d02fc626c5fd5a9b2331b85d913bdf2f515.png)
 
 负责处理该接口的 controller 是下面的函数
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicwhCIjvsBxxpwhoIGiaJQdq3tVVAqBrpvUBfuPWOkq06ZXGrb5pwtDMg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/0e0c17a251a17a331b805371ffba34ac5de428df06c3043639617d64d08277a2.png)
 
 既然找到了接口函数，接下来直接构造一个请求即可了
 
@@ -113,15 +113,15 @@ curl -v -H"Content-Type:" -u "admin:geoserver" --data-binary @1.zip "http://loca
 
 然而并没有这么简单，碰到了第一个坑，后台日志报错，且服务器响应 405
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicYbhAUohJOrvXwVBK4PqgZKSZic5icMLaZict92taBVAZoPfF3HlaGRHXg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b409a649a7b20a2d4e8a1751c55a8e2f16f6167f619725e41cce57de7cbf87bb.png)
 
 代码中对应的异常在这里，根据上下文发现，其实提交的 workspaceName 和 storeName 他们必须能创建的是一个 StructuredGridCoverage2DReader 类型的实体。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicMHYaCmiae64UKmujowlNOEKKBnzoCF2vJMpEXzEqX2WmVm6RxAsib0oQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/131dc876142905729f8989325a50fc0342073138ada6d4bac4661ef08c5a2b53.png)
 
 好了，到了神坑的第一步了，对于这种专业系统，到底什么样的数据格式才能符合这个要求。抓耳挠腮的查阅了大半天资料，终于在官网接口找到了下面这句话。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeic12fNfVdppPjmic2Ycylh45TPHyMZic3uS4iaeMFUedZCicaA5Kr7AF9DtA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/2c263078ca6a0224983b31fcf34de214f6e2b832a59b1b7c720c7ab884c33914.png)
 
 也就是说，如果想 post 成功，所谓的 “coverage store is a structured ”，注意后面的 e.g 提到了一个类型 “mosaic”，不管他是什么找一个这个类型的提交试试。在翻了半天 Demo 后，终于找到一个符合要求的。接下来碰到第二个神坑。
 
@@ -134,13 +134,13 @@ curl -v -XPOST -H "Content-type: multipart/form-data" -F "file=@2.jsp" -u "admin
 
 后台报了如下错误
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeice7PERK5DNFxhfaXpibaDZwoU9smMkNvpoI2jT1xUECym3cqLWajme8w/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/585bb3325e94c945847087359f5ba30c2313a43f90290e0f8a0e64575b1801fe.png)
 
 代码中原来是有跨目录路径检查的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicTfja7UawNNPeW5dKe9DyzmicicXTrfgMnVl37rOT3Fm5Pnmv3KuubQtQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/16a4750f47de10a7855c36c9fbcf9c01a73aa06c35113dc7843862e849a9b270.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeichF6nRftVqX3asUmsJQtIXnVcbqWQpLqLykz4aOCicd3icTZ7y1wYlsicQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/eb5260623f795dade2bce6e71aeedf6280c9641c0b9031a323ba12632a39ffb3.png)
 
 这一度让我认为该跨路径的 poc 不是通杀 poc，仅在部分低版本中可以使用，既然有路径检查怎么可能上传成功呢，或者是有其他绕过该路径检查的方法。
 
@@ -148,25 +148,25 @@ curl -v -XPOST -H "Content-type: multipart/form-data" -F "file=@2.jsp" -u "admin
 
 前置代码流程很简单，直接讲重点，其实关键点在于文件 org/geoserver/rest/util/RESTUtils.java 中对于 directory 的处理，如果 directory 最后处理完的类型是 FileSystemResource
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicOIzuQJZicCM9fMkHy6E63Zpmd662wTr9E7z9lRW0GqmzuS6d81fwKBQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5de08b86dffe902910fe5b2f8452f99601504863946a1921a329c1d52150c0b2.png)
 
 那么在 handleBinUpload 函数中处理 directory.get 调用即是触发 FileSystemResource 中的 get 方法，如下图，这将直接导致会调用 Paths.valid 检查，即如果想通过../ 进行目录穿越就会失败。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicDPn6fKprZLZLknsXBkFUiaAiauejiafvg1lfibPXmvyXX0kSasuoOWLWtg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/f9be48c41aa3b9c0a3234b01c40ff46d53e5ecf80625a99540690291bcebdeab.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicSq5Cz3ZEr81llxQgqOJMIyOibicU5Qjiby7BtqricPgNIAP0jiczFYbSvBw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/4397683dce3f638c83cf2d54a54673506ceedee79c20ecfe0456dc507a1e4cb5.png)
 
 那么有没有办法绕过呢，答案当然是有的，关键在于计算上传的 root 路径函数 createUploadRoot 时，path 参数非常重要
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicqt88tLp1S38VxsaKcDaRty73m7IMYoBGvdI1YX1oicZkkmt4WrOgf5g/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/728fb5ea31709dcbef54a063394500d6351614b26d5b8bfe1b1d6661f8bb69be.png)
 
 如果 path 是一个绝对路径时，那么 return 的将不是一个 FileSystemResource 类型的 Directory，而是一个 ResourceAdaptor，而该类型的 get 函数将不再有路径检查，故可以直接跨目录上传文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicHnT1HVsypXdwTYvSITUZ9Xk1kkOj4hJ1eWxxYoMhuKZMgibjfICXarA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/1274bd304f2be775e25c1d30341aea6b7fe4f5daecebd2efec73f65a9999f5ca.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicoAd63WPOX7f3sXbaOXPBde0ib4Oiaj5obPMYhRicaMD556wzdcLJrkvxA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/8b6a3fd6d8e4fa2e6790a556f068319826757b34703d47ad8dc23e2c4274a9d6.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicicNk5ssR4s358yicBdLZOXCwN8szS4ADCvBoJaLmgs0j2d1k8j9jZnyQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/9d2cfa86182b7754a9e1aec49d7a5d6e343a3dfbf4098156336abc7ed431b923.png)
 
 最后调用栈
 
@@ -182,9 +182,9 @@ coverageStorePost:120, CoverageStoreFileController (org.geoserver.rest.catalog)
 
 我知道有些伸手党肯定直接滑到这里了，介于该 poc 还没完全公开，我也不直接发 poc，有兴趣的同学看了上面的分析肯定能复现出来的。更详细的过程和 poc 发在小密圈，小白和伸手党进圈查看吧。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeic91gVGaPPRoAYKXQlCpjwCDNicOxyBM213WkO9DupVnDqAfTLpAYMpqQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6208cf981891bb121dc4602b751c16b069196e98e81bd89d335cd27fdc73efb5.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeicX16jTIeJcTnMNzxsWsTerTPjwU0WEviawYNHW3MAkicU4jGwC3zsC3EQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/1ada85daa238279cc5bdb08535fbb1f31b3172472df6a979f7f6c52093c9aaa6.png)
 
 **0x05 总结**
 
@@ -197,9 +197,9 @@ coverageStorePost:120, CoverageStoreFileController (org.geoserver.rest.catalog)
 
 后台回复 “加群” 或“小助手”，或扫描下方二维码加入我们的付费圈子，一起进步吧
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybHZicZnvXwW5LnL1bzhuJAoQ7MpUsy3BY3Cibl6curYWucSMSpxJicscm7zwWDWQaaiapo57oc6L5YH2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/4359126720504046899ede1d130c6a2225ba3304a7d645fc2b193f9cdc8ec97d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybFMdnMAXpcyiaNPdyoLppiaPO7glCdCXn1WctQuslCotWHfH709HdYlkyYRK3BcTTzIE5UCw1vS1LJQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/a5805138d393db4839257c864dd36e518a3d1bde5ccec88e0b1bcb077df0dac0.webp)
 
 ---
 

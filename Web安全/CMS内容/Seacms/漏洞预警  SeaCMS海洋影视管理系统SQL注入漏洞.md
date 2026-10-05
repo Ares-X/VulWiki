@@ -48,7 +48,7 @@ schema_version: "1"
   
 海洋CMS是为解决站长核心需求而设计的内容管理系统，一套程序自适应电脑、手机、平板、APP多个终端入口，无任何加密代码、安全有保障，是您最佳的建站工具。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SVAS3cgxzDKew2rV0NjbAZGHtibZEdHTrPpsFL4Mgko79pJicmq3XiarhxlzdCkrkibN4f6Fd8cibA5Y3g/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1 "")  
+![图片](../../.resource/remote/345aa53f0bcc56994299aafd6d98ce9f207804b2873b8dfd9d1d2d665888d9c6.webp "")  
   
 **0x03 漏洞详情**  
 ###   

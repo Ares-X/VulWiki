@@ -65,9 +65,9 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/R5RvWHNVycEez7qxquxUhQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)
+![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)
 
 **一****：漏洞描述🐑**
 
@@ -166,7 +166,7 @@ require_once (dirname(__FILE__)."\\common\\HTTPrequest_SCpost.php");
 ?>
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xerf6CyWicKPjhNDSediabPHicnFnPw84S9ztlibTlfVR7yjiaXzlBtZlaaA/640?wx_fmt=png)
+![](../../.resource/remote/267bda9a1a2e945f78d044207c3a99a4e422b00301560abea2347ae9765420a2.png)
 
 ```
 这里传入 base64加密的拼接命令即可执行任意命令
@@ -191,7 +191,7 @@ Cookie: PHPSESSID=noei1ghcv9rqgp58jf79991n04
 url=IiB8fCBpcGNvbmZpZyB8fA%3D%3D&fileName=xxx
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xTib7ZQdUiaFhrpYYvO2mZUSd6AH8RczbDE1fsVsicbsjtQ2DzzQMZuKjA/640?wx_fmt=png)
+![](../../.resource/remote/5ce30d332648d5893809f497ee57a2ed7d57fc463736fefcc96159d81f951f35.png)
 
  ****四:  漏洞 POC🦉****
 
@@ -236,7 +236,7 @@ if __name__ == '__main__':
     POC_1(target_url)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xzYrdhQ7LWrqibgwiae6h9AyV1mG0rnC2yCKKfmq0lvaMlRpXh7ia6c6AA/640?wx_fmt=png)
+![](../../.resource/remote/13e3579c88ed9a3a1134cdc6ff37c5eff61673d0689b3d3e05793d4eff20dc31.png)
 
 ****六:  Goby & POC🦉****
 
@@ -245,7 +245,7 @@ https://github.com/PeiQi0/PeiQi-WIKI-POC
 Goby & POC 目录中
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xItq0ciaRMpfPRkFXP8myDmtdCzDAbselQH1bDsqXrACpbHfq6ZnBIgg/640?wx_fmt=png)
+![](../../.resource/remote/45f5e729ae67ec50362f5ea1e8e8681b5e7725385f01327fcbfe82644c6d6fd5.png)
 
  ****六:  关于文库🦉****
 

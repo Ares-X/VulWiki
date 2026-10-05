@@ -57,7 +57,7 @@ source_status: "recorded"
 
 **点击蓝字**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/4LicHRMXdTzCN26evrT4RsqTLtXuGbdV9oQBNHYEQk7MPDOkic6ARSZ7bt0ysicTvWBjg4MbSDfb28fn5PaiaqUSng/640?wx_fmt=gif)
+![](../../.resource/remote/e196a44ab5c0c266d1799efc1e3868a880e0d09347a592a09e40339238fdbd85.gif)
 
 **关注我们**
 
@@ -103,15 +103,15 @@ _**
 
 今天逛 CNVD 看到了这个漏洞的公开
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z57oe2MLpAedeHZGWe7ibQelWcZ2V0Y6ibUntbMicDdU6g6REXJBJbN1WKA/640?wx_fmt=png)
+![](../../.resource/remote/858e2150c178ae84735d43b6883b74fef032107f34da5633afc60ebb46c576b1.png)
 
 于是网上找设备登录页面的截图，发现标题为   **无线 smartWeb-- 登录页面**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5tTgfZCzXHO1m4GIlo882ngkElD8Lia5iaNLecicpjWNAbjBSWDjPFL9ibg/640?wx_fmt=png)
+![](../../.resource/remote/9a445d9831a7a937237bcbf3c4c2628fe64b29cd5167d70154685508e5ae7848.png)
 
 登录页面如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5gBVId3xEWldIibh6O2pQ0nJk3PJYO4xL4bAC97Gk1MfIia3V0Eiamhd6Q/640?wx_fmt=png)
+![](../../.resource/remote/d16b780dc1f0c1b998288d7acde20acdd2938c2f28524fa5e999e6e937d09c50.png)
 
 然后找到了一个设备存在管理 admin 员的弱口令，进去后发现 Web CLI 控制台
 
@@ -121,7 +121,7 @@ _**
 more /web/xml/webuser-auth.xml
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5OnyuqAqOfBqW60AMNlBOWcNmPibWgS1Z5vwoHWmJQABia29qbz8ZtMug/640?wx_fmt=png)
+![](../../.resource/remote/2f022ae4c2f670c6eb00084f6ebabe1c5b665b8ec3a012b96b1de195e3aee5b9.png)
 
 里面存在所有人的账号密码，于是测试直接访问  
 
@@ -132,15 +132,15 @@ http://xxx.xxx.xxx.xxx/web/xml/webuser-auth.xml
 
 于是继续爆破账号密码，找一个低权限账号，然后正在愁密码的时候，看见另一条 CNVD
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5rc7VHvNLVog6n9rs5aqKOrHsxAEzicwQUoJoJZ5IibOoDbyVVu2KVPsw/640?wx_fmt=png)  
+![](../../.resource/remote/0e7a5e43d6faca4d77e931673644a7899abfc1d97f459fb29e3d1056faccf79b.png)  
 
 拿几个弱口令爆破一下，发下多个设备默认存在 guest 账户，账号密码为 **guest/guest**
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5HOLQRSDyhZThhnKsItdWap9a8Ds3JK2KKXSErhjfPxOTqptQZVAOZg/640?wx_fmt=png)**
+**![](../../.resource/remote/8065f37b66b656c8c26d38625a9ed9d69b75a779f4992cda123204834dd36760.png)**
 
 但是没有 CLI 控制台可以使用了，在重新测试访问刚刚的漏洞点  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5MCJG0YcmAa8VIiajjUh2e5HS4t7Amg8v6ulIBPZibvU1Xpz8bibpjc8hQ/640?wx_fmt=png)
+![](../../.resource/remote/eb78549b2a02f22dc382187c07dbace2ef12e612637650f5a6b02b6d337c94d7.png)
 
 解码可能获得 admin 管理员的密码，请求为
 
@@ -166,9 +166,9 @@ https://github.com/wgpsec/wiki
 其中包含CNVD-2020-56167 和 CNVD-2021-17369
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5Lbg57vTqdtxtj5vHppUJT68icKxUqVPmBOIjE7npO9BSaCynkwqnxeA/640?wx_fmt=png)
+![](../../.resource/remote/4b14c1d55fb7b57c78845b922a29425cdc09e062b433318d781bc137379805df.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5acpu6AZhQ1SnFYJjiatvfUFesm50p3D63o3dUcGZK290IyxXWCruDDg/640?wx_fmt=png)
+![](../../.resource/remote/2134f7a0d6247ba73d2adde810f74f45e8ab1a40727d0e20e9e6550bc53eae3e.png)
 
   
 
@@ -176,7 +176,7 @@ https://github.com/wgpsec/wiki
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzDCc55WbFiasXQV2ZDzFo8NclAZ2LicCiaeLqxOD3AticSzDm7rRACia7M9m4pickkG8pXR2w1L8maEoBSw/640?wx_fmt=png)
+![图片](../../.resource/remote/40b4bb848be8a556d4672c1284770f77f3c63bcb7d7d5bab550fac31288d8b51.png)
 
 推荐一下 PeiQi 的个人公众号~
 
@@ -204,9 +204,9 @@ https://github.com/wgpsec/wiki
 
 Twitter：@wgpsec
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4LicHRMXdTzBhAsD8IU7jiccdSHt39PeyFafMeibktnt9icyS2D2fQrTSS7wdMicbrVlkqfmic6z6cCTlZVRyDicLTrqg/640?wx_fmt=jpeg)
+![](../../.resource/remote/b9e1284285c5071573cdab2007195e695eb9d397834bf8ada6d0ffc6fb61d537.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/gdsKIbdQtWAicUIic1QVWzsMLB46NuRg1fbH0q4M7iam8o1oibXgDBNCpwDAmS3ibvRpRIVhHEJRmiaPS5KvACNB5WgQ/640?wx_fmt=gif)
+![](../../.resource/remote/bd8c348cdec726a3436db5005b7a9fce34d12de57cac8d2d94ac31a1c423b221.gif)
 
 ---
 

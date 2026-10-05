@@ -56,7 +56,7 @@ previous_version: "使用条件"
 **如在我们在内网发现了一个海康威视综合安防 Fastjson 漏洞，无法使用 RMI、LDAP 监听端口，没有 http 服务，本文将复现该漏洞的不出网利用方式。  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsudK5Y6WZTUyBJET7HlKKRqQA6hENhYOUWRRZGvOdHE2mia6iaCblLZyjjqEIkkWq39gO8YPan5Ls7w/640?wx_fmt=png)
+![](../../.resource/remote/082a16dfa6720e70b222efe954f3fe8766f99c31dbf66899ca674782c1f47d01.png)
 
 **0x03 漏洞利用**
 
@@ -107,7 +107,7 @@ Testcmd: whoami
 
 回显说明利用成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBsudK5Y6WZTUyBJET7HlKKRqMckDVbxXl5MDSz7ltHED25B8lypQo55oqRMK7DJXU0oLdb15UBENNg/640?wx_fmt=png)
+![](../../.resource/remote/45df0c0cba579162b60cec31a71afeefa1e88a240f337d59a35e2cffb6a62d94.png)
 
 关注公众号下期分享内存马打法  
 
@@ -117,9 +117,9 @@ Testcmd: whoami
 
 同时欢迎各位师傅加入 HW 闲聊吹水群（2000 人群）
 
-**![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibbalVucuLZ76mxOCrOhTyhSu8Sru0DlwBYruQhnkIG8ia4shVDPd4VBg/640?wx_fmt=jpeg)**
+**![](../../.resource/remote/80c27e5ed3f67f52c7ec472a138de27988f1adc682a81c9e3dd7043ae63172fb.jpg)**
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/fRWdakrtBssPEvyWSBIpUFH4FYbmxzwydudRibUP8icaLbZJQ5WmBNtmFzWU8x8avVw34FqSicxFsaQCSfveDUXibg/640?wx_fmt=jpegwxfrom=5wx_lazy=1wx_co=1)
+![](../../.resource/remote/4acef8fe657897741824fa52426813dee86890dad62fabbad6b96ba1d1492501.jpg)
 
 ---
 

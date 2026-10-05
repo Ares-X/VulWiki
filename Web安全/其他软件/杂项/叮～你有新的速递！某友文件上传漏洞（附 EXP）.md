@@ -66,7 +66,7 @@ fofa: "app=\"用友-时空KSOA\""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/fmokpW-Saw1Cwn5Vw6uP_w)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ukiacpKckBCBW0oRLickDlwBXcvdg0O19gnebUeltmibDpIdnE7pZS608XbClUn5GruVUKjqWFhIQlyk0Bzjs5N8g/640?wx_fmt=png)
+![](../../.resource/remote/028c74d8c90fa7a1c5c9130d4f895279d3947f318c55dcddbd27fe17ef9502a1.png)
 
 0x01 前言
 
@@ -88,11 +88,11 @@ app="用友-时空KSOA"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ukiacpKckBCDMKErH19icyYsxNuVVcnUYHLnKkVJicHdjwkIdicVXLYao4fhQCD3oUI8uyuwp94OVBwic5tZTeArnCg/640?wx_fmt=png)
+![](../../.resource/remote/2feee8766b8239dd333d735ba5a0e1d042b5132bb3e408e42b0577db99e2e693.png)
 
 登录页面是这个酱紫
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ukiacpKckBCDMKErH19icyYsxNuVVcnUYHiaMEJecKHiaw8micFG9BMhLDskMmeeZSM9OjTWdXTKFTVKUy4YXiaoFlqA/640?wx_fmt=png)
+![](../../.resource/remote/4c347c94e278ac3a5d9ab4a336096fd0b41d997cc604717169a72d8e34a5e27b.png)
 
 EXP：
 
@@ -110,7 +110,7 @@ Content-Length: 7
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ukiacpKckBCDMKErH19icyYsxNuVVcnUYHWYPNCt5ax3dbqibowiaGzMOwbv6JqFUatCFNwnpQVgqWnRHKR6PRR5LQ/640?wx_fmt=png)
+![](../../.resource/remote/a8589e37c0a796c3bd1721ab83952b1e628e53a32b3785c34d109482ac99f512.png)
 
 Webshell 地址：  
 
@@ -119,7 +119,7 @@ http://ip/pictures/\{\{文件名随便起\}\}
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ukiacpKckBCDMKErH19icyYsxNuVVcnUYHGxW9HWykQmONXiaknjkI100Ycs5BYAec1jbib5ZnDhBFIqGzJTkKKsgA/640?wx_fmt=png)
+![](../../.resource/remote/39678fdd5a8f3d6302a1d8299885048eab6d1a3568b9a5c19902e6a7afe6ec6c.png)
 
 0x04 修复方案
 

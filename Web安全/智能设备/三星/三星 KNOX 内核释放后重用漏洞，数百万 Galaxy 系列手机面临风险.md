@@ -51,7 +51,7 @@ source_status: "unknown"
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-06-24 00:50  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DYqn7TU9icq3sNibFfOaiaD1S3zcGiaJEseia83MibB5Wfrmt9UBEfn2vwWsfMyncGukRdt3Z62BuHpDwj9NDbDCr12XwY1ic5wYTOKfV4E6Y9MQnU/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/55b50f862bb2da3e8c0246117ae9ba93651d4f37f811cabd081229ef68c1ab8b.png "")  
   
 研究人员在三星 KNOX 安全组件栈中发现一处高危内核漏洞，棘手之处在于漏洞藏身的位置：这套软件本是用来抬高攻击者入侵门槛的防护模块。漏洞编号 CVE-2026-20971 属于释放后重用（UAF）漏洞，出现在 PROCA 与 FIVE 这两个内核子系统交互逻辑中，二者负责三星设备的进程完整性校验工作。  
   

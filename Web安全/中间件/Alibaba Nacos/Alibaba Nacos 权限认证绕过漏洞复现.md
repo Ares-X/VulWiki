@@ -101,7 +101,7 @@ https://github.com/alibaba/nacos/releases/tag/2.0.0-ALPHA.1
 ```
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCknDufVpuz9R8TO9icn51WJ9nCY9jDmb2I9fT5AZYdR8zOTibWt88Iu0Q/640?wx_fmt=png)  
+![](../../.resource/remote/e9077c7926a3fe19ce4a14af7125006a84f58ca5216bb6a67ebac5eaecffa60d.png)  
 
 【**Linux 搭建**】
 
@@ -128,13 +128,13 @@ cmd startup.cmd -m standalone
 ```
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCBLSuWBQqG06kBYBWto4ZgibZP11IGs0MejX7Wpxia1Gr9YAcYkL0cPJg/640?wx_fmt=png)  
+![](../../.resource/remote/63b071957be00005263ff33d36e88ba48d67b43702e9f51bd275fd5f599806f3.png)  
 
 接着访问 http://your-ip:8848/nacos
 
 默认账号密码 nacos/nacos  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCDibGKwYPGDHMqPhz1SL4cj3IzDXicerMRyANicf7OjSRE7ztZ5TRb7Lew/640?wx_fmt=png)  
+![](../../.resource/remote/eb5810817c1b52ea7a868a5fd35cc67ad3d07b1233dd0cb9275ba29dd6228270.png)  
 出现 Nacos 登录页面则表示搭建成功  
 
 **0x05 漏洞复现**  
@@ -150,7 +150,7 @@ http://your-ip:8848/nacos/v1/auth/users?pageNo=1&pageSize=1
   
 可以查看到用户列表  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCOy65z4YW5krq3bSnpRBtlv929Q5SZM64YyTQJJbWB8XAsNmUKWxBgg/640?wx_fmt=png)
+![](../../.resource/remote/4e13c8eca91f1474aaf3a86c23a4417c31c908ab722a87153dec792265717da0.png)
 
   
 从上图可以发现，目前有一个用户 nacos
@@ -173,14 +173,14 @@ usename=test1&password=test1
 
 发送 POST 请求，返回码 200，创建用户成功~！  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRC79jfB6ibsV3LbmUCGcMhv4fz60RkNdQp86uo8vJfA5lroM3qOicrcoTw/640?wx_fmt=png)
+![](../../.resource/remote/071d7533c83e59083975703d44d22578a8b3a0a1898e9c4df1323fc39e1dc914.png)
 
   
 返回 Nacos 登录界面 test1/test1
 
 登录成功！  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCe1iaAKvcaugHzXhEkffQbpzLgV4V7BA9icqSWzNicYqUqiczRic4ftCuabQ/640?wx_fmt=png)
+![](../../.resource/remote/192e31ef454c7e5ec3d7d5fe32f6f07fd467a0042811c60cc68a4c9878bf5634.png)
 
   
 或者直接用 burp 打，构造数据包 poc 如下：
@@ -200,7 +200,7 @@ Content-Length: 27
 username=test&password=test
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCEkwLcJlX3z2iaN4NHqo76dzGrYOs0icj8I5R2v6HIEickCnia3wCqVokBg/640?wx_fmt=png)
+![](../../.resource/remote/12e5fa254d44268ed78924593de6873f76b8c58b3813d0f38a83797544c9d017.png)
 
   
 利用成功！
@@ -211,7 +211,7 @@ username=test&password=test
 
 首先，入口点我们看一下 github 上相关 issues 的讨论  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCdFMRX6oBDJB6Xm3z5u6oPzYaQCD9JG9PzLXC2phVWoXtPcDIibSz1eA/640?wx_fmt=png)
+![](../../.resource/remote/8c9d41510a5182b3550940ad3a614c74380d715825edc387b4c352e0a89aeed4.png)
 
 别的不做讨论，只关注漏洞。  
 
@@ -227,7 +227,7 @@ username=test&password=test
 /nacos-2.0.0-ALPHA.1/naming/src/main/java/com/alibaba/nacos/naming/web/TrafficReviseFilter.java
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCygeIhN5QMBDU2GIjcc5rIXaqhUH0Fg1Idia8envbJHficoyX1yTYGTqg/640?wx_fmt=png)
+![](../../.resource/remote/df879d8b21ef66e1356064b342d62b7076aedbaf1d0885e035196b6602481db4.png)
 
 TrafficReviseFilter 继承了 Filter 用来处理请求，而里面的 doFilter 的就很明确了。注释中写道，当接收到其他节点服务的请求时应该被通过，如何验证是其他服务。  
 
@@ -242,7 +242,7 @@ if (StringUtils.startsWith(agent, Constants.NACOS_SERVER_HEADER)) {
 
 这个 Constants.NACOS_SERVER_HEADER 跟踪一下，正是 Nacos-Server  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaxIDicSEMibuVckvqC9RPNRCwfeyfsOn9UKk3Ik9jQTHtUtA8zlIgFl4fm7PbyLFORuEW3ydztdugA/640?wx_fmt=png)
+![](../../.resource/remote/6a658450cb42dbce373a6bfc20401a23a920237f8652ac327d3c885422a229bb.png)
 
 经过这一层的验证，那么则进入到 filterChain 过滤器链中的下一个 filter 过滤器，继续接下来的请求。
 
@@ -264,11 +264,11 @@ https://mp.weixin.qq.com/s/YokFDDAPKQwMmXJs5oMCEg
 
 https://poc.shuziguanxing.com/#/publicIssueInfo#issueId=3549
 
-![](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaASAShFz46a4AgLIIYWJQKpGAnMJxQ4dugNhW5W8ia0SwhReTlse0vygkJ209LibhNVd93fGib77pNQ/640?wx_fmt=png)
+![](../../.resource/remote/f7aeba0e95eb4a20920b4c212aa5fad609c078147e0fa0fb48ac7cd256ebd10d.png)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/VfLUYJEMVshAoU3O2dkDTzN0sqCMBceq8o0lxjLtkWHanicxqtoZPFuchn87MgA603GrkicrIhB2IKxjmQicb6KTQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/c67f69ad0be4f67e52b7e4cc8900f4f6ea40aaedbccfc980185bb2fa117a4b7f.jpg)
 
 **阅读原文看更多复现文章  
 **

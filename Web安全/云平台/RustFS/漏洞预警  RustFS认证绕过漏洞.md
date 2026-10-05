@@ -56,7 +56,7 @@ schema_version: "1"
   
 RustFS是一款基于Rust语言开发的分布式对象存储系统，采用高性能、内存安全的设计理念，支持S3兼容接口与集群化部署，适用于云存储、数据湖及大规模非结构化数据场景。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SXyUpeaFS0y6MiaqDjlNGve3zBhNRv2hg8PXMWqS8kN1ZrXxuYs4XSDpS5bvgw9gR0o4Sp8DsKpaeA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/37b0b9ec2ac483e0f9cb919fb2263399a4bc47fd8769f10905e07c804db2fe1f.png "")  
   
   
 **0x03 漏洞详情**  

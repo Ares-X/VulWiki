@@ -70,7 +70,7 @@ CVE-2024-28255
   
 OpenMetadata是一个用于数据治理的一体化平台，可进行数据发现、数据沿袭、数据质量、可观察性、治理和团队协作等。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUyXyDV9WptCdlurQNfUVMET8SbGchEezialicDp2IJdkGa0uWHR04e0ibIUSrFEs1NSdGXAe3kJuEbg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c59cde9212c79d0fa2b8aaf99589a74f7b689549915abe95541cba69d387703e.png "")  
   
 **0x03 漏洞详情**  
 ###   

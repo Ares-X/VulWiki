@@ -46,7 +46,7 @@ schema_version: "1"
   
 PHP是全球使用率最高的语言之一。日常讨论安全时，人们总把目光放在框架和第三方库上，PHP内核本身很少成为焦点。但现实是，大量应用逻辑直接依赖ext/standard扩展里的内置函数——处理字符串、查询参数、数据格式和文件。我们翻了一遍这个扩展的C源码，发现了几处内存管理缺陷。下面挑两个典型的讲：getimagesize里的堆内存泄露，以及iptcembed里的堆缓冲区溢出。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibfTyCWMbBbjXwUjm8rLF9l44yLljTPcWbllFHnIiaia3kEC2kFp2SdCg6xXlsVnUysibeHt5CQMfAUviaUdjCuEhrXERInCzNLgVlc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4a01fa693d9fa605783e42270813e28a0e5efb7ca7344945aa01f7d7c66bf878.png "")  
 ## Zend引擎：PHP的骨骼与肌肉  
   
 Zend Engine是PHP的开源C核心，负责解释和执行PHP代码。你查PHP版本时总能看到Zend Engine和Zend OPcache的字样：  
@@ -80,7 +80,7 @@ with Zend OPcache v8.6.0-dev, Copyright (c), by Zend Technologies
   
 PHP脚本在解释器内的执行生命周期可以简化为三个阶段：词法分析 → 解析和编译 → 执行。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibdGJpCTz8z5W6Wc4GKCQc4mLqo3Cmcan2aYIFhc6cCR9GNg7of1dibfZmLMEhaA8dAU5CFvwQiarGFFpAOibAgNVNL2MU12gm4Ciag/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/796111ed218cee871a5770f3f894d4e1aad88df90d63ae82d850709d7c6bcd8a.png "")  
   
 流程大致是这样：  
 - SAPI入口：执行总是从服务器API开始。这一层把PHP引擎与环境连接起来——无论是Web服务器（通过Apache模块或PHP-FPM的FastCGI）还是命令行。SAPI接收请求或命令，初始化执行环境，配置输出、头信息、限制参数，然后把控制权交给Zend Engine。  
@@ -126,7 +126,7 @@ getimagesize[3]
   
 一个JPEG文件由多个段组成，以SOI标记0xFFD8开头，后面跟一系列段。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6Tibc0nwWgcawskSML23FFSQ7Cx5F3yrJhdYkjZqo6OYxyhFQ1PvNsCiaI9JrLFpzHquDN07wia40iaD8V7TSWpJn6xsKTzKKtG8adKk/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5d04959bda8ac018e4d44c574fd0a298b792442db0bea043d40eed1777b135e1.png "")  
   
 APP段（APP0–APP15）是带有标记0xFFE0…0xFFEF的元数据段，包含特定数据格式，比如EXIF、XMP。每个APP段有2字节长度字段和载荷。APP1（0xFFE1）尤其重要，通常存放EXIF和XMP数据，处理这个段会影响JPEG结构解析时的安全性。  
   
@@ -212,7 +212,7 @@ static size_t php_read_stream_all_chunks(php_stream *stream, char *buffer, size_
   
 举个例子，假设length=9000，chunk_size=8192：第一次php_stream_read读取8192字节写到buffer[0..8191]；第二次读取808字节写到buffer[0..807]，把开头覆盖了；buffer[8192..8999]从未被填充，保持未写入状态。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibcG6VJiaKEJgnHeywBWmoeVfItPDl7gVO4G7Wicg8yf2LlosHgu07NPTQ3yr49zwr6B2UpZU35BCQEdx31wkxubLmcB4Z6FmoVEk/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9cb8cc2ab8f36bae68a40f8ba4158dc1564c0df4da79a079a2926c68317d49c8.png "")  
   
 结果：php_read_APP函数认为读取成功，将length字节复制到$info['APPn']，可缓冲区开头被最后一个块覆盖，尾部仍为未初始化的垃圾数据。  
 ### 从公开问题到安全漏洞  
@@ -225,6 +225,7 @@ static size_t php_read_stream_all_chunks(php_stream *stream, char *buffer, size_
 **PoC 1：通过php://filter复现**  
 。这是最初提交给开发者的最小复现脚本。通过php://filter读取文件，强制运行时以多块方式读取APP1段。过滤器本身不是漏洞前提，只是触发缺陷的方便手段。脚本生成一个带大APP1段的最小合法JPEG，在堆上填充特定标记后释放，然后读取文件并比较返回的数据，查找泄露的标记。  
   
+```php
 <?php  
   
 // Minimal PoC: corruption/uninitialized memory leak when reading APP1 via php://filter  
@@ -347,8 +348,11 @@ if ($pos !== false) {
   
 }  
   
+```
+
 执行后成功读到了本应无法访问的堆数据。  
   
+```text
 $ ./php cli.php  
   
 APP1 length: expected=16507, actual=16507  
@@ -365,23 +369,31 @@ Snippet with marker (ASCII, marker in []): -MARKER-123![LEAK-MARKER-123!]LEAK-MA
   
 Snippet with marker (HEX, marker in []):   2d4d41524b45522d31323321[4c45414b2d4d41524b45522d31323321]4c45414b2d4d41524b45522d  
   
+```
+
 **PoC 2：无过滤器场景**  
 。这个变体更贴近真实Web场景（比如从php://input上传并读取），通过控制输入流的发送节奏来触发多块读取。用两个简单脚本：一个模拟上传处理程序（webapp.php），从请求体读JPEG并调用getimagesize；另一个攻击脚本（attacker.php）生成带大APP1段的合法JPEG，分两阶段发送——先发送到APP1段数据的前缀，短暂停顿后再发送剩余部分。默认块大小8192字节，这样就能触发多块读取。  
   
 演示时使用FIFO管道：  
   
+```text
 $ mkfifo /tmp/php-image-poc; ./php webapp.php < /tmp/php-image-poc  
   
 Result: VULNERABLE (APP1 does not start with Exif)  
   
 Snippet (ASCII): AAAAKER-123![LEAK-MARKER-123!]LEAK-MARKER-  
   
+```
+
 另一个终端：  
   
+```text
 $ ./php attacker.php > /tmp/php-image-poc  
   
 Sending JPEG in 2 phases: total=9038 split_at=24 sleep_us=50000  
   
+```
+
 返回的数据里出现了本不该泄漏的堆内存，证明漏洞利用成功。  
 ### 修复  
   
@@ -400,7 +412,7 @@ iptcembed[4]
   
 输出缓冲区（spoolbuf）基于fstat()返回的st_size预分配。之后每读一个字节都往缓冲区末尾追加，从不检查有没有地方。对于非普通文件（如FIFO），st_size为0，但流本身没有固定大小，导致堆缓冲区溢出。即使普通文件，也存在TOCTOU窗口：fstat之后、读取完成之前，文件大小可能改变。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibcwyMicYAdZq4DXqAE6oGx0vKib7s9Y2vqDop0C7dNAwumMBicJXMkic6ITdcw1J0FkTrJywXJOjOXTU352bDdKvje3icXpLLaDQnVA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/77f9f94926ce859d323ef5fd36194fb771bbcabb9baa975daa1a460049c4e3b1.png "")  
   
 执行流程：iptcembed调用fstat，按固定开销加st_size分配spoolbuf。poi是spoolbuf内的当前写入位置，每写一字节前进。在M_APP13和M_SOS分支，解析器停止插入标记，转为读取剩余数据直到EOF，所有内容直接拷贝进spoolbuf。如果流比分配的缓冲区长，就发生堆越界写。  
   
@@ -446,7 +458,7 @@ static int php_iptc_get1(FILE *fp, int spool, unsigned char **spoolbuf)
   
 负责读取剩余内容的函数php_iptc_read_remaining只是循环调用php_iptc_get1直到EOF——如果st_size与实际输入数据量不匹配，这本身就危险。在M_APP13和M_SOS分支，解析器切换到这种只读模式。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibdqPKGSa9fy3aMEn32ufShwia4WR7gPZrwYWpJ2GnIEnZsjia3jMPAWxNEt2q5mChFjibBymfVmkfY4zaIvsLRzTfy8Wl2rG3E3qc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e68637254bb6a04e4db8c0c232702d535b07a15b064e4d5c661cd8346b1cf7bd.png "")  
   
 从FIFO读取（st_size==0）或文件在fstat后增长时，复制循环将poi推进到超出分配字符串，造成堆缓冲区溢出。  
 ### 利用演示  

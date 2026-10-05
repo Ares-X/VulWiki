@@ -61,7 +61,7 @@ Google 的公告
   
 最新的浏览器版本还解决了媒体捕获中的一个中等严重性的释放后使用漏洞，以及自动填充和 Web 浏览器 UI 中的两个低严重性的不当实施缺陷。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rTibWNx9ARWkfiaXFwzGwohgYZhZYiaGQbs5Ne0zXDhibkO00Jriauy6ONibWGmYcVu5REdZNA1vIqtvaGf6gYYxI6OQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8f5ea528b86d86e59e69920d4ed6c8160e3cb448d248537a74a675e6f17d3182.png "")  
   
 释放内存分配后未清除指针时发生的一种内存损坏错误，释放后使用问题可能导致任意代码执行、数据损坏或拒绝服务。  
   

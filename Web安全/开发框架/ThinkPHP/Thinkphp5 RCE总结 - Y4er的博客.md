@@ -134,7 +134,7 @@ composer create-project topthink/think=5.0.5 thinkphp5.0.5  --prefer-dist
 
 `thinkphp/library/think/Request.php:504` `Request`类的`method`方法
 
-![image](https://y4er.com/img/uploads/20191127224395.jpg)
+![image](../../.resource/remote/00979b98d858585f238f60c016b1051963d9c6d1179b1a0e0a1c81acf48748ce.png)
 
 可以通过POST数组传入`__method`改变`$this->{$this->method}($_POST);`达到任意调用此类中的方法。
 
@@ -158,7 +158,7 @@ protected function __construct($options = [])
 
 重点是在`foreach`中，可以覆盖类属性，那么我们可以通过覆盖`Request`类的属性
 
-![image](https://y4er.com/img/uploads/20191127225026.jpg)
+![image](../../.resource/remote/eb21694d46f8840378aa911b62fdb88771616ed150fc4e6c2e275ad38f654afd.png)
 
 这样`filter`就被赋值为`system()`了，在哪调用的呢？我们要追踪下thinkphp的运行流程 thinkphp是单程序入口，入口在public/index.php，在index.php中
 
@@ -168,7 +168,7 @@ require __DIR__ . '/../thinkphp/start.php';
 
 引入框架的`start.php`，跟进之后调用了App类的静态`run()`方法
 
-![image](https://y4er.com/img/uploads/20191127224263.jpg)
+![image](../../.resource/remote/f8caeddf253226b2c696596fa5a798eab224a0347cba8e1391dd13b5e7226064.png)
 
 看下`run()`方法的定义
 
@@ -230,21 +230,21 @@ public static function run(Request $request = null)
 
 我们继续跟进`Request::instance()->param()`
 
-![image](https://y4er.com/img/uploads/20191127220215.jpg)
+![image](../../.resource/remote/508bf0d3e410af7692465d3920741c3cc66580b98912a73c1302c15b16ca2b39.png)
 
 执行合并参数判断请求类型之后return了一个`input()`方法，跟进
 
-![image](https://y4er.com/img/uploads/20191127229199.jpg)
+![image](../../.resource/remote/56f5d7dbf1170d5589727580a117ac0a3e31462333a1750c24747b834deff8b3.png)
 
 将被`__contruct`覆盖掉的filter字段回调进`filterValue()`，这个方法我们需要特别关注了，因为 `Request` 类中的 param、route、get、post、put、delete、patch、request、session、server、env、cookie、input 方法均调用了 `filterValue` 方法，而该方法中就存在可利用的 `call_user_func` 函数。跟进
 
-![image](https://y4er.com/img/uploads/20191127223843.jpg)
+![image](../../.resource/remote/a215dc2151cb371205f6bad1d58c3c4bc938a615d75fb6e451a3df37a8a4ded5.png)
 
 `call_user_func`调用`system`造成rce。
 
 梳理一下：`$this->method`可控导致可以调用`__contruct()`覆盖Request类的filter字段，然后App::run()执行判断debug来决定是否执行`$request->param()`，并且还有`$dispatch['type']` 等于`controller`或者 `method` 时也会执行`$request->param()`，而`$request->param()`会进入到`input()`方法，在这个方法中将被覆盖的`filter`回调`call_user_func()`，造成rce。
 
-最后借用七月火师傅的一张流程图 ![image](https://y4er.com/img/uploads/20191127228626.jpg)
+最后借用七月火师傅的一张流程图 ![image](../../.resource/remote/5c236b63d2674ef6598baa0c8a3f8a60ec0292797012256f18b552d7e0a7e89b.png)
 
 method __contruct导致的rce 各版本payload
 ----------------------------------
@@ -541,13 +541,13 @@ public function filter($filter = null){
 } 
 ```
 
-接下来就是我们进入了路由`check`，从而覆盖`filter`的值为`system` ![image](https://y4er.com/img/uploads/20191127223884.jpg)
+接下来就是我们进入了路由`check`，从而覆盖`filter`的值为`system` ![image](../../.resource/remote/4cdcdf471c5b036e4c4e5517dd1504a338b5bb137baa4b1ae57380ea90fe5348.png)
 
 但是在5.0.13中，摘出来的`exec()`中的`module()`方法`thinkphp/library/think/App.php:544` 会重新执行一次`$request->filter($config['default_filter']);` 把我们覆盖好的`system`重新变为了空，导致失败。
 
-**那为什么开了debug就可以rce？** ![image](https://y4er.com/img/uploads/20191127223239.jpg) 这里会先调用`$request->param()`，然后在执行`self::exec($dispatch, $config)`，造成rce。
+**那为什么开了debug就可以rce？** ![image](../../.resource/remote/9d7e9b27999339ce0998de4fcf10036d529c4085694628ed36adc14686f918dd.png) 这里会先调用`$request->param()`，然后在执行`self::exec($dispatch, $config)`，造成rce。
 
-**那有没有别的办法不开debug直接rce呢？** 和debug的原理一样，switch的时候进入module分支会被覆盖，那就进入到其他的分支。 ![image](https://y4er.com/img/uploads/20191127221821.jpg) 在thinkphp5完整版中官网揉进去了一个验证码的路由，可以通过这个路由触发rce
+**那有没有别的办法不开debug直接rce呢？** 和debug的原理一样，switch的时候进入module分支会被覆盖，那就进入到其他的分支。 ![image](../../.resource/remote/9ea2857cac0c6ea4ca80f016a3c3dc78a584976205b6e698d7823f97248256e1.png) 在thinkphp5完整版中官网揉进去了一个验证码的路由，可以通过这个路由触发rce
 
 这个是我在5.0.13下试出来的payload `"topthink/think-captcha": "^1.0"`
 
@@ -905,7 +905,7 @@ _method=__construct&filter[]=system&s=calc&method=get
 
 ### 分析
 
-![image](https://y4er.com/img/uploads/20191127229702.jpg) thinkphp默认没有开启强制路由，而且默认开启路由兼容模式。那么我们可以用兼容模式来调用控制器，当没有对控制器过滤时，我们可以调用任意的方法来执行。上文提到所有用户参数都会经过 `Request` 类的 `input` 方法处理，该方法会调用 `filterValue` 方法，而 `filterValue` 方法中使用了 `call_user_func` ，那么我们就来尝试利用这个方法。访问
+![image](../../.resource/remote/62d9e50f52998b1ef097edab2ef5f5087fbf14a7bbdbdf539c399bec95e52210.png) thinkphp默认没有开启强制路由，而且默认开启路由兼容模式。那么我们可以用兼容模式来调用控制器，当没有对控制器过滤时，我们可以调用任意的方法来执行。上文提到所有用户参数都会经过 `Request` 类的 `input` 方法处理，该方法会调用 `filterValue` 方法，而 `filterValue` 方法中使用了 `call_user_func` ，那么我们就来尝试利用这个方法。访问
 
 ```
 http://php.local/thinkphp5.1.30/public/?s=index/\think\Request/input&filter[]=system&data=whoami 
@@ -913,11 +913,11 @@ http://php.local/thinkphp5.1.30/public/?s=index/\think\Request/input&filter[]=sy
 
 打断点跟进到`thinkphp/library/think/App.php:402`
 
-![image](https://y4er.com/img/uploads/20191127223178.jpg)
+![image](../../.resource/remote/ead8c947e2bb6fa46dc4f046eaaabdfeaa539151093998576567b7856c11f8c8.png)
 
 `routeCheck()`返回`$dispatch`是将 `/` 用 `|` 替换
 
-![image](https://y4er.com/img/uploads/20191127225278.jpg)
+![image](../../.resource/remote/973ad652b72c6a09856881a20f0040de2edd19ba1f84970e7c66dec58ad0bf4b.png)
 
 然后进入`init()`
 
@@ -933,31 +933,31 @@ public function init()
 
 进入`parseUrl()`
 
-![image](https://y4er.com/img/uploads/20191127223006.jpg)
+![image](../../.resource/remote/88a66032b81001726f8319d56b71e38dc79d2e11331f4ab177b86fbdefaf2d17.png)
 
 进入`parseUrlPath()`
 
-![image](https://y4er.com/img/uploads/20191127227841.jpg)
+![image](../../.resource/remote/906ace8e0faf9d1ee8ae998caf0d2854d6963d89c02891435d6d4ca36326009a.png)
 
-在此处从url中获取`[模块/控制器/操作]`，导致parseUrl()返回的route为 ![image](https://y4er.com/img/uploads/20191127228865.jpg)
+在此处从url中获取`[模块/控制器/操作]`，导致parseUrl()返回的route为 ![image](../../.resource/remote/a3c6a3322454aa2a1e2e83cb4c66582155527600b30a9b8663f3f753b677bec1.png)
 
 导致`thinkphp/library/think/App.php:406`的`$dispatch`为
 
-![image](https://y4er.com/img/uploads/20191127221878.jpg)
+![image](../../.resource/remote/4c4fceafcf4ccfc685e4133146b59489415d9712b6cfedbb92777700448b45d4.png)
 
-直接调用了`input()`函数，然后会执行到 `App` 类的 `run` 方法，进而调用 `Dispatch` 类的 `run` 方法，该方法会调用关键函数 `exec` `thinkphp/library/think/route/dispatch/Module.php:84`，进而调用反射类 ![image](https://y4er.com/img/uploads/20191127221279.jpg)
+直接调用了`input()`函数，然后会执行到 `App` 类的 `run` 方法，进而调用 `Dispatch` 类的 `run` 方法，该方法会调用关键函数 `exec` `thinkphp/library/think/route/dispatch/Module.php:84`，进而调用反射类 ![image](../../.resource/remote/7e8bbedb089143c7f6aae26051d2f91f60d872eca22b31009f6406028ba1b220.png)
 
 此时反射类的参数均可控，调用`input()`
 
-![image](https://y4er.com/img/uploads/20191127223123.jpg)
+![image](../../.resource/remote/01bfced85e13234323cf70ca2cf07d2c2c9f7603f0b89c00fc97a824afc7cb15.png)
 
 在进入`input()`之后继续进入`$this->filterValue()`
 
-![image](https://y4er.com/img/uploads/20191127226668.jpg)
+![image](../../.resource/remote/0d756bfcc24b5f9c60a1a25c915eaaca58c481cfc7c965962ddba42cf241e704.png)
 
 跟进后执行`call_user_func()`，实现rce
 
-![image](https://y4er.com/img/uploads/20191127221161.jpg) 整个流程中没有对控制器进行合法校验，导致可以调用任意控制器，实现rce。
+![image](../../.resource/remote/791e8174a9ae2a97a99aa8fffefe6344a91bae170a5a518e47cf085e9da4ef85.png) 整个流程中没有对控制器进行合法校验，导致可以调用任意控制器，实现rce。
 
 ### 修复
 
@@ -1005,7 +1005,7 @@ if (!preg_match('/^[A-Za-z](\w|\.)*$/', $controller)) {
 ?s=index/\think\Config/load&file=../../t.php     // 包含任意.php文件 
 ```
 
-如果你碰到了控制器不存在的情况，是因为在tp获取控制器时，`thinkphp/library/think/App.php:561`会把url转为小写，导致控制器加载失败。 ![image](https://y4er.com/img/uploads/20191127221875.jpg)
+如果你碰到了控制器不存在的情况，是因为在tp获取控制器时，`thinkphp/library/think/App.php:561`会把url转为小写，导致控制器加载失败。 ![image](../../.resource/remote/6cd92521cfc9ce1e7696dab117228558f3040f831d4dcc0e70dc527727a35ddd.png)
 
 ### 总结
 

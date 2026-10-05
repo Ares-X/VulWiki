@@ -89,7 +89,7 @@ n Giang)在去年 2023 年 3 月于温哥华举行的 Pwn2Own
 25 日发布了一份技术分析报告，详细描述了利用过程。  
 演示视频链接：https://youtu.be/x0DPpVh8fO4  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaFEFxQbbnIot8HzVDMj8eQk9IdESJf4orDZWibalmVXa1ib5NjwQWFVVNDmA3PiavSRiaCoxRshok7HTA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5d308bed82d0d6ec0604c0d5e4d26b46daaba206ce61c6a82399e38cc3a6b29a.png "")  
   
   
 就在一天后，一名安全研究人员还在
@@ -120,7 +120,7 @@ CVE-2023-29357 主动利用的更多详细信息，但 CISA 已将该漏
 https://www.bleepingcomputer.com/news/security/cisa-critical-microsoft-sharepoint-bug-now-actively-exploited/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/McYMgia19V0WHlibFPFtGclHY120OMhgwDUwJeU5D8KY3nARGC1mBpGMlExuV3bibicibJqMzAHnDDlNa5SZaUeib46xSzdeKIzoJA/640?wx_fmt=svg "")  
+![](../../.resource/remote/0877e2d01c065e08b6bbbf6e0a90a3b1e83a9887e89bf3c0021a85dea378e78f.svg "")  
   
 **今日安全资讯速递**  
   
@@ -220,7 +220,7 @@ https://www.infosecurity-magazine.com/news/cisa-critical-infrastructure-patch/
   
 https://therecord.media/vulnerability-smart-thermostats-bosch-patch  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

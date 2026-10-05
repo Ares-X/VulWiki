@@ -41,9 +41,9 @@ schema_version: "1"
 
  FreeBuf   2026-02-21 04:31  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
-![OpenClaw, nur redaktionell](https://mmbiz.qpic.cn/sz_mmbiz_jpg/icBE3OpK1IX05kpxdxH2GFDk9bBxtPSh286coGia5c6ug4UMQQiaicpwhtmjGvm8v7dUkXluWiaHu6Z2EK67WraCYuYmUlYSWClPkLpEejdgjF2M/640?wx_fmt=jpeg&from=appmsg "")  
+![OpenClaw, nur redaktionell](../../.resource/remote/9cc04b93c3a636b0c1e12fd766199c31e502974fb5b96de6d52ed7c54b51039d.jpg "")  
 ##   
 ## 安全研究人员在开源AI Agent框架OpenClaw中发现六个高危漏洞，该框架被业界称为"AI Agent的社交媒体平台"。Endor Labs团队通过AI驱动的静态应用安全测试（SAST）引擎，追踪了不可信数据在框架各层的流转路径，最终暴露出包括服务端请求伪造（SSRF）、认证绕过和路径遍历在内的可被利用缺陷。  
 ##   
@@ -107,7 +107,7 @@ https://www.csoonline.com/article/4134540/six-flaws-found-hiding-in-openclaws-pl
 ### 电台讨论  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

@@ -55,21 +55,21 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-TkfZru1ED-YRxhPMjPJsA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/zNJ4YhKaok3WXGGiakxKvlOQZLV0DRA0Cibptxv2DC9Sxn5MZ24FrEryKEoqwL0LxgYGYB3HupicCAfYosueeazWA/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Wzg6H7uiaEUuONjaSQqwX0liaZMe7ialQk3tOTL7w9MgXuWJrhs95uprpscHr9JSmJ8H2ZAtmRETBREKhcb50sAicg/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el6a9EO2exy5AFj6pyO3xjLjCvXiayia3VzRoBiaPUGUibZianO7NicvwetrANBiaRAal6JYKtLxePgArcScw/640?wx_fmt=gif)
+![](../../.resource/remote/41c66fd059bc411a6ea21ba4f775c8c9bb34acb299ef7a081f2c1b061e360137.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Z1N0HbVwRiaYV3wjJl8bEXPBWw9okzgfDRibxBvM3Ofb08BhgNtK9icic7u9siclk7vGDSria8xYtt4GF1C0CgpialYJQ/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XQNU4yRQkQFWGKHbJOQg3ue2dEI05MmEguiaXzdichLTxcgma0htf9HVwjchWAgFWnJGpyy9S98e7kfpX4GfTBEQ/640?wx_fmt=png)
+![](../../.resource/remote/ec7a4eef6d5371570b1b4fffed32b95c5cc32eb0a6ad73c7c36667ed29f2c253.png)
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7f0qibYGLgIyO0zpTSeV1I6m1WibjS1ggK9xf8lYM44SK40O6uRLTOAtiaM0xYOqZicJ2oDdiaWFianIjQ/640?wx_fmt=png)**  
+**![](../../.resource/remote/62ec45fc20ac500854a811a22154a8a90a49ed2e322f774d1e88a948bb94d039.png)**  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 **一****：漏洞描述🐑**
 
@@ -77,11 +77,11 @@ schema_version: "1"
 
 继昨天那篇文章的漏洞预警，对该项目再次审计  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvy9AF66CSUlMic13ew5uJd4vt3436CaBL1Af2NpA6AYQYXBhSxpjcDJw/640?wx_fmt=png)
+![](../../.resource/remote/0aea6fd9bad0b2c6341fb7499a6a7b8dbd3b56fa771753e7c141b6b10b702cd7.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 二:  漏洞影响🐇
 
@@ -89,9 +89,9 @@ schema_version: "1"
 
 Gerapy <= 0.9.7
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
 三:  漏洞复现🐋
 
@@ -99,13 +99,13 @@ Gerapy <= 0.9.7
 
 登录页面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6a9EO2exy5AFj6pyO3xjLjnwKJm2TGic99zA1JX9BqErp57vicJAZTX3ibucQIdt6EmNYAlCNTyMTJQ/640?wx_fmt=png)
+![](../../.resource/remote/e8a1607f79569ab9c2a3cc828883e6c2bc3d11e097ae38fc12e4d6f33bc3bef7.png)
 
   
 
 我们首先先查看关键接口文件 gerapy/server/core/urls.py
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvJ1zAGPFCBMyzfkvBZQrjpfL1AqTTkiaK5kYnMOYH8BiaHQzuIXD43gPw/640?wx_fmt=png)
+![](../../.resource/remote/104979b99995eecc8e0556cd14f57961bf33966b1978acb2376526719123d4f0.png)
 
   
 
@@ -113,7 +113,7 @@ Gerapy <= 0.9.7
 
 gerapy/server/core/views.py 中的 project_file_read 方法  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvTOVMkfupQeOialAQTQGUyR0Uviczibwv7Ax5mpKkKtyLXhILAqtfJjeLg/640?wx_fmt=png)
+![](../../.resource/remote/b46d96e8d1c4d8e73a1eed896bdd3822906b4f3cf7ee88500e92d70a6db6e0b3.png)
 
 ```
 @api_view(['POST'])
@@ -155,19 +155,19 @@ Connection: close
 {"path":"/etc/", "label":"passwd"}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkv1IffqpWkbkcxa4dGypib0U4rhdsKeyokkIVQeJUp8A8muSK07K09PXw/640?wx_fmt=png)
+![](../../.resource/remote/ef75c5bb52af098cd58adc6603c2b1b3fdde9bc6f59455b6a21ff18c85d3a2e2.png)
 
   
 
 我们再继续向下看一些接口，根据漏洞预警描述官方更新最新版已经把昨天说的那个 git clone 命令拼接修复了，我们需要再寻找一个方式获取权限
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvBfd2yqwHWlhRDiah20Ts1xibRceJg4YnOAoq1JSztusl8wTxxPWMujWg/640?wx_fmt=png)
+![](../../.resource/remote/21b7ab6f2c146f99c16b03c8da93c0e31ca6958e9d4313d93690f6658547c7a0.png)
 
   
 
 我们找到一个参数  spider 为可控参数，使用 Popen 命令执行时我们可以拼接命令造成命令注入，看一下方法对应的 URl 接口  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvG1d1yic7REEDecVC42UOwoqjSVHibQU5peXLNN9VA3E3CTm0Tvt6tQgQ/640?wx_fmt=png)
+![](../../.resource/remote/3a8f511a7ddb3168e737af478c10bce5b3734ce9bb1a769fb35fcd32a120cd48.png)
 
   
 
@@ -188,25 +188,25 @@ Content-Length: 18
 {"spider":";`id`"}
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvhyukViasl2hHIqWoaNsv3UNc0IuNCR6xZF00NoUq4ZOoXdygIMr7zoQ/640?wx_fmt=png)
+![](../../.resource/remote/d10c8b946862d9784e54356c2925987e5cf65ae7e17857356eacaa4f4dab1687.png)
 
 ```
 我们再往下看文件更新部分代码
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvphOscAjPEF1BYJ3TibYR6KYMjG4TaW7uHBVDdRkBmrDPFq8Lfx5Im7g/640?wx_fmt=png)
+![](../../.resource/remote/da8aedeb3d709d155298dfa2ea0aa6788964eeaa721966d6726a90611bf4c805.png)
 
   
 
 path lable code 参数均为用户可控，就导致了任意文件的写入了, 一般项目权限为 root，可以通过写定时任务等方法反弹 shell，用之前任意文件读取确认文件的写入  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvjCorcbJykibrSrFlES2ZOtGaNIgZVLicX2VGJh5zsacZtHibkplLB5v2g/640?wx_fmt=png)
+![](../../.resource/remote/2c0f99b379048066e39f069d3480b06d76562dc7edd7b9fc09bc108881b227a4.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkveGZ2YrtO1GkdmibVX4aNE3e4ExHjEAzAUQOJuD69PwW5P4YgsBzeytA/640?wx_fmt=png)
+![](../../.resource/remote/a2ae1621f3fd7a0e10f71653953c8d17bdf9ad7e84695a54231c931e6f0e05fd.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
+![](../../.resource/remote/568dd3665af81ce9e9b7a3b31ffbbaebdeb9d34694558d7f23179b5c6ab04285.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
+![](../../.resource/remote/f98e0030950fc0ae653c3808440fabb5c684eb3a46fec4682d7dde26d6b1cf8f.png)
 
  四:  关于文库🦉
 
@@ -214,7 +214,7 @@ path lable code 参数均为用户可控，就导致了任意文件的写入了,
 
 https://www.yuque.com/peiqiwiki
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6a9EO2exy5AFj6pyO3xjLjbpcJlmpuPWPCYWibAOJrnm6f10nhxo5zCqPhkhHcgKeuIkr4D2N4cvQ/640?wx_fmt=png)
+![](../../.resource/remote/2b8b6f772a8013a381bb424f7b6b85eefcc2bfea571ad561b190a4674bdd910d.png)
 
 最后
 --
@@ -231,7 +231,7 @@ https://www.yuque.com/peiqiwiki
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7iafXcY0OcGbVuXIcjiaBXZuHPQeSEAhRof2olkAM9ZghicpNv0p8rRbtNCZJL4t82g15Va8iahlCWeg/640?wx_fmt=png)
+![](../../.resource/remote/ccb7bc5ce7b30b8f99bdeba963cbbbc47267f787b2b78c5fe58adfbaa5f5a97c.png)
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 

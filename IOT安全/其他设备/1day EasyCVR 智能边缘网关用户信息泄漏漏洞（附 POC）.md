@@ -78,7 +78,7 @@ EasyCVR 智能边缘网关 userlist 信息泄漏漏洞
 
 全版本
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfial35Fxgv8oWsJY4qt17WzGsBdtLp267Wnia9W4kbZ2xj9icf4djfTYCxQ/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c30bac725f9d76e0fde2ca370f54322c01e1605d4b4632bba4f98f37a0823bdc.png)
 
 03
 
@@ -116,7 +116,7 @@ poc 如下
 
 直接使用浏览器访问该接口即可看到敏感信息
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfianB52xhP945dicrib85M2LrVAdqt5ick1We5jIPspRx4aweTSqbJmEooJg/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cf0e70415242798fbc1bda26b757280bce4726f580bba9af7c8ede811589cb31.png)
 
 ```
 Username字段为用户名，
@@ -128,7 +128,7 @@ Password 字段被原文描述为 MD5 摘要；MD5 不能可逆解密，候选�
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfiatqI0gpujBz2y7o1L8CdVTY9fgDQywa2eayib439ZfyzialG88ar7udgg/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1caef5c36e14644cc63f743f0936c92601bb97b6020bbc0ced6e8d59d1628d7d.png)
 
 06
 
@@ -176,7 +176,7 @@ http:
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/lloX2SgC3BNPCeZtAv4mGpUicRiap4ZOfiak8geuaic2jeznsgDHz1Gh5LNqljIShL3VzFw9TzRj2UAOKT5AUdzQCQ/640?wx_fmt=png)
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/98adb45a36a2dc2ed325845873ad90dfcc68ab7eed919f9be5617fb6e9704dbe.png)
 
 07
 

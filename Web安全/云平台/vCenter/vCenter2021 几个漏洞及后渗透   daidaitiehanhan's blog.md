@@ -302,7 +302,7 @@ vCenter 的 linux 版可以直接用 sudo 提权 (测了 7u1 和 7u3j)，直接�
 
 我们可以通过更改写入的路径和写入的内容，写一个 root 权限的 webshell 到 vCenter 服务器上
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218111611577.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218111611577.png)
+[![](../../.resource/remote/e07e9fb9610ac0ac7c8010f5ffea1423882ceb97bef7302eef5af1dc96b09ebc.png)](../../.resource/remote/e07e9fb9610ac0ac7c8010f5ffea1423882ceb97bef7302eef5af1dc96b09ebc.png)
 
 改动 PASSWD_PATH=b’/usr/lib/vmware-sso/vmware-sts/webapps/ROOT/1.jsp’
 
@@ -369,15 +369,15 @@ Linux:  /etc/vmware-vpx/ssl/symkey.dat
 python3 decrypt.py symkey.dat password.enc password.txt
 ```
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218175323719.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218175323719.png)
+[![](../../.resource/remote/9dec68b8708feccb047f057a8e25a459695b0b5765cd2a0034f72f04f34831e2.png)](../../.resource/remote/9dec68b8708feccb047f057a8e25a459695b0b5765cd2a0034f72f04f34831e2.png)
 
 现在可以用解出来的密码登录 ESXI 服务器的 SSH，但是 ESXI 服务器默认是没有开启 SSH 服务的，好在这个账号密码也能用于登录这个 ESXI 服务器的 Web 后台，所以我们可以登进 ESXI 后台开启 SSH 服务
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218180119617.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218180119617.png)
+[![](../../.resource/remote/680c00388617f52831c6f258afa8b400fa9a8777e41695353928344eab82a799.png)](../../.resource/remote/680c00388617f52831c6f258afa8b400fa9a8777e41695353928344eab82a799.png)
 
 至此我们就可以通过 SSH 连接 ESXI 服务器 (虚拟机的磁盘文件都是存放在 ESXI 服务器上的，当此类文件过大不便于下载回本地时，我们可以通过本地 SSH 连上 ESXI 服务器去操作虚拟机的磁盘或者快照文件)
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218181101677.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218181101677.png)
+[![](../../.resource/remote/b41eb56dd4ba0aced30d9a04cf4503279f9a3fce1cb4f3adda41b38d37712ff3.png)](../../.resource/remote/b41eb56dd4ba0aced30d9a04cf4503279f9a3fce1cb4f3adda41b38d37712ff3.png)
 
 ### [](#登录后台 "登录后台")登录后台
 
@@ -401,7 +401,7 @@ C:\ProgramData\VMware\vCenterServer\data\vmdird\data.mdb
 
 再使用[脚本](https://github.com/horizon3ai/vcenter_saml_login)生成 Cookie
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217153435799.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217153435799.png)
+[![](../../.resource/remote/7e0595024be2db6a948325925f9ff0ab6d9b5c4784a0f8b20fe89731946b1724.png)](../../.resource/remote/7e0595024be2db6a948325925f9ff0ab6d9b5c4784a0f8b20fe89731946b1724.png)
 
 直接使用生成的 Cookie 访问 vCenter 服务器 [https://172.16.64.143/ui](https://172.16.64.143/ui)
 
@@ -415,11 +415,11 @@ python vCenter_ExtraCertFromMdb.py /storage/db/vmware-vmdir/data.mdb
 
 生成证书文件
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217170217122.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217170217122.png)
+[![](../../.resource/remote/5208522f86770d85e0d8b5d94832b3e33d24b32d439d086ee7d70aeeb697ed2e.png)](../../.resource/remote/5208522f86770d85e0d8b5d94832b3e33d24b32d439d086ee7d70aeeb697ed2e.png)
 
 然后把 cat 证书文件复制到本地，然后运行脚本 [vCenter_GenerateLoginCookie.py](https://github.com/3gstudent/Homework-of-Python/blob/master/vCenter_GenerateLoginCookie.py) 获取 Cookie
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217170459926.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217170459926.png)
+[![](../../.resource/remote/37f19ff3b194c8242bf0ade2fa34ded58de0e61c4c67197c7f59c6cd89736ee5.png)](../../.resource/remote/37f19ff3b194c8242bf0ade2fa34ded58de0e61c4c67197c7f59c6cd89736ee5.png)
 
 #### [](#重置密码 "重置密码")重置密码
 
@@ -433,7 +433,7 @@ C:\Program Files\VMware\vCenter Server\vmdird\vdcadmintool.exe
 
 运行程序选择选项 3 可重制管理员账号密码
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220216215308530-5079501.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220216215308530-5079501.png)
+[![](../../.resource/remote/1beb50e441d7e7f8a1f729f50005a78d88e00800af380dfde8c901554a16532e.png)](../../.resource/remote/1beb50e441d7e7f8a1f729f50005a78d88e00800af380dfde8c901554a16532e.png)
 
 #### [](#LDAP添加用户 "LDAP添加用户")LDAP 添加用户
 
@@ -449,7 +449,7 @@ python vCenterLDAP_Manage.py adduser
 
 例如增加一个 [apple@vsphere.local](mailto:apple@vsphere.local) 的用户，username 就是用户名随便填，dn 这里需要把第一个 CN 改成前面填写的用户名，然后 DC 字段与获取到的 dcAccountDN 一致，userPrincipalName 这里就是真正的登录名，也需要与原本的保持一致，大概照着提示填写即可。
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217173645186.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217173645186.png)
+[![](../../.resource/remote/baa05921d095e1aabc5fbeed18f87cf12972e3bf1c1138572b0e9e91464e39a8.png)](../../.resource/remote/baa05921d095e1aabc5fbeed18f87cf12972e3bf1c1138572b0e9e91464e39a8.png)
 
 然后把用户加进管理员组
 
@@ -459,7 +459,7 @@ python vCenterLDAP_Manage.py addadmin
 
 这里直接输入前面加用户的那个 dn 就行
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217173940621.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217173940621.png)
+[![](../../.resource/remote/58414f3663c4cc947bf00993e07437686bd4c7b0a96698d3f4d6431e979d1a00.png)](../../.resource/remote/58414f3663c4cc947bf00993e07437686bd4c7b0a96698d3f4d6431e979d1a00.png)
 
 添加完成后就能用新加的管理员账号登入后台了
 
@@ -477,19 +477,19 @@ python vCenterLDAP_Manage.py addadmin
 
 将 KON-BOOT 的 iso 镜像上传到 vcenter 中，克隆虚拟机获取目标机器 win7-zhanglili 的克隆机器 fake-zhanglili，将 fake-zhanglili 的 CD/DVD 处镜像更换成 KON-BOOT 的 iso
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218165450361.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218165450361.png)
+[![](../../.resource/remote/f863ece044815c357f4d7ddc55efca18e582697498fa5d57dffe1e016cd37c38.png)](../../.resource/remote/f863ece044815c357f4d7ddc55efca18e582697498fa5d57dffe1e016cd37c38.png)
 
 启动虚拟机 fake-zhanglili，进入 bios(可以选择**启动到固件**这个功能)，把 KON-BOOT 的镜像文件顺序放到第一位
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218165643596.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218165643596.png)
+[![](../../.resource/remote/bcff8c5641a613bc2c940b9197327ce51c7bf77774968641dcba29d89f138be4.png)](../../.resource/remote/bcff8c5641a613bc2c940b9197327ce51c7bf77774968641dcba29d89f138be4.png)
 
 再次重启虚拟机进入 KON-BOOT，后面一路回车
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218165534426.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218165534426.png)
+[![](../../.resource/remote/e6968933dcce6b630b92f7ce5f827725fbf43055f445374d5cdd43cd033854bb.png)](../../.resource/remote/e6968933dcce6b630b92f7ce5f827725fbf43055f445374d5cdd43cd033854bb.png)
 
 等 KON-BOOT 加载好后重启虚拟机，这时直接空密码就能登录操作系统或者直接用 shift 后门 (5 下 shift) 弹出 cmd 操作
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218170056733.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220218170056733.png)
+[![](../../.resource/remote/fe60d68b4544c9b2bd17ae75d3dbd9bad3950111580391830a090304c06bb2ec.png)](../../.resource/remote/fe60d68b4544c9b2bd17ae75d3dbd9bad3950111580391830a090304c06bb2ec.png)
 
 #### [](#PE工具 "PE工具")PE 工具
 
@@ -499,11 +499,11 @@ python vCenterLDAP_Manage.py addadmin
 
 指定目标机器 win7-zhanglili 生成快照
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217141919199-5079507.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217141919199-5079507.png)
+[![](../../.resource/remote/0798f51cb3a17dfd9da45df1193f15695a6c106fcb79d268b1575d8af3ab402d.png)](../../.resource/remote/0798f51cb3a17dfd9da45df1193f15695a6c106fcb79d268b1575d8af3ab402d.png)
 
 在数据存储中找到目标机器快照的. vmem 文件或者. vmsn 文件，下载到本地
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217142039122-5079515.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217142039122-5079515.png)
+[![](../../.resource/remote/2775f0aad721556cbb29f3805fb7f07a4177422f0a69a53feaca902747d4a7ae.png)](../../.resource/remote/2775f0aad721556cbb29f3805fb7f07a4177422f0a69a53feaca902747d4a7ae.png)
 
 使用采证工具 volatility 可以读明文密码或 hash
 
@@ -518,7 +518,7 @@ volatility_2.6_win64_standalone.exe -f win7-zhanglili-Snapshot1.vmem --profile=W
 
 [https://github.com/volatilityfoundation/volatility/wiki/2.6-Win-Profiles](https://github.com/volatilityfoundation/volatility/wiki/2.6-Win-Profiles)
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217142155695-5079520.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217142155695-5079520.png)
+[![](../../.resource/remote/b2050a3049b78748ece0bb7be35ee823630161e132609570baf5530badc5b4b6.png)](../../.resource/remote/b2050a3049b78748ece0bb7be35ee823630161e132609570baf5530badc5b4b6.png)
 
 ##### [](#快照文件过大的情景 "快照文件过大的情景")快照文件过大的情景
 
@@ -530,21 +530,21 @@ volatility_2.6_win64_standalone.exe -f win7-zhanglili-Snapshot1.vmem --profile=W
 
 克隆虚拟机 win7-zhanglili 生成虚拟机 fake-zhanglili，克隆后的机器 fake-zhanglili 保持关机状态。(开机状态机器的 vmdk 是锁定的，我们无法直接获取到 win7-zhanaglili 机器的 vmdk 文件，所以需要通过克隆一个 fake-zhanglili 机器获取与 win7-zhanglili 相同的 vmdk)
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217143708116.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217143708116.png)
+[![](../../.resource/remote/0ea2409247417bf96795556305a14bcf687076cbf3a7a69e412c8fa79084b682.png)](../../.resource/remote/0ea2409247417bf96795556305a14bcf687076cbf3a7a69e412c8fa79084b682.png)
 
 新建虚拟机或者找一台可控虚拟机挂载克隆后虚拟机的 vmdk，这里我们利用镜像新建一个虚拟机 win7-liangsan
 
 右键编辑设置，给我们可控的虚拟机 win7-liangsan 挂载硬盘
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217143518412.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217143518412.png)
+[![](../../.resource/remote/80091747c0ebcb6b2b509f59031fe625c2d2feca127039ea868bda0f98caa969.png)](../../.resource/remote/80091747c0ebcb6b2b509f59031fe625c2d2feca127039ea868bda0f98caa969.png)
 
 选择克隆后机器 fake-zhanglili 的 vmdk 文件
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217143558114.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217143558114.png)
+[![](../../.resource/remote/66422bc93069a9575158eed9450e05128cafd683283293819df52348964e43b8.png)](../../.resource/remote/66422bc93069a9575158eed9450e05128cafd683283293819df52348964e43b8.png)
 
 然后我们打开虚拟机 xin7-liangsan，可以发现已经挂载成功了
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217144413397.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217144413397.png)
+[![](../../.resource/remote/deaa7649d6ddd6a4be7295a677352d8c48f7b17785b3eb567d7bdcd37ab5f694.png)](../../.resource/remote/deaa7649d6ddd6a4be7295a677352d8c48f7b17785b3eb567d7bdcd37ab5f694.png)
 
 然后我们就找相关文件
 
@@ -565,7 +565,7 @@ NTDS.dit  : C:\Windows\NTDS\NTDS.dit
 
 直接内网找一个我们新建虚拟机能通的机器，在该机器上用 python 开个简单的 web 实现文件传输
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217145213714.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217145213714.png)
+[![](../../.resource/remote/585966f2bded6cdc4ff4395735d8b2a708868976bbaccad29406a2801aac65c6.png)](../../.resource/remote/585966f2bded6cdc4ff4395735d8b2a708868976bbaccad29406a2801aac65c6.png)
 
 把 mimikatz 传到我们新建虚拟机 win-liangsan 中，然后复制 SAM 和 SYSTEM 执行 mimikatz 即可导出本地 hash
 
@@ -573,7 +573,7 @@ NTDS.dit  : C:\Windows\NTDS\NTDS.dit
 mimikatz lsadump::sam /sam:SAM /system:SYSTEM
 ```
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217145312129.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220217145312129.png)
+[![](../../.resource/remote/5746900498f80daaac93fe9e09e59919556c79be0e3f3bc55474af7e4f182931.png)](../../.resource/remote/5746900498f80daaac93fe9e09e59919556c79be0e3f3bc55474af7e4f182931.png)
 
 PS：或者也可以制造一份存储有工具的 vmdk 上传到 vcenter 然后挂载到虚拟机里
 
@@ -593,7 +593,7 @@ isolation.tools.setGUIOptions.enable=true
 
 把我们需要拉到本地的文件放到一个文件夹中，然后设置该文件夹为共享文件夹，然后从任意能网络通的地方 net use 连接设置了共享文件夹的虚拟机
 
-[![](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220221112839229.png)](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/image-20220221112839229.png)
+[![](../../.resource/remote/7912b018f2b4753e395a1ccde2cec8688b400a171d900f37b24f6da61fb0def1.png)](../../.resource/remote/7912b018f2b4753e395a1ccde2cec8688b400a171d900f37b24f6da61fb0def1.png)
 
 ---
 

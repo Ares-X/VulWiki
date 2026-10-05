@@ -38,7 +38,7 @@ schema_version: "1"
 #  GitLab 中的 Devfile 文件写入漏洞   
  Ots安全   2024-05-04 13:15  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 这篇文章详细介绍了识别和利用CVE-2024-0402  
 的过程   
@@ -302,7 +302,7 @@ schemaVersion: 2.2.0
   
 要触发 Devfile 解析，我们现在只需为该项目创建一个工作区：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48tadZqwibIy39lQY8KQJZrwjeNsQDcEuB6poMqXfEyL6ibKNjfnZcVJlpic0r0Q3nPfMkpDicLGoJ7JOicQQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1139075e263bc5cbcbe51be60aaec8c5ac42391d68e1c94918b5c8b14f4f82cc.png "")  
   
 stack.yaml  
 完成此步骤后，我登录到 GitLab Docker 容器，并搜索在我最初观察文件写入行为时解析相同 Devfile 时出现的  
@@ -592,19 +592,19 @@ https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-t
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

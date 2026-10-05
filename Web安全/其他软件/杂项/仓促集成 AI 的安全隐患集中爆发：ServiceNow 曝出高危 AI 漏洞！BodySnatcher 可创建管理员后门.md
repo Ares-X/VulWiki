@@ -69,7 +69,7 @@ previous_primary_identifiers: ""
   
 当前，AI 智能体已成为软件与 SaaS 企业产品升级的热门方向，然而在快速落地的背后，攻击面持续扩张，安全风险亦暗流涌动。全球知名企业服务平台ServiceNow近期披露的 BodySnatcher(CVE-2025-12420)高危漏洞，正是企业仓促集成 AI 智能体的典型安全警示 —— 该漏洞可使未授权攻击者直接操控企业 AI 工具，甚至创建具备管理员权限的后门账户，堪称迄今已发现的最严重 AI 驱动型安全漏洞之一。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wKeDC5RjIzEwd0SP65x5exgWaYmu66yLEgypQxlthVXgDTGMZRHqJkL2YO7qmxGM8ZgzClrwdeJV1XrRDlc4bKjTgKHqs5UrQLKeibbQicec4/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cb3d267dec4153b9d492ccf094b03ff54b615f6142ca9d5ea489557e8b4dfe19.png "")  
   
   
 **一、BodySnatcher 漏洞危害几何？未授权亦可提权并植入后门**  
@@ -90,7 +90,7 @@ previous_primary_identifiers: ""
   
 BodySnatcher 的完整利用链，围绕 ServiceNow Virtual Agent API 的设计缺陷展开，从基础身份仿冒到智能体交互执行，每一步均直击平台安全薄弱环节，且利用条件并不严苛。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wKeDC5RjIzEETfFVebgTWNyOeqic50Of7ZR6Dia64O65NKXWgNJmjLmXW7UkrtzHmFvP9I9wmLNI2F6rmBnNPCUR94zINvU486scjCoWSkeyw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/bf62426c81d5d476e3fd83610c5d1850d9f663abcd6d469cab777ba71e121683.png "")  
   
   
   
@@ -187,7 +187,7 @@ BodySnatcher 并非个例，而是企业大规模集成 AI 智能体过程中重
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/wKeDC5RjIzGbRydFXEGWsw145MR2RnhNZiaIUITkdpxZ805FlKY2SJl6GrSELGHdHkpdMpSeB8F42aSI8eyyicIlm1V0O2XmShPwarauoniaOk/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/4e8c9f3da81cf3730188cef05da3153c434c8b9aef065bf6af02f12d35774569.gif "")  
   
   
 

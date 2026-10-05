@@ -50,11 +50,11 @@ schema_version: "1"
 
 前言
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/nE1wniah9EGQOAibRG1M2E64gUmebTdWmu4PCeZEnP9o2smfR1LT9AVX4E0rZLsiaQseicVh1xzn6zuPI3CatXFHmA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/a3a0f0b20116331629c36859300225083e89641fabd62c86ae126596c7cab5bf.webp)
 
   
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/x2A34tB6DJ1OkPcdribDzibshJwyiacGV0dL6xyJSMoUODic9LUULgNOnWiciaLpD2A7HtR7e6GqhqAkw8zXBObGceYA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/4aaf1f6b2c923e16bb5758917d6966bf0c7b74934c98aaa5f02755c0e44382a9.webp)
 
 超级CMS网站管理系统，专为SEO而生，利于SEO排名，模块化，开源，打造符合搜索引擎的CMS系统。其存在文件上传漏洞。攻击者可利用该漏洞上传木马文件，获得服务器权限。
 
@@ -94,7 +94,7 @@ schema_version: "1"
 
 + top.php 公用顶部模板
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Rhl7Fe1Ew2icdiaxAoicRDTOcic6uZqjKNRuQTmL2KnOQaSBwas6DeYNdq479WEFto9n2bssQXlvVic2bGGlQghxWVg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/fd40875b5ed245f058494eb6323bf5a46722946d9908f39ef0d12a80da47a963.webp)
 
   
 
@@ -104,7 +104,7 @@ schema_version: "1"
 
 环境搭建
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/nE1wniah9EGQOAibRG1M2E64gUmebTdWmu4PCeZEnP9o2smfR1LT9AVX4E0rZLsiaQseicVh1xzn6zuPI3CatXFHmA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/a3a0f0b20116331629c36859300225083e89641fabd62c86ae126596c7cab5bf.webp)
 
   
 

@@ -41,7 +41,7 @@ schema_version: "1"
 
 Jai Vijayan  代码卫士   2024-05-20 17:37  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！  
@@ -55,7 +55,7 @@ Jai Vijayan  代码卫士   2024-05-20 17:37
 该漏洞可导致未认证攻击者在运行受影响软件的英特尔系统上执行任意代码。该漏洞是英特尔公司上周所披露的十几个漏洞中最为严重的。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMTBvibQLiaOydVnsqNvLatP1HGnD0fun5bERPMxFKqyA7Q2MRfR5jzsk4WIUywAAViahq99oUPVkklag/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ed6900abdba2a30dca136cd98f5d106dc8e400a38e4554d706105dd0526e1e1d.gif "")  
   
 **输入验证不当**  
   
@@ -70,7 +70,7 @@ Jai Vijayan  代码卫士   2024-05-20 17:37
 Intel Neural Compressor 是一款开源 Python 库，有助于为多项任务如计算机视图、自然语言处理、推荐系统以及其它用例压缩并优化深度学习模型。压缩技术包括神经网络减少，或者删除最不重要的参数；通过进程调用隔离的方式减少内存要求；并将更大的模型植入性能类似的更小模型中。AI模型压缩技术的目的是助力在多种硬件设备上部署AI应用程序，包括计算能力有限或受限制的设备，如移动设备。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMTBvibQLiaOydVnsqNvLatP1HGnD0fun5bERPMxFKqyA7Q2MRfR5jzsk4WIUywAAViahq99oUPVkklag/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ed6900abdba2a30dca136cd98f5d106dc8e400a38e4554d706105dd0526e1e1d.gif "")  
   
 **其它漏洞**  
   
@@ -83,7 +83,7 @@ CVE-2024-22476只是英特尔 Neural Compressor 软件中的两个漏洞之一�
 除了这些位于 Neural Compressor 中的漏洞外，英特尔还发布了位于UEFI 固件中的五个高危漏洞。它们的编号是CVE-2024-22382、CVE-2024-23487、CVE-2024-24981、CVE-2024-23980和CVE-2024-22095，均为输入验证漏洞，严重性评分从7.2到7.5不等。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMTBvibQLiaOydVnsqNvLatP1HGnD0fun5bERPMxFKqyA7Q2MRfR5jzsk4WIUywAAViahq99oUPVkklag/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/ed6900abdba2a30dca136cd98f5d106dc8e400a38e4554d706105dd0526e1e1d.gif "")  
   
 **不断涌现的AI漏洞**  
   
@@ -145,15 +145,15 @@ Pexels
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

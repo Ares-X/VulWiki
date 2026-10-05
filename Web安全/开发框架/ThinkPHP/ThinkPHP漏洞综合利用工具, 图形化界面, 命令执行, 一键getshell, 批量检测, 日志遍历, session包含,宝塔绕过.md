@@ -90,13 +90,13 @@ java -Dfile.encoding="UTF-8" --module-path "C:\Program Files\Java\javafx-sdk-11.
   
 支持设置代理和UA  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/XZByrJJ6uUyicAiabxwFNa6VJyIAEyIeCsibXfeiaUAp6HggqiaqNbcuPQeA9GZKhb0WLa3IIU6JzrTLqWRXkjicjEkA/640?wx_fmt=png "")  
+![](../../.resource/remote/976bfc0ad7b3fe9293afa318eff24ae91257f914adb76b813204d3c2e7cf04cd.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/XZByrJJ6uUyicAiabxwFNa6VJyIAEyIeCsaPbnBMibnSjmSBPficrTyderyibUcgq274QouM7Dm2kpViaC2icvr1jC4vQ/640?wx_fmt=png "")  
+![](../../.resource/remote/b410ff4735053185e39e08b5954533659808936c480aadc4ec08d78e8582a464.png "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/XZByrJJ6uUyicAiabxwFNa6VJyIAEyIeCsAibk8VMN7drRkrR2m06MMuBtjb5GFQPyaHdfEjZ6hBuum56FLOFKEeQ/640?wx_fmt=png "")  
+![](../../.resource/remote/edbcbda3d5abb88b2c31673de0a0f21bfa5caebb65ac43872e2e1c4c6e01f2dd.png "")  
   
   
   

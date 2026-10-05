@@ -59,7 +59,7 @@ schema_version: "1"
 
  Ots安全   2024-11-28 09:06  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 **网址**  
   
@@ -314,7 +314,7 @@ devfs on /dev (devfs, local, nobrowse)
   
 **A.L.P.E.**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taepDGVgQiakHB3hsp8PKLQTKicjGZcfbNunlZ6y5LOFTGwAx53AiaLiaONwtjZ9yicuY6se1qnjPa83RyA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/31329e541736bc48388af37aa527f643e23a485d9c84226f1ec68e4e102bfedc.png "")  
   
 LPE按照该流程进行，各过程如下。  
   
@@ -343,7 +343,7 @@ sudo 通过命令获取root权限
   
 **B.沙箱逃逸**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taepDGVgQiakHB3hsp8PKLQTKF5RIzhR4m2bCQCALicRUYkVJRFwrYSvup5BibhfQibFW74t4jHRkCvDqQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d8862d7c4c39b7c464d33ecaccd5c0e08115f989b2a45e9a69f07990e303c482.png "")  
   
 1.  
 preference file将终端插入磁盘映像  
@@ -387,19 +387,19 @@ https://www.kandji.io/blog/macos-audit-story-part1
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

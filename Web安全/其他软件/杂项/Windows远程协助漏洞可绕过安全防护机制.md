@@ -58,9 +58,9 @@ schema_version: "1"
 
  FreeBuf   2026-01-16 10:32  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icGlTT0kUBTLu3ic7yrfq9at1r0t8mQHnppv6fng6m2U3hpHZgI08gmazq2DWiayv2nY3iaicDCb4bticg/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/c2f074fe8fdaff5eb77479caf49c96bb80bd8a9f37559b647da349f7fa6786c2.jpg "")  
   
   
 微软已发布关键安全更新修复（CVE-2026-20824），该漏洞存在于Windows远程协助功能中，会导致保护机制失效，允许攻击者绕过"网络标记"（MOTW）防御系统。  
@@ -76,7 +76,7 @@ schema_version: "1"
 该缺陷使未经授权的本地攻击者能够规避MOTW防御机制——该系统旨在限制对来自不可信源文件的危险操作。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icGlTT0kUBTLu3ic7yrfq9atiaC5ruLIOjWEQu7IoqBPdHNrTD8f4bQR9ialjicr2QTyvfCLUrc6lVORQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a117b17a4cfed71b1cb3e15db2ede99c18c4bf7dcb8586be2358aa266169779a.png "")  
   
   
 该漏洞CVSS v3.1评分为5.5分，需要本地访问和用户交互才能利用，但会造成严重的机密性风险。漏洞根源在于Windows远程协助对下载内容验证和处理机制存在缺陷。  
@@ -96,7 +96,7 @@ schema_version: "1"
 微软已针对29种不同Windows配置发布安全更新：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icGlTT0kUBTLu3ic7yrfq9atibz5We5ZCDsLW6icF1PLgHoANBjgLZvkMQofibxB9icHeCnum8U5iczT1oQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3843e5d79a778bf694d6d25b363e06bd601a27b077289a959111215b6eba0c0c.png "")  
   
   
 具体更新要求：  
@@ -138,7 +138,7 @@ https://cybersecuritynews.com/windows-remote-assistance-vulnerability/
 ### 电台讨论  
   
 ****  
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibvNluUKZ6RPy7h2fbYibRbLQDHPFqj89KkFsXBRibx5YTLiaTUfFOy9PKicps3l56iazUPNQrwdhkZ7jA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5ee7de92bc0c776a4967a39efb837ad629a64be64a8ffdaeb241583ae8b1cb7b.png "")  
   
 ****  
   

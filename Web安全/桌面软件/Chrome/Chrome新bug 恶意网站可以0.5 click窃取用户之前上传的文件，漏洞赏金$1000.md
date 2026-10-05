@@ -69,7 +69,7 @@ schema_version: "1"
 https://issues.chromium.org/issues/470928605
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/ft6csZH0gNVkKBoWKMuricEpIK6gyO5EhJlfJ1ZM9uYEuQJ7dI7evDx6XV8R9kOQtibhlUZax0JjBfkeDwmCLvA5r2cFgVciaYSVibrprG4Ogvc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e3bcaa152a05e29124882e7826873474bc2b28779b29fa15e6561ae45813cddf.png "")  
 ## ⚙️ 攻击手法：一次简单的“按键模仿”  
 - **精心设计的陷阱**  
 ：当你访问一个恶意网站时，该网站会通过JavaScript动态创建一个文件上传按钮（<input type="file">  
@@ -83,7 +83,7 @@ https://issues.chromium.org/issues/470928605
   
 **总结一下：你长按的回车键，被漏洞利用，直接“批准”了恶意网站上传文件的操作。**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/ft6csZH0gNUS8lmw58CsQCA2Jg4XKUWmBiaCGm8oruqbiafy3HqR20pYMNUmGZBXMxZuChp0MML4D2JudUHrwH7yNDuSMUiabU9XWvHCK5bwqc/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/243d66838345e1c975f7ed7e2755a91e56a6107b9b1632cb52e720ace29c334a.png "")  
 ## ⚠️ 你的什么文件最危险？  
   
 该漏洞主要威胁的是你曾在浏览器中上传过的文件，这些文件的路径通常会被浏览器缓存。攻击者通过上述技巧，可以直接调取这些“历史记录”中的文件。具体来说，最危险的文件包括：  
@@ -145,7 +145,7 @@ https://issues.chromium.org/issues/470928605
   
 专注于红蓝对抗、攻防渗透、威胁情报、数据泄露  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/ft6csZH0gNUBd6YHx2iaIMcHvxIztn38KXibxGibdz8yElysNTymkMcIWYCqtY2e7Vg8sDVY9gsibSeLLrKnUHH5aENHVPlv8v5S06yFWCMyrLk/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/12ad85532598072a3e25996a7d5744177628ec4255ea7af0b8ec3437e960c97a.jpg "")  
   
   
 

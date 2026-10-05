@@ -91,7 +91,7 @@ Connection: close
 
 查看命令执行结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfgSEMCClqjJaUQSbibO0LZ9aIjhl82wQ358yQiagibLUXvJQJdN5RlDZD53Hsc3ib0O9P0XicicvUXQBlqg/640?wx_fmt=png)
+![](../../.resource/remote/424a7b5c70dd7b41bec62f00f2913ae56e9566a161e1a6407baec6633ba65d15.png)
 
 _**参考链接**_
 
@@ -147,13 +147,13 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfgSEMCClqjJaUQSbibO0LZ9aiaDXwtVGHvbnF41t2AzfK0npajmuh9mLohC5YenJ2XU5Wqc2IQ8Lia5w/640?wx_fmt=png)
+![](../../.resource/remote/f9e371dce9db1628ab62c7d3f7e3a1c3abdba4cd22e169becb89d2e6fa5930fc.png)
 
 查看命令执行结果
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfgSEMCClqjJaUQSbibO0LZ9aWl84ROjxYzoUpBUrq5S2cUCXyhRG5Q8icMicTpdEnnDXCVjqsEH4T8QA/640?wx_fmt=png)
+![](../../.resource/remote/e94c10bffad8f88267cba3b25202fea25cc9fb14d4c6504ca4a90df79ae99836.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/DT3jlATYvfgSEMCClqjJaUQSbibO0LZ9aT3DnjaD2gR5M0UwTP08DXLW0xrvdI2EKWSSm3LE4YatrRUYvBibcOsw/640?wx_fmt=png)
+![](../../.resource/remote/b39473b791769db1fdc12a2c3b3ba4460762dee0dcbf9df09ca723795a71338d.png)
 
 _**参考链接**_  
 
@@ -167,7 +167,7 @@ https://www.totolink.net/data/upload/20230330/32b35a2a2ede3a948f8c5df15ac2631e.r
 
 **仅供学习交流，勿用作违法犯罪**
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/DT3jlATYvfgSEMCClqjJaUQSbibO0LZ9aSwwhnlm1uk7Bdg4R3kV3ymdXqaCCUn70g8eEm9EJu09XZdRKxAI8yw/640?wx_fmt=gif)
+![](../../.resource/remote/5306062de93490e5231905ee90d6963cf8623a09b9793d1f2a1617f8c18f6f45.gif)
 
 ---
 

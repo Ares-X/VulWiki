@@ -62,7 +62,7 @@ schema_version: "1"
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUJPUcDoibDQQu0xK9zHwSFuTmNY5kTbyYdVL0ekE1yXbKDABTevHJ0ddQyV75RgmBslx9ibiafpia72A/640?wx_fmt=png)
+![](../../.resource/remote/d349f3faa5f84b3ce2324ecfc18501deb98388025f14cd934d39bcd94f7fa76b.png)
 
 payload：
 
@@ -84,7 +84,7 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUJPUcDoibDQQu0xK9zHwSFuBBXXlxOO2JjRd46q0etW7BmoHpomeXibozxey5s68ZCJ7cARUG29sIw/640?wx_fmt=png)
+![](../../.resource/remote/0e43560f87f07c620fad34cf5e75cba96f94563fa6e2416dc71ded525febec5f.png)
 
 shell 连接：  
 
@@ -95,9 +95,9 @@ shell 连接：
 
 使用中国蚁剑进行连接，密码为 cmd
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUJPUcDoibDQQu0xK9zHwSFuwbGLeXxDSt7DDzCQ09ib3fchTcicjwocQ3KptsYWFKc7CFXQwlE2vhgQ/640?wx_fmt=png)
+![](../../.resource/remote/2f1a08f69c1a1563bde246898d191ad840420f5aae4d3aa0fac4d29708c3c1e3.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/y0627QbVVbUJPUcDoibDQQu0xK9zHwSFuQbedX8cYRIHCg24mKvjYiahBmT3elzjhiaMlWrpJhxhD76mMuBWSftPA/640?wx_fmt=png)
+![](../../.resource/remote/1230feb27871a8ae6c9e40d061f067f6ce326d5bb4bbc701dc904e6113929493.png)
 
 可见这个站点已经被人打烂了
 

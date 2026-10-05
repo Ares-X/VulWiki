@@ -63,7 +63,7 @@ BlackByte组织利用VMware ESXi虚拟机监控程序中最近被修补的漏洞
   
 另一个令人担忧的事态发展是该组织使用被盗的Active Directory凭据来传播其勒索软件。这意味着他们可以更快、更有效地在网络内传播感染，从而增加潜在的损害。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/JqliagemfTA5HYuPorgzJGicMlDf4QaMibLLyVGGSB0HAY7w9YcuvwwgFBlnGsbicITFVTB2EcWgaLvsia8NfmZXY5Q/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/43bca2efef6f02cd418e1d14b77567cb7df6d7f9270a47e35961697548922386.png "")  
   
 思科团队研在8月28日星期三研究结果发布前，与Hackread分享了他们的发现。  
   

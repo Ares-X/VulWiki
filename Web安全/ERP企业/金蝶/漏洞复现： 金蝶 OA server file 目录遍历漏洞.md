@@ -85,9 +85,9 @@ appmonitor/protected/selector/server_file/files?folder=/&suffix=
 
 具体例子
 
-![](https://mmbiz.qpic.cn/mmbiz_png/tF1M75DDm9QcJ2kg6C1lQYxgpciaNPcyT9Wvia7OXB7PIygkhIDhodmCALRdSGR9jSKNdXZ7OwAH2uNvs6ktpEmA/640?wx_fmt=png)  
+![](../../.resource/remote/f4d28e8a582ef3c2f503271ae55581f60fee5cb186ab988e0f13ebd04da7729c.png)  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/tF1M75DDm9QcJ2kg6C1lQYxgpciaNPcyTcUJRhTu4TXCb3bHsCFExWesXyplanfRjUnrWmt9vL09fjQHOiaXkSBA/640?wx_fmt=png)
+![](../../.resource/remote/82d13763d0c5a1f72f770081df61d9096009bcf86ba62bfd7a3ac2883e4eef0b.png)
 
 ---
 

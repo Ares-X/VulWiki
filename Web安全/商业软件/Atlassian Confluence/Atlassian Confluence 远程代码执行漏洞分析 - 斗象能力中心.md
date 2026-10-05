@@ -98,13 +98,13 @@ widgetconnector<=3.1.3
 等到安装完毕会跳转到输入 Licence 页面，可以选择试用，并在 atlassian.com 注册一个账号即可获得一个试用 30 天的 Licence  
 安装完毕页面
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/71132673848a1ace282595c16fdc689c.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/71132673848a1ace282595c16fdc689c.png) `）
 
 #### ２. 修改启动参数，调试
 
 Confluence 在 Windows 平台是通过 tomcat 注册服务启动的，可以在服务中看到名称以 Confluence 开头的服务
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/d5a1af03ed7ea97b2580088f561a7e0d.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/d5a1af03ed7ea97b2580088f561a7e0d.png) `）
 
 在控制台中启动  
 `tomcat9w.exe //ES//Confluence030419234341`  
@@ -116,7 +116,7 @@ Confluence 在 Windows 平台是通过 tomcat 注册服务启动的，可以在�
 其中 Transport 选择 Sockoet, Debug Mode 选择 Attach, 端口填入 5000,  
 由于 Confluence 和 idea 都在同一台机子上，这里地址填写 localhost 即可
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/cddb636bd3ca67ca5a23e5045b12eb83.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/cddb636bd3ca67ca5a23e5045b12eb83.png) `）
 
 #### ３. 代码简单分析
 
@@ -126,15 +126,15 @@ Widgetconnector.jar 位于 confluence\\WEB-INF\\atlassian-bundled-plugins\\，�
 该 Macro 支持的内容可以来自如下站点，YouTube，Vimeo，MySpace Video。  
 在编辑中选择该 Macro 的示例图如下：
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/b34ae53aebf223cded2ad49005d2745a.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/b34ae53aebf223cded2ad49005d2745a.png) `）
 
 各个站点的内容不一样表现形式肯定不一样，需要有不同的判断方法，通过调用父类 WidgetRenderer 的 matches 方法来判断调用不同的子类。  
 判断的内容来自 url 参数，所以在 payload 中的 url 参数中必须要包含特定的字串才能加载有漏洞的子类。  
 在不同的子类中的 getEmbeddedHtml 函数中有的将\_template 参数硬编码了，有的没有传递，表示使用默认的模板
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/1531bf90f716fb4bb0d7fc04d7d650fd.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/1531bf90f716fb4bb0d7fc04d7d650fd.png) `）
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/cd196cd2efca0e47f288c3bf2727bf90.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/cd196cd2efca0e47f288c3bf2727bf90.png) `）
 
 #### ４. 漏洞复现，模板本地加载
 
@@ -162,12 +162,12 @@ Content-Length: 169
 
 > 请求长度说明：原资料 Content-Length 为 169；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/4cbc845ee78798423248697ae7b80ce6.png)  
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/4cbc845ee78798423248697ae7b80ce6.png) `）  
 注意到 params 的 template 参数由用户输入，跟进 velocityRenderService 的 render，  
 \_template 最终跳到了 VelocityUtils.getRenderedTemplate 方法中, 当成模板路径被加载。  
 调用的加载类来进行资源的加载，你会发现用”../” 无法穿越到系统根目录，此时对路径会限定在当前 WEB 路径，但是可以使用 file 协议加载非 WEB 路径的资源。
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/3a6edcffad0ca3b33c4fb191cb988f30.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/3a6edcffad0ca3b33c4fb191cb988f30.png) `）
 
 #### 4.1 漏洞复现，模板远程加载
 
@@ -179,19 +179,19 @@ $i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invo
 
 ```
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/748b925cb2d3f9a4e25efc264e26be74.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/748b925cb2d3f9a4e25efc264e26be74.png) `）
 
 下图的 classLoader 为 Tomcat 提供的 WebappClassLoader
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/b311689e16c82fe3bc3d667b7234e762.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/b311689e16c82fe3bc3d667b7234e762.png) `）
 
 最终 WebappClassLoader 是调用的为 jdk 提供的 URLClassLoader 的 findResource 方法，
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/ad9db304a6008ebd7b49859ad4eeca5c.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/ad9db304a6008ebd7b49859ad4eeca5c.png) `）
 
 findResource 是不支持 http 协议的。
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/12308f971b2e1298f5604c434b1e0138.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/12308f971b2e1298f5604c434b1e0138.png) `）
 
 #### 5\. 官方修复方法
 
@@ -205,7 +205,7 @@ findResource 是不支持 http 协议的。
 
 并会调用 doSanitizeParameters 方法，该方法会将 parmeters 变量中的\_template 参数移除，所以用户对于 \_template 参数不再可控。
 
-![](https://blog.riskivy.com/wp-content/uploads/2019/04/7f804233326b38caf8f454606a9b607a.png)
+**原图暂未找回**（原引用：` ![](https://blog.riskivy.com/wp-content/uploads/2019/04/7f804233326b38caf8f454606a9b607a.png) `）
 
 该修复方法杜绝了该插件中的 SSTI 漏洞，但是其中还有几处盲 SSRF 未修复，可能是官方认为风险可接受吧。
 

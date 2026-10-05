@@ -60,7 +60,7 @@ source_status: "unknown"
   
 Netis Wi-Fi路由器以其稳定的性能、易用的管理界面以及较高的性价比受到许多用户的青睐。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWQK5AoL9cDCdtkAibcBYVMwIPXV3bQOeBQ4ia1ZChhvicKDfmsia1FKCGC0dXeFnpA2e5jwVPIb1mykQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/a9c45615de52b68663f122c5e8d9ef9a9c8020fce5006487062ad7be99d84863.png "")  
   
 **0x03 漏洞详情**  
 ###   

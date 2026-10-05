@@ -42,7 +42,7 @@ schema_version: "1"
 
 Ravie Lakshmanan  代码卫士   2025-07-18 10:35  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
     
 聚焦源代码安全，网罗国内外最新资讯！  
   
@@ -50,7 +50,7 @@ Ravie Lakshmanan  代码卫士   2025-07-18 10:35
   
 **本周二，谷歌披露称其基于LLM的漏洞发现框架 Big Sleep，赶在黑客在野利用之前发现了SQLite 开源数据库引擎中的一个高危内存损坏漏洞CVE-2025-6965（CVSS评分7.2）。**  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRuqupibSSLZFWiacExROLJicCraFnJRQzIf3t7Wf5NqYic6z6saibAzuu4xz2WzZZ2BmxKwgqIGovwung/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/36b36005e60183d3603e8c2d5f0b55ab066f22ab6e7dafe7c44c0fa65d02a936.png "")  
   
   
 该漏洞影响SQLite 3.50.2之前的所有版本。Big Sleep 是由谷歌在去年发布的一款AI代理，是DeepMind 和 Google Project Zero 团队协作成果的一部分。SQLite 项目维护人员在一份安全通告中提到，“攻击者如果能够在应用程序中注入任意SQL语句，则可能导致整数溢出，进而导致读取数据末尾越界。”  
@@ -120,15 +120,15 @@ se
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

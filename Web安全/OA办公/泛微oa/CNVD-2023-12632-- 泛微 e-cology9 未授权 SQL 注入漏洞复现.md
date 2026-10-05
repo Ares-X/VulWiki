@@ -85,7 +85,7 @@ a' union select 1,''+(select 'SQL_EXISTS')+'
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ZXHK19fFGk5WnW9nkBHdDib7d3Ybga9wBGmAHHGshkOzxiclY7yrbIPv3zpxgib3uibhde8F9THk31MWodzG02xzpg/640?wx_fmt=png)
+![](../../.resource/remote/03194ac9d19fd2186c14dcbd97e41be5b47c8a498dc2b0a79d8a75c2f9dc4d6a.png)
 
 很明显的回显点，所以这不是盲注，这不是盲注，这不是盲注！！
 
@@ -103,15 +103,15 @@ def tamper(payload, **kwargs):
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ZXHK19fFGk5WnW9nkBHdDib7d3Ybga9wB0yHxhZhq25ySqIfibcatu62rmDbnvcoVK7usf1ic4olIaIgiceoTKgxKQ/640?wx_fmt=png)
+![](../../.resource/remote/5c04cc288b33cce4e8a84e99520120608e3ea8ccbe06c8b47ab72f02f6407cf5.png)
 
 到这里师傅们觉得 sqlmap 盲注太慢了，可以自己构造语句，直接查询：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ZXHK19fFGk5WnW9nkBHdDib7d3Ybga9wBIeibyt8VpdBpczzr651gCbKD0uiaNUuQ6gzamHLPOgorCdlFMiadv8k0Q/640?wx_fmt=png)
+![](../../.resource/remote/67e12fcdc72d913f18858a457e6f96dd04fcc8b9acf8c74224c8829b82bb590b.png)
 
 用 sqlshell 写语句查询：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ZXHK19fFGk5WnW9nkBHdDib7d3Ybga9wBE6DEnbt2a2nUPynazmKMlVVQWBcwibia8k6HOP7x62X63CQ4X2Zw6Mvw/640?wx_fmt=png)
+![](../../.resource/remote/0fd685e9c912ca571604f42f859af867eee0a958469961e2b43c960038b53e36.png)
 
 或者自己写个脚本查询都行。。。  
 

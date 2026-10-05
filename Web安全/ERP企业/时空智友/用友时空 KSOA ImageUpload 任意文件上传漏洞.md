@@ -66,7 +66,7 @@ app="用友 - 时空 KSOA"
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyoylbUmtMRqDHFpXPbHKgtib93GtmN1Mhrqe8bo1gHnL4MCrlGE5hsAfRdibez6vNiaEExkqYu3iaUPQ/640?wx_fmt=png)
+![](../../.resource/remote/5253222cb83c3808f1731860f10dece1da38a006809a32d47db67f7ee103e654.png)
 
 POC:
 
@@ -85,17 +85,17 @@ Content-Length: 8
 
 ```
 
-上传成功：![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyoylbUmtMRqDHFpXPbHKgtDnJL1kfRabVPl5icCibaVliaW2mapNic0YKHw8gBnqWpibngjp5l7xBVyIg/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyoylbUmtMRqDHFpXPbHKgt50BZcz93P7WGyMJCt4gBVb1gTxvSx5vwnBN9c6qdzHgAotGNJUEVsg/640?wx_fmt=png)
+上传成功：![](../../.resource/remote/0b9f0ad58370be54d42702eb37865bbccc4b0341816342d4552b8e2f7a4a0e3b.png)![](../../.resource/remote/ffdc582b229a8b09519fb28d6fe9bebd99393b2bff4371159cc0055b98cb901d.png)
 
 验证：http://url/pictures/123.txt  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVyoylbUmtMRqDHFpXPbHKgtEAUV4pibTxvkEibiaJa4kAac9kehSeH7xLyFg3XhmfyISLnMsPTIGsw6A/640?wx_fmt=png)
+![](../../.resource/remote/7e397848f2c67e578ab57a50d962c15614757caac11a2119adb37e810fd15f49.png)
 
 **修复建议**
 
 建议升级至安全版本  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVwm8c9xddClZDNW2s8GsicyO1NKrSWUc4JcSvkvKSEWNB0NEcsXj0SmRHgksoOiaLfmbib3icF8g9MMVw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/0fae810828196437a3e27f124232b818b08e90b4cef5743dc22904564cff7b5a.jpg)
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

@@ -62,7 +62,7 @@ RPC 的演化过程可以看这个视频进行了解：[https://www.bilibili.com
 
 对于视频里面实现 RPC 的方式我画了一个简单的流程图来理解：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121406-76eecfa4-459e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121406-76eecfa4-459e-1.png)
+[![](../../.resource/remote/c1fac2913f24d4be5411b473da872295c06e56e172916557f5374c0a4941f65f.png)](../../.resource/remote/c1fac2913f24d4be5411b473da872295c06e56e172916557f5374c0a4941f65f.png)
 
 Client 如果想要远程调用一个方法，就需要通过一个 Stub 类传递类名、方法名与参数信息给 Server 端，Server 端获取到这些信息后会从本地服务器注册表中找到具体的类，再通过反射获取到一个具体的方法并执行然后返回结果。
 
@@ -72,7 +72,7 @@ Client 如果想要远程调用一个方法，就需要通过一个 Stub 类传�
 
 代理模式是一种设计模式，提供了对目标对象额外的访问方式，即通过代理对象访问目标对象，这样可以在不修改原目标对象的前提下，提供额外的功能操作，扩展目标对象的功能。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121407-772934b4-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121407-772934b4-459e-1.jpg)
+[![](../../.resource/remote/d743a845a82902b7107417d0aa1162e73ae7ec6ceef4bdb2e3af883f434cbc32.png)](../../.resource/remote/d743a845a82902b7107417d0aa1162e73ae7ec6ceef4bdb2e3af883f434cbc32.png)
 
 `Proxy`在`Client`直接调用`DoAction()`中间加了一层处理，正是这层处理扩展了对象的功能。
 
@@ -151,7 +151,7 @@ public class TestProxy {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121407-777237cc-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121407-777237cc-459e-1.jpg)
+[![](../../.resource/remote/e89f8c723ef50d538db2edf17412a61100257a58d4397e2fb925dce8fe3bbd0e.png)](../../.resource/remote/e89f8c723ef50d538db2edf17412a61100257a58d4397e2fb925dce8fe3bbd0e.png)
 
 可以看到，在不修改原来对象功能的前提下，在调用方法前后增加了功能。但是这种代理模式有很一些缺点：
 
@@ -217,7 +217,7 @@ public class TestDynamicProxy {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121409-785a75f0-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121409-785a75f0-459e-1.jpg)
+[![](../../.resource/remote/9dd85484b5db50aeef1d8e14c1a1b631e2c299a5cb9fc4243be9bd1f52a71f09.png)](../../.resource/remote/9dd85484b5db50aeef1d8e14c1a1b631e2c299a5cb9fc4243be9bd1f52a71f09.png)
 
 **参考文章**
 
@@ -357,13 +357,13 @@ public class UserClient {
 
 先启动`UserServer.java`，再启动`UserClient.java`：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121409-78a688a0-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121409-78a688a0-459e-1.jpg)
+[![](../../.resource/remote/ed61e85d29260e5f75178f06c011789825393069748234797ebfbe9e9833738f.png)](../../.resource/remote/ed61e85d29260e5f75178f06c011789825393069748234797ebfbe9e9833738f.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121410-78efabe8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121410-78efabe8-459e-1.jpg)
+[![](../../.resource/remote/dd8970f4f7c794970d974532d8b5db8ead8eda60cfadcb4d2f518688a7c6b14d.png)](../../.resource/remote/dd8970f4f7c794970d974532d8b5db8ead8eda60cfadcb4d2f518688a7c6b14d.png)
 
 同时在服务端：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121410-793f30b4-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121410-793f30b4-459e-1.jpg)
+[![](../../.resource/remote/b1e86e68d8ba24b2feddd50e081e05ad09864fb73cc77009b7d0607c521e353e.png)](../../.resource/remote/b1e86e68d8ba24b2feddd50e081e05ad09864fb73cc77009b7d0607c521e353e.png)
 
 **直接使用 Registry 实现的 RMI**
 
@@ -413,7 +413,7 @@ public class UserClient {
 
 根据 RMI 的整个过程画出一个的流程图如下:
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121411-798d657c-459e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121411-798d657c-459e-1.png)
+[![](../../.resource/remote/2856ff009db79d9f027b93f98b43316c5ad8672a75bda951e55c2fd57d4d2f8c.png)](../../.resource/remote/2856ff009db79d9f027b93f98b43316c5ad8672a75bda951e55c2fd57d4d2f8c.png)
 
 ### JRMP
 
@@ -457,27 +457,27 @@ public class UserServerTest {
 
 根据 createRegistry 源码的调用流程，流程图及调用栈如下，其中各种参数的传递这里就不分析了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121411-79eaf426-459e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121411-79eaf426-459e-1.png)
+[![](../../.resource/remote/b38ee9bfa5ee4ebf1181b87e8fcb5a9e59025ea8322c13aad669b571b0304ceb.png)](../../.resource/remote/b38ee9bfa5ee4ebf1181b87e8fcb5a9e59025ea8322c13aad669b571b0304ceb.png)
 
 *   创建 RemoteStub 时的调用栈
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121413-7b2fe288-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121413-7b2fe288-459e-1.jpg)
+[![](../../.resource/remote/e52e8a6f12d15a2bbad8c28dd7cd324c730bd41221cf30683f44baabebb26389.png)](../../.resource/remote/e52e8a6f12d15a2bbad8c28dd7cd324c730bd41221cf30683f44baabebb26389.png)
 
 *   创建 Skeleton 的调用栈
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121415-7c7046c4-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121415-7c7046c4-459e-1.jpg)
+[![](../../.resource/remote/7d40b17f77bbe003ded109e373119749ebc42cd03d86e132c498e927a2e84350.png)](../../.resource/remote/7d40b17f77bbe003ded109e373119749ebc42cd03d86e132c498e927a2e84350.png)
 
 *   创建 Socket 服务开启监听调用栈
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121418-7de80d84-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121418-7de80d84-459e-1.jpg)
+[![](../../.resource/remote/7141426c3e0c364b29c137cf1080a1bc85dd764994b065a5b5e2d401c8bf8d27.png)](../../.resource/remote/7141426c3e0c364b29c137cf1080a1bc85dd764994b065a5b5e2d401c8bf8d27.png)
 
 *   接收与处理请求的调用栈
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121420-7f1a9000-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121420-7f1a9000-459e-1.jpg)
+[![](../../.resource/remote/bd691f8ce68467d1851a607d3522e132427168849cf930fe2116fcf55808ad83.png)](../../.resource/remote/bd691f8ce68467d1851a607d3522e132427168849cf930fe2116fcf55808ad83.png)
 
 处理请求：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121421-7fb30ace-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121421-7fb30ace-459e-1.jpg)
+[![](../../.resource/remote/5d7099dad74e263682b08997f9d837e0d25eb016bc3ea371bda30a9e4052eee3.png)](../../.resource/remote/5d7099dad74e263682b08997f9d837e0d25eb016bc3ea371bda30a9e4052eee3.png)
 
 需要特别注意的就是这里真正处理请求的部分，以`bind`操作为例，这里对`var3`这个变量进行了判断，并根据不同的数字进行不同的处理，最终调用`var6.bind`进行绑定，最终把服务绑定在`this.bingdings`上。其中`var3`对应关系如下：
 
@@ -491,13 +491,13 @@ public class UserServerTest {
 
 这里再看一下如果是使用`LocateRegistry.createRegistry`本地获取了注册中心之后，直接绑定服务是什么流程。跟一下就可以看到过程比较简单，经过了一个 checkAccess 的检测之后就把服务加入了`this.bindings`里了。(上面对请求处理也会调用到这个方法）
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121422-804d1b32-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121422-804d1b32-459e-1.jpg)
+[![](../../.resource/remote/0d56564ffd086d92c69e4bbe9be58e8b8d34427ca28eb575f7780a05597d83a5.png)](../../.resource/remote/0d56564ffd086d92c69e4bbe9be58e8b8d34427ca28eb575f7780a05597d83a5.png)
 
 这里的 checkAccess 就是为了检查绑定时是否是在同一个服务器上。
 
 > 在低版本的 JDK 中，Server 与 Registry 是可以不在一台服务器上的，而在高版本的 JDK 中，Server 与 Registry 只能在一台服务器上，否则无法注册成功。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121423-80ea407e-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121423-80ea407e-459e-1.jpg)
+[![](../../.resource/remote/e23f1e3a1a66c3aef4cdcc72ac4ae28231e55649217760001b50451683f03c8e.png)](../../.resource/remote/e23f1e3a1a66c3aef4cdcc72ac4ae28231e55649217760001b50451683f03c8e.png)
 
 #### LocateRegistry.getRegistry
 
@@ -505,19 +505,19 @@ public class UserServerTest {
 
 首先通过`LocateRegistry.getRegistry`获取到的是`RegistryImpl_Stub`对象：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121424-815180ae-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121424-815180ae-459e-1.jpg)
+[![](../../.resource/remote/7ffa9dd1d198153d3e34f12549c0e866b5b2e216dda000ee17528831d3f98b6d.png)](../../.resource/remote/7ffa9dd1d198153d3e34f12549c0e866b5b2e216dda000ee17528831d3f98b6d.png)
 
 跟入 bind 方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121425-81d74b62-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121425-81d74b62-459e-1.jpg)
+[![](../../.resource/remote/14d500bb28f19566efaa3294e9ad62f3f51d8f98dfa51a076132cb23c0910083.png)](../../.resource/remote/14d500bb28f19566efaa3294e9ad62f3f51d8f98dfa51a076132cb23c0910083.png)
 
 把传入的服务名称和对象都进行反序列化传递给类型为`ObjectOutput`的`var4`变量。并通过 invoke 方法传递到 Server 的`Registry`那边进行处理。来看一下`newCall`方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121425-825af17e-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121425-825af17e-459e-1.jpg)
+[![](../../.resource/remote/ece45819719abc461560e3dc0d5326e3dffc6b930f1bd10459a61e86e5659514.png)](../../.resource/remote/ece45819719abc461560e3dc0d5326e3dffc6b930f1bd10459a61e86e5659514.png)
 
 这里传递进来的`var3`为`0`，继续传入到了`new StreamRemoteCall`里：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121426-82b8b71e-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121426-82b8b71e-459e-1.jpg)
+[![](../../.resource/remote/0b7deac7e71669f19da5ea8ba612513f895a0347aa2fd64386a17c20362023bf.png)](../../.resource/remote/0b7deac7e71669f19da5ea8ba612513f895a0347aa2fd64386a17c20362023bf.png)
 
 最后将这个 var3 发送到服务端那边进行处理。
 
@@ -528,7 +528,7 @@ public class UserServerTest {
 3.  Server 端获取到了服务名和对象名之后，反序列化调用`var6.bind()`最终绑定到`this.bindings`上
 
 同样画出流程图如下：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121426-82f4d06e-459e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121426-82f4d06e-459e-1.png)
+[![](../../.resource/remote/6fd86c73b07f751c24851be7a6f32fc2babe5114c8de5173e600a9f738a78433.png)](../../.resource/remote/6fd86c73b07f751c24851be7a6f32fc2babe5114c8de5173e600a9f738a78433.png)
 
 在这个过程中，存在一个序列化和反序列化的过程，所以存在反序列化漏洞的风险。
 
@@ -554,31 +554,31 @@ public class UserClient {
 
 通过 lookup 获取到的是一个 Proxy 代理对象：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121427-836b045a-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121427-836b045a-459e-1.jpg)
+[![](../../.resource/remote/e6673f1aa3f2109bf525f8631e504665a0b7dfb6ed838cb9b07136faf949962b.png)](../../.resource/remote/e6673f1aa3f2109bf525f8631e504665a0b7dfb6ed838cb9b07136faf949962b.png)
 
 跟入调用`name`的过程，到了`invoke`方法处，会调用`invokeRemoteMethod`方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121428-83bfa79e-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121428-83bfa79e-459e-1.jpg)
+[![](../../.resource/remote/89e9405cc298443a4537e726baf6bcc57e5b9a4a048bb9f854c2ac92b9d3eadb.png)](../../.resource/remote/89e9405cc298443a4537e726baf6bcc57e5b9a4a048bb9f854c2ac92b9d3eadb.png)
 
 这里传入了所调用的代理、方法名、参数和`method`的`hash`值到`this.ref.invoke`方法中。`this.ref`中包含了远程服务对象的各类信息，如地址与端口、ObjID 等。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121428-8421b628-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121428-8421b628-459e-1.jpg)
+[![](../../.resource/remote/7b81fa69ed82ea648ae354534d57db19f28027f4a12256ee5bcdf2b230bd8486.png)](../../.resource/remote/7b81fa69ed82ea648ae354534d57db19f28027f4a12256ee5bcdf2b230bd8486.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121429-8487c7c4-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121429-8487c7c4-459e-1.jpg)
+[![](../../.resource/remote/45e45f4767fe3b79360d69de0ea0f33d5aebf2e333dbe23757dcff5c9b0a378f.png)](../../.resource/remote/45e45f4767fe3b79360d69de0ea0f33d5aebf2e333dbe23757dcff5c9b0a378f.png)
 
 invoke 函数里就是对这些数据进行处理 (参数会序列化) 发送到 Server 端那边。具体这里就不再跟入了。
 
 再来看看 Server 那边是怎么处理传过来的数据的，Server 端处理 Client 端传递过来的数据在 调用栈如下：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121430-851955f4-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121430-851955f4-459e-1.jpg)
+[![](../../.resource/remote/a633db0df97bd7f9ebc6137d7f75789c66914a1ea3e51a8e12cd3aa26cc1f9bc.png)](../../.resource/remote/a633db0df97bd7f9ebc6137d7f75789c66914a1ea3e51a8e12cd3aa26cc1f9bc.png)
 
 sun/rmi/server/UnicastServerRef.class#dispatch
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121431-858a644c-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121431-858a644c-459e-1.jpg)
+[![](../../.resource/remote/bf9703bef47918d342b16062cfd9f3caf4e76b7c08be1549cbc970e2063a6b2b.png)](../../.resource/remote/bf9703bef47918d342b16062cfd9f3caf4e76b7c08be1549cbc970e2063a6b2b.png)
 
 这里会对传递过来的参数进行反序列化，再使用反射调用方法。我们来看下`unmarshalValue`方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121431-85fba4c2-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121431-85fba4c2-459e-1.jpg)
+[![](../../.resource/remote/19c31eab1ca76c1fe26df92bea45c44d3d728cb2ce00586f4109067d0795be9f.png)](../../.resource/remote/19c31eab1ca76c1fe26df92bea45c44d3d728cb2ce00586f4109067d0795be9f.png)
 
 在 Client 端有一个对应的`marshalValue`，是为了序列化参数。
 
@@ -591,7 +591,7 @@ RMI 反序列化攻击
 
 根据不同场景下的攻击画出的流程图如下：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121432-862b5c6c-459e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121432-862b5c6c-459e-1.png)
+[![](../../.resource/remote/7d15ea8a96bd4ca52fd505a41401faeb50d056846340c8e15e468ddb269a9fe9.png)](../../.resource/remote/7d15ea8a96bd4ca52fd505a41401faeb50d056846340c8e15e468ddb269a9fe9.png)
 
 四种攻击的方式的利用过程如下：
 
@@ -655,7 +655,7 @@ public class UserServerEval {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121434-87352020-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121434-87352020-459e-1.jpg)
+[![](../../.resource/remote/a2ce172fb4cab76441de28cd34511bd85f657a594dae9c78d99eac3fe912d6f6.png)](../../.resource/remote/a2ce172fb4cab76441de28cd34511bd85f657a594dae9c78d99eac3fe912d6f6.png)
 
 这里有一个需要注意的点就是调用`bind()`的时候无法传入`AnnotationInvocationHandler`类的对象，必须要转为 Remote 类才行。这里使用了下面的方式进行转换：
 
@@ -679,11 +679,11 @@ Remote.class.cast 可以参考：[关于 JAVA 中的 Class.cast 方法](https://
 
 注册中心在处理请求时，是直接进行反序列化再进行类型转换，转换流程如图所示：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121434-87a2b4fa-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121434-87a2b4fa-459e-1.jpg)
+[![](../../.resource/remote/4b10e5e2ffa4f4332adad34014ae9d65488895d6a64ceb922af15814f2a159bd.png)](../../.resource/remote/4b10e5e2ffa4f4332adad34014ae9d65488895d6a64ceb922af15814f2a159bd.png)
 
 如果我们要控制传递过去的序列化值的话，不能直接传递给`lookup`这个方法，因为它的参数是一个`String`类型。但是它发送请求的流程是可以直接复制的，只需要模仿`lookup`中发送请求的流程，就能够控制发送过去的值为一个对象。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121435-88229be8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121435-88229be8-459e-1.jpg)
+[![](../../.resource/remote/08b4a04bd88fdf7c2c60658a382e990a339e8b386893ea183ea7b2ac623134ea.png)](../../.resource/remote/08b4a04bd88fdf7c2c60658a382e990a339e8b386893ea183ea7b2ac623134ea.png)
 
 构造出来的 POC 如下：
 
@@ -762,7 +762,7 @@ public class UserServerEval2 {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121437-8956771e-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121437-8956771e-459e-1.jpg)
+[![](../../.resource/remote/4d4b0a44e5ac7a825c40e8b7b244c5422bad08f6fd805e4eb92c907bca895397.png)](../../.resource/remote/4d4b0a44e5ac7a825c40e8b7b244c5422bad08f6fd805e4eb92c907bca895397.png)
 
 可以看到，即使报了字符转换的`error`，还是利用成功了。
 
@@ -782,7 +782,7 @@ java -cp ysoserial.jar ysoserial.exploit.JRMPListener 12345 CommonsCollections1 
 
 开启注册中心：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121438-89a14a46-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121438-89a14a46-459e-1.jpg)
+[![](../../.resource/remote/a2c006f6425041c3cc84873555f968d49c1daa078eaf99ee8cb9df433b667eee.png)](../../.resource/remote/a2c006f6425041c3cc84873555f968d49c1daa078eaf99ee8cb9df433b667eee.png)
 
 客户端测试代码：
 
@@ -804,7 +804,7 @@ public class UserClientEval {
 
 执行了之后就可以看到命令执行成功了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121439-8ab57c68-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121439-8ab57c68-459e-1.jpg)
+[![](../../.resource/remote/7dc8450e33f91a4cf2620c3b137d559a23289a84b1826c05a04bf9f76d1dbb4c.png)](../../.resource/remote/7dc8450e33f91a4cf2620c3b137d559a23289a84b1826c05a04bf9f76d1dbb4c.png)
 
 除了`list()`之外，其余的操作都可以进行利用：
 
@@ -819,13 +819,13 @@ lookup()
 
 例如`bind()`：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121441-8bddc078-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121441-8bddc078-459e-1.jpg)
+[![](../../.resource/remote/82bf0490084d6b61e474cbb7269b8874e5b748126b3c49d80c1ea6305afef908.png)](../../.resource/remote/82bf0490084d6b61e474cbb7269b8874e5b748126b3c49d80c1ea6305afef908.png)
 
 ### 三、客户端攻击服务端
 
 如果注册服务的对象接收一个参数为对象，那么可以传递一个恶意对象进行利用。比如这里可以传递一个 Common-collection3.1 反序列化漏洞 poc 构造出的一个恶意对象作为参数利用：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121442-8c442732-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121442-8c442732-459e-1.jpg)
+[![](../../.resource/remote/4e0d1f647df3ba0a34474ff947a517a8d44cd1fbdb7f05889d6ff3457d3fb00e.png)](../../.resource/remote/4e0d1f647df3ba0a34474ff947a517a8d44cd1fbdb7f05889d6ff3457d3fb00e.png)
 
 POC：
 
@@ -881,7 +881,7 @@ public class UserClient {
 
 服务器端会执行命令：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121444-8d62e3d8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121444-8d62e3d8-459e-1.jpg)
+[![](../../.resource/remote/580441c93292841ae93d92bf4682c25046d9b879e5cc02317ab1013cc666225f.png)](../../.resource/remote/580441c93292841ae93d92bf4682c25046d9b879e5cc02317ab1013cc666225f.png)
 
 ### 四、服务端攻击客户端
 
@@ -955,7 +955,7 @@ public class UserImpl extends UnicastRemoteObject implements User {
 
 开启`Server`之后，在`Client`端调用`getwork()`方法即可以攻击成功。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121446-8e721046-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121446-8e721046-459e-1.jpg)
+[![](../../.resource/remote/1951f60158e81028e0c96f77189f93b88ba5848137c7783ff391e1ee38b211b9.png)](../../.resource/remote/1951f60158e81028e0c96f77189f93b88ba5848137c7783ff391e1ee38b211b9.png)
 
 JEP290
 ------
@@ -1061,19 +1061,19 @@ public class UserServerEval {
 
 在创建注册中心过程中存在一个`setObjectInputFilter`的过程，因此在客户端 (这里代表 Server 和 Client 端) 攻击注册中心过程中会被过滤。比如这里我给注册中心绑定了一个`Common-collection5`的恶意对象，结果是报错了，报错信息为：`filter status REJECTED`。说明传入的恶意对象被拦截了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121448-8fd9d4e6-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121448-8fd9d4e6-459e-1.jpg)
+[![](../../.resource/remote/8790d95514aecbd02da478e69a2fdee8227797c5733e75e3110743370cbf7b26.png)](../../.resource/remote/8790d95514aecbd02da478e69a2fdee8227797c5733e75e3110743370cbf7b26.png)
 
 接着来跟一下注册中心创建的流程，看看`setObjectInputFilter`的过程到底是怎么样的。
 
 首先到了`RegistryImpl`方法处，可以看到，实例化`UnicastServerRef`时第二个参数传入的是`RegistryImpl::registryFilter`。传入之后的值赋值给了`this.Filter`
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121449-9068ae3c-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121449-9068ae3c-459e-1.jpg)
+[![](../../.resource/remote/b22dd20e1217c9eead1da68a659d572f50d57da80e61214dd90e2dd988ac0005.png)](../../.resource/remote/b22dd20e1217c9eead1da68a659d572f50d57da80e61214dd90e2dd988ac0005.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121450-90c2d1f0-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121450-90c2d1f0-459e-1.jpg)
+[![](../../.resource/remote/24eda606663f6b056bb9619b052bb55225c8dfb1fa747aea9a877e2aef723567.png)](../../.resource/remote/24eda606663f6b056bb9619b052bb55225c8dfb1fa747aea9a877e2aef723567.png)
 
 看一下`registryFilter`这个方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121451-915f6df8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121451-915f6df8-459e-1.jpg)
+[![](../../.resource/remote/f0fbbd89d7d19d565558494286b78c339a16a1007ec4e0694c00b010ba1ebda6.png)](../../.resource/remote/f0fbbd89d7d19d565558494286b78c339a16a1007ec4e0694c00b010ba1ebda6.png)
 
 这里的`registryFilter`默认为 null，可以先不管这个判断，后面返回的内容相当于配置了一个白名单，当传入的类不属于白名单的内容时，则会返回`REJECTED`，否则就会返回`ALLOWED`。白名单如下：
 
@@ -1092,11 +1092,11 @@ UID.class
 
 在`bind()`操作请求后，注册中心的接收端会调用 oldDispatch 方法，文件地址：`jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/rmi/server/UnicastServerRef.class`。最终是会去调用`this.skel.dispatch`去绑定服务的。在这句之前有一个`this.unmarshalCustomCallData(var18);`跟入进去看看。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121451-91e067fa-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121451-91e067fa-459e-1.jpg)
+[![](../../.resource/remote/5e051141959cfd0b26398aaaf14104999f76e0d5847b33bf90262c37eb365b82.png)](../../.resource/remote/5e051141959cfd0b26398aaaf14104999f76e0d5847b33bf90262c37eb365b82.png)
 
 可以看到在这里调用了`Config.setObjectInputFilter`设置了过滤。`UnicastServerRef.this.filter`就是之前实例化`UnicastServerRef`时所设置的。规则就是之前所说的白名单，不属于那个白名单的类就不允许被反序列化。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121452-9237ec46-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121452-9237ec46-459e-1.jpg)
+[![](../../.resource/remote/6b98f3bb7cd430f0442107b72410e9d1fa45cb490520deea56cf8afd4540beb7.png)](../../.resource/remote/6b98f3bb7cd430f0442107b72410e9d1fa45cb490520deea56cf8afd4540beb7.png)
 
 那这个过程其实就是`Registry`在处理请求的过程中设置了一个过滤器来防范注册中心被反序列化漏洞攻击。有过滤就有绕过，这里的绕过方式是什么样的呢？
 
@@ -1166,13 +1166,13 @@ public class TestClient {
 
 ```
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121454-936fb1f2-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121454-936fb1f2-459e-1.jpg)
+[![](../../.resource/remote/a2f0a3eafc688a972b72faa079ef20b90d3cc38430cf77efe4eb250596538653.png)](../../.resource/remote/a2f0a3eafc688a972b72faa079ef20b90d3cc38430cf77efe4eb250596538653.png)
 
 #### UnicastRef Bypass JEP290 分析 (jdk<=8u231)
 
 这里的绕过原理图参考了的 Hu3sky 师傅文章里面的，相对来说比较好理解 (注意我这里演示的 JRMP 端在 3333 端口)：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121455-93e8b566-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121455-93e8b566-459e-1.jpg)
+[![](../../.resource/remote/fafb8543f891cf33e15a2383bf6b78f838af6183aad883edb08c6b38606d9a60.png)](../../.resource/remote/fafb8543f891cf33e15a2383bf6b78f838af6183aad883edb08c6b38606d9a60.png)
 
 通过 UnicastRef 对象建立一个 JRMP 连接，JRMPListener 端将序列化传给注册中心反序列化的过程中没有`setObjectInputFilter`，传给注册中心的恶意对象会被反序列化进而攻击成功。
 
@@ -1180,74 +1180,74 @@ TestClient 里面的语句是从 [ysoserial/payloads/JRMPClient.java](https://gi
 
 客户端调用`LocateRegistry.getRegistry`获取注册中心后，获得的是一个封装了 UnicastRef 对象的`RegistryImpl_Stub`对象，其中`UnicastRef`对象用于与注册中心创建通信。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121455-943f93b8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121455-943f93b8-459e-1.jpg)
+[![](../../.resource/remote/b4ad902d442c60d9d983bf67f6a02d03f0ec63ccd417424b15a6b06afb76269f.png)](../../.resource/remote/b4ad902d442c60d9d983bf67f6a02d03f0ec63ccd417424b15a6b06afb76269f.png)
 
 这个 payload 的原理就是伪造了一个`UnicastRef`用于跟注册中心通信，我们从`bind()`方法开始分析一下这一整个流程。
 
 当我们调用`bind()`方法时，注册中心处理数据的时候会对数据进行反序列化。使用的是 readObject 方法最终是调用了`RemoteObjectInvocationHandler`父类`RemoteObject`的`readObject`(`RemoteObjectInvocationHandler`没有实现`readObject`方法)。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121456-94ca69b6-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121456-94ca69b6-459e-1.jpg)
+[![](../../.resource/remote/692a36cb85a997d57f090135185530bf8d9e5ff8cf7bc32d0a99a0541dc5aeb1.png)](../../.resource/remote/692a36cb85a997d57f090135185530bf8d9e5ff8cf7bc32d0a99a0541dc5aeb1.png)
 
 跟入`readObject()`，最后有一个`ref.readExternal(in);`，这个`readObject()`的调用链：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121458-95b1d0d0-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121458-95b1d0d0-459e-1.jpg)
+[![](../../.resource/remote/d302bb06ecc7355a840710ea01425a5c74abeea730e5d3690032bf5076aebefe.png)](../../.resource/remote/d302bb06ecc7355a840710ea01425a5c74abeea730e5d3690032bf5076aebefe.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121459-9674fa9c-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121459-9674fa9c-459e-1.jpg)
+[![](../../.resource/remote/b7f856e67ddf35d4eaf45f90e04274b5d33904abb72311e3cff39f67ba932f39.png)](../../.resource/remote/b7f856e67ddf35d4eaf45f90e04274b5d33904abb72311e3cff39f67ba932f39.png)
 
 继续跟入：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121500-96ba2a36-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121500-96ba2a36-459e-1.jpg)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121501-974ba8f8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121501-974ba8f8-459e-1.jpg)
+[![](../../.resource/remote/72f22878709aa53b4e9815660d43c7daa2afad92a0dc4a32fff83faf7ca5baac.png)](../../.resource/remote/72f22878709aa53b4e9815660d43c7daa2afad92a0dc4a32fff83faf7ca5baac.png)  
+[![](../../.resource/remote/8d03024d1adf63e20175011d8d012cd468d50564fc7e4e1ee933d77c972db659.png)](../../.resource/remote/8d03024d1adf63e20175011d8d012cd468d50564fc7e4e1ee933d77c972db659.png)
 
 可以看到这里把 payload 里所传入的`LiveRef`解析到`var5`变量处，里面包含了`ip`与`端口`信息 (JRMPListener 的端口)。这些信息将用于后面注册中心与 JRMP 端建立通信。
 
 接着再回到`dispatch`那里，在调用了`readObject`方法之后调用了`var2.releaseInputStream();`，持续跟入：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121501-97a86480-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121501-97a86480-459e-1.jpg)
+[![](../../.resource/remote/0e9f8d32673dc3fdf0f8d468951ab232e48b77d3629f4dc3c827901c31c610a0.png)](../../.resource/remote/0e9f8d32673dc3fdf0f8d468951ab232e48b77d3629f4dc3c827901c31c610a0.png)
 
 继续跟入`this.in.registerRefs();`：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121502-980c8a00-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121502-980c8a00-459e-1.jpg)
+[![](../../.resource/remote/568b323a214349da7a76832232ef2dbee60b9fcc58c2832cb25ed82138fc6681.png)](../../.resource/remote/568b323a214349da7a76832232ef2dbee60b9fcc58c2832cb25ed82138fc6681.png)
 
 可以看到这里的传利的`var2`就是之前的`ip`和`端口`信息。继续跟入：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121503-98bc3068-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121503-98bc3068-459e-1.jpg)
+[![](../../.resource/remote/97fd0c4cf3aceba77f9d69ea57a3263fda9ec32e183e96f0be09eb8ff3e88eb4.png)](../../.resource/remote/97fd0c4cf3aceba77f9d69ea57a3263fda9ec32e183e96f0be09eb8ff3e88eb4.png)
 
 `EndpointEntry`创建了一个`DGCImpl_Stub`，最后`DGCCient.EndpointEntry`返回的`var2`是一个`DGCClient`对象：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121504-9916a390-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121504-9916a390-459e-1.jpg)
+[![](../../.resource/remote/018b6089c9c8b75531aa35c5552c8571ddcabc5929855dacec636af703c3565e.png)](../../.resource/remote/018b6089c9c8b75531aa35c5552c8571ddcabc5929855dacec636af703c3565e.png)
 
 继续跟入`var2.registerRef`：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121504-999c8762-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121504-999c8762-459e-1.jpg)
+[![](../../.resource/remote/ca0d0af1179e88ac3b7f3e49a5e1b03e68b797320822084648d25f6a7a292c30.png)](../../.resource/remote/ca0d0af1179e88ac3b7f3e49a5e1b03e68b797320822084648d25f6a7a292c30.png)
 
 最后一行调用了`this.makeDirtyCall`并传入了`DGCClient`对象：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121505-9a2300a8-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121505-9a2300a8-459e-1.jpg)
+[![](../../.resource/remote/0fd972e8cb8bf591ad4e2156080388aa19b6bdcb59538fa98bf67d7ed4bf8768.png)](../../.resource/remote/0fd972e8cb8bf591ad4e2156080388aa19b6bdcb59538fa98bf67d7ed4bf8768.png)
 
 调用了`this.dgc.dirty`方法：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121506-9aae5ff4-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121506-9aae5ff4-459e-1.jpg)
+[![](../../.resource/remote/1cd00cc2f9607e4ed43039c73826aa0dd805bc42e85069cb696069cb0db63dd6.png)](../../.resource/remote/1cd00cc2f9607e4ed43039c73826aa0dd805bc42e85069cb696069cb0db63dd6.png)
 
 在这里注册中心就跟 JRMP 开始建立连接了：通过`newCall`建立连接，`writeObject`写入要请求的数据，`invoke`来处理传输数据。这里是将数据发送到 JRMP 端，继续跟入看下在哪里接收的 JRMP 端的数据。跟入`super.ref.invoke(var5);`。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121507-9b23f41c-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121507-9b23f41c-459e-1.jpg)
+[![](../../.resource/remote/845f4e359f3d27dc7b0e0ce2ecf7ede1b996ed1b14e54cceaf1119969a336a65.png)](../../.resource/remote/845f4e359f3d27dc7b0e0ce2ecf7ede1b996ed1b14e54cceaf1119969a336a65.png)
 
 跟入`var1.executeCall()`：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121508-9bc6bde6-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121508-9bc6bde6-459e-1.jpg)
+[![](../../.resource/remote/d691cee588afe02c3b220eda7447dbfdd698d56e0e4d9098d841fd5318d0529d.png)](../../.resource/remote/d691cee588afe02c3b220eda7447dbfdd698d56e0e4d9098d841fd5318d0529d.png)
 
 JRMP 端发过来的数据会在这里被反序列化，这一个过程是没有调用`setObjectInputFilter`的，`serialFilter`也就为空，所以只需要让 JRMP 端返回一个恶意对象就可以攻击成功了。而这个 JRMP 端可以直接用`ysoserial`启动。
 
 判断`serialFilter`的`filterCheck`方法调用链如下：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121509-9c79b3e2-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121509-9c79b3e2-459e-1.jpg)
+[![](../../.resource/remote/f26bdcde2181b55260797b49ba6347496a001770af691ddc84878af6407cbc6a.png)](../../.resource/remote/f26bdcde2181b55260797b49ba6347496a001770af691ddc84878af6407cbc6a.png)
 
 #### Bypass JEP290 (jdk=8u231)
 
 在 JDK8u231 的`dirty`函数中多了`setObjectInputFilter`过程，所以用`UnicastRef`就没法再进行绕过了。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20201224121510-9ce1fdda-459e-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20201224121510-9ce1fdda-459e-1.jpg)
+[![](../../.resource/remote/e20a860f58b831bd34b7442e9fccb02a84b6ae134d3f2b6b26f24a9c45fe1544.png)](../../.resource/remote/e20a860f58b831bd34b7442e9fccb02a84b6ae134d3f2b6b26f24a9c45fe1544.png)
 
 国外安全研究人员`@An Trinhs`发现了一个 gadgets 利用链，能够直接反序列化`UnicastRemoteObject`造成反序列化漏洞。
 

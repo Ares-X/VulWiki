@@ -50,7 +50,7 @@ schema_version: "1"
 
 前几天看到 pgAdmin 发布了新漏洞，《**CVE-2024-3116 – Remote Code Execution Vulnerability in pgAdmin - PostgreSQL Tools (<=8.4): Detailed Analysis Report**》。看了这个漏洞利用的过程，我总感觉有所不对，我也在『代码审计』知识星球里发表了相关疑问。随后，我研究了一下这个漏洞的来龙去脉，简单写下这篇短文。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGry08w5JBgEt86z3q4MxLhTAzaZLsCNoaoWaeGuxib1HQtHTvLmyPJF5Q/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b872b01bcad52a03a84bfbe51d20645d005401564c0adb3df4e0d144d5ec3fb3.png)
 
 CVE-2022-4223：pgAdmin <= 6.16 未授权命令执行漏洞
 ---------------------------------------
@@ -65,7 +65,7 @@ pgAdmin 支持在后台设置 psql、pg_dump、pg_restore 等 PostgreSQL 数据�
 
 `validate_binary_path`API 代码如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrnr5kRXzic8m1F2dPaMNR4HJ573dgBYhBlxlcnFlk8L418NicyStYNEHw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6b8072065598f692fcb19ea0fe0f72f0f228c84425fd2edd30f383ec680e6d12.png)
 
 可见，这里用户传入的`utility_path`拼接上可执行文件名后，直接拼接进`subprocess.getoutput()`方法执行。这是一个非常简单的命令注入漏洞。
 
@@ -73,7 +73,7 @@ pgAdmin 支持在后台设置 psql、pg_dump、pg_restore 等 PostgreSQL 数据�
 
 漏洞复现的过程可以参考 Vulhub 中的环境：**https://github.com/vulhub/vulhub/tree/master/pgadmin/CVE-2022-4223**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrMrDDh33ohq0sXuUB9UI8icicicMDKwvuYpX3wX4q4dnXFVAqmWhNWEcrw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/1866335a9e1627ab965082c82caeaa5baffdc9f2fea7f0dba350f41507504738.png)
 
 CVE-2023-5002：pgAdmin <= 7.6 后台命令执行漏洞
 -------------------------------------
@@ -98,25 +98,25 @@ CVE-2023-5002：pgAdmin <= 7.6 后台命令执行漏洞
 
 所以，表现出来的结果就是，下面代码在 Windows 环境下会返回 True：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrG8tIW6kWbIOT1hiaQuYT4XCK9yNQaWDWbiaj9ZxfOcOmugK7VsjaA9bA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/4c00c3f1d98a2cf83cb55625a7905dc6ae548ac86f5c027f7c759cc2f450abde.png)
 
 在 Linux 环境下会返回 False：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrnrX0PMWtUvtK45ey2RgCWyCknfGFmQjiaqGYfkGx22ZygMC96yxV6Jw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/333f7fc6d221bf478603802ccb69bbfe283f1666eb4ea7cabeee4d01ae83ee7e.png)
 
 所以对于 CVE-2022-4223 的补丁，在 Windows 环境下我们可以直接绕过`os.path.exists()`继续注入命令，但 Linux 下需要想想其他方法。
 
 pgAdmin 后台提供了一个文件管理器，在菜单的 “Tools -> Storage Manager” 中：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrYEgZtUy0b8AKr8wqIPnzcAZwdmNBp0XibrOSwnVe5NfGv2usXeHIiaVw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/65448e9f61ac523cb5025f40428a20828275857330dc6136535a700731aa5d19.png)
 
 这个文件管理器具有上传、删除、创建目录等功能，用户上传的文件均位于其个人 storage 目录下，默认情况下这个基础目录是固定的。这个绝对目录可以通过上传文件来获取，随便上传一个文件，即可获取到完整路径，比如我这里是`/var/lib/pgadmin/storage/vulhub_example.com`：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrdQMh2Nf9F2WWibzW15HstcDZGiculVA36XUHe8ticYjDhIkUPOlEJAPfg/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/e01cd1ffe33242b772217bc20d911a033ce3c6a15ad25645116a9b15c93fdc7e.png)
 
 然后创建或上传一个新文件，文件名是我们的 payload：`";id;#`：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGr8JJERSia4Tx4NrTMk53WaQ0kATEAdXwCeHWsKAdsy2nYFCbWqpnSoXQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/6efd6b832c50749c1215065ccaededc4e63df20658e89c6423acac3f7fa7f901.png)
 
 最后拼接出的绝对路径为`/var/lib/pgadmin/storage/vulhub_example.com/";id;#`，这个文件存在可以绕过`os.path.exists()`，并传入`subprocess.getoutput()`执行的完整命令是：
 
@@ -128,11 +128,11 @@ pgAdmin 后台提供了一个文件管理器，在菜单的 “Tools -> Storage 
 
 在设置中填写完整路径，并点击右侧的 “validate”：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGryooCX1fTMvaykCAowyIo2JH3SHdpp65r9iaBvBdRicWZnInOic11h5Ihw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/696024a81eca1ed1ca774e9ac372a54dec5fc7bf8cc9530fe2e5573b9a32b4c5.png)
 
 命令被成功执行：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrnS4m3efYMvUglpJR6MoCucicuNibJq1ZoXf5PjoaazjCxibAwQFGKOnwA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/b97bd9b1362ed8bd4c670edf4631b2ece870b8810d132b9dfdcb684a5ec5e60c.png)
 
 这个漏洞的完整复现过程和环境也可以在 Vulhub 上找到：**https://github.com/vulhub/vulhub/tree/master/pgadmin/CVE-2023-5002**
 
@@ -141,13 +141,13 @@ CVE-2024-3116：pgAdmin <= 8.4 后台远程命令执行漏洞
 
 那么说回到本文开头的漏洞，CVE-2024-3116 漏洞其实仍然是之前漏洞没有修复完成导致的。对于 CVE-2023-5002，pgAdmin 官方的修复方法还算比较正常，就是将`subprocess.getoutput()`改成`subprocess.run()`，且`shell=False`：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrBXILyOcVNHofP68Z1rf5lZ3L2O0HI5tSicxDek3WYjFAonib5r2QUKCw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/04f45d2d4ddbc3772981ef0eb737ba99e185d172f516561212b5440a33247baa.png)
 
 此时用户控制的就是`subprocess.run()`中命令列表的文件名位置，虽然无法继续进行命令注入了，但因为这里仍然执行了用户输入的文件，如果我们上传一个文件名是 “psql” 的可执行文件，是否可以仍然执行任意代码？
 
 本文开头说的文章就是这个思路：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGr9OWItXzWfIswZk35HOeSrHYnROhI7NhR7cFYcZHZtKhgwMYvuTkZZA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/a0cb2c513e6b45d959e46fe68bbd44695c180da7519d96abd5fc42feedcd7bfb.png)
 
 首先在本地编写一个恶意的 C 程序，并使用上一章中提到的方法将其上传到个人目录下，并改名为 psql。
 
@@ -159,7 +159,7 @@ CVE-2024-3116：pgAdmin <= 8.4 后台远程命令执行漏洞
 
 由于 CVE-2024-3116 这个漏洞的利用条件比较苛刻，我也没有制作 Vulhub 环境来复现。后来原文的作者好像也意识到了他文章中的问题，于是发布了新的文章《**CVE-2024-3116 – Remote Code Execution Vulnerability in pgAdmin - PostgreSQL Tools (<=8.4): Detailed Analysis Report**》，将其中 Linux 相关的内容改成了 Windows：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrg30lj3bibWHzKriclZwCXCQHHqD1Vf9LFnXnYmP26kE7B5bTdRITrk4Q/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/5a1f2f4fdf9809ab40ad39b846c95b721e1c7bbbdb65f794ca574f9c0344ca34.png)
 
 有兴趣的同学可以参考他的文章做复现。
 
@@ -168,13 +168,13 @@ CVE-2024-3116：pgAdmin <= 8.4 后台远程命令执行漏洞
 
 最后总结一下，这个文章分析了 pgAdmin 在同一个 API 上跨越了三年的三个漏洞（CVE-2022-4223、CVE-2023-5002、CVE-2024-3116）。其中影响最大的也还是第一个未授权命令注入漏洞，可以让攻击者在无需任何权限的情况下在 pgAdmin 中执行任意命令。
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/5AsxricGekWg0wEf8JlicsnRdXxIxx9Kg12f9CnBF65ZlVab02ZDOcGibibibItR4ebCCeAsAZoVXibicwCBKttGZ4euA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp)
+![](../../.resource/remote/c5d14d3359bb94e59b985dbedd9fc72ae2fecdedbe567d7496279647a551de94.gif)
 
 喜欢这篇文章，点个**在看**再走吧~
 
 加入「代码审计」，学习更多安全知识。**一次付费，终身学习免续费**。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/5AsxricGekWjhianqFicmRY8ePmeYyRZuGrknxzzGncGXvoo0BBOPLf83rKAxjlZBPyGfFJtRBaL6M8hhJEDSfVfA/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/ee7b92afbd2a0e5d3920d615cf6fb4678318bb742f7b3a4c29d18ba9a11e8408.jpg)
 
 ---
 

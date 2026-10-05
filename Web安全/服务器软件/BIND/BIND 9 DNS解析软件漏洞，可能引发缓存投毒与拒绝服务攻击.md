@@ -49,7 +49,7 @@ schema_version: "1"
 近期，BIND 9 DNS 解析器软件曝出两枚关键漏洞——CVE-2025-40776 和 CVE-2025-40777，正对全球组织构成威胁，可能引发缓存投毒与拒绝服务攻击，危及 DNS 基础设施安全。  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8HpNY8Y8SDFbRWkQbTlo6n7jxGAVQyyuzChyEf6Uib36NFqMRUWoYr5gicxrFyAJ0ficKjgrPqB0agHA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/27caa9b1dc6ba880d1ea7348658b8a9d6b0c02c2783cfc708cc150b4892059ce.png "")  
   
   
 CVE-2025-40776 是针对配置了 EDNS 客户端子网（ECS）选项的 BIND 9 解析器的缓存投毒漏洞，CVSS 评分高达 8.6 。该“生日攻击”漏洞仅影响 BIND 订阅版（-S）特定版本，像 9.11.3 - S1 到 9.16.50 - S1 、9.18.11 - S1 到 9.18.37 - S1 以及 9.20.9 - S1 到 9.20.10 - S1 。其利用解析器向权威服务器发送 ECS 选项，迫使服务器发起查询，增加源端口猜测成功概率，且绕过了原有缓存投毒攻击缓解措施，由南开大学 AOSP 实验室的 Xiang Li 发现，CVSS 向量显示可网络远程利用，对完整性影响高 。  
@@ -75,23 +75,23 @@ cybersecuritynews
 ﹀  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/067b16256e0ba673a1adf65d982af935c9dacaa6db0fe2765439200e9725754c.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibE1yC1VFg5b1Fw8RncvZh2CWWiazpL6gPXp0lXED2x1ODLVNicsagibuxRw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球分享**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibE1yC1VFg5b1Fw8RncvZh2CWWiazpL6gPXp0lXED2x1ODLVNicsagibuxRw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球点赞**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibE1yC1VFg5b1Fw8RncvZh2CWWiazpL6gPXp0lXED2x1ODLVNicsagibuxRw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/c953c0b9b281634c2c507d132859e779159195ce3db48c3a5eb6f0585d7d6e4e.gif "")  
   
 **球在看**  
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibExiboJzOiafqGLvlOkrmU6NIr3qSr7ibpkIo2N5mhCTNXoMl37s2oRSIDw/640?wx_fmt=gif&from=appmsg "")  
+![](../../.resource/remote/bc51e60a1ab9953f98cd0a2143c252c867072663f41e9d1e7cb32951a0a00487.gif "")  
   
 点击阅读原文查看更多  
   

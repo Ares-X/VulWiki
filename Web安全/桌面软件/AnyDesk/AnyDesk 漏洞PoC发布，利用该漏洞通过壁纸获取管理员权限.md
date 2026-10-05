@@ -63,7 +63,7 @@ schema_version: "1"
   
 流行的远程桌面软件 AnyDesk 最近披露了一个漏洞，编号为 CVE-2024-12754，该漏洞使本地攻击者能够利用对Windows 背景图像的处理来获取对敏感系统文件的未经授权的访问。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaG0a3yk2giasY8X9eKpEVYfssyZnQ20icRgaqZ6icSmBEu2ttsVicDb0ahgtJ4aP0SgVofg4odjg8k8uw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b672a034c936ba14c25f9acfbbfffba106c3e6b4e03585c2ab4d5d462370e44b.png "")  
   
   
 这可能会将他们的权限升级到管理级别，对系统安全构成重大威胁。  
@@ -84,14 +84,14 @@ PoC
   
 当会话开始时，AnyDesk 会将当前桌面壁纸复制到 C:\Windows\Temp 目录中。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaG0a3yk2giasY8X9eKpEVYfs8ibJwDvuUZHCkicHK2lpHSpBJhEHtgfwRFhNJbI54KFeicUHTCPBLwibicA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6cef620d9e6636f36a2fc64decc0dac260c66afce203868032a038969dc7be5d.png "")  
   
 AnyDesk 将现有背景图像复制到 C:\Windows\Temp\  
   
   
 此操作由在具有提升权限的 NT AUTHORITY\SYSTEM 帐户下运行的 AnyDesk 服务执行。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaG0a3yk2giasY8X9eKpEVYfsI9rn16WZp9mQtxFoj8LdQkWobNNia9wmeV36h7lZjjZGiaGu0hPlaxGA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/3597a7699c358700ef3243303ccac4ac4c3ee173f0e89a32bfd69c05eae0564b.png "")  
   
 AnyDesk 以 NT AUTHORITY\SYSTEM 身份执行文件复制  
   
@@ -121,7 +121,7 @@ PoC 漏洞代码已发布，展示了攻击者如何利用此漏洞。
   
 该漏洞涉及使用 Windows 对象管理器命名空间 (OMNS) 目录（例如 \RPC Control）中的重新解析点来操纵文件操作。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaG0a3yk2giasY8X9eKpEVYfs1tXnW7fSibgglSBr18kQ8ibricTicC78p07dGtbFgDveNLXxf3ANCIrYUg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d9d5a2be00b9ed52ce7e73e08dc791bcdcac3c6d951fcc3dd2566344755a70fd.png "")  
   
   
 这表明漏洞被成功利用，在触发 oplock（机会锁）后，敏感文件可以被访问和恢复。  
@@ -138,7 +138,7 @@ CVE-2024-12754 的发现凸显了本地权限提升技术的日益复杂化，�
 https://cybersecuritynews.com/poc-exploit-released-for-anydesk-vulnerability-exploited/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

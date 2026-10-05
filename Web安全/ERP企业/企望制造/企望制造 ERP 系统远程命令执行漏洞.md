@@ -54,7 +54,7 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -62,7 +62,7 @@ schema_version: "1"
 
  **本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -70,7 +70,7 @@ schema_version: "1"
 
 企望制造彩印业 ERP 系统帮助彩印企业全面管理业务流程，实现对成本核算、报价定价、接单排单、印版模板、现场生产、成品入库、发货配送、财务结算等整个业务流程的全面管理；规范报价、有效控制生产损耗、清晰管理印刷图样，是彩印企业管理的好帮手。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -78,9 +78,9 @@ schema_version: "1"
 
 企望制造彩印业 ERP 系统
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCS28xmtFLC4kUtlpOm3UjmGhZhSSrLk0AJ3SpHg695iavHT3ia0kwRiaTiat7jUOElsVVXqoFBhAdsrQ/640?wx_fmt=png)
+![](../../.resource/remote/39ffa9ce5bd0b4f35906247d91db619146ae7d508866a5261256478c2aa42a6d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -90,7 +90,7 @@ schema_version: "1"
 
 1. 访问漏洞环境
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCS28xmtFLC4kUtlpOm3UjmVicuPvEpZvwh2Jb2nqT6IJVr1Z49boMlv9paWpvdxF3gLUkoFuhov0A/640?wx_fmt=png)
+![](../../.resource/remote/acc26dd264b40f0530b7967154f2de0b7b9fec9da99e739ff87ca4ecb6901c37.png)
 
 2. 对漏洞进行复现
 
@@ -116,13 +116,13 @@ http://127.0.0.1:8082/mainFunctions/comboxstore.action
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCS28xmtFLC4kUtlpOm3UjmPLdl6dLicj1VtiapPAKJsXfTPsSZxhaOLDM3icmdaBGvLBiaPwslLM1g6w/640?wx_fmt=png)
+![](../../.resource/remote/e64d4ea67ebfa47da148e39d97dcbf079dee6ce5e51523ff4723595468446afa.png)
 
        通过 DNSlog 进行 RCE 测试。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCS28xmtFLC4kUtlpOm3UjmqvA0GzJkkohnoIibMSsPzCDgguicicfR1zTdDaYwp8W4EyANSxYBXbHzg/640?wx_fmt=png)
+![](../../.resource/remote/0f8d80bbc9e866431b7672efd763bc98267e7aaea94f99a801f0bba2cfec0796.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1111f8ea9464717e719cb09b19b686b835789e3aa50de5d27fc0b5bbfbcf5737.png)
 
   
 
@@ -144,7 +144,7 @@ https://mp.weixin.qq.com/s/v6qkGlN7AuecoD-aVDE9eQ
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](../../.resource/remote/c6a1f1785136ac8e3569e121fb1e5363476b21cca8e6c6d753990c3e7a635b3c.gif) 
 
 知识分享完了
 
@@ -160,7 +160,7 @@ https://mp.weixin.qq.com/s/v6qkGlN7AuecoD-aVDE9eQ
 
 安全实验室  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/3c760224fd27cc6dbcd693aed8b85f6c1ac55b4d648247f6ba7ffb9ff0637f01.jpg)
 
 ---
 

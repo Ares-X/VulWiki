@@ -48,7 +48,7 @@ schema_version: "1"
   
 Hurrakify是一个专为WordPress平台设计的插件，旨在增强网站的社交分享功能和用户交互体验。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUfYu4SOjJQtKmGjOf2fbbqNVeuXxfbT8FHEKibcyM7hz0hMwJ9VfCUQtsPztmeibohe085gPEPUT5A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5c5f9a5f4a78a91226d07da5277067c55a09740803bc0775a7472479d434c10c.png "")  
   
 **0x03 漏洞详情**  
 ###   

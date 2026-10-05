@@ -76,7 +76,7 @@ BlueSDK 已应用于数百万台设备。这些设备不仅包括汽车，还包
   
 为了进行攻击，黑客需要处于目标信息娱乐系统的有效范围内，并能够通过蓝牙将其笔记本电脑与目标信息娱乐系统配对。在某些情况下，无需任何用户交互即可配对，而在其他情况下，配对则需要用户确认，或者根本无法配对。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaFJgxeo5hvrUX9OYPBYtpupgRoJYV5DrmLdSHuBdZqzdAjLRJJgBOv7m4LDibdOJF4rvBmfKEkpDow/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e95e1944d6c4c90b254dc3a1d561b3e928d3dd339dbcaa12b61b0ec5ebcdee34.png "")  
   
   
 研究人员解释说：“PerfektBlue 只需要用户最多点击一次，攻击者就可以通过无线方式利用该漏洞。”  
@@ -89,7 +89,7 @@ PerfektBlue漏洞于 2024 年 5 月报告给 OpenSynergy，漏洞编号为 CVE-2
   
 https://www.securityweek.com/millions-of-cars-exposed-to-remote-hacking-via-perfektblue-attack/  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaGC3gsJClsh4Fia0icylyBEnBywibdbkrLLzmpibfdnf5wNYzEUq2GpzfedMKUjlLJQ4uwxAFWLzHhPFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/3e3d8ac7aa21737801e6da1cde8fe2f97e6acf7ec5b9af655b5c65fddc7d7d98.jpg "")  
   
 扫码关注  
   

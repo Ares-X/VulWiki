@@ -50,7 +50,7 @@ source_status: "unknown"
 
  数世咨询   2024-12-20 08:00  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqpElNdtFsCp3IrxRyPu1CF9rCVE3Ed2GrXp6SDsyafvPLFibfAdiaKCSLBeuMfRWfeeOjsXYX6mYbIQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f271542ef35bc7be398a1d654bd44ac04c7aa11fe7b6304eaf492d096a5808ff.png "")  
   
   
   
@@ -120,7 +120,7 @@ URWB 接入点渠道商没有技术支持能力，请联系 Cisco
 👉   
 扫码立即加入，精彩不容错过！  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqqPJv9p5ibKIhJXQjWHJmSlibSdib80Llfp8mlV0ibf7m47jyaVeGoFeorddtIuxS5liafTJRKHeSdLnaQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/34cae9f3a03dd890c422dd98273c25c67a6070af6b43ffbe1da48a754745a953.webp "")  
   
 😄  
 嘻嘻，我们群里见！  

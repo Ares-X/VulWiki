@@ -88,7 +88,7 @@ Thinkphp v5.1.x
 docker pull vulfocus/thinkphp:6.0.12
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictdI7ic70Ln8uPsclKwicdEtvd6icia7RlkLQd1qUHuajt08yIrILeDXrlWw/640?wx_fmt=jpeg)
+![](../../.resource/remote/aa842f867936960d84291ff038446ae9c91e13e5dfe776750655af8850e530b5.jpg)
 
 拉取成功之后运行镜像
 
@@ -102,7 +102,7 @@ docker run -d -p 8081:80 IMAGE ID
 http://xx.xx.xx.xx:8081/public/index.php
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcict8diawibbkZ3Jow2f5YI5SWa3O8PdqASbxIlSBnyibBXhW0oTM02BhUm3g/640?wx_fmt=jpeg)
+![](../../.resource/remote/e072550f262da60ac9ec0c629cf23b132f0103f9fdf5767f3e789a65fb4f9277.jpg)
 
 如上图所示可以看到 thinkphp 已经安装部署完成了。
 
@@ -124,11 +124,11 @@ docker ps -a
 docker exec -it CONTAINER ID  bash
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcicticxnqxLBo8Dp7Srh84fruv9fKLaSVtTibiaV7N1fJC1M4P6oAjibia6FkJQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/b357c84c381fe3377da2fd61d825811287f3beeaa04a648da9a558f256e02f93.jpg)
 
 进入到 app 目录查看 middleware.php 文件的内容，如下
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictWemQYIwHfPuRdq1NztTBANXDe2uBC49km2OOgOuILM8ibDiaIibiaog4GQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/2b8458b64a928f5692607d53df54d5259f7119f482f9d4554513d4ec08129630.jpg)
 
 可以看到这里确实没有注释，也就是说是满足漏洞存在条件的
 
@@ -142,7 +142,7 @@ docker exec -it CONTAINER ID  bash
 
 如下图所示
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictHiaRB6WfguHSRqeSWxzflalSziaic2vtVLhNCUyPzNR4djicoMiaKslhELw/640?wx_fmt=jpeg)
+![](../../.resource/remote/aadcda34b436a48a87e5eea9f791b9ed1a4b834421fb73331fdb7cdf0a4263c9.jpg)
 
 到这里漏洞复现所需要的前置条件都已经满足了，那么测试下列 poc
 
@@ -159,43 +159,43 @@ http://xx.xx.xx.xx:8081/public/index.php?lang=../../../../../../../../usr/local/
 
 首先进行写入文件测试
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictKjokVSMjNqXboicKDI3JF1pB8vwEPT0J2xiameZH7Wana9wFaQfGsUsg/640?wx_fmt=jpeg)
+![](../../.resource/remote/cd26ddd04040bed79d77338bdc70c3e3b71cabe3e275457b9fb63506588089e5.jpg)
 
 得到响应之后查看 tmp 目录下是否成功写入
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictnJpmydUG5CEV611ehfZvpBgIbiaqhlv9FzF3RURibnGBbX4gs1bOMK2A/640?wx_fmt=jpeg)
+![](../../.resource/remote/5877d0fcc3f4212cada651b2d39ffde462f9ea673557a738ffbc3f00bae10ac4.jpg)
 
 经过前后对比可以发现确实将`<?=phpinfo()?>`成功写入到了 tmp 目录下的 hello.php 文件中了。
 
 接下来测试文件包含的 poc
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictTonf1pngaA7icibzgibf9uqcNqhIrluYECVCMcSDjj2Hic3YZQruhib21SA/640?wx_fmt=jpeg)
+![](../../.resource/remote/fc067716f7e797b4e909601f6893bc6766486ffc958c75bbc935e6b8ef6455f5.jpg)
 
 可以看到 hello.php 文件的代码确实被包含执行了。
 
 最后就是直接写入一句话木马进行 getshell 了。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictVDDpgiaYSzsVcYzXMAt62nKPeCpgLyFb1ILE0x2GRa6mG3JlH2iboTaw/640?wx_fmt=jpeg)
+![](../../.resource/remote/12d53f7e33a7294925dce592754e645d8b2efd9d56480f25c211b04919c0b772.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictWRbUzts03UhkCT9DGl6LnVbUjqSsicHcVqcd0e99kWaRkg8Jj6AWyNQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/5b451bdd3620ceb91d90b9b664cec08fc9626be295514c16810732033fea9903.jpg)
 
 直接用蚁剑连接测试
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictDbdvFed7exB10Zur7aYpNNGmugARcO0q6ibUD6MJqqDibvJmlnpK61Ow/640?wx_fmt=jpeg)
+![](../../.resource/remote/5a8c435ccff52c689f2a09f8482866cfea79f9faf49a455d12022ec0f5f0b51a.jpg)
 
 根据这个漏洞的通报可以知道，攻击者可以通过 get、header、cookie 等位置传入参数，实现目录穿越 + 文件包含，通过 pearcmd 文件包含的方法即可实现 RCE。那么接下来对几个位置传入参数进行测试
 
 1、利用 Header 写入文件，如下图：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictm8kn2f12MnVTvEVf5VhyUDweZVlKCZ3mslCRIhOwaTZe23AKhmWobg/640?wx_fmt=jpeg)
+![](../../.resource/remote/7961ead91a914a0e5a331b24254a5f4869472b55fc6caa25e503de863d50a991.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcict5pVeOTZSjbYCqFYpzNqxeGn78Yq0B5Na4ngy6iauTMfGNkndzC6qHgw/640?wx_fmt=jpeg)
+![](../../.resource/remote/446aea52d92975212e2390e404ded9692035d949f4acb0778f170b52a8c4236e.jpg)
 
 2、利用 Cookie 写入文件，如下图：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcict2xFNZgr3ic1H05Npiap2xoqLHRwE3xhjBEZdL8Tkabmz6OTCc7P80gpw/640?wx_fmt=jpeg)
+![](../../.resource/remote/e0c3bd7602fea8c224dd0c4c51cfa62b74e7459ddece461feb971c21d3eee084.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictqxRIOZFDFgVxafUHichRkWd6OIsFFaia7PcbRwlcYpb45UtOicOribHiadA/640?wx_fmt=jpeg)
+![](../../.resource/remote/c4bb2da46edb2930a6bc000e6fac7e70647844f183f91d5c6405ebd358ac83a2.jpg)
 
         这里主要是利用 pearcmd.php 这个 pecl/pear 中的文件。pecl 是 PHP 中用于管理扩展而使用的命令行工具，而 pear 是 pecl 依赖的类库。在 7.3 及以前，pecl/pear 是默认安装的；在 7.4 及以后，需要我们在编译 PHP 的时候指定 --with-pear 才会安装。
 
@@ -222,7 +222,7 @@ argv,argc 在 web 模式下不适用
 
 PHP 官方提供的镜像里面也是默认没有 php.ini，所以也是默认开启了这个`register_argc_argv`：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictXVsLxlgf0aLdgd4a40oP9xB0KD8WBWyQSYxH03Nyv8WibbYyyrRM3RA/640?wx_fmt=jpeg)
+![](../../.resource/remote/84d288675500134a6324ce661248a847a9747a97c1c4bb689b7c65d3ef07f7de.jpg)
 
 这里因为是用的 thinkphp 框架，所以浏览器访问属于是 web 模式，而复现的环境中用的是 php 的镜像，所以也是默认开启了`register_argc_argv`。
 
@@ -240,23 +240,23 @@ http://xx.xx.xx.xx:8081/public/index.php?lang=../../../../../../../../usr/local/
 
 通过查看源码，再对比 poc 的构造，理解了为什么需要在 config-create 后面添加一个`/`。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictg0icM2oFSO9lfOChcDUMX7ys3AnMWxGaiagtkQM4rePBt11SVqvyF03A/640?wx_fmt=jpeg)
+![](../../.resource/remote/0e34f66657377b7280bb3653fa8fe7e4f90892450cc448297b6e808849e3299c.jpg)
 
 大致就是变量设置为`<root path>`的子目录并保存在`<filename>`中
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcict7sQx9SkRmib17EGrdM7FeB05FXknwiagaKJUqRRbAibIn54ib3njGdXA1A/640?wx_fmt=jpeg)
+![](../../.resource/remote/01e937286e4b970e7343a9ea6838f4761df541404ef699ccad4c30d979542ae0.jpg)
 
 由此处还可以看出`<root path>`还需要以 `/` 开头，作为父级目录  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictPYlHY3kbTcAp6A9PYOhRA3JuWNWU6hlDGpswzFiaQ5WDZQX448jo5og/640?wx_fmt=jpeg)
+![](../../.resource/remote/9e38bf3aee09f62441a10c9953d4a9856a83eb8d7579fcff112a3d7b6f288594.jpg)
 
 加上`/`之后即可成功写入
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictf0O0cwnqIGAabENhSbcjw6evjViaxB5kuBYcEmSLD3fvzBDf8OlIosA/640?wx_fmt=jpeg)
+![](../../.resource/remote/5f92ab2f4d37f2b4d000f82219d1fc4afdc13f76e0f11ad71c626e3bbabedf7f.jpg)
 
 如果少了两个必要参数值会显示如下错误
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictztfLYOeqiaDvXuDCjicvibJxZ0q7Q1wczAwjp8MPAZhmShvum9LQtQDAQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/26f2164044d7460da7d534e33b90c41270b688f64b80643246e590e32d2228a9.jpg)
 
 因此，使用 config-create 命令时，除了两个必要的参数值之外，还需要加入`/`作为父级目录，这里可以理解为三个参数的形式，也可以理解为第一个参数的值最开始必须以`/`作为开头。
 

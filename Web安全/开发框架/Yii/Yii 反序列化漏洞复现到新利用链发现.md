@@ -68,7 +68,7 @@ schema_version: "1"
 --
 
 反序列化漏洞影响到 2.0.38 被修复 https://github.com/yiisoft/yii2/security/advisories/GHSA-699q-wcff-g9mj  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLqTFh0AII5Hicxje7ykC0nDibXY40REjhnf6cUghx7icR33pq0fadAHYlQ/640?wx_fmt=png)
+![](../../.resource/remote/4726a01593e5c8e63c750459ca58e6b8b4a8446ef586657f9623c4963a2b5c5c.png)
 
 Hello World
 -----------
@@ -79,15 +79,15 @@ Hello World
 
 如下，我创建了一个 action：http://127.0.0.1/yii2.0.35/web/index.php?r=test/index, controllers 的命名是 名称 Controller，action 的命名是: action 名称
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLcBm2JW6685VXSb5ObxlCk4bP9yFS08icMWjcNiaqyrpbUnIuVJRao8Og/640?wx_fmt=png)
+![](../../.resource/remote/7afdd0956b5b840dc8e0bf893c6e5d9627a6db6d62b803afaf33e4ac5c7b1d76.png)
 
 /views/test/index.php. 其中 test 是控制器 (controller) 的名称。index 是 render 中的 view 参数命名的
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL8ZsQzcro5k6qjJOAFcyQbneAbicBYwnHgFeqddCNZnF3LrKCpOWHW8Q/640?wx_fmt=png)
+![](../../.resource/remote/e17e497cf91a20d8076f3afc82a7b52526e15d5cbaeba822dd5b3b3c8c00ea11.png)
 
 页面效果,
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLSc7WDtOFCdD3dGUPWf2iaHwsfCtvBibQos94Q8ZYgUUqKpRumj4ns3ibw/640?wx_fmt=png)
+![](../../.resource/remote/e35e153285812f3bc50e20b167c47a29aa5ab34afebc65693553143f252a024e.png)
 
 小技巧
 ---
@@ -100,7 +100,7 @@ Hello World
 ->\$([a-zA-Z0-9_-]+)\(
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL84Yk3zlxM3tDpLzOF7N7pb0OsSMNicaFJCwWSvjmKzD0RLQEw43CXicA/640?wx_fmt=png)
+![](../../.resource/remote/b9777e3541c797f33e3f2a551b82ab1d6c1de3d9128937d820efcc05e3e98c77.png)
 
 正则匹配可控的传入参数
 
@@ -108,7 +108,7 @@ Hello World
 [^if ][^foreach ][^while ]\(\$([a-zA-Z0-9_-]+)->
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL5BUzYChIQVGm2FnspZFUm2Aic3f7SYCLpLIvS0GvMDJZhDm6XtJiaurg/640?wx_fmt=png)
+![](../../.resource/remote/c705d93b53f2c24793df63c794be2e28b7ff2e0bc4b10fe63b9644f92c93bb64.png)
 
 反序列化利用链
 -------
@@ -207,14 +207,14 @@ namespace yii\db {
 ```
 
 执行成功.  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLYJa9pWJlk3K1ud0G3b23KJUE00gFDibr73wAzzN5PnBbzRnVwcValYg/640?wx_fmt=png)
+![](../../.resource/remote/25ad927dc1518ba7cb33cf92bb1454bae99fdc20dec2205498845c31ac5ad967.png)
 
 危害放大
 ----
 
 可以注意到, FnStream 类中的 call_user_func 只有一个参数. 翻一翻官方文档，发现了相应的解决方法. 所以遇到阻塞时，多翻翻手册也许会柳暗花明
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL7Tg8PwrUVvmuhQNDI18TYmobCnA3oeAibkwrAKS7vLRezSfI9a2k2aA/640?wx_fmt=png)
+![](../../.resource/remote/5689a10e33e556b947100409fa77a539646e403c8929b30b6c00df0805563b1b.png)
 
 如果要放大危害，这里只能作为跳板，还需要一个类. 全局搜索各危险函数. 寻找参数可控的方法.
 
@@ -267,13 +267,13 @@ namespace yii\db {
 ```
 
 再次尝试, 报错了！！！这是修复了吗??，低版本也？  
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLV6NrlibNZvHs5ymxPQWjOFoLRZJPF17NHtg9X4wvUFLgZ8RQdS32K8w/640?wx_fmt=png)
+![](../../.resource/remote/b5f07880ebc027f6a780018c13ee7e4b55e4baf6db46af6ffbab04ded9fb8b96.png)
 
 但是 phpinfo() 可以正常执行. 当我再回去看的时候. 我发现我漏掉了最底下的报错信息！！！。
 
 先将 poc 复原到 phpinfo(); 可以看到虽然 throw 了, 但 phpinfo 正常执行. 不清楚是什么原因。我的猜想是: phpinfo 回显内容过大触发了分段传输. 我会继续研究这个问题.
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL58BuXYeK0DVf8cjXEeniaw4ibcZlGwXyDQx3YcXChlyElEQx5RPJYjGQ/640?wx_fmt=png)
+![](../../.resource/remote/93585b8b193fbbf65188848d2e451ea5dfd665c901b6dd67fc28edb4dedb2437.png)
 
 利用这个方法. 修改一下 poc，加上 phpinfo();
 
@@ -316,7 +316,7 @@ namespace yii\db {
 
 整理一下反序列化链
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL6RqhPp7ibWFcwqfvnTK3zbsYZpz7x4V82ssb1wzFJMIutibhwkUjh4RQ/640?wx_fmt=png)
+![](../../.resource/remote/115bbdb94ede4da3bcd9cb5499bdb13bed6cc530877d0b2f674f9664592f73f5.png)
 
   
 
@@ -332,7 +332,7 @@ END
 
   
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJL5HgFvz3pYdntkJTLS5ZMLvaCM6I0KYicaYJ4ic1jGgsmNe1B6rukzdfg/640?wx_fmt=jpeg)
+![](../../.resource/remote/a69f24ca9d41b85a250e8f149ad78664c9a3aeedd71794001a02587a2bc4ecdc.jpg)
 
 JOHNSON
 
@@ -400,13 +400,13 @@ JOHNSON
 
 [记一次域渗透靶场学习过程](http://mp.weixin.qq.com/s?__biz=MzI2NzY5MDI3NQ==&mid=2247489355&idx=1&sn=1b34df785611bf0be65d748d9f6a6608&chksm=eafa5f07dd8dd61177dedb16e437980d4c0ebd0615a821bcf2c09e25e2ebe8a60f156ba1a432&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLFcmlcnz38EApnEkFiaISicklcwbo3gnI17t54PqyYOE8LV4yczIfjdqw/640?wx_fmt=png)  
+![](../../.resource/remote/6976d32db1059770e27d1e93017bde47ee6d5fd3458e3c0864cb98bc88164c4b.png)  
 
   
 
 分享、点赞、在看，一键三连，yyds。
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/FIBZec7ucChYUNicUaqntiamEgZ1ZJYzLRasq5S6zvgt10NKsVZhejol3iakHl3ItlFWYc8ZAkDa2lzDc5SHxmqjw/640?wx_fmt=gif)
+![](../../.resource/remote/c4bdac024f2d01caf3806d4aed292ab79557dcef3cdeae81510fb1da16af2da5.gif)
 
 ---
 

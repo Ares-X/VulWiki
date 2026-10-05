@@ -53,7 +53,7 @@ schema_version: "1"
   
 Apache Submarine是一个是云原生机器学习平台，允许创建端到端机器学习工作流程，通过Submarine可以完成ML模型生命周期的每个阶段，包括数据探索、数据管道创建、模型训练、服务和监控。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUkgWHnZO6mDZiaWyGJ899SSflezfpFboDrU3mRBSAN6PQt5QQApia8XECqDZCvKw0So8JXjk3CIb3w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f5ced839a277e2e194ec8ac89bc12034561e0b81f001ebba79572a18cc6648d5.png "")  
   
 **0x03 漏洞详情**  
 ###   

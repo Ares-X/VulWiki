@@ -48,7 +48,7 @@ schema_version: "1"
   
 User Meta是一款WordPress前端注册登录与编辑资料插件，允许用户在前端页面进行注册、登录以及编辑个人资料的操作。这款插件还支持额外字段的用户注册，增加了用户注册的灵活性和个性化。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SWA27o97G4gEuv1V27DowOJozLthuw0xWZW41F5eC4JH9Mjg0VIriaPGgvpQgbichxmCDH3IMAgibnDw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/156f1e8fa9a85d9492f453b1495d114e246b95a192a93a1bf3f5a0a5501fba73.png "")  
   
 **0x03 漏洞详情**  
 ###   

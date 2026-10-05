@@ -46,7 +46,7 @@ schema_version: "1"
 
 小薯条  FreeBuf   2024-08-15 19:01  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
 近日，研究人员发现了一个服务器端请求伪造（SSRF）漏洞（CVE-2024-38109），利用该漏洞可访问服务内的跨租户资源，有可能导致横向移动。  
@@ -56,7 +56,7 @@ schema_version: "1"
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icqks1s5Is6QNT7fmvNRVKGF0YCtWOJicmYIMuElwXbuzgvdQTJUeVCWZbFI26ibDHn5z1koh5l2FnQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/601b4ee7afb20763e27230aff0a28c8dfaca7d5b89f8402e8a9302fbde2c6008.png "")  
   
   
 **Azure 健康机器人服务中的权限升级漏洞**  
@@ -66,7 +66,7 @@ schema_version: "1"
 Azure 健康机器人服务使医疗保健提供商能够创建面向患者的聊天机器人，与患者信息门户或医学参考数据库等外部数据源交互。Tenable 研究人员发现，旨在允许机器人与外部数据源交互的「数据连接」功能可通过服务器端请求伪造（SSRF）攻击被利用。  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icqks1s5Is6QNT7fmvNRVKGalaoiaNvG0rBUwnFlXlSZ4S76zPvAMD0DMlKwjDqZCZtdUtc9LTHBHQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ed2540994a563ca9c4002c991aaa271a5469f398e251a7a06d410e324c05dded.png "")  
   
 来源：tenable官网  
   
@@ -113,16 +113,16 @@ FreeBuf盲盒、大象公仔......
 扫码添加小蜜蜂微信回复「加群」，申请加入群聊  
 】  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ich6ibqlfxbwaJlDyErKpzvETedBHPS9tGHfSKMCEZcuGq1U1mylY7pCEvJD9w60pWp7NzDjmM2BlQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/c756b5fb2e446e8a46aeb976861dc8502220a41de5fd7e545c0fa98a66cefe23.webp "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oQ6bDiaGhdyodyXHMOVT6w8DobNKYuiaE7OzFMbpar0icHmzxjMvI2ACxFql4Wbu2CfOZeadq1WicJbib6FqTyxEx6Q/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/af824128f3c655f23db4a009f5f2a753c9c7e209ababffdeaf5e18432c146adc.webp "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ61icYlLmBLDpdYEZ7nIzpGovpHjtxITB6ibiaC3R5hoibVkQsVLQfdK57w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/f6fba0392477c2656e3f6b5c30fa49b30de791784846cdb1161c166e4b14e541.webp "")  
 > https://thecyberexpress.com/flaws-microsoft-azure-health-bot-service/  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icEEJemUSFlfufMicpZeRJZJ7JfyOicficFrgrD4BHnIMtgCpBbsSUBsQ0N7pHC7YpU8BrZWWwMMghoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/0bffd438af0f544d8aead12bdd40b183fc2d88caa433e43fbd4152d042609e5d.webp "")  
   
 [](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247494714&idx=1&sn=fe28fee45c1508a1645fd04c2b18ca82&chksm=ce1f16a5f9689fb3996529f7738a1b7dc3960f3fc5bd31c7d1505dbd3a179d5b3bfd6c66e5f3&scene=21#wechat_redirect)  
   
@@ -130,7 +130,7 @@ FreeBuf盲盒、大象公仔......
   
 [](https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect)  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
   
 

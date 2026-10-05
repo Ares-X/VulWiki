@@ -68,11 +68,11 @@ app="泛微-协同商务系统"
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYEvqn38fbicMcG1L6UViaG4exFiaHLDMIk3nsrB2LHKToz0IrkQsJia38rA/640?wx_fmt=png)
+![](../../.resource/remote/589b48dfc57a4dc6deb64b1b0e356c6a27466606e36ab19d08c473c2edfaf5fc.png)
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYicvk9sjNhyzW8g2yRGRJeBHXh7uicU1RqZ8Qickh6DrHjsB9eTRcT0Jcg/640?wx_fmt=png)
+![](../../.resource/remote/a102ecd6256997eb19d4a88e9b7edcd38cae73906a76af369df4a87707988aa5.png)
 
 POC：  
 
@@ -85,13 +85,13 @@ isDis=1&browserTypeId=269&keyword=%2525%2536%2531%2525%2532%2537%2525%2532%2530%
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYrRJIYW9lHsUwpS6gqQCllXhDz6GdWn4q8mPlvCcOqxFwwlp5YB2Q4Q/640?wx_fmt=png)
+![](../../.resource/remote/38082452223b00830f68cc8a62241c0ad39984c1cb7ebf09231c0b8f897bf33d.png)
 
 **修复建议**
 
 建议升级至安全版本  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/n2rSqJSRAVysra7ItOufZQ85GXBSX9vYa0PicnDzIv4xibegRTm4976s4ZMcq0Ke9uH8TG8RqC4ZbaXK33IrmicxA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/a42c9c7ebb117f1b9d9d8da381ddae972cc83b939df4fabf72bbb68309698bca.jpg)  
 
 **本文版权归作者和微信公众号平台共有，重在学习交流，不以任何盈利为目的，欢迎转载。**
 

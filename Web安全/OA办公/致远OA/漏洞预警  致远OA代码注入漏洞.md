@@ -56,7 +56,7 @@ schema_version: "1"
   
 致远OA是一款由用友成员企业致远软件开发的办公自动化软件，采用J2EE技术开发，功能完善，流程管理、文档管理等功能较为成熟，在产品化领域优势较为明显。  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SW3tDwuiciavQsB1E3fBkyjAQBfSxu6P8NGTHfmqHt4K75zjdrS6zj0hpG3vV8a870D0icEcRh7uNedQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1 "")  
+![图片](../../.resource/remote/54a3d1f56cfa74c9b15b555cb832de5626fde01dfcdfe54a89427703991bb416.png "")  
   
 **0x03 漏洞详情**  
 ####   

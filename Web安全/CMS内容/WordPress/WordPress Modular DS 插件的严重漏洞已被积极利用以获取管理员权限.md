@@ -39,7 +39,7 @@ schema_version: "1"
   
 WordPress 插件Modular DS中存在一个最高级别的安全漏洞，目前已被攻击者积极利用。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/0HlywncJbB1c6r88j06ERjcnuKbAibWZ8kYfwUxwj8CV3uL67TTMCCI1r7aO7RTiblemePEdDoJ67rGUwqb6efkw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/8d2996becb122b06b2315f7cc238ccaf0ef90fd2f1e5d256f3ea9a1c44b88903.png "")  
   
 该漏洞编号为 CVE-2026-23550（CVSS 评分：10.0），被描述为未经身份验证的权限提升漏洞，影响插件 2.5.1 及之前的所有版本。该漏洞已在2.5.2 版本中修复。该插件的活跃安装量超过 40,000 次。  
   

@@ -56,11 +56,11 @@ schema_version: "1"
 
 Superhero  Nday Poc   2025-07-06 03:11  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkYN4sZibCVo6EFo0N9b7Kib4I4N6j6Y10tynLOdgov9ibUmaNwW5yeoCbQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/a186c4f5d9d52347540c4cbb93e8961b5ba9c0dd7f4fd061d48211661876676f.webp "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkhic5lbbPcpxTLtLccZ04WhwDotW7g2b3zBgZeS5uvFH4dxf0tj0Rutw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/77be41dad9935140a4007bdfffbddf41fc1a986a3fecd8c99e21852085b04197.webp "")  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCk524CiapZejYicic1Hf8LPt8qR893A3IP38J3NMmskDZjyqNkShewpibEfA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![图片](../../.resource/remote/44ad08ffbb51946186bc46c860da341a77d976872c15eb51f56d078afe49905c.webp "")  
   
 内容仅用于学习交流自查使用，由于传播、利用本公众号所提供的  
 POC  
@@ -86,18 +86,18 @@ POC对应脚本
 title="JieLink" AND (favicon: "2f809c4759399cae458a29f24490a114")
 ```  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9E4sb3ocydrJP5fRzMTf2jkdVsjCKFGqibb8rVUbDwBk3B6yHmyjb1MgA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/7adc4fda99f01c33e5c1b971d21512f11384daa6e226bfe36cbd2d7bd02f21e1.png "")  
   
   
 **03******  
   
 **漏洞复现**  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9Eu0xwlKxd3cBoGHJ6pxdIv0e3J8D0ibqicqzOnRGq8LsT7GbKxCFd8ZAQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ce11245e5d79f3ce7043c963ad5f3e4c215ba5a16adf9f6aaabee49caef22d04.png "")  
   
 sqlmap验证  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9EA4m7zBpOamxibVb1qYxat5MHQor5o6NnCn5IzKl6dOAjiaIxIIG34gow/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1cfb8c1cc203fc2d6e02329e39d555306c561a8f15f5950cceff3a9856da81d0.png "")  
   
   
 **04**  
@@ -107,15 +107,15 @@ sqlmap验证
   
 nuclei  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9E5ttHMwcCsAW3BK6EOBsgzOeGyOXjXnCchAlRhiaibV0DbD9AibyJxrsow/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/577d1141135ef4f18bb62ff826ab7d3d18313f89beb7db6d97a180cd04a066c8.png "")  
   
 afrog  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9EH89Mp5mFm4h7PcOY6DQrAiaSoQoiaW9I42UjtXpY7UxGFhQMXQyTLjbQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/ba25edd213b9674bb0cd646f4b47af55ddd4d57632f858e2cfc983c300f3fbff.png "")  
   
 xray  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9EIu1avBKWwKB05qic5k2mLTk1oXkN666czp1V3F9zJdATfMJKiaNV6fNA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1b965208f8566540e08fe48e71ad58736180f683943d12c50ef566aa07cbe0b2.png "")  
   
   
 **05******  
@@ -165,7 +165,7 @@ xray
   
 ⚠️ 声明：仅限合法授权测试，严禁违规使用！  
   
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9EwDbgrktvywgiaJFXrosvDicyudia3Ekrnn5YVfcDIE1CqJFH9GXm5Eozg/640?wx_fmt=png&from=appmsg&watermark=1&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/ca791b5634b95100d63d916c35251347a5778c59d3c54fa82150874b5188e034.png "")  
   
   
 

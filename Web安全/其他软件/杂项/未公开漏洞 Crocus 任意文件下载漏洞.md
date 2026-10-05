@@ -79,7 +79,7 @@ Crocus 科技软件 - moffice - 任意文件下载漏洞
 
 body="inp_verification" 或 icon_hash="1819219374"
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WAyrRuvrubHdwyBAicD7Qv1kLEMczYGyene868IDGLhcxb6agZV4f735gUBnnEtiaoiazU8reTUvjbRQTW0XtTKcA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/ec0fbe6eed239e873ba63f3ab6f42356ad8518c2f34e984acacfba10735ce2ff.png)
 
 **PART.****0****4**
 
@@ -92,7 +92,7 @@ Crocus
 
 **漏洞复现**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WAyrRuvrubHdwyBAicD7Qv1kLEMczYGyeNsSUeDj5N0tXcfS59Hg9c1ur48xKAMaXxJ9RxUfnv0N627x9OmKZXA/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/3a8e768ff9a24161e9f219e260a6e9818247d07806f21f3da8a30fde85e5e177.png)
 
 POC：
 
@@ -109,15 +109,15 @@ Connection: close
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WAyrRuvrubHdwyBAicD7Qv1kLEMczYGyeuCkrClRDcGtngjqkzZc0ibzdYibLk6lZC7zAkQmw4gN6SEiaKRezOqpoQ/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/00bfebbfa48bed1a18908316afcffc86984775c71cac31f25275834d8dd06bfe.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/WAyrRuvrubGNIiaG0Mg4FZ85BtUFLg9pXeTIwxZmgUMKEvTFickkUThj7JYYZSEnc910eHc2j6ppDqceqNK9qEEg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/248897428f4e71ed66b582e08a92e7703924ae4f8a5e0ebe406f455b8750d920.webp)
 
 群内不定期更新各种 POC
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WAyrRuvrubEnmrSbNrxiapV7OuFGHcbphCxSX3ia3k3iazWrpKcmMcSS2Npibicl6dKeEYmSSzUlaFtL5Mu9wrCTspw/640?wx_fmt=png&from=appmsg)
+![](../../.resource/remote/e2aa96493d281d39e166623d6b8e1fdf8882f335eaa7df6086895f447f7c0ff3.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/WAyrRuvrubGbqzHel6ZMgMG9a267xj5TPLicxCCde3VgckZyUoJ6ZYWoicsO3K2AeuCIQ2To6o6SibCurdtkkBNXg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](../../.resource/remote/458fd8e425145f025c73e5f966bda9c307b9532b4291bafeeefa230a9344a169.webp)
 
 ---
 

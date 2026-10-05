@@ -57,7 +57,7 @@ DrayTek是一家位于中国台湾的网络设备制造商，其生产的设备�
   
 DrayTek的设备主要分布在英国、越南等地，如图1所示：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/wpkib3J60o2iccfRDbafINHVd9YPVLUXXw5RE9MldT8hcAhylkicibKLjGoVSpDRibL2fPjJ2BXLRK0ibOPviaE3nI83g/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/07db64178ae9e2b66bdd8427d9691e52578955f3069666c0180e63d1988488a5.jpg "")  
   
 图1. Shodan搜索得到的DrayTek设备分布情况  
   
@@ -106,7 +106,7 @@ https://www.trellix.com/en-us/about/newsroom/stories/threat-labs/rce-in-dratyek-
   
 “投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../.resource/remote/6a85bd81b6c759a0832fee43a3d96c383ae032b5f74f300eaf04a904e924eab8.jpg "")  
 
 
 ---

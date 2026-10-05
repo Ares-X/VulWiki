@@ -47,7 +47,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ZyPwCytO7NLUuo9rfKtgyQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjf5BDGObeEfV5qmUR4mutlppXHHADxmomViabnic9nQ0zE9dL8HUfxX6nfVraobkrIKh38Fd7Iwc6cA/640?wx_fmt=jpeg)
+![](../../.resource/remote/fbcc088c480cead51babf1b6265b79a8ab705c8a7d10560a3e69a16e5a9c256e.jpg)
 
 致远 OA ajaxAction formulaManager 文件上传漏洞
 
@@ -86,15 +86,15 @@ managerMethod=validate&arguments=%1F%C2%8B%08%00%C2%94%3A%C3%BC%5F%00%C3%BFuTKs%
 
 500 说明上传成功
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjf5BDGObeEfV5qmUR4mutlp1TEzMxxoUEQU5Rnp0HPicsb8iaAZ9fb1Ob3Q0RDgp7xSIPbR8sQzU14w/640?wx_fmt=png)
+![](../../.resource/remote/c333520e9e77527bfeba210d71b5fbc50b5e78ae2d0c3b4e65e10eeba6c6e2c6.png)
 
 访问异常 500:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjf5BDGObeEfV5qmUR4mutlpwHtVqOltgngTTiaJH4GnzW0VylxdDxvFasGxbKATIQO6XSvicqAKC3Vw/640?wx_fmt=png)
+![](../../.resource/remote/8d53084e45e0233e359de849a9b5cc96a2fcb341f96db3f9da4f6b80138dee0c.png)
 
 shell：http://127.0.0.1/seeyon/txf1.jspx 密码：leishi 冰蝎 3 连接（雷石安全 exp 加密版本）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjf5BDGObeEfV5qmUR4mutlpxlQO5fUlzfK99hOSe7nn8oiap8R9lJ7wTxRlg6LQgsIpFu1xIMAvreA/640?wx_fmt=png)
+![](../../.resource/remote/7a1cec1e36a1e2607e5b4472509c0f5bfdc5356924a1a800d5b8d28e1a04658e.png)
 
 互联网还存在另外的一个加密 exp  
 
@@ -143,7 +143,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -155,11 +155,11 @@ thelostworld
 
 FREEBUF 主页：https://www.freebuf.com/author/thelostworld?type=article
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 欢迎添加本公众号作者微信交流，添加时备注一下 “公众号”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcSQn373grjydSAvWcmAgI3ibf9GUyuOCzpVJBq6z1Z60vzBjlEWLAu4gD9Lk4S57BcEiaGOibJfoXicQ/640?wx_fmt=png)
+![](../../.resource/remote/9255e3712e3885c431d5087872642f32c2e71629b39b93e381a5a147814af2d4.png)
 
 ---
 

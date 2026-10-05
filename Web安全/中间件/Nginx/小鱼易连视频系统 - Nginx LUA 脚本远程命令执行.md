@@ -64,11 +64,11 @@ schema_version: "1"
 title="云视讯管理平台"
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDUjWrXBH3Xhbjxlew2fjJ7ib4OLKn1NhRxNcXalnZIUEa7c6AghnOTPuVDKswD2SsR1YRDytacO3Q/640?wx_fmt=jpeg)
+![](../../.resource/remote/ec36973e83f97075dd99ec5f299c8950b4dd9d4b7316caa81765e9f8798f3e02.jpg)
 
 找到页面了之后寻找该该系统的 OpenReaty 页面，一般都在其他端口上。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDUjWrXBH3Xhbjxlew2fjJ7ToruG4lFXhUFBauTDIjDv4gRt7muLEFcTkbGKyuXvn8ibG8PtHzsMNw/640?wx_fmt=png)
+![](../../.resource/remote/2b027823e89350f1247ba1e5d15ebe2180d23b9358f873c393515cc730496a4e.png)
 
 **漏洞特征：**
 
@@ -130,7 +130,7 @@ bp 抓上面的请求会返回 302，然后跳转 404, 不要慌，这时候去�
 
 监听服务器返回 shell，直接 root 权限
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDUjWrXBH3Xhbjxlew2fjJ7InhqUruF4casAqib5wY2hI5IEicaicibolf8EGMs4ox6TKsvfDC2U4L12Q/640?wx_fmt=png)
+![](../../.resource/remote/c779b4329b955ff637196f2ad77ea29ffbc9c6eb7724e32d36f7eb6a865aeedc.png)
 
 接下来详细分析：  
 
@@ -203,13 +203,13 @@ return
 
 最后再给大家介绍一下漏洞库，地址：wiki.xypbk.com  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAMOicC5b9zVDyfybStngExBMSTicgTjNIOd4cSIroia7ae82ZJvdibclGltrgjdJLzugk276Q9xkonYw/640?wx_fmt=png)
+![](../../.resource/remote/668c765c1668dad3b7168fee760f3a795be011e6550eaaecd87ea30df5a4bd9b.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAMOicC5b9zVDyfybStngExBn4bcIUDNGtN3mHLSSNiabKm9LPwxmb4qeq5Jbk6COGnLbgr5Rt2POmA/640?wx_fmt=png)
+![](../../.resource/remote/b91549f35e40d767bd317fb5d03ce76fe5a627de6796bfc4b81919b3d7d84a15.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAMOicC5b9zVDyfybStngExBkevFiamAkVDFhgFopA50dnUI98AAo6nXuuTC5DpeKS6BneWtTpWu7ew/640?wx_fmt=png)
+![](../../.resource/remote/fe6910832a19f8bf525face15b0415bd63fd0bf6b6df02f792b57f85ded655fa.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibAMOicC5b9zVDyfybStngExBx4lpIiahQIj3G9Y3cpiaaqLFIN5EtlrDlkb1Sqnm40wtVYcWof1bSOXw/640?wx_fmt=png)
+![](../../.resource/remote/00c5c5100797eabd4081a14b67e05615c9aae01ca7e040494dd5180883808748.png)
 
 本站暂不开源，因为想控制影响范围，若因某些人乱搞，造成了严重后果，本站将即刻关闭。
 
@@ -221,19 +221,19 @@ return
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Yzhia63knJ4QJFvO4WBfd6KQazjtuPC7uqNBt5gE06ia7GjOVn2RFOicNA/640?wx_fmt=jpeg)
+![](../../.resource/remote/edbe746b63d462b8264c4cdc8bdb6f3eea3031d4a274e271cfb03ab17b8f24e3.jpg)
 
 扫取二维码获取
 
 更多精彩
 
-![](https://mmbiz.qpic.cn/mmbiz_png/TlgiajQKAFPtOYY6tXbF7PrWicaKzENbNF71FLc4vO5nrH2oxBYwErfAHKg2fD520niaCfYbRnPU6teczcpiaH5DKA/640?wx_fmt=png)
+![](../../.resource/remote/ab6c5ecbc93adc192adef1b7c05ca25153b4fc3f9c4963f72d75fa0a3aaee299.png)
 
 Qingy 之安全  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
+![](../../.resource/remote/7b68c0062559511a9826e83699fc6bc7773c7080beb677ea03e8c7544a564dd5.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
+![](../../.resource/remote/8e57ad757dd628c11c5d5fecfeb91ca234ca60712b2f65d6b1294044233f5a75.png)
 
 点个在看你最好看
 

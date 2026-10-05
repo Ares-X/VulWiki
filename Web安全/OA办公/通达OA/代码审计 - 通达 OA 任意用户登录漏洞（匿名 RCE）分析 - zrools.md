@@ -90,7 +90,7 @@ Web 端通过`login_code_check.php`取得`codeuid`等扫码数据后（其实取
 
 Web 端登录请求脚本如下：
 
-[![](https://www.zrools.org/images/2020/04/23/01.png)](https://www.zrools.org/images/2020/04/23/01.png)
+**原图暂未找回**（原引用：` [![](https://www.zrools.org/images/2020/04/23/01.png)](https://www.zrools.org/images/2020/04/23/01.png) `）
 
 可以看到最终的登录数据只发送了`UID`到服务端，从而导致了任意用户登录。
 
@@ -100,7 +100,7 @@ Web 端登录请求脚本如下：
 
 源文件： /logincheck_code.php
 
-[![](https://www.zrools.org/images/2020/04/23/02.png)](https://www.zrools.org/images/2020/04/23/02.png)
+**原图暂未找回**（原引用：` [![](https://www.zrools.org/images/2020/04/23/02.png)](https://www.zrools.org/images/2020/04/23/02.png) `）
 
 修复后的版本对 UID 进行了初始化，并增加 token 的校验。
 
@@ -108,7 +108,7 @@ Web 端登录请求脚本如下：
 
 再看下 token 的生成方式，源文件： /general/login_code_scan.php
 
-[![](https://www.zrools.org/images/2020/04/23/03.png)](https://www.zrools.org/images/2020/04/23/03.png)
+**原图暂未找回**（原引用：` [![](https://www.zrools.org/images/2020/04/23/03.png)](https://www.zrools.org/images/2020/04/23/03.png) `）
 
 通过`PHPSESSID`从在线用户表`user_online`中取`UID`，然后封装数据 MD5 哈希后存入 redis 中。
 
@@ -120,7 +120,7 @@ Web 端登录请求脚本如下：
 /ispirit/interface/login.php
 ```
 
-[![](https://www.zrools.org/images/2020/04/23/04.png)](https://www.zrools.org/images/2020/04/23/04.png)
+**原图暂未找回**（原引用：` [![](https://www.zrools.org/images/2020/04/23/04.png)](https://www.zrools.org/images/2020/04/23/04.png) `）
 
 同样是增加了`token`校验。
 
@@ -165,7 +165,7 @@ cookies:  PHPSESSID=xxxxx
 webshell: (GET) http://192.168.0.3:8080/api/test.php?cmd=ipconfig
 ```
 
-[![](https://www.zrools.org/images/2020/04/23/05.png)](https://www.zrools.org/images/2020/04/23/05.png)
+**原图暂未找回**（原引用：` [![](https://www.zrools.org/images/2020/04/23/05.png)](https://www.zrools.org/images/2020/04/23/05.png) `）
 
 [](#扩展思考 "扩展思考")扩展思考
 --------------------

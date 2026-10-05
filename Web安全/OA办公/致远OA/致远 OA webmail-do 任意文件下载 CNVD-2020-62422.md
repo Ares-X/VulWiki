@@ -48,7 +48,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/IHISaQzNGx9fUElERGZHMQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -68,7 +68,7 @@ schema_version: "1"
 
 存在漏洞的 OA 系统将会下载 **datasourceCtp.properties** 配置文件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7sNA2oibfrEvLCia4dI2NZLL60769l4OlY9ydJw25wmqZP9Lds9GzIvE2yDZTbOsiagDjY6rViaKUJCQ/640?wx_fmt=png)
+![](../../.resource/remote/0bec5609791970516a6060e08f3d16135582273eb7d472617a4ec7eca3046f85.png)
 
 更改参数 filePath 可下载其他文件
 
@@ -110,7 +110,7 @@ if __name__ == '__main__':
     POC_1(target_url)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7sNA2oibfrEvLCia4dI2NZLL9AsB5L6KluvInGeQz2gmQIiaAgwmCSuEAjaIyMzDYD5WekJFrC1ibavw/640?wx_fmt=png)
+![](../../.resource/remote/a2daaf435f0b19ec68496696f0bdab9b3bf015716c56b26ef2f20c4d3386401b.png)
 
 Goby & POC
 ----------
@@ -120,7 +120,7 @@ GOby POC 目录已经添加漏洞json文件，可以一键导入
 致远OA webmail.do任意文件下载 CNVD-2020-62422
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7sNA2oibfrEvLCia4dI2NZLL9zzXadyzMOOxueB7KeOLq9wmjsJX7ShiavJib51FLx8v7VeAYwt70Y8g/640?wx_fmt=png)
+![](../../.resource/remote/a7b4dc433b709161dcb14898ce60b4c6b1cfb68ea5f9e00b30642467b04738ed.png)
 
 最后
 --
@@ -129,9 +129,9 @@ GOby POC 目录已经添加漏洞json文件，可以一键导入
 > 
 > 别忘了 Github 下载完给个小星星⭐
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6wnKTQvK0n8sFOQEEFQro75IHato7k7WJakCwObVtic8kOiagRSTylHIhHxg4DVKOhBFDazKkCMgvw/640?wx_fmt=png)
+![](../../.resource/remote/db24e7036c6033b3096cc6bcf3daa42f7778b91d944c595acd55b7a1b0302046.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6wnKTQvK0n8sFOQEEFQro7uWKGayI2RguaLia8VfTDystgmyZaEk15WcXU9v4WtULgysUGicYFGMQA/640?wx_fmt=png)
+![](../../.resource/remote/5c6b6dd40ece05aeeb704010b0c9074739107a4f46f5ba864d16e17964e0fd2a.png)
 
 ---
 

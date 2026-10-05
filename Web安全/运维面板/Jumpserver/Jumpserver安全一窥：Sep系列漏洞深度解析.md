@@ -79,7 +79,7 @@ Jumpserver是中国国内公司开发的一个开源项目，在开源堡垒机�
   
 这个django-simple-captcha库和Django reCAPTCHA可以说是Django生态中唯二常用的验证码生成库了，但因为中国用户无法使用reCAPTCHA，所以它基本就是国内的唯一之选。包括我自己的博客也在使用其作为图形验证码依赖：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ib5lFQ9xYSMibia56ntRcyzibl6kKkccvDiaLtvSDkUUKicZO5aY5sETwXdLw/640?wx_fmt=png "")  
+![](../../.resource/remote/0c8ac44647254d47c7c843148954e083b16083bf131006ae7adf416051c06cb2.png "")  
   
   
 今年我写  
@@ -115,7 +115,7 @@ self.hashkey = hashlib.sha1(key_).hexdigest()
   
 在页面中展示验证码时，django-simple-captcha提供了一个captcha_image视图，开发者需要将其加入url routers中：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibibIT9Uq4IdDBnl3JMZrQNM0pslh1eiaASLibG0uk0fGrePlibkG9EqqDFQ/640?wx_fmt=png "")  
+![](../../.resource/remote/7d61330428c1ba5db6b706beae668078238e9027ec59dac25fa308d7fa0ec9e6.png "")  
   
   
 captcha_image视图只接收一个参数，即为用户传入的key：  
@@ -151,7 +151,7 @@ def captcha_image(request, key, scale=1):
   
 但是不幸的是Jumpserver仍然使用的random模块来生成Token：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibKTYHYf7enhDuaUV2HmtqibhWmLzTpaGMNvTDiaLvmDVIl6PbjsmLicCiaw/640?wx_fmt=png "")  
+![](../../.resource/remote/aa998bcf4571fb12d7bf7be50323f4d1e9bb4639a744f906d8c90130006db3b7.png "")  
   
   
 那么答案就呼之欲出了，使用第三方模块django-simple-captcha提供的方式获取固定在进程中的伪随机数种子，然后马上请求UserResetPasswordSendCodeApi  
@@ -173,19 +173,19 @@ def captcha_image(request, key, scale=1):
   
 当然，现在官方使用的修复方案在大部分情况下也没什么问题：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibs0Gb08icfBGY8WEJEkQBviaicrY9icmyPIzVnuUicxrqMosddLRWDNicQuOA/640?wx_fmt=png "")  
+![](../../.resource/remote/45a8122daf941a3fc44bc149ed7c6cd1061b52d437b1a54a5b15c3f591f26617.png "")  
   
 将伪随机数种子设置成None背后发生的事情，以及如何调试CPython底层C代码来理解其运行原理，可以参考我在星球的这篇帖子：《CPython底层调试 - random.seed背后发生了什么》。  
 ## CVE-2023-43650：重置密码Token可爆破漏洞  
   
 这个漏洞和上一个漏洞略有不同。我们在进入重置密码页面的时候，需要输入一次验证码：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibwamWbl0c53sgq7KUbaBz2NGhNT5SYmh4AZ3MJtkWGaUJThvoXgwxWw/640?wx_fmt=png "")  
+![](../../.resource/remote/b9e24f217e515210e817cfa11b75f2c7a5de1fbe60048b4a396b466736fe4a3f.png "")  
   
   
 输入成功后会跳转到第二个页面，用于找回密码：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibCtQdyctYuwTYic3vWmsZSm6NLfJUermOV37Ydy3ECibORDGseIFhw1Cw/640?wx_fmt=png "")  
+![](../../.resource/remote/ce27af53225d5b9a2684f35855eaf621f7976acf24a60a92dbb2347f1585cbca.png "")  
   
 如果你看过Vulhub中复现CVE-2023-42820的过程，你应该记得这两个步骤——用户在第一个页面输入账号和验证码后，会生成一个随机的Token附于跳转URL中：  
 ```
@@ -216,7 +216,7 @@ class UserForgotPasswordPreviewingView(FormView):
 官方对于这个漏洞的修复方法是，在验证Verify Code的时候限制次数，超过三次则强制过期这个Code：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibrXDWTSpPY9LKWiawdmXMGjEy2HB1sNVkbzc2tWVT5lnCEbpPZgv7WUg/640?wx_fmt=png "")  
+![](../../.resource/remote/fd81b76842139eb59e13981a9ad7a029b99a38965029eb15b24d3cf11302462d.png "")  
   
   
 但我理解这个修复方法其实不能解决本质问题，因为本质问题是前面的验证码Token没有过期，而非这个Verify Code没有过期。换句话说，最新版本的代码中，攻击者仍然可以爆破Verify Code——只需不断生成新的Verify Code，然后用同一个Code（如123456）来尝试，总能遇到某次生成的Verify Code与123456相等，最后修改用户密码。  
@@ -255,20 +255,20 @@ class PlaybookFileBrowserAPIView(APIView):
   
 尝试复现这个漏洞，我们需要先创建一个Playbook。位置在“工作台 -> 作业中心 -> 模板管理 -> Playbook管理 -> 创建Playbook”，创建后会获得一个uuid格式的id：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibTcPibPUxzpTNlJrXPVzmB0xVmoJoNjuNQGjMXzbnicM4mibm47ib2TzStA/640?wx_fmt=png "")  
+![](../../.resource/remote/12e27a53cb013af4534ceaeb2259912a7bccd3346faacfab50722f28a691fbfc.png "")  
   
   
 然后直接访问http://your-ip:8080/api/v1/ops/playbook/[uuid]/file/?key=/etc/passwd  
 即可读取到passwd文件：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ib2Gdiaga5FGTQHX2VUzYE25L1tkgYHzY2qKib6n8fxpmiaVX5GVz8lzjMw/640?wx_fmt=png "")  
+![](../../.resource/remote/6815f23190a783ce233a5d646e97735df80a971b111c9515b0f8a6c91e33796c.png "")  
   
   
 写文件也在同一个视图中，只不过是POST方法：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibFrskUzfogmMBRvDFMOXWsyOjBLuiavAN7rZ5Fjdpfj9eWRVHauiazMTg/640?wx_fmt=png "")  
+![](../../.resource/remote/50dede4061c994916c4359c4b00936443b50d38f8fa61bd87cb963011ac5b441.png "")  
   
   
 我在这里向/etc/cron.d中写入了一个文件，文件名是rce，内容是计划任务。  
@@ -276,7 +276,7 @@ class PlaybookFileBrowserAPIView(APIView):
 文件写入成功后，即可看到touch /tmp/success已成功执行：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibYtNoPlJYGfzicDxTWTEUVVHI71b9jiat39IH1UItjtcfUudlvXRwsbow/640?wx_fmt=png "")  
+![](../../.resource/remote/b80bbad4d12c752964b56967a7245d1479ca53201ce62adb9a25437d9361df04.png "")  
   
   
 值得注意的有两个问题：  
@@ -315,7 +315,7 @@ class PlaybookFileBrowserAPIView(APIView):
 其中，Koko提供了对于SSH的支持。用户连接上Koko的SSH终端后，会进入一个一个主机选择的页面，我们在其中选择实际要连接的目标服务器，这就是堡垒机的核心功能之一：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibCxym0ib7j2cmT8AykFpTMg5RcwnUITJg6pCqUgRbiaPriaZ5V26WM1jGg/640?wx_fmt=png "")  
+![](../../.resource/remote/d5f4d58559d9cca74ac5600fd2ba16a8feb36077c7c68451f4abf706a5ce0a45.png "")  
   
   
 在Jumpserver的架构中，只有Core服务会连接数据库，那么对于Koko这样的组件，就需要通过使用Core提供的API来进行用户身份的鉴权。  
@@ -464,26 +464,26 @@ class AuthMixin:
   
 很离谱，我们来复现一下这个漏洞。首先，以正常用户登录控制台，来到右上角个人中心->更新SSH密钥页面，将你的公钥粘贴到页面中保存：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibu4PAyZMVBOx41jI27D0nWnyRnGxjSBaFKaiakJyoH1XZHpT1F4PDpYA/640?wx_fmt=png "")  
+![](../../.resource/remote/3eee45288b6bfd7a872ebf94968afcdf230fb2e95b1f5e355c165df06f9fe427.png "")  
   
   
 这样，你以后就可以直接通过公钥认证的方式来登录堡垒机SSH了。  
   
 然后我们直接发送包含用户名和公钥的请求给/api/v1/authentication/tokens/，可见已成功认证并返回用户Token和详细信息：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibRp3lzy68KEN9Z6ece8uSp0NTmYgkhBjUJNpXg5LCoEdVN5xmN4z0Vg/640?wx_fmt=png "")  
+![](../../.resource/remote/1d27eecf6dd7bef9d8ecdd1d70e204449773fff782258d473da4328edca81351.png "")  
   
   
   
 使用这个Token即可以用户正常身份访问所有有权限的API接口：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibMLQwbZGQ4P60dZXchd2icmKicicdhM63ICsgCXFcttLakr4OWbXGjhYjg/640?wx_fmt=png "")  
+![](../../.resource/remote/9c94bfa3529fc326bf94a8fab98949722f0f637547ef8e50413bda1d5cb857c8.png "")  
   
   
 那么，最后一个问题，我们怎么获得用户的公钥呢？既然是公钥，理论上我们就可以认为是公开的。比如，我们可以通过Github拿到任意一个用户的所有公钥，如https://github.com/phith0n.keys：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibVk9G7sCJuYvrhOWgsN4giaibr9QTGCYSSFqZouI5Z5swejV3TUN53Hpg/640?wx_fmt=png "")  
+![](../../.resource/remote/146b1fc6f5d1a65890790a9e4bc09d387fdd2abd00c8e79a1cd48f1b1992bf00.png "")  
 ## CVE-2023-42818：SSH服务端认证绕过漏洞  
   
 经过对前一个漏洞的分析，我们已经大致了解了Jumpserver堡垒机的架构，其中最重要的两个模块就是Core和Koko，前者提供Web服务相关逻辑，后者提供SSH服务相关逻辑。  
@@ -551,11 +551,11 @@ console.log(require("child_process").execSync("id").toString())
 ```  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibDaxlIwLxtG0lJSHic2Mfx2UTficwa6kBiayhoEriaugM9z1DZV9VIKfplw/640?wx_fmt=png "")  
+![](../../.resource/remote/b7311c5c2533fb9136a33b42474d61c243eee27fec79ceb253c379ec3ede4f75.png "")  
   
 官方对于该漏洞的修复方式是限制Linux主机上各种命令的执行权限：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibUyLplvU1CQhyqR93EdtNqQibxZiahrWY8YHq9tIMyOO21cicJkpzr9ukA/640?wx_fmt=png "")  
+![](../../.resource/remote/195f50bf6c250141b84556d6be77100b130953256ca12902454963757b86e0ac.png "")  
   
   
 对于这个修复方法我只能说保留意见。  
@@ -619,7 +619,7 @@ class SessionViewSet(OrgBulkModelViewSet):
   
 这个视图用于展示所有连接过的session列表。比如，用户不论从SSH还是从Web Terminal访问堡垒机中的服务器，都会建立一个Session，我们可以通过这个接口来访问：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibKpPL4JHfjZmBVtXPfpjacTecIMGkSfFrEK86mKiaj35b7vq3ZIEhD2g/640?wx_fmt=png "")  
+![](../../.resource/remote/f4bd5cbf92671ed496f7103d36db481a444e4c8f3f83840c5a4c01a151016f23.png "")  
   
   
 可见成功拉取到session列表，并获得所有详情信息。  
@@ -673,14 +673,14 @@ def allow_access(private_file):
   
 那么，如果我们访问xpack/../就可以绕过权限验证，下载到replay文件，这是一个很经典的逻辑Bug：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibicr0uU5v3TzDCAlWkz3YjictqDYo70pBKHJvzAkqQgQmO4vBQA1LmmaA/640?wx_fmt=png "")  
+![](../../.resource/remote/2e4d2595e44e8da71d9fc1832678c630dd19bbf4370826dda1fcffedc4935592.png "")  
   
 不光可以下载到replay文件，只要是data/media/  
 目录下的文件都可以下载，比如applets  
 下的代码文件等：  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/5AsxricGekWjvh8w4bC6FIZiaxwiaobND5ibfewW62hn6ibpJhZNXn8pO1NtoaWx9uVppKvLicK16DrSCIJ2QwhfO9Qw/640?wx_fmt=png "")  
+![](../../.resource/remote/466b7614bfe87cb2e2c9895b5cee45be46df9650d19a8f9634a7b541d444e55a.png "")  
   
   
 总结  
@@ -692,7 +692,7 @@ Jumpserver官方对于漏洞十分公开透明，所有上述漏洞都申请了C
   
 相信在阅读本文后，你会对Jumpserver的架构有一定了解。文章中还留有一些坑等你来填，有兴趣可以深入研究，并欢迎在『代码审计』知识星球内分享。  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/5AsxricGekWg0wEf8JlicsnRdXxIxx9Kg12f9CnBF65ZlVab02ZDOcGibibibItR4ebCCeAsAZoVXibicwCBKttGZ4euA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+![](../../.resource/remote/c5d14d3359bb94e59b985dbedd9fc72ae2fecdedbe567d7496279647a551de94.gif "")  
   
 喜欢这篇文章，点个  
 **在看**  

@@ -49,10 +49,10 @@ source_status: "unknown"
 
  FreeBuf   2025-07-21 10:03  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
+![](../../.resource/remote/a292ac9cc234e46f20d8114e58408ccfc661566640b7fb44ab2686d5eeb8dc3a.gif "")  
   
   
-![image](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR385xfQfOZT3FGrBQUN2aE64DycpSrP5hNjqkVTPm6qRfIKd1BxvleAg5hKZ2iceqA7icUC43re9frrw/640?wx_fmt=jpeg&from=appmsg "")  
+![image](../../.resource/remote/c549bd160180fdfa25478182a5c5e7b32a28d285e797c544c141be572dcd7ea9.jpg "")  
   
   
 **Part01**  
@@ -106,7 +106,7 @@ https://thehackernews.com/2025/07/hard-coded-credentials-found-in-hpe.html
   
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+![图片](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif "")  
   
    
   

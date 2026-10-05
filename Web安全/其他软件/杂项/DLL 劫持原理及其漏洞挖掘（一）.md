@@ -64,7 +64,7 @@ schema_version: "1"
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/BdmrN-8lR9AXM8jX3yxJAA)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0f37879QPsePTXHmLMD7lX7qSLLyiaZN9DjST4F0lntFrFkiaqmSqGWOPQ/640?wx_fmt=png)
+![](../../.resource/remote/e2e3b19e453705aaf741e426e9792a649798530ac6b6e7232a036fbd190a0026.png)
 
 **0x0 前言**
 ----------
@@ -121,11 +121,11 @@ DLL 动态链接库，是程序进行动态链接时加载的库函数。
 
 1. 采用 vs2017 新建 DLL 项目
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fFHE3Jun6Bt4QvIrqib1eFHt1GLTkk3K6lic5e3pBJc1k4971ocM2j78g/640?wx_fmt=png)
+![](../../.resource/remote/6a0ea5284fa2fcbc0dff216330ae1e30dbd314bfc267614aa41de9b2c72651f0.png)
 
 2. 分析 DLL 的组成
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fvGqTt0qQg5sXy99jO6ASKhMBv89lCoiaYExRAkia4sv0hZTOMgKHAsjQ/640?wx_fmt=png)
+![](../../.resource/remote/1e23def781e58495837295f5e92b2aa3a7cefcfcfc6b070c8fae2b58386e891e.png)
 
 其中 dllmain.cpp 代码如下
 
@@ -173,17 +173,17 @@ extern "C" __declspec(dllexport) void msg(void);
 
 然后点击生成中的重新生成解决方案编译得到 TestDll.dll 文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fdopOZWJOEdf5MQg4DGAOEZL8uz4ZuqiaR2oMGxnp9YbORB7GN6Tb4dw/640?wx_fmt=png)
+![](../../.resource/remote/44712841eda5feacbfa3e0a108b474e0dd1194d1f1174ee60b984975d60c651d.png)
 
 可以用 16 进制文件查看下 dll 的文件头，正如上面所说的一样，和 exe 是一样的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0f3gdPqqFcB83Nr1TAb2YHU8ibT71IOCn9Bnemgtoh4xyYlj4C6ItU9Cw/640?wx_fmt=png)
+![](../../.resource/remote/7e29654ba2e057f6913fc1df413057e61ba255d532a249292303d55f7400d615.png)
 
 ### 0x3.2 调用 dll 文件
 
 解决方案处右键新建一个项目，选择 > 控制台应用取名 hello
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fCl3Xnocd6vEXry0rVfM6tiaR0vFJWvDYRgtMt0owaR6Oet1AmTZkYXg/640?wx_fmt=png)
+![](../../.resource/remote/c9a2f0b6827d107857484e8c7331e00e8e1d1eff6da6e52d8b4e846a18a3ca2f.png)
 
 修改 hello.cpp 的文件内容如下:
 
@@ -212,7 +212,7 @@ int main()
 
 然后 ctrl+F5, 运行调试。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fCl3Xnocd6vEXry0rVfM6tiaR0vFJWvDYRgtMt0owaR6Oet1AmTZkYXg/640?wx_fmt=png)
+![](../../.resource/remote/c9a2f0b6827d107857484e8c7331e00e8e1d1eff6da6e52d8b4e846a18a3ca2f.png)
 
 可以看到成功加载了我们写的 msg 函数。
 
@@ -311,7 +311,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs
 
 win10 的键值项, 如图:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fyiccpHmnicDnUabrIFe8P7pXkt4PRgUcHGZbKIHABsw0jia1CZZgA2Srw/640?wx_fmt=png)
+![](../../.resource/remote/a46afe8b0cc2404c6f6da4b325ae37b1624f544ea7a93d6aae854858938dd100.png)
 
 这样子就进一步保护了系统 dll, 防止这些常用的 dll 被劫持加载。
 
@@ -333,21 +333,21 @@ win10 的键值项, 如图:
 
 操作过程如动态链接库安全所说:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0f71DJAM76hdO7R6yVQiclXfYqFvLCpYtaia31rtbic6l2lP514Jzzh9afQ/640?wx_fmt=png)
+![](../../.resource/remote/c4b22f47237e81880af5eed868888ae8afa2c477dc083fb829e61239f1967f63.png)
 
 打开进程监视器的时候, 会要求填入过滤器。
 
 一次填好即可 (通过上面的配置，我们可以过滤大量无关的信息, 快速定位到 DLL 确实的路径)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fbSlsV1oWEvFrhVMVFsXsxq7AnibUOicGYF6icysxjCrmK7Tehl10l2fSg/640?wx_fmt=png)
+![](../../.resource/remote/b29bfd31eba00433a59ab2997fceb9274de68344575e69456c6ec60aadcb2849.png)
 
 然后我们随便打开一个程序, 这里我使用的是深 x 服的 EasyConnectInstaller:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fePicQ0MrojFAl3dcSwAjicEy7MwE0SKEibicU1YliaiaB9Esf0bBFJU9HoIQ/640?wx_fmt=png)
+![](../../.resource/remote/7223c40f9c2bb8fd8fef804a69568fee88124f5318fdda3ce0edfb3cd0feec71.png)
 
 可以看到这里最终会去尝试加载当前目录的一些 dll, 这里可以尝试进行替换 rattler 中的 payload.dll 名字即可, 点击执行就可以弹出 calc 了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fibickoGL6O4hrL8WMfnnFEdiaEoOiaQQZviaejG0Pygr8H9NfwudUcyAv2w/640?wx_fmt=png)
+![](../../.resource/remote/f920d0418a740e879bba20c060097fe20d78f0d774a2c0e08790ceaa8e5583b0.png)
 
 **0x6 自动化挖掘**
 -------------
@@ -360,7 +360,7 @@ win10 的键值项, 如图:
 
 Rattler_x64.exe NDP461-KB3102438-Web.exe 1
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fLyzn38oVbZRuxxicWVKRpHeD2lGuoNIkw7R9RJziaAJDFBicVu5dOo9sw/640?wx_fmt=png)
+![](../../.resource/remote/de21960664dea4e0acf4c8757f40aef0ee6b97643c44fb5b8377812b442ab1b4.png)
 
 结果发现这个并没有检测出来, 可能是 calc.exe 启动失败的原因, 个人感觉这个工具并不是很准确。
 
@@ -370,17 +370,17 @@ Rattler_x64.exe NDP461-KB3102438-Web.exe 1
 
 2. 使用 windbg 导出 module
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fNYCBBpwvn3CWfKq7CJ3DRxjHzMEpQiaQibPbjKJalYjURlMeQB4oPwOQ/640?wx_fmt=png)
+![](../../.resource/remote/2512d079a06f77f6530fa8a48869560ddfa4a2dd5239ddf4bfcdc74396d9306f.png)
 
 然后打开 chkDllHijack, 粘贴处要验证的 DLL 内容
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fTrZwqYADGxPKpYSVEeaYM6L4XDEGsh99ZUWE3IichXaxhPgTdafG41A/640?wx_fmt=png)
+![](../../.resource/remote/8e482b816fb5e7c9358f58d9f402f9484f775903a24215ecefa4401d419bc527.png)
 
 然后让他自己跑完即可, 如果成功下面就会出现结果。
 
 否则就是失败:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5puVQSH7Pmh4hXKXvUjL0fYt2TBABOj5oBAPgdem3pG2ElE68RRceJNBfTU7OSgHVlCRc0G1Uczg/640?wx_fmt=png)
+![](../../.resource/remote/01515884aab9dbaaade0f635b1d6a7ed68a09ca80409e105210aab19b4482e28.png)
 
 **0x7 总结**
 ----------
@@ -402,7 +402,7 @@ DLL 劫持漏洞自动化识别工具 Rattler 测试
 
 （点击 “阅读原文” 查看链接）  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb6OLwHohYU7UjX5anusw3ZzxxUKM0Ert9iaakSvib40glppuwsWytjDfiaFx1T25gsIWL5c8c7kicamxw/640?wx_fmt=png)
+![](../../.resource/remote/db4a3dba42ee97370de8c3ff242e46fc2421085d0acae62b630a7e388f761a3b.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
   
@@ -423,7 +423,7 @@ DLL 劫持漏洞自动化识别工具 Rattler 测试
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ok4fxxCpBb5ZMeq0JBK8AOH3CVMApDrPvnibHjxDDT1mY2ic8ABv6zWUDq0VxcQ128rL7lxiaQrE1oTmjqInO89xA/640?wx_fmt=gif)  
+![](../../.resource/remote/632fd46fd9c5c81461bba0234f0d689bcd5e3937d9af2d92ada6ef08375280b1.gif)  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 

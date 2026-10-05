@@ -53,7 +53,7 @@ schema_version: "1"
 
 Spring 发展到现在，全家桶所包含的内容非常庞大，这里主要介绍其中关键的 5 个部分，分别是 spring framework、 springboot、 spring cloud、spring security、spring mvc。其中的 spring framework 就是大家常常提到的 spring， 这是所有 spring 内容最基本的底层架构，其包含 spring mvc、springboot、spring core、IOC 和 AOP 等等。Spring mvc 就是 spring 中的一个 MVC 框架，主要用来开发 web 应用和网络接口，但是其使用之前需要配置大量的 xml 文件，比较繁琐，所以出现 springboot，其内置 tomcat 并且内置默认的 XML 配置信息，从而方便了用户的使用。下图就直观表现了他们之间的关系。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBkwiaufeFgzxFg5wfDCdYBQTcGEIDxGibtIyADXAtNV91cox2pe3asA2g/640?wx_fmt=jpeg)而 spring security 主要是用来做鉴权，保证安全性的。Spring Cloud 基于 Spring Boot，简化了分布式系统的开发，集成了服务发现、配置管理、消息总线、负载均衡、断路器、数据监控等各种服务治理能力。
+![](../../.resource/remote/c1f390cf20337a7556af49e6c127f5dbb178e47cddee3dd118b09dad7e968210.jpg)而 spring security 主要是用来做鉴权，保证安全性的。Spring Cloud 基于 Spring Boot，简化了分布式系统的开发，集成了服务发现、配置管理、消息总线、负载均衡、断路器、数据监控等各种服务治理能力。
 
 整个 spring 家族有四个重要的基本概念，分别是 IOC、Context、Bean 和 AOP。其中 IOC 指控制反转，在 spring 中的体现就是将对象属性的创建权限回收，然后统一配置，实现解耦合，便于代码的维护。在实际使用过程中可以通过 autowired 注解，不是直接指定某个类，将对象的真实类型放置在 XML 文件中的 bean 中声明，具体例子如下：
 
@@ -80,7 +80,7 @@ public class WelcomeController {
 
 Spring 将所有创建或者管理的对象称为 bean，并放在 context 上下文中统一管理。至于 AOP 就是对各个 MVC 架构的衔接层做统一处理，增强了代码的鲁棒性。下面这张图就形象描述了上述基本概念。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBAuejaUf998lwJ3P83ZJiaM6xea8Ef9jX3iaSJlB76hgVLA4QialpvxGqw/640?wx_fmt=jpeg)
+![](../../.resource/remote/d12dd7d71b4d1ece8e4d26c8a4785c3e4fb3f81edd098f25735038df6bf8adfb.jpg)
 
 **各子组件介绍**
 ----------
@@ -89,16 +89,16 @@ Spring 发展至今，整个体系不断壮大，子分类非常庞大，这里�
 
 首先是 Spring Websocket，Spring 内置简单消息代理。这个代理处理来自客户端的订阅请求，将它们存储在内存中，并将消息广播到具有匹配目标的连接客户端。Spring Data 是一个用于简化数据库访问，并支持云服务的开源框架，其主要目标是使数据库的访问变得方便快捷。Spring Data Commons 是 Spring Data 下所有子项目共享的基础框架，Spring Data 家族中的所有实现都是基于 Spring Data Commons。简单点说，Spring Data REST 把我们需要编写的大量 REST 模版接口做了自动化实现，并符合 HAL 的规范。Spring Web Flow 是 Spring MVC 的扩展，它支持开发基于流程的应用程序，可以将流程的定义和实现流程行为的类和视图分离开来。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBy5WXugiaqicicrY58fIciaJZvLG7hpLhOFZCz9Rdauh8F77ysp0ia8JTyLQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/597b50b3f22a4e45d880c896764a95cc895c1dd7e772a1091aa21dd710304a12.jpg)
 
 **使用量及使用分布**
 ------------
 
 根据全网数据统计，使用 Spring 的网站多达 80 万余，其中大部分集中在美国，中国的使用量排在第二位。其中香港、北京、上海、广东四省市使用量最高。通过网络空间搜索引擎的数据统计和柱状图表，如下图所示。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBuyG8SZZf2libZ1oy1BrhBQTJYnnlbcY4sBaefDthfozrb4Fk2Hc3LoA/640?wx_fmt=jpeg)
+![](../../.resource/remote/fc35b3fe462c1cc8e7c796245446659979452ba92437afe5d7e2afa996202740.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBEQmVZfFwLOwug0RjRqEVibq1Nlke2lZUkicp3XicHhHeia8iaKeKLBJu5Yw/640?wx_fmt=jpeg)
+![](../../.resource/remote/d3e2d7cd4b0485a9aa4abdf33826261a5f5ba0b6c1a00c1fd92eab8a4d062f68.jpg)
 
 **漏洞背景介绍（SpEL 使用）**
 -------------------
@@ -277,7 +277,7 @@ public class SpEL {
 
 具体的流程如下，其实就是编译原理里面的词法分析和句法分析：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBEEQ8ibTclcGxOdaYtibhkjn9jbgZSzLVppQZ2tZAH2VRaffesArtySbw/640?wx_fmt=jpeg)
+![](../../.resource/remote/cfbfface45b60c5b80cc91392d601f7d7cad363fdf6d608cb2a9be842b33be53.jpg)
 
 （1）首先给定表达式 1+2
 
@@ -315,7 +315,7 @@ StandardEvaluationContext: 包含所有功能，存在风险
 
 通过对 Spring 漏洞的收集和整理，过滤出其中影响较大的远程代码执行高危漏洞，可以得出如下列表：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBGRpUyWGyxJgN8jbPjYmbiaoBCXsulbFbR22V0fDAZgDkdtahOg8icMzA/640?wx_fmt=jpeg)
+![](../../.resource/remote/cb2a467ae9f8b4ef2073a80b7b0f64b567427cc36c0e48d89efaa49232597de3.jpg)
 
 从上表可以看出，这些漏洞分布在 Spring 不同的子分类之间，且大多都是较低的版本，用户只要及时升级高版本并及时关注新的漏洞信息即可轻松规避这些漏洞。尽管近期没有出现相关漏洞，但是这些高风险漏洞依然不可忽视。这里面出现的漏洞大多不需要复杂的配置就可以直接攻击成功，从而执行任意代码，危害较大。所以，**开发者在使用 Spring 进行开发的过程中，一定要关注其历史风险点，尽量规避高危漏洞，减少修改不必要的配置信息。**
 
@@ -327,7 +327,7 @@ StandardEvaluationContext: 包含所有功能，存在风险
 **高可利用漏洞分析**
 ============
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBYFvwnptiauUmTlzJtDpiaFHc4VEwDKKRVj3dHstrbPat85FbItZgNxpA/640?wx_fmt=jpeg)
+![](../../.resource/remote/9b34dde138917b59a68132d56cd29ea990421712850413d2768b96eecc8c5289.jpg)
 
 ### **1 CVE-2018-1270**
 
@@ -353,15 +353,15 @@ Spring Framework 4.3 - 4.3.15
 
 点击 connect，首先将触发 DefaultSubscriptionRegistry.java 中的 addSubscriptionInternal 方法，
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBPqzzPJauZIDamuUYMKohMBZhEo6afv9as7MF3fnIhKcnZficETzUJog/640?wx_fmt=jpeg)第 80 行将首部的 selector 字段的值取出，就是我们之前传入的恶意表达式，接着到 83 行，这一步就很熟悉了，使用解析器去解析表达式，显然这个时候再有一个 getValue 方法触发并且没有使用 simpleEvaluationContext 就能够直接执行我们传入的表达式了。
+![](../../.resource/remote/bde5beae3847e4d8ff187f6c173810bca54827e78d42298157d822a4385d3647.jpg)第 80 行将首部的 selector 字段的值取出，就是我们之前传入的恶意表达式，接着到 83 行，这一步就很熟悉了，使用解析器去解析表达式，显然这个时候再有一个 getValue 方法触发并且没有使用 simpleEvaluationContext 就能够直接执行我们传入的表达式了。
 
 监听网络流量，发现后面 send 信息的时候，将会将消息分发给不同的订阅者，并且转发的消息还会包含之前 connect 的上下文，即这里的 expression 将会包含在内。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBUJozGU2YTNeZiah6AiceHX13MCgbozAyulBv6DgsDakLbyU66UvLQJkA/640?wx_fmt=jpeg)于是，尝试随便在文本框中输入一些内容，然后点击 Send，最终可以触发 SimpleBrokerMessageHandler.java 中的 sendMessageToSubscribers 方法如下：
+![](../../.resource/remote/b71033c4bcfcffa2b2f6950bb4b019a30e888dbb6186bfa7a5ae1c0013933f71.jpg)于是，尝试随便在文本框中输入一些内容，然后点击 Send，最终可以触发 SimpleBrokerMessageHandler.java 中的 sendMessageToSubscribers 方法如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBzymBEyZzoBMVaOVOPwavfEeHEMxBjKBOawvvSz1eG47cySBm9vWq1Q/640?wx_fmt=jpeg)继续进入 findSubscriptions 方法，并且不断往下走，最终可以发现在 DefaultSubscriptionRegistry.java 中 filterSubscriptions 方法中对上下文中的 expresion 做了提取，并使用 StandardEvaluationContext 指定了上下文，也就是说这里面可以直接执行代码，没有任何限制。并最终在第 164 行使用 getValue 方法触发漏洞，弹出计算器。
+![](../../.resource/remote/76e21ad9bf1112a3b68b3c8f49d10947de968c1af0cdf445598f210651594cfb.jpg)继续进入 findSubscriptions 方法，并且不断往下走，最终可以发现在 DefaultSubscriptionRegistry.java 中 filterSubscriptions 方法中对上下文中的 expresion 做了提取，并使用 StandardEvaluationContext 指定了上下文，也就是说这里面可以直接执行代码，没有任何限制。并最终在第 164 行使用 getValue 方法触发漏洞，弹出计算器。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBj17WQ5EfJrwAcSv1HnXyfROuN5Bs3UiccHHLgsxhUvAYGhIgdKoxsjg/640?wx_fmt=jpeg)
+![](../../.resource/remote/652473a599fb9ac0e1f047e81b88961d8bf65386f287cbaef092ec4329d5d1b3.jpg)
 
 **1.6 补丁分析**
 
@@ -397,13 +397,13 @@ Spring Data Commons 组件中存在远程代码执行漏洞，攻击者可构造
 
 ● 首先创建解析器：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBpPiclicKB3LIcP6t2UM2ia3ZVNibFBn8iaz8pfbzmC8w9nxfIMmWHNKIeJw/640?wx_fmt=jpeg)● 接着使用 Standard 上下文
+![](../../.resource/remote/f84b385aed125cf4db24d4338f7248ed8094635a8d2cfae99ee6d24841737629.jpg)● 接着使用 Standard 上下文
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBxJLGquQyvTby8thvTklGGdHiac1cOoworosls5bn7pHGNeSZ0F175pA/640?wx_fmt=jpeg)● 然后包含待解析表达式
+![](../../.resource/remote/58b31a699eedf00016b521117ce23d80d45a8d3c5e6e4f87e6770235e75694e8.jpg)● 然后包含待解析表达式
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBDQP9iaZxHcjD9cML4lwcaSzudHdPDEYbicSxNYweCXdWR9jdyxuISbsQ/640?wx_fmt=jpeg)● 最后使用 setValue 触发
+![](../../.resource/remote/fea7e9b823cd12cdad57e1a99ba580440f971048b4639327863e3278b931c737.jpg)● 最后使用 setValue 触发
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB6EW5KTz79EMtdUGiaV2CFDMKAqpCic5jyxg3sibZ4N0rsaoHvzDHtUGvg/640?wx_fmt=jpeg)
+![](../../.resource/remote/67e52ffde19aaf5145eafb0ff69d10c7fbf3de96f64a3e98171ac4b57490cea2.jpg)
 
 **2.6 补丁分析**
 
@@ -435,21 +435,21 @@ Springboot 1.3.0
 
 访问上面的 URL，可以进入到我们的控制器，并紧接着抛出异常如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBw77R4ib7ZnicoWTHbVeicPulThWNKgnMrIticA43dqVKriaGuMkkCqicmxQg/640?wx_fmt=jpeg)进入异常的代码，经过冗长的代码调试，最终可以来到关键点的 render 方法：
+![](../../.resource/remote/3130a682835fa0a6a6ef255e30c8b1881d26f692bf1b5ec7cf7471011b348c0b.jpg)进入异常的代码，经过冗长的代码调试，最终可以来到关键点的 render 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBZmC3CcXcXDlPvlaBOljzhiaCTicicyS9XSTlC4nYOSLjMfol0HZvXpwoQ/640?wx_fmt=jpeg)接着进入 render 方法查看，这里面的 replacePlaceholders 方法将会进行形如 ${} 的 spel 表达式替换：
+![](../../.resource/remote/2d791c9e438a5f913de1eda68a2b10e8f7570a5f0c330cc2c278e7e3c8fcb860.jpg)接着进入 render 方法查看，这里面的 replacePlaceholders 方法将会进行形如 ${} 的 spel 表达式替换：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBztdwD87j8f55DpibkREjm2U16yFZTOfRH2qcRbV24LzTGwp88qOR5JA/640?wx_fmt=jpeg)进入该方法查看，最后进入 parseStringValue 方法, 该方法会循环将带有 ${} 的错误页面的 HTML 字符串中的一个个 ${} 的内容进行替换，并且这里面的 ${message} 是我们传入的值。
+![](../../.resource/remote/93a561c7791199389555ddb8683910ce239bc203397a8f44ce3c481505de2041.jpg)进入该方法查看，最后进入 parseStringValue 方法, 该方法会循环将带有 ${} 的错误页面的 HTML 字符串中的一个个 ${} 的内容进行替换，并且这里面的 ${message} 是我们传入的值。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBneibmcRw5K112pzIv0guOkJ4zibb21Uz36BvrIqB7maYQo5MXPZnhPVA/640?wx_fmt=jpeg)于是可以就此构造我们的 payload，借助他的循环，继续解析 spel，最终造成任意代码执行。其中，解析 spel 的代码如下：
+![](../../.resource/remote/3b36d1daf58e8a132f8ea0f110ebfc200c30ce9e9be6c3b0e2352df5cb8485be.jpg)于是可以就此构造我们的 payload，借助他的循环，继续解析 spel，最终造成任意代码执行。其中，解析 spel 的代码如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBlazOvPgO3EHm5ntiaZRbdb63NWO6ooI5HIPLrRtkaBZWpZl5OcWmdPA/640?wx_fmt=jpeg)**3.6 补丁分析**
+![](../../.resource/remote/fe59520eb6ac09fac9ce6cc63b81ce1cf5228886f5ec87d12df00a45cae4ba5b.jpg)**3.6 补丁分析**
 
 通过添加一个 NonRecursivePropertyPlaceholderHelper 类，对于二次解析的值进行限制：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB6FSIVVtIibLJGVR7NxClBtmwuO9Gl6XxtmGDSIf7qwnmKCI0M7THoNw/640?wx_fmt=jpeg)
+![](../../.resource/remote/e9ce32991b3694e20df5d3810ceef574740aab958c5c93e2f41bfa2d51ea4e30.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBPWqXX7NNvRuRFchKGQvsQkicvu8kV4Mg4DyVWbmnvU4dseagS3Xel0A/640?wx_fmt=jpeg)**4 CVE-2017-8046**
+![](../../.resource/remote/532f1585c2f0eea6d823116726c6bcdaf8fc81d8f64ee649a2fbdb715ad8f4f5.jpg)**4 CVE-2017-8046**
 
 **4.1 威胁等级**
 
@@ -473,31 +473,31 @@ Spring Data REST prior to 2.6.9 Spring Boot versions prior to 1.5.9
 
 执行上述 payload，定位到程序的入口如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBMBBqb5icXEVJuOVhWvBwPol7kMTBXzfxYnbEFe4wbth2yyMXRCliadmQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/2d2f62bca9b56d0ba594e9f57557c4978624a64de7af1d0001005d7371c834b1.jpg)
 
 （注：这个类在 springmvc 里面，名字为 JsonPatchHandler）
 
 重点看这个三目运算，其中的判断是看 HTTP 方法是否为 PATCH 和 content-type 是否为我们上面提到的那个，然后会进入 this.applyPatch 方法，接着根据我们指定的 replace 字段进入对应的处理器：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBicmyle1q81NocpXy9M23szP8gRPSueLOzRQ9hcu02siaytbiazghic1r1w/640?wx_fmt=jpeg)
+![](../../.resource/remote/63b7a552b28f6c302b8378df63c1a7ef624ba5c74a9f2040b4abc0e09fb5cc2e.jpg)
 
 然后实例化 patchOperation，并初始化 spel 解析器：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB8IgUAjFFW5adkXPxetAMHiaRrIU7ibo2HGfMacE3oUECprLpUNAzibFRw/640?wx_fmt=jpeg)
+![](../../.resource/remote/9d31425b7e9733e5ad799d04dd9ca45274223c5a04abcd13eb4fac08efbf0c85.jpg)
 
 最后再调用 setValue 触发：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBqEOaKE60Rh2giaZibWnfX09N0KFhWavsibXAe8ok3ZqN1MiabIPqm5mxpw/640?wx_fmt=jpeg)
+![](../../.resource/remote/840c7a7cbbba85dc2dc9be84c3f2e4572a2747a91408b232a01bb218f66e690d.jpg)
 
 **4.6 补丁分析**
 
 这里用 2.6.9 中的修复方案举例子，在 perform 中不是直接 setvalue，而是先做一个参数合法性校验（此处添加了 SpelPath 类），将 path 中的参数用’.’分割，然后依次判断是否是类的属性，只要有一个不是就直接报错，从而解决了上述问题，部分补丁图片如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB23F0uicTIHe7h6dibmAd6z1fNOwvjbKCORIpWm1YZfD6zZDDXicKZmv2g/640?wx_fmt=jpeg)
+![](../../.resource/remote/09c0decb395852e3e5f4d018451f718f5e7dc442b2d2cb36e653e8674887067b.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB6XWIGWNlbuRs3R8utvPNCoFibnF0mKjibERia4gVeGMtVdZA2cOO1AcGA/640?wx_fmt=jpeg)
+![](../../.resource/remote/3d07d0356c34f38a755ee662604a698f052d6b492de27b10bc263fe5f3813a50.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB3yibsia5GnqfCjgIjIgbpHVibxZEdJFiaf2aREYQnWbPmdfUWhxxBbNHEw/640?wx_fmt=jpeg)
+![](../../.resource/remote/02fb7d53687c5f61900f146334d74f652e732e819868215294153964e0f5c6d0.jpg)
 
 ### **5 CVE-2017-4971**
 
@@ -523,25 +523,25 @@ Spring Web Flow 2.4.4 ~ 2.4.8
 
 首先通过执行 confirm 请求，断点到如下位置：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB15mY5jicsqOp4iaHafaHxe2jibHrVn6iacaR8BQk2nTF352iaEy1o0OZUSg/640?wx_fmt=jpeg)这里可以发现可以通过判断 binderConfiguration 是否为空来选择进入哪个处理方法，这里的 binderConfiguration 值指的是在配置文件中配置的 binder 内容。深入查看这两个处理方法。其实都用了 SpEL 表达式，不过 addModelBindings 方法传入的参数的是上面提到的 binder，是写死在 xml 文件中的，无法去更改，所以这里面就考虑当没配置 binder 的情况下走进 addDefaultMapping 方法的情况。
+![](../../.resource/remote/ca9e3942f2d847cd85793a6fbf4fa6d581e4be9c60dd0c77eb9eaf4ba3e71b73.jpg)这里可以发现可以通过判断 binderConfiguration 是否为空来选择进入哪个处理方法，这里的 binderConfiguration 值指的是在配置文件中配置的 binder 内容。深入查看这两个处理方法。其实都用了 SpEL 表达式，不过 addModelBindings 方法传入的参数的是上面提到的 binder，是写死在 xml 文件中的，无法去更改，所以这里面就考虑当没配置 binder 的情况下走进 addDefaultMapping 方法的情况。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBtfHuoWlaq4nia22K08sMrShToBvwnlaGADcQzoFtKmdVibhv4InUSdHQ/640?wx_fmt=jpeg)addDefaultMappings 方法如上，其作用是遍历所有的参数，包括 GET 参数和 POST 中的参数，然后一个个判断其是否以”_” 开头，如果符合就进入 addEmptyValueMapping 方法进行处理，否则就进入 addDefaultMapping 方法进行处理。本次漏洞的触发点是上面这一个，所以我们深入查看一下 addEmptyValueMapping 方法。
+![](../../.resource/remote/e43c946b5f7f60c3384eec10a5fa840f1322627894574f060e431ec2f9c1b08c.jpg)addDefaultMappings 方法如上，其作用是遍历所有的参数，包括 GET 参数和 POST 中的参数，然后一个个判断其是否以”_” 开头，如果符合就进入 addEmptyValueMapping 方法进行处理，否则就进入 addDefaultMapping 方法进行处理。本次漏洞的触发点是上面这一个，所以我们深入查看一下 addEmptyValueMapping 方法。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBO5M12P5YdnvXbQtxib3q8nXK3e03flIo47MicwXQ7TDyJ1MFxhaaNg3A/640?wx_fmt=jpeg)可以看到该方法用 SpEL 表达式解析了传入的变量名，并在后面使用了 get 操作，从而可以导致漏洞的产生。
+![](../../.resource/remote/d962082512469484005be7b3c973688790129f73c29070e4e7fa5b1e28b927a7.jpg)可以看到该方法用 SpEL 表达式解析了传入的变量名，并在后面使用了 get 操作，从而可以导致漏洞的产生。
 
 **5.6 补丁分析**
 
 查看官方补丁源码如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB0qwhorhRQxxqvkewtfr4anUXx8jIRiaTj3qicVY8xlxq8yQEwKZoP4yQ/640?wx_fmt=jpeg)将表达式类型换成了 BeanWrapperExpressionParser，因为该类型内部实现不能够处理类所以避免了该问题的发生。
+![](../../.resource/remote/0264c6aaaf732be808efe31be47a0ca54aca128aac9dcf44c4d6a72bade18c8f.jpg)将表达式类型换成了 BeanWrapperExpressionParser，因为该类型内部实现不能够处理类所以避免了该问题的发生。
 
 然而上述还提到如果参数类型不是以”_” 开头的将会进入 addDefaultMapping 方法，下面我们进入该方法进行查看：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBX2ib0pibnkibnsJzEIQx9nts7Q5aZ7jGtK9WBicEsbX2Mj4NicbMfzyaPFg/640?wx_fmt=jpeg)可以看到这里也对传入的参数进行了解析但是没有看到明显的 get 方法来触发，继续往下寻找 get 方法。首先这里面将解析器放入了 mapper 中，下面就重点追踪这个 mapper 的使用即可。
+![](../../.resource/remote/2c83bba50c6ec9f1941871cb9fcf33ca95e2a9538b013b282c6671e130934ab2.jpg)可以看到这里也对传入的参数进行了解析但是没有看到明显的 get 方法来触发，继续往下寻找 get 方法。首先这里面将解析器放入了 mapper 中，下面就重点追踪这个 mapper 的使用即可。
 
 首先发现一步步回到之前的 bind 方法，可以发现最后一行对该 mapper 进行了操作，跟进该 map 方法:
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBw5UqVVUKrttm89VFrbLtQJDDiaDDulVvViaYqUQArpffhyeQXGdqTia5A/640?wx_fmt=jpeg)在这里就进行了 get 操作，从而再次触发了漏洞。
+![](../../.resource/remote/59473843083d2e5ef5f4f42c96bf389c2d3a921e555af8538f20d0231584b414.jpg)在这里就进行了 get 操作，从而再次触发了漏洞。
 
 对此，也可能跟这个没关系，官方最终将全局的解析器换成 SimpleEvaluationContext 来彻底解决此问题。
 
@@ -569,23 +569,23 @@ Spring Boot 2.x
 
 搭建环境并按上述方式进行攻击，并搜索到 spring-cloud-context-1.2.0.RELEASE.jar 中的 environment 和 refresh，然后下断点跟进，可以发现首先的 env 改变会将下面体现：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBkygE2khz6qKFBXNM1UeH1xgiaNia10W9DopwIzjPLsrmibToib5Uu4FhBg/640?wx_fmt=jpeg)其实就是将环境中该变量的属性值进行更新。
+![](../../.resource/remote/cff9b681085442bc1888d38eb95033dd0005e82bb1858dcf7108709183dceada.jpg)其实就是将环境中该变量的属性值进行更新。
 
 之后看一下关键点 refresh 接口，首先一旦 refresh 接口被触发，就会将有变化的信息以及一些基本信息挑选出来，如下图可以看到之前变化的值已经被挑选出来：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB53S2X2l3AiagPbwuRpoxVHfqcgFHddDNl6oeTHBjSfzKseWevtr9cnQ/640?wx_fmt=jpeg)接着进入到 addConfigFilesToEnvironment 方法进行处理，先获取到所有的环境值，然后设置一个监听器，依次处理变化的信息：
+![](../../.resource/remote/0df5800a25ba06a1eee65330c3774ea0210235bff4f1eb7419b6954333559413.jpg)接着进入到 addConfigFilesToEnvironment 方法进行处理，先获取到所有的环境值，然后设置一个监听器，依次处理变化的信息：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBaGtT3yickSiabVBVrakBnNiaAAS2jfOQ4Kf5xVjlINSA2MicVOPiatCQlSw/640?wx_fmt=jpeg)
+![](../../.resource/remote/59149fc510f972ba1279adf245f570c0da0e4b756cbabd0d33a025039c1e4310.jpg)
 
 这里我们直接跳转到处理这个恶意地址的关键部分，首先进入 ConfigFileApplicationListener 的 load 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kBjFfCrNaDfVdA6aaVJBt93WLxibgmQicbhyBoQMhXOBB1lV9q5iank483w/640?wx_fmt=jpeg)
+![](../../.resource/remote/936bffe948f722d806b1a597b14e6e2f6289a3738021581c2183bbe293cc832a.jpg)
 
 这里面先判断 url 是否存在文件路径，如果存在才进入处理该地址，否则将 name 的参数设置成 searchName 进行处理，这里的值为 “bootstrap”，后面会强行加上后缀。然后一直深入到 PropertySourcesLoader 类中的 load 方法：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB0Gez5bvg5R52GfmXHdKnc2GtbHX3eJkx8lf04lwSbcrGIIfd5EKdFA/640?wx_fmt=jpeg)首先会发送一个 head 请求判断文件是否存在，以及是否是一个文件，然后会根据文件后缀来判断是否能解析，这里面就是 yml 文件，所以判断可以用 YamlPropertySourceLoader 类来处理。然后进入该类的 load 方法中：
+![](../../.resource/remote/6952d6d1def11d17777194229906d91f328e9e4489c20914ef624975a196b823.jpg)首先会发送一个 head 请求判断文件是否存在，以及是否是一个文件，然后会根据文件后缀来判断是否能解析，这里面就是 yml 文件，所以判断可以用 YamlPropertySourceLoader 类来处理。然后进入该类的 load 方法中：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR38ZclBI1VNMALxfjiaOSz0kB1914Okic1avOpzJ55QPGicvmlI3lARhMkSRFaYccicJUsiaDklyykKX83Q/640?wx_fmt=jpeg)在这里将会加载远程 yml 文件，并处理里面的内容，而导致远程代码执行的发生。
+![](../../.resource/remote/8cd51ecfb589de3b6d081db968d9a17ed58529259ada566de17ba01aaf01aced.jpg)在这里将会加载远程 yml 文件，并处理里面的内容，而导致远程代码执行的发生。
 
 **6.6 补丁分析**
 
@@ -614,9 +614,9 @@ Spring Boot 2.x
 > 
 > 10.https://www.mi1k7ea.com/2020/02/09/%E6%B5%85%E6%9E%90Spring-WebFlow%E4%B9%8BCVE-2017-4971/
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38Tm7G07JF6t0KtSAuSbyWtgFA8ywcatrPPlURJ9sDvFMNwRT0vpKpQ14qrYwN2eibp43uDENdXxgg/640?wx_fmt=gif)
+![](../../.resource/remote/33f7cb5f70c2418864a2ab9c5ebdb737b442bc98d5a34c344981f472bf69c466.gif)
 
-![](http://mmbiz.qpic.cn/mmbiz_png/3Uce810Z1ibJ71wq8iaokyw684qmZXrhOEkB72dq4AGTwHmHQHAcuZ7DLBvSlxGyEC1U21UMgSKOxDGicUBM7icWHQ/640?wx_fmt=png&wxfrom=200) 交易担保 FreeBuf+ FreeBuf + 小程序：把安全装进口袋 小程序
+![](../../.resource/remote/241a5efdd3cb729f4507509cc08336272b9d313bf6f9b586027d6bbf4e5d3099.png) 交易担保 FreeBuf+ FreeBuf + 小程序：把安全装进口袋 小程序
 
 精彩推荐
 
@@ -628,13 +628,13 @@ Spring Boot 2.x
 
   
 
-****![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3ib2xibAss1xbykgjtgKvut2LUribibnyiaBpicTkS10Asn4m4HgpknoH9icgqE0b0TVSGfGzs0q8sJfWiaFg/640?wx_fmt=jpeg)****
+****![](../../.resource/remote/1347c4eed374fe9bbfe38e3bb4209c6240c5b44ca7dab877fa596499b746684e.jpg)****
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icpSmNbdiaVpmTEfDHJFoS2OIO0ibau3Xo0W3W5icSIT9hIQY4gmlK4nOY8jcVq2hngIe7Fug8w6lHyQ/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484287&idx=1&sn=16a9b2dc0e205a0e5fe86ae5cae9fe2e&scene=21#wechat_redirect)[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR39823fgk2Py1fbU5wCoewwO0AKFIGmCLF6bY37GDicGMDRicgQf6xW1jtjY8Raby8RjiauX5205Zg8Dg/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484370&idx=1&sn=8b79701a2936e04e390f165344e5fcdc&scene=21#wechat_redirect)
+[![](../../.resource/remote/c997a9f4986b6f5dd3a7ce30fe4438432a0e69a1510ddadfdcc3490a3c0ca6b7.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484287&idx=1&sn=16a9b2dc0e205a0e5fe86ae5cae9fe2e&scene=21#wechat_redirect)[![](../../.resource/remote/c4252b3cb8caac64577e3e9712325a5420a41886301aa06c145beb949c573d10.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247484370&idx=1&sn=8b79701a2936e04e390f165344e5fcdc&scene=21#wechat_redirect)
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3ibiaZJLCsVMlaEsibPjqzeh60YWkj7icVX18lFGJjXJia40sq6PzwUJ8urTCswbZdc4g7KnKklEcsJKdw/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485180&idx=1&sn=06c034789bc8656821df64075e3d9372&scene=21#wechat_redirect)[![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR38ibJ9pkJia3Q6VHGxykVprRoZlaPuPLW8XKKK9XdK8RVljA2pBue8QhRyTx8HQoVEC5Kre2H3Y44vQ/640?wx_fmt=png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485114&idx=1&sn=0c765c3970ddfd1021b59c6adaea52ce&scene=21#wechat_redirect)![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR38zicMqOsJkQvPpKaPxqjyZ7deMd3Oj2po4iclibkAAzPLIHN0KQpUYHsrhB0Zr9GzsFGzwQ6cEZK0xw/640?wx_fmt=png)
+[![](../../.resource/remote/be3b748044ee202658169d30847d7c44b5950850c5235f0a0951eded1a9a4886.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485180&idx=1&sn=06c034789bc8656821df64075e3d9372&scene=21#wechat_redirect)[![](../../.resource/remote/cb1ae91c47d7f7634ff81ad99e06a65ebb1235e5532d224fd2e5ef9aecce5e67.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247485114&idx=1&sn=0c765c3970ddfd1021b59c6adaea52ce&scene=21#wechat_redirect)![](../../.resource/remote/81b6de4ce2cd1e1d591dcfd40c764aca68cb5873d8a3b88756d695bd66946f72.png)
 
-**************![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif)**************
+**************![](../../.resource/remote/9e6a809b9fdf5ef44cf7cd86b8e001b4411ee0bfd0f43b726a7d5f1d85e9c9a1.gif)**************
 
 ---
 

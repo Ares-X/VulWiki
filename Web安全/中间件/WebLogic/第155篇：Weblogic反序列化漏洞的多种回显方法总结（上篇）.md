@@ -49,14 +49,14 @@ schema_version: "1"
 
  嗨嗨安全   2026-02-02 12:41  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450ATcz6jUJnFNeOxRzVZ9LbcCCMJ6Af2WYicgMPA32IwibF8mI2ibC9h8jaHkhxnZzZuqctMLRTxDudicA/640?wx_fmt=png "")  
+![](../../.resource/remote/504aaa4201bd1a6354f19f95f92a915f5f227a3ba7bb476e0bbf305d85443fe3.png "")  
   
  Part1 前言   
   
 大家好，我是ABC_123  
 。最近在家养身体，于是静下心来把之前写的Weblogic反序列化漏洞利用工具的每一个EXP都仔细检查了一遍，把T3/IIOP回显过程中的遇到的一些坑点、知识点重新梳理总结了一下，今天分享出来，让编写Weblogic反序列化漏洞利用工具的朋友们少走弯路。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/OAz0RNU450Dq1Q8s4COc7InkMO0jIGjiaGho1fcJicpibWB4vzvIM1wAib9TiakVECbIM5S0mHCTTeGJJibWtCe25vXw/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/054eaa00192afa95a446d8a3a3be845c8c43707b5afdca56405b956e4f0599ab.jpg "")  
   
   
  Part2 技术研究过程   
@@ -68,7 +68,7 @@ Weblogic的T3/IIOP的各种反序列化漏洞EXP、通过Ldap注入不同版本�
 以适当增加软件体积为代价，换取对多 JDK 版本环境的良好兼容性  
 。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPM8d9vth0dMgkibTgzoR2HOk5sTqwsyCTEByf2Kicd2UUicu2hneVLJIRGg/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/1d4f14e988286520fe2bf1fe11ce3ca262e7639c6a6713f0472e07e0e29f8f6e.png "")  
   
   
 这里说的兼容性指的是：Weblogic 9.x版本是JDK1.5的、Wblogic10.3.6是JDK1.6的、Weblogic 12.2.30是JDK1.8的，这种 JDK 版本跨度较大的情况下，单一编译产出的 WebLogic 工具难以同时兼容新旧环境。  
@@ -92,7 +92,7 @@ Context ctx = new InitialContext();
 ctx.bind("javax_ejb_eis_wjars", obj);
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMhCiaFrW9sO1OiaQqdGZhbefsT6lVh70eh5CC8Fpmn2PhwuxWZH4QdZDQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/699fb9831e0c0b2e5515f24391ad684abda8e8efdfec82adb3b84a2300641ddf.png "")  
 ###   
 - ### 2. 基于字节数组写文件的URLClassLoader回显  
   
@@ -110,17 +110,17 @@ ctx.bind("javax_ejb_eis_wjars", obj);
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMlSjS7CIMBDDEahHJIH8aE3wIzcj2E04PicZ2NqxKcsKJml53zlgmg9w/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/689fab0fe90f2f9ab7b032b8a8ae4986e28a2f55a25e18790a91b4bec1786460.png "")  
   
   
 以下是通过CC链实现的java反序列化过程中被动触发的利用链。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMWsMibKNcUSjRpQgKGIcBXu54dkNCbXq0aOlNjWdQ7Scuwu8uLhafsQQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/d0449b6a0b8d52d23da6e844fd6070cacf8f240c4b2dc3ee7bb240af5f3c75fe.png "")  
   
   
 具体执行原理和方法一差不多，但是做了一些改进，接口换成了Weblogic自带的 weblogic.cluster.singleton.ClusterMasterRemote，兼容性有了更进一步提高。具体为什么这样做，后续再给大家讲解。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMD3x7zRHKgX9qwo3kITq3JLfAo4hLVKwElKEm0HibALAM7WuUlAJNdRw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/adfde61311cd3e5296eba429af07cb88dbc377a8f9ffbf7d6a1d8971b32d9802.png "")  
 ###   
 - ### 3. 基于DefiningClassLoader内存类加载无文件落地回显  
   
@@ -144,7 +144,7 @@ Transformer[] transformers = new Transformer[]{
   
 接下来使用我写的蓝队分析取证工具箱对byte[] payloadBytes部分进行反编译分析，可以看到大体的代码，与前面的方法不一样的是，这里是一个class文件，不是jar包形式的。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMta3orlUe8lfnWBIdlLtM9zziaMZibia92UZRlNPciciaEQWlBLDLicQy97Yw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4db43f0b465265e3e4fc5e2cf6cfbc376cb55a1c1b3d42e49162791c6f2a7c52.png "")  
   
   
 这个方法也有问题，在Weblogic一些特定版本，不存在org.mozilla.classfile.DefiningClassLoader 这个类。  
@@ -167,12 +167,12 @@ String[] bootArgs = {command};
 
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMiapeyY2IlehVWohxbZxHW6CQWSEjQq0Ht4R2cZAZIoXddibXzuzibT7og/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/f8fa9a7b319dd4939fd955208f91ba20363ff9b85a6db8916f75f7d4c57f8ecb.png "")  
   
   
 同样使用蓝队分析取证工具箱对byte[] payloadBytes部分代码进行反编译分析，发现剩下的代码部分原理与方法3是差不多的。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450Cicw7LAmeBmzfx63YoQdSPMHW8CY5ER7Tb3rWf4gvCAMcYZiaIuoqAccNccyicGXRIibJ2q6gPvzkwqA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/6e063cfe6ff111fd39a36f22593e3e08ccd056a4693019c744946032004c4f48.png "")  
 ###   
 - ### 5. 基于请求线程上下文与JavaScript引擎的命令回显  
   
@@ -248,10 +248,10 @@ try {
 希水涵-信安技术交流群  
 "，欢迎您的加入。  
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450AzthQWOc92m52QnCicBUOcG4ODCEqfs0OQL5ueNdZg1QhC0oZLicqmHZZtmPcmH5funD4TECY4BdgQ/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=8 "")  
+![图片](../../.resource/remote/b96b1621cd6ba36cb8c529bb6ccfa84c5e66e25cadb0d456821405985cbbed42.png "")  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450A5qqg2iaK6KIYYR8y6pF5Rh3JHDibOKOop204nXz618iawdRb8dABicMPtHb2PkJE8x6koJO5HyuwZJQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=18 "")  
+![图片](../../.resource/remote/0aa9f4bda6d335030fc31e5715250a9d7d711b7c4a0331ed05a02da725a7b199.webp "")  
   
   
 **公众号专注于网络安全技术分享，包括APT事件分析、红队攻防、蓝队分析、渗透测试、代码审计等，每周一篇，99%原创，敬请关注。**  

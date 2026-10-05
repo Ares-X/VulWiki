@@ -86,7 +86,7 @@ export DOCKER_IMAGE_PREFIX=docker.mirrors.ustc.edu.cn
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GwCqvCb0QOMo8Nv5WLUFDz2m9VJzt2BzBeCsiaz06jHqz69joEeE6cDA/640?wx_fmt=png)
+![图片](../../.resource/remote/c6ba17138f2bc1eddaa50e58ae7d73f999a36f2207b6f3c40c4cb40a10d472c6.png)
 
 使用./jmsctl.sh start 命令可以直接启动服务，初始的账户密码为 admin/admin。
 
@@ -106,7 +106,7 @@ jumpserver 部署及添加资产_$ 疯狂的程序员的博客 - 程序员宅基
 
 如果最终达到如图所示的效果，能够访问了即代表成功。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GGHVE2NVrX5qvaObzVBU4PvmpIbyyYkhksRXvPZsYS9EgtyIJYgG71A/640?wx_fmt=png)
+![图片](../../.resource/remote/e116df22ea472dd50ffc941c3fc467a5b7c7815cdf029e1d3b7aba689918ab75.png)
 
 会话管理 - web 终端连接该资产。
 
@@ -124,7 +124,7 @@ ws://xx.xx.xx.xx:8080/ws/ops/tasks/log/
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GHLicpJqm02zvXJAlDXlkRSC2IGianZuTSwVL3bm7wsXLqevwcibV7txRg/640?wx_fmt=png)
+![图片](../../.resource/remote/6f0c87b999d8f90174b23eb31047fe1a153af0c7ae1eb32cdb2d76b20d9c7821.png)
 
 在返回的信息中搜索 Task id 用于进一步查看该 id 的详细信息。
 
@@ -133,11 +133,11 @@ ws://xx.xx.xx.xx:8080/ws/ops/tasks/log/
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GtSvG8rsiaddZxxNn1lSwyjRdsM6oVSe7umH9GvLuK7fVMqiazjpwvic7g/640?wx_fmt=png)
+![图片](../../.resource/remote/8196d4b2f7c9065b2c21669b2980654c433b956a9d48ac98e6a0dda1335536cb.png)
 
 日志内容可能过期，过期考虑找其他的 id。比如下图中在查询该 Task id 时就返回了 Not found 的结果。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GSoEdL6xc1rRvln1ewIucSHGhXxlKbtiam70A2nZ9JpJprcPqlZRMVMg/640?wx_fmt=png)
+![图片](../../.resource/remote/2026790a8cbceb8d9d34750a6749b361375211947530743cc7e1832042baaea1.png)
 
 在实战中运气足够好，正好赶上管理员登陆了系统未退出，就可以在日志中获取到 system_user、user、asset 这三个字段，则可以 RCE。
 
@@ -151,7 +151,7 @@ Automatic Exploitation
 
 这里在传入参数后，程序会构造请求读取各个 task 的内容。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GMZfVBQ5nesn5LbhSOKQ8dh5zsl6JQTrtgROmF6PxqfNMwwf0KBjUuA/640?wx_fmt=png)
+![图片](../../.resource/remote/d218ab6c50756a6c5caaf86340efec587420ba0c9eb05b7c504c76954ed449c0.png)
 
 在这里，成功读取到了我们所需要的重要字段。
 
@@ -162,17 +162,17 @@ user_id=ace6ae90-1aff-4908-a6e7-40f6a661fc02
 
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2Gbiac6CvBq5ibic8Zdxv3FkQib1tVyb6wcHSLuI5D8FSaic0mPuM80W7bKtA/640?wx_fmt=png)
+![图片](../../.resource/remote/056b6b0e258b3fefb1aef3f4ebf9d93a1bb5ffd3af4ee9724037c173fae685de.png)
 
 替换 rce 脚本中的 host ，user，system user asset 字段即可使用该 system_user 的身份进行 rce。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GicxmWKxpSWcxKTiauicoIvpA3e6dFYDluFwwvSS1nns0zfpbMglTF2BicA/640?wx_fmt=png)
+![图片](../../.resource/remote/05c7e10be63bb0ebc0fdfb47672b2ce6a9d4c3f608568820b88349226c1df524.png)
 
 运行 rce 脚本之后，从结果可以看到成功完成了命令执行。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GRMHVlH8TPRWQPM2K36Hreg19n34pFKvd4V0OHWDeYDuZ5aoyjXFEyw/640?wx_fmt=png)
+![图片](../../.resource/remote/917a6f2e19b9977c5967cd4cafc657e802c9b74b81f83b1540853ebd3c321c7f.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/ib0qYCicMFDcqxNq0J2cyOm2oJyhBnZx2GhP7lJROe8E1QUEm05ErxJhGhxQ9VuwIcSNp2kzYQGJFxZUrLco0HFA/640?wx_fmt=jpeg)
+![图片](../../.resource/remote/7d6faff1f7d6ff63ff780cdf7b2ac5535267f5f621f50ab333b8a90426478cc2.jpg)
 
 **皮**
 

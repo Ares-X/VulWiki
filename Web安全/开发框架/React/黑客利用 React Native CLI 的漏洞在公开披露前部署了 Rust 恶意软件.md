@@ -47,7 +47,7 @@ schema_version: "1"
   
 黑客利用 React Native CLI 的一个严重漏洞 (CVE-2025-11953) 运行远程命令并投放隐蔽的 Rust 恶意软件，而此时距离该漏洞被公开披露已过去数周。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/AnRWZJZfVaHaI1axiaPMAhhRpd4ibk7IN1aMXLOHuWNibtNLlPibGKxqkxAQMgAWqYcsZrFRqXByyvqH71ynEGQIYQ/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/f5505d910120e92781939d781b934a1aeb2ab834e777b19508c01de76897b3f0.jpg "")  
   
   
 攻击者正在积极利用 React Native CLI Metro 服务器中的一个严重漏洞，该漏洞编号为CVE-2025-11953。React Native CLI 的 Metro 开发服务器默认绑定到外部接口，从而暴露了一个命令注入漏洞。  
@@ -99,7 +99,7 @@ https://www.vulncheck.com/blog/metro4shell_eitw
   
 https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-to-deploy-rust-malware-before-public-disclosure.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/McYMgia19V0WHlibFPFtGclHY120OMhgwDUwJeU5D8KY3nARGC1mBpGMlExuV3bibicibJqMzAHnDDlNa5SZaUeib46xSzdeKIzoJA/640?wx_fmt=svg "")  
+![](../../.resource/remote/0877e2d01c065e08b6bbbf6e0a90a3b1e83a9887e89bf3c0021a85dea378e78f.svg "")  
   
 **今日安全资讯速递**  
   

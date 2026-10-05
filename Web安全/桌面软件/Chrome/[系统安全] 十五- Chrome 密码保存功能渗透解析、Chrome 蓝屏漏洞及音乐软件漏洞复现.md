@@ -69,7 +69,7 @@ schema_version: "1"
 
 作者前面详细介绍了熊猫烧香病毒的逆向分析过程。这篇文章换个主题，通过三种类型的漏洞利用普及系统安全，具体内容包括：对 Chrome 浏览器保留密码的功能进行渗透解析；复现一个最近流行的漏洞，通过 Chrome 浏览器实现 Win10 蓝屏；最后介绍音乐软件的加密功能及漏洞复现。这些基础性知识不仅和系统安全相关，同样与我们身边的 APP、常用软件及操作系统紧密联系，希望这些知识对您有所帮助，更希望大家提高安全意识，开发厂商进行相关的漏洞修补，安全保障任重道远。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmGic9tBPPgICG3JbGYxnMFwZgGDtJicP8OyC1kq4KjyhYRpOXlXHynwPA/640?wx_fmt=png)
+![](../../.resource/remote/d99a8a261e6ab6c426090e8c980f743c354db44520dac044821b45206eb85bd1.png)
 
 > 从 2019 年 7 月开始，我来到了一个陌生的专业——网络空间安全。初入安全领域，是非常痛苦和难受的，要学的东西太多、涉及面太广，但好在自己通过分享 100 篇 “网络安全自学” 系列文章，艰难前行着。感恩这一年相识、相知、相趣的安全大佬和朋友们，如果写得不好或不足之处，还请大家海涵！  
 > 接下来我将开启新的安全系列，叫 “系统安全”，也是免费的 100 篇文章，作者将更加深入的去研究恶意样本分析、逆向分析、内网渗透、网络攻防实战等，也将通过在线笔记和实践操作的形式分享与博友们学习，希望能与您一起进步，加油~
@@ -112,25 +112,25 @@ schema_version: "1"
 
 大家可能都见过浏览器保存密码的功能，那么，Chrome 浏览器是如何存储这些用户名和密码的呢？它又是否安全呢？我们以 Chrome 浏览器为例进行安全渗透测试普及。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmxlSViaf7jKEdfSTfArF3unG6HVQuLBo8ACluB2H2oOLS9MboV0sqeyQ/640?wx_fmt=png)
+![](../../.resource/remote/3e54cd8b235be8e7a709929a88cda5d7f52ea16554316397061c8b4c01f4e73e.png)
 
 首先，打开密码管理器。设置 -> 高级 -> 密码，或者输入：
 
 *   chrome://settings/passwords
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmE1aB3WqQQMXjzQibNIevQfamGl1ezJQW8lTPSJ625BrhOhicRg6ySadg/640?wx_fmt=png)
+![](../../.resource/remote/f5660f0dcdde698c9f27af47e9558bf688c5281e9dda6930f2edf7bf37f620fa.png)
 
 然后，我们查看某个网站的密码。所幸，Chrome 浏览器对显示的密码进行了一道验证，需要输入正确的电脑账户密码才能查看，如下图所示。
 
 *   为了执行加密（在 Windows 操作系统上），Chrome 使用了 Windows 提供的 API，该 API 只允许用于加密密码的 Windows 用户账户去解密已加密的数据。所以基本上来说，你的主密码就是你的 Windows 账户密码。所以，只要你登录了自己的 Windows 账号，Chrome 就可以解密加密数据。
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmeGwhbqktKkaMNNbyJ7mJ2vJ8WuTDUCQpcVib6iaJk92NaqaibjakbI5IA/640?wx_fmt=png)
+![](../../.resource/remote/f28f00e1c9d3e642f956df400722ad8f12741cb4a2b3f7fa411debea4c18d045.png)
 
 最后，输出 Windows 账户正确显示对应网站的密码。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmG9wsqNSglicm05fW59lyUzKZCRtRDd4XbfNMPoFE0hC5M9AxB56CfQA/640?wx_fmt=png)
+![](../../.resource/remote/0d727263f813e36bcdc9917c6ad63c9a5eb55011e160e7012eabcc592261d6ef.png)
 
 浏览器安全普及：  
 由于 Windows 账户密码是一个常量，并不是只有 Chrome 才能读取 “主密码”，其他外部工具也能获取加密数据，同样也可以解密加密数据。比如使用 NirSoft 的免费工具 ChromePass（NirSoft 官方下载），就可以看得你已保存的密码数据，并且可以轻松导出为文本文件。既然 ChromePass 可以读取加密的密码数据，那么恶意软件也是能读取的。
@@ -148,11 +148,11 @@ schema_version: "1"
 
 我们在 Web 渗透或 Python 网络爬虫中，都知道分析网页 DOM 树结构可以定位指定元素。那么，作者能不能修改 input 密码的属性，让它显示密码呢？如下图所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmo9hHwpXw2HMibr0ia88w3WpficazNZgJ90xaGSXrHjSa4NjLN9WPKicRJg/640?wx_fmt=png)
+![](../../.resource/remote/95c1f97180a16e411f1c67a3b75a065f4a27e93ca848f083e7113ac28bafb290.png)
 
 比较幸运，Chrome 应该已经解决了该漏洞，显示空白。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmAbpBpN7XB8vCwbcO50q2whokbKCgKeAMZ8Ebu1WAmzdktWrjJNvqVQ/640?wx_fmt=png)
+![](../../.resource/remote/28adb6227921abc42cbfc6afa1da966eff6c91f798d812f3b8546002e9f0f28f.png)
 
 3. 密码提取复现
 ---------
@@ -165,7 +165,7 @@ schema_version: "1"
 *   https://blog.csdn.net/u013761036/article/details/53822036
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjm6t95mMJU9mWLJ6I6EGo20EUnJOQwLNSH7LVWyMF4Mib2fuxQWSAR13w/640?wx_fmt=png)
+![](../../.resource/remote/9f71677cc195436136fdad57c11f98a4d9d890990a428860c7badbc0f2afb6ab.png)
 
 同样，可以直接寻找文件，通常用户名文件的存储路径为：
 
@@ -176,37 +176,37 @@ schema_version: "1"
 
 第二步，找到如下图所示的文件——Login Data。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjm4wbDk3Ad6dzUGrMia8ER1ltLxu7gss0WEDTLsHInXMWEGbFYsvpYic5A/640?wx_fmt=png)
+![](../../.resource/remote/c8469c3233c90a1f0c2c3d3e82c9407b798227b717269eded04605ecb53d87ef.png)
 
 第三步，打开这个文件，还好这个文件是加密的，而不是明文存储。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmNsIic5oAVcTicibYpu1EG75YaQGWfZa10BxIVmlR5eDqFXJRCOVtrJk9A/640?wx_fmt=png)
+![](../../.resource/remote/71d3463ce8c7be5068c57537c90ea48874d65c9c95cca197917152747129e6bd.png)
 
 虽然该文件加密了，但是可以看到它是 SQLite format 3 的格式。接着通过工具读取该数据。这里使用 Navicat Premium 工具。
 
 > Navicat premium 是一款数据库管理工具, 是一个可多重连线资料库的管理工具，它可以让你以单一程式同时连线到 MySQL、SQLite、Oracle 及 PostgreSQL 资料库，让管理不同类型的资料库更加的方便。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmpiaXy9vwavodV00HIt5xfJjuAAd2LvcLvPtOnyMl6ibvRClE4GqlK4icw/640?wx_fmt=png)
+![](../../.resource/remote/d2f1c365947a41c0f0c117596d8e639a39f435e3d396b9152aa3bc3e30717dd5.png)
 
 第四步，打开 Navicat premium，新建连接。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmic5eStla0plZ3Yn81rvhaQvW7jcAGia083xhhe5y01b9yGJyfw9SfEVQ/640?wx_fmt=png)
+![](../../.resource/remote/753b1b79ba327a685c2b63382983f070e5b81b6f5380bbaa01b0eb042388114b.png)
 
 第五步，输入连接名如 “test0803”，并导入本地的“Login Data” 数据。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmsSdPDzknr7SpKfwMS9E9RIRKrX5Q3xMkApsXfWfvDBPtosdCDvwmSg/640?wx_fmt=png)
+![](../../.resource/remote/6256c8cd70370d07843e3a2eb11b9c75a4c0cee2943106f820aa30c7f34fe4c2.png)
 
 第六步，打开之后在 “main” 数据库中包含了三张表，其中 logins 为登录表。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmr4ea6pfXOnMCCzldSGKdia2bTiaDQn124yokO6K4wSOAIxVBlq4x0Cqg/640?wx_fmt=png)
+![](../../.resource/remote/e175ca6c715bb5057f524b7e62544bc03ecb44b841a717ec146a0ec9fbf9562e.png)
 
 新版本表增加如下图所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmUCuOwHxeZhibckt6iaOOoCOj0l3MOPxmQV7QndNDoS9XVHJYBczHwXDQ/640?wx_fmt=png)
+![](../../.resource/remote/0dcb2503420bc42fa7fb2918e626a1e5e99ef46860d95aebd693c5a8283a514e.png)
 
 第七步，打开如下所示，比如 163 邮箱的用户名为我的电话，密码是加密的。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjm4xvDalqp4vZDcCohA1w6XNSpOvcTN6Nt6Rl274VDMTZFB7hSeY6w3g/640?wx_fmt=png)
+![](../../.resource/remote/8cbda024397e8b5148ece5e9abf94983f9d1656bff5c3ef339def2603b80c54f.png)
 
 第八步，解密。  
 想要解密一个加密算法是很难的。这学习 TK13 大神的文章，了解到 Chrome 开源的加密函数 CryptProtectData 和 CryptUnprotectData。这对加解密函数非常特别，调用的时候会去验证本地登录身份，这也就是为什么别人的那个密码文档不能直接拷贝到我们自己 chrome 相关文件夹下去看的原因了。
@@ -218,7 +218,7 @@ schema_version: "1"
 *   http://download.csdn.net/detail/u013761036/9719029
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmhiaicIW9WNmE9XENVg7GOk3OicvFiaDWZGAqS8khsucTBwgicLzfLBV3svw/640?wx_fmt=png)
+![](../../.resource/remote/f953aad36b9b24a7eb31fb66eb8c616b6fca019486dbd9312ae01f602c7fef85.png)
 
 渗透结论：Chrome 保存的密码存在泄漏风险，尤其是操作系统用户名被攻破后。是不是很可怕，所以个人电脑大家一定要保护好开机密码，别轻易让坏人使用。后续尝试破壳看看这个 EXE 程序源代码是如何解析的。
 
@@ -229,19 +229,19 @@ schema_version: "1"
 
 首先，我们作为用户登录一个网站时，会在表单提交 Username 以及 Password 相应的值，Chrome 会首先判断此次登录是否是一次成功的登录，部分判断代码如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmr4V8ic0ZSM5jZOibZSDRF7CLctWypDJ8GNAXiax5icCvGZNjeP1pADM7dw/640?wx_fmt=png)
+![](../../.resource/remote/44058f04ae241c5793c737d18924d8fd408d553fb66c3eaa224976d46cd42b86.png)
 
 当我们登录成功时，并且使用的是一套新的证书（也就是 xx 次登录该网站），Chrome 就会询问我们是否需要记住密码。
 
 那么登录成功后，密码是如何被 Chrome 存储的呢？答案在 EncryptedString 函数，通过调用 EncryptString16 函数，代码如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmIdAf3MQsxIJz11XVOygUxibOfAvjRvv0Hic7BsRHnuYpsicVFWic2Jk9ibg/640?wx_fmt=png)
+![](../../.resource/remote/9fbfa2a886ac5204f515ac430362e19e5472d6c14df19c8ede79e924b8f130da.png)
 
 代码利用了 Widows API 函数 CryptProtectData（前面提到过）来加密。当我们拥有证书时，密码就会被回复给我们使用。在我们得到服务器权限后，证书的问题已经不用考虑了，所以接下来就可以获得这些密码。
 
 下面通过 Python 代码实现从环境变量中读取 Login Data 文件的数据，再获取用户名和密码，并将接收的结果通过 win32crypt. CryptUnprotectData 解密密码。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmfduBfGsXibq8icAybkNf6v9Oeia1ib5XxIXYFicnzG1AGkaCmdpmM6RYASw/640?wx_fmt=png)
+![](../../.resource/remote/3f8203414d6e7a1de51e950b1bbb964754252b924b8c385220fbdddbbea22ac9.png)
 
 用 CryptUnprotectData 函数解密，与之对应的是前面提到的 CryptProtectData，理论上来说 CryptProtectData 加密的文本内容，都可以通过 CryptUnprotectData 函数来解密。对其他服务的解密方式，大家可以自行尝试。
 
@@ -286,12 +286,12 @@ schema_version: "1"
 \\.\globalroot\device\condrv\kernelconnect
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmVQhich26hAXt015dWL6nMUpF9ufqMYk8Mzib1Fb4JWkMB65yKeIdaNeQ/640?wx_fmt=png)
+![](../../.resource/remote/2eee2e072e1562e042350615d38f3afbc60f30386b7c7517555b0714061852ef.png)
 
 第二步，我们的计算机就会自动蓝屏死机重启。  
 该漏洞请勿轻易测试，个人虚拟机测试前先保存好资料。漏洞可用于拒绝服务攻击，并且微软还未修复该漏洞，微软 edge 浏览器也具有相同的效果。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjm2DJJicfashGtBbEHd26icCoZJxzBXKaAfDR0oUjmPXnSIj1ribTVklDPA/640?wx_fmt=png)
+![](../../.resource/remote/e1addefc6654be3be00463e5fa386cb66ae553b6bd928329b5a00c58ba4b8078.png)
 
 第三步，分析漏洞原因，参考网站 bleeping computer。
 
@@ -315,7 +315,7 @@ schema_version: "1"
 
 当连接到该设备时，开发人员应传递 “attach” 扩展属性以与该设备正确通信。如果你试图在没有传递属性的情况下由于错误检查不当而连接到该路径，它将导致一个异常，最终导致 Win10 出现 BSOD 崩溃。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmIEF5WzWXb0H2JOZA6nicZp3kpibW0nKg3VdB7fXkoF7c6QibgCO4xTr0A/640?wx_fmt=png)
+![](../../.resource/remote/9e6e2273175e604a9063214b88cae62d48f485cf3d2ba6e6063118369f707c26.png)
 
 更糟糕的是，特权低的 Windows 用户可以尝试使用此路径连接到设备，从而使计算机上执行的任何程序都很容易让 Windows 10 崩溃。在测试中，已经确认此错误在 Windows 10 1709 版及以后的版本中存在。
 
@@ -323,11 +323,11 @@ schema_version: "1"
 winver
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmcB2H9MBWyuOvZmBcjGVRdGhXlekLDPeGMTASNJ2a4gbyb9H3yKpUJg/640?wx_fmt=png)
+![](../../.resource/remote/60818b6d4900332d6d8e72a15e0bf0f7f455933d9b3fc3c3c5b47b92628c2e44.png)
 
 查看 windows 版本信息如下图所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmI5qlnykhBIT3ibwyd0P7NCuono3aZpIRcXkwcUDUdOZ2dHC1fYfdncA/640?wx_fmt=png)
+![](../../.resource/remote/e86d36116176b1d94b6b0544d9e24ebe814ce9abe43dcfcce5637788097df282.png)
 
 BleepingComputer 公司上周与 Microsoft 联系，以了解他们是否已经知道该错误以及是否会修复该错误。微软表示：“调查了已报告的安全问题，并承诺会尽快为受影响的设备提供更新。”
 
@@ -343,7 +343,7 @@ BleepingComputer 公司上周与 Microsoft 联系，以了解他们是否已经�
 
 在现实生活中，该漏洞可能会被攻击者滥用，他们可以访问网络并希望在攻击过程中掩盖自己的踪迹。如果他们具有管理员权限，则可以远程执行访问网络上所有 Windows 10 设备上的此路径的命令，以使它们崩溃。在网络上造成的破坏可能会延迟调查或阻止管理控件检测到特定计算机上的攻击。比如 2017 年，远东国际银行（FEIB）银行就遭遇了类似的攻击手法。在该攻击中，攻击者在网络上部署了爱马仕勒索软件（the Hermes ransomware），以延迟对攻击的调查。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjm34HqeQTibaiaJxeR31SlKibbPGfic53vf0jfatnYDAu3cCjaV61NXTbxOg/640?wx_fmt=png)
+![](../../.resource/remote/33fbd843c98821c71563f304839d40503b80cd49531c26128766ec5b8eb3ca3a.png)
 
 最后，作为安全白帽子，我们应该发现漏洞即时通知相关厂商进行漏洞修补。同时，既然操作系统、浏览器存在一些漏洞，那么常用的软件会存在漏洞吗？下面继续补充。
 
@@ -358,27 +358,27 @@ BleepingComputer 公司上周与 Microsoft 联系，以了解他们是否已经�
 
 **C:\Users \ 用户名 \ AppData\Local\Netease\****CloudMusic\Cache\Cache**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmbuYJg9K4vrI0PfqqibxMIfJhHx8icrXT7MuXNf1l1U7XnxXTo8KqFmibg/640?wx_fmt=png)
+![](../../.resource/remote/3fddda3f1b4c2f75bf8058c4b69327bb87bf40c817d7bccd158375f5a61cfaf2.png)
 
 第三步，双击播放该歌曲，然后按照寻找最新的文件或只保留一首歌，其中后缀名为 “.uc” 的最大文件就是加密过后的文件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmPS6OUUXan1Uzz25ScMsibWuKRBEP0nQUqxo16umaAxQNNTHExtunT7w/640?wx_fmt=png)
+![](../../.resource/remote/798c059eabb8981d1eb507c56f8f3068cde5e68985418697446d520d06685417.png)
 
 第四步，接着再将文件拖动到 010 Editor 软件，如下图所示：它是一个加密文件，最多的数据是 A3，猜测其是加密后的无意义 0（逆向熟练后的感觉），通常音频的加密方式不会太复杂，而最简单的异或加密（可逆）。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmVJ4JUmjDkk9TATr6bdrx9rfzp8lfmK4j27yLHHuFsTfqXgZIlRjJAA/640?wx_fmt=png)
+![](../../.resource/remote/6bb58b14cabd7277270ecc425d9e2ec374a1ebc360997c796edee84bc43b9e36.png)
 
 第五步，接着点开菜单，Tools（工具），将其转换为 “十六进制”，进行“二进制异或” 操作，修改数据为无符号十六进制，并对 A3 进行异或即可。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmPibxkrD9xIvrqqLmh8fZRTqQXLD5afqypgqKKq0ITQWnghsjC0ewiaiaA/640?wx_fmt=png)
+![](../../.resource/remote/ad6c29b1a0a21e8e0e04219950b6a9591ef9ebb0e6079189be7482e9e8585138.png)
 
 注意选择无符号（Unsigned Byte）和异或 A3。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmofxmCq2PTCQ8ib77KdWeU0UMcLnpQfjcrZkpdXpyeY59iaO0VRRUmvFA/640?wx_fmt=png)
+![](../../.resource/remote/87d3cd3b1a63614a13d1f9acd71c47e79601748ca9a1e05e72b32ca1243f0b2a.png)
 
 异或加密解密：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmicDE0qzic1EUVdEicRSPVCaiaTYkbFey7kLmhRRjwQH68qMQicFmAA7BkdQ/640?wx_fmt=png)
+![](../../.resource/remote/2a327ff748d66731aec7de06320b541d18295a5a0a71d3f0b18a99a369d33baf.png)
 
 A3 ⊕ A3 = 00
 
@@ -388,11 +388,11 @@ A 01100001  3  00000011A 01100001  3  000000110 00000000  0  00000000
 
 文件解密如下所示，其中 A3 变换为 00，解密完之后的字符变得有意义。前三个字节是 ID3，这个是 MP3 文件格式的头部。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjm01cBXU7icAMBmvT0SLicqPw6ib5fTzjqyQsyCcKE2OBu1QchBH4MMB7sw/640?wx_fmt=png)
+![](../../.resource/remote/8f87e5db4cd8096593b924c480c63cfc833101b01ad6cc87358c1de0bf4d4ef1.png)
 
 最后，将文件重命名为 “.mp3”，此时可以听歌了，“骑士精神” 走起。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDRN0rsmcT6ELT5cupaCGJbjmmbIMArCOljcsel8LYF2sR2zZ8fCjq6CvoiaUO5iblLJqic82tias6qnNUQ/640?wx_fmt=png)
+![](../../.resource/remote/84ae7b18ff35f69d6747c2e7fb0585e8f77bf7329dd8ae397982b6ba7ad3da6c.png)
 
 注意：这是一个简单的加密过程，推荐读者们下载正版歌曲，共同维护版权和绿色网络环境。同时，异或加密音乐已经很多年了，希望这些开发公司优化下加密算法，解决这些常见漏洞。
 
@@ -455,7 +455,7 @@ A 01100001  3  00000011A 01100001  3  000000110 00000000  0  00000000
 
 2020 年 8 月 18 新开的 “娜璋 AI 安全之家”，主要围绕 Python 大数据分析、网络空间安全、人工智能、Web 渗透及攻防技术进行讲解，同时分享 CCF、SCI、南核北核论文的算法实现。娜璋之家会更加系统，并重构作者的所有文章，从零讲解 Python 和安全，写了近十年文章，真心想把自己所学所感所做分享出来，还请各位多多指教，真诚邀请您的关注！谢谢。2021 年继续加油！
 
-![](https://mmbiz.qpic.cn/mmbiz_png/0RFmxdZEDROZePZ27y7oibNu4BGibRAq4HydK4JWeQXtQMKibpFEkxNKClkDoicWRC06FHBp99ePyoKPGkOdPDezhg/640?wx_fmt=png)
+![](../../.resource/remote/7ec5d4464d0324b14b905200b057c08519e26cd00489b2b17ffa8cb8a28c81fc.png)
 
 (By:Eastmount 2021-01-21 周四夜于武汉)
 

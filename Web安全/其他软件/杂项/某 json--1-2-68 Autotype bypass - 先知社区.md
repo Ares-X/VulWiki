@@ -382,14 +382,14 @@ denyHashCodes = new long[]{
 
 Fastjson 在 1.2.42 开始就把原本明文的黑名单改成了哈希过的黑名单，防止安全研究者对其进行研究：  
 [https://github.com/alibaba/fastjson/commit/eebea031d4d6f0a079c3d26845d96ad50c3aaccd](https://github.com/alibaba/fastjson/commit/eebea031d4d6f0a079c3d26845d96ad50c3aaccd)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422111305-a7efc5e0-a318-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422111305-a7efc5e0-a318-1.png)  
+[![](../../.resource/remote/ad6c8ea0fa84477eb371790f21ab55870c29f0108d2e3ec27b8234c2a42fc766.png)](../../.resource/remote/ad6c8ea0fa84477eb371790f21ab55870c29f0108d2e3ec27b8234c2a42fc766.png)  
 Fastjson 在 1.2.61 开始把黑名单从十进制数变成了十六进制数，以此来防止安全研究者进行搜索：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422111344-bf0168ec-a318-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422111344-bf0168ec-a318-1.png)  
+[![](../../.resource/remote/40fa2403d6c52ac4f655e335a4466a4e277c607dae9e15c9292ef862ea1c1cf3.png)](../../.resource/remote/40fa2403d6c52ac4f655e335a4466a4e277c607dae9e15c9292ef862ea1c1cf3.png)  
 Fastjson 在 1.2.62 开始，[https://github.com/alibaba/fastjson/commit/014444e6c62329ec7878bb6b0c6b28c3f516c54e 中，从小写改成了大写：](https://github.com/alibaba/fastjson/commit/014444e6c62329ec7878bb6b0c6b28c3f516c54e%E4%B8%AD%EF%BC%8C%E4%BB%8E%E5%B0%8F%E5%86%99%E6%94%B9%E6%88%90%E4%BA%86%E5%A4%A7%E5%86%99%EF%BC%9A)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422111609-15a4d120-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422111609-15a4d120-a319-1.png)  
+[![](../../.resource/remote/fc0c2d45d399258e979620909e148792d500d09dba7eb19490bdbf1a40b86963.png)](../../.resource/remote/fc0c2d45d399258e979620909e148792d500d09dba7eb19490bdbf1a40b86963.png)  
 Git 记录十进制和小写的十六进制数，不记录大写的十六进制数，网上没找到类似的仓库，为了弄清楚每个 hash 到底对应的是什么，GitHub 上有人写了一个轮子来跑了一波，不过目前已经很久没有更新了：  
 [https://github.com/LeadroyaL/fastjson-blacklist](https://github.com/LeadroyaL/fastjson-blacklist)  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422111724-41f02798-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422111724-41f02798-a319-1.png)  
+[![](../../.resource/remote/6d6eb22e88228b0e97c7d86d71863628e4c392e5370fd671bfc9b1a19aaf1141.png)](../../.resource/remote/6d6eb22e88228b0e97c7d86d71863628e4c392e5370fd671bfc9b1a19aaf1141.png)  
 下面我们接着来看，之后分别从 getClassFromMapping、deserializers、typeMapping、internalWhite 内部白名单中查找类，如果开启了 expectClass 期望类还要判断类型是否一致，可以到这里还未出现 "autoTypeSupport" 的判断，当已经可以返回 clazz(示例类) 了：
 
 ```
@@ -757,7 +757,7 @@ if (!autoTypeSupport) {
     ## 绕过实践  
     ### Mapping 绕过  
     首先，我们来回顾以下 FastJSON 1.2.47 的绕过——缓存 mapping 中的类，根据上面的校验原理部分我们可以了解到当 mappings 缓存中存在指定的类时，可以直接返回并且不受 SupportAutoType 限制，在 TypeUtils.loadClass 方法中，如果参数中 cache 值为 true 时，则会在加载到类之后，将类加入 mappings 缓存：  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112004-a15a7710-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112004-a15a7710-a319-1.png)  
+    [![](../../.resource/remote/f00a479cae153dcd8b4e1bd08969c9172c4cf36094178e9f7f85c5d2bb19583e.png)](../../.resource/remote/f00a479cae153dcd8b4e1bd08969c9172c4cf36094178e9f7f85c5d2bb19583e.png)  
     完整的代码如下：
     
     ```
@@ -821,8 +821,8 @@ if (!autoTypeSupport) {
     ```
     
     之后全局查找所有调用了该函数位置，并且 cache 设置为 true 的函数，发现只有它的重载函数：  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112051-bd538646-a319-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112051-bd538646-a319-1.jpg)  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112110-c9206f34-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112110-c9206f34-a319-1.png)
+    [![](../../.resource/remote/cf148ac05abf4485ed288a68ea9fd062cc8327baf79d499965a9d2fa784d4b98.png)](../../.resource/remote/cf148ac05abf4485ed288a68ea9fd062cc8327baf79d499965a9d2fa784d4b98.png)  
+    [![](../../.resource/remote/8c2785738e4c7696d8224f62e88e488216737e490ba36e4e2cdb2d1e92422c96.png)](../../.resource/remote/8c2785738e4c7696d8224f62e88e488216737e490ba36e4e2cdb2d1e92422c96.png)
     
     ```
     public static Class<?> loadClass(String className, ClassLoader classLoader) {
@@ -833,7 +833,7 @@ if (!autoTypeSupport) {
     ```
     
     之后继续寻找调用了该重载的地方，发现在 MiscCode 处有调用：  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112144-dcf63d04-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112144-dcf63d04-a319-1.png)
+    [![](../../.resource/remote/efd15f4b701e0ec8fa7f5bb23a4020aa284dbc0cf49e011d3cae0022e53c10d9.png)](../../.resource/remote/efd15f4b701e0ec8fa7f5bb23a4020aa284dbc0cf49e011d3cae0022e53c10d9.png)
     
     ```
     if (clazz == Class.class) {
@@ -844,7 +844,7 @@ if (!autoTypeSupport) {
     ```
     
     上面的逻辑是当 class 是一个 java.lang.Class 类时，会去加载指定类 (从而也就无意之间加入了 mappings 缓存)，而 java.lang.Class 同时也是个默认特殊类——deserializers.findClass 指定类，可以直接反序列化，所以可以首先通过反序列化 java.lang.Class 指定恶意类，然后恶意类被加入 mappings 缓存后，第二次就可以直接从缓存中获取到恶意类，并进行反序列化：  
-    [![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112214-ef3dd5c6-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112214-ef3dd5c6-a319-1.png)  
+    [![](../../.resource/remote/c3204c9fea26c2e44a392be1cd179b1fe17fd5d6c0423b433995d45193c9c313.png)](../../.resource/remote/c3204c9fea26c2e44a392be1cd179b1fe17fd5d6c0423b433995d45193c9c313.png)  
     1.2.47 的有效载荷如下：  
 ```java  
     package com.FastJson1242;
@@ -871,17 +871,17 @@ JSONObject.parseObject(payload);
 
 ```
 执行结果如下：
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112304-0cd4c6c6-a31a-1.jpg)
+![](../../.resource/remote/f1ee86f60cb171a581667a62658ab75e43ab79eac06493fa3ba9309e92655f6e.png)
 ### exceptClass期望类
 #### ThrowableDeserializer
 期望类的功能主要是实现/继承了期望类的class能被反序列化出来且不受autotype影响，默认情况下exceptClass这个参数是空的，也就不存在期望类的特性，之后全局搜索checkAutoType的调用，且条件是exceptClass不为空：
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112407-323ec394-a31a-1.jpg)
+![](../../.resource/remote/f39a554129ae375210bec6bf31aeb5a40bf3a62beb52eb0d72d543788065a7dd.png)
 从上面的搜索结果中可以看到在JavaBeanDeserializer、ThrowableDeserializer中调用了checkAutoType并且exceptClass不为空，我们这里先来看一下ThrowableDeserializer，该类主要是对Throwable异常类进行反序列化，我们可以在ParserConfig.getDeserializer中找到对应的反序列化示例类型：
 com\alibaba\fastjson\1.2.68\fastjson-1.2.68-sources.jar!\com\alibaba\fastjson\parser\ParserConfig.java 826
-![image.png](https://xzfile.aliyuncs.com/media/upload/picture/20210422112428-3f01e156-a31a-1.png)
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112454-4e6cbb7a-a31a-1.jpg)
+![image.png](../../.resource/remote/954d0d872de41117175cfe5350bb907fc827584fc683fa4e279ee64676d0be24.png)
+![](../../.resource/remote/8852b7269fc3ed45dde8b3f6938fe71f8871c2d503a655ae244d68bbf3e0851c.png)
 可以从上面看到ThrowableDeserializer是Throwable用来反序列化异常类的，我们先来看一下ThrowableDeserializer，可以看到在ThrowableDeserializer中可以根据第二个@type的值来获取具体类，并且根据传入的指定期望类进行加载：
-![image.png](https://xzfile.aliyuncs.com/media/upload/picture/20210422112528-62a5f034-a31a-1.png)
+![image.png](../../.resource/remote/60da0af58e908173b99f7045e881e39a0123ef6b1e7d71efc682fa366ec3d646.png)
 因此可以反序列化继承自Throwable的异常类，在这里我们可以借助setter、getter等方法的自动调用，来挖掘gadget，下面是浅蓝师提供的一个Gadget：
 ```java
 package org.heptagram.fastjson;
@@ -937,15 +937,15 @@ public class ThrowableMain {
 ```
 
 在上面的载荷中我们一共传入了两个 @type，其中第一个是期望类 (expectClass)，第二个是需要反序列化的类，经过这样构造后在检查 AutoTypeSupport 之前就已经返回了 clazz，之后接着为期望类选择反序列化的解析器，从而匹配到了 Throwable.class，之后当扫描到第二个 @type 指定的类名后将其作为 exClassName 传入 checkAutoType，此时 checkAutotype 传入的第二个参数为 Throable.class 也为 Exception.class 的接口，此时如果 exClassName 是实现或继承自 Throwable 就能过 checkAutotype，下面是执行的结果：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112808-c1ef607a-a31a-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112808-c1ef607a-a31a-1.jpg)
+[![](../../.resource/remote/ad0c5052c291f70600571ac939dd000807ec740067d5cfeede8849114e02fe83.png)](../../.resource/remote/ad0c5052c291f70600571ac939dd000807ec740067d5cfeede8849114e02fe83.png)
 
 #### JavaBeanDeserializer
 
 在 fastjson 中对大部分类都指定了特定的 deserializer，如果未指定则会通过 createJavaBeanDeserializer() 来指定 deserializer，通常情况下都是一些第三方类才会调用到这里：  
 /com/alibaba/fastjson/1.2.68/fastjson-1.2.68-sources.jar!/com/alibaba/fastjson/parser/ParserConfig.java 832  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112852-dc60a9c8-a31a-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112852-dc60a9c8-a31a-1.png)  
+[![](../../.resource/remote/d4cc6a408ceae742ad0a54604aeb11876c22640d4965a69d72496afc47c2fad1.png)](../../.resource/remote/d4cc6a408ceae742ad0a54604aeb11876c22640d4965a69d72496afc47c2fad1.png)  
 在 FastJSON 中 com.alibaba.fastjson.util.TypeUtils#addBaseClassMappings 用于添加一些基本的类并将其当做缓存使用，但是在查看时可以发现这里的额外加载了一个 java.lang.AUtoCloseable 类，同时并未为其指定 deserializer，因此会走到最后的 else 条件中去，之后对应的 JavaBeanDeserializer，而且 java.lang.AUtoCloseable 类位于 mapping 缓存中，所以可以无条件反序列化：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112913-e8b2d8ae-a31a-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112913-e8b2d8ae-a31a-1.png)  
+[![](../../.resource/remote/70a233d6cd450543f2178194073724f3ada59351578d33e531407d2d183e962b.png)](../../.resource/remote/70a233d6cd450543f2178194073724f3ada59351578d33e531407d2d183e962b.png)  
 和之前一样，我们可以通过继承或者实现 AutoCloseable 类来绕过 autotype 反序列化检测，测试代码如下：
 
 ```
@@ -1008,9 +1008,9 @@ public class AutoCloseableMain {
 ```
 
 执行结果如下：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113001-057210ae-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113001-057210ae-a31b-1.jpg)  
+[![](../../.resource/remote/41665fca0f102c442a0c9ab0e5fc2ba38cb70e1fde2fa4d3f8614ec9485e5772.png)](../../.resource/remote/41665fca0f102c442a0c9ab0e5fc2ba38cb70e1fde2fa4d3f8614ec9485e5772.png)  
 在这里我们查看以下 AutoCloseable 类的继承关系，可以看到通过 AutoCloseable 来 Bypass AutoType 我们找寻 Gadget 的范围则变得更加宽广，常用的流操作、文件操作、socket 等等都继承自 AutoCloseable：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113042-1dbee704-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113042-1dbee704-a31b-1.jpg)  
+[![](../../.resource/remote/0dea40d38ecadc08b96d5b8f24498a2fa7c92c3420dd30cb5414136c50a7a862.png)](../../.resource/remote/0dea40d38ecadc08b96d5b8f24498a2fa7c92c3420dd30cb5414136c50a7a862.png)  
 在查阅相关资料的时候看到 Y4er 师傅在其文章中描述到 FastJson 在黑名单中新增的 java.lang.Runnable、java.lang.Readable 类也可以用于 Bypass AutoType，下面是 Y4er 师傅提供的载荷：  
 A、Runnable：
 
@@ -1084,10 +1084,10 @@ public class ExecRunnableMain {
 ```
 
 执行结果：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113149-45d703fc-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113149-45d703fc-a31b-1.jpg)  
+[![](../../.resource/remote/5ababad27cf7fb86c737d5298ef16fd9be9638fa9840cebc73250d50782d1253.png)](../../.resource/remote/5ababad27cf7fb86c737d5298ef16fd9be9638fa9840cebc73250d50782d1253.png)  
 B、Readable：
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113209-51def8d0-a31b-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113209-51def8d0-a31b-1.png)
+[![](../../.resource/remote/5a2d256fe557c25c3bf53a0a8f8fd610cdfba947ad5310d6ca8f65944f0c6c9b.png)](../../.resource/remote/5a2d256fe557c25c3bf53a0a8f8fd610cdfba947ad5310d6ca8f65944f0c6c9b.png)
 
 ```
 package org.heptagram.fastjson;
@@ -1161,7 +1161,7 @@ public class ExecReadableMain {
 ```
 
 执行结果：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113250-6a4d7e82-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113250-6a4d7e82-a31b-1.jpg)  
+[![](../../.resource/remote/7e6ea16eed74f4af72c5126a179eceb761c498aefa5f8dcad614a3e843a5e2c6.png)](../../.resource/remote/7e6ea16eed74f4af72c5126a179eceb761c498aefa5f8dcad614a3e843a5e2c6.png)  
 $ref 拓展使用  
 在 checkAutoType 检查分析部分我们说道找寻合适的 JNDI 较为困难，其原因是大多数 JNDI 的 gadget 都继承自 DataSource 和 RowSet，所以反序列化的类过不了 checkAutoType 的检查，那么 JNDI 注入真的就无法使用了吗？浅蓝师傅和 threedr3am 师傅给出了关于通过 $ref 引用功能来触发 getter 的方法，理论上我们可以通过这种方式实现 RCE，而且还能够在不开启 AutoType 的情况下，任意调用大部分当前反序列化对象的 getter 方法，如果存在危险的 method 则可以进行攻击，下面我们分别来看一下具体的方法：  
 浅蓝师傅给出的示例 (原来的基础上稍有变形)：
@@ -1215,14 +1215,14 @@ public class RefSSRFMain {
 ```
 
 执行之后可以看到有请求过来：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113420-9f8c235a-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113420-9f8c235a-a31b-1.jpg)  
+[![](../../.resource/remote/fe41edcc8e41c825d762690226f9b26dd4cf8394be54495d5f2466432b33d246.png)](../../.resource/remote/fe41edcc8e41c825d762690226f9b26dd4cf8394be54495d5f2466432b33d246.png)  
 这里我们对原理做一个简单的介绍：  
 可以看到载荷中一共传入了两个 @type，其中第一个为 java.lang.Exception，它是 Throwable 的继承类，而用于反序列化 Throwable 异常类的是 ThrowableDeserializer，所以又进入到了之前的 execeptClass 部分，之后根据根据第二个 @type 的值来获取具体类，并且根据传入的指定期望类进行加载：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113504-ba11a5a6-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113504-ba11a5a6-a31b-1.jpg)  
+[![](../../.resource/remote/8bbaef9af6140b487cb7798eced1f9657796167c7e500ad778b3367bc072a311.png)](../../.resource/remote/8bbaef9af6140b487cb7798eced1f9657796167c7e500ad778b3367bc072a311.png)  
 之后在 RefSSRF 中将第二个 @type 的数值作为参数传入，同时注意到这里的 setDataSource 的参数是 URL 类型，在 FastJSON 中 URL 类型允许被反序列化，也就是说可以调用到 setDataSource 方法，并且实例化一个 URLDataSource 对象：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113540-cf745f56-a31b-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113540-cf745f56-a31b-1.png)  
+[![](../../.resource/remote/6bb23ba6804cdb7ee38f32dbfc0c4faa584f301ffc7bf66aac338e0f10075b6d.png)](../../.resource/remote/6bb23ba6804cdb7ee38f32dbfc0c4faa584f301ffc7bf66aac338e0f10075b6d.png)  
 如果我们要实现 SSRF 那么我们可以通过调用 URLDataSource 的 getInputStream() 方法来触发连接请求，而使用 JSON.parseObject 在解析 JSON 时默认就会调用 getInstance()(在 setXXX 之后调用)，从而实现 SSRF:  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113556-d90062a4-a31b-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113556-d90062a4-a31b-1.png)  
+[![](../../.resource/remote/4a4ee8e728f65737a400a7dd87d0d4e64e2e2dfe47234b6563620c76f7cedf91.png)](../../.resource/remote/4a4ee8e728f65737a400a7dd87d0d4e64e2e2dfe47234b6563620c76f7cedf91.png)  
 通过 $ref 引用功能，我们可以触发大部分 getter 方法，理论上当存在危险的 method 方法时我们可以通过此种方法在不开启 AutoType 的情况下来实现 RCE，下面以 threedr3am 师傅提供的 payload 为例 (代码部分取自 Y4er 师傅)：
 
 ```
@@ -1293,7 +1293,7 @@ public class RefRCEMain {
 ```
 
 执行结果：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113650-f8ea9170-a31b-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113650-f8ea9170-a31b-1.jpg)
+[![](../../.resource/remote/25c23bd1f249889ef1cccdcc31d7ca84a3b20155db42a9b893dbfba1a9e1977c.png)](../../.resource/remote/25c23bd1f249889ef1cccdcc31d7ca84a3b20155db42a9b893dbfba1a9e1977c.png)
 
 #### 文件相关操作
 
@@ -1381,7 +1381,7 @@ public class FileWrite {
 ```
 
 执行结果：  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20210422113828-33e22702-a31c-1.jpg)](https://xzfile.aliyuncs.com/media/upload/picture/20210422113828-33e22702-a31c-1.jpg)
+[![](../../.resource/remote/55664ea57c963d141ed1f004d7949102b34c6b7d1aaec2b921c79c8343ba1302.png)](../../.resource/remote/55664ea57c963d141ed1f004d7949102b34c6b7d1aaec2b921c79c8343ba1302.png)
 
 防御措施
 ----

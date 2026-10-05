@@ -37,7 +37,7 @@ schema_version: "1"
 #  Grafana 提醒注意严重的认证绕过漏洞   
 Bill Toulas  代码卫士   2023-06-25 17:51  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
+![](../../.resource/remote/afc2fa5611a63e89ebec625ecc33d28c5dcdb706b6fbdabb79f7c1e8982068c0.gif "")  
   
    
 聚焦源代码安全，网罗国内外最新资讯！****  
@@ -47,7 +47,7 @@ Bill Toulas  代码卫士   2023-06-25 17:51
 **Grafana 为其多个应用版本发布安全修复方案，修复了一个严重漏洞，它可使攻击者绕过认证并接管使用 Azure Active Directory 用于认证的任何 Grafana 账户。该漏洞的编号是CVE-2023-3128，CVSS v3.1评分是9.4。**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRhKmAekLpadfATw9IOQlnwiabZmyr8o4VibLCoT9KKafiaAaiaic9Ov84R8zsHVGCK2AtfjDoqHl41XaA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
   
 Grafana 是一款广泛使用的开源分析和交互可视化 app，通过大量监控平台和应用程序提供很多集成选择。Grafana Enterprise 是具有更多能力的付费版本，用于多家著名组织机构中，如 Wikimedia、Bloomberg、JP Morgan Chase、eBay、PayPal 和 Sony。  
@@ -55,7 +55,7 @@ Grafana 是一款广泛使用的开源分析和交互可视化 app，通过大�
 该漏洞是由Grafana 基于在所关联“配置邮件”设置中邮件地址对 Azure AD 账户进行认证引发的。然而，该设置在所有 Azure AD 租户中并非唯一，导致威胁行动者可使用与Grafana 合法用户邮件地址一样的地址，创建 Azure AD 账户。Grafana 在安全公告中指出，“当通过多租户 Azure AD OAuth 应用程序配置 Azure AD OAuth 时，可导致 Grafana 账户接管和认证绕过后果。如遭利用，攻击者可完全控制用户账户，包括访问客户私密数据和敏感信息等。”  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMRhKmAekLpadfATw9IOQlnwiabZmyr8o4VibLCoT9KKafiaAaiaic9Ov84R8zsHVGCK2AtfjDoqHl41XaA/640?wx_fmt=png "")  
+![](../../.resource/remote/2f0f8f82d14e138963df2a60f2b9892c376de99c2ec4422ed0b024c0474b1932.png "")  
   
 **Grafana 云已修复**  
   
@@ -138,15 +138,15 @@ https://www.bleepingcomputer.com/news/security/grafana-warns-of-critical-auth-by
   
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSf7nNLWrJL6dkJp7RB8Kl4zxU9ibnQjuvo4VoZ5ic9Q91K3WshWzqEybcroVEOQpgYfx1uYgwJhlFQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/2c03ce3cc6bb81bca85bd412ed60e93c4bc0a295a1fc9d3739d8aca43497fbb4.jpg "")  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/oBANLWYScMSN5sfviaCuvYQccJZlrr64sRlvcbdWjDic9mPQ8mBBFDCKP6VibiaNE1kDVuoIOiaIVRoTjSsSftGC8gw/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/b33054170f5acbf0023711f517b5bee9799a2f57b155a774d3945e6d78184e63.jpg "")  
   
 **奇安信代码卫士 (codesafe)**  
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](../../.resource/remote/8a5c84b98d9b52b1d4f4306180ec26c9aa65342b326b5b98ad2f097b488152f4.gif "")  
   
    
 觉得不错，就点个 “  

@@ -59,17 +59,17 @@ fofa: "(title=\"用户自助服务\" && body=\"/selfservice/javax.faces.resource
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/OHmxFRSWgj4QyMS29JoI9Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkJrGicxw4mL5UYpL9RmBdKdft5iatHZicb4BrxO3ENyQOEVKKDeSwTG2Jw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/1452f2397eb64deabec5c728bec34eb06655a9db15546144d0d38c400c73b903.webp)
 
 点击蓝字，关注 Sec 探索者，一起探索网络安全技术
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkYN4sZibCVo6EFo0N9b7Kib4I4N6j6Y10tynLOdgov9ibUmaNwW5yeoCbQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/a186c4f5d9d52347540c4cbb93e8961b5ba9c0dd7f4fd061d48211661876676f.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCkhic5lbbPcpxTLtLccZ04WhwDotW7g2b3zBgZeS5uvFH4dxf0tj0Rutw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/77be41dad9935140a4007bdfffbddf41fc1a986a3fecd8c99e21852085b04197.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOJECe5vg2C5YWgpyo1D5bCk524CiapZejYicic1Hf8LPt8qR893A3IP38J3NMmskDZjyqNkShewpibEfA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/44ad08ffbb51946186bc46c860da341a77d976872c15eb51f56d078afe49905c.webp)
 
 请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，作者不为此承担任何责任。如有侵权烦请告知，我们会立即删除并致歉。谢谢！
 
@@ -78,7 +78,7 @@ fofa: "(title=\"用户自助服务\" && body=\"/selfservice/javax.faces.resource
 **漏洞描述  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/bc7ea691002236b3443bc9f99bc61c4ef7570b6295843ed5ca577f8dacfa1c96.gif)
 
 H3C iMC 智能管理中心 /byod/index.xhtml，
 
@@ -91,28 +91,28 @@ H3C iMC 智能管理中心 /byod/index.xhtml，
 **漏洞环境  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/bc7ea691002236b3443bc9f99bc61c4ef7570b6295843ed5ca577f8dacfa1c96.gif)
 
 FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.resource/") || body="/selfservice/index.xhtml"  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLYckibk3WSib4nj4TrzXlOvkdAaPjyXedoicx9bawF4h3MH1TYPqbLazSnIJ5R4JsjeEYXqNAVmPeYQ/640?wx_fmt=other&from=appmsg)
+![](../../.resource/remote/6f84a325d0772be0a349fdcc47fe4b10a09ca6eff38dae4f08a113081e0d3c83.jpg)
 
 **03**
 
 **漏洞复现  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/bc7ea691002236b3443bc9f99bc61c4ef7570b6295843ed5ca577f8dacfa1c96.gif)
 
 1. /selfservice/login.jsf 接口
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLYckibk3WSib4nj4TrzXlOvkqPl8T2icB0BcKia7iaeB02sCZ4dyLaJoibBFJr0icRzR2lqC7yQsyKwXxPA/640?wx_fmt=other&from=appmsg)
+![](../../.resource/remote/bc423061c7487a28a631aa059c73b6be1dbadf9b0a911046e597c42964535939.jpg)
 
   
 
 2./byod/index.xhtml 接口
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLYckibk3WSib4nj4TrzXlOvk8rjW6DgKy4RX3E6icHjW4NsrTwwNXIGG1icBKia0JSkwibLFUxeibu5hJXA/640?wx_fmt=other&from=appmsg)
+![](../../.resource/remote/7500aa9fa362108f4c51b01e4309a57f5100f7f1152acb544fdfed6ca000d7b1.jpg)
 
   
 
@@ -121,7 +121,7 @@ FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.reso
 **漏洞修复建议  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/bc7ea691002236b3443bc9f99bc61c4ef7570b6295843ed5ca577f8dacfa1c96.gif)
 
 建议联系厂商进行处理
 
@@ -132,9 +132,9 @@ FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.reso
 **nuclei 批量检测  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/bc7ea691002236b3443bc9f99bc61c4ef7570b6295843ed5ca577f8dacfa1c96.gif)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLYckibk3WSib4nj4TrzXlOvkib2M8ULDy0lrjnWu2SAPctnRvpEj0cGW2IVrTSicibeNqy1QG4AgGIDVg/640?wx_fmt=other&from=appmsg)
+![](../../.resource/remote/6d6e518eca3af0c0ac06b461f8b33d25e29a284c75f738c619d345b56dff0333.jpg)
 
   
 
@@ -143,7 +143,7 @@ FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.reso
 **圈子服务介绍  
 **
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/bc7ea691002236b3443bc9f99bc61c4ef7570b6295843ed5ca577f8dacfa1c96.gif)
 
 无论你是新手还是行业老手，我们都致力于为你提供最新、最优质的安全资源和交流平台。立即加入 Sec 探索者专属的内部圈子，与我们一起探索安全领域的无尽可能性！以下是我们圈子为内部成员提供的核心服务：
 
@@ -151,19 +151,19 @@ FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.reso
 
 **2、内部漏洞知识库：**漏洞知识库正在持续建设中，我们将会提供详细的漏洞复现教程和 poc，帮助大家深入理解漏洞的工作原理和利用方式。所有漏洞都是我们自己成功复现才会添加到知识库中，减少大家试错时间成本，我们将收集相对完整的漏洞信息、漏洞描述、分析以及针对每个漏洞的利用方法和防护建议，致力于打造一个全面且专业的漏洞知识库。 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOIhIqialXOQXWAkxoVr7t6q9eibfquDx4FZlibMakPt41tX7VsRibv1u4qDjTh4HrK1uYB8CrWlibAslgQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](../../.resource/remote/d48e9f8b8f08858d8f9ac08b22a275a2d6e6def4d9e3c16077a924ba893898b0.png)
 
 **3、漏洞综合利用工具：**提供多种漏洞利用工具，这些工具经过内部严格测试和大家的反馈，确保其有效性和安全性。无论大家是在进行渗透测试、漏洞验证，还是其他安全研究，这些工具都能为大家提供强有力的支持。
 
 工具持续开发：https://www.yuque.com/charonlight/sec_explorer_tools
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLytxy6Wrib0vcHkJC0yAnFtQkVhEUKibibbNFVZSVpcuTuxtic8TkoR5SU4Dd6GFkiaGPL15gMmE4ySPA/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/8496f0cf30d7f428055f66a8481afb7fcda8432265e7d6112cfbf3e977dac609.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLytxy6Wrib0vcHkJC0yAnFt25e1oxdKficQxJlMZPJV72ScrFBJTt8aSLsZYXlzIDjvBGfgRwzVCsA/640?wx_fmt=jpeg&from=appmsg)
+![](../../.resource/remote/261b6480eaaaa6b9eae2d8e85e5457c44177ee6d843a02a1a2c26974700aa56b.jpg)
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOIOyOhEZkrWlcianYlTNGEkfxOuWBhteCiaRdaHtePHhJMovro0Xia8kibfibrTD6TZPkMibu0pzvicIzHLg/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../../.resource/remote/d1d2072b7447ec4df41562a48a581c5d58339916cb18305788d5207e0b5b517f.gif)
 
 ---
 

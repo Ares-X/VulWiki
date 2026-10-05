@@ -61,9 +61,9 @@ FIN7 自 2023 年 4 月以来一直在利用该漏洞，黑莓的研究人员报
 以下是   
 Akira 攻击链的第 1 天和第 2 天：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/JqliagemfTA4jsOvP2baH7lkibOq6KzKdejd9YXC5c1iaxwOr5XXfCeZjibvL53MB8B4YGh8ibaJvMwjmibre9TNCloA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/5e4d9513c0547cbcaa8fde3c2a4729837d97cfcadbe569b83e6f435f29270536.png "")  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/JqliagemfTA4jsOvP2baH7lkibOq6KzKdefyM8WZgVZkKawnic5odUn3GcsRLibFVeZTeg6xyNNIg68BsQNHPX8NibQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4ea3c3ab7ef537a78b3e99185e413fe080a0a99bb0df6bc33820073f5ecbad54.png "")  
   
 在对一家拉丁美洲航空公司的攻击中，攻击者首次通过路由器   
 IP 地址的 SSH 对未打补丁的Veeam 备份服务器进行可见访问。专家认为，攻击者利用公开可用的漏洞漏洞CVE-2023-27532。  
@@ -90,7 +90,7 @@ Group-IB研究人员还发现了一个勒索软件组织利用 Veeam Backup & Re
   
 获取免费咨询和安全服务  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/JqliagemfTA5OxIlGh6IbpxrTJHkcY5DZ4O80nevX4Ev7IHvjZfPZDDMxibSVWk4IdYfaYpuhBgz2iaWS5tzXZLJw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+![](../../.resource/remote/396c6c1e582fe7106413e1361e0478cb82d63662d432871e1fa160f844c53a79.webp "")  
   
   
   

@@ -49,7 +49,7 @@ source_status: "unknown"
 
  Ots安全   2024-07-27 16:39  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+![](../../.resource/remote/c292852b5ce3f320791b17ba46561fa59050a881e960884f85fc33b8ebf6074e.gif "")  
   
 在最近的一次客户接触中，CyberArk Red Team 发现并利用了 Delinea 权限管理器（以前称为 Thycotic 权限管理器）中的特权提升 (EoP) 漏洞 ( CVE-2024-39708 )。此漏洞允许非特权用户以 SYSTEM 身份执行任意代码。作为我们致力于为安全社区做出贡献的承诺的一部分，CyberArk 负责任地向 Delinea 披露了此漏洞，包括漏洞利用概念验证 (POC) 代码。  
   
@@ -66,13 +66,13 @@ source_status: "unknown"
   
 如图 1 所示，代理服务在 Windows 临时目录和应用程序安装目录中找不到 DLL 后，成功从System32目录加载httpapi.dll 。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALFA1LkN5qSHuN9icGlZiabqhibxv5IZLH7eqdUl8xJcdicWak9OhFvSd37DQ/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/d5adf54614f28fb34a08b79034dfee159604afb78b96ac2b6a65aec07765abba.jpg "")  
   
 图 1：DLL 搜索顺序 - 代理服务 httpapi.dll  
   
 默认情况下，Windows 授予非特权用户将文件和文件夹写入C:\Windows\Temp 的权限，除非另有说明，否则此默认的自由访问控制列表 (DACL) 将被子目录继承。如图 2 所示，由于继承了 DACL，Users 组可以写入C:\Windows\Temp\Arellia\AmsAgent\Cache\ArelliaAgent\assembly\dl3\7f9cbee9\00bbcf35_70d5d901 中的文件和文件夹。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALF3Hibk74d5iazSaVh5sMBEfr12Dia7ZWjFJXTia1KulNP8BV0ib6dBStS8tQ/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/e06f6b011467dfed8edd81150cd38061216d517bd5dab8d125118ee34deb8d1c.jpg "")  
   
 图 2：用户权限  
   
@@ -80,11 +80,11 @@ source_status: "unknown"
   
 由于 DACL 较弱，非特权用户可以在目录中植入自定义的httpapi.dll二进制文件，以便在服务重新启动时找到并加载该 DLL，从而以 SYSTEM 身份执行任意代码。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALFpHqiboMxH7nVmYpeBrIZ7icJYeBPhzI2T6YUgozIKLIA3N4ELWLAZDdA/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/485df41672fe26a669f7df9cb2755a9c403cb61136e7477d875e292e50d8b9e1.jpg "")  
   
 图 3：DLL 搜索顺序劫持  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALFPh3kjJ6CYtXufTzNJmgSdX7D1dNU4N146rjgaZDdSib0M5qMlQX0kmw/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/0d02ace746f2806b65546a2479bcb9d07867e6d4ae0922f0fa0f141f7f12be56.jpg "")  
   
 图4：以SYSTEM身份执行  
   
@@ -92,21 +92,21 @@ source_status: "unknown"
   
 使用 MSI 包安装软件时，Windows 会将包缓存在C:\Windows\Installer目录中，文件名由 Windows 安装程序选择。我们可以在命令行上通过识别目标安装的缓存包（例如，通过文件的Author 和 Subject属性）来执行修复操作。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALFhAHpJg96dLw4e4cdVEWAoXKYkhr5LibL22StKFTTPNmicicXbWhLO85dQ/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/bd901de7e5b1659f0add934758533c9b275dc90d983aedb2b3aa50426a87c27e.jpg "")  
   
 图 5：C:\Windows\Installer  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALF0cddlkGPFw0NNBmtrF7zYyZkbvdFUHCCfw1CiaibjGvmcqO2Xsf2uQ4A/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/124639a22c55b6c6abf3140db0cbdf4ed360f5d3b78514ef11d2393597a8d14e.jpg "")  
   
 图 6：MSI 修复安装  
   
 或者，可以从 WMI 数据库或 Windows 注册表中检索安装产品代码，并可以通过命令行或应用程序安装和服务Win32 API 执行修复操作。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALFGN0mq3UAeTTicacojorBpGDvPsRfpKtfBWItrUzfxtVk4Ooe4Dqic7cQ/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/6d78f25691ffd809536c5788a99ec4ae6cf3bb71d3048033f4961d9923db8892.jpg "")  
   
 图 7：WMI 获取安装产品代码  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/rWGOWg48tadmVOdM5ao2uSzDS930qALFKgERBRnT4UtAUWQL2zec9cYTPQIMlibI7cIjUYLuicFrv0fX8J4O3pTg/640?wx_fmt=webp&from=appmsg "")  
+![](../../.resource/remote/4f758ca45dac9e9e7fae113a307832e05aee87b35dbb152c799a2d033e3af3fc.jpg "")  
   
 图 8：按产品代码安装 MSI 修复程序  
   
@@ -136,19 +136,19 @@ https://www.cyberark.com/resources/threat-research-blog/identity-crisis-the-curi
   
 感谢您抽出  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+![](../../.resource/remote/2adcd65f51170e6241e0a6a9482f423e400f1f6854314e975fce72c4afdcc922.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+![](../../.resource/remote/a83efad772f5c06b2458eb7e0ce7938c0788e296490deee3c42225d86e054d8c.gif "")  
   
 .  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+![](../../.resource/remote/945127ead0569aa369bfd017fdd8ed70a3d39aeca2704fa3aa11c6d268e664f9.gif "")  
   
 来阅读本文  
   
-![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+![](../../.resource/remote/0ae141ea7d92bd4e04c5b56f9fe14741702da43798d3af484e2df4eea96e4221.gif "")  
   
 **点它，分享点赞在看都在这里**  
   

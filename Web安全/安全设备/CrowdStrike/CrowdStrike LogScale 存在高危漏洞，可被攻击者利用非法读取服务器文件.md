@@ -51,7 +51,7 @@ source_status: "unknown"
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-04-27 00:49  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/DYqn7TU9icq1csArUC9HbYdVL5mCe5gYyIRCC6kOGlzSE6zlzkU5kH9icJyeBMhWgib8CS82om9owzZWCm17RqZhWkia8O8gFRZ8tVuGeg0o12M/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/0a4d885c999f319f74a427f0bfcf1227403b4f7ef1a864eeaaa84158383d391f.png "")  
   
 猎鹰（CrowdStrike）近日披露一枚高危漏洞，漏洞编号**CVE-2026-40050**  
 ，影响其本地化部署版 LogScale 产品。该漏洞属于**未授权路径遍历漏洞**  

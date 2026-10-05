@@ -38,7 +38,7 @@ schema_version: "1"
 #  高危！Laravel参数注入漏洞安全风险通告   
 应急响应中心  亚信安全   2024-11-19 09:08  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbHWoZpicH8TsjJaQNemicEFHXNIhjehdYYNl8ibZSSrlicXLNRicLkJ5iapOkGpPf7YzGmhOHj7iacibHA1SA/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/910b335a6458065a123b5445f0459f4d8dc81af9c689989162e42cebb2e4cad3.jpg "")  
   
   
 今日，亚信安全CERT监控到安全社区研究人员发布安全通告，披露了Laravel 参数注入漏洞(CVE-2024-52301)。在受影响的版本中，Application.php 文件的 detectEnvironment 函数直接使用了 $_SERVER['argv']，但没有检查运行环境是否为 CLI。如果 register_argc_argv 设置为 on，即使是 Web 请求 $_SERVER['argv'] 也可会被填充，从而造成危险行为。攻击者可以在 URL 中构造参数从而改变框架运行环境。  
@@ -105,7 +105,7 @@ Laravel 是一个开源的 PHP 框架，用于开发 Web 应用程序。它采�
   
   
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/iczzp36h0nbHWoZpicH8TsjJaQNemicEFHXzKzglKI4ds3AibUjCSHl90MzqwTbZHMz4jpiaCibTDwyqWSM0Pwm4PH8g/640?wx_fmt=png "")  
+![](../../.resource/remote/443e79686e154d0fcc4d7431d64f638d680fe7c10d483b162d8d2fd0b14eb777.png "")  
   
 （后台私信下载离线升级PTN包）  
   

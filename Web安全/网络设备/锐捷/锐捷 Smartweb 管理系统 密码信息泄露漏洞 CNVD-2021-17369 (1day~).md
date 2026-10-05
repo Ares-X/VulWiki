@@ -60,7 +60,7 @@ fofa: "title=\"无线smartWeb--登录页面\""
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/nvk4Nu8q8AxeuPDPygllWA)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
+![](../../.resource/remote/565dff06de2c0571aa8634353d3ee48f34e22060ed81ae34dbacca97a9237278.gif)
 
 **一****：漏洞描述🐑**
 
@@ -78,7 +78,7 @@ FOFA: title="无线smartWeb--登录页面"
 
 登录页面如下
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3MpEyfmBpzLq03e54eGXvbib8pS8bWOiaGva7L0icNoDxHgj5UxwbhcMpQ/640?wx_fmt=png)
+![](../../.resource/remote/195e764e16644feb5a46f1d0c53350f0b896e0f7c2ed5f25c2cdc83d287fe18c.png)
 
 **然后找到了一个设备存在管理 admin 员的弱口令，进去后发现 Web CLI 控制台**
 
@@ -88,7 +88,7 @@ FOFA: title="无线smartWeb--登录页面"
 more /web/xml/webuser-auth.xml
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG30c4teS9LWDOnFBDfr7KRDOQzLfLFhLyXsqRia2OxCHeLcB8srjbRGjA/640?wx_fmt=png)
+![](../../.resource/remote/d505919a1b22deb70613e28d917bd9ce432ab2033bc8f2420a1ab05f975a9ca8.png)
 
 **里面存在所有人的账号密码**
 
@@ -96,7 +96,7 @@ more /web/xml/webuser-auth.xml
 
 **其中登录的过程中搜索 admin 的数据后发现请求了一个文件 **/web/xml/webuser-auth.xml**，而且响应中包含了 admin 密码的 Base64 编码**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG38XyyHjYJNvTFcNCrjAzrm492XBT4BOFuticQQqOxetq0qhbmibf2Emng/640?wx_fmt=png)
+![](../../.resource/remote/13e3adb672f06743f6d389bd98088bd7bc641886dd98411c9798e258d1ce608d.png)
 
 **解码可能获得 admin 管理员的密码，尝试直接请求**  
 
@@ -107,7 +107,7 @@ Cookie添加
 Cookie: login=1; oid=1.3.6.1.4.1.4881.1.1.10.1.3; type=WS5302; auth=Z3Vlc3Q6Z3Vlc3Q%3D; user=guest
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3LvfiaJ0xOGYz3Q27COtibpbib6dl2jPYBfuZIBV2C4kvP1jlOiaE7UIKpA/640?wx_fmt=png)
+![](../../.resource/remote/f5029a70431fb1e5c43ac32e93fe95e59d01180ca502cfe8d8ff82d423a4c23e.png)
 
  ****四:  Goby & POC🦉****
 
@@ -116,9 +116,9 @@ Cookie: login=1; oid=1.3.6.1.4.1.4881.1.1.10.1.3; type=WS5302; auth=Z3Vlc3Q6Z3Vl
 Ruijie_smartweb_password_information_disclosure
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3PDfEJs8FjRdbzFqiaOTx1C9zb0BWiaRP4iaDVNN8NKxZ4OogVQaKicpbpQ/640?wx_fmt=png)
+![](../../.resource/remote/2183ac0c1c61ccdbb7cb0c52be7d08947ac7549e5fd52d9419dab7d21c019c6d.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3vcLkH0iagWFia8GTmWYbH5cSZD4DHdSaNic73RiaHqWFkorxuKIo8dicBxA/640?wx_fmt=png)
+![](../../.resource/remote/7aa06d689628c36df5512259d0acb32fcea17d3d238f9a15e41d0c0e47bd56fd.png)
 
  ****五:  关于文库🦉****
 
@@ -145,11 +145,11 @@ Ruijie_smartweb_password_information_disclosure
 
 **知识星球里会持续发布一些漏洞公开信息和技术文章~**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3oFxduIZusbktTovD18wqMFpp8xLtZ1ZaPOghhV1eQhyKJ7NflN8zSw/640?wx_fmt=png)
+![](../../.resource/remote/a8e77d90351fb2c893f293a5337681880c472597e82b13f3b737f35f0150b01f.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3w19aTRfNYGuKWCK5UvmhXPzbS6nqklyPnPuECevR1MzdvONpgnGrZw/640?wx_fmt=png)
+![](../../.resource/remote/21d080aff8296295dbb290e06db80a906a58856c90a66d0b610d2543b18fd5ae.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3dHkvubfZibTpUsjs9H7Qq521dseDtibT2eBbib4F5gibDtXpTVLfKbcSYQ/640?wx_fmt=png)
+![](../../.resource/remote/45861d16219f0c92b2f8489df07380f5d5a6517ce120e969fc9e4fdfdfbd0c09.png)
 
 ---
 

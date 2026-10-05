@@ -115,7 +115,7 @@ CreateFile
 C:\ProgramData\Apple\Lockdown\*  
  路径并递归查询该目录中的子文件夹和文件并删除它们。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKbbbJiaTNO3Gg1Gciav8YJ6HoY75D5jILy4EQnicWzkTibna3Wqq5bzJ9ibA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/50fe4046b70eacc604eb52a189247b6f84695b9523a489f3d0a2fbb5fec6cbd8.png "")  
   
 ## 路径C:\ProgramData\Apple\ *中的用户权限有问题  
   
@@ -126,7 +126,7 @@ accesschk64.exe 可用于检查特定文件夹的访问权限。
   
 本地组“用户”的成员在“C:\ProgramData\Apple\Lockdown\”文件夹中拥有写入权限，这使得低权限用户可以写入文件夹中的任意文件。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKlZ3Ih0vXkQd8TWyoxxo1YOW3InVUm6m7UxFPfwdiaEbVrpI7SImXYBA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/9f132429929283cadfc6173be7b2d6ac3c8ebb654840a7313c72875f85895224.png "")  
   
 ## 任意文件/文件夹删除  
   
@@ -153,7 +153,7 @@ C:\ProgramData\Apple\Lockdown\a\aa.txt
   
 C:\ProgramData\Apple\Lockdown\a\b\bb.txt  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKoykiclMRAQrhS5LhkdpskUXO9EhRibT42PLXutBfahSzaiaBDCnza6ia2A/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b8f08664e756e5f744d22ca2ef555ca4088c83a57db365cb476e8c8dfaa1bfec.png "")  
   
 如上图所示，在 aa.txt 上运行“CreateFile”操作并使用“关闭时删除”选项将其删除。  
   
@@ -189,7 +189,7 @@ https://github.com/thezdi/PoC/tree/main/FilesystemEoPs
   
 由于该操作以 SYSTEM 权限运行，因此我们实现任意文件夹或文件删除，这意味着我们可以以 SYSTEM 身份在主机上执行代码。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKEtoP9BODgJniamgmDgd3iayYX2icIKSRnicnQN3RslicXaI089sebAdlTmw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/2e171af57549a943ec2a07a5790d4567284f601a9abe75a8e176bfb479294b54.png "")  
   
 **注意：**  
   
@@ -262,7 +262,7 @@ https://www.zerodayinitiative.com/blog/2022/3/16/abusing-arbitrary-file-deletes-
 .\SetOpLock.exe C:\ProgramData\Apple\Lockdown\
 ```  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKE0PAWjFVDeXPgCuhR5G95jBPgN9UWnCIzsibYDbWUXg6d6ySHKHtOXw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/44a2c59ec6bc75f780044f24cddcc4b8f38f82024068ebff4da89222ab1e8f3a.png "")  
 1. 触发服务重启  
   
 应用 -> 已安装的应用 -> Apple Mobile Device Support -> 修改 -> 修复  
@@ -282,21 +282,21 @@ https://www.zerodayinitiative.com/blog/2022/3/16/abusing-arbitrary-file-deletes-
   
 当在第五步释放 Oplock 时，我们监控 FolderContentsDeleteToFolderDelete 进程以验证是否遵循了 NTFS 连接，以及位于 C:\ 中的 Config.MSI 是否被正确删除。然后，我们监控 FolderOrFileDeletionToSystem.exe 进程以验证我们是否赢得了竞争条件，以及是否写入了带有修改后的回滚脚本的“恶意”Config.MSI 文件夹。如果一切顺利，我们可以按 CTRL+ALT+DELETE，打开右下角的辅助功能菜单并打开屏幕键盘。由于我们已经使用恶意回滚脚本覆盖了 C:\Program Files\Common Files\microsoft shared\ink\HID.DLL 中的 HID.DLL，因此 CMD shell 将以 SYSTEM 身份弹出，完成我们的漏洞利用。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKZgjmffrXzBa3zN5ouE197QcF5ExY80dWGrgiblr69hEfp7cdXC3mfSA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/cf05bbec34412b7ef8b321272a26e9d553b7f594af82f00a6b2dcebf7d87efc6.png "")  
   
 执行和监视 FolderContentsDeleteToFolderDelete.exe  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKvdCHlbsq8OqwQq9ljhCMhgiaRmMTurUtPSWjGEIjA2DWKBRESvQBtdw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/734b117298af2acacdb6bd44d8dda95ba94b4d27aa8dbd97d03248f8740283b6.png "")  
   
 执行和监视 FolderOrFileDeleteToSystem.exe  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/p863n88MewoGicPNjfjyhxJLUfrJMQMmKb1zYjCiciaia47wR7DrDgaQ05kJsznggoUKrRocRDLBuPH0EV1rwHL5Aw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/62ab4141cacdb1f10320d00e52f7f4a9cc11a626841d7c657e1b99720fc29942.png "")  
   
 **弹出 SYSTEM shell**  
   
 ## 关注我们获取更多漏洞  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/p863n88MewrrZDHj38ibIOLPsYibtuWjyicoPwia4bq3iaDOribz04XYR5GzWAt61lWzp8MVSXicSZiciblkosoASKUiaNfQ/640?wx_fmt=jpeg "")  
+![](../../.resource/remote/a65c8713bb540d222b179b636ee0f100f350467cec54be4866ec66835ac6d6e2.jpg "")  
   
 **扫码关注**  
   

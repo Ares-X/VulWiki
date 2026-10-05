@@ -60,7 +60,7 @@ schema_version: "1"
 iOS系统存在一个高危漏洞（CVE-2025-24091），恶意应用仅需执行一行代码即可永久禁用iPhone。该漏洞通过操作系统的Darwin通知机制触发无限重启循环，导致设备"变砖"，必须通过完整系统恢复才能修复。  
   
   
-![image](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icbm1QXk9w6O9EM8c0VvZicmhia9IcxLTuqWX9ThtlxCgz4rYNZibwxibS9xyMQVOTxMR7RvexgQ5vpiag/640?wx_fmt=jpeg&from=appmsg&wxfrom=13&tp=wxpic "")  
+![image](../../Web%E5%AE%89%E5%85%A8/.resource/remote/5276cd540fc4f273d3f19aece9f09d226c2798fb8967ffafbf2651989018fdce.jpg "")  
   
   
 **01**  
@@ -93,7 +93,7 @@ CoreOS
 攻击代码异常简单，仅需执行以下单行指令即可触发漏洞：  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icbm1QXk9w6O9EM8c0VvZicmXgUCIwjgt36lEtoGqwMgWp0PRgqvr4nZJ8t4pHSbgFicyicfaaKx46YA/640?wx_fmt=jpeg&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1 "")  
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/773610147a66b65b400f8913c5e121e18aaf878077a89a841307140e0f077912.jpg "")  
   
   
 执行后设备将强制进入"恢复中"状态。由于实际未进行恢复操作，该过程必然失败并提示用户重启设备。研究人员创建了名为"VeryEvilNotify"的概念验证攻击，将漏洞利用代码植入小组件扩展。  
@@ -105,7 +105,7 @@ CoreOS
 通过将漏洞代码植入发送通知后反复崩溃的小组件，研究人员构建了持久性攻击——每次重启后都会触发攻击，形成使设备无法使用的无限循环。  
   
   
-![图片](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR3icbm1QXk9w6O9EM8c0VvZicm5zJt6ppn4o8QnTVibPm9cJibP9UInsHRuBHN7ibGhuia3cgJB1jm3uhCPQ/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1 "")  
+![图片](../../Web%E5%AE%89%E5%85%A8/.resource/remote/1ecbf1f36c5830837bb4a6316ad6711f2682f97d8fb72ed6c6c6ae4eaaba4260.png "")  
   
   
 **03**  
@@ -148,28 +148,28 @@ CoreOS
   
 点击购买《2023-2024中国商用密码产业发展报告》  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1HyKzSU2XXNcXmbiaiaCljdXpwzOEQ9QTBXMibM6rZTOnbTSwTmCXncQLria2vuLGxn8QPtznzBc0as8vBxWIjrWxQ/640?wx_fmt=jpeg "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/8b47880946aa17dde18985b61e5ef1968dd79c465776293334023960738ce9c1.jpg "")  
   
 来源：  
 FreeBuf  
   
 注：内容均来源于互联网，版权归作者所有，如有侵权，请联系告知，我们将尽快处理。  
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1HyKzSU2XXOdeQx0thlyozF2swQTEN9iaaBNDG0jTKfAgqgdesve8x5IEWNvYxjF6sAWjO1TPCZVsWd0oiaDn3uw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/2e4c0e2b07e6d2218296c1c7879a1d272336221ffba41d6ff1278cb96ec082f3.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMyyClGk1cttkSBbJicAn5drpXEbFIeChG9IkrslYEylRF4Z6KNaxNafDwr5ibcYaZXdnveQCNIr5kw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/f42000ef0ad7a28d8fbc66db41a23e5121172315b9b07a1a7dc553d3420b58eb.jpg "")  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaMcJkA69QYZ9T4jmc3fdN6EA7Qq9A8E3RWcTKhxVEU1QjqOgrJMu2Qg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/e95bab6e8a2e21887ae7bd2f4bf4109d6d4eab2f18fa7c6853fb9da8fa74d1b7.png "")  
   
 点分享  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaiaRXdw4BFsc7MxzkVZaKGgtjWA5GKtUfm3hlgzsBtjJ0mnh9QibeFOGQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/b94311534c431311a6b30af2eb40adb7d08ac2cc847224be0eca88249eaeb004.png "")  
   
 点点赞  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/1HyKzSU2XXMZPiaDBD8yxbIHiciauWK4tuiaeiaNlRO9954g4VS87icD7KQdxzokTGDIjmCJA563IwfStoFzPUaliauXg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+![](../../Web%E5%AE%89%E5%85%A8/.resource/remote/d8f09d4871dad8ed82fb357f065af25d92a2878593cdb206a4e08096012678cc.png "")  
   
 点在看  
   

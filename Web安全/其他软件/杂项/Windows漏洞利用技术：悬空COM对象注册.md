@@ -67,7 +67,7 @@ schema_version: "1"
   
 这篇简短的博文是关于滥用微软最近在 Windows 中修复的一个权限提升漏洞CVE-2026-66804的，我和其他 14 人都报告过这个漏洞。这个问题是对 CVE-2026-50343 的一个不完整的修复，CVE-2026-50343 是一个被 Calif称为“黑暗电梯”的漏洞。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/zNsFJyIuL0Gg2GeSjqhVJjROVL1psqZNlrEpAPfEkial9rLGtogSDcO8K49uDaf6ncr6ZS4IpLiacxic6icMeyPr9rLDzIsLILDYDiaWMEJiaZFicY/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/77eb9b858b1b57cd19f3cb7485df1f99564ab258aefcfd8db3475dd55e866540.png "")  
   
 该漏洞的根本原因是 CLSID 为 CLSID 的 CrossDevice COM 对象存在悬空 COM 对象注册{E9F83CF2-E0C0-4CA7-AF01-E90C70BEF496}。COM 注册通常需要两部分：服务器可执行文件（对于进程内组件，这是一个 DLL 文件）以及HKEY_CLASSES_ROOT指向该 DLL 的注册表项下的 CLSID 条目。  
   
@@ -78,7 +78,7 @@ schema_version: "1"
   
 我过去曾多次使用一种技巧，即利用自定义 COM 封送机制，将任意 DLL 加载到特权进程中。当您调用一个在进程外实现的接口方法时，COM 运行时会将参数封送为 RPC 调用并发送到服务器。如果参数是 COM 对象，则运行时会将该对象封送为 OBJREF 结构，以便服务器可以使用该对象。下图显示了两种主要的 OBJREF 类型，您也可以在此处的官方 DCOM 文档中了解更多信息：  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/zNsFJyIuL0FONdU6qicqFMkMfdibh83YtRFzzy7r4cs1ufjyPmSbEL3uI1MC9rfrUHkG4ojlGExtia4FmNNHQxM28fQaXWOmUticsSSNLuSwAjE/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/4b5c671a38460806fe9efd2601cbf5b122d2ba8ff48a3ba3efd58a5abbc99a98.png "")  
   
 默认的 COM 封送策略是按引用封送，它会生成一个包含连接到原始对象所需所有信息的标准 OBJREF。该对象甚至可能位于完全不同的计算机上。当对象被解封送时，这些信息会用于创建一个返回调用方的 RPC 通道，以便服务器可以调用对象上的方法。  
   
@@ -198,7 +198,7 @@ PS> $cs | ? { -not (Test-ComServer $_.DefaultServer) } |
 **END**  
   
   
-![](https://mmbiz.qpic.cn/mmbiz_jpg/zNsFJyIuL0GMm0C3PibJ82GODxXwMpeBAzTj0aseib6Fht5xVRWPFCmCg6Odt5whNcG17wKDPkd0vhOax9xhviaZ7yR09pIuCYAjaqlHBxwXlk/640?wx_fmt=jpeg&from=appmsg "")  
+![](../../.resource/remote/1f17faf71551225e041e505881a367a59f7a24d3aa6362c013322aaeb7efe4d9.jpg "")  
   
   
 公众号内容都来自国外等平台- 搜索的内容通过结合编写 -   

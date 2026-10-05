@@ -48,7 +48,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2024-03-28 11:47  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEce9NbceqboWIA5UJzWZ6jYlTgs76WTre043ibDXQq1yDavLom27qOZiasMndX3tcKOr7RGslelFk1FHQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b2a95bf32c96b4879bc979fc7860731d42758a5450c4bc49d30cbcedc4d27357.png "")  
   
 本周，谷歌解决了Chrome浏览器中的几个漏洞，包括两个零日漏洞，分别被跟踪为CVE-2024-2886和CVE-2024-2887，在Pwn2Own Vancouver 2024黑客竞赛期间展示。  
   

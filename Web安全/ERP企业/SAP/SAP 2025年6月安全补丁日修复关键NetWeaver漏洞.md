@@ -47,7 +47,7 @@ schema_version: "1"
 
 鹏鹏同学  黑猫安全   2025-06-12 01:20  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceibIHGEHhMzClCFv0WQBE8TGbvCjae2LEklBZD5j4Pxu5LoiaicOE8JGXDbGFKRLibj6ZGy89uo6B0wrQ/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/fdf9f1c38c11cba81c0929fa687253de9bd0f6ae730e89537cc909ee37e16035.png "")  
   
 SAP 2025年6月安全补丁修复了关键NetWeaver漏洞（编号CVE-2025-42989，CVSS评分9.6），该漏洞可能导致攻击者绕过授权检查并提升权限。  
   

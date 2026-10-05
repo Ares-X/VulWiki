@@ -58,7 +58,7 @@ schema_version: "1"
 0day  
 漏洞，该漏洞编号为 CVE-2025-53770，CVSS 评分为 9.8。  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaEXSwAFfGfxn6nKmeibIn4QRXp3paXYKGPOfWwJUTA8PmwNYIiaH9M9fCWic1c2iauTOoCIX75wzfm3Xw/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/b2ab3b9b051aa5d4a8a48d8ec7bebce3d9c84a5d96484fd304010c392186242b.png "")  
   
   
 目前尚未有针对该漏洞的补丁，该漏洞被称为“ ToolShell ”，微软称其是 CVE-2025-49706 的变体。  
@@ -96,7 +96,7 @@ Eye Security 团队扫描了全球8000 多台 SharePoint 服务器，发现数�
   
 ### 漏洞时间线：  
   
-![](https://mmbiz.qpic.cn/mmbiz_png/AnRWZJZfVaEXSwAFfGfxn6nKmeibIn4QRQU5icjcFuoO3zQA1lG8zUibia9dpib9tIOrhfUCx2TVsoKpviaWWT6qcSBA/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/21c2689e3ee3d44c5444aebcef775dbbe16020f1bb36701b2008dcded7dc7eb0.png "")  
   
   
 2025年7月18日晚，Eye Security 团队收到来自某位客户的CrowdStrike Falcon EDR部署的警报 。该警报标记了旧版 SharePoint 本地服务器上的可疑进程链，该进程链与最近上传的恶意.aspx文件相关联。  
@@ -139,7 +139,7 @@ https://msrc.microsoft.com/blog/2025/07/customer-guidance-for-sharepoint-vulnera
   
 https://thehackernews.com/2025/07/critical-microsoft-sharepoint-flaw.html  
   
-![](https://mmbiz.qpic.cn/mmbiz_svg/McYMgia19V0WHlibFPFtGclHY120OMhgwDUwJeU5D8KY3nARGC1mBpGMlExuV3bibicibJqMzAHnDDlNa5SZaUeib46xSzdeKIzoJA/640?wx_fmt=svg "")  
+![](../../.resource/remote/0877e2d01c065e08b6bbbf6e0a90a3b1e83a9887e89bf3c0021a85dea378e78f.svg "")  
   
 **今日安全资讯速递**  
   
