@@ -1,0 +1,272 @@
+[
+  {
+    "source": "wy876/POC",
+    "url": "https://github.com/wy876/POC",
+    "access": "unavailable",
+    "head": null,
+    "seven_day_commits": null,
+    "since_previous_head": null,
+    "limitations": [
+      "HTTP 404 does not distinguish deleted, private, renamed, or access-limited repositories; no alternate identity substituted."
+    ]
+  },
+  {
+    "source": "DMW11525708/wiki",
+    "url": "https://github.com/DMW11525708/wiki",
+    "access": "dated-commit-inventory-complete",
+    "head": {
+      "sha": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "ref_raw_file": "DMW11525708__wiki__head_ref.json",
+      "api_status": 200,
+      "observed_at": "2026-10-05T00:51:30.403704+00:00",
+      "commit_url": "https://github.com/DMW11525708/wiki/commit/2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "author_date": "2025-02-26T08:54:01Z",
+      "committer_date": "2025-02-26T08:54:01Z",
+      "message": "更新了安云漏洞裤",
+      "tree_sha": "117da3595f4ace3b7ed95837ffe23ec39a246ec7",
+      "commit_raw_file": "DMW11525708__wiki__head_commit.json"
+    },
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "limitations": [
+      "Date-window inventory is not a previous-to-current saved-ref comparison, not full-tree/full-article review, and not an admission or source-safety assessment.",
+      "No PoC execution, dependency installation, scanner execution, or sample-target requests performed."
+    ]
+  },
+  {
+    "source": "cvi-Qing/poc",
+    "url": "https://github.com/cvi-Qing/poc",
+    "access": "dated-commit-inventory-complete",
+    "head": {
+      "sha": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "ref_raw_file": "cvi-Qing__poc__head_ref.json",
+      "api_status": 200,
+      "observed_at": "2026-10-05T00:51:30.484975+00:00",
+      "commit_url": "https://github.com/cvi-Qing/poc/commit/8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "author_date": "2025-08-20T15:54:15Z",
+      "committer_date": "2025-08-20T15:54:15Z",
+      "message": "Update README.md",
+      "tree_sha": "af37cf5cc450413d20beff0210ba3dcf6a86444f",
+      "commit_raw_file": "cvi-Qing__poc__head_commit.json"
+    },
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "limitations": [
+      "Date-window inventory is not a previous-to-current saved-ref comparison, not full-tree/full-article review, and not an admission or source-safety assessment.",
+      "No PoC execution, dependency installation, scanner execution, or sample-target requests performed."
+    ]
+  },
+  {
+    "source": "SourByte05/Vulnerability-Wiki-PoC",
+    "url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC",
+    "access": "dated-commit-inventory-complete",
+    "head": {
+      "sha": "fb9be5bbf7d13301ba47904be2f68ead8d7a034e",
+      "ref_raw_file": "SourByte05__Vulnerability-Wiki-PoC__head_ref.json",
+      "api_status": 200,
+      "observed_at": "2026-10-05T00:51:30.471519+00:00",
+      "commit_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/commit/fb9be5bbf7d13301ba47904be2f68ead8d7a034e",
+      "author_date": "2026-09-30T01:40:52Z",
+      "committer_date": "2026-09-30T01:40:52Z",
+      "message": "Delete 2026/09/飞鱼星VW2100  MB3W202 系列无线路由器未授权访问 directory",
+      "tree_sha": "f19731c0db5da780e3277a11e91b0308273f3030",
+      "commit_raw_file": "SourByte05__Vulnerability-Wiki-PoC__head_commit.json"
+    },
+    "seven_day_commits": 6,
+    "since_previous_head": 0,
+    "limitations": [
+      "Date-window inventory is not a previous-to-current saved-ref comparison, not full-tree/full-article review, and not an admission or source-safety assessment.",
+      "No PoC execution, dependency installation, scanner execution, or sample-target requests performed."
+    ]
+  },
+  {
+    "source": "Threekiii/Vulnerability-Wiki",
+    "url": "https://github.com/Threekiii/Vulnerability-Wiki",
+    "access": "dated-commit-inventory-complete",
+    "head": {
+      "sha": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "ref_raw_file": "Threekiii__Vulnerability-Wiki__head_ref.json",
+      "api_status": 200,
+      "observed_at": "2026-10-05T00:51:30.352853+00:00",
+      "commit_url": "https://github.com/Threekiii/Vulnerability-Wiki/commit/b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "author_date": "2026-05-11T10:26:51Z",
+      "committer_date": "2026-05-11T10:26:51Z",
+      "message": "add CVE-2026-25253",
+      "tree_sha": "1a1c4f031bdc940268e52340a83fa919d1cb3166",
+      "commit_raw_file": "Threekiii__Vulnerability-Wiki__head_commit.json"
+    },
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "limitations": [
+      "Date-window inventory is not a previous-to-current saved-ref comparison, not full-tree/full-article review, and not an admission or source-safety assessment.",
+      "No PoC execution, dependency installation, scanner execution, or sample-target requests performed."
+    ]
+  },
+  {
+    "source": "Threekiii/Awesome-POC",
+    "url": "https://github.com/Threekiii/Awesome-POC",
+    "access": "dated-commit-inventory-complete",
+    "head": {
+      "sha": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "ref_raw_file": "Threekiii__Awesome-POC__head_ref.json",
+      "api_status": 200,
+      "observed_at": "2026-10-05T00:51:30.394060+00:00",
+      "commit_url": "https://github.com/Threekiii/Awesome-POC/commit/0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "author_date": "2026-05-11T10:27:00Z",
+      "committer_date": "2026-05-11T10:27:00Z",
+      "message": "add CVE-2026-25253",
+      "tree_sha": "928a416e0264addfb200e7f3469a254fbbf03d13",
+      "commit_raw_file": "Threekiii__Awesome-POC__head_commit.json"
+    },
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "limitations": [
+      "Date-window inventory is not a previous-to-current saved-ref comparison, not full-tree/full-article review, and not an admission or source-safety assessment.",
+      "No PoC execution, dependency installation, scanner execution, or sample-target requests performed."
+    ]
+  },
+  {
+    "source": "BaizeSec/bylibrary",
+    "url": "https://github.com/BaizeSec/bylibrary",
+    "access": "dated-commit-inventory-complete",
+    "head": {
+      "sha": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "ref_raw_file": "BaizeSec__bylibrary__head_ref.json",
+      "api_status": 200,
+      "observed_at": "2026-10-05T00:51:30.445828+00:00",
+      "commit_url": "https://github.com/BaizeSec/bylibrary/commit/dee1fbaa831df860c6905f80de8700211ba63098",
+      "author_date": "2023-10-12T08:51:28Z",
+      "committer_date": "2023-10-12T08:51:28Z",
+      "message": "Update 团队简介.md\n\nLast update, at least for now",
+      "tree_sha": "ec6be05d3a52b1b914e9567896693172d4ea157d",
+      "commit_raw_file": "BaizeSec__bylibrary__head_commit.json"
+    },
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "limitations": [
+      "Date-window inventory is not a previous-to-current saved-ref comparison, not full-tree/full-article review, and not an admission or source-safety assessment.",
+      "No PoC execution, dependency installation, scanner execution, or sample-target requests performed."
+    ]
+  },
+  {
+    "source": "Mr-xn/Penetration_Testing_POC",
+    "url": "https://github.com/Mr-xn/Penetration_Testing_POC",
+    "access": "accessible",
+    "head": "88e9e1690e20a324722e99493b7e984ac7779693",
+    "seven_day_commits": 3,
+    "since_previous_head": 1,
+    "scope": [
+      "Complete 1-file post-baseline README patch"
+    ],
+    "file_list_complete": true
+  },
+  {
+    "source": "MrWQ/vulnerability-paper",
+    "url": "https://github.com/MrWQ/vulnerability-paper",
+    "access": "accessible",
+    "head": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "scope": [
+      "Repository metadata and HEAD commit metadata",
+      "Weekly dated commit metadata list"
+    ],
+    "file_list_complete": null
+  },
+  {
+    "source": "lal0ne/vulnerability",
+    "url": "https://github.com/lal0ne/vulnerability",
+    "access": "accessible",
+    "head": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "scope": [
+      "Repository metadata and HEAD commit metadata",
+      "Weekly dated commit metadata list"
+    ],
+    "file_list_complete": null
+  },
+  {
+    "source": "vulhub/vulhub",
+    "url": "https://github.com/vulhub/vulhub",
+    "access": "accessible",
+    "head": "8fd63916f7a8711e2e01dda0d27237e4d6175d38",
+    "seven_day_commits": 0,
+    "since_previous_head": 0,
+    "scope": [
+      "Repository metadata and HEAD commit metadata",
+      "Weekly dated commit metadata list"
+    ],
+    "file_list_complete": null
+  },
+  {
+    "source": "gelusus/wxvl",
+    "url": "https://github.com/gelusus/wxvl",
+    "access": "accessible",
+    "head": "a046fd64156650ea0157352c7c60b9d373871d8c",
+    "seven_day_commits": 14,
+    "since_previous_head": 1,
+    "scope": [
+      "Complete 2-file changed-path inventory",
+      "DragonForce article opening, heading structure and introductory classification from full patch; not complete fact/source verification",
+      "data.json inventory only"
+    ],
+    "file_list_complete": true
+  },
+  {
+    "source": "nomi-sec/PoC-in-GitHub",
+    "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+    "access": "accessible",
+    "head": "616237c4ab4b6ef08bfff24d105bb0de26c55caf",
+    "seven_day_commits": 56,
+    "since_previous_head": 14,
+    "scope": [
+      "Complete 219-file change inventory retrieved; new-ID paths and metadata reviewed separately",
+      "Parsed 20 complete newly added JSON index patches and read repository identity/descriptions/dates; not every metadata field",
+      "Machine extraction of repository URL additions/removals from 60 changed JSON patches; inspected all 13 removals and listed additions",
+      "Underlying linked repository code, install scripts, dependency files and workflows were not read by this worker"
+    ],
+    "file_list_complete": true
+  },
+  {
+    "source": "trickest/cve",
+    "url": "https://github.com/trickest/cve",
+    "access": "accessible",
+    "head": "4a2278d3f35e8452c94f02e816801516ab5d8929",
+    "seven_day_commits": 7,
+    "since_previous_head": 2,
+    "scope": [
+      "Complete 275-file change inventory retrieved; status counts and selected paths inspected",
+      "Machine-extracted additions/removals from all 64 modified file patches; read 10 substantive description/version corrections",
+      "New identifier files treated as index leads; primary advisories, code, dependency/workflow files and attachments not fully read"
+    ],
+    "file_list_complete": true
+  },
+  {
+    "source": "projectdiscovery/nuclei-templates",
+    "url": "https://github.com/projectdiscovery/nuclei-templates",
+    "access": "accessible",
+    "head": "f1c5c9ccf555a6abb06adb7983cd65f94aa1e1a1",
+    "seven_day_commits": 105,
+    "since_previous_head": 10,
+    "scope": [
+      "All 10 post-baseline commit metadata messages",
+      "Fixed-base/fixed-head compare returned 300 file records; retrieved inventory is capped and incomplete, not a review of 300 file bodies",
+      "Complete added-file patches for the 3 files of substantive commit eead1f7d6017819b49d4d4b52428e9c0c037f20f (54,53,53 lines)"
+    ],
+    "file_list_complete": false
+  },
+  {
+    "source": "rapid7/metasploit-framework",
+    "url": "https://github.com/rapid7/metasploit-framework",
+    "access": "accessible",
+    "head": "5e598d5233bebecef2a44904a286769d83d31d12",
+    "seven_day_commits": 29,
+    "since_previous_head": 0,
+    "scope": [
+      "Repository metadata and HEAD commit metadata",
+      "Weekly dated commit metadata list"
+    ],
+    "file_list_complete": null
+  }
+]

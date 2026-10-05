@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-05T01:08:41.433204+00:00",
+  "review_type": "Independent static content/evidence peer review",
+  "decision": "All four hashed drafts pass bounded reference-admission review; this does not authorize execution or imply reproduction.",
+  "articles": [
+    {
+      "article": "http4s Ember HTTP/2",
+      "identifiers": [
+        "CVE-2026-88975",
+        "GHSA-gq9p-f254-h286"
+      ],
+      "draft": "http4s-draft.md",
+      "decision": "pass",
+      "decision_scope": "Bounded static-reference admission; upstream regression fixture supplies concrete public trigger material.",
+      "fixed_source_commit": "87cf334fa3f608ef7d3eb359e71e037ba3336d29",
+      "checked": [
+        "Independently retrieved repository and global GHSA; package-specific ranges and publication dates agree with final draft.",
+        "Read old parser/read-loop evidence and complete 216-line regression fixture; stored Git blob hashes verified.",
+        "Checked builder HTTP/2 defaults, resolved release commits and patch-ancestry evidence.",
+        "Read 24-file build-review evidence; independently fetched/read six fixed-SHA build/entry files including both workflows, plugin declarations, release credential configuration and Nix/direnv entry points.",
+        "Confirmed source describes destructive Actions artifact deletion and declared release/publication functions accurately.",
+        "No prior matching product/CVE/GHSA article under original master content roots."
+      ],
+      "limitations": [
+        "Community article was independently reported as read by the source reviewer; peer reviewer did not independently retrieve its challenged page or ZIP. Admission rests on official source and public regression fixture, not the ZIP.",
+        "No transitive libraries, external SBT plugins/Actions/Nix implementations or binaries were fully audited.",
+        "No PoC, regression test, build or workflow executed."
+      ],
+      "resolved_findings": [
+        "Repository GHSA date and global advisory-catalog date are now explicitly distinguished.",
+        "Install/dependency/workflow review and destructive artifact-cleanup warning added."
+      ],
+      "draft_sha256": "5b46d796b04be23ce63038e7157d2b10ab6deb325b65f283615843a7543acee5",
+      "draft_bytes": 11159,
+      "blocking_findings": []
+    },
+    {
+      "article": "Phproject REST API",
+      "identifiers": [
+        "CVE-2026-104991",
+        "GHSA-mpq9-v47x-3hw8"
+      ],
+      "draft": "new-candidate-review/drafts/phproject-CVE-2026-104991.md",
+      "decision": "pass",
+      "decision_scope": "Bounded static-reference admission; concrete public request/script material plus official authorization patch.",
+      "fixed_source_commit": "ac1e022fb974b7ad544c5e857c3c2e42122f9349",
+      "checked": [
+        "Read all candidate text and viewed PNG; verified seven source blobs and SHA-256 values against the complete untruncated tree/manifest.",
+        "Read CNA, vendor GHSA, v1.8.7 release and patch evidence; >=1.1.6 lower-bound discrepancy preserved.",
+        "Checked API key and restrict_access prerequisites, three affected handlers and persistent POST/config/user/database side effects.",
+        "MIT license inspected; synthetic test values are identified as constructed examples.",
+        "No prior matching product/CVE/GHSA article under original master content roots."
+      ],
+      "limitations": [
+        "Existing application vendor dependencies are not bundled with the candidate and were not fully audited.",
+        "HTML/PNG is presented source output, not independent live-execution evidence.",
+        "No PoC/setup/network request executed."
+      ],
+      "resolved_findings": [
+        "Draft explicitly notes that the web control omits Bob session credentials and passes ID as an extra curl URL.",
+        "Draft distinguishes the unavailable POST terminal evidence and reused-account setup uncertainty."
+      ],
+      "draft_sha256": "8a4a52b68d3092b6985c0053bc0a675d507545901957d1583d1250e6f12f982c",
+      "draft_bytes": 6719,
+      "blocking_findings": []
+    },
+    {
+      "article": "image-downloader",
+      "identifiers": [
+        "CVE-2026-103648"
+      ],
+      "draft": "new-candidate-review/drafts/image-downloader-CVE-2026-103648.md",
+      "decision": "pass",
+      "decision_scope": "Bounded static-reference admission; concrete public input/scripts and independently hashed published library versions.",
+      "fixed_source_commit": "06e999b734605dab198ac313ecccf7b1c45d3619",
+      "checked": [
+        "Read both Python scripts, Node service, Docker/Compose/package definitions, README/technical source explanations and license.",
+        "Verified every candidate blob/SHA-256 against its manifest and checked untruncated tree metadata.",
+        "Independently verified registry SHA-512 integrity and SHA-1 shasum for both npm tarballs; no nonregular archive members.",
+        "Read 4.3.0/4.3.1 index diff, request writer, package declarations and shipped CI/Nix environment entries.",
+        "Checked filename extraction/extname/HTTP-200/write-permission prerequisites and distinction between library and demo HTTP endpoint.",
+        "No prior matching product/CVE article under original master content roots."
+      ],
+      "limitations": [
+        "GitLab issue/patch page was unavailable to the source reviewer; article explicitly uses npm release-package evidence.",
+        "Mutable images, requests/follow-redirects resolution and transitive dependencies are not fully audited.",
+        "No candidate code installed or executed."
+      ],
+      "resolved_findings": [
+        "Local existence-only success check, container-to-host path mismatch and encoding mismatch are disclosed.",
+        "Incorrect source comment assigning decoding to OS/HTTP client is corrected by citing actual decodeURIComponent flow.",
+        "Final command-CWD clarification says repository root in another terminal and preserves the original command."
+      ],
+      "draft_sha256": "1e797d7e54fb5a28ab189b0d195ae3f2de0e87818ac1d301ff11e39371b7cf49",
+      "draft_bytes": 8481,
+      "blocking_findings": []
+    },
+    {
+      "article": "Loom for AWS",
+      "identifiers": [
+        "CVE-2026-103956",
+        "GHSA-vgmj-998f-r8mp"
+      ],
+      "draft": "new-candidate-review/drafts/loom-CVE-2026-103956.md",
+      "decision": "pass",
+      "decision_scope": "Bounded static-reference admission; concrete public local-lab sequence and official fixed authentication code.",
+      "fixed_source_commit": "064bc4b4ef6815535f6ab06cba3c3dfcf9e0db2d",
+      "checked": [
+        "Read both Python entry points, complete Shell/Docker/Compose setup, README, fixed old/new auth code and dependency declarations; inspected AGPL license identification and viewed header PNG.",
+        "Verified every candidate blob/SHA-256 against manifest and checked complete untruncated tree metadata.",
+        "Read CNA/GHSA/release/compare evidence and independently opened AWS bulletin 2026-124-AWS.",
+        "Confirmed 1.6.1 repair released 2026-08-04 and separate 1.7.0 guidance for referenced sibling CVEs; authentication prerequisite and scope remain distinct.",
+        "No prior matching product/CVE/GHSA article under original master content roots."
+      ],
+      "limitations": [
+        "Witness export success is not independent proof of the credential field; final draft explains this explicitly.",
+        "No whole-upstream runtime, Python package implementation, resolved dependency graph or mutable container image audit.",
+        "No PoC/build/database/cloud request executed."
+      ],
+      "resolved_findings": [
+        "Draft distinguishes parsed-but-unvalidated token from README claim that token is never read.",
+        "Draft explains export/list witness OR condition and marker-anywhere false-positive limits.",
+        "Default loopback versus environment override, source-directory deletion, Compose volume deletion and lack of EXIT-trap cleanup guarantee are explicit."
+      ],
+      "draft_sha256": "bea7a5eb0584df551221d425587b9f557710048981f4e001d638093dc8b01451",
+      "draft_bytes": 8765,
+      "blocking_findings": [],
+      "final_date_precision_recheck": {
+        "previous_reviewed_sha256": "6e56ffc46f9db6f66d22d374747e8bee36c30f9708e6b896a55bfd907b2be7d9",
+        "new_sha256": "bea7a5eb0584df551221d425587b9f557710048981f4e001d638093dc8b01451",
+        "only_change": {
+          "before": "公开实验代码",
+          "after": "2026-10-03 公开的实验代码"
+        },
+        "verification": "Reversing exactly this source-paragraph phrase change reconstructs the previous reviewed SHA-256. Repository created_at and fixed-commit author/committer dates support the added date.",
+        "repository_created_at_utc": "2026-10-03T21:54:10Z",
+        "commit_author_at_utc": "2026-10-03T21:54:38Z",
+        "commit_committer_at_utc": "2026-10-03T21:54:38Z",
+        "decision": "pass unchanged"
+      }
+    }
+  ],
+  "global_checks": {
+    "candidate_code_executed": false,
+    "dependency_installation_performed": false,
+    "example_targets_accessed": false,
+    "repository_modified_by_peer_reviewer": false,
+    "published_by_peer_reviewer": false,
+    "actual_private_secrets_copied_into_articles": false,
+    "existing_content_redacted_or_removed": false,
+    "paused_kev_candidates_resumed": false
+  },
+  "evidence_scope_note": "File inventories and hash checks are distinguished from full-text review. Source-review artifacts may cover more files than the independent spot corroboration listed here. No claim of whole-repository or transitive-dependency safety. Original-master duplicate searches completed before coordinator copied accepted new drafts.",
+  "additional_peer_sources": [
+    "peer-review/http4s-repository-ghsa.json",
+    "peer-review/http4s-ghsa.json",
+    "https://aws.amazon.com/security/security-bulletins/2026-124-aws/"
+  ]
+}
