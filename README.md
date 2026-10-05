@@ -2,7 +2,7 @@
 
 > 中文漏洞知识库：按产品、CVE 和指纹，快速查找漏洞原理与公开复现资料。
 
-[![在线 Wiki](https://img.shields.io/badge/Online-Wiki-3f9e62)](https://ares-x.com/wiki/) [![Markdown](https://img.shields.io/badge/Format-Markdown-49505a)](#本地阅读与检索) [![最近提交](https://img.shields.io/github/last-commit/Ares-X/VulWiki/master?label=updated&color=3f9e62)](https://github.com/Ares-X/VulWiki/commits/master/)
+[![在线 Wiki](docs/assets/online-wiki.svg)](https://ares-x.com/wiki/) [![Markdown](docs/assets/markdown.svg)](#本地阅读与检索) [![提交记录](docs/assets/commits.svg)](https://github.com/Ares-X/VulWiki/commits/master/)
 
 **[在线阅读](https://ares-x.com/wiki/) · [产品索引](INDEX.md) · [CVE 索引](INDEX-CVE.md) · [指纹索引](INDEX-FOFA.md) · [反馈与纠错](https://github.com/Ares-X/VulWiki/issues)**
 
