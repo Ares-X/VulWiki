@@ -2,15 +2,15 @@
   "base": "6b8d16259ecba975c4b6fd00e3aea187caa1fa2e",
   "article_changes": {
     "new": 4,
-    "updated_existing": 0,
-    "existing_hashes_unchanged": 5844
+    "updated_existing": 1,
+    "existing_hashes_unchanged": 5843
   },
   "unit_tests": {
     "count": 81,
     "result": "passed"
   },
   "quality": {
-    "baseline_issues_remaining": 4097,
+    "baseline_issues_remaining": 4096,
     "by_code": {
       "fingerprint_unverified": 45,
       "identifier_inactive": 26,
@@ -18,16 +18,16 @@
       "noncontent_link_candidate": 24,
       "path_legacy": 2,
       "site_relative_link": 81,
-      "source_missing": 3829,
+      "source_missing": 3828,
       "unrecognized_identifier_namespace": 88
     },
     "documents": 5848,
     "errors": 0,
     "fatal_issues": 0,
     "new_issues": 0,
-    "resolved_issues": 1045,
+    "resolved_issues": 1046,
     "result": "no new debt; historical issues remain",
-    "warnings": 4097
+    "warnings": 4096
   },
   "generated_indexes": {
     "by_code": {
@@ -37,7 +37,7 @@
       "noncontent_link_candidate": 24,
       "path_legacy": 2,
       "site_relative_link": 81,
-      "source_missing": 3829,
+      "source_missing": 3828,
       "unrecognized_identifier_namespace": 88
     },
     "different_files": [],
@@ -45,7 +45,7 @@
     "errors": 0,
     "fatal_issues": 0,
     "mode": "check",
-    "warnings": 4097
+    "warnings": 4096
   },
   "render": [
     {
@@ -91,5 +91,18 @@
   ],
   "resource_audit": "not rerun against all existing resource bytes in sparse worktree; no new image references",
   "peer_review": "four final article hashes independently checked; see peer-review.json",
-  "ci": "Final remote head CI checked separately at delivery; this file records offline local checks, not a fabricated run result"
+  "ci": "Final remote head CI checked separately at delivery; this file records offline local checks, not a fabricated run result",
+  "bounded_post_delivery_correction": {
+    "base": "d23a6581ad0b5552f3a3024b5a0aaa09d5253b84",
+    "article": "CVE-2026-85706",
+    "historical_technical_body_exactly_preserved": true,
+    "render": {
+      "article": "Web安全/开发框架/GitLab/（CVE-2026-85706）GitLab repository commits API未认证任意文件读取漏洞.md",
+      "before_code_elements": 19,
+      "after_code_elements": 23,
+      "old_code_text_exact_suffix": true,
+      "active_elements": [],
+      "article_sha256": "e752434287798cbb1951dfe597ba238e8ce47571649c7c9c893966d2376dbb9d"
+    }
+  }
 }
