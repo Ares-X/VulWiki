@@ -103,11 +103,12 @@
     },
     {
       "frame_ids": [
-        303
+        303,
+        304
       ],
       "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
       "operation": "append",
-      "sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
+      "sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1",
       "metadata_added": {
         "version": "Joomla! CMS 3.7.0",
         "fixed_version": "3.7.1",
@@ -122,6 +123,14 @@
           "before_sha256": "aed4368d4bc3330a107519b017ff053f75ca295ec0363a6089c1c95bb2e56d13",
           "after_sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
           "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ],
+      "additional_appends": [
+        {
+          "frame_id": 304,
+          "draft_sha256": "107843b337b846a93f60d4547c695c2a2060882b76f3fa1616c9f7b4fef5cb7e",
+          "previous_result_sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
+          "operation": "Append approved supplementary source analysis; current complete article remains exact prefix; no frontmatter changes"
         }
       ]
     },
@@ -318,6 +327,28 @@
         "fixed_version": "官方：0.46.6.1/1.46.6.1；0.45.4.1/1.45.4.1；0.44.7.1/1.44.7.1；0.43.7.2/1.43.7.2",
         "verification_source": "https://www.metabase.com/blog/vulnerability-advisory"
       },
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        362
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin GET SQL 请求 CSRF CVE-2017-1000499.md",
+      "operation": "new",
+      "sha256": "9e2dafe8a896d74e95694e4133b077182d35dfef264622880db93dce25afa733",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        288
+      ],
+      "path": "Web安全/中间件/JBoss/JBoss EAP JMXInvokerServlet 反序列化资源耗尽 CVE-2016-7065.md",
+      "operation": "new",
+      "sha256": "4c469a54090f60b39bac97584e4f76fe9d693bcd5b545af4d954b582965dc31a",
+      "metadata_added": {},
       "metadata_changed": {},
       "assets": []
     }

@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-05T05:40:19.443158+00:00",
+  "snapshot_utc": "2026-10-05T05:46:14.780591+00:00",
   "framevul_commit": "b28dd1a309d21bb90c4ffc8e39b0469c52f228eb",
   "vulwiki_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "scope": {
@@ -14,12 +14,11 @@
     "non_article": 14,
     "duplicate": 18,
     "unread": 25,
-    "update": 7,
-    "new": 9,
-    "pending-review": 3
+    "update": 8,
+    "new": 11
   },
   "article_file_counts": {
-    "new": 9,
+    "new": 11,
     "updated": 7
   },
   "limits": [
@@ -4463,7 +4462,7 @@
       "outcome_reason": "补充 GeoServer 具体 PoC、配置条件和分支修复边界。",
       "read_depth_summary": "完整读取 83 行脚本、README、两份官方公告和相关提交差异；现有正文保持不变。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11"
     },
     {
@@ -4547,7 +4546,7 @@
       "outcome_reason": "新增 GitLab UploadsPipeline 符号链接读取资料，明确导入权限和留存副作用。",
       "read_depth_summary": "完整读取原报告、33 行原附件、CNA 和五份固定产品文件；附件按下载字节哈希留证。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb"
     },
     {
@@ -4843,7 +4842,7 @@
       "outcome_reason": "已恢复官方镜像中的原报告，追加现有文章的来源、编号与版本证据。",
       "read_depth_summary": "完整读取原报告、两篇现有正文、修复前后 UploadsRewriter 和 FileUploader；另核对路径检查函数。",
       "source_read_failures": [],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "7637a98bd56111758aaabe525534104fc725d4916ae4aad2a3a95fed4656e53c"
     },
     {
@@ -4879,7 +4878,7 @@
       "outcome_reason": "追加 GitLab 2022-2992 的固定公开实现、版本和操作风险。",
       "read_depth_summary": "七份实现/环境文件全文已读，嵌入 PACK 做静态结构核对；未执行程序或安装环境。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb"
     },
     {
@@ -4915,7 +4914,7 @@
       "outcome_reason": "新增 Gitea 迁移参数注入资料，并澄清外部 Git 对象下载与代码执行的区别。",
       "read_depth_summary": "完整读取九份固定 PoC 文本、三份调用链文件、补丁和官方版本材料；未读取 tttang 正文。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e"
     },
     {
@@ -6097,22 +6096,25 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L792",
       "prior_comparison_status": "missing",
       "prior_matched_paths": [],
-      "decision": "pending-review",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "new",
+      "publication_paths": [
+        "Web安全/中间件/JBoss/JBoss EAP JMXInvokerServlet 反序列化资源耗尽 CVE-2016-7065.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
         "bounded_review": "CompleteEDBtechnicaladvisory/vendorBug/CNA; allZIPmembers inspected; fullJava streamgrammar consumption, never instantiate or deserializeobjects",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "完整读取通告、厂商记录和 CNA；固定 ZIP 字节与 Git 信息核对，四份序列化数据流只做有界语法分析。"
       },
       "admission_gaps": [],
-      "work_state": "awaiting_independent_review",
+      "work_state": "independently-reviewed",
       "assessment_outcome": "new",
       "current_mappings": [],
       "outcome_reason": "新增已认证 JBoss EAP 反序列化资源耗尽资料，不把潜在 RCE 当作已证实效果。",
       "read_depth_summary": "完整读取通告、厂商记录和 CNA；固定 ZIP 字节与 Git 信息核对，四份序列化数据流只做有界语法分析。",
       "source_read_failures": [],
-      "independent_next_step": "复核固定来源、正文保真、版本条件和静态审查结论。"
+      "independent_next_step": "绑定终稿哈希并确认远端推送结果。",
+      "content_sha256": "4c469a54090f60b39bac97584e4f76fe9d693bcd5b545af4d954b582965dc31a"
     },
     {
       "id": 289,
@@ -6838,7 +6840,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "c242bb42f41fbe284c68b5797e36dfcdc7257de054401a319f2643a38b018bdc"
     },
     {
@@ -6930,7 +6932,7 @@
       "outcome_reason": "新增 Jenkins Git client Plugin 参数注入资料，保留原始图片证据。",
       "read_depth_summary": "固定 README 和四张原图全部读取；核对官方版本、Job/Configure 权限及固定修复函数。",
       "source_read_failures": [],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "d76fb0ab36c91481d62687baf1a5c41e73ec6b838ffe8eb0e24cf779d142af3b"
     },
     {
@@ -6966,8 +6968,8 @@
       "outcome_reason": "在既有 Joomla 文章追加固定脚本的技术细节和副作用。",
       "read_depth_summary": "186 行脚本、README、官方公告与现有正文全文已读。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
-      "content_sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43"
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
+      "content_sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1"
     },
     {
       "id": 304,
@@ -6980,16 +6982,18 @@
         "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
         "Web安全/CMS内容/Joomla/（CVE-2017-8917）Joomla 3.7.0 QL注入漏洞.md"
       ],
-      "decision": "pending-review",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
         "recovery": "完整读取固定 HTML、四份固定 Joomla PHP 文件、官方公告及两篇现有正文；未读取 13 张截图像素。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "完整读取固定 HTML、四份固定 Joomla PHP 文件、官方公告及两篇现有正文；未读取 13 张截图像素。"
       },
       "admission_gaps": [],
-      "work_state": "awaiting_independent_review",
+      "work_state": "independently-reviewed",
       "assessment_outcome": "update",
       "current_mappings": [
         {
@@ -7041,7 +7045,8 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。"
+      "independent_next_step": "绑定终稿哈希并确认远端推送结果。",
+      "content_sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1"
     },
     {
       "id": 305,
@@ -8759,7 +8764,7 @@
       "outcome_reason": "已恢复固定 PeiQi TRACE 变体，补充已有 INIT 方法及分支修复边界。",
       "read_depth_summary": "固定原文完整请求、原始研究、厂商/CVE 及 Metabase/H2 相关函数已核对；公共修复标签的空提交限制已明确。",
       "source_read_failures": [],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "eb6bd1341e31358c24dc6e3302f924e06b13cd0f8599218905b4e3dd2f822646"
     },
     {
@@ -8788,7 +8793,7 @@
       "outcome_reason": "新增 MeterSphere v1.15.4 未授权文件写入资料，不扩大为已证实 cron RCE。",
       "read_depth_summary": "原 issue、完整截图、相关固定源码与 v1.16.0 认证边界变化已核对。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "ede6f58cdc6a4c8037db590227683456c9fdb7cf1584a83669e26fc72e8f5604"
     },
     {
@@ -9369,7 +9374,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "d4e1a515f58e7b687af8041582aa41d6640bcdf3426876830618163e5b529e3d"
     },
     {
@@ -9699,7 +9704,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "3cab94110472c7d6ab4a938544c764d60573c2b6b851dc1c28b5a81c6eb0978a"
     },
     {
@@ -9828,16 +9833,18 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L1008",
       "prior_comparison_status": "uncertain",
       "prior_matched_paths": [],
-      "decision": "pending-review",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "new",
+      "publication_paths": [
+        "Web安全/数据库/Phpmyadmin/phpMyAdmin GET SQL 请求 CSRF CVE-2017-1000499.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
         "recovery": "转载技术全文、原发现者文章、固定两文件仓库、官方补丁相关段及现有 2019 条目已核对；不是原站 HTTP 字节副本。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "转载技术全文、原发现者文章、固定两文件仓库、官方补丁相关段及现有 2019 条目已核对；不是原站 HTTP 字节副本。"
       },
       "admission_gaps": [],
-      "work_state": "awaiting_independent_review",
+      "work_state": "independently-reviewed",
       "assessment_outcome": "new",
       "current_mappings": [],
       "outcome_reason": "已恢复明确标注原 Vulnspy 地址的完整转载，新增 2017 GET-token CSRF 方法。",
@@ -9852,7 +9859,8 @@
           "failure": "HTTP 502，未取得文章正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。"
+      "independent_next_step": "绑定终稿哈希并确认远端推送结果。",
+      "content_sha256": "9e2dafe8a896d74e95694e4133b077182d35dfef264622880db93dce25afa733"
     },
     {
       "id": 363,
@@ -9905,7 +9913,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8"
     },
     {
@@ -10027,7 +10035,7 @@
           "failure": "HTTP 404，未取得文章正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca"
     },
     {
@@ -10060,7 +10068,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "确认本批远端集成结果；仅处理审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "7f833bbd28db725226fcf0d520292d1121e2ddf389b2d07981a67d07b322d12c"
     },
     {
@@ -10269,7 +10277,7 @@
       "outcome_reason": "补录 Resin Windows 盘符穿越子问题，不冒充整个攻击向量集合已补齐。",
       "read_depth_summary": "固定原作者相关段、原始研究通告及官方变更记录已读。",
       "source_read_failures": [],
-      "independent_next_step": "等待合并状态；仅处理内容审阅反馈。",
+      "independent_next_step": "等待当前提交的远端检查和合并状态；处理内容反馈。",
       "content_sha256": "396d01cce317f0c3b0c1c73d0d1cb0032d4973ef90427279bf921d806e293379"
     },
     {
@@ -12521,5 +12529,5 @@
     }
   ],
   "all_allowed_work_finished": false,
-  "source_assessment_snapshot_utc": "2026-10-05T05:40:19.443158+00:00"
+  "source_assessment_snapshot_utc": "2026-10-05T05:46:14.780591+00:00"
 }
