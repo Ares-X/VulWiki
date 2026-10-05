@@ -39,6 +39,7 @@ IDENTIFIERS = {
     "GHSA": re.compile(r"GHSA-[23456789cfghjmpqrvwx]{4}-[23456789cfghjmpqrvwx]{4}-[23456789cfghjmpqrvwx]{4}"),
     "QVD": re.compile(r"QVD-\d{4}-\d{4,}"),
     "XVE": re.compile(r"XVE-\d{4}-\d{4,}"),
+    "WOOYUN": re.compile(r"WooYun-[0-9]{4}-[0-9]+", re.IGNORECASE),
 }
 DOM_EVENTS = set("abort afterprint animationcancel animationend animationiteration animationstart auxclick beforeinput beforematch beforeprint beforetoggle beforeunload blur cancel canplay canplaythrough change click close contextlost contextmenu contextrestored copy cuechange cut dblclick drag dragend dragenter dragleave dragover dragstart drop durationchange emptied ended error focus focusin focusout formdata fullscreenchange fullscreenerror gotpointercapture hashchange input invalid keydown keypress keyup languagechange load loadeddata loadedmetadata loadstart lostpointercapture message messageerror mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup offline online pagehide pageshow paste pause play playing pointercancel pointerdown pointerenter pointerleave pointermove pointerout pointerover pointerrawupdate pointerup popstate progress ratechange rejectionhandled reset resize scroll scrollend securitypolicyviolation seeked seeking select selectionchange selectstart slotchange stalled storage submit suspend timeupdate toggle touchcancel touchend touchmove touchstart transitioncancel transitionend transitionrun transitionstart unhandledrejection unload volumechange waiting webkitanimationend webkittransitionend wheel".split())
 FATAL_CODES = {"encoding", "frontmatter", "field_type", "field_duplicate", "enum", "id_invalid", "id_duplicate", "path", "schema_required", "canonical", "relation", "verification_evidence", "active_html_example", "index_category"}
@@ -168,6 +169,9 @@ def split_ids(value):
 
 def normalize_identifier(identifier):
     prefix = identifier.split("-", 1)[0].upper()
+    if prefix == "WOOYUN":
+        # Historical report locators retain their spelling and leading zeroes.
+        return identifier
     if prefix == "GHSA" and "-" in identifier:
         return "GHSA-" + identifier.split("-", 1)[1].lower()
     return identifier.upper() if prefix in IDENTIFIERS else identifier

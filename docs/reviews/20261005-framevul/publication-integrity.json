@@ -433,6 +433,86 @@
         ]
       },
       "assets": []
+    },
+    {
+      "frame_ids": [
+        344
+      ],
+      "path": "Web安全/中间件/Alibaba Nacos/Nacos存在Hessian反序列化漏洞.md",
+      "operation": "append",
+      "sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6",
+      "metadata_added": {
+        "version": "本补充静态核对官方Nacos2.2.2；工具声明Nacos2.x<=2.2.2不等于逐版本验证",
+        "fixed_version": "2.2.3，限官方发布说明所述JRaft Hessian反序列化问题；不评价其他漏洞",
+        "verification_source": "https://github.com/alibaba/nacos/releases/tag/2.2.3; https://github.com/alibaba/nacos/commit/6080b01ce6e3a62392e85187f5e62dbbf40a992c; https://github.com/c0olw/NacosRce/tree/353111239df2f17ce82f9a992c62afd05548dc3e"
+      },
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        365
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin AllowArbitraryServer 文件读取 CVE-2019-6799.md",
+      "operation": "new",
+      "sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [],
+      "assembly": {
+        "body_sha256": "4504e8081f3316214f9028151d264f122d8bd6b3eaaebe023c5780f500047a53",
+        "frontmatter_proposal_sha256": "fc295e05ffd870d9d891b59db7ae58642413776adb6391c7cc38e68f499855ce",
+        "body_exact_after_frontmatter": true,
+        "operation": "Prepend separately approved metadata; approved body bytes untouched"
+      }
+    },
+    {
+      "frame_ids": [
+        311
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer-随机数种子泄露导致账户劫持漏洞-CVE-2023-42820.md",
+      "operation": "append",
+      "sha256": "9d0d3babc84d1d77a2878591dde91052b132cc9715f786a86ceda1b57207f92f",
+      "metadata_added": {
+        "version": "官方GHSA总述v2.24–v3.6.4；需按维护分支扣除已修复版本，工具未逐版本验证",
+        "fixed_version": "2.x >=v2.28.19；3.x >=v3.6.5",
+        "previous_prerequisites": "<=3.6.4 claimed; lab3.6.3, known target email, CAPTCHA seed/reset token; concurrency/process PRNG state assumptions",
+        "previous_side_effects": "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。",
+        "verification_source": "https://github.com/jumpserver/jumpserver/security/advisories/GHSA-7prv-g565-82qp"
+      },
+      "metadata_changed": {
+        "prerequisites": [
+          "<=3.6.4 claimed; lab3.6.3, known target email, CAPTCHA seed/reset token; concurrency/process PRNG state assumptions",
+          "目标账户使用本地认证且未启用MFA；此处描述目标账户配置，不表示攻击者须先登录。已知目标邮箱；原半自动样例需取得CAPTCHA seed及reset token，并依赖请求顺序、进程PRNG状态与并发条件；原文实验环境标为3.6.3，不能据此保证其他构建或自动化工具均可用。V2直接依赖版本未锁定。"
+        ],
+        "side_effects": [
+          "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。",
+          "V2请求重置码并提交随机新密码；日志输出新密码；客户端verify=False并跟随重定向"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        312
+      ],
+      "path": "Web安全/运维面板/Jumpserver/Jumpserver安全一窥：Sep系列漏洞深度解析.md",
+      "operation": "append",
+      "sha256": "1f3769b6f896c61596ecc1b07e7229cc067a9e60cc709016c1b359287ecf5cce",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        369
+      ],
+      "path": "Web安全/CMS内容/PHPMyWind/PHPMyWind 5.3 Beta 前台会员 SQL 输入与后台目录文件读取.md",
+      "operation": "new",
+      "sha256": "75cfd8b727557ad352dc098341b087e6059568f2f67d4603c29fcd1523fad9a2",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
     }
   ]
 }

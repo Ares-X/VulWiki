@@ -1113,6 +1113,10 @@
 
 - [phpcms v9  authkey 注入 白帽子技术 - 思路 i 春秋社区 - 分享你的技术，为安全加点温度-](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/PHPCMS/phpcms%20v9%20%20authkey%20%E6%B3%A8%E5%85%A5%20%E7%99%BD%E5%B8%BD%E5%AD%90%E6%8A%80%E6%9C%AF%20-%20%E6%80%9D%E8%B7%AF%20i%20%E6%98%A5%E7%A7%8B%E7%A4%BE%E5%8C%BA%20-%20%E5%88%86%E4%BA%AB%E4%BD%A0%E7%9A%84%E6%8A%80%E6%9C%AF%EF%BC%8C%E4%B8%BA%E5%AE%89%E5%85%A8%E5%8A%A0%E7%82%B9%E6%B8%A9%E5%BA%A6-.md) [unknown; not-reproduced; needs-review]
 
+## PHPMyWind 会员完善资料与后台文件管理
+
+- [PHPMyWind 5.3 Beta 前台会员 SQL 输入与后台目录、文件读取](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/PHPMyWind/PHPMyWind%205.3%20Beta%20%E5%89%8D%E5%8F%B0%E4%BC%9A%E5%91%98%20SQL%20%E8%BE%93%E5%85%A5%E4%B8%8E%E5%90%8E%E5%8F%B0%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.md) [vulnerability; source-claimed; needs-review]
+
 ## PHPOK5.3
 
 - [PHPOK 5.3 前台注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/PHPOK/PHPOK%205.3%20%E5%89%8D%E5%8F%B0%E6%B3%A8%E5%85%A5.md) [analysis; not-reproduced; needs-review]

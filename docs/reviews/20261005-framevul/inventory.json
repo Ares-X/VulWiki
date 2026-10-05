@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-05T06:39:38.171961+00:00",
+  "snapshot_utc": "2026-10-05T07:47:13.888599+00:00",
   "framevul_commit": "b28dd1a309d21bb90c4ffc8e39b0469c52f228eb",
   "vulwiki_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "scope": {
@@ -10,19 +10,19 @@
   },
   "full_scope_complete": false,
   "counts": {
-    "deferred": 443,
+    "deferred": 438,
     "non_article": 15,
     "duplicate": 18,
     "unread": 19,
-    "update": 10,
-    "new": 12
+    "update": 13,
+    "new": 14
   },
   "article_file_counts": {
-    "new": 12,
-    "updated": 9
+    "new": 14,
+    "updated": 12
   },
   "limits": [
-    "本文件为持续更新的进度快照，不是全量技术审阅完成声明。",
+    "本轮当前可推进的有界资料核对已结束；并非全量原始URL/全文恢复声明。",
     "三个范围392项本轮后续核对或发表暂停；暂停不抹去原有文章与旧覆盖结论，也不证明每一项独立触发限制。",
     "已收录方法的静态审查有明确文件/字节边界，不等于复现或整个产品/全部依赖安全认证。",
     "保留所有原始正文、请求、标识符、URL及测试值；未做脱敏。"
@@ -4299,7 +4299,7 @@
       "admission_gaps": [
         "需确认具体 connector、服务器解析配置、扩展名条件和修复；通用版本页面及上传回调不是充分成功证据。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -4317,7 +4317,7 @@
           "failure": "原仓库返回 404；公开副本是否同字节另行说明"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 257,
@@ -4341,7 +4341,7 @@
       "admission_gaps": [
         "Fckeditor 总结原文及可归属同文存档未找到。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -4393,7 +4393,7 @@
           "failure": "HTTP 702，未取得文章正文"
         }
       ],
-      "independent_next_step": "本轮精确URL档案查询返回空；待出现有归属的原文材料，不继续无目标检索。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 258,
@@ -4687,7 +4687,7 @@
       "admission_gaps": [
         "转载与目标微信原文的完整对应尚未证实；同为GitLab文件读取不证明全文相同。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -4754,7 +4754,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 265,
@@ -5205,7 +5205,7 @@
       "admission_gaps": [
         "需单独核定大小写勘误及精确版本/配置，不能静默替换旧路径。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [
         {
@@ -5251,7 +5251,7 @@
       "outcome_reason": "发现原来源与现有正文的 hikvision/Hikvision 路径大小写差异，原字节未改。",
       "read_depth_summary": "已读来源技术正文和现有相关段落。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 275,
@@ -5275,7 +5275,7 @@
       "admission_gaps": [
         "精确版本未给出，路径勘误需独立核对。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [
         {
@@ -5321,7 +5321,7 @@
       "outcome_reason": "发现 report 相关路径大小写差异，保留旧正文并记录待核。",
       "read_depth_summary": "已读来源技术正文与完整现有正文。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 276,
@@ -5390,7 +5390,7 @@
       "admission_gaps": [
         "缺原文及productFile具体构建/方法对应；大学预警不能证明原作者的全部流程。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -5420,7 +5420,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 278,
@@ -5443,7 +5443,7 @@
       "admission_gaps": [
         "原文或有归属的同文存档仍缺失；不把CNA概述当原文完整PoC。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -5473,7 +5473,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 279,
@@ -5655,7 +5655,7 @@
       "admission_gaps": [
         "原文对应、完整公开请求及精确入口仍未闭合；分享参数未被当作有效秘密。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -5685,7 +5685,7 @@
           "failure": "返回动态外壳、站点不可用或验证页面，未取得可核对原文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 284,
@@ -5709,7 +5709,7 @@
       "admission_gaps": [
         "缺精确原文归属和厂商对应补丁正文，不能用近似标题直接判完整覆盖。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -5757,7 +5757,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 285,
@@ -6370,12 +6370,13 @@
       "read_depth": {
         "bounded_review": "Original GitHub API404; recovery search attempted",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "固定修改版 README/单入口及现有相关段已读；JeecgBoot v3.5.0 与 JimuReport 1.5.6 对应、厂商 issue 4734 已核对。"
+        "current_public_summary": "固定修改版入口、README、JeecgBoot 3.5.0/JimuReport 1.5.6版本对应、厂商issue4734及CNA已核对。",
+        "recovery": "固定修改版入口、README、JeecgBoot 3.5.0/JimuReport 1.5.6版本对应、厂商issue4734及CNA已核对。"
       },
       "admission_gaps": [
-        "首次修复发行版和对应补丁尚未证实；修改版不能冒称原工具逐字恢复。"
+        "CNA的PR:L及apiSelectId与公开请求id参数未完整对应；缺相关鉴权调用核对，不能因无认证Header推断匿名；首次修复版仍未知。"
       ],
-      "work_state": "in_progress_primary_gap_followup",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -6385,15 +6386,15 @@
         "readme_blob": null,
         "readme_lines": null
       },
-      "outcome_reason": "已恢复有明确原工具归属的修改版，并取得厂商同请求记录与精确组件版本。",
-      "read_depth_summary": "固定修改版 README/单入口及现有相关段已读；JeecgBoot v3.5.0 与 JimuReport 1.5.6 对应、厂商 issue 4734 已核对。",
+      "outcome_reason": "已读署名修改版和厂商同类请求，权限、参数及编号映射仍未闭合，暂缓补录。",
+      "read_depth_summary": "固定修改版入口、README、JeecgBoot 3.5.0/JimuReport 1.5.6版本对应、厂商issue4734及CNA已核对。",
       "source_read_failures": [
         {
           "url": "https://github.com/MzzdToT/CVE-2023-1454",
           "failure": "原仓库返回 404；公开副本是否同字节另行说明"
         }
       ],
-      "independent_next_step": "继续核对 CNA、厂商问题记录与补丁；以修改版单独署名，不冒称原工具恢复。"
+      "independent_next_step": "等待能对应CNA、请求参数和认证实现的明确材料；未知修复版不是唯一阻碍。"
     },
     {
       "id": 294,
@@ -6864,7 +6865,7 @@
       "admission_gaps": [
         "公开目录指向多漏洞 Jenkins 链，缺原文，不能拼接暂停分支。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -6896,9 +6897,13 @@
         {
           "url": "https://www.angelwhu.com/blog/?p=539",
           "failure": "HTTP 502，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项为该失败请求；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 302,
@@ -7166,12 +7171,12 @@
       ],
       "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
-        "recovery": "All original text and embedded code strings; all prose/code in both current Markdown files; no images or linked code/dependencies",
+        "recovery": "完整读取原文技术文字、规范主文章及固定129行工具；67个图片引用登记但未读像素。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "完整读取原文技术文字、规范主文章及固定129行工具；67个图片引用登记但未读像素。"
       },
       "admission_gaps": [
-        "独立准入复核待完成；历史内嵌短样例的语法/排版限制明示。"
+        "准入已完成；历史内嵌短样例的语法/排版限制明示。"
       ],
       "work_state": "independently-reviewed",
       "assessment_outcome": "update",
@@ -7243,12 +7248,12 @@
         "bounded_review": "Canonical original repo resolved by sameID330347025; complete fixedREADME",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "固定README和3个入口已全文静态读；该分支不在3个入口中实现；现有相关段已比对。",
-        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
+        "recovery": "固定README和3个入口已全文静态读；该分支不在3个入口中实现；现有相关段已比对。"
       },
       "admission_gaps": [
         "工具类型与全文覆盖分列；私钥分支的权限、版本与返回证据未闭合。"
       ],
-      "work_state": "in_progress_bounded_entry_increment_review",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -7261,7 +7266,7 @@
       "outcome_reason": "已有核心日志/令牌流程，README独立高权限分支仍缺明确权限与版本证据。",
       "read_depth_summary": "固定README和3个入口已全文静态读；该分支不在3个入口中实现；现有相关段已比对。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 309,
@@ -7354,20 +7359,22 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L854",
       "prior_comparison_status": "non_article",
       "prior_matched_paths": [],
-      "decision": "deferred",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/运维面板/Jumpserver/JumpServer-随机数种子泄露导致账户劫持漏洞-CVE-2023-42820.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
         "bounded_review": "Complete fixedREADME; current related mappings verified",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "固定两个入口、直接依赖清单及官方GHSA已读；追加提案正在核对。",
-        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
+        "current_public_summary": "完整读取固定V2入口299行、README、直接依赖与官方GHSA；未逐版本运行或递归审依赖。",
+        "recovery": "完整读取固定V2入口299行、README、直接依赖与官方GHSA；未逐版本运行或递归审依赖。"
       },
       "admission_gaps": [
-        "独立准入与最终有界追加稿尚待完成；工具未逐版本运行验证。"
+        "准入已批准；V1与V2不合称全部版本审计，外部OCR及HTTP库未递归审计。"
       ],
-      "work_state": "in_progress_bounded_entry_increment_review",
-      "assessment_outcome": "deferred",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "update",
       "current_mappings": [],
       "fixed_repository_evidence": {
         "repository": "C1ph3rX13/CVE-2023-42820",
@@ -7376,10 +7383,11 @@
         "readme_blob": "62ca3efe744e57c8c3209ce2bd76ec46c7cd83e3",
         "readme_lines": 66
       },
-      "outcome_reason": "V2有验证码OCR和自动改密增量，不能仅按旧文预测code方法判全部重复。",
-      "read_depth_summary": "固定两个入口、直接依赖清单及官方GHSA已读；追加提案正在核对。",
+      "outcome_reason": "V2验证码OCR和自动改密增量已明确，追加稿完成，未按旧文预测code方法判全部重复。",
+      "read_depth_summary": "完整读取固定V2入口299行、README、直接依赖与官方GHSA；未逐版本运行或递归审依赖。",
       "source_read_failures": [],
-      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "content_sha256": "9d0d3babc84d1d77a2878591dde91052b132cc9715f786a86ceda1b57207f92f"
     },
     {
       "id": 312,
@@ -7389,20 +7397,22 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L856",
       "prior_comparison_status": "non_article",
       "prior_matched_paths": [],
-      "decision": "deferred",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/运维面板/Jumpserver/Jumpserver安全一窥：Sep系列漏洞深度解析.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
         "bounded_review": "Complete fixedREADME; current related mappings verified",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "两个固定入口、直接清单和官方GHSA已读；浏览器、Cookie文件及Playbook副作用已记录。",
-        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
+        "recovery": "两个固定入口、直接清单和官方GHSA已读；浏览器、Cookie文件及Playbook副作用已记录。"
       },
       "admission_gaps": [
-        "需独立复核真实自动化增量；不将README组合声明当代码事实。"
+        "准入已批准；不将README组合声明当代码事实，外部浏览器/driver未审计。"
       ],
-      "work_state": "in_progress_bounded_entry_increment_review",
-      "assessment_outcome": "deferred",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "update",
       "current_mappings": [],
       "fixed_repository_evidence": {
         "repository": "C1ph3rX13/CVE-2023-42819",
@@ -7414,7 +7424,8 @@
       "outcome_reason": "实际Python/Go入口要求已有凭据，没有实现README所称42820重置链。",
       "read_depth_summary": "两个固定入口、直接清单和官方GHSA已读；浏览器、Cookie文件及Playbook副作用已记录。",
       "source_read_failures": [],
-      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "content_sha256": "1f3769b6f896c61596ecc1b07e7229cc067a9e60cc709016c1b359287ecf5cce"
     },
     {
       "id": 313,
@@ -7484,7 +7495,7 @@
       "admission_gaps": [
         "只有标题及索引引用，缺原文版本和事件分析。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -7534,9 +7545,13 @@
         {
           "url": "https://www.freebuf.com/column/202148.html",
           "failure": "HTTP 405，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 315,
@@ -7898,13 +7913,13 @@
       "admission_gaps": [
         "缺固定应用构建、精确 Laravel 补丁版本和可核对修复。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "outcome_reason": "原文是特定 Laravel 应用上传代码的案例，不能推成框架通用零日。",
       "read_depth_summary": "完整阅读相关技术段、控制器逻辑和操作顺序；未读图。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 321,
@@ -8080,14 +8095,14 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "原URL存档可见技术全文和现有80行正文已读；原图未读，省略号未猜补。",
+        "recovery": "精确2020年存档技术全文及现有80行正文已读；未猜补代码省略号，未执行样本。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "精确2020年存档技术全文及现有80行正文已读；未猜补代码省略号，未执行样本。"
       },
       "admission_gaps": [
         "完整样本及具体完整触发方法未取得；域名、样本哈希等新事实不能替代完整实现审查。"
       ],
-      "work_state": "bounded_original_read_admission_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [
         {
@@ -8121,7 +8136,7 @@
           "failure": "HTTP 502，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 327,
@@ -8323,7 +8338,7 @@
       "admission_gaps": [
         "缺安装过程的原文、配置与输入细节。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -8352,9 +8367,13 @@
         {
           "url": "https://bbs.ichunqiu.com/thread-35305-1-17.html",
           "failure": "HTTP 521，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 332,
@@ -8377,7 +8396,7 @@
       "admission_gaps": [
         "原多漏洞合集未恢复，不能用单个文件读取条目替代。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -8409,9 +8428,13 @@
         {
           "url": "https://bbs.ichunqiu.com/thread-43416-1-7.html",
           "failure": "HTTP 521，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 333,
@@ -8434,7 +8457,7 @@
       "admission_gaps": [
         "原多漏洞合集未恢复，不能用同产品标题推定全覆盖。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -8466,9 +8489,13 @@
         {
           "url": "https://bbs.ichunqiu.com/thread-43625-1-4.html",
           "failure": "HTTP 521，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 334,
@@ -8549,7 +8576,7 @@
       "admission_gaps": [
         "“最新版本”缺历史构建和原文依据。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -8600,9 +8627,13 @@
         {
           "url": "https://bbs.ichunqiu.com/thread-29686-1-2.html",
           "failure": "HTTP 521，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 336,
@@ -8623,7 +8654,7 @@
       "admission_gaps": [
         "未找到原作者该篇完整技术正文。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [],
       "outcome_reason": "未找到原作者该篇完整技术正文。",
@@ -8636,9 +8667,13 @@
         {
           "url": "https://evi1.cn/post/metinfo7-bug/",
           "failure": "HTTP 502，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 337,
@@ -8659,13 +8694,13 @@
       "admission_gaps": [
         "标题/CNA 的 7.0.0 与原下载链接 7.0.0beta 尚无被测包证据对应；最低具体后台角色未说明。"
       ],
-      "work_state": "deferred",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "outcome_reason": "已取得请求、截图、编号和后续代码，但原被测版本尚未闭合，暂不准入。",
       "read_depth_summary": "原 issue、两张完整原图、CNA 和后续官方过滤代码已读。",
       "source_read_failures": [],
-      "independent_next_step": "只从静态产品版本/发布资料确认 7.0.0 与 7.0.0beta 对应；无法闭合则保持暂缓。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 338,
@@ -8688,7 +8723,7 @@
       "admission_gaps": [
         "CVE 对应不等于恢复整篇内网叙述。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -8720,9 +8755,13 @@
         {
           "url": "https://www.freebuf.com/news/193748.html",
           "failure": "HTTP 405，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 339,
@@ -8893,14 +8932,14 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original source-only GET returns anti-bot challenge rather than article; did not execute challenge. Public same-title reprint search text exists but attribution/full equivalence not independently established.",
+        "recovery": "精确2024存档返回JavaScript验证页，未执行验证；转载客户端文字已读，截图载荷及远程JAR未审。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "current_public_summary": "精确2024存档返回JavaScript验证页，未执行验证；转载客户端文字已读，截图载荷及远程JAR未审。"
       },
       "admission_gaps": [
-        "原站返回验证页面；已读可访问转载的客户端部分，但原文归属、截图载荷和远程 JAR 仍未闭合。"
+        "精确原文归属、完整公开输入及相关客户端实现仍缺；认证绕过同候选已暂停，不能借该入口续审。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -8922,15 +8961,15 @@
           }
         }
       ],
-      "outcome_reason": "原站返回验证页面；已读可访问转载的客户端部分，但原文归属、截图载荷和远程 JAR 仍未闭合。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "原文与存档均未取得技术正文；已有转载只读独立客户端部分，未读认证绕过分支。",
+      "read_depth_summary": "精确2024存档返回JavaScript验证页，未执行验证；转载客户端文字已读，截图载荷及远程JAR未审。",
       "source_read_failures": [
         {
           "url": "https://xz.aliyun.com/t/10355",
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 343,
@@ -8947,7 +8986,7 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Exact-URL reference snippets and primary site category index metadata; no form input or tool use, no password generation/validation",
+        "recovery": "两份明确URL引用和站点类别元数据已读；原页自重定向，未使用工具或读实现。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "两份明确URL引用和站点类别元数据已读；原页自重定向，未使用工具或读实现。"
       },
@@ -9016,20 +9055,22 @@
       "prior_matched_paths": [
         "Web安全/中间件/Alibaba Nacos/Nacos 漏洞利用 Poc 整理.md"
       ],
-      "decision": "deferred",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/中间件/Alibaba Nacos/Nacos存在Hessian反序列化漏洞.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
         "bounded_review": "Complete fixedREADME, source tree metadata/current mappings",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "固定入口、载荷类、连接/过滤器及辅助类、构建清单和协议类已静态读；官方2.2.3说明及补丁已取得。",
-        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
+        "recovery": "固定入口、载荷类、连接/过滤器及辅助类、构建清单和协议类已静态读；官方2.2.3说明及补丁已取得。"
       },
       "admission_gaps": [
-        "有界实现/版本补充正在收尾；未执行Java、反序列化或审计外部依赖及JAR字节。"
+        "准入已批准；未执行Java或反序列化，未审计外部依赖及附件JAR字节。"
       ],
-      "work_state": "bounded_reference_coverage_implementation_gap",
-      "assessment_outcome": "deferred",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "update",
       "current_mappings": [
         {
           "id": 344,
@@ -9060,7 +9101,8 @@
       "outcome_reason": "旧文仅覆盖工具引用/入口；本轮已继续读取实际实现，不能仍称实现完全未读。",
       "read_depth_summary": "固定入口、载荷类、连接/过滤器及辅助类、构建清单和协议类已静态读；官方2.2.3说明及补丁已取得。",
       "source_read_failures": [],
-      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "content_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6"
     },
     {
       "id": 345,
@@ -9076,12 +9118,13 @@
       "read_depth": {
         "bounded_review": "Complete fixedREADME/all3PNGpixels viewed; full81-line current body",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "原固定README/3图和现文已读；2015 Encripto通告与厂商相关发行说明已读。"
+        "current_public_summary": "原固定README/3图和现文已读；2015 Encripto通告与厂商相关发行说明已读。",
+        "recovery": "原固定README/3图和现文已读；2015 Encripto通告与厂商相关发行说明已读。"
       },
       "admission_gaps": [
         "2022来源实际固件号仍未知；型号不当作固件版号，历史相似报告不证明同一修复边界。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -9094,7 +9137,7 @@
       "outcome_reason": "已找到2015年同参数原始报告，但不能把其固件/修复范围套给2022来源。",
       "read_depth_summary": "原固定README/3图和现文已读；2015 Encripto通告与厂商相关发行说明已读。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 346,
@@ -9621,14 +9664,14 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Full 57-line mirror text and full current VulWiki article; five mirror image contents not inspected, no other Panalog candidate expanded",
+        "recovery": "完整固定署名镜像和现文已读；核读4张原图，显示创建响应、仪表盘及MARS(火星)r9p1Free命令界面。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "完整57行Yuque署名镜像和现文已读；5张图未读，命令执行部分仅文字标签。"
+        "current_public_summary": "完整固定署名镜像和现文已读；核读4张原图，显示创建响应、仪表盘及MARS(火星)r9p1Free命令界面。"
       },
       "admission_gaps": [
-        "原文对应、精确版本/认证及图中命令方法未闭合。"
+        "原微信归属未证实；Panalog题名与MARS构建未对应；创建请求会话来源、新账号110权限及与命令界面的同会话关系未知，不能把后台内置命令功能直接当提权。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -9650,15 +9693,15 @@
           }
         }
       ],
-      "outcome_reason": "找到精确短长URL对应和相关固定镜像，尚无目标微信文章完整归属证据。",
-      "read_depth_summary": "完整57行Yuque署名镜像和现文已读；5张图未读，命令执行部分仅文字标签。",
+      "outcome_reason": "创建与命令界面图已核读，产品、会话和权限衔接仍不成立，暂不补稿。",
+      "read_depth_summary": "完整固定署名镜像和现文已读；核读4张原图，显示创建响应、仪表盘及MARS(火星)r9p1Free命令界面。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/98kn5ry-C-IeKY2MDebjLw",
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 359,
@@ -9736,7 +9779,7 @@
       "admission_gaps": [
         "原知乎正文访问受限；缺原文完整操作及精确数据库权限/配置对应。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [
         {
@@ -9784,7 +9827,7 @@
           "failure": "原页返回 403，未取得全文；没有绕过访问限制"
         }
       ],
-      "independent_next_step": "不绕过原页限制；可核对有归属的同文存档或用户提供的原文，官方数据库文档只能支持独立方法。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 361,
@@ -9937,14 +9980,14 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Full article prose in raw HTML lines 557–604, plus author/date/license metadata; full page retained as inert HTML, not a whole-site copy; external JS and12 screenshots not reviewed",
+        "recovery": "固定HTML技术正文557–604行、现文和363补充全文已读；核读8张原附件，另4张未读并明确排除。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "固定SuNu11文章技术文字全文、作者日期已读；12张图未读。"
+        "current_public_summary": "固定HTML技术正文557–604行、现文和363补充全文已读；核读8张原附件，另4张未读并明确排除。"
       },
       "admission_gaps": [
-        "同题不等于同文；图中完整输入/结果及原URL关系未闭合。"
+        "目标微信与博客同文归属仍未证明；上传/日志只有概要，.frm缺准备步骤，会话方法重复现文；作者代码截图不冒称已核官方源码。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "bounded_review_complete_evidence_gap",
       "assessment_outcome": "unread",
       "current_mappings": [
         {
@@ -9966,15 +10009,15 @@
           }
         }
       ],
-      "outcome_reason": "已读同题原作者Git博客，但它与不可读微信原链接的关系仍未证实。",
-      "read_depth_summary": "固定SuNu11文章技术文字全文、作者日期已读；12张图未读。",
+      "outcome_reason": "同题SuNu11原作者博客及原图已核读；只有原理与环境增量，未建立完整且不重复的新方法。",
+      "read_depth_summary": "固定HTML技术正文557–604行、现文和363补充全文已读；核读8张原附件，另4张未读并明确排除。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/zGJxjtDLkw9CMHGfNRu1nw",
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "现有明确来源已核到所述边界；需取得具体缺失材料才可继续，不开展无目标扩展检索。"
     },
     {
       "id": 365,
@@ -9984,19 +10027,21 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L1014",
       "prior_comparison_status": "uncertain",
       "prior_matched_paths": [],
-      "decision": "deferred",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "new",
+      "publication_paths": [
+        "Web安全/数据库/Phpmyadmin/phpMyAdmin AllowArbitraryServer 文件读取 CVE-2019-6799.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
-        "recovery": "Original zkaq source-only GET succeeded. Base64 data inside mdv-content decoded statically without JS; full article text and all visible code excerpts read. Original authorl836918621 dated2020-06-12. Includes nondefaultAllowArbitraryServer,4.8.4 lab, rogue MySQL file read, same-session CSRF token handling and log matchers.",
+        "recovery": "固定260行服务入口和直接依赖、7张必要原图已读；端口、日志截断和随机路径选择区别已核对。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "固定260行服务入口和直接依赖、7张必要原图已读；端口、日志截断和随机路径选择区别已核对。"
       },
       "admission_gaps": [
-        "手工摘要及独立准入收尾中；缺失检测包装仍不能声称完整或可运行。"
+        "手工摘要准入已批准；缺失检测包装不纳入完整实现结论。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
-      "assessment_outcome": "deferred",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "new",
       "current_mappings": [],
       "outcome_reason": "原文手工方法所需服务实现与关键图已恢复，缺包装附件不再是一概拒绝理由。",
       "read_depth_summary": "固定260行服务入口和直接依赖、7张必要原图已读；端口、日志截断和随机路径选择区别已核对。",
@@ -10006,7 +10051,8 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "content_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687"
     },
     {
       "id": 366,
@@ -10118,22 +10164,24 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L1030",
       "prior_comparison_status": "uncertain",
       "prior_matched_paths": [],
-      "decision": "deferred",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "new",
+      "publication_paths": [
+        "Web安全/CMS内容/PHPMyWind/PHPMyWind 5.3 Beta 前台会员 SQL 输入与后台目录文件读取.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
-        "recovery": "Original CSDN521; fixed baidu-security lab readme with exact title located, not yet read.",
+        "recovery": "已读原作者技术全文、固定镜像两个版本声明及三入口、直接变量绑定/数据库/后台权限/OAuth加载相关段；未审计整个安装包。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "原作者技术全文、此前5.2实验材料已读；新增5.3版本声明已核，相关源码审阅正在推进。"
+        "current_public_summary": "FrameVul所指CSDN原页未读；已读独立作者技术全文、固定镜像两个版本声明及三入口、直接变量绑定/数据库/后台权限/OAuth加载相关段。"
       },
       "admission_gaps": [
-        "第三方镜像归属、具体权限/配置和修复对应仍需有界核对；不扩展其他PHPMyWind候选。"
+        "来源归属修订已接受；官方发行包与第三方镜像字节同源未知，原CSDN页面未恢复，三个方法首次修复版均unknown。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
-      "assessment_outcome": "deferred",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "new",
       "current_mappings": [],
-      "outcome_reason": "已取得标称5.3 Beta的固定源码镜像，正在与原作者三种方法逐项对应。",
-      "read_depth_summary": "原作者技术全文、此前5.2实验材料已读；新增5.3版本声明已核，相关源码审阅正在推进。",
+      "outcome_reason": "以独立来源的同主题文章准备5.3 Beta新稿，未确认原CSDN全文对应。",
+      "read_depth_summary": "FrameVul所指CSDN原页未读；已读独立作者技术全文、固定镜像两个版本声明及三入口、直接变量绑定/数据库/后台权限/OAuth加载相关段。",
       "source_read_failures": [
         {
           "url": "https://blog.csdn.net/dengzhasong7076/article/details/102139691",
@@ -10144,7 +10192,11 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "coverage": "independent same-topic supplement; original CSDN unread",
+      "original_source_body_unread": true,
+      "remaining_scope": "原CSDN页面未读，未确认其全文或转载对应关系；新增文章仅收录独立原作者与标称5.3 Beta固定镜像支持的三个完整方法。",
+      "content_sha256": "75cfd8b727557ad352dc098341b087e6059568f2f67d4603c29fcd1523fad9a2"
     },
     {
       "id": 370,
@@ -10165,7 +10217,7 @@
       "admission_gaps": [
         "只有 5.5 审计标题/索引，缺完整正文。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [],
       "outcome_reason": "只有 5.5 审计标题/索引，缺完整正文。",
@@ -10178,9 +10230,13 @@
         {
           "url": "https://bbs.ichunqiu.com/thread-46703-1-1.html",
           "failure": "HTTP 521，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 371,
@@ -10306,7 +10362,7 @@
       "admission_gaps": [
         "原博客 404，泛称“任意读取”不足以确定具体入口。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
+      "work_state": "temporary_archive_rate_limit_block",
       "assessment_outcome": "unread",
       "current_mappings": [],
       "outcome_reason": "原博客 404，泛称“任意读取”不足以确定具体入口。",
@@ -10319,9 +10375,13 @@
         {
           "url": "https://www.cnblogs.com/KevinGeorge/p/8953731.html",
           "failure": "HTTP 404，未取得文章正文"
+        },
+        {
+          "url": "https://archive.org/wayback/available",
+          "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
+      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
     },
     {
       "id": 374,
@@ -10337,12 +10397,12 @@
       ],
       "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
-        "recovery": "原文全文、7图；独立README前96行及3图；两份路由类全文、配置/版本/严格映射声明相关段；官方4.0文档搜索缓存。",
+        "recovery": "原文全文和前7图、独立固定README前96行及3图已读；2份路由源码类全文、配置/版本声明相关段和官方4.0配置文档已核。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "原文全文和前7图、独立固定README前96行及3图已读；2份路由源码类全文、配置/版本声明相关段和官方4.0配置文档已核。"
       },
       "admission_gaps": [
-        "独立准入待完成；第三方源码镜像未与官方包逐字节核对；原图遮挡JSP不作为完整示例代码。"
+        "准入已完成；第三方源码镜像未与官方包逐字节核对；原图遮挡JSP不作为完整示例代码。"
       ],
       "work_state": "independently-reviewed",
       "assessment_outcome": "new",
@@ -10356,9 +10416,9 @@
         }
       ],
       "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
-      "content_sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1",
       "coverage": "method-level supplement with limited original-image review",
-      "remaining_scope": "原文后续14张图片未读；原有水印遮挡代码未完整转录；已完整公开的独立Hello示例支撑本次方法整理，不将全部原文/全部版本计为已核验。"
+      "remaining_scope": "原文后续14张图片未读；原有水印遮挡代码未完整转录；已完整公开的独立Hello示例支撑本次方法整理，不将全部原文/全部版本计为已核验。",
+      "content_sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1"
     },
     {
       "id": 375,
@@ -12541,5 +12601,8 @@
     }
   ],
   "all_allowed_work_finished": false,
-  "source_assessment_snapshot_utc": "2026-10-05T06:39:38.171961+00:00"
+  "source_assessment_snapshot_utc": "2026-10-05T07:47:13.888599+00:00",
+  "all_currently_achievable_content_review_finished": true,
+  "remaining_group3_items_with_concrete_blockers": 29,
+  "disposition_count_definition": "new/update计文章补录处置，不自动代表原URL或全文恢复；原链接未读、替代来源和剩余覆盖范围另列。deferred包含暂停及准入不足，不能据此推断其全部正文已读。"
 }

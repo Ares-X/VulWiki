@@ -52,6 +52,8 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 
 已知格式检查支持 CVE、CNVD（含 CNVD-C）、CNNVD、GHSA、QVD、XVE。只规范大小写，不修改数字。TALOS、WSO2、AVD 等其他形态的人工标识保留主角色，产生 `unrecognized_identifier_namespace` 待核，不假称无效或冒充 CVE。格式通过不等于官方分配有效，也不证明产品映射正确。
 
+历史 WooYun 报告编号支持 `WooYun-`、四位 ASCII 年份和非空 ASCII 数字序号这一语法形态；前缀匹配不区分大小写，投影保留原始拼写与全部数字（包括前导零）。这只是历史报告定位符的格式识别，不验证档案存在、官方分配或产品对应关系。仍按显式主编号、引用或候选角色处理，不进入 CVE 导航，也不新增自动主编号字段。
+
 - `primary_identifiers` 优先；没有它时只有 `identifier_role: "primary"` 的旧字段成为主编号
 - 未声明主角色的旧 cve/cnvd 等仍是可检索候选；明确 reference 的旧字段进入引用集合
 - `identifier_candidates` 可显式登记冲突或待核编号；校验格式并保留候选角色，不因登记而认定官方分配或产品映射有效
