@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-05T07:47:13.888599+00:00",
+  "snapshot_utc": "2026-10-05T13:09:56.333842+00:00",
   "framevul_commit": "b28dd1a309d21bb90c4ffc8e39b0469c52f228eb",
   "vulwiki_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "scope": {
@@ -10,16 +10,16 @@
   },
   "full_scope_complete": false,
   "counts": {
-    "deferred": 438,
+    "deferred": 441,
     "non_article": 15,
     "duplicate": 18,
-    "unread": 19,
-    "update": 13,
+    "unread": 14,
+    "update": 15,
     "new": 14
   },
   "article_file_counts": {
     "new": 14,
-    "updated": 12
+    "updated": 14
   },
   "limits": [
     "本轮当前可推进的有界资料核对已结束；并非全量原始URL/全文恢复声明。",
@@ -7484,19 +7484,30 @@
         "Web安全/开发框架/KindEditor/kindeditor 4.1.5上传漏洞.md",
         "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md"
       ],
-      "decision": "unread",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md"
+      ],
+      "reason": "仅追加独立复核通过的短事实注记；不新增方法准入，完整版本/权限/程序包等缺口保留。",
       "read_depth": {
-        "recovery": "Freebuf original returned405; Git exact-title results are index links only.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "fixed_source_snapshot": "https://web.archive.org/web/20240920033235/https://www.freebuf.com/column/202148.html",
+        "bounded_review": "Reviewed source-history note only, targeted to the existing <=4.1.11 article",
+        "verified_observations": [
+          "Exact original article, publication date and footer attribution were recovered.",
+          "The referenced image currently served at its exact original URL visibly labels4.1.11; this corroborates the source narrative, not a complete affected-version range.",
+          "The source contains <=4.1.5 and <=4.1.11 statements and an explicitly failed Windows curl test.",
+          "Both existing KindEditor candidate files were read and their fixed Git blob identities verified; the basic method substantially overlaps."
+        ],
+        "images_viewed": 1,
+        "images_total": 11,
+        "later_branches_expanded": null
       },
       "admission_gaps": [
-        "只有标题及索引引用，缺原文版本和事件分析。"
+        "Original package/build, complete handler authorization/configuration and remediation boundary remain unverified.",
+        "Only1 of11 embedded images was needed and viewed. Current-origin image bytes are not certified identical to the historical image."
       ],
-      "work_state": "temporary_archive_rate_limit_block",
-      "assessment_outcome": "unread",
+      "work_state": "bounded_source_followup_complete_with_recorded_limits",
+      "assessment_outcome": "factual_annotation_only",
       "current_mappings": [
         {
           "id": 314,
@@ -7535,8 +7546,8 @@
           }
         }
       ],
-      "outcome_reason": "只有标题及索引引用，缺原文版本和事件分析。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "仅追加独立复核通过的短事实注记；不新增方法准入，完整版本/权限/程序包等缺口保留。",
+      "read_depth_summary": "已恢复固定归档正文并作有界来源核对；查看1/11张图片。不是全部方法或全部分支完成声明。",
       "source_read_failures": [
         {
           "url": "https://www.freebuf.com/column/202148.html",
@@ -7551,7 +7562,71 @@
           "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      "independent_next_step": "以充分的静态程序包、版本、调用方鉴权及权限证据补齐具体缺口；不要求新增实测，也不扩展已暂停材料。",
+      "prior_assessment_before_source_recovery": {
+        "decision": "unread",
+        "publication_paths": [],
+        "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+        "read_depth": {
+          "recovery": "Freebuf original returned405; Git exact-title results are index links only.",
+          "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
+          "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        },
+        "admission_gaps": [
+          "只有标题及索引引用，缺原文版本和事件分析。"
+        ],
+        "work_state": "temporary_archive_rate_limit_block",
+        "assessment_outcome": "unread",
+        "outcome_reason": "只有标题及索引引用，缺原文版本和事件分析。",
+        "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+        "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      },
+      "publication_scope": "original_factual_annotation_only",
+      "new_technical_method_admitted": false,
+      "source_state": "recovered_exact_snapshot_text",
+      "source_read_failures_are_historical": true,
+      "source_recovery": {
+        "snapshot_url": "https://web.archive.org/web/20240920033235/https://www.freebuf.com/column/202148.html",
+        "retrieved_at_utc": "2026-10-05T12:25:38.209365+00:00",
+        "response_sha256": "04e202ccabcf31d2a9e1311212ab615dd27e641f3498f54a7f89eba699d2be43",
+        "hash_scope": "Exact archive HTTP response bytes including replay wrapper; not original-author file identity",
+        "source_body_recovered": true,
+        "full_article_technical_review_complete": false,
+        "images_viewed": 1,
+        "images_total": 11,
+        "current_origin_image_historical_identity_unverified": true
+      },
+      "current_mappings_snapshot_commit": "1ab0f64b1625cee1807da6e8b4c27ec6b9528076",
+      "factual_note_review": {
+        "reviewed_at_utc": "2026-10-05T12:55:14.062125+00:00",
+        "decision": "ACCEPT",
+        "exact_note_sha256": "71a1310ff400f7eb9406f61d98396488dad192f9d8f6f90e3a539e76103037f4",
+        "target_base_blob": "32e477b8094e71d21b4a0fcb5226aaa429ef7ac8",
+        "license_scope": "Short original factual summary with attribution only; no article, code or image republication permission asserted",
+        "source_note_full_translation": false
+      },
+      "individual_source_check": {
+        "attribution_and_displayed_dates": {
+          "publisher": "FreeBuf",
+          "displayed_publication_time": "2019-04-28 09:03:43",
+          "individual_author": "not established; visible author field is empty",
+          "footer_attribution": "Tide security team self-description"
+        },
+        "version_context": "Windows/PHPstudy实验叙述及当前原图标注4.1.11；完整影响/修复范围未核实。",
+        "prerequisites_context": "完整服务端handler鉴权、部署配置和固定程序包仍待核。",
+        "body_and_image_coverage": "固定归档正文已恢复；本次仅发表版本差异与失败测试事实短注，查看1/11张图片。",
+        "source_conflicts_preserved": [
+          "文内≤4.1.5与≤4.1.11分别保留，不合并为已验证范围。",
+          "Windows curl尝试明确失败，理论成功响应不当作实测成功；浏览器上传叙述分开。"
+        ],
+        "unverified": [
+          "Original package/build, complete handler authorization/configuration and remediation boundary remain unverified.",
+          "Only1 of11 embedded images was needed and viewed. Current-origin image bytes are not certified identical to the historical image."
+        ],
+        "publication_note_count": 1,
+        "new_technical_method_admitted": false,
+        "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
+      }
     },
     {
       "id": 315,
@@ -8327,19 +8402,32 @@
       "prior_matched_paths": [
         "Web安全/CMS内容/MetInfo/MetInfoCMS 5.X版本GETSHELL漏洞合集2.md"
       ],
-      "decision": "unread",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/CMS内容/MetInfo/MetInfoCMS 5.X版本GETSHELL漏洞合集2.md"
+      ],
+      "reason": "仅追加独立复核通过的短事实注记；不新增方法准入，完整版本/权限/程序包等缺口保留。",
       "read_depth": {
-        "recovery": "Original forum521; exact-title Git matches only catalogs, no technical article.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "fixed_source_snapshot": "https://web.archive.org/web/20200915014805/https://bbs.ichunqiu.com/thread-35305-1-17.html",
+        "bounded_review": "Reviewed version/permission/code-order observation for the existing0x01 installation branch",
+        "verified_observations": [
+          "Original first-post author F0rmat and posted/edited dates are verified.",
+          "The original-URL installer image currently displays5.3.19 in the footer.",
+          "The permission image applies0554 specifically to install.lock; it does not demonstrate configuration-file ACLs or effective deletion failure.",
+          "The source excerpt writes configuration before its database-connection call; full surrounding controls remain unknown.",
+          "The installation branch strongly duplicates the fixed existing candidate; exact copying lineage is not claimed."
+        ],
+        "images_viewed": 2,
+        "images_total": 8,
+        "later_branches_expanded": null
       },
       "admission_gaps": [
-        "缺安装过程的原文、配置与输入细节。"
+        "Current-origin images do not pin the actual distribution or historical image bytes.",
+        "login_check.php inclusion does not determine its exact role/guard behavior.",
+        "2 of8 images viewed; other6 unrequested."
       ],
-      "work_state": "temporary_archive_rate_limit_block",
-      "assessment_outcome": "unread",
+      "work_state": "bounded_source_followup_complete_with_recorded_limits",
+      "assessment_outcome": "factual_annotation_only",
       "current_mappings": [
         {
           "id": 331,
@@ -8361,8 +8449,8 @@
           }
         }
       ],
-      "outcome_reason": "缺安装过程的原文、配置与输入细节。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "仅追加独立复核通过的短事实注记；不新增方法准入，完整版本/权限/程序包等缺口保留。",
+      "read_depth_summary": "已恢复固定归档正文并作有界来源核对；查看2/8张图片。不是全部方法或全部分支完成声明。",
       "source_read_failures": [
         {
           "url": "https://bbs.ichunqiu.com/thread-35305-1-17.html",
@@ -8373,7 +8461,73 @@
           "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      "independent_next_step": "以充分的静态程序包、版本、调用方鉴权及权限证据补齐具体缺口；不要求新增实测，也不扩展已暂停材料。",
+      "prior_assessment_before_source_recovery": {
+        "decision": "unread",
+        "publication_paths": [],
+        "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+        "read_depth": {
+          "recovery": "Original forum521; exact-title Git matches only catalogs, no technical article.",
+          "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
+          "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        },
+        "admission_gaps": [
+          "缺安装过程的原文、配置与输入细节。"
+        ],
+        "work_state": "temporary_archive_rate_limit_block",
+        "assessment_outcome": "unread",
+        "outcome_reason": "缺安装过程的原文、配置与输入细节。",
+        "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+        "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      },
+      "publication_scope": "original_factual_annotation_only",
+      "new_technical_method_admitted": false,
+      "source_state": "recovered_exact_snapshot_text",
+      "source_read_failures_are_historical": true,
+      "source_recovery": {
+        "snapshot_url": "https://web.archive.org/web/20200915014805/https://bbs.ichunqiu.com/thread-35305-1-17.html",
+        "retrieved_at_utc": "2026-10-05T12:28:10.166436+00:00",
+        "response_sha256": "3b2201b203ffef0ff9e28b1a8068de4ada93769233b197ed809252445a779306",
+        "hash_scope": "Exact archive HTTP response bytes including replay wrapper; not original-author file identity",
+        "source_body_recovered": true,
+        "full_article_technical_review_complete": false,
+        "images_viewed": 2,
+        "images_total": 8,
+        "current_origin_image_historical_identity_unverified": true
+      },
+      "current_mappings_snapshot_commit": "1ab0f64b1625cee1807da6e8b4c27ec6b9528076",
+      "factual_note_review": {
+        "reviewed_at_utc": "2026-10-05T12:55:14.062125+00:00",
+        "decision": "ACCEPT",
+        "exact_note_sha256": "bec78480717eb5bd39e70a4cebca927e0415cd9ba11d1aab8b33202fac75fd76",
+        "target_base_blob": "625318859bd9fdc31201849981684075bb9c8266",
+        "license_scope": "Short original factual summary with attribution only; no article, code or image republication permission asserted",
+        "source_note_full_translation": false
+      },
+      "individual_source_check": {
+        "attribution_and_displayed_dates": {
+          "publisher": "iChunqiu forum",
+          "author": "F0rmat",
+          "displayed_publication_time": "2018-03-07 12:23:30",
+          "displayed_last_edit": "2018-03-08 02:44",
+          "first_post_id": "postmessage_429365"
+        },
+        "version_context": "当前原图中的安装界面标注5.3.19，不能锁定具体程序包或整个5.X族。",
+        "prerequisites_context": "完整调用方鉴权、最小角色、有效文件系统权限及安装入口可达性仍待核。",
+        "body_and_image_coverage": "原帖正文已恢复；发表只对应既有0x01安装分支，查看2/8张图片。",
+        "source_conflicts_preserved": [
+          "0554只针对install.lock，不是config_db.php权限或实际删除失败证据。",
+          "截图当前字节与历史归档字节一致性未证实；代码顺序观察不能代替完整调用方条件。"
+        ],
+        "unverified": [
+          "Current-origin images do not pin the actual distribution or historical image bytes.",
+          "login_check.php inclusion does not determine its exact role/guard behavior.",
+          "2 of8 images viewed; other6 unrequested."
+        ],
+        "publication_note_count": 1,
+        "new_technical_method_admitted": false,
+        "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
+      }
     },
     {
       "id": 332,
@@ -8643,22 +8797,31 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L928",
       "prior_comparison_status": "uncertain",
       "prior_matched_paths": [],
-      "decision": "unread",
+      "decision": "deferred",
       "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "reason": "固定来源正文已恢复；具体静态证据缺口仍在，没有新增文章或技术方法准入。",
       "read_depth": {
-        "recovery": "Original author site502; exact title found in public indexes only.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "fixed_source_snapshot": "https://web.archive.org/web/20200925005752/https://evi1.cn/post/metinfo7-bug/",
+        "bounded_review": "no_article_or_method_admission",
+        "verified_observations": [
+          "s1ye authorship and2019-10-10 publication/modification metadata are verified.",
+          "All three sections say V7.0.0 and link a7.0.0beta download.",
+          "Source requests show backend/session context, but do not establish a minimum role."
+        ],
+        "images_viewed": 0,
+        "images_total": 0,
+        "later_branches_expanded": null
       },
       "admission_gaps": [
-        "未找到原作者该篇完整技术正文。"
+        "Official release/tag checks and bounded vendor metadata searches did not recover the original exact package identity.",
+        "The later official manual or unverified community announcement cannot resolve which package the author tested.",
+        "No complete fixed-code authorization path or minimum role was established."
       ],
-      "work_state": "temporary_archive_rate_limit_block",
-      "assessment_outcome": "unread",
+      "work_state": "bounded_source_followup_complete_with_recorded_limits",
+      "assessment_outcome": "recovered_source_with_unresolved_admission",
       "current_mappings": [],
-      "outcome_reason": "未找到原作者该篇完整技术正文。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "固定来源正文已恢复；具体静态证据缺口仍在，没有新增文章或技术方法准入。",
+      "read_depth_summary": "已恢复固定归档正文并作有界来源核对；查看0/0张图片。不是全部方法或全部分支完成声明。",
       "source_read_failures": [
         {
           "url": "https://evi1.cn/post/metinfo7-bug/",
@@ -8673,7 +8836,62 @@
           "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      "independent_next_step": "Keep the beta/stable discrepancy explicit; reconsider when an attributable original package or complete fixed source/role evidence exists. No mandatory live execution is imposed.",
+      "prior_assessment_before_source_recovery": {
+        "decision": "unread",
+        "publication_paths": [],
+        "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+        "read_depth": {
+          "recovery": "Original author site502; exact title found in public indexes only.",
+          "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
+          "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        },
+        "admission_gaps": [
+          "未找到原作者该篇完整技术正文。"
+        ],
+        "work_state": "temporary_archive_rate_limit_block",
+        "assessment_outcome": "unread",
+        "outcome_reason": "未找到原作者该篇完整技术正文。",
+        "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+        "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      },
+      "publication_scope": "no_article_or_new_method_published",
+      "new_technical_method_admitted": false,
+      "source_state": "recovered_exact_snapshot_text",
+      "source_read_failures_are_historical": true,
+      "source_recovery": {
+        "snapshot_url": "https://web.archive.org/web/20200925005752/https://evi1.cn/post/metinfo7-bug/",
+        "retrieved_at_utc": "2026-10-05T12:30:14.610624+00:00",
+        "response_sha256": "fc2fba59abeb2a7d815ae89c03f24da85dafb730e996609783421c66f58d3e33",
+        "hash_scope": "Exact archive HTTP response bytes including replay wrapper; not original-author file identity",
+        "source_body_recovered": true,
+        "full_article_technical_review_complete": false,
+        "images_viewed": 0,
+        "images_total": 0,
+        "current_origin_image_historical_identity_unverified": false
+      },
+      "current_mappings_snapshot_commit": "1ab0f64b1625cee1807da6e8b4c27ec6b9528076",
+      "individual_source_check": {
+        "attribution_and_displayed_dates": {
+          "author_meta": "s1ye",
+          "published_time": "2019-10-10T18:03:47+08:00",
+          "source_site": "evi1.cn"
+        },
+        "version_context": "三节标注V7.0.0，但下载链接为7.0.0beta；固定包身份未解决。",
+        "prerequisites_context": "原文出现后台及会话语境，不能据此确定最小账号角色；完整固定源码鉴权链未建立。",
+        "body_and_image_coverage": "已恢复三节文字，并作版本、署名及权限证据的有界核对；没有新增文章或方法准入，来源无内嵌图片。",
+        "source_conflicts_preserved": [
+          "stable标注与beta链接不一致；后期手册或未核实社区公告不能确定作者原始测试包。"
+        ],
+        "unverified": [
+          "Official release/tag checks and bounded vendor metadata searches did not recover the original exact package identity.",
+          "The later official manual or unverified community announcement cannot resolve which package the author tested.",
+          "No complete fixed-code authorization path or minimum role was established."
+        ],
+        "publication_note_count": 0,
+        "new_technical_method_admitted": false,
+        "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
+      }
     },
     {
       "id": 337,
@@ -8712,19 +8930,29 @@
       "prior_matched_paths": [
         "Web安全/CMS内容/MetInfo/Metinfo任意文件读取.md"
       ],
-      "decision": "unread",
+      "decision": "deferred",
       "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "reason": "固定来源正文已恢复；具体静态证据缺口仍在，没有新增文章或技术方法准入。",
       "read_depth": {
-        "recovery": "Original Freebuf405; public weekly and Git indexes confirm title/link/date but not narrative body.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "fixed_source_snapshot": "https://web.archive.org/web/20240920044926/https://www.freebuf.com/news/193748.html",
+        "bounded_review": "admissible_mapping_correction_only",
+        "verified_observations": [
+          "Original opening explicitly credits twosmi1e and forbids unauthorized republication.",
+          "The initially assigned old_thumb file-read article is not an exact match.",
+          "The existing Copyindx section is a related-helper match, with a distinct physical.php entry.",
+          "Two original opening images corroborate the save.php → column_copyconfig and global.func.php → Copyindx call sites; this closes the earlier missing visible-intermediary evidence.",
+          "A login_check.php include and an intval conversion are visible. Ambiguous conversion operands were not guessed."
+        ],
+        "images_viewed": 2,
+        "images_total": 47,
+        "later_branches_expanded": false
       },
       "admission_gaps": [
-        "CVE 对应不等于恢复整篇内网叙述。"
+        "Complete guard behavior, exact authorization role, normalization effect and fixed program identity remain unverified.",
+        "Only2 of47 images read, both in the opening; no later internal-network/credential/persistence/cleanup branches were expanded."
       ],
-      "work_state": "temporary_archive_rate_limit_block",
-      "assessment_outcome": "unread",
+      "work_state": "bounded_source_followup_complete_with_recorded_limits",
+      "assessment_outcome": "recovered_source_with_unresolved_admission",
       "current_mappings": [
         {
           "id": 338,
@@ -8745,8 +8973,8 @@
           }
         }
       ],
-      "outcome_reason": "CVE 对应不等于恢复整篇内网叙述。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "固定来源正文已恢复；具体静态证据缺口仍在，没有新增文章或技术方法准入。",
+      "read_depth_summary": "已恢复固定归档正文并作有界来源核对；查看2/47张图片。不是全部方法或全部分支完成声明。",
       "source_read_failures": [
         {
           "url": "https://www.freebuf.com/news/193748.html",
@@ -8761,7 +8989,67 @@
           "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      "independent_next_step": "Record the wrong-map rejection and qualified related-helper relationship. Do not merge entries, versions, CVE identities or missing payloads; no publication draft for this article.",
+      "prior_assessment_before_source_recovery": {
+        "decision": "unread",
+        "publication_paths": [],
+        "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+        "read_depth": {
+          "recovery": "Original Freebuf405; public weekly and Git indexes confirm title/link/date but not narrative body.",
+          "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
+          "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        },
+        "admission_gaps": [
+          "CVE 对应不等于恢复整篇内网叙述。"
+        ],
+        "work_state": "temporary_archive_rate_limit_block",
+        "assessment_outcome": "unread",
+        "outcome_reason": "CVE 对应不等于恢复整篇内网叙述。",
+        "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+        "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      },
+      "publication_scope": "no_article_or_new_method_published",
+      "new_technical_method_admitted": false,
+      "source_state": "recovered_exact_snapshot_text",
+      "source_read_failures_are_historical": true,
+      "source_recovery": {
+        "snapshot_url": "https://web.archive.org/web/20240920044926/https://www.freebuf.com/news/193748.html",
+        "retrieved_at_utc": "2026-10-05T12:32:04.426142+00:00",
+        "response_sha256": "25fb128bbbce18c9b48c79c303669cf63fdcd9445109217419651b46f745baac",
+        "hash_scope": "Exact archive HTTP response bytes including replay wrapper; not original-author file identity",
+        "source_body_recovered": true,
+        "full_article_technical_review_complete": false,
+        "images_viewed": 2,
+        "images_total": 47,
+        "current_origin_image_historical_identity_unverified": false
+      },
+      "current_mappings_snapshot_commit": "1ab0f64b1625cee1807da6e8b4c27ec6b9528076",
+      "mapping_correction": {
+        "prior_old_thumb_candidate": "rejected_as_exact_match",
+        "qualified_related_helper": "Copyindx only; distinct physical.php entry, not a merged method or identity",
+        "remaining_limits": "Full guards, minimum role, normalization effects and fixed program identity remain unverified; later branches not expanded"
+      },
+      "individual_source_check": {
+        "attribution_and_displayed_dates": {
+          "publisher": "FreeBuf",
+          "displayed_publication_time": "2019-01-13 09:00:28",
+          "individual_author": "twosmi1e；原文开头署名，网页作者栏为空不等于无作者"
+        },
+        "version_context": "完整固定程序身份、版本和具体鉴权条件仍待核；不能仅据CVE标题确认覆盖。",
+        "prerequisites_context": "可见登录检查引用和整数转换，完整防护行为、最小角色与转换作用未确定。",
+        "body_and_image_coverage": "正文容器已恢复；只核对开头及2/47张图片，后续内网、凭据、持久化和清理分支未扩展，也未发表补稿。",
+        "source_conflicts_preserved": [
+          "old_thumb文章不是精确映射；Copyindx仅相关helper，目标physical.php与来源save.php入口有别，不能合并方法、版本或CVE身份。",
+          "旧网页作者栏提取为空；原文开头明确署名twosmi1e，以该开头归属证据补充。"
+        ],
+        "unverified": [
+          "Complete guard behavior, exact authorization role, normalization effect and fixed program identity remain unverified.",
+          "Only2 of47 images read, both in the opening; no later internal-network/credential/persistence/cleanup branches were expanded."
+        ],
+        "publication_note_count": 0,
+        "new_technical_method_admitted": false,
+        "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
+      }
     },
     {
       "id": 339,
@@ -10206,22 +10494,31 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L1032",
       "prior_comparison_status": "uncertain",
       "prior_matched_paths": [],
-      "decision": "unread",
+      "decision": "deferred",
       "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "reason": "固定来源正文已恢复；具体静态证据缺口仍在，没有新增文章或技术方法准入。",
       "read_depth": {
-        "recovery": "Original forum521; same-title2018-10-12 indexes do not supply article body.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "fixed_source_snapshot": "https://web.archive.org/web/20220221021947/https://bbs.ichunqiu.com/thread-46703-1-1.html",
+        "bounded_review": "no_article_or_method_admission",
+        "verified_observations": [
+          "The original first post is by flat9, displayed publication2018-10-11 19:13:43, titledPHPMyWind v5.5.",
+          "One archived image shows the backend update branch, data processing, database update and WriteConfig call.",
+          "That cropped image contains no preceding authentication or role guard."
+        ],
+        "images_viewed": 1,
+        "images_total": 8,
+        "later_branches_expanded": null
       },
       "admission_gaps": [
-        "只有 5.5 审计标题/索引，缺完整正文。"
+        "Exact fixed package, full entry/guard context, minimum role and complete screenshot-backed method remain unverified.",
+        "Only1 of8 images read.",
+        "No cancelled EDB500/42535 or equivalent technical material was accessed to fill gaps."
       ],
-      "work_state": "temporary_archive_rate_limit_block",
-      "assessment_outcome": "unread",
+      "work_state": "bounded_source_followup_complete_with_recorded_limits",
+      "assessment_outcome": "recovered_source_with_unresolved_admission",
       "current_mappings": [],
-      "outcome_reason": "只有 5.5 审计标题/索引，缺完整正文。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "固定来源正文已恢复；具体静态证据缺口仍在，没有新增文章或技术方法准入。",
+      "read_depth_summary": "已恢复固定归档正文并作有界来源核对；查看1/8张图片。不是全部方法或全部分支完成声明。",
       "source_read_failures": [
         {
           "url": "https://bbs.ichunqiu.com/thread-46703-1-1.html",
@@ -10236,7 +10533,64 @@
           "failure": "2026-10-05 06:32:03 UTC，同一路线首项301返回429且没有Retry-After；本项在停止后的9项中，本轮未执行；临时受限不证明无存档。"
         }
       ],
-      "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      "independent_next_step": "Keep existing material for bounded future source verification; no anonymous/minimum-role inference, execution requirement, or new payload construction.",
+      "prior_assessment_before_source_recovery": {
+        "decision": "unread",
+        "publication_paths": [],
+        "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+        "read_depth": {
+          "recovery": "Original forum521; same-title2018-10-12 indexes do not supply article body.",
+          "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
+          "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        },
+        "admission_gaps": [
+          "只有 5.5 审计标题/索引，缺完整正文。"
+        ],
+        "work_state": "temporary_archive_rate_limit_block",
+        "assessment_outcome": "unread",
+        "outcome_reason": "只有 5.5 审计标题/索引，缺完整正文。",
+        "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+        "independent_next_step": "当前队列已因301的429停止；其余9项本轮未执行，等待服务允许的后续读取或可核对原文材料。"
+      },
+      "publication_scope": "no_article_or_new_method_published",
+      "new_technical_method_admitted": false,
+      "source_state": "recovered_exact_snapshot_text",
+      "source_read_failures_are_historical": true,
+      "source_recovery": {
+        "snapshot_url": "https://web.archive.org/web/20220221021947/https://bbs.ichunqiu.com/thread-46703-1-1.html",
+        "retrieved_at_utc": "2026-10-05T12:33:58.694765+00:00",
+        "response_sha256": "d313d2de79c957fde45f75cf6bed6f0607fa168402105b925791556c53f88b77",
+        "hash_scope": "Exact archive HTTP response bytes including replay wrapper; not original-author file identity",
+        "source_body_recovered": true,
+        "full_article_technical_review_complete": false,
+        "images_viewed": 1,
+        "images_total": 8,
+        "current_origin_image_historical_identity_unverified": false
+      },
+      "current_mappings_snapshot_commit": "1ab0f64b1625cee1807da6e8b4c27ec6b9528076",
+      "individual_source_check": {
+        "attribution_and_displayed_dates": {
+          "publisher": "iChunqiu forum",
+          "author": "flat9",
+          "displayed_publication_time": "2018-10-11 19:13:43",
+          "first_post_id": "postmessage_516943"
+        },
+        "version_context": "原帖题为PHPMyWind v5.5；精确固定程序包及完整影响范围未核实。",
+        "prerequisites_context": "已看后台处理截图未包含前置鉴权/角色guard，不能推断匿名访问或最小权限。",
+        "body_and_image_coverage": "原帖正文恢复；仅查看1/8张图片的后台处理片段，未形成新文章或方法准入。",
+        "source_conflicts_preserved": [
+          "裁切代码片段缺少前置鉴权语境，不把缺图等同无鉴权。",
+          "未访问取消的EDB500/42535或等价技术材料来补齐缺口。"
+        ],
+        "unverified": [
+          "Exact fixed package, full entry/guard context, minimum role and complete screenshot-backed method remain unverified.",
+          "Only1 of8 images read.",
+          "No cancelled EDB500/42535 or equivalent technical material was accessed to fill gaps."
+        ],
+        "publication_note_count": 0,
+        "new_technical_method_admitted": false,
+        "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
+      }
     },
     {
       "id": 371,
@@ -12601,8 +12955,29 @@
     }
   ],
   "all_allowed_work_finished": false,
-  "source_assessment_snapshot_utc": "2026-10-05T07:47:13.888599+00:00",
+  "source_assessment_snapshot_utc": "2026-10-05T13:01:54.793777+00:00",
   "all_currently_achievable_content_review_finished": true,
   "remaining_group3_items_with_concrete_blockers": 29,
-  "disposition_count_definition": "new/update计文章补录处置，不自动代表原URL或全文恢复；原链接未读、替代来源和剩余覆盖范围另列。deferred包含暂停及准入不足，不能据此推断其全部正文已读。"
+  "disposition_count_definition": "new/update计文章补录处置，不自动代表原URL或全文恢复；原链接未读、替代来源和剩余覆盖范围另列。deferred包含暂停及准入不足，不能据此推断其全部正文已读。 本次两项update仅为短事实注记；恢复来源正文和事实注记发表均不表示完整技术方法准入。29项完整来源/准入缺口中含这两项事实注记，避免把补注计数误读为缺口清零。",
+  "factual_annotation_followup": {
+    "source_bodies_recovered": 5,
+    "source_ids": [
+      314,
+      331,
+      336,
+      338,
+      370
+    ],
+    "published_short_factual_notes": 2,
+    "note_ids": [
+      314,
+      331
+    ],
+    "new_technical_method_admissions": 0,
+    "images_viewed": 6,
+    "images_remaining_unviewed": 68,
+    "no_new_source_fetch_in_publication_step": true
+  },
+  "remaining_group3_items_without_publication": 27,
+  "published_factual_notes_with_remaining_admission_gaps": 2
 }
