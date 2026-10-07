@@ -1,0 +1,583 @@
+{
+  "base_commit": "927ec4a91f507197aeb3ab1aec67343495480d44",
+  "preservation": "Original technical materials, examples, values and resource bytes preserved. Source-backed maintenance notes, display title and metadata corrections are explicitly recorded; no redaction.",
+  "articles": [
+    {
+      "frame_ids": [
+        267
+      ],
+      "path": "Web安全/开发框架/Gitea/Gitea 仓库迁移 Git 参数注入漏洞 CVE-2022-30781.md",
+      "operation": "new",
+      "sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_changes": [
+        {
+          "old": "source: \"wuhan005（E99p1ant）与 Li4n0；FrameVul 条目 267\"",
+          "new": "source: \"wuhan005 与 Li4n0；FrameVul 条目 267\""
+        },
+        {
+          "old": "CVE 记录的影响边界是 1.16.7 之前。",
+          "new": "[固定 CNA 记录](https://github.com/CVEProject/cvelistV5/blob/84ce905802bd42acd5009dff04e62c322abd9f0d/cves/2022/30xxx/CVE-2022-30781.json)的描述明确列出 1.16.7 之前的 Gitea；其 references 同时对应 PR 19487 / 19490。"
+        },
+        {
+          "old": "- E99p1ant，2022-05-26，[原始研究](https://tttang.com/archive/1607/)，对应漏洞发现背景和作者流程",
+          "new": "- 原 PoC README 引用的[原始研究](https://tttang.com/archive/1607/)；本轮未读取其正文，具体方法以已审阅的固定 README 和响应文件为依据"
+        },
+        {
+          "old": "- MITRE，[CVE-2022-30781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-30781)，对应产品与版本边界",
+          "new": "- MITRE，[CVE-2022-30781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-30781)；本次实际核对 [CVE 官方集合固定记录](https://github.com/CVEProject/cvelistV5/blob/84ce905802bd42acd5009dff04e62c322abd9f0d/cves/2022/30xxx/CVE-2022-30781.json)，对应产品与版本边界"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        259
+      ],
+      "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+      "operation": "append",
+      "sha256": "ee6b3ec40bbb13f728f8accb04bc89fa3ad8e57045f40a095e0d95578ca026e9",
+      "metadata_added": {
+        "version": "2.22 分支 < 2.22.2；2.21 分支 < 2.21.4；其他历史分支按官方公告所列修复版本分别核对",
+        "fixed_version": "2.22.2；2.21.4；2.20.7；2.19.7；2.18.7",
+        "verification_source": "https://geoserver.org/vulnerability/2023/02/20/ogc-filter-injection.html"
+      },
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_operations": [
+        {
+          "frame_id": 259,
+          "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+          "before_sha256": "e026e557d67d53c566b3378bfa42819dba3a9e3b3bdfae9fa14a355a5fa85b68",
+          "after_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+          "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ],
+      "prior_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+        "after_sha256": "ee6b3ec40bbb13f728f8accb04bc89fa3ad8e57045f40a095e0d95578ca026e9",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "frame_ids": [
+        372
+      ],
+      "path": "Web安全/中间件/Resin/Resin Windows 盘符路径穿越漏洞 CVE-2006-1953.md",
+      "operation": "new",
+      "sha256": "396d01cce317f0c3b0c1c73d0d1cb0032d4973ef90427279bf921d806e293379",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        266
+      ],
+      "path": "Web安全/开发框架/GitLab/【风险提示】天融信关于GitLab存在CVE-2022-2992 RCE漏洞的风险提示.md",
+      "operation": "append",
+      "sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb",
+      "metadata_added": {
+        "previous_record_type": "unknown",
+        "previous_identifier_status": "unknown",
+        "version": "11.10 <= GitLab < 15.1.6；15.2 <= GitLab < 15.2.4；15.3 <= GitLab < 15.3.2",
+        "fixed_version": "15.1.6；15.2.4；15.3.2",
+        "verification_source": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-2992.json"
+      },
+      "metadata_changed": {
+        "record_type": [
+          "unknown",
+          "vulnerability"
+        ],
+        "identifier_status": [
+          "unknown",
+          "active"
+        ]
+      },
+      "assets": [],
+      "editorial_operations": [
+        {
+          "frame_id": 266,
+          "path": "Web安全/开发框架/GitLab/【风险提示】天融信关于GitLab存在CVE-2022-2992 RCE漏洞的风险提示.md",
+          "before_sha256": "e3cecbc5ea65d7f96dfe91b7d5e58cae7360963a3ade777433c64d4a2d70e058",
+          "after_sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb",
+          "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        303,
+        304
+      ],
+      "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
+      "operation": "append",
+      "sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1",
+      "metadata_added": {
+        "version": "Joomla! CMS 3.7.0",
+        "fixed_version": "3.7.1",
+        "verification_source": "https://developer.joomla.org/security-centre/692-20170501-core-sql-injection.html"
+      },
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_operations": [
+        {
+          "frame_id": 303,
+          "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
+          "before_sha256": "aed4368d4bc3330a107519b017ff053f75ca295ec0363a6089c1c95bb2e56d13",
+          "after_sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
+          "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ],
+      "additional_appends": [
+        {
+          "frame_id": 304,
+          "draft_sha256": "107843b337b846a93f60d4547c695c2a2060882b76f3fa1616c9f7b4fef5cb7e",
+          "previous_result_sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
+          "operation": "Append approved supplementary source analysis; current complete article remains exact prefix; no frontmatter changes"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        340
+      ],
+      "path": "Web安全/运维面板/MeterSphere/MeterSphere v1.15.4 resource-md-upload 未授权任意文件写入.md",
+      "operation": "new",
+      "sha256": "ede6f58cdc6a4c8037db590227683456c9fdb7cf1584a83669e26fc72e8f5604",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [
+        {
+          "target": "Web安全/运维面板/MeterSphere/.resource/FrameVul-340-MeterSphere/md-upload-request.png",
+          "sha256": "f57a0366678a28e330181b7fe7cfc0aa4e07c98b0d07e883e1b3c9c7e358154f",
+          "bytes": 313175,
+          "original_url": "https://user-images.githubusercontent.com/26007706/146804566-36ca34f5-76a6-41d6-8d5f-56b6e7dedcee.png"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        261
+      ],
+      "path": "Web安全/开发框架/GitLab/GitLab Bulk Imports UploadsPipeline 符号链接文件读取 CVE-2022-0244.md",
+      "operation": "new",
+      "sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        300
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins 插件资源 Accept-Language 文件读取 CVE-2018-1999002.md",
+      "operation": "new",
+      "sha256": "c242bb42f41fbe284c68b5797e36dfcdc7257de054401a319f2643a38b018bdc",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        302
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins Git client Plugin 仓库 URL 参数注入 CVE-2019-10392.md",
+      "operation": "new",
+      "sha256": "d76fb0ab36c91481d62687baf1a5c41e73ec6b838ffe8eb0e24cf779d142af3b",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [
+        {
+          "target": "Web安全/开发框架/Jenkins/.resource/FrameVul-302-GitClient/configure.jpg",
+          "bytes": 148877,
+          "sha256": "66da832da41a67733058646ce55065e1da2538fcfd4f4a8b5479ad32b01a26ff",
+          "original_url": "https://github.com/jas502n/CVE-2019-10392/blob/6cc445e2590c7564c38dd60033b2e8fad3ad1b0c/configure.jpg"
+        },
+        {
+          "target": "Web安全/开发框架/Jenkins/.resource/FrameVul-302-GitClient/exploit.jpg",
+          "bytes": 175220,
+          "sha256": "97543e1af178bdacfe417ab6f57f9243e82024984572374af99a563e6443141a",
+          "original_url": "https://github.com/jas502n/CVE-2019-10392/blob/6cc445e2590c7564c38dd60033b2e8fad3ad1b0c/exploit.jpg"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        265
+      ],
+      "path": "Web安全/开发框架/GitLab/Gitlab 任意文件读取漏洞.md",
+      "operation": "append",
+      "sha256": "7637a98bd56111758aaabe525534104fc725d4916ae4aad2a3a95fed4656e53c",
+      "metadata_added": {
+        "version": "原报告 GitLab 12.8.7-ee；静态对照 CE v12.8.7；CVE记录的8.5到12.9简写不解释为连续含补丁区间",
+        "fixed_version": "静态确认 CE v12.8.8 具有本路径修复；其他维护分支未逐一核对",
+        "verification_source": "https://gitlab.com/gitlab-org/gitlab/-/issues/212175",
+        "previous_primary_identifiers": "",
+        "previous_identifier_role": "unknown",
+        "previous_identifier_status": "unknown"
+      },
+      "metadata_changed": {
+        "primary_identifiers": [
+          "",
+          "CVE-2020-10977"
+        ],
+        "identifier_role": [
+          "unknown",
+          "primary"
+        ],
+        "identifier_status": [
+          "unknown",
+          "active"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        359
+      ],
+      "path": "Web安全/开发框架/PHPMailer/（CVE-2017-5223）PHPMailer <= 5.2.21 任意文件读取漏洞.md",
+      "operation": "append",
+      "sha256": "3cab94110472c7d6ab4a938544c764d60573c2b6b851dc1c28b5a81c6eb0978a",
+      "metadata_added": {
+        "previous_identifier_status": "unknown",
+        "version": "PHPMailer 5.2.22 之前（CVE 官方描述）；Vulhub 锁定实验依赖为 5.2.20",
+        "fixed_version": "5.2.22（PHPMailer 官方发布说明）",
+        "previous_prerequisites": "来源所述条件，未列明部分仍待核：<=5.2.21，缺修复版本与msgHTML/basedir调用条件",
+        "previous_side_effects": "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对",
+        "verification_source": "https://github.com/PHPMailer/PHPMailer/releases/tag/v5.2.22",
+        "ref": "https://www.cve.org/CVERecord?id=CVE-2017-5223",
+        "additional_source_url": "https://github.com/vulhub/vulhub/blob/8fd63916f7a8711e2e01dda0d27237e4d6175d38/phpmailer/CVE-2017-5223/README.zh-cn.md"
+      },
+      "metadata_changed": {
+        "identifier_status": [
+          "unknown",
+          "active"
+        ],
+        "prerequisites": [
+          "来源所述条件，未列明部分仍待核：<=5.2.21，缺修复版本与msgHTML/basedir调用条件",
+          "调用 msgHTML()；HTML 含未经适当过滤的用户输入；未设置 basedir；邮件发给操作者可读取的收件地址。公开实验为 PHPMailer 5.2.20，经 SMTP 发信"
+        ],
+        "side_effects": [
+          "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对",
+          "来源方法会连接 SMTP 并向指定收件人发送邮件，可能包含服务器本地文件数据；本轮未运行、未发送邮件；index.php 未见持久化意见的操作"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        363
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/（CVE-2018-12613）Phpmyadmin 远程文件包含漏洞.md",
+      "operation": "append",
+      "sha256": "c5a5befca00bfc06551428ec83f048c21b34e374c225f518f0a88c8b64f68999",
+      "metadata_added": {
+        "fixed_version": "4.8.2 或更新版本；官方另提供 4.8 分支补丁",
+        "verification_source": "https://www.phpmyadmin.net/security/PMASA-2018-4/; https://github.com/vulhub/vulhub/blob/8fd63916f7a8711e2e01dda0d27237e4d6175d38/phpmyadmin/CVE-2018-12613/README.zh-cn.md#L1-L28"
+      },
+      "metadata_changed": {},
+      "assets": [],
+      "prior_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8",
+        "after_sha256": "c5a5befca00bfc06551428ec83f048c21b34e374c225f518f0a88c8b64f68999",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "frame_ids": [
+        351
+      ],
+      "path": "Web安全/开发框架/Sonatype Nexus/Nexus Repository Pro SAML 元数据 XXE CVE-2020-29436.md",
+      "operation": "new",
+      "sha256": "d4e1a515f58e7b687af8041582aa41d6640bcdf3426876830618163e5b529e3d",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        366
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 服务器配置删除 CSRF CVE-2019-12922.md",
+      "operation": "new",
+      "sha256": "bcd2448a4136b692c65e592a4b3a2bf64f7ea9c6ebf421a61b3c2b85f63e53cc",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_changes": [
+        {
+          "old": "原研究者的样例使用图片请求触发 GET，目标配置编号为 `1`。下面保留其原始值及换行：[1]",
+          "new": "原研究者的样例使用图片请求触发 GET，目标配置编号为 `1`。下面按存档 HTML 的代码区域恢复文本：先移除存档站自动生成的链接标签，再解码 HTML 实体。原参数和可见代码结构保持；这是经上述方式恢复的代码文本，不是原始邮件的逐字节副本。[1]"
+        }
+      ],
+      "prior_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca",
+        "after_sha256": "bcd2448a4136b692c65e592a4b3a2bf64f7ea9c6ebf421a61b3c2b85f63e53cc",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "frame_ids": [
+        367
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 跨站脚本 CVE-2022-23808.md",
+      "operation": "new",
+      "sha256": "7f833bbd28db725226fcf0d520292d1121e2ddf389b2d07981a67d07b322d12c",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        339
+      ],
+      "path": "Web安全/数据库/Metabase/Metabase-未授权-JDBC-远程代码执行漏洞-CVE-2023-38646.md",
+      "operation": "append",
+      "sha256": "eb6bd1341e31358c24dc6e3302f924e06b13cd0f8599218905b4e3dd2f822646",
+      "metadata_added": {
+        "version": "来源实测 OSS v0.46.6；需非空可接受setup-token、H2/JavaScript引擎及样例数据库路径，其他版本不由单一范围泛推",
+        "fixed_version": "官方：0.46.6.1/1.46.6.1；0.45.4.1/1.45.4.1；0.44.7.1/1.44.7.1；0.43.7.2/1.43.7.2",
+        "verification_source": "https://www.metabase.com/blog/vulnerability-advisory"
+      },
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        362
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin GET SQL 请求 CSRF CVE-2017-1000499.md",
+      "operation": "new",
+      "sha256": "9e2dafe8a896d74e95694e4133b077182d35dfef264622880db93dce25afa733",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        288
+      ],
+      "path": "Web安全/中间件/JBoss/JBoss EAP JMXInvokerServlet 反序列化资源耗尽 CVE-2016-7065.md",
+      "operation": "new",
+      "sha256": "4c469a54090f60b39bac97584e4f76fe9d693bcd5b545af4d954b582965dc31a",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        352
+      ],
+      "path": "Web安全/中间件/NPS内网穿透/npsauth_key未授权访问漏洞.md",
+      "operation": "append",
+      "sha256": "cc8572a2bd5957abf9fe5938e4ecaeb87f2bd3846980fd278dcd06643f2aad3a",
+      "metadata_added": {
+        "version": "原文完整范围 unknown；补充方法已静态核对 ehang-io/nps v0.26.10，限管理端可达、auth_key 非空且 auth_crypt_key 保留公开默认值的配置，不推定首次受影响版本或其他发行包",
+        "fixed_version": "unknown；未核实非空 auth_key 与默认 auth_crypt_key 分支的首次修复发行版，yisier/nps v0.26.14 不能据本次源码比较列为该分支修复",
+        "verification_source": "https://github.com/ehang-io/nps/blob/c9a4d8285b30c3c140782fc660bfc3d6961262ed/docs/api.md#L29-L42; https://github.com/ehang-io/nps/blob/c9a4d8285b30c3c140782fc660bfc3d6961262ed/conf/nps.conf#L51-L54; https://github.com/ehang-io/nps/blob/c9a4d8285b30c3c140782fc660bfc3d6961262ed/web/controllers/auth.go#L11-L35; https://github.com/ehang-io/nps/blob/c9a4d8285b30c3c140782fc660bfc3d6961262ed/web/controllers/base.go#L29-L43; https://github.com/rabbitmask/nps-auth-bypass/blob/159e575fe28687fdc0c7eeb749e06b24af862b69/main.py#L29-L60; https://github.com/yisier/nps/blob/ab81f5b68ea896c1cde76b6ae04dee11be9d477a/web/controllers/base.go#L29-L46",
+        "previous_prerequisites": "空配置密钥、20秒时间窗口，持续请求需更新认证参数",
+        "previous_side_effects": "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+      },
+      "metadata_changed": {
+        "prerequisites": [
+          "空配置密钥、20秒时间窗口，持续请求需更新认证参数",
+          "原文分支：auth_key 未配置或为空；补充分支：auth_key 非空而 auth_crypt_key 仍为公开默认值 1234567812345678；均需管理端及实际 web_base_url 可达、逐请求认证参数匹配且时间戳与服务器差不超过20秒；历史工具 GET 与官方文档 POST 的运行等价性未验证"
+        ],
+        "side_effects": [
+          "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。",
+          "未运行；已读历史 main.py 在 mitmproxy load 回调向配置目标发送一次 GET、将恢复的配置 auth_key 打印到本地标准输出，request 回调无主机/路径/方法过滤地重写 auth_key 和 timestamp 查询参数；依赖导入与两个扫描器未审阅，README 示例含 --ssl-insecure"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        374
+      ],
+      "path": "Web安全/中间件/Resin/Resin 4.0.65 非严格映射下的 JSP 目录解析分析.md",
+      "operation": "new",
+      "sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [
+        {
+          "target": "Web安全/中间件/Resin/.resource/Resin-JSP-directory-FrameVul374/original-version.png",
+          "bytes": 35798,
+          "sha256": "18ca10da9e5ca1ede79fc510da6f0efd2d366266cb7dca40acd68dd0110ecd9a",
+          "original_url": "https://mmbiz.qpic.cn/mmbiz_png/wQ0FicTls5iavGUMJFibcybC1o3iaDckNjdPGicUqTv0FdSe5G9B6OUhHaRFnlPzkzoI57BvgO3VqC1ic41pw2GdO4UQ/640?wx_fmt=png"
+        },
+        {
+          "target": "Web安全/中间件/Resin/.resource/Resin-JSP-directory-FrameVul374/original-jsp.png",
+          "bytes": 35904,
+          "sha256": "7621edd5b554c9b15cab1e0c729d1e2ff48d0241a4181194a57ab8188140ca99",
+          "original_url": "https://mmbiz.qpic.cn/mmbiz_png/wQ0FicTls5iavGUMJFibcybC1o3iaDckNjdP649FdDrUEVM2Kqow1dOR5qTEs7stwSCO51iaFSiaCxEeiaG127ozqKdEg/640?wx_fmt=png"
+        },
+        {
+          "target": "Web安全/中间件/Resin/.resource/Resin-JSP-directory-FrameVul374/fixed-hello-result.png",
+          "bytes": 6912,
+          "sha256": "3035fa95dd8d41273017e1eef7d426f9651b5ba23d982d9590c53533ff66779d",
+          "original_url": "https://raw.githubusercontent.com/istoliving/JavaSec/c5b02696cd0551c53464881baa699f92f006232d/middleware/resin/note/img/144174242-db437f8b-0feb-4683-8e46-7e7586905a15-164000592925175.png"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        307
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md",
+      "operation": "append",
+      "sha256": "37363c69f2089bd237156a98a3b4021842c34bd14241ce4b89dc546736973f86",
+      "metadata_added": {
+        "previous_prerequisites": "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset",
+        "previous_side_effects": "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。",
+        "version": "补充来源仅记录 JumpServer v2.6.1 实验环境；不是完整受影响范围，前文历史分支声明仍待核",
+        "fixed_version": "unknown",
+        "verification_source": "补充来源文本核对：https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g；对应历史快照：https://web.archive.org/web/20210315060223id_/https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g；工具静态核对：https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py；不替换主来源，不表示运行验证"
+      },
+      "metadata_changed": {
+        "prerequisites": [
+          "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset",
+          "历史材料所列分支范围仍待逐分支核对；本补充依据作者 v2.6.1 实验：已配置资产及系统用户、日志路径已知、历史终端记录含有效 user/asset/system_user 标识；自动登录或仍可复用的资产会话影响连接结果"
+        ],
+        "side_effects": [
+          "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。",
+          "读取并在控制台输出日志和资产标识；申请连接令牌、建立受管资产终端并产生可能的审计记录；所附固定工具在 Yes/No 提示前向所有候选发送 echo 命令；后续命令的文件、账号或其他影响取决于输入；持续读取和无显式等待上限可能占用资源"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        344
+      ],
+      "path": "Web安全/中间件/Alibaba Nacos/Nacos存在Hessian反序列化漏洞.md",
+      "operation": "append",
+      "sha256": "9550d7225e00fbf5a75d878b690ad63fa07b5c98206d12634e128e419303015c",
+      "metadata_added": {
+        "version": "本补充静态核对官方Nacos2.2.2；工具声明Nacos2.x<=2.2.2不等于逐版本验证",
+        "fixed_version": "2.2.3，限官方发布说明所述JRaft Hessian反序列化问题；不评价其他漏洞",
+        "verification_source": "https://github.com/alibaba/nacos/releases/tag/2.2.3; https://github.com/alibaba/nacos/commit/6080b01ce6e3a62392e85187f5e62dbbf40a992c; https://github.com/c0olw/NacosRce/tree/353111239df2f17ce82f9a992c62afd05548dc3e"
+      },
+      "metadata_changed": {},
+      "assets": [],
+      "prior_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6",
+        "after_sha256": "9550d7225e00fbf5a75d878b690ad63fa07b5c98206d12634e128e419303015c",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "frame_ids": [
+        365
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin AllowArbitraryServer 文件读取 CVE-2019-6799.md",
+      "operation": "new",
+      "sha256": "8816e261dd2eeaad766e19843b6fddb3a47a738d8b4e014c37d9d3ed11b2d270",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [],
+      "assembly": {
+        "body_sha256": "4504e8081f3316214f9028151d264f122d8bd6b3eaaebe023c5780f500047a53",
+        "frontmatter_proposal_sha256": "fc295e05ffd870d9d891b59db7ae58642413776adb6391c7cc38e68f499855ce",
+        "body_exact_after_frontmatter": true,
+        "operation": "Prepend separately approved metadata; approved body bytes untouched"
+      },
+      "prior_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687",
+        "after_sha256": "8816e261dd2eeaad766e19843b6fddb3a47a738d8b4e014c37d9d3ed11b2d270",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "frame_ids": [
+        311
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer-随机数种子泄露导致账户劫持漏洞-CVE-2023-42820.md",
+      "operation": "append",
+      "sha256": "9d0d3babc84d1d77a2878591dde91052b132cc9715f786a86ceda1b57207f92f",
+      "metadata_added": {
+        "version": "官方GHSA总述v2.24–v3.6.4；需按维护分支扣除已修复版本，工具未逐版本验证",
+        "fixed_version": "2.x >=v2.28.19；3.x >=v3.6.5",
+        "previous_prerequisites": "<=3.6.4 claimed; lab3.6.3, known target email, CAPTCHA seed/reset token; concurrency/process PRNG state assumptions",
+        "previous_side_effects": "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。",
+        "verification_source": "https://github.com/jumpserver/jumpserver/security/advisories/GHSA-7prv-g565-82qp"
+      },
+      "metadata_changed": {
+        "prerequisites": [
+          "<=3.6.4 claimed; lab3.6.3, known target email, CAPTCHA seed/reset token; concurrency/process PRNG state assumptions",
+          "目标账户使用本地认证且未启用MFA；此处描述目标账户配置，不表示攻击者须先登录。已知目标邮箱；原半自动样例需取得CAPTCHA seed及reset token，并依赖请求顺序、进程PRNG状态与并发条件；原文实验环境标为3.6.3，不能据此保证其他构建或自动化工具均可用。V2直接依赖版本未锁定。"
+        ],
+        "side_effects": [
+          "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。",
+          "V2请求重置码并提交随机新密码；日志输出新密码；客户端verify=False并跟随重定向"
+        ]
+      },
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        312
+      ],
+      "path": "Web安全/运维面板/Jumpserver/Jumpserver安全一窥：Sep系列漏洞深度解析.md",
+      "operation": "append",
+      "sha256": "1f3769b6f896c61596ecc1b07e7229cc067a9e60cc709016c1b359287ecf5cce",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        369
+      ],
+      "path": "Web安全/CMS内容/PHPMyWind/PHPMyWind 5.3 Beta 前台会员 SQL 输入与后台目录文件读取.md",
+      "operation": "new",
+      "sha256": "75cfd8b727557ad352dc098341b087e6059568f2f67d4603c29fcd1523fad9a2",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "path": "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md",
+      "frame_ids": [
+        314
+      ],
+      "sha256": "40e93902adc2a5954f41cdbc5355af6ef505efb066833cd787821a0b5d526fa1",
+      "operation": "factual-note-append",
+      "assets": [],
+      "metadata_added": {},
+      "metadata_changed": {},
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "79a298297b44f20b087a240264b1f8067417d1680b81aeeaca29d76f10a8e07e",
+        "after_sha256": "40e93902adc2a5954f41cdbc5355af6ef505efb066833cd787821a0b5d526fa1",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "path": "Web安全/CMS内容/MetInfo/MetInfoCMS 5.X版本GETSHELL漏洞合集2.md",
+      "frame_ids": [
+        331
+      ],
+      "sha256": "bf7f1daa523f7994839b2e643fb150679ba9635a27f3fbe3e7e206086bb4b584",
+      "operation": "factual-note-append",
+      "assets": [],
+      "metadata_added": {},
+      "metadata_changed": {}
+    }
+  ],
+  "reviewed_master": "da4516c309fa1e6c02e6255b69fc2b3760e5726a",
+  "reviewed_proposal": "d54cad53c6abad45e4c31027347e1d3c1308e99e"
+}

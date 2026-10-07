@@ -1748,6 +1748,7 @@
     "paths": [
       "Web安全/其他软件/杂项/2020HW 期间公布漏洞总结（附部分漏洞 Poc、Exp）.md",
       "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+      "Web安全/开发框架/GitLab/Gitlab 任意文件读取漏洞.md",
       "Web安全/开发框架/GitLab/Gitlab 常见漏洞复现及后利用.md"
     ]
   },

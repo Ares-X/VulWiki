@@ -40,9 +40,9 @@ function locate(source, raw, from = 0) {
   return at;
 }
 
-// Marked normalizes CRLF and leading tabs before producing token.raw. Keep an
-// offset map for locating those code tokens without changing archived bytes.
-function normalizedBlockSource(source) {
+// Marked normalizes line endings; older versions also expand leading tabs.
+// Map both token.raw forms back to offsets without changing archived bytes.
+function normalizedBlockSource(source, expandLeadingTabs = true) {
   const text = [], starts = [], ends = [];
   let leading = true;
   function append(value, start, end) {
@@ -55,7 +55,7 @@ function normalizedBlockSource(source) {
       append('\n', i, end); i = end - 1; leading = true;
     } else if (char === '\n') {
       append(char, i, i + 1); leading = true;
-    } else if (char === '\t' && leading) {
+    } else if (char === '\t' && leading && expandLeadingTabs) {
       append('    ', i, i + 1);
     } else {
       // One UTF-16 code unit at a time preserves JavaScript source offsets.
@@ -164,22 +164,46 @@ function auditArticle({ path: articlePath, source, sourceBytes, marked }) {
   // HTTP request lines outside fenced-code token ranges are prompts; ordinary URLs are references.
   const codeRanges = [];
   let codeSearchFrom = 0;
-  let normalizedSource;
-  for (const token of codeTokens) {
-    const offset = locate(body, token.raw, codeSearchFrom);
-    if (offset >= 0) {
-      codeRanges.push([offset, offset + token.raw.length]);
-      codeSearchFrom = offset + token.raw.length;
-    } else if (token.raw) {
-      normalizedSource ||= normalizedBlockSource(body);
-      const { text, starts, ends } = normalizedSource;
-      let at = text.indexOf(token.raw);
-      while (at >= 0 && starts[at] < codeSearchFrom) at = text.indexOf(token.raw, at + 1);
-      if (at >= 0) {
-        const end = ends[at + token.raw.length - 1];
-        codeRanges.push([starts[at], end]); codeSearchFrom = end;
+  let normalizedSources;
+  const needsBlockNormalization = /[\r\t]/.test(body);
+  function blockRange(raw, from, to = body.length) {
+    if (!raw) return null;
+    const offset = locate(body, raw, from);
+    let range = offset >= 0 && offset + raw.length <= to ? [offset, offset + raw.length] : null;
+    if (needsBlockNormalization) {
+      normalizedSources ||= [normalizedBlockSource(body, false), normalizedBlockSource(body)];
+      for (const { text, starts, ends } of normalizedSources) {
+        let low = 0, high = starts.length;
+        while (low < high) {
+          const middle = Math.floor((low + high) / 2);
+          if (starts[middle] < from) low = middle + 1; else high = middle;
+        }
+        const at = text.indexOf(raw, low);
+        if (at >= 0) {
+          const end = ends[at + raw.length - 1];
+          if (end <= to && (!range || starts[at] < range[0])) range = [starts[at], end];
+        }
       }
     }
+    return range;
+  }
+  // Advance through complete top-level tokens first. A fence-shaped substring
+  // in an earlier HTML block must not impersonate a later real code token.
+  const codeScopes = new WeakMap();
+  let blockCursor = 0;
+  for (const token of tokens) {
+    const range = blockRange(token.raw, blockCursor);
+    if (!range) continue;
+    blockCursor = range[1];
+    walkTokens([token], (child) => { if (child.type === 'code') codeScopes.set(child, range); });
+  }
+  for (const token of codeTokens) {
+    const scope = codeScopes.get(token);
+    const offset = locate(body, token.raw, codeSearchFrom);
+    const range = scope
+      ? blockRange(token.raw, Math.max(codeSearchFrom, scope[0]), scope[1])
+      : offset >= 0 ? [offset, offset + token.raw.length] : null;
+    if (range) { codeRanges.push(range); codeSearchFrom = range[1]; }
   }
   function rangesFor(tokens) {
     const ranges = [];

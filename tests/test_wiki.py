@@ -118,6 +118,34 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(r.primary, ['CVE-2025-12345'])
         self.assertEqual(sum(i.code == 'identifier_format' for i in r.issues), 2)
 
+    def test_wooyun_historical_identifier_roles_and_original_spelling(self):
+        self.article(primary_identifiers='WooYun-2014-82678',
+                     referenced_identifiers='WooYun-2015-0117008',
+                     identifier_candidates='wooyun-2016-199433')
+        record = self.scan()[0]
+        projected = wiki.catalog_record(record)
+        self.assertEqual(projected['primary_identifiers'], ['WooYun-2014-82678'])
+        self.assertEqual(projected['referenced_identifiers'], ['WooYun-2015-0117008'])
+        self.assertEqual(projected['identifier_candidates'], ['wooyun-2016-199433'])
+        self.assertFalse(any(i.code in {'identifier_format', 'unrecognized_identifier_namespace'}
+                             for i in record.issues))
+        outputs = wiki.render_outputs([record])
+        self.assertFalse(any(p.startswith('INDEX-CVE/year/') for p in outputs))
+        self.assertIn('WooYun-2015-0117008', outputs['docs/generated/sources.jsonl'])
+
+    def test_wooyun_malformed_values_remain_errors_without_role_promotion(self):
+        self.article(primary_identifiers='WooYun-2015-x117008',
+                     referenced_identifiers='WooYun-201-0117008',
+                     identifier_candidates='WooYun-2015-0117008x',
+                     cve='WooYun-2015-0117008', identifier_role='primary')
+        record = self.scan()[0]
+        self.assertEqual(record.primary, [])
+        self.assertEqual(record.references, [])
+        self.assertEqual(record.candidates, [])
+        self.assertEqual(sum(i.code == 'identifier_format' for i in record.issues), 4)
+        self.assertEqual(wiki.identifier_kind('WooYun-2015-'), 'invalid')
+        self.assertEqual(wiki.identifier_kind('WooYun-2015-１２３４'), 'invalid')
+
     def test_legacy_primary_validated_in_its_declared_namespace(self):
         self.article(identifier_role='primary', cve='CNVD-2025-12345',
                      cnvd='CNVD-2025-67890')

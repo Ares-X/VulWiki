@@ -1,0 +1,424 @@
+{
+  "verified_source_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
+  "newer_master_known_but_not_reconciled": null,
+  "ready_to_merge": true,
+  "independent_review": "2026-10-07: six gpt-6-luna low-effort read-only review partitions, followed by main-agent source verification and minimal corrections. 28 final article hashes bound below. Static content acceptance; no exploit reproduction claimed.",
+  "article_hashes": [
+    {
+      "frame_ids": [
+        267
+      ],
+      "path": "Web安全/开发框架/Gitea/Gitea 仓库迁移 Git 参数注入漏洞 CVE-2022-30781.md",
+      "sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e"
+    },
+    {
+      "frame_ids": [
+        259
+      ],
+      "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+      "sha256": "ee6b3ec40bbb13f728f8accb04bc89fa3ad8e57045f40a095e0d95578ca026e9",
+      "prior_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11"
+    },
+    {
+      "frame_ids": [
+        372
+      ],
+      "path": "Web安全/中间件/Resin/Resin Windows 盘符路径穿越漏洞 CVE-2006-1953.md",
+      "sha256": "396d01cce317f0c3b0c1c73d0d1cb0032d4973ef90427279bf921d806e293379"
+    },
+    {
+      "frame_ids": [
+        266
+      ],
+      "path": "Web安全/开发框架/GitLab/【风险提示】天融信关于GitLab存在CVE-2022-2992 RCE漏洞的风险提示.md",
+      "sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb"
+    },
+    {
+      "frame_ids": [
+        303,
+        304
+      ],
+      "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
+      "sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1"
+    },
+    {
+      "frame_ids": [
+        340
+      ],
+      "path": "Web安全/运维面板/MeterSphere/MeterSphere v1.15.4 resource-md-upload 未授权任意文件写入.md",
+      "sha256": "ede6f58cdc6a4c8037db590227683456c9fdb7cf1584a83669e26fc72e8f5604"
+    },
+    {
+      "frame_ids": [
+        261
+      ],
+      "path": "Web安全/开发框架/GitLab/GitLab Bulk Imports UploadsPipeline 符号链接文件读取 CVE-2022-0244.md",
+      "sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb"
+    },
+    {
+      "frame_ids": [
+        300
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins 插件资源 Accept-Language 文件读取 CVE-2018-1999002.md",
+      "sha256": "c242bb42f41fbe284c68b5797e36dfcdc7257de054401a319f2643a38b018bdc"
+    },
+    {
+      "frame_ids": [
+        302
+      ],
+      "path": "Web安全/开发框架/Jenkins/Jenkins Git client Plugin 仓库 URL 参数注入 CVE-2019-10392.md",
+      "sha256": "d76fb0ab36c91481d62687baf1a5c41e73ec6b838ffe8eb0e24cf779d142af3b"
+    },
+    {
+      "frame_ids": [
+        265
+      ],
+      "path": "Web安全/开发框架/GitLab/Gitlab 任意文件读取漏洞.md",
+      "sha256": "7637a98bd56111758aaabe525534104fc725d4916ae4aad2a3a95fed4656e53c"
+    },
+    {
+      "frame_ids": [
+        359
+      ],
+      "path": "Web安全/开发框架/PHPMailer/（CVE-2017-5223）PHPMailer <= 5.2.21 任意文件读取漏洞.md",
+      "sha256": "3cab94110472c7d6ab4a938544c764d60573c2b6b851dc1c28b5a81c6eb0978a"
+    },
+    {
+      "frame_ids": [
+        363
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/（CVE-2018-12613）Phpmyadmin 远程文件包含漏洞.md",
+      "sha256": "c5a5befca00bfc06551428ec83f048c21b34e374c225f518f0a88c8b64f68999",
+      "prior_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8"
+    },
+    {
+      "frame_ids": [
+        351
+      ],
+      "path": "Web安全/开发框架/Sonatype Nexus/Nexus Repository Pro SAML 元数据 XXE CVE-2020-29436.md",
+      "sha256": "d4e1a515f58e7b687af8041582aa41d6640bcdf3426876830618163e5b529e3d"
+    },
+    {
+      "frame_ids": [
+        366
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 服务器配置删除 CSRF CVE-2019-12922.md",
+      "sha256": "bcd2448a4136b692c65e592a4b3a2bf64f7ea9c6ebf421a61b3c2b85f63e53cc",
+      "prior_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca"
+    },
+    {
+      "frame_ids": [
+        367
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 跨站脚本 CVE-2022-23808.md",
+      "sha256": "7f833bbd28db725226fcf0d520292d1121e2ddf389b2d07981a67d07b322d12c"
+    },
+    {
+      "frame_ids": [
+        339
+      ],
+      "path": "Web安全/数据库/Metabase/Metabase-未授权-JDBC-远程代码执行漏洞-CVE-2023-38646.md",
+      "sha256": "eb6bd1341e31358c24dc6e3302f924e06b13cd0f8599218905b4e3dd2f822646"
+    },
+    {
+      "frame_ids": [
+        362
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin GET SQL 请求 CSRF CVE-2017-1000499.md",
+      "sha256": "9e2dafe8a896d74e95694e4133b077182d35dfef264622880db93dce25afa733"
+    },
+    {
+      "frame_ids": [
+        288
+      ],
+      "path": "Web安全/中间件/JBoss/JBoss EAP JMXInvokerServlet 反序列化资源耗尽 CVE-2016-7065.md",
+      "sha256": "4c469a54090f60b39bac97584e4f76fe9d693bcd5b545af4d954b582965dc31a"
+    },
+    {
+      "frame_ids": [
+        352
+      ],
+      "path": "Web安全/中间件/NPS内网穿透/npsauth_key未授权访问漏洞.md",
+      "sha256": "cc8572a2bd5957abf9fe5938e4ecaeb87f2bd3846980fd278dcd06643f2aad3a"
+    },
+    {
+      "frame_ids": [
+        374
+      ],
+      "path": "Web安全/中间件/Resin/Resin 4.0.65 非严格映射下的 JSP 目录解析分析.md",
+      "sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1"
+    },
+    {
+      "frame_ids": [
+        307
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md",
+      "sha256": "37363c69f2089bd237156a98a3b4021842c34bd14241ce4b89dc546736973f86"
+    },
+    {
+      "frame_ids": [
+        344
+      ],
+      "path": "Web安全/中间件/Alibaba Nacos/Nacos存在Hessian反序列化漏洞.md",
+      "sha256": "9550d7225e00fbf5a75d878b690ad63fa07b5c98206d12634e128e419303015c",
+      "prior_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6"
+    },
+    {
+      "frame_ids": [
+        365
+      ],
+      "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin AllowArbitraryServer 文件读取 CVE-2019-6799.md",
+      "sha256": "8816e261dd2eeaad766e19843b6fddb3a47a738d8b4e014c37d9d3ed11b2d270",
+      "prior_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687"
+    },
+    {
+      "frame_ids": [
+        311
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer-随机数种子泄露导致账户劫持漏洞-CVE-2023-42820.md",
+      "sha256": "9d0d3babc84d1d77a2878591dde91052b132cc9715f786a86ceda1b57207f92f"
+    },
+    {
+      "frame_ids": [
+        312
+      ],
+      "path": "Web安全/运维面板/Jumpserver/Jumpserver安全一窥：Sep系列漏洞深度解析.md",
+      "sha256": "1f3769b6f896c61596ecc1b07e7229cc067a9e60cc709016c1b359287ecf5cce"
+    },
+    {
+      "frame_ids": [
+        369
+      ],
+      "path": "Web安全/CMS内容/PHPMyWind/PHPMyWind 5.3 Beta 前台会员 SQL 输入与后台目录文件读取.md",
+      "sha256": "75cfd8b727557ad352dc098341b087e6059568f2f67d4603c29fcd1523fad9a2"
+    },
+    {
+      "path": "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md",
+      "frame_ids": [
+        314
+      ],
+      "sha256": "40e93902adc2a5954f41cdbc5355af6ef505efb066833cd787821a0b5d526fa1"
+    },
+    {
+      "path": "Web安全/CMS内容/MetInfo/MetInfoCMS 5.X版本GETSHELL漏洞合集2.md",
+      "frame_ids": [
+        331
+      ],
+      "sha256": "bf7f1daa523f7994839b2e643fb150679ba9635a27f3fbe3e7e206086bb4b584"
+    }
+  ],
+  "not_performed": [
+    "No article code or exploit execution",
+    "No dependency installation",
+    "No example-target requests or credential tests",
+    "No master update, merge or deployment",
+    "No resumed paused-source review"
+  ],
+  "tooling_change": {
+    "scope": "WooYun historical identifier syntax only; original spelling, digits and explicit roles preserved; no legacy field or CVE promotion",
+    "independent_review": "Three-file diff statically reviewed before execution; 96 offline regression tests pass; final SHA256 approval retained",
+    "files": [
+      "scripts/wiki.py",
+      "tests/test_wiki.py",
+      "docs/CONTENT-SCHEMA.md"
+    ]
+  },
+  "prior_newer_master_known_but_not_reconciled": "25e2037091036e848c6f141e52a21f405f198c20",
+  "reviewed_master": "da4516c309fa1e6c02e6255b69fc2b3760e5726a",
+  "reviewed_proposal": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+  "pr25_review": {
+    "article_count": 28,
+    "new": 14,
+    "updated": 14,
+    "frame_source_count": 29,
+    "corrected_articles": [
+      "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+      "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md",
+      "Web安全/中间件/Alibaba Nacos/Nacos存在Hessian反序列化漏洞.md",
+      "Web安全/数据库/Phpmyadmin/（CVE-2018-12613）Phpmyadmin 远程文件包含漏洞.md",
+      "Web安全/数据库/Phpmyadmin/phpMyAdmin AllowArbitraryServer 文件读取 CVE-2019-6799.md",
+      "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 服务器配置删除 CSRF CVE-2019-12922.md"
+    ],
+    "python_tests_passed": 96,
+    "node_tests_passed": 44,
+    "loaded_node_marked": "4.3.0",
+    "pending": [],
+    "baseline_changed": false,
+    "full_resource_counts": {
+      "missing": 0,
+      "zero_byte": 0,
+      "html_error_page": 0,
+      "remote_images": 0,
+      "unusable_image_tags": 0,
+      "external_image_dependencies": 0,
+      "unknown": 32,
+      "extension_mismatch": 32
+    },
+    "merge_gate": "Local content acceptance completed; merge still requires the corresponding updated remote head CI to pass.",
+    "render_check": {
+      "docsify": "5.0.0",
+      "articles": 28,
+      "rendered_code_blocks": 98,
+      "rendered_images": 74,
+      "proposal_vs_current_copy_text_exact": true,
+      "all_original_rendered_code_prefixes_exact": true,
+      "article_html_executed": false,
+      "real_browser_workflow_exercised": false
+    }
+  },
+  "prior_tests": {
+    "python_unit_tests": {
+      "passed": 96,
+      "failed": 0
+    },
+    "content_quality": {
+      "documents": 5862,
+      "new_issues": 0,
+      "fatal_issues": 0,
+      "historical_warnings": 4093,
+      "baseline_modified": false
+    },
+    "generated_indexes": "build and build --check passed",
+    "selected_resource_check": {
+      "articles": 26,
+      "files": 73,
+      "bytes": 15842929,
+      "missing": 0,
+      "zero_byte": 0,
+      "html_error_page": 0,
+      "recognized_container": 73,
+      "unknown": 0,
+      "extension_mismatch": 0,
+      "remote_images": 0,
+      "unusable_image_tags": 0,
+      "external_image_dependencies": 0
+    },
+    "node_baseline": {
+      "marked_version": "17.0.5",
+      "total": 39,
+      "passed": 37,
+      "failed": 2,
+      "preexisting_failures": [
+        "tab-normalized CRLF request-location assertion",
+        "expected CommonJS module filename differs from installed ESM module"
+      ]
+    },
+    "code_copy_check": {
+      "articles": 26,
+      "blocks": 76,
+      "exact": true,
+      "renderer_terminal_LF_rule": "Marked17 removes one terminal LF then adds LF; indented tokens already ending in LF remain unchanged. No source code changed for this checker correction."
+    },
+    "remote_ci": {
+      "previous_batches": [
+        {
+          "head": "1a2d853d8c509eb1aa8426cd16de858ea9d9e620",
+          "checks": [
+            {
+              "event": "pull_request",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37266722157"
+            },
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37266631229"
+            }
+          ]
+        },
+        {
+          "head": "3e4e4b3949e9f02a0084117f0196ac21643ad3c2",
+          "checks": [
+            {
+              "event": "pull_request",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37268851326"
+            },
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37268847450"
+            }
+          ]
+        },
+        {
+          "head": "b0ed1cb1a11d3b542a473ffc4a8499b556e88b68",
+          "checks": [
+            {
+              "event": "pull_request",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37269306344"
+            },
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37269302797"
+            }
+          ]
+        },
+        {
+          "head": "5f47e444a0b924a3bd871a7ac70ad20f472bd299",
+          "checks": [
+            {
+              "event": "pull_request",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37270442558"
+            },
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37270437314"
+            }
+          ]
+        },
+        {
+          "head": "bb34a68e7c715224bfde2fb89836120f2097f09b",
+          "checks": [
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37273627212"
+            }
+          ]
+        }
+      ],
+      "current_commit_checks": "The current published head is verified after push; see PR25 checks and description for that exact head. This file does not claim a self-referential commit status.",
+      "pull_request": "https://github.com/Ares-X/VulWiki/pull/25"
+    }
+  },
+  "tests": {
+    "python_unit_tests": 96,
+    "node_unit_tests": 44,
+    "loaded_node_marked": "4.3.0",
+    "docsify_parser": "5.0.0 vendored core",
+    "quality": {
+      "documents": 5862,
+      "new_issues": 0,
+      "errors": 0,
+      "fatal_issues": 0,
+      "historical_warnings": 4093,
+      "baseline_changed": false
+    },
+    "indexes": "build and build --check passed",
+    "resources": {
+      "missing": 0,
+      "zero_byte": 0,
+      "html_error_page": 0,
+      "remote_images": 0,
+      "unusable_image_tags": 0,
+      "external_image_dependencies": 0,
+      "unknown": 32,
+      "extension_mismatch": 32
+    },
+    "remote_ci": "External merge gate: require updated exact head to pass; older CI is historical only"
+  }
+}
