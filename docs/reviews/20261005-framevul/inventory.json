@@ -4463,7 +4463,8 @@
       "read_depth_summary": "完整读取 83 行脚本、README、两份官方公告和相关提交差异；现有正文保持不变。",
       "source_read_failures": [],
       "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
-      "content_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11"
+      "content_sha256": "ee6b3ec40bbb13f728f8accb04bc89fa3ad8e57045f40a095e0d95578ca026e9",
+      "prior_content_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11"
     },
     {
       "id": 260,
@@ -7626,7 +7627,8 @@
         "publication_note_count": 1,
         "new_technical_method_admitted": false,
         "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
-      }
+      },
+      "content_sha256": "40e93902adc2a5954f41cdbc5355af6ef505efb066833cd787821a0b5d526fa1"
     },
     {
       "id": 315,
@@ -8527,7 +8529,8 @@
         "publication_note_count": 1,
         "new_technical_method_admitted": false,
         "publication_check_scope": "Existing approved findings only; no additional source access or technical re-review in publication step"
-      }
+      },
+      "content_sha256": "bf7f1daa523f7994839b2e643fb150679ba9635a27f3fbe3e7e206086bb4b584"
     },
     {
       "id": 332,
@@ -9390,7 +9393,8 @@
       "read_depth_summary": "固定入口、载荷类、连接/过滤器及辅助类、构建清单和协议类已静态读；官方2.2.3说明及补丁已取得。",
       "source_read_failures": [],
       "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
-      "content_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6"
+      "content_sha256": "9550d7225e00fbf5a75d878b690ad63fa07b5c98206d12634e128e419303015c",
+      "prior_content_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6"
     },
     {
       "id": 345,
@@ -10252,7 +10256,8 @@
         }
       ],
       "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
-      "content_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8"
+      "content_sha256": "c5a5befca00bfc06551428ec83f048c21b34e374c225f518f0a88c8b64f68999",
+      "prior_content_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8"
     },
     {
       "id": 364,
@@ -10340,7 +10345,8 @@
         }
       ],
       "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
-      "content_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687"
+      "content_sha256": "8816e261dd2eeaad766e19843b6fddb3a47a738d8b4e014c37d9d3ed11b2d270",
+      "prior_content_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687"
     },
     {
       "id": 366,
@@ -10377,7 +10383,8 @@
         }
       ],
       "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
-      "content_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca"
+      "content_sha256": "bcd2448a4136b692c65e592a4b3a2bf64f7ea9c6ebf421a61b3c2b85f63e53cc",
+      "prior_content_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca"
     },
     {
       "id": 367,

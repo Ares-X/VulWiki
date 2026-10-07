@@ -1,6 +1,6 @@
 {
   "base_commit": "927ec4a91f507197aeb3ab1aec67343495480d44",
-  "preservation": "Existing body bytes unchanged; only declared metadata corrections/additions and appended material. No original examples or values redacted.",
+  "preservation": "Original technical materials, examples, values and resource bytes preserved. Source-backed maintenance notes, display title and metadata corrections are explicitly recorded; no redaction.",
   "articles": [
     {
       "frame_ids": [
@@ -37,7 +37,7 @@
       ],
       "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
       "operation": "append",
-      "sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+      "sha256": "ee6b3ec40bbb13f728f8accb04bc89fa3ad8e57045f40a095e0d95578ca026e9",
       "metadata_added": {
         "version": "2.22 分支 < 2.22.2；2.21 分支 < 2.21.4；其他历史分支按官方公告所列修复版本分别核对",
         "fixed_version": "2.22.2；2.21.4；2.20.7；2.19.7；2.18.7",
@@ -53,7 +53,14 @@
           "after_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
           "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
         }
-      ]
+      ],
+      "prior_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+        "after_sha256": "ee6b3ec40bbb13f728f8accb04bc89fa3ad8e57045f40a095e0d95578ca026e9",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
     },
     {
       "frame_ids": [
@@ -268,13 +275,20 @@
       ],
       "path": "Web安全/数据库/Phpmyadmin/（CVE-2018-12613）Phpmyadmin 远程文件包含漏洞.md",
       "operation": "append",
-      "sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8",
+      "sha256": "c5a5befca00bfc06551428ec83f048c21b34e374c225f518f0a88c8b64f68999",
       "metadata_added": {
         "fixed_version": "4.8.2 或更新版本；官方另提供 4.8 分支补丁",
         "verification_source": "https://www.phpmyadmin.net/security/PMASA-2018-4/; https://github.com/vulhub/vulhub/blob/8fd63916f7a8711e2e01dda0d27237e4d6175d38/phpmyadmin/CVE-2018-12613/README.zh-cn.md#L1-L28"
       },
       "metadata_changed": {},
-      "assets": []
+      "assets": [],
+      "prior_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8",
+        "after_sha256": "c5a5befca00bfc06551428ec83f048c21b34e374c225f518f0a88c8b64f68999",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
     },
     {
       "frame_ids": [
@@ -293,7 +307,7 @@
       ],
       "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin Setup 服务器配置删除 CSRF CVE-2019-12922.md",
       "operation": "new",
-      "sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca",
+      "sha256": "bcd2448a4136b692c65e592a4b3a2bf64f7ea9c6ebf421a61b3c2b85f63e53cc",
       "metadata_added": {},
       "metadata_changed": {},
       "assets": [],
@@ -302,7 +316,14 @@
           "old": "原研究者的样例使用图片请求触发 GET，目标配置编号为 `1`。下面保留其原始值及换行：[1]",
           "new": "原研究者的样例使用图片请求触发 GET，目标配置编号为 `1`。下面按存档 HTML 的代码区域恢复文本：先移除存档站自动生成的链接标签，再解码 HTML 实体。原参数和可见代码结构保持；这是经上述方式恢复的代码文本，不是原始邮件的逐字节副本。[1]"
         }
-      ]
+      ],
+      "prior_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca",
+        "after_sha256": "bcd2448a4136b692c65e592a4b3a2bf64f7ea9c6ebf421a61b3c2b85f63e53cc",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
     },
     {
       "frame_ids": [
@@ -440,14 +461,21 @@
       ],
       "path": "Web安全/中间件/Alibaba Nacos/Nacos存在Hessian反序列化漏洞.md",
       "operation": "append",
-      "sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6",
+      "sha256": "9550d7225e00fbf5a75d878b690ad63fa07b5c98206d12634e128e419303015c",
       "metadata_added": {
         "version": "本补充静态核对官方Nacos2.2.2；工具声明Nacos2.x<=2.2.2不等于逐版本验证",
         "fixed_version": "2.2.3，限官方发布说明所述JRaft Hessian反序列化问题；不评价其他漏洞",
         "verification_source": "https://github.com/alibaba/nacos/releases/tag/2.2.3; https://github.com/alibaba/nacos/commit/6080b01ce6e3a62392e85187f5e62dbbf40a992c; https://github.com/c0olw/NacosRce/tree/353111239df2f17ce82f9a992c62afd05548dc3e"
       },
       "metadata_changed": {},
-      "assets": []
+      "assets": [],
+      "prior_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "62e3c30f57c61df8ec1432ec23c8d5c9b542f83aa1d11730b0375687b2ac11e6",
+        "after_sha256": "9550d7225e00fbf5a75d878b690ad63fa07b5c98206d12634e128e419303015c",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
     },
     {
       "frame_ids": [
@@ -455,7 +483,7 @@
       ],
       "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin AllowArbitraryServer 文件读取 CVE-2019-6799.md",
       "operation": "new",
-      "sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687",
+      "sha256": "8816e261dd2eeaad766e19843b6fddb3a47a738d8b4e014c37d9d3ed11b2d270",
       "metadata_added": {},
       "metadata_changed": {},
       "assets": [],
@@ -464,6 +492,13 @@
         "frontmatter_proposal_sha256": "fc295e05ffd870d9d891b59db7ae58642413776adb6391c7cc38e68f499855ce",
         "body_exact_after_frontmatter": true,
         "operation": "Prepend separately approved metadata; approved body bytes untouched"
+      },
+      "prior_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687",
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "cfc4d863ab8409b27d3110598a7e45c24bce959892b9e5f185eeda5c205a4687",
+        "after_sha256": "8816e261dd2eeaad766e19843b6fddb3a47a738d8b4e014c37d9d3ed11b2d270",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
       }
     },
     {
@@ -513,6 +548,36 @@
       "metadata_added": {},
       "metadata_changed": {},
       "assets": []
+    },
+    {
+      "path": "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md",
+      "frame_ids": [
+        314
+      ],
+      "sha256": "40e93902adc2a5954f41cdbc5355af6ef505efb066833cd787821a0b5d526fa1",
+      "operation": "factual-note-append",
+      "assets": [],
+      "metadata_added": {},
+      "metadata_changed": {},
+      "pr25_review_correction": {
+        "proposal_commit": "d54cad53c6abad45e4c31027347e1d3c1308e99e",
+        "before_sha256": "79a298297b44f20b087a240264b1f8067417d1680b81aeeaca29d76f10a8e07e",
+        "after_sha256": "40e93902adc2a5954f41cdbc5355af6ef505efb066833cd787821a0b5d526fa1",
+        "scope": "Source-backed editorial or metadata corrections; code blocks and original technical examples preserved"
+      }
+    },
+    {
+      "path": "Web安全/CMS内容/MetInfo/MetInfoCMS 5.X版本GETSHELL漏洞合集2.md",
+      "frame_ids": [
+        331
+      ],
+      "sha256": "bf7f1daa523f7994839b2e643fb150679ba9635a27f3fbe3e7e206086bb4b584",
+      "operation": "factual-note-append",
+      "assets": [],
+      "metadata_added": {},
+      "metadata_changed": {}
     }
-  ]
+  ],
+  "reviewed_master": "da4516c309fa1e6c02e6255b69fc2b3760e5726a",
+  "reviewed_proposal": "d54cad53c6abad45e4c31027347e1d3c1308e99e"
 }
