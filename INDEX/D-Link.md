@@ -28,6 +28,10 @@
 
 - [D-Link DIR-818LW / DIR-822 命令注入（CVE-2018-19986）](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2018-19986%EF%BC%89D-Link%20DIR-818LW%26828%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## D-Link DIR-822A
+
+- [D-Link DIR-822A DHCP 栈溢出与 L2TP 越界写](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%20DIR-822A%20DHCP%20%E6%A0%88%E6%BA%A2%E5%87%BA%E4%B8%8E%20L2TP%20%E8%B6%8A%E7%95%8C%E5%86%99%EF%BC%88CVE-2026-86296%E3%80%81CVE-2026-86510%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## D-Link DIR-859
 
 - [D-Link DIR-859 hedwig.cgi 路径穿越与管理凭据泄露](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%20DIR-859%20hedwig.cgi%20%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E4%B8%8E%E5%87%AD%E6%8D%AE%E6%B3%84%E9%9C%B2%20CVE-2024-0769.md) [vulnerability; source-claimed; active]
