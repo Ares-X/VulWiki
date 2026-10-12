@@ -1,5 +1,17 @@
 ---
-source: "wxvl/doc/2026-10/用友U8 crm客户关系管理swfupload.php存在任意文件上传漏洞.md（北雪网络安全，2026-10-07）"
+schema_version: "1"
+id: "VW-20261012-CG001"
+title: "用友U8 CRM swfupload.php 任意文件上传漏洞"
+product: "用友U8 CRM"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "source-claimed"
+content_status: "active"
+prerequisites: "可访问 /ajax/swfupload.php；无需认证（DontCheckLogin=1）"
+side_effects: "任意文件上传可致服务器被控；测试须限定授权环境"
+source: "公开 PoC 与安全研究"
+source_status: "recorded"
+source_url: "https://github.com/gelusus/wxvl/blob/4266b45d974a92de5c1cdd1c440321ebfca53139/doc/2026-10/用友U8 crm客户关系管理swfupload.php存在任意文件上传漏洞.md"
 ---
 
 # 用友U8 CRM swfupload.php 任意文件上传漏洞

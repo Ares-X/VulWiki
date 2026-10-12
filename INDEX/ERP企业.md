@@ -252,10 +252,6 @@
 
 - [智邦国际ERP GetPrintTemplate ord SQL 注入](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%99%BA%E9%82%A6%E5%9B%BD%E9%99%85/%E6%99%BA%E9%82%A6%E5%9B%BD%E9%99%85ERP%20GetPrintTemplate.ashx%20SQL%E6%B3%A8%E5%85%A5.md) [vulnerability; not-reproduced; needs-review]
 
-## 未确认产品
-
-- [用友U8 CRM swfupload.php 任意文件上传漏洞](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8BU8%20CRM%20swfupload.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
-
 ## 汇智ERP
 
 - [汇智ERP filehandle filepath读取](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%B1%87%E6%99%BA/%E6%B1%87%E6%99%BAERP%20filehandle.aspx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
@@ -412,6 +408,7 @@
 - [用友U8 CRM getufvouchdata双方法SQL 注入](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8BU8%20CRM%20ajaxgetufvouchdata.php%20SQL%E6%B3%A8%E5%85%A5%E8%87%B4RCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [用友U8 CRM help2 key路径读取](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8B%20U8%20CRM%E5%AE%A2%E6%88%B7%E5%85%B3%E7%B3%BB%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [用友U8 CRM leadconversion userid SQL 注入](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8BU8%20CRM%20leadleadconversion.php%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+- [用友U8 CRM swfupload.php 任意文件上传漏洞](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8BU8%20CRM%20swfupload.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]
 
 ## 用友U8 Cloud
 

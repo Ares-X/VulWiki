@@ -1,5 +1,17 @@
 ---
-source: "长亭漏洞平台（2026-08-25 提交）; 微步情报局公开复现（2026-09-04）; wxvl/doc/2026-10 分析"
+schema_version: "1"
+id: "VW-20261012-CG008"
+title: "ShowDoc registerByVerify 未授权PHP代码注入漏洞"
+product: "ShowDoc"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "source-claimed"
+content_status: "active"
+prerequisites: "ShowDoc < v3.9.3，SQLite 部署，注册功能开启；无需认证"
+side_effects: "PHP 代码注入可致 RCE；测试须限定授权环境"
+source: "公开 PoC 与安全研究"
+source_status: "recorded"
+source_url: "https://github.com/gelusus/wxvl/blob/4266b45d974a92de5c1cdd1c440321ebfca53139/doc/2026-10/N∕A  ShowDoc未授权PHP代码注入漏洞（POC）.md"
 ---
 
 # ShowDoc registerByVerify 未授权PHP代码注入漏洞

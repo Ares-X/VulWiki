@@ -1,5 +1,17 @@
 ---
-source: "wxvl/doc/2026-10/汉王e脸通综合管理平台queryAntisubmarineList接口存在sql注入漏洞.md"
+schema_version: "1"
+id: "VW-20261012-CG004"
+title: "汉王e脸通 queryAntisubmarineList SQL注入漏洞"
+product: "汉王e脸通"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "source-claimed"
+content_status: "active"
+prerequisites: "可访问 /manage/antisubmarine/queryAntisubmarineList.do；无需认证"
+side_effects: "SQL 注入可致数据泄露；测试须限定授权环境"
+source: "公开 PoC 与安全研究"
+source_status: "recorded"
+source_url: "https://github.com/gelusus/wxvl/blob/4266b45d974a92de5c1cdd1c440321ebfca53139/doc/2026-10/汉王e脸通综合管理平台queryAntisubmarineList接口存在sql注入漏洞.md"
 ---
 
 # 汉王e脸通 queryAntisubmarineList SQL注入漏洞

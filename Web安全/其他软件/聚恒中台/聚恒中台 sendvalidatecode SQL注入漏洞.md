@@ -1,5 +1,17 @@
 ---
-source: "wxvl/doc/2026-10/聚恒中台sendvalidatecode接口存在SQL注入 附POC.md"
+schema_version: "1"
+id: "VW-20261012-CG005"
+title: "聚恒中台 sendvalidatecode SQL注入漏洞"
+product: "聚恒中台"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "source-claimed"
+content_status: "active"
+prerequisites: "可访问 /sysplat/dataget/data.ashx"
+side_effects: "SQL 注入可致数据泄露；测试须限定授权环境"
+source: "公开 PoC 与安全研究"
+source_status: "recorded"
+source_url: "https://github.com/gelusus/wxvl"
 ---
 
 # 聚恒中台 sendvalidatecode SQL注入漏洞

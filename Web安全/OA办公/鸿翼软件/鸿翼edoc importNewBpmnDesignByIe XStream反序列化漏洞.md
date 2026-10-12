@@ -1,5 +1,17 @@
 ---
-source: "wxvl/doc/2026-10/上海鸿翼软件-电子文档管理系统 importNewBpmnDesignByIe 存在XStream反序列化漏洞.md（北雪网络安全，2026-10-05）"
+schema_version: "1"
+id: "VW-20261012-CG003"
+title: "鸿翼edoc importNewBpmnDesignByIe XStream反序列化漏洞"
+product: "鸿翼edoc"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "source-claimed"
+content_status: "active"
+prerequisites: "可访问 /edoc2Flow-web/edoc-etc-processManage/importNewBpmnDesignByIe"
+side_effects: "XStream 反序列化可致 RCE；测试须限定授权环境"
+source: "公开 PoC 与安全研究"
+source_status: "recorded"
+source_url: "https://github.com/gelusus/wxvl/blob/4266b45d974a92de5c1cdd1c440321ebfca53139/doc/2026-10/上海鸿翼软件-电子文档管理系统 importNewBpmnDesignByIe 存在XStream反序列化漏洞.md"
 ---
 
 # 鸿翼edoc importNewBpmnDesignByIe XStream反序列化漏洞
