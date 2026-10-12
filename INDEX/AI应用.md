@@ -190,6 +190,7 @@
 ## Sub2API
 
 - [Sub2API EasyPay 下单签名复用与回调伪造](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Sub2API/Sub2API%20EasyPay%20%E4%B8%8B%E5%8D%95%E7%AD%BE%E5%90%8D%E5%A4%8D%E7%94%A8%E4%B8%8E%E5%9B%9E%E8%B0%83%E4%BC%AA%E9%80%A0.md) [analysis; source-claimed; active]
+- [sub2api OAuth 待处理会话账号接管](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Sub2API/sub2api%20OAuth%20%E5%BE%85%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D%E8%B4%A6%E5%8F%B7%E6%8E%A5%E7%AE%A1.md) [vulnerability; source-claimed; active]
 
 ## Vim
 
@@ -243,10 +244,6 @@
 ## n8n Pyodide
 
 - [n8n Pyodide 沙箱逃逸导致远程代码执行漏洞 CVE-2025-68668](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/n8n-Pyodide-%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-68668.md) [vulnerability; not-reproduced; needs-review]
-
-## sub2api
-
-- [sub2api OAuth 待处理会话账号接管](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Sub2API/sub2api%20OAuth%20%E5%BE%85%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D%E8%B4%A6%E5%8F%B7%E6%8E%A5%E7%AE%A1.md) [vulnerability; source-claimed; active]
 
 ## vLLM
 
