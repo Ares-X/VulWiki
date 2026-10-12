@@ -1,0 +1,594 @@
+{
+  "base": "8291608013efb898ce75b267bf13134c7ab68389",
+  "original_pr_head": "059295b05fa56113e22d036c77a282f54ce8527f",
+  "reviewers": 11,
+  "model": "gpt-6-luna",
+  "reasoning_effort": "low",
+  "assigned_fulltext_articles": 94,
+  "fulltext_coverage": "11 nonoverlapping reviewer reports cover all 94 changed article paths. Main reviewed implemented diffs and source evidence; machine checks are separately recorded.",
+  "external_cna_records": {
+    "requested": 77,
+    "published_fetched": 75,
+    "fetch_failed": [
+      "CVE-2026-65997",
+      "CVE-2026-95622"
+    ],
+    "limits": "404 is retrieval failure, not a rejected/invalid CVE conclusion. Detailed advisory/author coverage and retrieval gaps remain per-article in reviewer reports."
+  },
+  "no_poc_executed": true,
+  "no_redaction": true,
+  "unchanged_baseline": true,
+  "originals_retained_for_four_duplicate_pairs": true,
+  "articles": [
+    {
+      "path": "IOT安全/D-Link/D-Link DIR-822A DHCP 栈溢出与 L2TP 越界写（CVE-2026-86296、CVE-2026-86510）.md",
+      "review_shard": 10,
+      "review_input_sha256": "5a833ceba2caa1577e19c43a4b726b42143541121edb49e3137361dca449d4f6",
+      "final_sha256": "d85f52076d8193c73e6cd1c5a54eae8ffceedbd502929276d9309009c99a7a4f"
+    },
+    {
+      "path": "IOT安全/Netis/Netis NC63 登录接口栈溢出致预认证RCE（CVE-2026-76070）.md",
+      "review_shard": 10,
+      "review_input_sha256": "f95d516d80ab9dcc579b8eb4c419a07fafea2573e5e3e5d82f04ccf9ffe18c6b",
+      "final_sha256": "f6a7ed270e35bebf58522ce33b2ccf8cc7f529fb108bf4a544d444ea5e6decaa"
+    },
+    {
+      "path": "IOT安全/TOTOLINK/TOTOLINK A8000RU 未授权命令注入致RCE（CVE-2026-9384）.md",
+      "review_shard": 10,
+      "review_input_sha256": "8cc80f9e97e193415d58ea0b518de2cffde45e91b0d850fce46f909905b0694c",
+      "final_sha256": "143a99c03400cb612b61666ffcb1dc8debc594809a3b9d6083d312f22e8c8572"
+    },
+    {
+      "path": "Web安全/AI应用/Crawl4AI/Crawl4AI PDF图片落盘的目录控制与认证边界（CVE-2026-91940）.md",
+      "review_shard": 1,
+      "review_input_sha256": "c4e0b6f8b36559a9b5b518c74514278f820cfc78d9802192d57844cfe790667f",
+      "final_sha256": "c4e0b6f8b36559a9b5b518c74514278f820cfc78d9802192d57844cfe790667f"
+    },
+    {
+      "path": "Web安全/AI应用/LMCache/LMCache ZeroMQ 反序列化致未授权RCE（CVE-2026-105192）.md",
+      "review_shard": 1,
+      "review_input_sha256": "0be7813c0a505860780a05002b5dc5c6c21ac21e4a2573daee0ed908ed82b8ee",
+      "final_sha256": "365f87d0119d219bf7042384de12848f8d668aa2d9bd94cf3eb03ac9b250f048"
+    },
+    {
+      "path": "Web安全/AI应用/LMCache/LMCache run_script 端点未授权RCE（CVE-2026-107204）.md",
+      "review_shard": 1,
+      "review_input_sha256": "faf974a7b74c33c6c34b446e36b6a5d0f9a94a87cb96b92b81d05b2bc231a615",
+      "final_sha256": "faf974a7b74c33c6c34b446e36b6a5d0f9a94a87cb96b92b81d05b2bc231a615"
+    },
+    {
+      "path": "Web安全/AI应用/LangChain/LangChain 序列化保留字段注入（CVE-2025-68664）.md",
+      "review_shard": 1,
+      "review_input_sha256": "6f3ddbe03281bd512d41c9efbb59b91c2e4d4f58ffef729522516b26ebe9fc79",
+      "final_sha256": "6f3ddbe03281bd512d41c9efbb59b91c2e4d4f58ffef729522516b26ebe9fc79"
+    },
+    {
+      "path": "Web安全/AI应用/Langflow/Langflow MCP 服务器盲命令注入致RCE（CVE-2026-93674）.md",
+      "review_shard": 1,
+      "review_input_sha256": "427ca53bbd9f2297bdb8cc291d383e5bd217336c74e3d8ea635ad33bb6df7b8a",
+      "final_sha256": "d3b86dbaeb295d246536e9e3c4b30c675177026124aaf1cb0f534e835f707f25"
+    },
+    {
+      "path": "Web安全/AI应用/Langflow/Langflow 代码校验接口认证后代码执行 CVE-2026-7873.md",
+      "review_shard": 1,
+      "review_input_sha256": "02213009e65a37401688b99aba90c5b3b96d876f4eeab3a1b1dd139f517e0382",
+      "final_sha256": "02213009e65a37401688b99aba90c5b3b96d876f4eeab3a1b1dd139f517e0382"
+    },
+    {
+      "path": "Web安全/AI应用/SGLang/SGLang ZMQ pickle 反序列化致未授权RCE（CVE-2026-93034）.md",
+      "review_shard": 1,
+      "review_input_sha256": "e5b24ed5d0921941344b20191e462883ee360121caba438da4a1360d513a7502",
+      "final_sha256": "c554114cafde84381362a90602cddcaf91219f1aa0d6c7c7742258a4f62b5672"
+    },
+    {
+      "path": "Web安全/AI应用/Sub2API/Sub2API EasyPay 下单签名复用与回调伪造.md",
+      "review_shard": 1,
+      "review_input_sha256": "32fe6bf1fc0a958e433824c5d44056e238d4fe0dd8eb5b3b18228a5fb90fc47c",
+      "final_sha256": "32fe6bf1fc0a958e433824c5d44056e238d4fe0dd8eb5b3b18228a5fb90fc47c"
+    },
+    {
+      "path": "Web安全/AI应用/Sub2API/sub2api OAuth 待处理会话账号接管.md",
+      "review_shard": 1,
+      "review_input_sha256": "0ae1c4d849af678bfc1e85648333618d7d08d8f72016b9e406667706166ffca3",
+      "final_sha256": "11cbf8b68d4fafaa81965d341edd45a8ff8e0459b3f1ea0864242fcad19c17a8",
+      "review_input_path": "Web安全/AI应用/sub2api/sub2api OAuth 待处理会话账号接管.md",
+      "followup_review": "Correct directory case collision and product grouping; rechecked upstream PR 5345 merged on 2026-08-07. Original fenced request preserved; first fixed release remains unknown."
+    },
+    {
+      "path": "Web安全/AI应用/vLLM/vLLM 视频处理链致未授权RCE（CVE-2026-22778）.md",
+      "review_shard": 1,
+      "review_input_sha256": "45032de7567c064274deeac73eb52f30bbb92450a16221c7cc39f3528c0a8ab1",
+      "final_sha256": "4d476cf10adbe55d0341d4ecb1cbe1a4b9e32e153b025a264253e934773bd22b"
+    },
+    {
+      "path": "Web安全/AI应用/vLLM/vLLM的Mooncake存在严重RCE漏洞.md",
+      "review_shard": 1,
+      "review_input_sha256": "43ab7eb35a346089716cdd0759e885d521691f021389fa6fc46233bf0309384e",
+      "final_sha256": "fe2c11691c78138f5558ecf7dce5fa55d8d2b1ce128f08a512fb6b9aa7d84268"
+    },
+    {
+      "path": "Web安全/AI应用/vLLM/漏洞预警  vLLM远程代码执行漏洞.md",
+      "review_shard": 1,
+      "review_input_sha256": "d3844f35f9bc1e40a78c7f65099d826fb3d021679a7158cdc36c5559ce56004b",
+      "final_sha256": "929f0b9281002c914e47df53b496d41b21e79bb95eded9b3b7ec5b7ce92aa755"
+    },
+    {
+      "path": "Web安全/CMS内容/Clean Login/Clean Login 空会话验证码比较绕过（CVE-2026-90977）.md",
+      "review_shard": 2,
+      "review_input_sha256": "8ebfafa48f86460c15f2f8252e6c32dc04b015f3175cccf0c28ccf0891590589",
+      "final_sha256": "8ebfafa48f86460c15f2f8252e6c32dc04b015f3175cccf0c28ccf0891590589"
+    },
+    {
+      "path": "Web安全/CMS内容/Craft CMS/Craft CMS 元素条件认证后模板注入（CVE-2026-31857）.md",
+      "review_shard": 2,
+      "review_input_sha256": "ad466c216f7c1beb26817f693bb7e5ae435a27c31934fc0364c1d1bbd32c5b26",
+      "final_sha256": "ad466c216f7c1beb26817f693bb7e5ae435a27c31934fc0364c1d1bbd32c5b26"
+    },
+    {
+      "path": "Web安全/CMS内容/Joomla/Joomla OrdaSoft Simple Membership 未授权 SQL 注入（CVE-2026-102782）.md",
+      "review_shard": 2,
+      "review_input_sha256": "66193a7c30e47dece20aa8c34570b0962563f78966d9c83a4fee9f768542c5ab",
+      "final_sha256": "e06070dd4bd09f64a6f58d2ad06543241a7527fd3566fa07faee4519c337167e"
+    },
+    {
+      "path": "Web安全/CMS内容/Mail Mint/Mail Mint 表单对象注入（CVE-2026-10196）.md",
+      "review_shard": 2,
+      "review_input_sha256": "b7c7e5b4389cec6a6a3ed77aeaf824883437262630655d5c57e069a73d6bee51",
+      "final_sha256": "b7c7e5b4389cec6a6a3ed77aeaf824883437262630655d5c57e069a73d6bee51"
+    },
+    {
+      "path": "Web安全/CMS内容/OrdaSoft/OrdaSoft Joomla CCK 排序字段 SQL 注入与脚本判据边界（CVE-2026-102428）.md",
+      "review_shard": 2,
+      "review_input_sha256": "a4712aee89eda5ce9f316cd172fef49e69da1c2b9887c14f69c29459ee85917c",
+      "final_sha256": "a4712aee89eda5ce9f316cd172fef49e69da1c2b9887c14f69c29459ee85917c"
+    },
+    {
+      "path": "Web安全/CMS内容/Payload/Payload Import Export 字段路径原型污染与访问控制后果（CVE-2026-105844）.md",
+      "review_shard": 2,
+      "review_input_sha256": "ebc9a60707fb0aa5c567995d4a425fbd6e42e64627f11a425626a9733f5827a2",
+      "final_sha256": "ebc9a60707fb0aa5c567995d4a425fbd6e42e64627f11a425626a9733f5827a2"
+    },
+    {
+      "path": "Web安全/CMS内容/ShowDoc/ShowDoc registerByVerify 未授权PHP代码注入漏洞.md",
+      "review_shard": 2,
+      "review_input_sha256": "ec661c0a7c39d1fb6850c27442fd19af60b8f288d1cd9f000cf5277ee0d2a8c5",
+      "final_sha256": "ec661c0a7c39d1fb6850c27442fd19af60b8f288d1cd9f000cf5277ee0d2a8c5"
+    },
+    {
+      "path": "Web安全/CMS内容/WP Import Export Lite/WP Import Export Lite 既有文件导入路径穿越（CVE-2026-76555）.md",
+      "review_shard": 2,
+      "review_input_sha256": "9ac6441917a61c8dbd2e45478cbaefe570fc02e5a4da910f18b18c288045b2cc",
+      "final_sha256": "9ac6441917a61c8dbd2e45478cbaefe570fc02e5a4da910f18b18c288045b2cc"
+    },
+    {
+      "path": "Web安全/CMS内容/WP Ultimate Review/WP Ultimate Review 作者评论概览设置存储型 XSS（CVE-2026-101162）.md",
+      "review_shard": 2,
+      "review_input_sha256": "c5d684978927d613c8c03fbd841d690aced97583d6bfe90a4b242216e8dd8f94",
+      "final_sha256": "c5d684978927d613c8c03fbd841d690aced97583d6bfe90a4b242216e8dd8f94"
+    },
+    {
+      "path": "Web安全/CMS内容/WP Ultimate Review/WP Ultimate Review 未保存显示设置时的短代码拒绝服务（CVE-2026-101161）.md",
+      "review_shard": 2,
+      "review_input_sha256": "2b38e7a3316601dc10884fea5c4e21746b4e1d32bd6db3f389913a8853ac7281",
+      "final_sha256": "2b38e7a3316601dc10884fea5c4e21746b4e1d32bd6db3f389913a8853ac7281"
+    },
+    {
+      "path": "Web安全/CMS内容/WP Ultimate Review/WP Ultimate Review 评分类型导致持久拒绝服务（CVE-2026-101160）.md",
+      "review_shard": 2,
+      "review_input_sha256": "a81ca5cd74b7b0709a29a69ef4184d4d1639e8d68522e3279d0dfadd5b1c9934",
+      "final_sha256": "a81ca5cd74b7b0709a29a69ef4184d4d1639e8d68522e3279d0dfadd5b1c9934"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）.md",
+      "review_shard": 3,
+      "review_input_sha256": "e66b0c9bbcadc916ff67aff16d9f08c7ac3fde427bc22ae581955a24685aaaa3",
+      "final_sha256": "770e501c16dfd2fd00c7b64a7b1ce79e430be6ec5fb24f0f329e0bab8ab026aa"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/DevKit Pro 未认证管理员会话接管（CVE-2026-14378）.md",
+      "review_shard": 3,
+      "review_input_sha256": "7b820b151b4134b668c045d9d3b0610b1f68eae77e905e27a690157184b4e73d",
+      "final_sha256": "893d703f6dab0970f3fd26f7cbc73da25c912b2af49a6ddaa874d97d0855ef47"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Strong Testimonials 平台头像元数据存储型XSS与发布前提（CVE-2026-97286）.md",
+      "review_shard": 3,
+      "review_input_sha256": "1a4590d0dada000a533a01051463edd82f644a9e79c0baab80a8c9909670b605",
+      "final_sha256": "02362b1ef9aaf5dab9ad5e2483b7c5626a70b0de5789062e4f714f05b0c9f222"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Ultimate Member 下载路由身份混淆与邮箱改写边界（CVE-2026-96451）.md",
+      "review_shard": 3,
+      "review_input_sha256": "1c42ffb93d675e7f43478ebdbe5f3390f3d8b634c37ebd611bc346e9aef559bc",
+      "final_sha256": "1c42ffb93d675e7f43478ebdbe5f3390f3d8b634c37ebd611bc346e9aef559bc"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/User Private Files 多站点静态文件泄露与重写规则判定边界（CVE-2026-97332）.md",
+      "review_shard": 3,
+      "review_input_sha256": "f7b1c7703fdb34f1cfbaefe85e5ec8a8f517d7af3a49aad6a112beace468459c",
+      "final_sha256": "f7b1c7703fdb34f1cfbaefe85e5ec8a8f517d7af3a49aad6a112beace468459c"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Bricksforge 未授权文件上传致RCE（CVE-2026-85097）.md",
+      "review_shard": 3,
+      "review_input_sha256": "8da58ff3f93363c5c3292518ebede13ceebd159e5c68b235245b8e9ba2a4d1e2",
+      "final_sha256": "9a020a32d0c69d5ebeff63c11fb408d1ac20328e84e23e13cec8df1476705543"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Core 登录表单 XSS 致 RCE（CVE-2026-64638）.md",
+      "review_shard": 3,
+      "review_input_sha256": "cf3feced3e35f2162b1ffef73b22053426e717b53088c10a99ca67136d043dca",
+      "final_sha256": "4ee00870d5330d7c5baa8f05fc29509adf3f4a8469324fa22580faea012c0d5a"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress LatePoint 未授权存储型短代码执行（CVE-2026-92966）.md",
+      "review_shard": 3,
+      "review_input_sha256": "bbd498cb79298356fd4a59ad02113bbc24bd600dae87429645b2292d156c836c",
+      "final_sha256": "2f59f0c9bcc532772fb7d9d1cdbf315d475d4aef72b729baf7341811b2972187"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress miniOrange OTP 验证未授权账户接管（CVE-2026-106610）.md",
+      "review_shard": 3,
+      "review_input_sha256": "c03e4a6b49c1631b060ef22277f783452ef76b0e16811b9d31e3d9fbac44ed45",
+      "final_sha256": "e9103f7691e74f91f4b36b1d523784e8a92d46a96a9835bba6dc60327fecc45c"
+    },
+    {
+      "path": "Web安全/CMS内容/miniOrange/miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）.md",
+      "review_shard": 3,
+      "review_input_sha256": "b595c41c889663d6827e1a44e5a4845245daa2d4cb30b6c8b62c6d7be541e01d",
+      "final_sha256": "7540a558bcfda619b0a6973a01d55aea3a3503c94abdcf79de56796c74c42950"
+    },
+    {
+      "path": "Web安全/ERP企业/时空智友/用友 KSOA agent_worksdel.jsp SQL 注入 CVE-2025-15424.md",
+      "review_shard": 4,
+      "review_input_sha256": "b0aee509bc4f27108949994e522714eb3d3a5869a60a41faacda8f6c5b2cb0f0",
+      "final_sha256": "b0aee509bc4f27108949994e522714eb3d3a5869a60a41faacda8f6c5b2cb0f0"
+    },
+    {
+      "path": "Web安全/ERP企业/用友U8/用友U8 CRM swfupload.php 任意文件上传漏洞.md",
+      "review_shard": 4,
+      "review_input_sha256": "37f88002bceaf158ea133d14e0b8886a8745d3ed3064bb336369add88367e17a",
+      "final_sha256": "37f88002bceaf158ea133d14e0b8886a8745d3ed3064bb336369add88367e17a"
+    },
+    {
+      "path": "Web安全/OA办公/Zimbra/Zimbra SMTP 日志投毒致未授权RCE（CVE-2026-73570）.md",
+      "review_shard": 4,
+      "review_input_sha256": "1317b15f9b57d8205f9bb2136a77165840cf5cdad922a5aa2fa1a6a0bee28225",
+      "final_sha256": "6069fc153af5f8827b8071389328e3a6be59eff9f510d8e3eaa92892ffdeecd1"
+    },
+    {
+      "path": "Web安全/OA办公/汉王e脸通/汉王e脸通 queryAntisubmarineList SQL注入漏洞.md",
+      "review_shard": 4,
+      "review_input_sha256": "cd6a77daee222838c29fe32c876bd1659fc872b15ca899292c1087e3a413fd96",
+      "final_sha256": "cd6a77daee222838c29fe32c876bd1659fc872b15ca899292c1087e3a413fd96"
+    },
+    {
+      "path": "Web安全/OA办公/鸿翼软件/鸿翼edoc importNewBpmnDesignByIe XStream反序列化漏洞.md",
+      "review_shard": 4,
+      "review_input_sha256": "fffec426c73aa12590e5a665f80d564512f30847296e60d3713d3078036f8fab",
+      "final_sha256": "fffec426c73aa12590e5a665f80d564512f30847296e60d3713d3078036f8fab"
+    },
+    {
+      "path": "Web安全/中间件/东方通TongWeb/东方通TongWeb upload接口任意文件上传漏洞.md",
+      "review_shard": 4,
+      "review_input_sha256": "0aa56e827a95338d4507741d4c90f591b49c181acea306f4cea398c29dd38281",
+      "final_sha256": "0aa56e827a95338d4507741d4c90f591b49c181acea306f4cea398c29dd38281"
+    },
+    {
+      "path": "Web安全/其他软件/Gotenberg/Gotenberg 元数据换行导致 ExifTool 参数注入（CVE-2026-40281）.md",
+      "review_shard": 5,
+      "review_input_sha256": "394ac49816f94e1589404e7bd2f0b5e85393c54b9479de4734e601752d3ecf58",
+      "final_sha256": "394ac49816f94e1589404e7bd2f0b5e85393c54b9479de4734e601752d3ecf58"
+    },
+    {
+      "path": "Web安全/其他软件/Gotenberg/Gotenberg 元数据键换行注入 CVE-2026-42589.md",
+      "review_shard": 5,
+      "review_input_sha256": "cded9668b33354a82af9794e5a5e0d66ae284209bce6c754c1df367d7faa51b7",
+      "final_sha256": "cded9668b33354a82af9795e4a5e0d66ae284209bce6c754c1df367d7faa51b7"
+    },
+    {
+      "path": "Web安全/其他软件/HFS/Rejetto HFS 2.x 模板注入致未授权RCE（CVE-2026-97359）.md",
+      "review_shard": 5,
+      "review_input_sha256": "6f2d29ef37cdcf2bdd39f92d5731dbc4c7ee30ab5156d5053a603ded6b08648a",
+      "final_sha256": "b8b71c37fe827f490c89eae94d6c7958d7f574a61ea5ab2282a219d52aacb34c"
+    },
+    {
+      "path": "Web安全/其他软件/HFS/Rejetto HFS 会话伪造致未授权RCE（CVE-2026-61500）.md",
+      "review_shard": 5,
+      "review_input_sha256": "a29bf31f05927eb643bab45f052ed0e9e09ce1369fe89b565458f2e589c9886e",
+      "final_sha256": "e4bb445b4460d8887d36d1e1630bc7a6a4803ee1bfdc30460c39e08ab802ea88"
+    },
+    {
+      "path": "Web安全/其他软件/ILIAS/ILIAS LTI 会话与 Shibboleth 注销反序列化链（CVE-2026-80428）.md",
+      "review_shard": 5,
+      "review_input_sha256": "0b020009488d7cd810198a231c062a7a8e15ab6637d9ca2caaae0ecc779333b8",
+      "final_sha256": "0b020009488d7cd810198a231c062a7a8e15ab6637d9ca2caaae0ecc779333b8"
+    },
+    {
+      "path": "Web安全/其他软件/MCPJam/MCPJam Inspector 未认证连接接口命令执行（CVE-2026-23744）.md",
+      "review_shard": 5,
+      "review_input_sha256": "717bc88ccb4598cac47c15e9b9dc1c854ecc01bfbaaa2a59ed7c9e57fd6b0b99",
+      "final_sha256": "bf02e17490e200f7dc3e52395cefc81cd2ba67f325b8cb1f316c39e8a3b65b23"
+    },
+    {
+      "path": "Web安全/其他软件/OliveTin/OliveTin 密码参数 shell 转义缺陷（CVE-2026-27626）.md",
+      "review_shard": 5,
+      "review_input_sha256": "192f780a52491a999dde98003e74735ef697760247b589352b616fef1c97498c",
+      "final_sha256": "d82a0202860d788f55754b532253282e66a6763044fa151ae36164cf70cdaa80"
+    },
+    {
+      "path": "Web安全/其他软件/聚恒中台/聚恒中台 sendvalidatecode SQL注入漏洞.md",
+      "review_shard": 5,
+      "review_input_sha256": "f91b21a78feeb5e03d6fcfd36fe5a721abb407c669333249cb158d17454823c5",
+      "final_sha256": "19eae1cc6d8c7bf51cb8d0e654b255a29ee38f284140b364c91c98d42f463d86"
+    },
+    {
+      "path": "Web安全/商业软件/AhsayCBS/AhsayCBS 复制接收器未授权命令注入致RCE（CVE-2026-105133、CVE-2026-105134）.md",
+      "review_shard": 6,
+      "review_input_sha256": "25dda4172f0bd7cb917a3ce8a77b7a5dadceeb7f5ff182ba6f5d78674869ecd4",
+      "final_sha256": "e75721176850362f2ea8ceeada487f7cd547e5e07cb165a41cdb2e5d135295ea"
+    },
+    {
+      "path": "Web安全/商业软件/Atlassian/Atlassian 多产品 Web 应用根目录文件读取 CVE-2026-21589.md",
+      "review_shard": 6,
+      "review_input_sha256": "c8d05021a8e92b81c7e3c2e74ff0e3fed9ede3ea973344c1ca1d7f1c79f4beb8",
+      "final_sha256": "a93a79cc3f1af764139dc4aa540362e28f36145dce8b37ad97a58a80dd0b7d1d"
+    },
+    {
+      "path": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
+      "review_shard": 6,
+      "review_input_sha256": "376e498bb06674722c78b53d4efacc824619ecd1aebb67a091dc16fb9fc41816",
+      "final_sha256": "376e498bb06674722c78b53d4efacc824619ecd1aebb67a091dc16fb9fc41816"
+    },
+    {
+      "path": "Web安全/商业软件/Zammad/Zammad WebSocket 会话泄露与代码执行条件 CVE-2026-102489.md",
+      "review_shard": 6,
+      "review_input_sha256": "6847d612e49c093cd2b555851be7aaf9c7034a0e53a45491be1b4aeba887cf8c",
+      "final_sha256": "6847d612e49c093cd2b555851be7aaf9c7034a0e53a45491be1b4aeba887cf8c"
+    },
+    {
+      "path": "Web安全/开发框架/Discourse/Discourse 图像处理配置与文件读取链 CVE-2026-55420.md",
+      "review_shard": 6,
+      "review_input_sha256": "fff65c097db01adf20be9b704fe78b6ac1a39328e181b2f6b6227b3edc59428e",
+      "final_sha256": "fff65c097db01adf20be9b704fe78b6ac1a39328e181b2f6b6227b3edc59428e"
+    },
+    {
+      "path": "Web安全/开发框架/Discourse/Discourse 配色 Cookie 注入与匿名缓存污染 CVE-2026-55674.md",
+      "review_shard": 6,
+      "review_input_sha256": "076aa49416fe468928e7d120ade66c025fbb5f622b475c52173c7e46a042b6cd",
+      "final_sha256": "076aa49416fe468928e7d120ade66c025fbb5f622b475c52173c7e46a042b6cd"
+    },
+    {
+      "path": "Web安全/开发框架/Handlebars/Handlebars 不可信 AST 类型混淆 CVE-2026-106446.md",
+      "review_shard": 7,
+      "review_input_sha256": "24274a5107a4e15fe608d6aaa0b3132d9e8787eb4c4b3c0b33dd98c090945ace",
+      "final_sha256": "b95f0ff5b27116dcfa8f1961a27ec11b772b3482573f48ce0b7e22b156fdd71c"
+    },
+    {
+      "path": "Web安全/开发框架/Handlebars/Handlebars.js AST 类型混淆致RCE（CVE-2026-106446）.md",
+      "review_shard": 7,
+      "review_input_sha256": "7654b1079a33f97ea32e83bf1878d02669d022451042da75f56993f60b13740d",
+      "final_sha256": "b1cafbb60c2e504905c53bdd2558b50b5bef5643792e711f8b0d9b9d7ddd8604"
+    },
+    {
+      "path": "Web安全/开发框架/Handlebars/Handlebars.js 沙箱逃逸致RCE（CVE-2026-106445）.md",
+      "review_shard": 7,
+      "review_input_sha256": "e692a89a6b7f58d2891abe39e634589fb5c0d30947145efb0d289eda6d5a85d0",
+      "final_sha256": "21f280ed0139c15fbf7f18cd1554e55044fcf729283c667ea01ce11831abefb9"
+    },
+    {
+      "path": "Web安全/开发框架/JetBrains Exposed/JetBrains Exposed SQL 函数字符串实参注入 CVE-2026-108474.md",
+      "review_shard": 7,
+      "review_input_sha256": "d9f1dfe5361468c5485d4ce19eef44e2ce62dfc869f981495ecdc5943f0a518d",
+      "final_sha256": "d9f1dfe5361468c5485d4ce19eef44e2ce62dfc869f981495ecdc5943f0a518d"
+    },
+    {
+      "path": "Web安全/开发框架/Keycloak/Keycloak 密码重置执行绑定缺陷（CVE-2026-18963）.md",
+      "review_shard": 7,
+      "review_input_sha256": "760e69613a43b690a9090fea522c189077b0cb1037af63f540f960e55f620310",
+      "final_sha256": "760e69613a43b690a9090fea522c189077b0cb1037af63f540f960e55f620310"
+    },
+    {
+      "path": "Web安全/开发框架/Next.js/Next.js next-og 模块 RCE（CVE-2026-94545）.md",
+      "review_shard": 7,
+      "review_input_sha256": "f61b7c68fbf17f12660c82cc237d93e2a4ac71bfa8a272169063ffed5d90b80d",
+      "final_sha256": "85d41f7a86488d4c4d3b02b1274caa030c4fc6d524be977337fb66ffd5ff8f33"
+    },
+    {
+      "path": "Web安全/开发框架/OCaml/OCaml Marshal 大消息长度校验后续绕过（OSEC-2026-18）.md",
+      "review_shard": 7,
+      "review_input_sha256": "c3f05de8d30e369704845149801f14daf5cc4df715c90393a99cfcc30e67931e",
+      "final_sha256": "c3f05de8d30e369704845149801f14daf5cc4df715c90393a99cfcc30e67931e"
+    },
+    {
+      "path": "Web安全/开发框架/Smarty/Smarty 继承模板缓存标记伪造 CVE-2026-82531.md",
+      "review_shard": 7,
+      "review_input_sha256": "b91fc0dd329944f36960efe9cfdbf220f046903eebdd5c7ac41af6fb346216db",
+      "final_sha256": "b91fc0dd329944f36960efe9cfdbf220f046903eebdd5c7ac41af6fb346216db"
+    },
+    {
+      "path": "Web安全/开发框架/Spring/Spring-Framework-泛型方法安全注解解析缺失-CVE-2025-41249.md",
+      "review_shard": 8,
+      "review_input_sha256": "ee3fc83ed27abf2a9a7ee70a781efb61259f339f047890eeabf2e0cb35f84672",
+      "final_sha256": "ee3fc83ed27abf2a9a7ee70a781efb61259f339f047890eeabf2e0cb35f84672"
+    },
+    {
+      "path": "Web安全/开发框架/WSO2/WSO2 API Manager JWT 认证绕过及误判边界（CVE-2026-5430）.md",
+      "review_shard": 8,
+      "review_input_sha256": "5629aab63f3e625fd2633b5b52ca7d80294619da5c1c41e628f0b0982d658b6d",
+      "final_sha256": "4904dba82862a06912810a4592926a1165cf554ed78aba54b8ec43ed218cd07b"
+    },
+    {
+      "path": "Web安全/开发框架/dot-access/npm dot-access 代码注入致RCE（CVE-2026-107700）.md",
+      "review_shard": 8,
+      "review_input_sha256": "e008490a4ec942c668237ae4a36a75ac49967722174ed8548bdb6fe2ecb70b7e",
+      "final_sha256": "424942e6e5a1d0f75a9f083d9057a5cd51bbd6cebdec6622ae46442b206b9564"
+    },
+    {
+      "path": "Web安全/开发框架/gist/gist RubyGem TLS 证书校验缺失（CVE-2026-105221）.md",
+      "review_shard": 8,
+      "review_input_sha256": "1b1fe71391a7a6ee459d022b5ac3f4bc7900be557a9eda2a2ffe4dbee6da4d9e",
+      "final_sha256": "1b1fe71391a7a6ee459d022b5ac3f4bc7900be557a9eda2a2ffe4dbee6da4d9e"
+    },
+    {
+      "path": "Web安全/开发框架/image-downloader/npm image-downloader 路径穿越致任意文件写入（CVE-2026-103648）.md",
+      "review_shard": 8,
+      "review_input_sha256": "2814772537f3bc33bbaf6a4be93e45a1f1ce5aaef638a5611c482f506e9e9a95",
+      "final_sha256": "53c999563f73312f06a9b23e2b219367d20eedf4652dc2ac91d35fc17afafdcc"
+    },
+    {
+      "path": "Web安全/开发框架/libheif/libheif unci 混合色度位深堆越界写 GHSA-x8r2-mggj-j6wr.md",
+      "review_shard": 8,
+      "review_input_sha256": "5aad075adcb63e46561f93ea5a77d281eb6c50084000cffa3d8f95884a3c04ac",
+      "final_sha256": "5aad075adcb63e46561f93ea5a77d281eb6c50084000cffa3d8f95884a3c04ac"
+    },
+    {
+      "path": "Web安全/开发框架/openapi-typescript-codegen/openapi-typescript-codegen 代码注入（CVE-2026-108551）.md",
+      "review_shard": 8,
+      "review_input_sha256": "30ed76446f07bd4e527e6075a92fa413ec065664fe694dd103753ffb7b959997",
+      "final_sha256": "d5a5b38262f2131e61c807daafb68f01c8c4d81181c82e8dcd88083c68277a4a"
+    },
+    {
+      "path": "Web安全/开发框架/shell-quote/shell-quote 注释后字符串换行导致命令注入（CVE-2026-102422）.md",
+      "review_shard": 8,
+      "review_input_sha256": "9400d0a49c95fd6eb07f12255f9259349d16a1c175c714e262f64f124e1ea7d2",
+      "final_sha256": "9400d0a49c95fd6eb07f12255f9259349d16a1c175c714e262f64f124e1ea7d2"
+    },
+    {
+      "path": "Web安全/数据库/Metabase/Metabase 密码重置 SQL 注入的应用库会话与分析库权限边界（CVE-2026-72898）.md",
+      "review_shard": 9,
+      "review_input_sha256": "19cb3565c1941d27f3c15a6825e3324c5ecaae8caaa03bc0673341744fcb6cbd",
+      "final_sha256": "19cb3565c1941d27f3c15a6825e3324c5ecaae8caaa03bc0673341744fcb6cbd"
+    },
+    {
+      "path": "Web安全/数据库/SQLite/SQLite 3.53.4 公开样例与 3.54.0 修复边界.md",
+      "review_shard": 9,
+      "review_input_sha256": "794fd741d2dfc1cc65eae5da4c8928b59c39923a569c1874067009d6807871b3",
+      "final_sha256": "794fd741d2dfc1cc65eae5da4c8928b59c39923a569c1874067009d6807871b3"
+    },
+    {
+      "path": "Web安全/服务器软件/LPAR2RRD/LPAR2RRD 只读用户上传文件路径遍历 CVE-2025-54769.md",
+      "review_shard": 9,
+      "review_input_sha256": "68e334c6810c9bee2b930222fdafb1d13808e8212020996587bb2d6fb3bb4a99",
+      "final_sha256": "68e334c6810c9bee2b930222fdafb1d13808e8212020996587bb2d6fb3bb4a99"
+    },
+    {
+      "path": "Web安全/桌面软件/AnyDesk/AnyDesk Linux 8.0.2 AnyPwn 会话协议堆溢出.md",
+      "review_shard": 9,
+      "review_input_sha256": "eb241d9a2af70f48f5548358a2018d97608bc0ecbb4de449dc4ba516ca744284",
+      "final_sha256": "eb241d9a2af70f48f5548358a2018d97608bc0ecbb4de449dc4ba516ca744284"
+    },
+    {
+      "path": "Web安全/桌面软件/Lenovo/Lenovo Power Management Driver 空指针拒绝服务 CVE-2025-9548.md",
+      "review_shard": 9,
+      "review_input_sha256": "52ed04cbcdff4d0525f3b0942a5f805ead34f744bb025debbb58e5d556a9b245",
+      "final_sha256": "52ed04cbcdff4d0525f3b0942a5f805ead34f744bb025debbb58e5d556a9b245"
+    },
+    {
+      "path": "Web安全/桌面软件/OsmAnd/OsmAnd Android 导出 Activity 静默设置导入（CVE-2026-65997）.md",
+      "review_shard": 9,
+      "review_input_sha256": "d1829dea80a6ddbf15abf2e9c153f415e5ccd991f3682028639d8e1d0e2e0d52",
+      "final_sha256": "d1829dea80a6ddbf15abf2e9c153f415e5ccd991f3682028639d8e1d0e2e0d52"
+    },
+    {
+      "path": "Web安全/桌面软件/Telegram/Telegram Desktop IPC 注入致一键账户接管（CVE-2026-107181）.md",
+      "review_shard": 9,
+      "review_input_sha256": "73d99edf657eb6d1e4e2275d096590ede97271c003fd9f26d80c2482eb668d80",
+      "final_sha256": "4031f17b04ad1c07926889b1d0d1f1d6528e82bd61804bb3996510db9869f39f"
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/Cisco Catalyst SD-WAN Manager 路径解码差异认证绕过 CVE-2026-76504.md",
+      "review_shard": 10,
+      "review_input_sha256": "65f1fe7d0eb1a048528407338532adbc9e5377c9112dca32c05f16d32443c330",
+      "final_sha256": "65f1fe7d0eb1a048528407338532adbc9e5377c9112dca32c05f16d32443c330"
+    },
+    {
+      "path": "Web安全/网络设备/Citrix NetScaler/Citrix NetScaler 未授权命令注入致RCE（CVE-2026-88771）.md",
+      "review_shard": 10,
+      "review_input_sha256": "6c31bcc5115a2325c4590ee8a65396bf5852910e7a3e94d559741037055805d8",
+      "final_sha256": "5122d2df3aa2a26ee479622d8ec1b8a4adc0c48001dd809ad93af541eec6ca73"
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/D-Link DIR-860L B1 DHCP Hostname 命令注入 CVE-2025-14659.md",
+      "review_shard": 10,
+      "review_input_sha256": "7e5d0bc1d1da8bc92c6126231869974191fc22da7810bd05d32ffab9a162512e",
+      "final_sha256": "7e5d0bc1d1da8bc92c6126231869974191fc22da7810bd05d32ffab9a162512e"
+    },
+    {
+      "path": "Web安全/网络设备/Fortinet/FortiMail 未授权路径穿越致任意文件写入（CVE-2026-104286）.md",
+      "review_shard": 10,
+      "review_input_sha256": "133a41372ace78fc169f78c214e971261bc1b9e55be10762e4b3ce38c0d42204",
+      "final_sha256": "cff61e7bd1249250b47eb5b3a9eedc32945f0d96bd3e9c9f6ea1fc0a30b31b13"
+    },
+    {
+      "path": "Web安全/网络设备/Kerio-Control/Kerio-Control-GFIAgent认证绕过与升级执行链-CVE-2025-34069.md",
+      "review_shard": 10,
+      "review_input_sha256": "a0981e14ff9f4f36169ba2974f667ac9bea582c29bb1704d32564ecf4f355673",
+      "final_sha256": "a0981e14ff9f4f36169ba2974f667ac9bea582c29bb1704d32564ecf4f355673"
+    },
+    {
+      "path": "Web安全/网络设备/SonicWall/SonicWall SMA1000 未授权 SSRF 致内网穿透（CVE-2026-102255）.md",
+      "review_shard": 10,
+      "review_input_sha256": "989686cec1bc79078ab5005c9f6b003d5d250e25c7626a8a4ebc963f774c629e",
+      "final_sha256": "d3a188520048aeacf8632a421f3db9d6190be4ec89c688c1e6c1167e294f0f83"
+    },
+    {
+      "path": "Web安全/运维面板/Laranode/Laranode 文件管理器路径穿越致RCE（CVE-2026-100520）.md",
+      "review_shard": 11,
+      "review_input_sha256": "947727e083b8c2f78df84560fccaa8ac2132abd8979d070f574976c50a431596",
+      "final_sha256": "7951db84a61153e1b06935263df9f5b2ec748b4938bb8a129149712131dbb55a"
+    },
+    {
+      "path": "Web安全/运维面板/Nginx UI/Nginx UI 备份恢复配置覆盖 CVE-2026-107806.md",
+      "review_shard": 11,
+      "review_input_sha256": "2598bf9a1c14a259130660a72ac60be70ea2a36c447f439b8032e32386bc43ad",
+      "final_sha256": "e8bd822df6aafd96fb8d128faa5a0aa07eac5155ccaa8654f8666624cff982a7"
+    },
+    {
+      "path": "Web安全/运维面板/OpenSpug/OpenSpug Spug 文件传输命令注入致RCE（CVE-2026-108540）.md",
+      "review_shard": 11,
+      "review_input_sha256": "cd4dff5c69525a5bf2aa9c30c17214c2031d03ea833e1a2cdfa14608aee89b3f",
+      "final_sha256": "acfb1aa3e5d87c1eabe6e428ef4621903bc51ef030b65930cf889e7b51a56d0a"
+    },
+    {
+      "path": "Web安全/运维面板/Proxmox/Proxmox-VE-认证绕过-CVE-2023-54391.md",
+      "review_shard": 11,
+      "review_input_sha256": "c5216994c0905ad35f973847742fd0a628ebf4f7ab9a9d17f40829bc5cced3fa",
+      "final_sha256": "c5216994c0905ad35f973847742fd0a628ebf4f7ab9a9d17f40829bc5cced3fa"
+    },
+    {
+      "path": "Web安全/运维面板/nginx-ui/nginx-ui 备份恢复认证后RCE（CVE-2026-107806）.md",
+      "review_shard": 11,
+      "review_input_sha256": "36cfebeda6f3fdaf7fc6a0b72b0e85db60d30105c4318e7d5e8481dacb9156ab",
+      "final_sha256": "dac9b249445fbd79022df23c509fcc1ec3180e883c70070bd7f149105e6a573c"
+    },
+    {
+      "path": "Web安全/运维面板/青龙面板/青龙面板认证绕过致未授权RCE（QL-2026-007）.md",
+      "review_shard": 11,
+      "review_input_sha256": "433cbbfe85789c74c840ad7d8ae73461cb49f265a550e03060cf309143f0e350",
+      "final_sha256": "b7bdb4aebfc1aec6b75af92ea4fd5a30f1d70d09bb02384e55f52400aeb0443c"
+    },
+    {
+      "path": "系统安全/Linux/ModemManager CBM断言崩溃的完整PDU输入与实验边界（CVE-2026-95622）.md",
+      "review_shard": 9,
+      "review_input_sha256": "94d6fcd5b57a7ef888a367468cdfb4d3d7708f641c4af8da72ca916556f2006b",
+      "final_sha256": "94d6fcd5b57a7ef888a367468cdfb4d3d7708f641c4af8da72ca916556f2006b"
+    },
+    {
+      "path": "系统安全/Linux/systemd-machined 根用户命名空间授权缺陷（CVE-2026-40224）.md",
+      "review_shard": 9,
+      "review_input_sha256": "14b1f0d8b2307553a9a7091d74111410dd8785b26abd845acb45b070b8ae3733",
+      "final_sha256": "14b1f0d8b2307553a9a7091d74111410dd8785b26abd845acb45b070b8ae3733"
+    },
+    {
+      "path": "系统安全/VMware/VMware VMXNET3 TSO 整数溢出致宿主机代码执行（CVE-2026-59346）.md",
+      "review_shard": 11,
+      "review_input_sha256": "1ebdd60d149aafbd3c7de8f4b0e020a123220d9155a2c4d589e8e926df8b1038",
+      "final_sha256": "e6cb0cf7d4438d81287f75f9201044dbce45f53f50dc04b83d195825fae2ed8b"
+    }
+  ],
+  "final_changed_article_paths": 93,
+  "restored_to_master_without_net_change": [
+    "Web安全/AI应用/vLLM/vLLM的Mooncake存在严重RCE漏洞.md"
+  ]
+}

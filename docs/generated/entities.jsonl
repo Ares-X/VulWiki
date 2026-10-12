@@ -4503,6 +4503,10 @@
 {"canonical_paths":[],"entity_id":"ve-cfd79327cf7c5e5c846142fa","grouping":"explicit-metadata","source_record_ids":["vw-cfd79327cf7c5e5c846142fa"]}
 {"canonical_paths":[],"entity_id":"ve-cfe71a13470c86494248a892","grouping":"explicit-metadata","source_record_ids":["vw-cfe71a13470c86494248a892"]}
 {"canonical_paths":[],"entity_id":"ve-cfe93cbbbd82e6926da06c38","grouping":"explicit-metadata","source_record_ids":["vw-cfe93cbbbd82e6926da06c38"]}
+{"canonical_paths":["Web安全/开发框架/Handlebars/Handlebars 不可信 AST 类型混淆 CVE-2026-106446.md"],"entity_id":"ve-cve-2026-106446","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG034","VW-20261012-handlebars-106446"]}
+{"canonical_paths":["Web安全/CMS内容/miniOrange/miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）.md"],"entity_id":"ve-cve-2026-106610","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG026","VW-20261012-cve-2026-106610"]}
+{"canonical_paths":["Web安全/运维面板/Nginx UI/Nginx UI 备份恢复配置覆盖 CVE-2026-107806.md"],"entity_id":"ve-cve-2026-107806","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG027","VW-20261012-nginx-ui-107806"]}
+{"canonical_paths":["Web安全/CMS内容/WordPress/Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）.md"],"entity_id":"ve-cve-2026-85097","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG032","VW-20261012-NOMI298"]}
 {"canonical_paths":[],"entity_id":"ve-d006f86358e410819fa14bac","grouping":"explicit-metadata","source_record_ids":["vw-d006f86358e410819fa14bac"]}
 {"canonical_paths":[],"entity_id":"ve-d018739275d7c593626e61d5","grouping":"explicit-metadata","source_record_ids":["vw-d018739275d7c593626e61d5"]}
 {"canonical_paths":[],"entity_id":"ve-d0266d2bb717cc27fd1d6a59","grouping":"explicit-metadata","source_record_ids":["vw-d0266d2bb717cc27fd1d6a59"]}

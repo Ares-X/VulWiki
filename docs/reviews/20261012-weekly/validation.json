@@ -1,0 +1,38 @@
+{
+  "base_commit": "8291608013efb898ce75b267bf13134c7ab68389",
+  "new_articles": 4,
+  "updated_articles": 1,
+  "documents_after": 5866,
+  "python_tests_passed": 96,
+  "node_tests_passed": 44,
+  "legacy_warnings": 4093,
+  "errors": 0,
+  "fatal_issues": 0,
+  "new_issues": 0,
+  "unchanged_existing_articles": 5861,
+  "papercut_old_bytes_preserved": true,
+  "baseline_modified": false,
+  "resource_check": {
+    "exit_code": 1,
+    "reason": "20,347 referenced resource files intentionally absent in sparse worktree; all exist at HEAD and marked skip-worktree",
+    "unique_blobs": 19101,
+    "cached_blobs": 27,
+    "unavailable_blobs": 19074,
+    "remote_image_references": 0,
+    "image_pixel_verification": false,
+    "new_or_updated_image_references": 0
+  },
+  "render": {
+    "method": "offline Pandoc/HTMLParser; no browser script execution",
+    "changed_article_code_text_comparison": true,
+    "active_scripts": 0,
+    "pixel_verification": false
+  },
+  "peer_corrections": [
+    "Exposed Oracle optional raw SQL exception added",
+    "PaperCut POST /app endpoint versus Tapestry service value clarified",
+    "LPAR tar top-level member prefix clarified"
+  ],
+  "index_check": "Final regeneration and consistency check performed before commit; see delivery status",
+  "remote_commit_and_ci": "Verify at delivery, not inferred from local files"
+}

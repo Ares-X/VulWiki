@@ -1,0 +1,208 @@
+{
+  "window_start": "2026-10-04T00:00:00Z",
+  "observed_utc": "2026-10-12T00:06:30Z/2026-10-12T00:10:49Z",
+  "master": "8291608013efb898ce75b267bf13134c7ab68389",
+  "sources": [
+    {
+      "name": "wiki.0-sec.org",
+      "url": "https://wiki.0-sec.org/",
+      "access": "unavailable",
+      "latest_visible_date": null,
+      "findings": "Web inaccessible; direct GET HTTP502",
+      "limit": "Cannot verify weekly changes"
+    },
+    {
+      "name": "先知",
+      "url": "https://xz.aliyun.com/news",
+      "access": "feed_readable_bodies_challenged",
+      "latest_visible_date": "2026-10-05 10:45:19",
+      "findings": "Atom100 entries,3 entries published Oct4 onward:92915/92916/92917. Direct body GET200 only challenge JS; Web one-line extraction. Challenge not executed.",
+      "limit": "100-entry feed covers back to August but not all categories/history; timestamps no timezone; updated recent across old entries is not proof of real change"
+    },
+    {
+      "name": "跳跳糖",
+      "url": "https://tttang.com/",
+      "access": "unavailable",
+      "latest_visible_date": null,
+      "findings": "Web timeout; direct GET502",
+      "limit": "Cannot verify weekly changes"
+    },
+    {
+      "name": "Seebug Paper",
+      "url": "https://paper.seebug.org/",
+      "access": "unavailable",
+      "latest_visible_date": null,
+      "findings": "Web inaccessible; direct GET521",
+      "limit": "Cannot verify weekly changes"
+    },
+    {
+      "name": "安全客",
+      "url": "https://www.anquanke.com/index.html",
+      "access": "partial",
+      "latest_visible_date": "2026-10-09 18:50:48",
+      "findings": "3 new homepage items; two security stories316214/316211 read. PixelLeak and smart power-strip incident explain events without specific public vulnerability triggers; translation benchmark marketing excluded.",
+      "limit": "Homepage only, no complete archive traversal; unattributed claims not validated or admitted"
+    },
+    {
+      "name": "Y4er",
+      "url": "https://y4er.com/posts/",
+      "access": "readable",
+      "latest_visible_date": "2023-10-26",
+      "findings": "Archive first page20items; newest predates window",
+      "limit": "210 old articles not compared for silent edits"
+    },
+    {
+      "name": "PortSwigger",
+      "url": "https://portswigger.net/research/articles",
+      "access": "readable",
+      "latest_visible_date": "2026-10-06",
+      "findings": "2 new articles read: Oct5 overlapping CSS fragments updatedOct6; Oct6 modelresearch evaluation. CSS method uses publiclabs but not newly identified product/version vulnerability; modelessay not admission.",
+      "limit": "No live lab opened or run; no allhistorical comparison"
+    },
+    {
+      "name": "watchTowr",
+      "url": "https://labs.watchtowr.com/",
+      "access": "readable",
+      "latest_visible_date": "2026-10-09",
+      "findings": "2 new original articles fully read. Oct6 Atlassian21589 candidate; Oct9 PaperCut additive oldarticle update. Two full fixed repositories reviewed,2files each.",
+      "limit": "No dependency implementation audit; screenshots not independently verified; original article no revision history"
+    },
+    {
+      "name": "GitHub SecurityLab",
+      "url": "https://securitylab.github.com/advisories/",
+      "access": "readable",
+      "latest_visible_date": "2026-10-01",
+      "findings": "Latest7 announcements pre-window and logged previousweek",
+      "limit": "Index not evidence of no silent edits; no repeat of previously deferred code audits"
+    },
+    {
+      "name": "Sonar",
+      "url": "https://www.sonarsource.com/blog/",
+      "access": "partial",
+      "latest_visible_date": "2026-10-09",
+      "findings": "Homepage+officialdomain scoped query yielded model evaluation/product posts, no verified new vulnerability research candidate",
+      "limit": "Dynamic category pages not exhaustively paginated"
+    },
+    {
+      "name": "Assetnote/Searchlight",
+      "url": "https://www.slcyber.io/research-blog",
+      "access": "readable",
+      "latest_visible_date": "2026-10-08",
+      "findings": "Oct7 Discourse55420/55674 delegated to parent for partialofficial/code-review; Oct8 GoBalance key truncation analysis read, no fixed original repo or patch corroborated yet",
+      "limit": "GoBalance lacks full fixed code/installation/dependencies/workflow audit; not admitted. Events/attribution not independently verified"
+    },
+    {
+      "name": "Doyensec",
+      "url": "https://blog.doyensec.com/",
+      "access": "readable",
+      "latest_visible_date": "2026-09-24",
+      "findings": "LatestChromeiOS article predateswindow",
+      "limit": "No historicaltextcomparison"
+    },
+    {
+      "name": "TrailofBits",
+      "url": "https://blog.trailofbits.com/",
+      "access": "readable",
+      "latest_visible_date": "2026-10-02",
+      "findings": "LatestSequenceHash predateswindow",
+      "limit": "No historicaltextcomparison"
+    },
+    {
+      "name": "ProjectZero",
+      "url": "https://projectzero.google/",
+      "access": "readable",
+      "latest_visible_date": "2026-10-06",
+      "findings": "New emergency-patching process article read, no specific new public-trigger candidate",
+      "limit": "Publicissue tracker not exhaustively checked"
+    },
+    {
+      "name": "Synacktiv",
+      "url": "https://www.synacktiv.com/en/publications",
+      "access": "readable",
+      "latest_visible_date": "2026-08-31",
+      "findings": "Latest English list predateswindow",
+      "limit": "Only English latestpage; no historicaltextcomparison"
+    },
+    {
+      "name": "ZDI",
+      "url": "https://www.zerodayinitiative.com/blog/",
+      "access": "readable",
+      "latest_visible_date": "2026-10-08",
+      "findings": "Oct5-8 schedule/results4items; day3 original read, competition outcomes do not disclose concrete trigger materials",
+      "limit": "Remaining dailyresults not fullcode reviews; disclosureadvisory archive not exhaustively checked"
+    },
+    {
+      "name": "Rapid7",
+      "url": "https://www.rapid7.com/blog/",
+      "access": "partial",
+      "latest_visible_date": "2026-10",
+      "findings": "Latest vulnerability21589 links sameAtlassianissue; duplicatelead merged withwatchTowr/official",
+      "limit": "Metasploit repository review separate parentwork; no allblog pagination"
+    },
+    {
+      "name": "PublicX",
+      "url": "https://x.com/PortSwiggerRes",
+      "access": "unavailable",
+      "latest_visible_date": null,
+      "findings": "DirectPortSwiggerRes/watchtowrcyber errors; scoped21589 datequery no verifiedpost",
+      "limit": "No dedicatedX connection; cannot claimfullcoverage"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CVE-2026-21589",
+      "disposition": "eligible_new_draft",
+      "draft": "atlassian-draft.md",
+      "fixed_commit": "25f732dd5fd03e1135dee815575f60d0dcdeee8d",
+      "official": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+      "scope": "File read in application webroot only; no directory listing; public DAG3products only; Crowd adminchain not implemented",
+      "conflict": "CNA description gives introduced version minima, while advisory summary saysallversions; preserve both contextually",
+      "license": "no repositoryLICENSE; originalChinese summary only"
+    },
+    {
+      "id": "WT-2026-0143",
+      "disposition": "eligible_existing_article_addendum",
+      "draft": "papercut-addendum.md",
+      "fixed_commit": "a10a46a35a268141a44bfd4efcb02f2afa08fcbe",
+      "scope": "PublishedDAG auth bypass only, not RCE or adminpasswordchange; old81578/82078article alreadypublished active",
+      "conflict": "blogsingle81579 typo and README26.05; clarify outside originals.82077authenticatedadmin independentfrom81578",
+      "license": "no repositoryLICENSE; originalChinese summary only"
+    },
+    {
+      "id": "xz-92915",
+      "url": "https://xz.aliyun.com/news/92915",
+      "disposition": "body_unread_challenge",
+      "title": "AI智能体框架序列化注入漏洞"
+    },
+    {
+      "id": "xz-92916",
+      "url": "https://xz.aliyun.com/news/92916",
+      "disposition": "body_unread_challenge",
+      "title": "Go idna CVE-2026-39821"
+    },
+    {
+      "id": "xz-92917",
+      "url": "https://xz.aliyun.com/news/92917",
+      "disposition": "body_unread_challenge",
+      "title": "Cache XSS"
+    },
+    {
+      "id": "Discourse55420-55674",
+      "disposition": "parent_partial_review",
+      "evidence": "discourse-review.json"
+    },
+    {
+      "id": "GoBalance-key-truncation",
+      "url": "https://www.slcyber.io/research/leaking-the-keys-to-the-kingdom-how-a-single-slip-handed-over-a-darknet-empire",
+      "disposition": "deferred",
+      "reason": "Original research gives code/theory but fixed source/patch/version and full static audit incomplete; no publicsecret copied or service queried"
+    }
+  ],
+  "limits": [
+    "Directindex/feed-firstreview; no genericsearch substitution",
+    "No website list proves absence of silent corrections/withdrawals",
+    "List/feed census distinctfromcandidatebodyaudit",
+    "CVEAPI Web failed; directGET succeeded for21589/81578/82077, fullJSONsaved",
+    "No public PoC execution, dependency installation, targets scanned or content posted"
+  ]
+}

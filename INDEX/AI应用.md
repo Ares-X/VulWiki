@@ -21,6 +21,10 @@
 - [ComfyUI-Manager 远程代码执行漏洞 CVE-2025-67303](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/ComfyUI/ComfyUI-Manager-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-67303.md) [vulnerability; not-reproduced; needs-review]
 - [ComfyUI-Manager 配置处理器 CRLF 注入漏洞 CVE-2026-22777](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/ComfyUI/ComfyUI-Manager-%E9%85%8D%E7%BD%AE%E5%A4%84%E7%90%86%E5%99%A8-CRLF-%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CVE-2026-22777.md) [vulnerability; not-reproduced; needs-review]
 
+## Crawl4AI PDFContentScrapingStrategy
+
+- [Crawl4AI PDF图片落盘的目录控制与认证边界（CVE-2026-91940）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Crawl4AI/Crawl4AI%20PDF%E5%9B%BE%E7%89%87%E8%90%BD%E7%9B%98%E7%9A%84%E7%9B%AE%E5%BD%95%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%AE%A4%E8%AF%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-91940%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
+
 ## EDDI
 
 - [EDDI ZIP导入路径穿越与延迟类加载利用链（CVE-2025-32779）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/EDDI/EDDI%20ZIP%E5%AF%BC%E5%85%A5%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E4%B8%8E%E5%BB%B6%E8%BF%9F%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%88%A9%E7%94%A8%E9%93%BE%20CVE-2025-32779.md) [analysis; source-claimed; needs-review]
@@ -42,10 +46,16 @@
 
 - [英特尔披露 AI 模型压缩软件中的严重漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/%E8%8B%B1%E7%89%B9%E5%B0%94/%E8%8B%B1%E7%89%B9%E5%B0%94%E6%8A%AB%E9%9C%B2%20AI%20%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## LMCache
+
+- [LMCache ZeroMQ 反序列化致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LMCache/LMCache%20ZeroMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-105192%EF%BC%89.md) [vulnerability; source-claimed; active]
+- [LMCache run_script 端点未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LMCache/LMCache%20run_script%20%E7%AB%AF%E7%82%B9%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-107204%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## Langflow
 
 - [AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/AI%E7%94%A8%E6%88%B7%E5%8A%A1%E5%BF%85%E5%85%B3%E6%B3%A8%EF%BC%8CLangflow%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E5%88%86%E6%9E%90%EF%BC%88CVE-2026-33017%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
 - [Langflow CSV Agent 远程代码执行漏洞 CVE-2026-27966](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-CSV-Agent-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2026-27966.md) [vulnerability; not-reproduced; needs-review]
+- [Langflow MCP 服务器盲命令注入致RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20MCP%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B2%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E8%87%B4RCE%EF%BC%88CVE-2026-93674%EF%BC%89.md) [vulnerability; source-claimed; active]
 - [Langflow code API 未授权远程代码执行漏洞 CVE-2025-3248](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-code-API-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-3248.md) [vulnerability; not-reproduced; needs-review]
 - [Langflow responses跨用户Flow执行与UUID分支授权缺口（CVE-2026-55255）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20responses%E8%B7%A8%E7%94%A8%E6%88%B7Flow%E6%89%A7%E8%A1%8C%E4%B8%8EUUID%E5%88%86%E6%94%AF%E6%8E%88%E6%9D%83%E7%BC%BA%E5%8F%A3%EF%BC%88CVE-2026-55255%EF%BC%89.md) [analysis; not-reproduced; active]
 - [Langflow ≤ 1.6.9 CORS 配置错误导致令牌劫持和远程命令执行漏洞 CVE-2025-34291](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-%E2%89%A4-1.6.9-CORS-%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E4%BB%A4%E7%89%8C%E5%8A%AB%E6%8C%81%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-34291.md) [vulnerability; not-reproduced; needs-review]
@@ -55,6 +65,10 @@
 - [已复现 | Langflow post-auth RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%E5%B7%B2%E5%A4%8D%E7%8E%B0%20%20Langflow%20post-auth%20RCE.md) [advisory; not-reproduced; needs-review]
 - [漏洞预警 | Langflow身份验证缺失漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Langflow%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%BC%BA%E5%A4%B1%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 - [（CVE-2026-9198）IBM Langflow未认证RCE漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%EF%BC%88CVE-2026-9198%EF%BC%89IBM%20Langflow%E6%9C%AA%E8%AE%A4%E8%AF%81RCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+
+## Langflow OSS
+
+- [Langflow 代码校验接口认证后代码执行（CVE-2026-7873）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20%E4%BB%A3%E7%A0%81%E6%A0%A1%E9%AA%8C%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E5%90%8E%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20CVE-2026-7873.md) [vulnerability; source-claimed; active]
 
 ## Langflow及Windows Shell
 
@@ -171,6 +185,12 @@
 ## SGLang
 
 - [SGLang AI 基础设施的严重 9.8 级远程代码执行威胁](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/SGLang/SGLang%20AI%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E4%B8%A5%E9%87%8D%209.8%20%E7%BA%A7%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A8%81%E8%83%81.md) [advisory; not-reproduced; needs-review]
+- [SGLang ZMQ pickle 反序列化致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/SGLang/SGLang%20ZMQ%20pickle%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-93034%EF%BC%89.md) [vulnerability; source-claimed; active]
+
+## Sub2API
+
+- [Sub2API EasyPay 下单签名复用与回调伪造](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Sub2API/Sub2API%20EasyPay%20%E4%B8%8B%E5%8D%95%E7%AD%BE%E5%90%8D%E5%A4%8D%E7%94%A8%E4%B8%8E%E5%9B%9E%E8%B0%83%E4%BC%AA%E9%80%A0.md) [analysis; source-claimed; active]
+- [sub2api OAuth 待处理会话账号接管](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Sub2API/sub2api%20OAuth%20%E5%BE%85%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D%E8%B4%A6%E5%8F%B7%E6%8E%A5%E7%AE%A1.md) [vulnerability; source-claimed; active]
 
 ## Vim
 
@@ -191,6 +211,10 @@
 ## gemini-mcp-tool
 
 - [gemini-mcp-tool 命令注入漏洞深度分析(CVE-2026-0755)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MCP%E5%B7%A5%E5%85%B7/gemini-mcp-tool%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%28CVE-2026-0755%29.md) [vulnerability; not-reproduced; needs-review]
+
+## langchain-core
+
+- [LangChain 检查点序列化往返中的对象注入](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LangChain/LangChain%20%E5%BA%8F%E5%88%97%E5%8C%96%E4%BF%9D%E7%95%99%E5%AD%97%E6%AE%B5%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2025-68664%EF%BC%89.md) [analysis; source-claimed; active]
 
 ## llama.cpp
 
@@ -223,7 +247,8 @@
 
 ## vLLM
 
-- [漏洞预警 | vLLM远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20vLLM%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
+- [vLLM 视频处理链致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/vLLM%20%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E9%93%BE%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-22778%EF%BC%89.md) [vulnerability; source-claimed; active]
+- [漏洞预警 | vLLM远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20vLLM%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; active]
 
 ## vLLM Mooncake
 

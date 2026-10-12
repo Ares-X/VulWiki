@@ -1,0 +1,230 @@
+{
+  "exposed": [
+    {
+      "path": ".github/workflows/close-wait-for-reply-issues.yml",
+      "git_blob_sha": "2a19df5bcf3aa95fe3373175f4360bbccaab4258",
+      "bytes": 1274,
+      "review_scope": "complete file"
+    },
+    {
+      "path": ".github/workflows/commit-message-validation.yml",
+      "git_blob_sha": "ac8047919e144a7dc8a267698cf60e91c9d1c66a",
+      "bytes": 2288,
+      "review_scope": "complete file"
+    },
+    {
+      "path": ".github/workflows/detekt.yml",
+      "git_blob_sha": "bd70ca4b05d1a310a67e582d5a588903447cb83f",
+      "bytes": 2401,
+      "review_scope": "complete file"
+    },
+    {
+      "path": ".github/workflows/gradle-validation.yml",
+      "git_blob_sha": "9187a4c599b4a946ef1ad0fdd0696027edf96b65",
+      "bytes": 228,
+      "review_scope": "complete file"
+    },
+    {
+      "path": ".github/workflows/junie.yml",
+      "git_blob_sha": "66a8e4e64d2e7dfe47eeae054b77e5699f0c2966",
+      "bytes": 495,
+      "review_scope": "complete file"
+    },
+    {
+      "path": ".github/workflows/pull-request-title-validation.yml",
+      "git_blob_sha": "51ec1966277bb3cd83bcc1b555db289fd7815ee8",
+      "bytes": 1501,
+      "review_scope": "complete file"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "git_blob_sha": "3524ad9524da938272fa0650821c2deed40b5b78",
+      "bytes": 167120,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "LICENSE.txt",
+      "git_blob_sha": "05caa794834571b02948415c44d7c845c1c34656",
+      "bytes": 11352,
+      "review_scope": "complete file"
+    },
+    {
+      "path": "build.gradle.kts",
+      "git_blob_sha": "40b7c391cfa29e8bfd62d58543631eb05610dab2",
+      "bytes": 7176,
+      "review_scope": "complete file"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/FunctionBuilder.kt",
+      "git_blob_sha": "071f3b164d59600d8740fe7f5d62caf8a65fff2d",
+      "bytes": 13989,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/OpBuilder.kt",
+      "git_blob_sha": "28007112a820189d5a400a47f896720ac0fcf8d8",
+      "bytes": 43721,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/FunctionProvider.kt",
+      "git_blob_sha": "3ce874b4f113e344f5dbe0afe0c71f3e3aa26fb6",
+      "bytes": 41660,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/H2.kt",
+      "git_blob_sha": "98cbe42eb4311b8773d3570dea6bf7038569ba01",
+      "bytes": 22090,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/MariaDBDialect.kt",
+      "git_blob_sha": "c40b22c0b3fac9e860d0411723f5c28bec1b2354",
+      "bytes": 6069,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/MysqlDialect.kt",
+      "git_blob_sha": "224eebf85f00c748ad47c8a1c3d6eb1b393e5f8a",
+      "bytes": 17249,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/OracleDialect.kt",
+      "git_blob_sha": "9e988124d8d8b79775472550f4fe4f743b235ea3",
+      "bytes": 21086,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/PostgreSQL.kt",
+      "git_blob_sha": "2052c663cd365ad9546720d0791eca5300e5a14b",
+      "bytes": 19746,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/Redshift.kt",
+      "git_blob_sha": "c1c5bdd626b531478ef0ade60a40e221d2a80c08",
+      "bytes": 15157,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/SQLServerDialect.kt",
+      "git_blob_sha": "7629bdbec3b429797442e7fb71788ece807bf347",
+      "bytes": 20013,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/SQLiteDialect.kt",
+      "git_blob_sha": "549275ff92032309bc8e94cdb45ab6f7a966925b",
+      "bytes": 13788,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/vendors/VendorDialect.kt",
+      "git_blob_sha": "5a4a66e9e2f084f190f9425fe6da52d97f795c33",
+      "bytes": 6742,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-json/src/main/kotlin/org/jetbrains/exposed/v1/json/JsonConditions.kt",
+      "git_blob_sha": "aaaff80c19178065b702ba833402cfeabf825cb0",
+      "bytes": 4664,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-json/src/main/kotlin/org/jetbrains/exposed/v1/json/JsonFunctions.kt",
+      "git_blob_sha": "666aca9ad9f58d1a5fea96ad381fe0d945e13cb0",
+      "bytes": 4964,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-json/src/test/kotlin/org/jetbrains/exposed/v1/json/JsonBColumnTests.kt",
+      "git_blob_sha": "d4e8eb3852b59ba2a7b2afb39bc91490d08f3edc",
+      "bytes": 25014,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-json/src/test/kotlin/org/jetbrains/exposed/v1/json/JsonColumnTests.kt",
+      "git_blob_sha": "bac28fec3b5a8e5f1ed99cb8da94568b66666599",
+      "bytes": 24595,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-r2dbc-tests/src/test/kotlin/org/jetbrains/exposed/v1/r2dbc/sql/tests/json/JsonBColumnTests.kt",
+      "git_blob_sha": "04867aafcccc7950572964cead3f57b4ea141f77",
+      "bytes": 22298,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-r2dbc-tests/src/test/kotlin/org/jetbrains/exposed/v1/r2dbc/sql/tests/json/JsonColumnTests.kt",
+      "git_blob_sha": "eaf8aca19574cec9025bd9039278c1c14c23c3ef",
+      "bytes": 23422,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-r2dbc-tests/src/test/kotlin/org/jetbrains/exposed/v1/r2dbc/sql/tests/shared/dml/GroupByTests.kt",
+      "git_blob_sha": "1f01206c7d3bd9abac200afed7bf757000fcebcf",
+      "bytes": 12384,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-r2dbc-tests/src/test/kotlin/org/jetbrains/exposed/v1/r2dbc/sql/tests/shared/functions/FunctionsTests.kt",
+      "git_blob_sha": "b4bc30e401c942c07abc59f4e52e5863efc0dcc9",
+      "bytes": 27249,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-tests/build.gradle.kts",
+      "git_blob_sha": "1a27b3ba581fda002f7e49d66e0000522106d260",
+      "bytes": 1945,
+      "review_scope": "complete file"
+    },
+    {
+      "path": "exposed-tests/src/test/kotlin/org/jetbrains/exposed/v1/tests/shared/dml/GroupByTests.kt",
+      "git_blob_sha": "77cb36a7bcbed4c7f61c1dcaf829189a99cc86cc",
+      "bytes": 12127,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "exposed-tests/src/test/kotlin/org/jetbrains/exposed/v1/tests/shared/functions/FunctionsTests.kt",
+      "git_blob_sha": "87f79cae95bedb73bcc92a5ccd546f1b703f26ef",
+      "bytes": 26839,
+      "review_scope": "complete changed-file diff"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "git_blob_sha": "7b70c08a72f792f658d244380669939cd3c8692c",
+      "bytes": 10304,
+      "review_scope": "complete file"
+    }
+  ],
+  "lpar": [
+    {
+      "path": "CVE-2025-54769.c",
+      "git_blob_sha": "aecabc1efe62d8345e7c0590c537d559fa7fa843",
+      "bytes": 8289,
+      "review_scope": "complete file"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "80766c00a09f2e252671de85d573e50b52e7c1df",
+      "bytes": 1063,
+      "review_scope": "complete file"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha": "5b80720ebe45f371c5985b1c418e72032d778a19",
+      "bytes": 1898,
+      "review_scope": "complete file"
+    }
+  ],
+  "thirdparty": [
+    {
+      "path": "CVE-2026-108474/poc.py",
+      "git_blob_sha": "6130ad3ff608f3af208a73c8f87523eded5561bd",
+      "bytes": 6365,
+      "review_scope": "complete file"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "baseline_documents": 5862,
+  "unchanged_existing_documents": 5861,
+  "changed_existing_paths": [
+    "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md"
+  ],
+  "papercut_old_bytes_exact_prefix": true,
+  "new_articles": 4,
+  "baseline_file_unchanged": true
+}
