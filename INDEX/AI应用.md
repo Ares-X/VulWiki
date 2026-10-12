@@ -244,6 +244,10 @@
 
 - [n8n Pyodide 沙箱逃逸导致远程代码执行漏洞 CVE-2025-68668](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/n8n-Pyodide-%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-68668.md) [vulnerability; not-reproduced; needs-review]
 
+## sub2api
+
+- [sub2api OAuth 待处理会话账号接管](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/sub2api/sub2api%20OAuth%20%E5%BE%85%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D%E8%B4%A6%E5%8F%B7%E6%8E%A5%E7%AE%A1.md) [vulnerability; source-claimed; active]
+
 ## vLLM
 
 - [vLLM 的 Mooncake 存在严重 RCE 漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/vLLM%E7%9A%84Mooncake%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]
