@@ -103,6 +103,10 @@
 
 - [Yii2及通达OA集成 签名Cookie反序列化链研究](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA%E7%A0%94%E7%A9%B6/%E4%BB%8E%E6%9F%90%E8%BE%BE%20OA%20%E5%88%B0%20Yii2%20%E6%A1%86%E6%9E%B6%E7%9A%84%20cookie%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6.md) [roundup; not-reproduced; needs-review]
 
+## Zimbra Collaboration Suite
+
+- [Zimbra SMTP 日志投毒致未授权RCE](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/Zimbra/Zimbra%20SMTP%20%E6%97%A5%E5%BF%97%E6%8A%95%E6%AF%92%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-73570%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## imo云办公室
 
 - [imo云办公室 corpfile.php命令执行](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/imo%E4%BA%91%E5%8A%9E%E5%85%AC%E5%AE%A4/imo-%E4%BA%91%E5%8A%9E%E5%85%AC%E5%AE%A4-corpfile.php-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
