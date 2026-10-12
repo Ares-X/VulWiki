@@ -2,9 +2,15 @@
   "base": "8291608013efb898ce75b267bf13134c7ab68389",
   "original_pr_head": "059295b05fa56113e22d036c77a282f54ce8527f",
   "scope": {
-    "article_paths": 94,
-    "new_article_paths": 91,
-    "existing_article_paths": 3,
+    "review_input_article_paths": 94,
+    "review_input_new_article_paths": 91,
+    "review_input_existing_article_paths": 3,
+    "final_new_article_paths": 91,
+    "final_existing_article_paths": 2,
+    "final_changed_article_paths": 93,
+    "restored_to_master_without_net_change": [
+      "Web安全/AI应用/vLLM/vLLM的Mooncake存在严重RCE漏洞.md"
+    ],
     "new_local_image_files": 21
   },
   "commands": {

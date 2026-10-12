@@ -586,5 +586,9 @@
       "review_input_sha256": "1ebdd60d149aafbd3c7de8f4b0e020a123220d9155a2c4d589e8e926df8b1038",
       "final_sha256": "e6cb0cf7d4438d81287f75f9201044dbce45f53f50dc04b83d195825fae2ed8b"
     }
+  ],
+  "final_changed_article_paths": 93,
+  "restored_to_master_without_net_change": [
+    "Web安全/AI应用/vLLM/vLLM的Mooncake存在严重RCE漏洞.md"
   ]
 }
