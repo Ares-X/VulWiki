@@ -3930,15 +3930,6 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
-    "key": "CVE-2025-32444",
-    "paths": [
-      "Web安全/AI应用/vLLM/vLLM的Mooncake存在严重RCE漏洞.md",
-      "Web安全/其他软件/杂项/【AI风险通告】vLLM存在远程代码执行漏洞（CVE-2025-32444）.md"
-    ]
-  },
-  {
-    "basis": "shared-primary-identifier",
-    "decision": "manual-review-required",
     "key": "CVE-2025-32463",
     "paths": [
       "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md",
