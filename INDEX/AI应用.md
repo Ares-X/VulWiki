@@ -239,8 +239,6 @@
 
 ## vLLM
 
-- [漏洞预警 | vLLM远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20vLLM%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
-
-## vLLM Mooncake
-
-- [vLLM 的 Mooncake 存在严重 RCE 漏洞（10)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/vLLM%E7%9A%84Mooncake%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
+- [vLLM 的 Mooncake 存在严重 RCE 漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/vLLM%E7%9A%84Mooncake%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]
+- [vLLM 视频处理链致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/vLLM%20%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E9%93%BE%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-22778%EF%BC%89.md) [vulnerability; source-claimed; active]
+- [vLLM远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20vLLM%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]
