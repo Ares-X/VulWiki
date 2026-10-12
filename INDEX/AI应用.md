@@ -46,6 +46,10 @@
 
 - [英特尔披露 AI 模型压缩软件中的严重漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/%E8%8B%B1%E7%89%B9%E5%B0%94/%E8%8B%B1%E7%89%B9%E5%B0%94%E6%8A%AB%E9%9C%B2%20AI%20%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## LMCache
+
+- [LMCache ZeroMQ 反序列化致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LMCache/LMCache%20ZeroMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-105192%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## Langflow
 
 - [AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/AI%E7%94%A8%E6%88%B7%E5%8A%A1%E5%BF%85%E5%85%B3%E6%B3%A8%EF%BC%8CLangflow%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E5%88%86%E6%9E%90%EF%BC%88CVE-2026-33017%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
