@@ -2458,6 +2458,11 @@
 
 - [快排CMS-后台任意文件上传漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E5%BF%AB%E6%8E%92CMS/%E5%BF%AB%E6%8E%92CMS-%E5%90%8E%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## 未确认产品
+
+- [DevKit Pro 未认证管理员会话接管（CVE-2026-14378）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/DevKit%20Pro%20%E6%9C%AA%E8%AE%A4%E8%AF%81%E7%AE%A1%E7%90%86%E5%91%98%E4%BC%9A%E8%AF%9D%E6%8E%A5%E7%AE%A1%EF%BC%88CVE-2026-14378%EF%BC%89.md) [unknown; not-reproduced; needs-review]
+- [ShowDoc registerByVerify 未授权PHP代码注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/ShowDoc/ShowDoc%20registerByVerify%20%E6%9C%AA%E6%8E%88%E6%9D%83PHP%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
+
 ## 熊海CMS versionunspecified
 
 - [后台万能密码登录](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E7%86%8A%E6%B5%B7CMS/%E5%90%8E%E5%8F%B0%E4%B8%87%E8%83%BD%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95.md) [analysis; not-reproduced; needs-review]
