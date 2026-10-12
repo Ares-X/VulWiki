@@ -2,7 +2,7 @@
 schema_version: "1"
 id: "VW-20261012-CG040"
 title: "sub2api OAuth 待处理会话账号接管"
-product: "sub2api"
+product: "Sub2API"
 record_type: "vulnerability"
 review_status: "text-reviewed"
 verification_status: "source-claimed"
@@ -12,6 +12,7 @@ side_effects: "账号接管可致 API Key/余额失窃；测试须限定授权�
 source: "GitHub issue/PR"
 source_status: "recorded"
 source_url: "https://github.com/Wei-Shaw/sub2api/pull/5345"
+fixed_version: "修复提交 89915748736c84dbeb2a4ef201a4e2f444f13cab；首个包含修复的发行版待核"
 ---
 
 # sub2api OAuth 待处理会话账号接管
@@ -29,8 +30,8 @@ sub2api ≤ v0.1.171 的 OAuth pending 会话交换流程存在严重账号接�
 
 ## 影响版本
 
-- 受影响：sub2api ≤ v0.1.171
-- 修复版本：PR #5345 待合并
+- 受影响：原报告列出 sub2api ≤ v0.1.171；完整引入范围未独立核实。
+- 修复提交：上游 PR #5345 已于 2026-08-07 合并，合并提交为 `89915748736c84dbeb2a4ef201a4e2f444f13cab`。本次未确认首个包含该修复的发行版，不再将其写为“待合并”。
 
 ## 漏洞复现
 
@@ -49,11 +50,12 @@ POST /auth/oauth/pending/exchange
 
 ## 漏洞修复
 
-合并 PR #5345；纵深防御：发现已存在邮箱时应转入密码/2FA 验证状态。
+采用包含 PR #5345 修复的代码或发行版。上游修复限制 pending exchange 的绑定操作，仅允许已经完成安全登录、可签发 token 的会话和已认证用户发起的 `bind_current_user` 会话；其他状态返回 pending payload，不绑定身份、不消费会话。上游另建议纵深防御：发现已存在邮箱时转入密码/2FA 验证状态；该建议不属于 PR #5345 已实现的补丁内容。
 
 ## 参考
 
 - https://github.com/Wei-Shaw/sub2api/pull/5345
+- https://github.com/Wei-Shaw/sub2api/commit/89915748736c84dbeb2a4ef201a4e2f444f13cab
 - https://github.com/wei-shaw/sub2api/issues/5350
 
 > 仅限授权测试。

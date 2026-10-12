@@ -132,5 +132,24 @@
     "docs/REVIEW-FIFTH-POLISH-20261003.md",
     ".serena/"
   ],
-  "temporary_full_source_or_site_copies_created": 0
+  "temporary_full_source_or_site_copies_created": 0,
+  "ci_followup": {
+    "failed_commit": "a18b09765e82dbea29bf8317bcb33e05a53a191c",
+    "failed_run": 38269462222,
+    "failed_gate": "deterministic generated indexes; quality, tests and local resources passed",
+    "cause": "New Sub2API and sub2api directories share an identity on case-insensitive macOS; filesystem scanner emitted a path different from Git and Linux.",
+    "fix": "Move unpublished OAuth article into Sub2API; keep review_input_path mapping, stable id, source URL and exact code; unify product metadata; regenerate indexes.",
+    "local_validation": "All 5953 Git article paths exactly equal physical scanner paths; full quality, resource and render scans repeated; build --check has zero differences.",
+    "upstream_source_rechecked": "https://github.com/Wei-Shaw/sub2api/pull/5345",
+    "upstream_pr_merged_at": "2026-08-07T15:20:23Z",
+    "upstream_merge_commit": "89915748736c84dbeb2a4ef201a4e2f444f13cab",
+    "first_fixed_upstream_release": "unknown",
+    "independent_review": {
+      "reviewer": "pr27_ai",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "result": "PASS",
+      "checked": "Directory/product consistency, final and input SHA mapping, upstream PR merged state, implemented fix versus extra recommendation, exact id/source_url/fenced request preservation. No material issues or missed path references found."
+    }
+  }
 }

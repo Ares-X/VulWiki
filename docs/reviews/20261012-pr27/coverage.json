@@ -87,10 +87,12 @@
       "final_sha256": "32fe6bf1fc0a958e433824c5d44056e238d4fe0dd8eb5b3b18228a5fb90fc47c"
     },
     {
-      "path": "Web安全/AI应用/sub2api/sub2api OAuth 待处理会话账号接管.md",
+      "path": "Web安全/AI应用/Sub2API/sub2api OAuth 待处理会话账号接管.md",
       "review_shard": 1,
       "review_input_sha256": "0ae1c4d849af678bfc1e85648333618d7d08d8f72016b9e406667706166ffca3",
-      "final_sha256": "0ae1c4d849af678bfc1e85648333618d7d08d8f72016b9e406667706166ffca3"
+      "final_sha256": "11cbf8b68d4fafaa81965d341edd45a8ff8e0459b3f1ea0864242fcad19c17a8",
+      "review_input_path": "Web安全/AI应用/sub2api/sub2api OAuth 待处理会话账号接管.md",
+      "followup_review": "Correct directory case collision and product grouping; rechecked upstream PR 5345 merged on 2026-08-07. Original fenced request preserved; first fixed release remains unknown."
     },
     {
       "path": "Web安全/AI应用/vLLM/vLLM 视频处理链致未授权RCE（CVE-2026-22778）.md",
