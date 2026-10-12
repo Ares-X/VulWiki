@@ -56,6 +56,10 @@
 - [漏洞预警 | Langflow身份验证缺失漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Langflow%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%BC%BA%E5%A4%B1%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 - [（CVE-2026-9198）IBM Langflow未认证RCE漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%EF%BC%88CVE-2026-9198%EF%BC%89IBM%20Langflow%E6%9C%AA%E8%AE%A4%E8%AF%81RCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Langflow OSS
+
+- [Langflow 代码校验接口认证后代码执行（CVE-2026-7873）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20%E4%BB%A3%E7%A0%81%E6%A0%A1%E9%AA%8C%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E5%90%8E%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20CVE-2026-7873.md) [vulnerability; source-claimed; active]
+
 ## Langflow及Windows Shell
 
 - [Langflow、Windows Shell 与 Chrome 漏洞说法汇编（未核）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%5BRCE%5D%2014%E8%A1%8CJSON%EF%BC%8C%E6%8E%A5%E7%AE%A1%E4%BD%A0%E7%9A%84Langflow%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BC%95%E6%93%8E.md) [roundup; not-reproduced; needs-review]

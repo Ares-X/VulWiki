@@ -1,0 +1,38 @@
+{
+  "source": "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline",
+  "author": "Kevin Gervot",
+  "publication": "2026-10-07",
+  "review": "Full extracted textual article read; images not inspected; linked dependency/code trees not yet fully inspected",
+  "candidates": [
+    {
+      "id": "CVE-2026-55674",
+      "official": "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g",
+      "official_date": "2026-07-28",
+      "fixed": [
+        "2026.7.0",
+        "2026.6.1",
+        "2026.5.2",
+        "2026.1.6"
+      ],
+      "material": "Concrete color_scheme_id cookie HTML injection and anonymous cache replay, dynamic import selector gadget/CORS prerequisite in original article",
+      "conflict": "Official prose says no user interaction, CVSS UI:R; distinguish poisoning request from visitor browser rendering.",
+      "disposition": "candidate deferred pending fixed-code/dependency/installation/workflow audit"
+    },
+    {
+      "id": "CVE-2026-55420",
+      "official": "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3",
+      "official_date": "2026-06-30",
+      "fixed": [
+        "2026.6.0",
+        "2026.5.1",
+        "2026.4.2",
+        "2026.1.5"
+      ],
+      "material": "Original article provides JXL/PostScript polyglot and image-upload timing materials; fixed dependencies/complete application source not fully audited",
+      "conflict": "Official advisory describes certain non-default PDF configurations and RCE; researcher describes default-configuration TL0 file-read and potential RCE only. Cannot conflate demonstrated file-read with proven RCE or default scope.",
+      "disposition": "candidate deferred pending scope reconciliation and complete bounded static audit"
+    }
+  ],
+  "dedupe": "No exact CVE matches in master content roots8291608013efb898ce75b267bf13134c7ab68389",
+  "execution": "none"
+}

@@ -1,0 +1,87 @@
+{
+  "reviewed_at": "2026-10-12T00:14:54.750884+00:00",
+  "draft_sha256": {
+    "draft-exposed.md": "29f1a0e462abe72c9363bce1c18d08dada9d1299f3e5d40d4ea6974662c6ee43",
+    "draft-lpar2rrd.md": "443d97728e3c6c5c94a1c43bd169503457f08c1476992e653af1af9c2506a2d7",
+    "atlassian-draft.md": "c8d05021a8e92b81c7e3c2e74ff0e3fed9ede3ea973344c1ca1d7f1c79f4beb8",
+    "langflow-7873-draft.md": "02213009e65a37401688b99aba90c5b3b96d876f4eeab3a1b1dd139f517e0382",
+    "papercut-addendum.md": "f0f64e31e8805eab7e6eb0a40d21674e28824c5edcb666c2b6dbebdea6f23ad7"
+  },
+  "scope": [
+    "Full read of five drafts",
+    "Fresh official-source checks of KoreLogic LPAR2RRD advisory, Xorux release notes, IBM Langflow bulletin, Atlassian bulletin, PaperCut bulletin and watchTowr PaperCut timeline",
+    "Fresh GitHub connector reads of pinned Langflow module/documentation, Exposed JsonConditions.kt, JetBrains CNA and release record",
+    "Full read of saved pinned LPAR2RRD C code and watchTowr PaperCut/Atlassian Python sources",
+    "Read Exposed fixed diff/test/source snippets from saved evidence"
+  ],
+  "no_execution": true,
+  "no_article_or_git_edits": true,
+  "decisions": {
+    "LPAR2RRD": "Ready; official authenticated filename traversal preserved separately from community archive-update mechanism",
+    "Langflow": "Ready; login credentials, token flow and decorator trigger accurately distinguished from vendor default-argument explanation",
+    "Atlassian": "Ready; webroot/known-path/no-listing scope, three-product DAG and branch fixes supported",
+    "Exposed": "Ready; Oracle optional-clause exception added and verified against pinned source",
+    "PaperCut": "Ready; /app endpoint and service/sp form values corrected; pronoun clarification verified"
+  },
+  "required_edits": [
+    {
+      "draft": "draft-exposed.md",
+      "location": "原理及具体公开触发材料 first paragraph",
+      "finding": "General binding/escaped-literal fallback language omits Oracle exists(optional=...) SQL-clause exception",
+      "change": "State explicitly that on Oracle the optional clause is appended without escaping and must never contain user input; distinguish it from escaped JSON path strings",
+      "source": "https://github.com/JetBrains/Exposed/blob/4cf829b55a37be8a73af5dc011399cd26aa0d224/exposed-json/src/main/kotlin/org/jetbrains/exposed/v1/json/JsonConditions.kt",
+      "status": "verified in actual working tree"
+    },
+    {
+      "draft": "papercut-addendum.md",
+      "location": "Second paragraph DAG request description",
+      "finding": "POST ConfigEditor/quickFindForm incorrectly suggests that form name is the HTTP endpoint",
+      "change": "POST /app with form service=direct/1/Home/ConfigEditor/quickFindForm and sp=S1",
+      "source": "https://github.com/watchtowrlabs/watchTowr-vs-PaperCut-WT-2026-0143/blob/a10a46a35a268141a44bfd4efcb02f2afa08fcbe/watchTowr-vs-PaperCut-WT-2026-0143.py",
+      "status": "verified in actual working tree"
+    }
+  ],
+  "minor_precision": [
+    {
+      "draft": "draft-lpar2rrd.md",
+      "finding": "Archive member has package prefix",
+      "change": "Use poc-cve-2025-54769/scripts/update.sh for exact tar member rather than implying scripts/update.sh at root",
+      "status": "verified in actual working tree"
+    }
+  ],
+  "limitations": [
+    "Independent review targeted factual admission, trigger-code correspondence and prerequisite accuracy; it is not a repeated exhaustive audit of every dependency/workflow",
+    "Public reported success remains source-claimed; nothing was reproduced",
+    "No sensitive values were redacted or original source code altered"
+  ],
+  "working_tree_review": {
+    "at": "2026-10-12T00:16:00.313561+00:00",
+    "base_head": "8291608013efb898ce75b267bf13134c7ab68389",
+    "files": [
+      {
+        "path": "Web安全/开发框架/JetBrains Exposed/JetBrains Exposed SQL 函数字符串实参注入 CVE-2026-108474.md",
+        "sha256": "d9f1dfe5361468c5485d4ce19eef44e2ce62dfc869f981495ecdc5943f0a518d"
+      },
+      {
+        "path": "Web安全/服务器软件/LPAR2RRD/LPAR2RRD 只读用户上传文件路径遍历 CVE-2025-54769.md",
+        "sha256": "68e334c6810c9bee2b930222fdafb1d13808e8212020996587bb2d6fb3bb4a99"
+      },
+      {
+        "path": "Web安全/商业软件/Atlassian/Atlassian 多产品 Web 应用根目录文件读取 CVE-2026-21589.md",
+        "sha256": "c8d05021a8e92b81c7e3c2e74ff0e3fed9ede3ea973344c1ca1d7f1c79f4beb8"
+      },
+      {
+        "path": "Web安全/AI应用/Langflow/Langflow 代码校验接口认证后代码执行 CVE-2026-7873.md",
+        "sha256": "02213009e65a37401688b99aba90c5b3b96d876f4eeab3a1b1dd139f517e0382"
+      },
+      {
+        "path": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
+        "sha256": "376e498bb06674722c78b53d4efacc824619ecd1aebb67a091dc16fb9fc41816"
+      }
+    ],
+    "required_mechanism_edits_verified": true,
+    "minor_lpar_archive_prefix_verified": true,
+    "papercut_service_pronoun_clarification_verified": true,
+    "decision": "ready"
+  }
+}

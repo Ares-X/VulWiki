@@ -1,0 +1,11 @@
+{
+  "new": [
+    "Web安全/开发框架/JetBrains Exposed/JetBrains Exposed SQL 函数字符串实参注入 CVE-2026-108474.md",
+    "Web安全/服务器软件/LPAR2RRD/LPAR2RRD 只读用户上传文件路径遍历 CVE-2025-54769.md",
+    "Web安全/商业软件/Atlassian/Atlassian 多产品 Web 应用根目录文件读取 CVE-2026-21589.md",
+    "Web安全/AI应用/Langflow/Langflow 代码校验接口认证后代码执行 CVE-2026-7873.md"
+  ],
+  "updated": [
+    "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md"
+  ]
+}
