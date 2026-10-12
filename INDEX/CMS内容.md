@@ -728,6 +728,10 @@
 
 - [（CVE-2017-14596）Joomla! 1.5 &lt;= 3.7.5 LDAP注入绕过登录认证](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/%EF%BC%88CVE-2017-14596%EF%BC%89Joomla%21%201.5%20%3C%3D%203.7.5%20LDAP%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81.md) [analysis; not-reproduced; needs-review]
 
+## Joomla OrdaSoft Simple Membership
+
+- [Joomla OrdaSoft Simple Membership 未授权 SQL 注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Joomla%20OrdaSoft%20Simple%20Membership%20%E6%9C%AA%E6%8E%88%E6%9D%83%20SQL%20%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2026-102782%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## Joomla iCagenda
 
 - [iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/iCagenda%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0PoC%E7%9A%84%E7%89%88%E6%9C%AC%E5%B7%AE%E5%BC%82%E4%B8%8E%E6%89%B9%E9%87%8F%E5%86%99%E5%85%A5%E9%A3%8E%E9%99%A9%EF%BC%88CVE-2026-48939%EF%BC%89.md) [analysis; not-reproduced; needs-review]
@@ -2135,6 +2139,10 @@
 ## WordPress core wpautop/comment formatting
 
 - [【CVE-2026-93485】从评论到Shell，Wordpress漏洞深度剖析](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E3%80%90CVE-2026-93485%E3%80%91%E4%BB%8E%E8%AF%84%E8%AE%BA%E5%88%B0Shell%EF%BC%8CWordpress%E6%BC%8F%E6%B4%9E%E6%B7%B1%E5%BA%A6%E5%89%96%E6%9E%90.md) [analysis; not-reproduced; needs-review]
+
+## WordPress miniOrange OTP Verification
+
+- [WordPress miniOrange OTP 验证未授权账户接管](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20miniOrange%20OTP%20%E9%AA%8C%E8%AF%81%E6%9C%AA%E6%8E%88%E6%9D%83%E8%B4%A6%E6%88%B7%E6%8E%A5%E7%AE%A1%EF%BC%88CVE-2026-106610%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## WordPress oEmbed REST
 
