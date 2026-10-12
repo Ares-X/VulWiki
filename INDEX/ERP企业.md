@@ -252,6 +252,10 @@
 
 - [智邦国际ERP GetPrintTemplate ord SQL 注入](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%99%BA%E9%82%A6%E5%9B%BD%E9%99%85/%E6%99%BA%E9%82%A6%E5%9B%BD%E9%99%85ERP%20GetPrintTemplate.ashx%20SQL%E6%B3%A8%E5%85%A5.md) [vulnerability; not-reproduced; needs-review]
 
+## 未确认产品
+
+- [用友U8 CRM swfupload.php 任意文件上传漏洞](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8BU8%20CRM%20swfupload.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
+
 ## 汇智ERP
 
 - [汇智ERP filehandle filepath读取](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%B1%87%E6%99%BA/%E6%B1%87%E6%99%BAERP%20filehandle.aspx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
