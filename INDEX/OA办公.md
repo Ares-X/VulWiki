@@ -172,14 +172,13 @@
 
 - [多企源基础数据支撑系统 checkLogin.action SQL注入](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E5%A4%9A%E4%BC%81%E6%BA%90OA/%E5%A4%9A%E4%BC%81%E6%BA%90-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E6%94%AF%E6%92%91%E7%B3%BB%E7%BB%9F%20checkLogin%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
-## 未确认产品
-
-- [汉王e脸通 queryAntisubmarineList SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B1%89%E7%8E%8Be%E8%84%B8%E9%80%9A/%E6%B1%89%E7%8E%8Be%E8%84%B8%E9%80%9A%20queryAntisubmarineList%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
-- [鸿翼edoc importNewBpmnDesignByIe XStream反序列化漏洞](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%B8%BF%E7%BF%BC%E8%BD%AF%E4%BB%B6/%E9%B8%BF%E7%BF%BCedoc%20importNewBpmnDesignByIe%20XStream%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
-
 ## 极简云验证系统（待核）
 
 - [极简云验证系统（待核） 数据库.sql备份文件暴露](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%9E%81%E7%AE%80%E4%BA%91OA/%E6%9E%81%E7%AE%80%E4%BA%91%E9%AA%8C%E8%AF%81%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+
+## 汉王e脸通
+
+- [汉王e脸通 queryAntisubmarineList SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B1%89%E7%8E%8Be%E8%84%B8%E9%80%9A/%E6%B1%89%E7%8E%8Be%E8%84%B8%E9%80%9A%20queryAntisubmarineList%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]
 
 ## 泛微E-Weaver/E-Cology（来源不一）
 
@@ -604,3 +603,7 @@
 
 - [驰骋BPM RunSQL_Init SQL执行](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%A9%B0%E9%AA%8BBPM/%E9%A9%B0%E9%AA%8BBPMRunSQL_Init%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [驰骋BPM RunSQL_Init未授权SQL执行](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%A9%B0%E9%AA%8BBPM/%E9%A9%B0%E9%AA%8BBPM%20RunSQL_Init%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+
+## 鸿翼edoc
+
+- [鸿翼edoc importNewBpmnDesignByIe XStream反序列化漏洞](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%B8%BF%E7%BF%BC%E8%BD%AF%E4%BB%B6/%E9%B8%BF%E7%BF%BCedoc%20importNewBpmnDesignByIe%20XStream%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]

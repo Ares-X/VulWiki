@@ -1,5 +1,17 @@
 ---
-source: "wxvl/doc/2026-10/东方通TongWeb upload接口存在任意文件上传漏洞.md（北雪网络安全，2026-10-07）"
+schema_version: "1"
+id: "VW-20261012-CG002"
+title: "东方通TongWeb upload接口任意文件上传漏洞"
+product: "东方通TongWeb"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "source-claimed"
+content_status: "active"
+prerequisites: "可访问 /heimdall/deploy/upload；无需认证"
+side_effects: "任意文件上传可致 RCE；测试须限定授权环境"
+source: "公开 PoC 与安全研究"
+source_status: "recorded"
+source_url: "https://github.com/gelusus/wxvl/blob/4266b45d974a92de5c1cdd1c440321ebfca53139/doc/2026-10/东方通TongWeb upload接口存在任意文件上传漏洞.md"
 ---
 
 # 东方通TongWeb upload接口任意文件上传漏洞
