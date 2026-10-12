@@ -1830,6 +1830,10 @@
 
 - [WordPress 未授权本地文件包含漏洞（CVE-2025-2294）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20%E6%9C%AA%E6%8E%88%E6%9D%83%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2025-2294%EF%BC%89.md) [unknown; not-reproduced; needs-review]
 
+## WordPress LatePoint
+
+- [WordPress LatePoint 未授权存储型短代码执行](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20LatePoint%20%E6%9C%AA%E6%8E%88%E6%9D%83%E5%AD%98%E5%82%A8%E5%9E%8B%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%88CVE-2026-92966%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## WordPress LayerSlider
 
 - [热门Wordpress 插件 LayerSlider 中存在严重漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E7%83%AD%E9%97%A8Wordpress%20%E6%8F%92%E4%BB%B6%20LayerSlider%20%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
