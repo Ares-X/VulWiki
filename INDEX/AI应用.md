@@ -21,6 +21,10 @@
 - [ComfyUI-Manager 远程代码执行漏洞 CVE-2025-67303](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/ComfyUI/ComfyUI-Manager-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-67303.md) [vulnerability; not-reproduced; needs-review]
 - [ComfyUI-Manager 配置处理器 CRLF 注入漏洞 CVE-2026-22777](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/ComfyUI/ComfyUI-Manager-%E9%85%8D%E7%BD%AE%E5%A4%84%E7%90%86%E5%99%A8-CRLF-%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CVE-2026-22777.md) [vulnerability; not-reproduced; needs-review]
 
+## Crawl4AI PDFContentScrapingStrategy
+
+- [Crawl4AI PDF图片落盘的目录控制与认证边界（CVE-2026-91940）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Crawl4AI/Crawl4AI%20PDF%E5%9B%BE%E7%89%87%E8%90%BD%E7%9B%98%E7%9A%84%E7%9B%AE%E5%BD%95%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%AE%A4%E8%AF%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-91940%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
+
 ## EDDI
 
 - [EDDI ZIP导入路径穿越与延迟类加载利用链（CVE-2025-32779）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/EDDI/EDDI%20ZIP%E5%AF%BC%E5%85%A5%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E4%B8%8E%E5%BB%B6%E8%BF%9F%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%88%A9%E7%94%A8%E9%93%BE%20CVE-2025-32779.md) [analysis; source-claimed; needs-review]
@@ -176,6 +180,10 @@
 
 - [SGLang AI 基础设施的严重 9.8 级远程代码执行威胁](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/SGLang/SGLang%20AI%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E4%B8%A5%E9%87%8D%209.8%20%E7%BA%A7%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A8%81%E8%83%81.md) [advisory; not-reproduced; needs-review]
 
+## Sub2API
+
+- [Sub2API EasyPay 下单签名复用与回调伪造](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Sub2API/Sub2API%20EasyPay%20%E4%B8%8B%E5%8D%95%E7%AD%BE%E5%90%8D%E5%A4%8D%E7%94%A8%E4%B8%8E%E5%9B%9E%E8%B0%83%E4%BC%AA%E9%80%A0.md) [analysis; source-claimed; active]
+
 ## Vim
 
 - [Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Claude%20Code/Claude%20Code%2030%E5%88%86%E9%92%9F%E6%8C%96%E5%87%BAVim%E7%94%A8%E4%BA%86%E4%B8%89%E5%8D%81%E5%B9%B4%E7%9A%840Day%EF%BC%8C%E6%94%B6%E5%88%B0%E9%99%8C%E7%94%9F%E6%96%87%E4%BB%B6%E5%85%88%E5%88%AB%E6%80%A5%E7%9D%80%E6%89%93%E5%BC%80.md) [advisory; not-reproduced; needs-review]
@@ -195,6 +203,10 @@
 ## gemini-mcp-tool
 
 - [gemini-mcp-tool 命令注入漏洞深度分析(CVE-2026-0755)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MCP%E5%B7%A5%E5%85%B7/gemini-mcp-tool%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%28CVE-2026-0755%29.md) [vulnerability; not-reproduced; needs-review]
+
+## langchain-core
+
+- [LangChain 检查点序列化往返中的对象注入](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LangChain/LangChain%20%E5%BA%8F%E5%88%97%E5%8C%96%E4%BF%9D%E7%95%99%E5%AD%97%E6%AE%B5%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2025-68664%EF%BC%89.md) [analysis; source-claimed; active]
 
 ## llama.cpp
 

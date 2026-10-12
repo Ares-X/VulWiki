@@ -81,6 +81,10 @@
 
 - [BoidCMSv.2.0.0 后台文件上传漏洞（CVE-2023-38836）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/BoidCMSv.2.0.0/BoidCMSv.2.0.0%20%E5%90%8E%E5%8F%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2023-38836%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
 
+## Bricksforge WordPress插件
+
+- [Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Bricksforge%20%E4%B8%B4%E6%97%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%8E%E8%B7%AF%E5%BE%84%E9%AA%8C%E8%AF%81%E9%94%99%E9%85%8D%EF%BC%88CVE-2026-85097%EF%BC%89.md) [vulnerability; not-reproduced; active]
+
 ## CLTPHP
 
 - [CLTPHP 5.5.3 任意文件上传漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/CLTPHP/CLTPHP%205.5.3%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
@@ -129,6 +133,10 @@
 
 - [（ClassCMS 2.4）ZIP解压导致GETSHELL](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/ClassCMS/%EF%BC%88ClassCMS%202.4%EF%BC%89ZIP%E8%A7%A3%E5%8E%8B%E5%AF%BC%E8%87%B4GETSHELL.md) [analysis; not-reproduced; needs-review]
 
+## Clean Login WordPress plugin
+
+- [Clean Login 空会话验证码比较绕过（CVE-2026-90977）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Clean%20Login/Clean%20Login%20%E7%A9%BA%E4%BC%9A%E8%AF%9D%E9%AA%8C%E8%AF%81%E7%A0%81%E6%AF%94%E8%BE%83%E7%BB%95%E8%BF%87%EF%BC%88CVE-2026-90977%EF%BC%89.md) [analysis; source-claimed; active]
+
 ## CmsEasy
 
 - [CmsEasy 7.3.8 sql注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/CmsEasy/CmsEasy%207.3.8%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
@@ -155,6 +163,7 @@
 ## Craft CMS
 
 - [CVE-2023-40035：国外 CraftCMS 后台命令执行 附复现过程](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Craft%20CMS/CVE-2023-40035%EF%BC%9A%E5%9B%BD%E5%A4%96%20CraftCMS%20%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%20%E9%99%84%E5%A4%8D%E7%8E%B0%E8%BF%87%E7%A8%8B.md) [vulnerability; not-reproduced; needs-review]
+- [Craft CMS 元素条件认证后模板注入（CVE-2026-31857）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Craft%20CMS/Craft%20CMS%20%E5%85%83%E7%B4%A0%E6%9D%A1%E4%BB%B6%E8%AE%A4%E8%AF%81%E5%90%8E%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2026-31857%EF%BC%89.md) [analysis; source-claimed; active]
 - [Craft-CMS-generate-transform-反序列化代码执行漏洞-CVE-2025-32432](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Craft%20CMS/Craft-CMS-generate-transform-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-32432.md) [vulnerability; not-reproduced; needs-review]
 - [CraftCMS-register_argc_argv-远程代码执行漏洞-CVE-2024-56145](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Craft%20CMS/CraftCMS-register_argc_argv-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2024-56145.md) [vulnerability; not-reproduced; needs-review]
 - [CraftCMS-未授权远程代码执行漏洞-CVE-2023-41892](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Craft%20CMS/CraftCMS-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2023-41892.md) [vulnerability; not-reproduced; needs-review]
@@ -874,6 +883,10 @@
 
 - [Magento 2.2 SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/Magento%202.2%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Mail Mint
+
+- [Mail Mint 表单对象注入（CVE-2026-10196）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Mail%20Mint/Mail%20Mint%20%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2026-10196%EF%BC%89.md) [analysis; source-claimed; active]
+
 ## MetInfo5.1.7
 
 - [MetInfo V5.1.7 getshell](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/MetInfo/MetInfo%20V5.1.7%20getshell.md) [unknown; not-reproduced; needs-review]
@@ -1045,6 +1058,10 @@
 
 - [OpenSNS v6.1.0 前台sql注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/OpenSNS/OpenSNS%20v6.1.0%20%E5%89%8D%E5%8F%B0sql%E6%B3%A8%E5%85%A5.md) [analysis; not-reproduced; needs-review]
 
+## OrdaSoft Joomla CCK（com_os_cck）
+
+- [OrdaSoft Joomla CCK 排序字段 SQL 注入与脚本判据边界（CVE-2026-102428）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/OrdaSoft/OrdaSoft%20Joomla%20CCK%20%E6%8E%92%E5%BA%8F%E5%AD%97%E6%AE%B5%20SQL%20%E6%B3%A8%E5%85%A5%E4%B8%8E%E8%84%9A%E6%9C%AC%E5%88%A4%E6%8D%AE%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-102428%EF%BC%89.md) [vulnerability; not-reproduced; active]
+
 ## PHPCMS2008
 
 - [（CVE-2018-19127）Phpcms2008 Type.php代码注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/PHPCMS/%EF%BC%88CVE-2018-19127%EF%BC%89Phpcms2008%20Type.php%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
@@ -1148,6 +1165,10 @@
 ## PageAdmin CMS（误称PageMyAdmin）
 
 - [PageMyAdmin文件上传getshell](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/PageMyAdmin/PageMyAdmin%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0getshell.md) [unknown; not-reproduced; needs-review]
+
+## Payload CMS @payloadcms/plugin-import-export
+
+- [Payload Import Export 字段路径原型污染与访问控制后果（CVE-2026-105844）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Payload/Payload%20Import%20Export%20%E5%AD%97%E6%AE%B5%E8%B7%AF%E5%BE%84%E5%8E%9F%E5%9E%8B%E6%B1%A1%E6%9F%93%E4%B8%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%90%8E%E6%9E%9C%EF%BC%88CVE-2026-105844%EF%BC%89.md) [vulnerability; not-reproduced; active]
 
 ## PbootCMS API List
 
@@ -1557,6 +1578,16 @@
 
 - [WDJACMS1.5.2模板注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WDJACMS/WDJACMS1.5.2%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
 
+## WP Import Export Lite
+
+- [WP Import Export Lite 既有文件导入路径穿越（CVE-2026-76555）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WP%20Import%20Export%20Lite/WP%20Import%20Export%20Lite%20%E6%97%A2%E6%9C%89%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%EF%BC%88CVE-2026-76555%EF%BC%89.md) [analysis; source-claimed; active]
+
+## WP Ultimate Review WordPress plugin
+
+- [WP Ultimate Review 作者评论概览设置存储型 XSS（CVE-2026-101162）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WP%20Ultimate%20Review/WP%20Ultimate%20Review%20%E4%BD%9C%E8%80%85%E8%AF%84%E8%AE%BA%E6%A6%82%E8%A7%88%E8%AE%BE%E7%BD%AE%E5%AD%98%E5%82%A8%E5%9E%8B%20XSS%EF%BC%88CVE-2026-101162%EF%BC%89.md) [analysis; source-claimed; active]
+- [WP Ultimate Review 未保存显示设置时的短代码拒绝服务（CVE-2026-101161）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WP%20Ultimate%20Review/WP%20Ultimate%20Review%20%E6%9C%AA%E4%BF%9D%E5%AD%98%E6%98%BE%E7%A4%BA%E8%AE%BE%E7%BD%AE%E6%97%B6%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%EF%BC%88CVE-2026-101161%EF%BC%89.md) [analysis; source-claimed; active]
+- [WP Ultimate Review 评分类型导致持久拒绝服务（CVE-2026-101160）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WP%20Ultimate%20Review/WP%20Ultimate%20Review%20%E8%AF%84%E5%88%86%E7%B1%BB%E5%9E%8B%E5%AF%BC%E8%87%B4%E6%8C%81%E4%B9%85%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%EF%BC%88CVE-2026-101160%EF%BC%89.md) [analysis; source-claimed; active]
+
 ## Watcharr media watchlist
 
 - [（CVE-2024-48827）Watcharr JWT与修改密码功能RCE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Watcharr/%EF%BC%88CVE-2024-48827%EF%BC%89Watcharr%20JWT%E4%B8%8E%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81%E5%8A%9F%E8%83%BDRCE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
@@ -1902,6 +1933,10 @@
 - [WordPress Plugin - Social Warfare&lt;=3.5.2 RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Plugin%20-%20Social%20Warfare%3C%3D3.5.2%20RCE.md) [vulnerability; not-reproduced; needs-review]
 - [（CVE-2019-9978）WordPress Plugin - social warfare 远程命令执行漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%EF%BC%88CVE-2019-9978%EF%BC%89WordPress%20Plugin%20-%20social%20warfare%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## WordPress Strong Testimonials
+
+- [Strong Testimonials 平台头像元数据存储型XSS与发布前提（CVE-2026-97286）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Strong%20Testimonials%20%E5%B9%B3%E5%8F%B0%E5%A4%B4%E5%83%8F%E5%85%83%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%9E%8BXSS%E4%B8%8E%E5%8F%91%E5%B8%83%E5%89%8D%E6%8F%90%EF%BC%88CVE-2026-97286%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
+
 ## WordPress Super Forms
 
 - [WordPress-SuperForms-4.9-任意文件上传到远程代码执行](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress-SuperForms-4.9-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md) [unknown; not-reproduced; needs-review]
@@ -1930,11 +1965,16 @@
 
 ## WordPress Ultimate Member
 
+- [Ultimate Member 下载路由身份混淆与邮箱改写边界（CVE-2026-96451）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Ultimate%20Member%20%E4%B8%8B%E8%BD%BD%E8%B7%AF%E7%94%B1%E8%BA%AB%E4%BB%BD%E6%B7%B7%E6%B7%86%E4%B8%8E%E9%82%AE%E7%AE%B1%E6%94%B9%E5%86%99%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-96451%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 - [黑客利用WordPress 插件中的提权0day攻陷网站](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8WordPress%20%E6%8F%92%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%8F%90%E6%9D%830day%E6%94%BB%E9%99%B7%E7%BD%91%E7%AB%99.md) [advisory; not-reproduced; needs-review]
 
 ## WordPress User Meta
 
 - [漏洞预警  User Meta敏感信息泄露漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20User%20Meta%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
+
+## WordPress User Private Files
+
+- [User Private Files 多站点静态文件泄露与重写规则判定边界（CVE-2026-97332）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/User%20Private%20Files%20%E5%A4%9A%E7%AB%99%E7%82%B9%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2%E4%B8%8E%E9%87%8D%E5%86%99%E8%A7%84%E5%88%99%E5%88%A4%E5%AE%9A%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-97332%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
 
 ## WordPress Visual Composer Website Builder
 
@@ -2352,6 +2392,10 @@
 ## miniOrange All-in-One Microsoft365 EntraID/AzureAD SSO login-with-azure
 
 - [严重漏洞预警  WordPress Azure AD 单点登录插件存在身份认证绕过漏洞，攻击者无需任何凭证即可冒充管理员](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20WordPress%20Azure%20AD%20%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95%E6%8F%92%E4%BB%B6%E5%AD%98%E5%9C%A8%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%EF%BC%8C%E6%94%BB%E5%87%BB%E8%80%85%E6%97%A0%E9%9C%80%E4%BB%BB%E4%BD%95%E5%87%AD%E8%AF%81%E5%8D%B3%E5%8F%AF%E5%86%92%E5%85%85%E7%AE%A1%E7%90%86%E5%91%98.md) [advisory; not-reproduced; needs-review]
+
+## miniOrange OTP Verification WordPress plugin
+
+- [miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/miniOrange/miniOrange%20OTP%20Verification%20%E6%89%8B%E6%9C%BA%E5%BD%92%E5%B1%9E%E6%A0%A1%E9%AA%8C%E7%BC%BA%E5%A4%B1%EF%BC%88CVE-2026-106610%EF%BC%89.md) [analysis; source-claimed; active]
 
 ## mojoPortalCMS
 

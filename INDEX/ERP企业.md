@@ -294,6 +294,10 @@
 
 - [瑞友应用虚拟化系统 GetBSAppUrl AppID SQL 注入至文件写入](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%91%9E%E5%8F%8B%20%E5%BA%94%E7%94%A8%E8%99%9A%E6%8B%9F%E5%8C%96%E7%B3%BB%E7%BB%9F%20GetBSAppUrl/%E7%91%9E%E5%8F%8B-%E5%BA%94%E7%94%A8%E8%99%9A%E6%8B%9F%E5%8C%96%E7%B3%BB%E7%BB%9F-GetBSAppUrl-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## 用友 KSOA
+
+- [用友 KSOA agent_worksdel.jsp SQL 注入 CVE-2025-15424](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E7%94%A8%E5%8F%8B%20KSOA%20agent_worksdel.jsp%20SQL%20%E6%B3%A8%E5%85%A5%20CVE-2025-15424.md) [vulnerability; source-claimed; active]
+
 ## 用友FE协作办公
 
 - [用友FE协作办公 templateOfTaohong目录遍历列举](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BFE/%E7%94%A8%E5%8F%8B%20FE%20templateOfTaohong_manager.jsp%20%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
