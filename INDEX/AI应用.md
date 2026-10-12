@@ -49,6 +49,7 @@
 ## LMCache
 
 - [LMCache ZeroMQ 反序列化致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LMCache/LMCache%20ZeroMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-105192%EF%BC%89.md) [vulnerability; source-claimed; active]
+- [LMCache run_script 端点未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LMCache/LMCache%20run_script%20%E7%AB%AF%E7%82%B9%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-107204%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Langflow
 
