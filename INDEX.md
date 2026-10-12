@@ -2,7 +2,7 @@
 
 # 产品索引
 
-收录 5817 个主入口（另保留 5911 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5822 个主入口（另保留 5916 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
 - [AI应用（91 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
@@ -20,7 +20,7 @@
 - [Dasan GPON（1 篇）](INDEX/Dasan%20GPON.md)
 - [DataCube3（1 篇）](INDEX/DataCube3.md)
 - [DrayTek（1 篇）](INDEX/DrayTek.md)
-- [ERP企业（247 篇）](INDEX/ERP%E4%BC%81%E4%B8%9A.md)
+- [ERP企业（248 篇）](INDEX/ERP%E4%BC%81%E4%B8%9A.md)
 - [Finetree（1 篇）](INDEX/Finetree.md)
 - [Firebird（1 篇）](INDEX/Firebird.md)
 - [H3C（1 篇）](INDEX/H3C.md)
@@ -35,7 +35,7 @@
 - [Mitel（1 篇）](INDEX/Mitel.md)
 - [NETGEAR（3 篇）](INDEX/NETGEAR.md)
 - [NUUO（2 篇）](INDEX/NUUO.md)
-- [OA办公（314 篇）](INDEX/OA%E5%8A%9E%E5%85%AC.md)
+- [OA办公（316 篇）](INDEX/OA%E5%8A%9E%E5%85%AC.md)
 - [OctoPrint（1 篇）](INDEX/OctoPrint.md)
 - [OpenSSH（1 篇）](INDEX/OpenSSH.md)
 - [PAM劫持SSH密码（1 篇）](INDEX/PAM%E5%8A%AB%E6%8C%81SSH%E5%AF%86%E7%A0%81.md)
@@ -57,12 +57,12 @@
 - [XZ Utils（1 篇）](INDEX/XZ%20Utils.md)
 - [iOS（1 篇）](INDEX/iOS.md)
 - [macOS（1 篇）](INDEX/macOS.md)
-- [中间件（536 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
+- [中间件（537 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
 - [云平台（140 篇）](INDEX/%E4%BA%91%E5%B9%B3%E5%8F%B0.md)
 - [从 allow_active 到 root 的本地提权（1 篇）](INDEX/%E4%BB%8E%20allow_active%20%E5%88%B0%20root%20%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83.md)
 - [信诺瑞得（1 篇）](INDEX/%E4%BF%A1%E8%AF%BA%E7%91%9E%E5%BE%97.md)
 - [其他设备（35 篇）](INDEX/%E5%85%B6%E4%BB%96%E8%AE%BE%E5%A4%87.md)
-- [其他软件（598 篇）](INDEX/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6.md)
+- [其他软件（599 篇）](INDEX/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6.md)
 - [华硕（1 篇）](INDEX/%E5%8D%8E%E7%A1%95.md)
 - [商业软件（593 篇）](INDEX/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6.md)
 - [大华（5 篇）](INDEX/%E5%A4%A7%E5%8D%8E.md)
