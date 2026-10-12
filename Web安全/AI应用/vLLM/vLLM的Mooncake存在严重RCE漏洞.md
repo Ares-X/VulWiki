@@ -1,24 +1,54 @@
 ---
-schema_version: "1"
-id: "VW-20261012-CG015"
-title: "vLLM 的 Mooncake 存在严重 RCE 漏洞"
-product: "vLLM"
-record_type: "vulnerability"
+cve: "CVE-2025-32444"
+source: "gelusus/wxvl 公众号漏洞文库"
+title: "vLLM 的 Mooncake 存在严重 RCE 漏洞（10)"
+product: "vLLM Mooncake"
+record_type: "advisory"
 review_status: "text-reviewed"
-verification_status: "source-claimed"
-content_status: "active"
-primary_identifiers: "CVE-2025-29783"
-prerequisites: "vLLM 相关版本"
-side_effects: "RCE 可致服务器被控；测试须限定授权环境"
-source: "wxvl 公众号漏洞文库"
-source_status: "recorded"
-source_url: "https://github.com/gelusus/wxvl"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-32444"
+referenced_identifiers: "CVE-2025-29783"
+identifier_role: "primary"
+verification_source: "https://github.com/vllm-project/vllm/security/advisories/GHSA-hj4w-hm2g-p6w5"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-bf3be9bf24c95c9a30f15d5d"
+entity_id: "ve-bf3be9bf24c95c9a30f15d5d"
+schema_version: "1"
 ---
 
-#  vLLM 的 Mooncake 存在严重 RCE 漏洞（10)   
+# vLLM 的 Mooncake 存在严重 RCE 漏洞（10)
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 需Mooncake配置与KV端口可达
+- 影响/修复范围应核实
+
+### 核验来源
+
+- https://github.com/vllm-project/vllm/security/advisories/GHSA-hj4w-hm2g-p6w5
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  独眼情报   2025-05-01 01:53  
   
-![CVE-2025-29783 CVE-2025-32444 vLLM vulnerability](https://mmbiz.qpic.cn/sz_mmbiz_jpg/KgxDGkACWnTkNyVdhiaKS1Xiciczy4uFLFtAhMdicSHCMuK2qIBlQymb0BSVRGf9EDD8zuJnPSIXibHzic8ol2CvgYyg/640?wx_fmt=other&from=appmsg "")  
+![CVE-2025-29783 CVE-2025-32444 vLLM vulnerability](../../.resource/remote/636bf7f88410dbf8e652b880a0ed2733f8b975a763a3c9b6ea048f8cf41e4464.jpg "")  
   
 CVE-2025-29783 CVE-2025-32444 vLLM vulnerability  
   
@@ -35,7 +65,7 @@ vLLM 在 GitHub 上拥有超过 46,000 个星标，是一个被广泛采用的 L
  函数。此函数隐式使用 pickle.loads()  
  通过 ZeroMQ 套接字处理传入的数据。  
   
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTkNyVdhiaKS1Xiciczy4uFLFtriaW20oH11e0kXD7AZ9fdzZMLdgCMticqmvgn11s4CM2oKeMakMAEL6g/640?wx_fmt=png&from=appmsg "")  
+![](../../.resource/remote/e6638434ecb20be6e51579933f638941c40e1e65dd7d3b519b072d618982cf9e.png "")  
   
 此漏洞影响所有积极使用 Mooncake 集成的 vLLM 实例，版本大于或等于 0.6.5。如果您的 vLLM 部署未使用 Mooncake 进行分布式 KV 传输，则您不会受到此特定漏洞的影响。  
   

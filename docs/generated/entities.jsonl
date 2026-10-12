@@ -4138,6 +4138,7 @@
 {"canonical_paths":[],"entity_id":"ve-bf1db8ca0f93dc89a99c2200","grouping":"explicit-metadata","source_record_ids":["vw-bf1db8ca0f93dc89a99c2200"]}
 {"canonical_paths":[],"entity_id":"ve-bf1e7868e3c5a6dcb2e22aa8","grouping":"explicit-metadata","source_record_ids":["vw-bf1e7868e3c5a6dcb2e22aa8"]}
 {"canonical_paths":[],"entity_id":"ve-bf2f9edaef3b3cdc09fc89b3","grouping":"explicit-metadata","source_record_ids":["vw-bf2f9edaef3b3cdc09fc89b3"]}
+{"canonical_paths":[],"entity_id":"ve-bf3be9bf24c95c9a30f15d5d","grouping":"explicit-metadata","source_record_ids":["vw-bf3be9bf24c95c9a30f15d5d"]}
 {"canonical_paths":[],"entity_id":"ve-bf4431e3290618bd9c8c68c0","grouping":"explicit-metadata","source_record_ids":["vw-bf4431e3290618bd9c8c68c0"]}
 {"canonical_paths":[],"entity_id":"ve-bf5b38d111416d2d68740fd9","grouping":"explicit-metadata","source_record_ids":["vw-bf5b38d111416d2d68740fd9"]}
 {"canonical_paths":[],"entity_id":"ve-bfa3abb4d21da1dabb9791ab","grouping":"explicit-metadata","source_record_ids":["vw-bfa3abb4d21da1dabb9791ab"]}
@@ -4449,6 +4450,7 @@
 {"canonical_paths":[],"entity_id":"ve-cd1539bf01ef0593b4afdc9e","grouping":"explicit-metadata","source_record_ids":["vw-cd1539bf01ef0593b4afdc9e"]}
 {"canonical_paths":[],"entity_id":"ve-cd153c89896637d6d3183e9c","grouping":"explicit-metadata","source_record_ids":["vw-cd153c89896637d6d3183e9c"]}
 {"canonical_paths":[],"entity_id":"ve-cd16c7979f1e39e7e23fdab8","grouping":"explicit-metadata","source_record_ids":["vw-cd16c7979f1e39e7e23fdab8"]}
+{"canonical_paths":[],"entity_id":"ve-cd1d58588fbe2b5c585f4d58","grouping":"explicit-metadata","source_record_ids":["vw-cd1d58588fbe2b5c585f4d58"]}
 {"canonical_paths":[],"entity_id":"ve-cd324b1331317a7af116ae30","grouping":"explicit-metadata","source_record_ids":["vw-cd324b1331317a7af116ae30"]}
 {"canonical_paths":[],"entity_id":"ve-cd39c3be01effbe9b8a5cec4","grouping":"explicit-metadata","source_record_ids":["vw-cd39c3be01effbe9b8a5cec4"]}
 {"canonical_paths":[],"entity_id":"ve-cd3e30a71cedc075e70753d8","grouping":"explicit-metadata","source_record_ids":["vw-cd3e30a71cedc075e70753d8"]}
@@ -4501,6 +4503,10 @@
 {"canonical_paths":[],"entity_id":"ve-cfd79327cf7c5e5c846142fa","grouping":"explicit-metadata","source_record_ids":["vw-cfd79327cf7c5e5c846142fa"]}
 {"canonical_paths":[],"entity_id":"ve-cfe71a13470c86494248a892","grouping":"explicit-metadata","source_record_ids":["vw-cfe71a13470c86494248a892"]}
 {"canonical_paths":[],"entity_id":"ve-cfe93cbbbd82e6926da06c38","grouping":"explicit-metadata","source_record_ids":["vw-cfe93cbbbd82e6926da06c38"]}
+{"canonical_paths":["Web安全/开发框架/Handlebars/Handlebars 不可信 AST 类型混淆 CVE-2026-106446.md"],"entity_id":"ve-cve-2026-106446","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG034","VW-20261012-handlebars-106446"]}
+{"canonical_paths":["Web安全/CMS内容/miniOrange/miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）.md"],"entity_id":"ve-cve-2026-106610","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG026","VW-20261012-cve-2026-106610"]}
+{"canonical_paths":["Web安全/运维面板/Nginx UI/Nginx UI 备份恢复配置覆盖 CVE-2026-107806.md"],"entity_id":"ve-cve-2026-107806","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG027","VW-20261012-nginx-ui-107806"]}
+{"canonical_paths":["Web安全/CMS内容/WordPress/Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）.md"],"entity_id":"ve-cve-2026-85097","grouping":"explicit-metadata","source_record_ids":["VW-20261012-CG032","VW-20261012-NOMI298"]}
 {"canonical_paths":[],"entity_id":"ve-d006f86358e410819fa14bac","grouping":"explicit-metadata","source_record_ids":["vw-d006f86358e410819fa14bac"]}
 {"canonical_paths":[],"entity_id":"ve-d018739275d7c593626e61d5","grouping":"explicit-metadata","source_record_ids":["vw-d018739275d7c593626e61d5"]}
 {"canonical_paths":[],"entity_id":"ve-d0266d2bb717cc27fd1d6a59","grouping":"explicit-metadata","source_record_ids":["vw-d0266d2bb717cc27fd1d6a59"]}

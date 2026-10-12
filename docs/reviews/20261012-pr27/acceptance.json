@@ -1,0 +1,136 @@
+{
+  "base": "8291608013efb898ce75b267bf13134c7ab68389",
+  "original_pr_head": "059295b05fa56113e22d036c77a282f54ce8527f",
+  "scope": {
+    "article_paths": 94,
+    "new_article_paths": 91,
+    "existing_article_paths": 3,
+    "new_local_image_files": 21
+  },
+  "commands": {
+    "python": "python3.13 -m unittest discover -s tests -v",
+    "node": "node --test tests/*.test.cjs",
+    "quality": "python3.13 scripts/wiki.py check --baseline docs/quality-baseline.json --report <report>",
+    "resources": "python3.13 scripts/resource-audit.py --require-local --report <report>",
+    "indexes": "python3.13 scripts/wiki.py build && python3.13 scripts/wiki.py build --check",
+    "render": "node scripts/render-audit.cjs --root . --out <report-directory>",
+    "diff": "git diff --check"
+  },
+  "tests": {
+    "python_passed": 96,
+    "node_passed": 44
+  },
+  "quality": {
+    "by_code": {
+      "fingerprint_unverified": 45,
+      "identifier_inactive": 26,
+      "identifier_role_unknown": 2,
+      "noncontent_link_candidate": 24,
+      "path_legacy": 2,
+      "site_relative_link": 80,
+      "source_missing": 3828,
+      "unrecognized_identifier_namespace": 86
+    },
+    "documents": 5953,
+    "errors": 0,
+    "fatal_issues": 0,
+    "warnings": 4093,
+    "new_issues": 0,
+    "baseline_unchanged": true
+  },
+  "resources": {
+    "missing": 0,
+    "zero_byte": 0,
+    "html_error_page": 0,
+    "recognized_container": 20336,
+    "unknown": 32,
+    "extension_mismatch": 38,
+    "remote_images": 0,
+    "unusable_image_tags": 0,
+    "external_image_dependencies": 0
+  },
+  "render": {
+    "files": 5953,
+    "candidates": 15,
+    "by_rule": {
+      "bare_image_filename": 9,
+      "code_web_controls": 1,
+      "unfenced_source": 1,
+      "unknown_html_literal": 4
+    },
+    "structural_failures": 0,
+    "marked": {
+      "version": "4.3.0"
+    },
+    "changed_article_candidates": 0
+  },
+  "indexes": {
+    "different_files": []
+  },
+  "fidelity": {
+    "existing_identity_baseline": "8291608013efb898ce75b267bf13134c7ab68389",
+    "existing_articles_identity_failures": [],
+    "fenced_code_baseline": "059295b05fa56113e22d036c77a282f54ce8527f",
+    "fenced_blocks_exact": 55,
+    "new_image_tokens_verified_and_decoded": 21,
+    "restored_local_vllm_images_verified_and_decoded": 3,
+    "vllm_historical_bodies_exact_to_master": true,
+    "papercut_master_full_prefix_bytes": 6780,
+    "article_hashes": "coverage.json"
+  },
+  "duplicate_relations": [
+    {
+      "source": "Web安全/CMS内容/WordPress/WordPress Bricksforge 未授权文件上传致RCE（CVE-2026-85097）.md",
+      "canonical": "Web安全/CMS内容/WordPress/Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）.md",
+      "entity_id": "ve-cve-2026-85097",
+      "reason": "Same explicitly reviewed vulnerability and mechanism; short summary retains all text/examples and detailed source/patch analysis is the navigation entry."
+    },
+    {
+      "source": "Web安全/CMS内容/WordPress/WordPress miniOrange OTP 验证未授权账户接管（CVE-2026-106610）.md",
+      "canonical": "Web安全/CMS内容/miniOrange/miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）.md",
+      "entity_id": "ve-cve-2026-106610",
+      "reason": "Same explicitly reviewed vulnerability and mechanism; short summary retains all text/examples and detailed source/patch analysis is the navigation entry."
+    },
+    {
+      "source": "Web安全/开发框架/Handlebars/Handlebars.js AST 类型混淆致RCE（CVE-2026-106446）.md",
+      "canonical": "Web安全/开发框架/Handlebars/Handlebars 不可信 AST 类型混淆 CVE-2026-106446.md",
+      "entity_id": "ve-cve-2026-106446",
+      "reason": "Same explicitly reviewed vulnerability and mechanism; short summary retains all text/examples and detailed source/patch analysis is the navigation entry."
+    },
+    {
+      "source": "Web安全/运维面板/nginx-ui/nginx-ui 备份恢复认证后RCE（CVE-2026-107806）.md",
+      "canonical": "Web安全/运维面板/Nginx UI/Nginx UI 备份恢复配置覆盖 CVE-2026-107806.md",
+      "entity_id": "ve-cve-2026-107806",
+      "reason": "Same explicitly reviewed vulnerability and mechanism; short summary retains all text/examples and detailed source/patch analysis is the navigation entry."
+    }
+  ],
+  "retracted_suggestions": [
+    "Crawl4AI CVE-2026-91940 removal: a published CNA exists despite older GHSA No known CVE text.",
+    "FortiMail 7.4.7 exclusion: current vendor/CNA confirm 7.4.0-7.4.8 affected; 7.4.9 fixed.",
+    "Use PR head as stable identity baseline: corrected to pre-merge master for existing identity and resources."
+  ],
+  "limitations": {
+    "cna": {
+      "requested": 77,
+      "published_fetched": 75,
+      "fetch_failed": [
+        "CVE-2026-65997",
+        "CVE-2026-95622"
+      ],
+      "limits": "404 is retrieval failure, not a rejected/invalid CVE conclusion. Detailed advisory/author coverage and retrieval gaps remain per-article in reviewer reports."
+    },
+    "not_exercised": [
+      "Article PoCs, scanners, payloads and example targets",
+      "Blog build and online publication",
+      "Browser visual acceptance of new articles"
+    ],
+    "image_pixel_decoding_is_not_manual_image_or_technical_claim_review": true,
+    "historical_warnings_not_fixed_by_this_PR": 4093,
+    "fulltext_review_is_not_independent_external_validation_of_every_claim": true
+  },
+  "protected_unrelated_dirty_paths": [
+    "docs/REVIEW-FIFTH-POLISH-20261003.md",
+    ".serena/"
+  ],
+  "temporary_full_source_or_site_copies_created": 0
+}

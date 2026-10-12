@@ -84,6 +84,7 @@
 ## Bricksforge WordPress插件
 
 - [Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Bricksforge%20%E4%B8%B4%E6%97%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%8E%E8%B7%AF%E5%BE%84%E9%AA%8C%E8%AF%81%E9%94%99%E9%85%8D%EF%BC%88CVE-2026-85097%EF%BC%89.md) [vulnerability; not-reproduced; active]
+  - 关联来源: [WordPress Bricksforge 未授权文件上传致RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Bricksforge%20%E6%9C%AA%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%87%B4RCE%EF%BC%88CVE-2026-85097%EF%BC%89.md)
 
 ## CLTPHP
 
@@ -1701,10 +1702,6 @@
 
 - [CVE-2024-25600-WordPress-Bricks-Builder-远程代码执行漏洞分析](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/CVE-2024-25600-WordPress-Bricks-Builder-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md) [analysis; not-reproduced; needs-review]
 
-## WordPress Bricksforge
-
-- [WordPress Bricksforge 未授权文件上传致RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Bricksforge%20%E6%9C%AA%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%87%B4RCE%EF%BC%88CVE-2026-85097%EF%BC%89.md) [vulnerability; source-claimed; active]
-
 ## WordPress CF Internal Link Shortcode
 
 - [WordPress CF Link Shortcode 插件存在前台SQL注入漏洞(CVE-2024-12404)](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20CF%20Link%20Shortcode%20%E6%8F%92%E4%BB%B6%E5%AD%98%E5%9C%A8%E5%89%8D%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28CVE-2024-12404%29.md) [vulnerability; not-reproduced; needs-review]
@@ -2148,10 +2145,6 @@
 
 - [【CVE-2026-93485】从评论到Shell，Wordpress漏洞深度剖析](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E3%80%90CVE-2026-93485%E3%80%91%E4%BB%8E%E8%AF%84%E8%AE%BA%E5%88%B0Shell%EF%BC%8CWordpress%E6%BC%8F%E6%B4%9E%E6%B7%B1%E5%BA%A6%E5%89%96%E6%9E%90.md) [analysis; not-reproduced; needs-review]
 
-## WordPress miniOrange OTP Verification
-
-- [WordPress miniOrange OTP 验证未授权账户接管](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20miniOrange%20OTP%20%E9%AA%8C%E8%AF%81%E6%9C%AA%E6%8E%88%E6%9D%83%E8%B4%A6%E6%88%B7%E6%8E%A5%E7%AE%A1%EF%BC%88CVE-2026-106610%EF%BC%89.md) [vulnerability; source-claimed; active]
-
 ## WordPress oEmbed REST
 
 - [（CVE-2017-6514）WordPress 4.7.2 敏感信息泄漏](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%EF%BC%88CVE-2017-6514%EF%BC%89WordPress%204.7.2%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F.md) [unknown; not-reproduced; needs-review]
@@ -2424,6 +2417,7 @@
 ## miniOrange OTP Verification WordPress plugin
 
 - [miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/miniOrange/miniOrange%20OTP%20Verification%20%E6%89%8B%E6%9C%BA%E5%BD%92%E5%B1%9E%E6%A0%A1%E9%AA%8C%E7%BC%BA%E5%A4%B1%EF%BC%88CVE-2026-106610%EF%BC%89.md) [analysis; source-claimed; active]
+  - 关联来源: [WordPress miniOrange OTP 验证未授权账户接管](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20miniOrange%20OTP%20%E9%AA%8C%E8%AF%81%E6%9C%AA%E6%8E%88%E6%9D%83%E8%B4%A6%E6%88%B7%E6%8E%A5%E7%AE%A1%EF%BC%88CVE-2026-106610%EF%BC%89.md)
 
 ## mojoPortalCMS
 

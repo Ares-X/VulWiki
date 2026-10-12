@@ -105,7 +105,7 @@
 
 ## Zimbra Collaboration Suite
 
-- [Zimbra SMTP 日志投毒致未授权RCE](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/Zimbra/Zimbra%20SMTP%20%E6%97%A5%E5%BF%97%E6%8A%95%E6%AF%92%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-73570%EF%BC%89.md) [vulnerability; source-claimed; active]
+- [Zimbra SMTP 日志投毒致未授权RCE](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/Zimbra/Zimbra%20SMTP%20%E6%97%A5%E5%BF%97%E6%8A%95%E6%AF%92%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-73570%EF%BC%89.md) [vulnerability; source-claimed; needs-review]
 
 ## imo云办公室
 
