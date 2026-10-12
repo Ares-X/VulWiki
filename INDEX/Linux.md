@@ -244,6 +244,10 @@
 
 - [戴尔、HPE、联发科修补其产品中的漏洞](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E6%88%B4%E5%B0%94%E3%80%81HPE%E3%80%81%E8%81%94%E5%8F%91%E7%A7%91%E4%BF%AE%E8%A1%A5%E5%85%B6%E4%BA%A7%E5%93%81%E4%B8%AD%E7%9A%84%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## ModemManager Cell Broadcast PDU解析器
+
+- [ModemManager CBM断言崩溃的完整PDU输入与实验边界（CVE-2026-95622）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/ModemManager%20CBM%E6%96%AD%E8%A8%80%E5%B4%A9%E6%BA%83%E7%9A%84%E5%AE%8C%E6%95%B4PDU%E8%BE%93%E5%85%A5%E4%B8%8E%E5%AE%9E%E9%AA%8C%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-95622%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## Realtek RTL8xxx SDK UPnP服务
 
 - [Realtek Sdk CVE-2021-35392漏洞分析](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Realtek%20Sdk%20CVE-2021-35392%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md) [analysis; not-reproduced; needs-review]
@@ -328,6 +332,10 @@
 ## sudo-rs sudoedit
 
 - [sudo-rs sudoedit路径竞态与越权写入（GHSA-f42v-x7gq-phc8）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/sudo-rs%20sudoedit%E8%B7%AF%E5%BE%84%E7%AB%9E%E6%80%81%E4%B8%8E%E8%B6%8A%E6%9D%83%E5%86%99%E5%85%A5%EF%BC%88GHSA-f42v-x7gq-phc8%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
+## systemd-machined
+
+- [systemd-machined 根用户命名空间授权缺陷（CVE-2026-40224）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/systemd-machined%20%E6%A0%B9%E7%94%A8%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%8E%88%E6%9D%83%E7%BC%BA%E9%99%B7%EF%BC%88CVE-2026-40224%EF%BC%89.md) [analysis; source-claimed; active]
 
 ## util-linux wall
 

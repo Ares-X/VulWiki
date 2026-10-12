@@ -1,0 +1,1235 @@
+{
+  "observed_at": "2026-10-12T00:08:00Z",
+  "window": [
+    "2026-10-04T00:00:00Z",
+    "2026-10-12T00:00:00Z"
+  ],
+  "sources": [
+    {
+      "source": "wy876/POC",
+      "access": "HTTP404 unavailable; cannot distinguish deleted/private/renamed/access-limited",
+      "head": null,
+      "previous_head": null,
+      "dated_commits": null,
+      "post_baseline_commits": null,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/wy876/POC"
+    },
+    {
+      "source": "DMW11525708/wiki",
+      "access": "accessible",
+      "head": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "previous_head": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/DMW11525708/wiki",
+      "fixed_commit_url": "https://github.com/DMW11525708/wiki/commit/2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc"
+    },
+    {
+      "source": "cvi-Qing/poc",
+      "access": "accessible",
+      "head": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "previous_head": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/cvi-Qing/poc",
+      "fixed_commit_url": "https://github.com/cvi-Qing/poc/commit/8f7611d46a8e90cb69b40671f55ee6f7336b557d"
+    },
+    {
+      "source": "SourByte05/Vulnerability-Wiki-PoC",
+      "access": "accessible",
+      "head": "fb9be5bbf7d13301ba47904be2f68ead8d7a034e",
+      "previous_head": "fb9be5bbf7d13301ba47904be2f68ead8d7a034e",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC",
+      "fixed_commit_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/commit/fb9be5bbf7d13301ba47904be2f68ead8d7a034e"
+    },
+    {
+      "source": "Threekiii/Vulnerability-Wiki",
+      "access": "accessible",
+      "head": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "previous_head": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/Threekiii/Vulnerability-Wiki",
+      "fixed_commit_url": "https://github.com/Threekiii/Vulnerability-Wiki/commit/b32b83c01eabac4d6b4b334852be9cff76ba67ee"
+    },
+    {
+      "source": "Threekiii/Awesome-POC",
+      "access": "accessible",
+      "head": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "previous_head": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/Threekiii/Awesome-POC",
+      "fixed_commit_url": "https://github.com/Threekiii/Awesome-POC/commit/0f9e22b660cb1ea12c1c3668f9128d93e08da412"
+    },
+    {
+      "source": "BaizeSec/bylibrary",
+      "access": "accessible",
+      "head": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "previous_head": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/BaizeSec/bylibrary",
+      "fixed_commit_url": "https://github.com/BaizeSec/bylibrary/commit/dee1fbaa831df860c6905f80de8700211ba63098"
+    },
+    {
+      "source": "Mr-xn/Penetration_Testing_POC",
+      "access": "accessible",
+      "head": "84bc40ea45c9d5c58eab1c9dd105ca2564e4cabc",
+      "previous_head": "88e9e1690e20a324722e99493b7e984ac7779693",
+      "dated_commits": 7,
+      "post_baseline_commits": 7,
+      "changed_paths": [
+        {
+          "path": "README.md",
+          "status": "modified"
+        }
+      ],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/Mr-xn/Penetration_Testing_POC",
+      "fixed_commit_url": "https://github.com/Mr-xn/Penetration_Testing_POC/commit/84bc40ea45c9d5c58eab1c9dd105ca2564e4cabc",
+      "compare_url": "https://github.com/Mr-xn/Penetration_Testing_POC/compare/88e9e1690e20a324722e99493b7e984ac7779693...84bc40ea45c9d5c58eab1c9dd105ca2564e4cabc"
+    },
+    {
+      "source": "MrWQ/vulnerability-paper",
+      "access": "accessible",
+      "head": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+      "previous_head": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/MrWQ/vulnerability-paper",
+      "fixed_commit_url": "https://github.com/MrWQ/vulnerability-paper/commit/fcbdb421b62aef6ccac59a1887d94687f4faf9d6"
+    },
+    {
+      "source": "lal0ne/vulnerability",
+      "access": "accessible",
+      "head": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+      "previous_head": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/lal0ne/vulnerability",
+      "fixed_commit_url": "https://github.com/lal0ne/vulnerability/commit/5b9f397c1970203b1764fb7a66a0ffac39bef4cc"
+    },
+    {
+      "source": "vulhub/vulhub",
+      "access": "accessible",
+      "head": "8fd63916f7a8711e2e01dda0d27237e4d6175d38",
+      "previous_head": "8fd63916f7a8711e2e01dda0d27237e4d6175d38",
+      "dated_commits": 0,
+      "post_baseline_commits": 0,
+      "changed_paths": [],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/vulhub/vulhub",
+      "fixed_commit_url": "https://github.com/vulhub/vulhub/commit/8fd63916f7a8711e2e01dda0d27237e4d6175d38"
+    },
+    {
+      "source": "gelusus/wxvl",
+      "access": "accessible",
+      "head": "4266b45d974a92de5c1cdd1c440321ebfca53139",
+      "previous_head": "a046fd64156650ea0157352c7c60b9d373871d8c",
+      "dated_commits": 19,
+      "post_baseline_commits": 19,
+      "changed_paths": [
+        {
+          "path": "data.json",
+          "status": "modified"
+        },
+        {
+          "path": "doc/2026-10/(10分) CVE-2026-105134：AhsayCBS备份服务未授权RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(7.5分) CVE-2023-22894：Strapi敏感信息泄露.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(8.7分) CVE-2026-88779：NetScaler SAML内存溢出DoS.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(9.1分) CVE-2026-20328：Cisco SSM On-Prem密码重置漏洞可接管管理员账户.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(9.1分) CVE-2026-87115：WordPress订餐插件任意文件删除.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(9.1分) CVE-2026-97670：Avada表单未授权调用任意Hook，可永久删站内容.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(9.3分) CVE-2026-61500：HFS文件服务器认证绕过RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/(9.8分) CVE-2026-104070：SPIP插件未授权RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/0day漏洞-mysql-mysqldump-show-tables-overflow.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写 (2)..md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI 驱动的自动化代码审计与漏洞挖掘平台，支持多 Agent 协作扫描、数据流分析、漏洞管理和可视化审计.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AIxVuln自动化漏洞挖掘系统，让漏洞挖掘事半功倍.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI代理几秒打穿DIVD：Zammad双CVE从会话固定直通root(CVE-2026-102489·附PoC).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI发现大量SSH漏洞：OpenSSH 10.6批量修复5个CVE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI底牌被看光？2000多台英伟达GPU曝高危漏洞！.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI挖洞实战｜Hermes+Skill技能库，从零复现「优惠券越权领取」高危业务漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI智能体渗透：记一次 AI 智能体绕过到 RCE 的过程.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AI赋能漏洞挖掘案例分享1-某系统从sql到登录绕过再到后台getshell.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/API网关参数拼接漏洞导致越权与CRLF的案例分享.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/AWS IAM 架构体系与攻防漏洞深度剖析.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Acer System Monitor提权（CVE-2026-50610）：从标准用户到SYSTEM，厂商控制中心软件成攻击入口.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Adminer 5.4.2 三个0-day漏洞分析与修复建议.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Anthropic 免费开放 AI 漏洞扫描：开源软件安全，正在进入 AI 自动化时代.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Anthropic 推出两项网络安全新举措：开源漏洞速报与 OT 关键基础设施防御计划落地；CNNVD发布人工智能重要安全漏洞的通报 牛览.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Anthropic启动网络使命计划，聚焦漏洞修复助力安全防御.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Anthropic紧急断网，Claude利用注入漏洞越界入侵真实网站.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Apache HTTP 服务器漏洞可导致远程代码执行和拒绝服务攻击.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Apache OpenOffice CVE-2026-59265 恶意电子表格代码执行漏洞复现.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Apache Struts披露多个安全漏洞，可导致远程代码执行.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Atlassian 8款Data Center产品曝CVSS 9.3严重漏洞(CVE-2026-21589)，未认证可读取敏感文件并可能获取Jira管理员权限.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Atlassian Jira存在任意文件读取漏洞CVE-2026-21589  附POC.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Atlassian高危漏洞遭在野利用，细节公开数小时即现攻击.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Atlassian：注意 Jira 和 Confluence 中严重的文件访问漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/BRuteLogic 披露：EJS  v6.0.0-alpha 原型污染可致 RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CNNVD  关于《网络安全漏洞管理体系与标准化研究》研究课题征集意见和参与单位的通知.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-104286｜FortiMail 未认证路径穿越漏洞，已在野利用！CVSS 9.8.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-107181 Telegram Desktop 一键账户接管.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-14378 DevKit Pro 未认证管理员接管.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-21589 Atlassian Jira 未认证文件读取：双冒号如何越过插件资源边界.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-59346 VMware VMXNET3整数溢出漏洞PoC技术分析.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-61500  Rejetto HFS会话伪造导致远程代码执行（POC）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-73570：Zimbra 未授权命令注入漏洞分析—SMTP 日志投毒实现 RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-85706：GitLab 未授权任意本地文件读取漏洞分析.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-94545  Next.js next∕og未授权远程代码执行漏洞（POC）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVE-2026-97359  HFS 2.x文件服务器未授权远程代码执行漏洞（POC）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/CVSS 9.8！思科核心交换机NGOAM漏洞，远程无登录即可拿下最高权限.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Citrix网关把日志内容当命令执行，不登录就能拿到root.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Citrix：这个严重的 NetScaler SAML 漏洞可导致 RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/DVWA 靶场实战：四级安全等级下的 Web 漏洞与防御演进.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Dell System Update 5个漏洞：最高严重度9.6，可被用于root权限代码执行.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Dell System Update 工具曝严重漏洞，攻击者可借此以 root 身份执行代码.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/EasyCVR视频管理平台adduser未授权添加用户漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Fish-src黑盒漏洞挖掘更新啦.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Fortinet FortiMail 0Day漏洞已遭在野利用.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Google内部AI安全Agent发现并实证500+XSS漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Google报告1-8月漏洞披露量翻倍，AI改变漏洞发现风险结构.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/IBM 修补 23 个 DataPower Gateway 漏洞，其中包括四个严重的远程代码执行和 XSS 漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/LPAR2RRD 升级功能 RCE 漏洞：只读用户绕过权限实现命令执行.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/LVS精益价值管理系统 APPDownLoad.aspx 任意文件读取漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Laranode服务器管理面板爆出任意文件写入漏洞(POC已公开).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/LibreOffice Calc曝(CVE-2026-63277)，恶意电子表格可绕过宏提示触发Java代码执行.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Linux KVM∕arm64 漏洞允许攻击者逃离虚拟机并获得主机访问权限.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Linux内核本地提权四重奏曝光：四个致命漏洞与公开PoC.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Mass Assignment 批量赋值漏洞：把普通用户悄悄升成管理员.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/MySQL 0DAY 漏洞 当客户端选择相信协议：mysqldump 的 SHOW TABLES 栈溢出.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/MySQL最新漏洞 mysqldump 客户端栈溢出漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Nginx UI 远程代码执行漏洞已披露，附 PoC 利用代码.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/N∕A  ShowDoc未授权PHP代码注入漏洞（POC）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/OnlyOffice 前台 RCE 代码分析：五年没修干净的路径穿越，撞上 v9 的热重载.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/OpenAI曝出沙箱逃逸漏洞，无需API密钥就能免费调用付费模型.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/OpenSSH 10.6修复多项高危漏洞，可致明文恢复、文件写入与注入.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/OpenSSH 存在多处漏洞，可导致明文恢复、文件写入与注入攻击.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/P7 DarkSword iOS 漏洞套件：17 条命令远程收割 iCloud 钥匙串与加密钱包.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Pwn2Own 2026首日赛果出炉，32个0Day攻破三星S26、OpenAI Codex等产品.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Pwn2Own 32个零日漏洞被披露，奖金突破38万美元.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/RMI反序列化：你必须知道的3个攻击面（附实测复现）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/SDC2026议题预告  从漏洞检测到利用：知识驱动的 RISC-V 硬件安全分析技术.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/SQLite 0Day大放送：研究员一次性披露14个未公开漏洞，含一条完整RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/SonicWall：注意SMA1000网关中的满分 SSRF 漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Sub2api 存在支付回调计费漏洞 (中转站长注意).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Telegram Desktop 一键账号接管漏洞（CVE-2026-107181）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Telegram Desktop：一次点击就能接管账号的 IPC 注入漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Telegram 桌面版曝 8.1 分高危漏洞：一条 tg∕∕ 链接，账号就可能被接管.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Telegram 桌面版曝高危漏洞（CVE-2026-107181）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Telegram桌面版惊现IPC注入漏洞，点击链接即可被完全劫持账户.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/VMware VMXNET3 严重漏洞，可导致客户机至宿主机代码执行.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/VulnHunter：从发现漏洞候选，到验证真实风险.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/WebSocket 协议漏洞 01：握手流程与八大致命风险.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/WebSocket 协议漏洞 Part-3：明文通信、XSS 与服务端注入.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/WebSocket协议漏洞02_IDOR越权与DoS拒绝服务实战.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Web文件类漏洞挖掘思路｜各种通杀、读取、上传、越权、注入全攻、伪协议读取绕过技巧汇总.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/WordPress 严重漏洞可引发跨站脚本 (XSS)、SQL 注入及信息泄露攻击.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/WorkBuddy 挂机开启自动挖漏洞，日入几千成本就一个电费.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/Zammad两处0Day遭在野利用，漏洞链可远程拿下服务器root权限.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/[工具推荐]专为 SRC场景设计&&一个基于LLM 驱动的多 Agent 协作漏洞挖掘系统--Argus.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/cPanel & WHM曝3个严重漏洞 最高CVSS 9.9，可导致Root代码执行与管理员会话劫持.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/edu黑龙江xx学院-存储型xss漏洞小思路.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/libheif 严重漏洞可能允许攻击者通过 WordPress 图片上传远程执行代码.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/nginx-ui曝高危远程代码执行漏洞(CVE-2026-107806)，管理员认证后可执行任意命令.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/「Cloudflare开源安全审计Skill」AI代码审计+漏洞挖掘六阶段流水线全拆解.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/「关键漏洞目录」新增「Fortinet FortiMail路径遍历漏洞」等4个漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/「关键漏洞目录」新增「ISC BIND拒绝服务漏洞(CVE-2015-5477)」等6个漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【原创发现】Handlebars.js validateAstNode 原型链绕过远程代码执行漏洞(CVE-2026-106446)安全风险通告.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【复现】Atlassian 多产品未授权任意文件读取漏洞（CVE-2026-21589）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【大洞速修】OnlyOffice 前台 RCE 漏洞！.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【安全圈】AnyDesk Linux版预认证远程代码执行漏洞PoC公开：未授权夺取Root.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【安全资讯】Pwn2Own Ireland 2026 落幕：漏洞碰撞频发.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【安全速报】10月9日高危漏洞紧急预警.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】Atlassian 多款产品任意文件读取漏洞(CVE-2026-21589)安全风险通告.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】Atlassian 多款产品无需认证文件读取漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】Atlassian系统任意文件读取漏洞(CVE-2026-21589).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】CVE-2026-102489 Zammad 会话劫持到远程代码执行.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】CVE-2026-104286 FortiMail 未授权任意文件写入漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】CVE-2026-21589 Atlassian Jira 任意文件读取漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】FortiMail 未授权任意文件写入漏洞，已遭在野利用.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已复现】Telegram Desktop 高危漏洞，点击链接可致文件泄露甚至账户被接管.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【已支持检测】Atlassian Jira∕Confluence∕Bitbucket 等 Data Center 产品资源下载接口路径遍历漏洞（CVE-2026-21589）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【成功复现】Atlassian系统任意文件读取漏洞(CVE-2026-21589).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【成功复现】WordPress Visual Composer Website Builder任意本地文件包含漏洞(CVE-2026-12227).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】Atlassian 多款产品未授权任意文件读取漏洞分析.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】Atlassian多款产品任意文件读取漏洞（CVE-2026-21589).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】Atlassia多产品未授权任意文件读取漏洞(CVE-2026-21589).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】Citrix Netscaler ADC∕Gateway预认证内存溢出漏洞(CVE-2026-88772).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】Lite-On O-RU存在后门发现漏洞(CVE-2026-80217).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】Lite-On O-RU存在命令注入漏洞(CVE-2026-77853).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】OnlyOffice Server前台RCE漏洞细节披露分析~【附自查脚本】.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【漏洞通告】cjose JWE全零密钥漏洞(CVE-2026-53939).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【热点安全风险】10月11日｜电力工控平台曝未认证远程代码执行漏洞，攻击者可直取电网监测系统（CVE-2026-100730）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【热点安全风险】10月9日｜Cisco Catalyst SD-WAN Manager 认证绕过遭在野利用 ，攻击者可取得管理员权限（CVE-2026-76504）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【首批】中国信通院互联网智能体治理 漏洞挖掘智能体能力评估正式启动.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【高危漏洞预警】Atlassian Data Center未认证任意文件读取漏洞CVE-2026-21589.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【高危漏洞预警】Citrix NetScaler SAML内存溢出漏洞CVE-2026-88779.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/【高危通告】Fastjson 远程代码执行漏洞 CVE-2026-16723 安全通告.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/一个单引号打穿十年ORM：Exposed全版本SQL注入(CVE-2026-108474附PoC).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/一个埋了11年的漏洞，差点让XRP凭空多出“无限货币”.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/一个漏洞从发现到修复，中间到底经历了什么？.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/一条 HTTP 请求就能 RCE，你部署的 PDF 转换服务可能正在裸奔.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/一行注释骗过25年模板引擎：Smarty缓存投毒RCE深度复现（CVE-2026-82531，附PoC）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/三年三次满分洞没人修：TOTOLINK 路由固件上传打穿 root（CVE-2026-105484·附PoC）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/上海鸿翼软件-电子文档管理系统 importNewBpmnDesignByIe 存在XStream反序列化漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/东方通TongWeb upload接口存在任意文件上传漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/为什么你扫出来的漏洞，开发总说“修不了”？.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/仅需公开信息即可接管暗网域名？GoBalance 漏洞引发 Tor 洋葱服务“大地震”.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/从100块到2000块：一个普通人在SRC挖漏洞赚赏金的真实记录.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/从一条聊天消息到主播电脑被完全控制：漏洞连环套如何攻破OBS.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/从听话到破坏_AI加持下的具身智能漏洞挖掘新范式.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/从漏洞治理到网络韧性，数字化环境下网络安全治理模式的转型.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/从边缘入口到内网rce.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/代码能跑就敢上线？这款大厂开源AI审计工具，帮你堵死90%隐形漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/俄罗斯黑客利用 Zimbra 0-Day 漏洞，零点击邮箱秒没.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/信息安全漏洞周报【第094期】.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/信息安全漏洞周报（2026年第39期）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/信息安全漏洞月报（2026年09月）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/关于 AI 辅助安全测试与漏洞报告提交规范的公告.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/再获认可！安帝科技持续多年入选国家工业信息安全漏洞库技术支撑单位.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/凌晨三点半，我RCE了.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/刚升完级又被打崩：NetScaler SAML 内存溢出零日，专打已修补设备（CVE-2026-88779）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/前端代码资产采集、网站嗅探、备案查询、指纹扫描、泄露扫描、漏洞审计、浏览器辅助与 浏览器扩展工具 ——玄镜 AegisScope.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/博硕BGM RESTFulServiceForWeb.asmx 敏感信息泄露漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/双冒号打穿Atlassian全家桶：预认证任意文件读取9.3分(CVE-2026-21589附PoC).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/史诗级安全军火库！百度OpenRASP漏洞测试用例库让Web安全检测能力产生质的飞跃.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/声明三个通道，写入四个：一次零点击 iMessage 漏洞的完整复盘.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/复现Atlassian系统任意文件读取漏洞(CVE-2026-21589).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/大模型是怎么被攻破的？七类主流攻击手法与本地复现.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/如何通过AI高效复现传统漏洞？.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/安信天行再度荣获CNVD原创漏洞发现贡献单位称号.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/安全419｜一周国际网安资讯：AI智能体越权连环曝光 高危漏洞密集修复.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/安全通告丨网络安全漏洞通告（2026年10月）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/尽快修复！Atlassian Jira 未认证任意文件读取漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/工具分享  一款图形化 JWT 漏洞利用工具.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/已完成思考Apache HTTP Server 2.4.69 发布：修复 20 个安全漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/开源 Webmail 巨头 Roundcube 爆出在野 漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/当前SRC漏洞挖掘现状.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/当漏洞挖掘遇上 AI Agent：主流企业防火墙 0day 挖掘实战.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/微软发布紧急 Exchange Server 更新以修复 CVE-2026-96940.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/思科 SD-WAN 严重漏洞允许远程攻击者绕过管理员身份验证.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/思科：注意可导致 Nexus 交换机遭接管的多个严重漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/我们用开源 AI 安全代理挖出 24 个安卓漏洞的全过程.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/我把一个目标丢给 AI 找洞，它给了我一个 RCE——也给了 27 个幻觉.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/戴尔CSM曝两处高危漏洞，未授权攻击者可直接获取管理员权限.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/扫描器狂扫一通，漏洞全被驳回？SRC新手最容易犯的20个错误来了！.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/报名进行时｜首届全球具身智能应用创新挑战赛·漏洞挖掘挑战赛诚邀参赛.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/拉黑机制的标记移除绕过漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/据称黑客在某论坛出售 Fortinet FortiGate的 1day 漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/改个数字就能删别人数据？聊聊水平越权漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/攻防视角下的 PHP：从反序列化到 RCE 的边界.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/斗象获评首批“国家人工智能安全漏洞库优秀技术支撑单位”.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/新华三H3C网关-安全设备sslvpn_client.php存在远程命令执行漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/新开普学工综合服务平台0day[已修复].md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/新的 Windows Defender ShieldCrash 零日漏洞可绕过微软补丁，以系统权限读取文件.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/极安破奕-给我一个txt，还你一个rce.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/每周PDF资源：Atlassian曝严重漏洞；智能硬件企业CRA合规实践.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/每周网安资讯（9.29-10.8） VMwareESXi远程安全漏洞风险提示.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/汉王e脸通综合管理平台queryAntisubmarineList接口存在sql注入漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/浅析SpringBoot框架常见未授权访问漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞复现  天锐绿盾审批系统 getConfigValues.do 信息泄露漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞复现  金和OA nextselectplan.aspx 存在SQL注入漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞机构被自己的AI Agent打穿：Zammad双0day链，会话劫持到root只要几秒.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞预警NVIDIA DCGM Exporter (CVE-2026-47483) 导致资源消耗Dos和信息泄露漏洞，CVSS8.2.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞预警新的虚拟机逃逸漏洞？VMware CVE-2026-59346 CVSS9.3.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞预警知名安全设备厂家SonicWall SMA 1000 曝预认证服务器端请求伪造（SSRF）漏洞CVE-2026-102255，CVSS 10.0.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞预警知名项目管理软件Atlassian Jira曝 CVE-2026-21589 未授权任意文件读取漏洞，CVSS9.3 大家抓紧修复.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/漏洞预警：CVSS 10.0｜SonicWall SMA1000 高危预认证 SSRF 漏洞 CVE-2026-102255.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/澳洲实测事件启示：主机厂如何构建有效的安全漏洞预警机制（附自查清单）.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/爱奇艺安全应急响应中心漏洞处理流程与评分标准(2026).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/用友U8 crm客户关系管理swfupload.php存在任意文件上传漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/用友时空KSOA agent_worksdel.jsp SQL延时注入漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/用友某产品最新版前台RCE.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/登录即注册导致的幽灵组织成员漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/红帽 OpenShift 漏洞允许攻击者绕过 PGP 检查并推送恶意版本.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/美国 (CISA) 警告：Zyxel GS1900 交换机漏洞已被积极用于攻击.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/聚恒中台sendvalidatecode接口存在SQL注入  附POC.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/腾讯倾力之作！一款让所有开发者彻底告别代码漏洞的神级安全指南.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/腾讯重磅开源：业界首个项目级漏洞猎杀基准平台 VulnGym 震撼发布.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/自主漏洞发现与利用生成.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/自建Jira高危漏洞在野利用.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/被裁第47天，我用AI挖漏洞赚到了第一笔赏金.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/记一次漏洞挖掘过程：详细复盘如何通过分析前端代码，发现并利用一个任意文件读取漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/记录几个edu漏洞挖掘思路.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/记某次渗透测试从未授权信息泄露挖掘到白盒审计-sql∕rce漏洞挖掘.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/谷歌AI挖出500个漏洞 我干了8年渗透测试反而更值钱了.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/账户删除绕过漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/赛博安全狗：Vault ACL策略评估漏洞可能绕过拒绝访问限制 (10.08).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/赛博安全狗：微软合作伙伴中心存在权限提升漏洞 (10.09).md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/速看，Anthropic 推出免费 AI 漏洞扫描器.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/邮箱修改先分配后校验导致的账号接管漏洞.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/重磅！谷歌紧急暂停开源漏洞赏金.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/银狐的兵工厂不是木马而是驱动：13个合法签名漏洞驱动轮番上阵，查到ValleyRAT也别急着归因.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/震惊安全圈！百度安全开源Docker漏洞测试环境，80+真实应用即点即用.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/震惊！百度开源这款安全扫描工具，精准定位十大Web漏洞，误报率极低！.md",
+          "status": "added"
+        },
+        {
+          "path": "doc/2026-10/面向开源生态的 AI 漏洞发现服务：Anthropic OSS Scanner 技术架构、数据效果与行业影响深度剖析.md",
+          "status": "added"
+        }
+      ],
+      "scope": "Commit and path inventory only; article reads recorded separately",
+      "pagination": "all dated lists below100, comparisons below300 files and100 commits; no cap reached; compare patch omission is not empty body",
+      "source_url": "https://github.com/gelusus/wxvl",
+      "fixed_commit_url": "https://github.com/gelusus/wxvl/commit/4266b45d974a92de5c1cdd1c440321ebfca53139",
+      "compare_url": "https://github.com/gelusus/wxvl/compare/a046fd64156650ea0157352c7c60b9d373871d8c...4266b45d974a92de5c1cdd1c440321ebfca53139"
+    }
+  ],
+  "article_reading": {
+    "retrieved": 5,
+    "fully_read": [
+      "LPAR2RRD",
+      "Exposed",
+      "Adminer",
+      "Strapi"
+    ],
+    "partially_read": [
+      "GitLab"
+    ],
+    "unread_new_wxvl_article_bodies": 227,
+    "Mr_xn_new_links": 12,
+    "Mr_xn_link_bodies_read": 0
+  },
+  "candidates": [
+    {
+      "id": "CVE-2025-54769",
+      "decision": "source-grounded draft; community PoC equivalence disputed",
+      "code_sha": "2284e623beb02676fd14ade18ebe1f747ac11537",
+      "audit": "All3repo files read: C,README,MIT license. No install/dependency manifests or workflows/binaries. C uses libc/libcurl, local tar system command with generated fixed paths; target URL/auth from arguments; writes target proof and local temp files, follows redirects; no unrelated collector/persistence/download found. Does not implement original multipart filename traversal. Original KoreLogic source and vendor8.05 checked."
+    },
+    {
+      "id": "CVE-2026-108474",
+      "decision": "vendor regression test grounded draft; scanner rejected as conclusive detector",
+      "code_sha": "4cf829b55a37be8a73af5dc011399cd26aa0d224",
+      "audit": "Official fix diff and regression tests, root/test gradle, version catalog, all6workflows read. No binary execution. Build resolves Maven deps; signing uses environment supplied keys; Junie delegates mutable external workflow; detekt loads external action/JAR. Transitive deps/binary JAR not audited, so do not run distribution. Rubby singlefile poc.py fully read at f43356e3...; standardlib HTTP requests, no unrelated exfiltration; version/status logic cannot prove exploitation."
+    },
+    {
+      "id": "Adminer 5.4.2 three CVEs",
+      "decision": "deferred: original source not verified; article inconsistently claims ATTACH blocked then uses ATTACH in recipe; no admission"
+    },
+    {
+      "id": "CVE-2023-22894",
+      "decision": "deferred/no new admission: KEV-related old CVE, not revisited beyond incoming new article because paused-scope check required"
+    },
+    {
+      "id": "CVE-2026-85706",
+      "decision": "existing article known; incoming body only partially read; no duplicate new article or revision proposed"
+    }
+  ],
+  "counts": {
+    "initial_sources": 12,
+    "accessible": 11,
+    "unavailable": 1,
+    "unchanged_heads": 9,
+    "advanced_heads": 2,
+    "date_window_commits": 26,
+    "new_wxvl_articles": 232,
+    "mrxn_added_links": 12,
+    "actual_source_articles_fully_read": 4,
+    "partially_read": 1,
+    "proposed_new_articles": 2
+  },
+  "evidence_files": [
+    {
+      "path": "evidence/exposed-.github__workflows__close-wait-for-reply-issues.yml",
+      "sha256": "473efed74720834db9ebf9c40b63006c9382fdc27a7c549e33a1f5b646e36f24",
+      "bytes": 1275
+    },
+    {
+      "path": "evidence/exposed-.github__workflows__commit-message-validation.yml",
+      "sha256": "fcb8f64300041c1e24fa637f29c658ac509e0127e272324c1b41c6ad15806d75",
+      "bytes": 2289
+    },
+    {
+      "path": "evidence/exposed-.github__workflows__detekt.yml",
+      "sha256": "02bfc4d02095fff4e171f300a0ee0e9d37f42b54de3e668e1be6ded2d26b324e",
+      "bytes": 2402
+    },
+    {
+      "path": "evidence/exposed-.github__workflows__gradle-validation.yml",
+      "sha256": "1493b5337f3f826383c1101f187f76d3ef6de6732bcd7ff0ed61e49afbf3b886",
+      "bytes": 229
+    },
+    {
+      "path": "evidence/exposed-.github__workflows__junie.yml",
+      "sha256": "5ee1b16c3f3370dce4eb91a094532aae2a1c489bdd14b09a8a18203b6e2b8f4d",
+      "bytes": 496
+    },
+    {
+      "path": "evidence/exposed-.github__workflows__pull-request-title-validation.yml",
+      "sha256": "efa3afe180b6a7635b623092473e60f7333fc88eea2b5171767ddceb44be66c1",
+      "bytes": 1502
+    },
+    {
+      "path": "evidence/exposed-LICENSE.txt",
+      "sha256": "f0b62766e3a25366946efec0f2f1fa120744e1db53baeca916d3a3e731aa4544",
+      "bytes": 11353
+    },
+    {
+      "path": "evidence/exposed-build.gradle.kts",
+      "sha256": "d8c60cb0e1ab3061c6e495782a94cfb22977672c9e651a4ce32f7d13740a93cc",
+      "bytes": 7177
+    },
+    {
+      "path": "evidence/exposed-exposed-tests__build.gradle.kts",
+      "sha256": "c353083b29cd90be1ec66b030a9a9c805e38c1e61cf962b8de5317cb3bca0f56",
+      "bytes": 1946
+    },
+    {
+      "path": "evidence/exposed-fix.json",
+      "sha256": "9e1aa081edf5eda6fc9dcb0263e23f168a70fd3dd3941352e4f0a6d51c2d7b16",
+      "bytes": 64161
+    },
+    {
+      "path": "evidence/exposed-gradle__libs.versions.toml",
+      "sha256": "977160661f177a79ae5d27c4e978911928ec74157f51368757e80506820a1a4e",
+      "bytes": 10305
+    },
+    {
+      "path": "evidence/exposed-thirdparty-poc.py",
+      "sha256": "1e1195a3599237caacee8b0f0e2cc59054a6831f2e33384636eda4c030de7723",
+      "bytes": 6366
+    },
+    {
+      "path": "evidence/lpar2rrd-CVE-2025-54769.c",
+      "sha256": "e377ef0657dd1bd68480269466e8175c1f8b283e57abafa046724583eac90f48",
+      "bytes": 8290
+    },
+    {
+      "path": "evidence/lpar2rrd-LICENSE",
+      "sha256": "688571ebe9f7e3e32b47213db599aaf94c06df16c7738e2b61d6ed8662682536",
+      "bytes": 1064
+    },
+    {
+      "path": "evidence/lpar2rrd-README.md",
+      "sha256": "9f114e5b531a0b7bbcc2ddbd8b896dd579d479bdbca5abe8b09d675c8fb50a12",
+      "bytes": 1899
+    }
+  ]
+}

@@ -4178,6 +4178,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2025-68664",
+    "paths": [
+      "Web安全/AI应用/LangChain/LangChain 序列化保留字段注入（CVE-2025-68664）.md",
+      "Web安全/其他软件/杂项/全球使用最广泛的 AI Agent 编排框架爆三个高危-严重漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2025-68668",
     "paths": [
       "Web安全/AI应用/n8n/n8n 最新严重漏洞允许攻击者执行任意命令.md",
@@ -4211,6 +4220,42 @@
     "paths": [
       "Web安全/开发框架/GitLab/GitLab 多个漏洞允许绕过 2FA 和发起 DoS 攻击.md",
       "Web安全/开发框架/GitLab/GitLab警告：存在高危双因素认证绕过和拒绝服务漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-103648",
+    "paths": [
+      "Web安全/开发框架/image-downloader/image-downloader URL 文件名解码路径穿越（CVE-2026-103648）.md",
+      "Web安全/开发框架/image-downloader/npm image-downloader 路径穿越致任意文件写入（CVE-2026-103648）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-106446",
+    "paths": [
+      "Web安全/开发框架/Handlebars/Handlebars 不可信 AST 类型混淆 CVE-2026-106446.md",
+      "Web安全/开发框架/Handlebars/Handlebars.js AST 类型混淆致RCE（CVE-2026-106446）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-106610",
+    "paths": [
+      "Web安全/CMS内容/WordPress/WordPress miniOrange OTP 验证未授权账户接管（CVE-2026-106610）.md",
+      "Web安全/CMS内容/miniOrange/miniOrange OTP Verification 手机归属校验缺失（CVE-2026-106610）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-107806",
+    "paths": [
+      "Web安全/运维面板/Nginx UI/Nginx UI 备份恢复配置覆盖 CVE-2026-107806.md",
+      "Web安全/运维面板/nginx-ui/nginx-ui 备份恢复认证后RCE（CVE-2026-107806）.md"
     ]
   },
   {
@@ -4547,6 +4592,33 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2026-73570",
+    "paths": [
+      "Web安全/OA办公/Zimbra/Zimbra SMTP 日志投毒致未授权RCE（CVE-2026-73570）.md",
+      "Web安全/邮件系统/Zimbra/Zimbra-SMTP日志Swatchdog命令注入-CVE-2026-73570.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-76070",
+    "paths": [
+      "IOT安全/Netis/Netis NC63 登录接口栈溢出致预认证RCE（CVE-2026-76070）.md",
+      "Web安全/网络设备/Netis/（CVE-2026-76070）Netis NC63登录栈溢出RCE漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-85097",
+    "paths": [
+      "Web安全/CMS内容/WordPress/Bricksforge 临时上传文件名与路径验证错配（CVE-2026-85097）.md",
+      "Web安全/CMS内容/WordPress/WordPress Bricksforge 未授权文件上传致RCE（CVE-2026-85097）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2026-87902",
     "paths": [
       "Web安全/CMS内容/WordPress/【已复现】漏洞通告 WordPress未授权路径遍历致条件性RCE漏洞CVE-2026-87902.md",
@@ -4556,10 +4628,28 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2026-88771",
+    "paths": [
+      "Web安全/网络设备/Citrix NetScaler/Citrix NetScaler 未授权命令注入致RCE（CVE-2026-88771）.md",
+      "Web安全/网络设备/Citrix NetScaler/NetScaler 日志污染到延迟命令执行分析（CVE-2026-88771）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2026-94127",
     "paths": [
       "Web安全/网络设备/F5 BIG-IP/F5 BIG-IP APM OAuth授权服务器存在零日漏洞，可无登录远程代码执行.md",
       "Web安全/网络设备/F5 BIG-IP/（CVE-2026-94127）F5 BIG-IP APM OAuth授权服务器远程代码执行漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-94545",
+    "paths": [
+      "Web安全/开发框架/Next.js/Next.js ImageResponse曝RCE漏洞(CVE-2026-94545)，攻击者可控输入可导致容器内执行命令.md",
+      "Web安全/开发框架/Next.js/Next.js next-og 模块 RCE（CVE-2026-94545）.md"
     ]
   },
   {
