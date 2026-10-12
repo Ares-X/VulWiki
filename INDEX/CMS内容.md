@@ -1701,6 +1701,10 @@
 
 - [CVE-2024-25600-WordPress-Bricks-Builder-远程代码执行漏洞分析](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/CVE-2024-25600-WordPress-Bricks-Builder-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md) [analysis; not-reproduced; needs-review]
 
+## WordPress Bricksforge
+
+- [WordPress Bricksforge 未授权文件上传致RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Bricksforge%20%E6%9C%AA%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%87%B4RCE%EF%BC%88CVE-2026-85097%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## WordPress CF Internal Link Shortcode
 
 - [WordPress CF Link Shortcode 插件存在前台SQL注入漏洞(CVE-2024-12404)](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20CF%20Link%20Shortcode%20%E6%8F%92%E4%BB%B6%E5%AD%98%E5%9C%A8%E5%89%8D%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28CVE-2024-12404%29.md) [vulnerability; not-reproduced; needs-review]
@@ -1720,6 +1724,10 @@
 ## WordPress ComMotion Course Booking System
 
 - [WordPress Course Booking System SQL注入漏洞 (CVE-2025-22785)](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Course%20Booking%20System%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%20%28CVE-2025-22785%29.md) [unknown; not-reproduced; needs-review]
+
+## WordPress Core
+
+- [WordPress Core 登录表单 XSS 致 RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Core%20%E7%99%BB%E5%BD%95%E8%A1%A8%E5%8D%95%20XSS%20%E8%87%B4%20RCE%EF%BC%88CVE-2026-64638%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## WordPress Crelly Slider
 
