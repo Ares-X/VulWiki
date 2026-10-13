@@ -4,6 +4,10 @@
 
 产品按显式元数据分组；未确认产品不从目录自动推断。
 
+## MikroTik RouterOS
+
+- [MikroTik RouterOS SSH 认证绕过提权](../IOT%E5%AE%89%E5%85%A8/MikroTik/MikroTik%20RouterOS%20SSH%20%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%8F%90%E6%9D%83%EF%BC%88CVE-2026-67276%E3%80%81CVE-2026-86060%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## MikroTik RouterOS WinBox
 
 - [MikroTik WinBox user.dat 路径遍历（CVE-2018-14847）](../IOT%E5%AE%89%E5%85%A8/MikroTik/MikroTik%20WinBox%20user.dat%20%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86%20CVE-2018-14847.md) [vulnerability; not-reproduced; needs-review]
