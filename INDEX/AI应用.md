@@ -245,10 +245,6 @@
 
 - [n8n Pyodide 沙箱逃逸导致远程代码执行漏洞 CVE-2025-68668](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/n8n-Pyodide-%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-68668.md) [vulnerability; not-reproduced; needs-review]
 
-## sub2api
-
-- [sub2api 易支付回调签名复用计费漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/sub2api/sub2api%20%E6%98%93%E6%94%AF%E4%BB%98%E5%9B%9E%E8%B0%83%E7%AD%BE%E5%90%8D%E5%A4%8D%E7%94%A8%E8%AE%A1%E8%B4%B9%E6%BC%8F%E6%B4%9E.md) [vulnerability; source-claimed; active]
-
 ## vLLM
 
 - [vLLM 视频处理链致未授权RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/vLLM/vLLM%20%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E9%93%BE%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83RCE%EF%BC%88CVE-2026-22778%EF%BC%89.md) [vulnerability; source-claimed; active]

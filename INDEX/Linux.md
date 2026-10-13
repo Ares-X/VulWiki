@@ -216,6 +216,10 @@
 
 - [Linux-kernel-xfrm-ESP-Dirty-Frag-本地提权漏洞-CVE-2026-43284](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux-kernel-xfrm-ESP-Dirty-Frag-%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E-CVE-2026-43284.md) [roundup; not-reproduced; needs-review]
 
+## Linux 内核
+
+- [Linux 内核 AF_UNIX 容器逃逸](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux%E5%86%85%E6%A0%B8/Linux%20%E5%86%85%E6%A0%B8%20AF_UNIX%20%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8%EF%BC%88CVE-2026-80521%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## Linux三内核漏洞 / IBM MQ / Joomla SP Page Builder / IBM Guardium / 威胁事件
 
 - [【热点安全风险】9月21日 Linux 内核三漏洞确认已遭在野利用，攻击者可借其本地提权并横向渗透内网服务器](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E7%83%AD%E7%82%B9%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E3%80%919%E6%9C%8821%E6%97%A5%20Linux%20%E5%86%85%E6%A0%B8%E4%B8%89%E6%BC%8F%E6%B4%9E%E7%A1%AE%E8%AE%A4%E5%B7%B2%E9%81%AD%E5%9C%A8%E9%87%8E%E5%88%A9%E7%94%A8%EF%BC%8C%E6%94%BB%E5%87%BB%E8%80%85%E5%8F%AF%E5%80%9F%E5%85%B6%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E5%B9%B6%E6%A8%AA%E5%90%91%E6%B8%97%E9%80%8F%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8.md) [vulnerability; not-reproduced; needs-review]
