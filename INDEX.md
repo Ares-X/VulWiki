@@ -2,7 +2,7 @@
 
 # 产品索引
 
-收录 5853 个主入口（另保留 5951 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5863 个主入口（另保留 5961 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
 - [AI应用（97 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
@@ -14,7 +14,7 @@
 - [Arcadyan固件（1 篇）](INDEX/Arcadyan%E5%9B%BA%E4%BB%B6.md)
 - [Autodesk Installer（1 篇）](INDEX/Autodesk%20Installer.md)
 - [Barco AWIND（1 篇）](INDEX/Barco%20AWIND.md)
-- [CMS内容（785 篇）](INDEX/CMS%E5%86%85%E5%AE%B9.md)
+- [CMS内容（789 篇）](INDEX/CMS%E5%86%85%E5%AE%B9.md)
 - [Cisco（6 篇）](INDEX/Cisco.md)
 - [D-Link（22 篇）](INDEX/D-Link.md)
 - [Dasan GPON（1 篇）](INDEX/Dasan%20GPON.md)
@@ -29,7 +29,7 @@
 - [Intelight（1 篇）](INDEX/Intelight.md)
 - [JCG（2 篇）](INDEX/JCG.md)
 - [Linear eMerge（1 篇）](INDEX/Linear%20eMerge.md)
-- [Linux（92 篇）](INDEX/Linux.md)
+- [Linux（93 篇）](INDEX/Linux.md)
 - [Microsoft Azure（1 篇）](INDEX/Microsoft%20Azure.md)
 - [MikroTik（1 篇）](INDEX/MikroTik.md)
 - [Mitel（1 篇）](INDEX/Mitel.md)
@@ -78,9 +78,9 @@
 - [摄像头（1 篇）](INDEX/%E6%91%84%E5%83%8F%E5%A4%B4.md)
 - [数据库（106 篇）](INDEX/%E6%95%B0%E6%8D%AE%E5%BA%93.md)
 - [昂捷（1 篇）](INDEX/%E6%98%82%E6%8D%B7.md)
-- [智能设备（120 篇）](INDEX/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87.md)
-- [服务器软件（198 篇）](INDEX/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6.md)
-- [桌面软件（254 篇）](INDEX/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6.md)
+- [智能设备（121 篇）](INDEX/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87.md)
+- [服务器软件（200 篇）](INDEX/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6.md)
+- [桌面软件（256 篇）](INDEX/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6.md)
 - [海康威视（37 篇）](INDEX/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86.md)
 - [网络设备（430 篇）](INDEX/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87.md)
 - [虚拟化（1 篇）](INDEX/%E8%99%9A%E6%8B%9F%E5%8C%96.md)
