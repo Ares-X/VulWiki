@@ -1172,6 +1172,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2018-18708",
+    "paths": [
+      "IOT安全/路由器/Tenda/Tenda AC15 addressNat page 溢出的仿真记录与编号边界.md",
+      "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2018-18778",
     "paths": [
       "Web安全/中间件/ACME/ACME Mini_httpd 任意文件读取漏洞 CVE-2018-18778.md",

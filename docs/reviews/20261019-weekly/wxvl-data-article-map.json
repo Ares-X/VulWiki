@@ -1,0 +1,1864 @@
+[
+  {
+    "index": 1,
+    "path": "doc/2026-10/(0day)某和oa_sql注入漏洞审计分析过程.md",
+    "title": "(0day)某和oa_sql注入漏洞审计分析过程",
+    "urls": [
+      "https://mp.weixin.qq.com/s/BS124XDdU5yUlukv7Hlwlg"
+    ]
+  },
+  {
+    "index": 2,
+    "path": "doc/2026-10/(7.3分) CVE-2026-105133：AhsayCBS备份服务器认证绕过组合RCE.md",
+    "title": "(7.3分) CVE-2026-105133：AhsayCBS备份服务器认证绕过组合RCE",
+    "urls": [
+      "https://mp.weixin.qq.com/s/VEQGw-IIig2wOx-3I76UPw"
+    ]
+  },
+  {
+    "index": 3,
+    "path": "doc/2026-10/(9.3分) CVE-2026-104935：Ivanti VPN未授权RCE.md",
+    "title": "(9.3分) CVE-2026-104935：Ivanti VPN未授权RCE",
+    "urls": [
+      "https://mp.weixin.qq.com/s/hhGnLOhbga5EnBRY6L3fWQ"
+    ]
+  },
+  {
+    "index": 4,
+    "path": "doc/2026-10/0day预警微软最新0day漏洞CVE-2026-96951 ,已在野利用，重点关注钓鱼攻击，速修.md",
+    "title": "0day预警|微软最新0day漏洞CVE-2026-96951 ,已在野利用，重点关注钓鱼攻击，速修",
+    "urls": [
+      "https://mp.weixin.qq.com/s/DRz5dDW0B-wasEmDwLUv3g"
+    ]
+  },
+  {
+    "index": 5,
+    "path": "doc/2026-10/10月Next.js未授权远程代码执行漏洞链分析.md",
+    "title": "10月Next.js未授权远程代码执行漏洞链分析",
+    "urls": [
+      "https://mp.weixin.qq.com/s/dvMj_VJ8zeaCmCWtjJqJPw"
+    ]
+  },
+  {
+    "index": 6,
+    "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写 (3)..md",
+    "title": "10月社区投稿活动 | 漏洞挖掘/AI渗透/面试经验/简历编写",
+    "urls": [
+      "https://mp.weixin.qq.com/s/TdWAzch3Hk6VEjIwE3sN3g",
+      "https://mp.weixin.qq.com/s/9-frdIprNeRZa5i-X-kHvQ",
+      "https://mp.weixin.qq.com/s/0TVIMOZhQHs3bgnctl6q0Q",
+      "https://mp.weixin.qq.com/s/b1SRiK0m9NzC0YF5Mx2Wqg",
+      "https://mp.weixin.qq.com/s/cQ28FiTiOHQMtM9x62kS-w"
+    ]
+  },
+  {
+    "index": 7,
+    "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写 (4)..md",
+    "title": "10月社区投稿活动 | 漏洞挖掘/AI渗透/面试经验/简历编写",
+    "urls": [
+      "https://mp.weixin.qq.com/s/TdWAzch3Hk6VEjIwE3sN3g",
+      "https://mp.weixin.qq.com/s/9-frdIprNeRZa5i-X-kHvQ",
+      "https://mp.weixin.qq.com/s/0TVIMOZhQHs3bgnctl6q0Q",
+      "https://mp.weixin.qq.com/s/b1SRiK0m9NzC0YF5Mx2Wqg",
+      "https://mp.weixin.qq.com/s/cQ28FiTiOHQMtM9x62kS-w"
+    ]
+  },
+  {
+    "index": 8,
+    "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写 (5)..md",
+    "title": "10月社区投稿活动 | 漏洞挖掘/AI渗透/面试经验/简历编写",
+    "urls": [
+      "https://mp.weixin.qq.com/s/TdWAzch3Hk6VEjIwE3sN3g",
+      "https://mp.weixin.qq.com/s/9-frdIprNeRZa5i-X-kHvQ",
+      "https://mp.weixin.qq.com/s/0TVIMOZhQHs3bgnctl6q0Q",
+      "https://mp.weixin.qq.com/s/b1SRiK0m9NzC0YF5Mx2Wqg",
+      "https://mp.weixin.qq.com/s/cQ28FiTiOHQMtM9x62kS-w"
+    ]
+  },
+  {
+    "index": 9,
+    "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写 (6)..md",
+    "title": "10月社区投稿活动 | 漏洞挖掘/AI渗透/面试经验/简历编写",
+    "urls": [
+      "https://mp.weixin.qq.com/s/TdWAzch3Hk6VEjIwE3sN3g",
+      "https://mp.weixin.qq.com/s/9-frdIprNeRZa5i-X-kHvQ",
+      "https://mp.weixin.qq.com/s/0TVIMOZhQHs3bgnctl6q0Q",
+      "https://mp.weixin.qq.com/s/b1SRiK0m9NzC0YF5Mx2Wqg",
+      "https://mp.weixin.qq.com/s/cQ28FiTiOHQMtM9x62kS-w"
+    ]
+  },
+  {
+    "index": 10,
+    "path": "doc/2026-10/10月社区投稿活动  漏洞挖掘∕AI渗透∕面试经验∕简历编写 (7)..md",
+    "title": "10月社区投稿活动 | 漏洞挖掘/AI渗透/面试经验/简历编写",
+    "urls": [
+      "https://mp.weixin.qq.com/s/TdWAzch3Hk6VEjIwE3sN3g",
+      "https://mp.weixin.qq.com/s/9-frdIprNeRZa5i-X-kHvQ",
+      "https://mp.weixin.qq.com/s/0TVIMOZhQHs3bgnctl6q0Q",
+      "https://mp.weixin.qq.com/s/b1SRiK0m9NzC0YF5Mx2Wqg",
+      "https://mp.weixin.qq.com/s/cQ28FiTiOHQMtM9x62kS-w"
+    ]
+  },
+  {
+    "index": 11,
+    "path": "doc/2026-10/1413个漏洞背后，终端防护正在从装个杀软变成体系化运营.md",
+    "title": "1413个漏洞背后，终端防护正在从\"装个杀软\"变成\"体系化运营\"",
+    "urls": [
+      "https://mp.weixin.qq.com/s/X5SjW1VZUW1LhpzrVHQVkg"
+    ]
+  },
+  {
+    "index": 12,
+    "path": "doc/2026-10/2026-10微软漏洞通告.md",
+    "title": "2026-10微软漏洞通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/gvHPhJ_h0WJG8zn0vXwBJw"
+    ]
+  },
+  {
+    "index": 13,
+    "path": "doc/2026-10/59% 的汽车安全漏洞，都在你的车机和 T-Box 里.md",
+    "title": "59% 的汽车安全漏洞，都在你的车机和 T-Box 里",
+    "urls": [
+      "https://mp.weixin.qq.com/s/hGzub_zM5pQ78BUJm97H_w"
+    ]
+  },
+  {
+    "index": 14,
+    "path": "doc/2026-10/66节课程，4大阶段，带你完整掌握AI+SRC漏洞挖掘能力.md",
+    "title": "66节课程，4大阶段，带你完整掌握AI+SRC漏洞挖掘能力",
+    "urls": [
+      "https://mp.weixin.qq.com/s/oeHPQHm2GBKIp_ZAAuadqQ"
+    ]
+  },
+  {
+    "index": 15,
+    "path": "doc/2026-10/9月高危漏洞速览：10个必须修复的安全漏洞（附详解）.md",
+    "title": "9月高危漏洞速览：10个必须修复的安全漏洞（附详解）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/rzqymjBJ9rKJM4hEenB2Dg"
+    ]
+  },
+  {
+    "index": 16,
+    "path": "doc/2026-10/AI 挖洞越来越快，为什么企业的漏洞还是修不完？.md",
+    "title": "AI 挖洞越来越快，为什么企业的漏洞还是修不完？",
+    "urls": [
+      "https://mp.weixin.qq.com/s/KsSLru3cu1tJdtwUPXrctw"
+    ]
+  },
+  {
+    "index": 17,
+    "path": "doc/2026-10/AI 漏洞挖掘，如何从入门到不提桶跑路：给 AI 上缰绳.md",
+    "title": "AI 漏洞挖掘，如何从入门到不\"提桶\"跑路：给 AI 上缰绳",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Xy8bJopANzftevZAnGyJww"
+    ]
+  },
+  {
+    "index": 18,
+    "path": "doc/2026-10/AI 驱动的自动化代码审计与漏洞挖掘平台.md",
+    "title": "AI 驱动的自动化代码审计与漏洞挖掘平台",
+    "urls": [
+      "https://mp.weixin.qq.com/s/V1zHZyN66WIY1Lj155oSOQ"
+    ]
+  },
+  {
+    "index": 19,
+    "path": "doc/2026-10/AI低质报告冲击漏洞赏金计划，英特尔、谷歌等科技巨头相继调整规则.md",
+    "title": "AI低质报告冲击漏洞赏金计划，英特尔、谷歌等科技巨头相继调整规则",
+    "urls": [
+      "https://mp.weixin.qq.com/s/FJ_KVpGS6uuHHrj04vNksg"
+    ]
+  },
+  {
+    "index": 20,
+    "path": "doc/2026-10/AI发现Linux内核vhost漏洞，本地用户提权Root，虚拟机可逃逸宿主机.md",
+    "title": "AI发现Linux内核vhost漏洞，本地用户提权Root，虚拟机可逃逸宿主机",
+    "urls": [
+      "https://mp.weixin.qq.com/s/1PKRxDkQcr6SIXR--hU2RA"
+    ]
+  },
+  {
+    "index": 21,
+    "path": "doc/2026-10/AI在漏洞挖掘中的辅助作用.md",
+    "title": "AI在漏洞挖掘中的辅助作用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mlh9pX_0BnZyZ5gdNlM3og"
+    ]
+  },
+  {
+    "index": 22,
+    "path": "doc/2026-10/AI挖洞实战 02｜Workbuddy+Skill技能库，完整复现高危文件上传漏洞.md",
+    "title": "AI挖洞实战 02｜Workbuddy+Skill技能库，完整复现高危文件上传漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/LpqBAv09e6qN99rIhS7cfg"
+    ]
+  },
+  {
+    "index": 23,
+    "path": "doc/2026-10/AI挖洞实战 04  Workbuddy+Skill技能库，完整复现短信验证码复用漏洞.md",
+    "title": "AI挖洞实战 04 | Workbuddy+Skill技能库，完整复现短信验证码复用漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/kmlQliDXWzuQbbwA2tqhUw"
+    ]
+  },
+  {
+    "index": 24,
+    "path": "doc/2026-10/AI挖洞实战 05  Workbuddy+Skill技能库，完整复现垂直越权访问漏洞.md",
+    "title": "AI挖洞实战 05 | Workbuddy+Skill技能库，完整复现垂直越权访问漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/b6oZlDc6TT2d-7TcYE_blw"
+    ]
+  },
+  {
+    "index": 25,
+    "path": "doc/2026-10/AI挖洞实战 06  Workbuddy+Skill技能库，完整复现水平越权漏洞.md",
+    "title": "AI挖洞实战 06 | Workbuddy+Skill技能库，完整复现水平越权漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/o2D8EgBoxN_wf3hd-lB2Ow"
+    ]
+  },
+  {
+    "index": 26,
+    "path": "doc/2026-10/AI说91.5%高危，维护者只认51.3%：漏洞定级这活儿，为什么还是离不开人？.md",
+    "title": "AI说91.5%高危，维护者只认51.3%：漏洞定级这活儿，为什么还是离不开人？",
+    "urls": [
+      "https://mp.weixin.qq.com/s/EI4JF3pHROHiSo23b1FA7w"
+    ]
+  },
+  {
+    "index": 27,
+    "path": "doc/2026-10/AI赋能漏洞挖掘案例分享1-某系统从sql到登录绕过再到后台getshell.md",
+    "title": "AI赋能漏洞挖掘案例分享1-某系统从sql到登录绕过再到后台getshell",
+    "urls": [
+      "https://mp.weixin.qq.com/s/-2cVW9EcwezUH6yYrJgBRA"
+    ]
+  },
+  {
+    "index": 28,
+    "path": "doc/2026-10/Anthropic 发出安全预警：小型模型或将实现自复制，催生物联网 AI 蠕虫风险；CNNVD：2026年9月新增漏洞13849个，授权问题占比最高 牛览.md",
+    "title": "Anthropic 发出安全预警：小型模型或将实现自复制，催生物联网 AI 蠕虫风险；CNNVD：2026年9月新增漏洞13849个，授权问题占比最高| 牛览",
+    "urls": [
+      "https://mp.weixin.qq.com/s/YlL0kP-Cjc8Vq7TjfJ25_Q"
+    ]
+  },
+  {
+    "index": 29,
+    "path": "doc/2026-10/Anthropic 开源漏洞扫描工具OSS Scanner，发现了HTTP∕2 上传功能存在严重漏洞，可导致客户端远程代码执行！.md",
+    "title": "Anthropic 开源漏洞扫描工具OSS Scanner，发现了HTTP/2 上传功能存在严重漏洞，可导致客户端远程代码执行！",
+    "urls": [
+      "https://mp.weixin.qq.com/s/TZ8FUXgXjzL0ArIDW5yKVA"
+    ]
+  },
+  {
+    "index": 30,
+    "path": "doc/2026-10/AnyDesk 远程代码执行漏洞详情及 PoC 利用代码已公开披露.md",
+    "title": "AnyDesk 远程代码执行漏洞详情及 PoC 利用代码已公开披露",
+    "urls": [
+      "https://mp.weixin.qq.com/s/SMAS4nyn5QCSeaXbQQmUeA"
+    ]
+  },
+  {
+    "index": 31,
+    "path": "doc/2026-10/Apache Tomcat 11.0.27 未认证DoS 0Day.md",
+    "title": "Apache Tomcat 11.0.27 未认证DoS 0Day",
+    "urls": [
+      "https://mp.weixin.qq.com/s/t7lsfvH_VPh9T-WhAxuGTA"
+    ]
+  },
+  {
+    "index": 32,
+    "path": "doc/2026-10/Atlassian 多产品预认证任意文件读取漏洞分析：VackBot 已实现检测覆盖.md",
+    "title": "Atlassian 多产品预认证任意文件读取漏洞分析：VackBot 已实现检测覆盖",
+    "urls": [
+      "https://mp.weixin.qq.com/s/-BSW7Vuoey4sm9SPkG7bZA"
+    ]
+  },
+  {
+    "index": 33,
+    "path": "doc/2026-10/CISA 警告管理员立即修复被利用为零日漏洞的 Ivanti 漏洞.md",
+    "title": "CISA 警告管理员立即修复被利用为零日漏洞的 Ivanti 漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/nbdaXVu2erBZnR3l3dO37g"
+    ]
+  },
+  {
+    "index": 34,
+    "path": "doc/2026-10/CNNVD  关于微软多个安全漏洞的通报.md",
+    "title": "CNNVD | 关于微软多个安全漏洞的通报",
+    "urls": [
+      "https://mp.weixin.qq.com/s/cdxCUW9iUAb8vXmfDP6oVg",
+      "https://mp.weixin.qq.com/s/Ar_lPZX3Te-HSJAfk9WoeQ",
+      "https://mp.weixin.qq.com/s/enuho7Zcuro-tlt_2bWGzg"
+    ]
+  },
+  {
+    "index": 35,
+    "path": "doc/2026-10/CNNVD关于微软多个安全漏洞的通报.md",
+    "title": "CNNVD关于微软多个安全漏洞的通报",
+    "urls": [
+      "https://mp.weixin.qq.com/s/cdxCUW9iUAb8vXmfDP6oVg",
+      "https://mp.weixin.qq.com/s/enuho7Zcuro-tlt_2bWGzg"
+    ]
+  },
+  {
+    "index": 36,
+    "path": "doc/2026-10/CNVD漏洞周报2026年第39、40期.md",
+    "title": "CNVD漏洞周报2026年第39、40期",
+    "urls": [
+      "https://mp.weixin.qq.com/s/4IWVKt-4Cw-JmXISIezsJQ",
+      "https://mp.weixin.qq.com/s/ALjgGGwYtQrLOywqg99fnw"
+    ]
+  },
+  {
+    "index": 37,
+    "path": "doc/2026-10/CVE-2026-66804 Windows COM 提权.md",
+    "title": "CVE-2026-66804 Windows COM 提权",
+    "urls": [
+      "https://mp.weixin.qq.com/s/k09QSYkVVMTJKP7CruFWCQ"
+    ]
+  },
+  {
+    "index": 38,
+    "path": "doc/2026-10/CVE-2026-83834：Windows内核驱动UAF本地提权漏洞分析.md",
+    "title": "CVE-2026-83834：Windows内核驱动UAF本地提权漏洞分析",
+    "urls": [
+      "https://mp.weixin.qq.com/s/fE5NH1A6sVMbWHeu3kGm0w"
+    ]
+  },
+  {
+    "index": 39,
+    "path": "doc/2026-10/CVSS 10.0！特定条件下 GitLab 远程代码执行漏洞.md",
+    "title": "CVSS 10.0！特定条件下 GitLab 远程代码执行漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/W7hO2GDxsJJ3B6_42Wg8_g"
+    ]
+  },
+  {
+    "index": 40,
+    "path": "doc/2026-10/CVSS满分10.0！WordPress Bricksforge插件无认证RCE漏洞，现已被野外利用.md",
+    "title": "CVSS满分10.0！WordPress Bricksforge插件无认证RCE漏洞，现已被野外利用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Rpxrm2k19dwXUE3Hpi2rLw"
+    ]
+  },
+  {
+    "index": 41,
+    "path": "doc/2026-10/ChatGPT GitHub连接器存严重漏洞，攻击者可窃取私有仓库密钥.md",
+    "title": "ChatGPT GitHub连接器存严重漏洞，攻击者可窃取私有仓库密钥",
+    "urls": [
+      "https://mp.weixin.qq.com/s/hRZaKRg8OGHfAV1x7T8OGg"
+    ]
+  },
+  {
+    "index": 42,
+    "path": "doc/2026-10/Cisco Nexus交换机存在严重漏洞，未经身份验证的攻击者可利用这些漏洞以root权限执行代码.md",
+    "title": "Cisco Nexus交换机存在严重漏洞，未经身份验证的攻击者可利用这些漏洞以root权限执行代码",
+    "urls": [
+      "https://mp.weixin.qq.com/s/qL4HAhOxMCnRvAx_TYzI3A"
+    ]
+  },
+  {
+    "index": 43,
+    "path": "doc/2026-10/Citrix XenServer 存在多个高危漏洞，虚拟机内高权限用户可攻陷宿主机.md",
+    "title": "Citrix XenServer 存在多个高危漏洞，虚拟机内高权限用户可攻陷宿主机",
+    "urls": [
+      "https://mp.weixin.qq.com/s/hjYIfLaekV6If-6quIIzcw"
+    ]
+  },
+  {
+    "index": 44,
+    "path": "doc/2026-10/Curl客户端任意代码执行，还是Anthropic最新的OSS Scaner挖的？.md",
+    "title": "Curl客户端任意代码执行，还是Anthropic最新的OSS Scaner挖的？",
+    "urls": [
+      "https://mp.weixin.qq.com/s/-RKtac9xjoBN6w9e4nRZOQ"
+    ]
+  },
+  {
+    "index": 45,
+    "path": "doc/2026-10/Docker修复Docker Hub存续两年高危漏洞，可冒用他人身份推送镜像.md",
+    "title": "Docker修复Docker Hub存续两年高危漏洞，可冒用他人身份推送镜像",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Z86xmQbCREytPIMXsY5iCw"
+    ]
+  },
+  {
+    "index": 46,
+    "path": "doc/2026-10/F5 修复三个 NGINX 漏洞：可导致内存损坏和远程代码执行.md",
+    "title": "F5 修复三个 NGINX 漏洞：可导致内存损坏和远程代码执行",
+    "urls": [
+      "https://mp.weixin.qq.com/s/qCXR8lrFtXG3yL7D54qJQw"
+    ]
+  },
+  {
+    "index": 47,
+    "path": "doc/2026-10/GitLab CVE-2026-97229 满分 RCE 分析：一条注释骗过校验，一次重编译引爆 Onigmo.md",
+    "title": "GitLab CVE-2026-97229 满分 RCE 分析：一条注释骗过校验，一次重编译引爆 Onigmo",
+    "urls": [
+      "https://mp.weixin.qq.com/s/N_BHp8Dv-RUgjOStWhr2ow",
+      "https://mp.weixin.qq.com/s/QCtXazU6UaXU4OYH5teI9Q"
+    ]
+  },
+  {
+    "index": 48,
+    "path": "doc/2026-10/GitLab 未授权 RCE（CVE-2026-97229）紧急预警，自建实例请立即升级 19.4.2 ∕ 19.3.5 ∕ 19.2.8 POC.md",
+    "title": "GitLab 未授权 RCE（CVE-2026-97229）紧急预警，自建实例请立即升级 19.4.2 / 19.3.5 / 19.2.8 POC",
+    "urls": [
+      "https://mp.weixin.qq.com/s/cVoUeYbTcbTFypI5Zdowng"
+    ]
+  },
+  {
+    "index": 49,
+    "path": "doc/2026-10/GitLab 紧急修复严重漏洞，可在服务器上实现任意代码执行.md",
+    "title": "GitLab 紧急修复严重漏洞，可在服务器上实现任意代码执行",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Ux1Esne9acGlf_mficz31A"
+    ]
+  },
+  {
+    "index": 50,
+    "path": "doc/2026-10/GitLab修复严重任意代码执行漏洞，无需登录即可远程利用.md",
+    "title": "GitLab修复严重任意代码执行漏洞，无需登录即可远程利用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/dsm9xgLCkRff122lSI9xwQ"
+    ]
+  },
+  {
+    "index": 51,
+    "path": "doc/2026-10/GitLab曝CVSS 10.0严重漏洞，特定条件下未认证攻击者可远程执行任意代码(CVE-2026-97229).md",
+    "title": "GitLab曝CVSS 10.0严重漏洞，特定条件下未认证攻击者可远程执行任意代码(CVE-2026-97229)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/d87nbD57ZczK8VtMPYpLOw"
+    ]
+  },
+  {
+    "index": 52,
+    "path": "doc/2026-10/Google 9 万美金的RCE：Flask 会话 Cookie 自签密钥与 Pickle 反序列化.md",
+    "title": "Google 9 万美金的RCE：Flask 会话 Cookie 自签密钥与 Pickle 反序列化",
+    "urls": [
+      "https://mp.weixin.qq.com/s/xZkQoGA944aOKwDdESTP0Q"
+    ]
+  },
+  {
+    "index": 53,
+    "path": "doc/2026-10/Google DevSite高危漏洞：未认证攻击者可实现远程代码执行.md",
+    "title": "Google DevSite高危漏洞：未认证攻击者可实现远程代码执行",
+    "urls": [
+      "https://mp.weixin.qq.com/s/OCMdAhrax4NgfGNmXrxb0A"
+    ]
+  },
+  {
+    "index": 54,
+    "path": "doc/2026-10/GraphQL 漏洞 Part-2：深度嵌套 DoS、IDOR 越权与错误消息泄漏实战.md",
+    "title": "GraphQL 漏洞 Part-2：深度嵌套 DoS、IDOR 越权与错误消息泄漏实战",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Mko0iLQgm-BZqQ-YCstoWQ"
+    ]
+  },
+  {
+    "index": 55,
+    "path": "doc/2026-10/GraphQL 漏洞 Part-3 收官：进阶玩法与 19 份 HackerOne 实战报告速查.md",
+    "title": "GraphQL 漏洞 Part-3 收官：进阶玩法与 19 份 HackerOne 实战报告速查",
+    "urls": [
+      "https://mp.weixin.qq.com/s/0-QYczDO_M_jfaRhWkAKBA"
+    ]
+  },
+  {
+    "index": 56,
+    "path": "doc/2026-10/GraphQL 漏洞第一讲：从内省查询到 IDOR 全攻击面.md",
+    "title": "GraphQL 漏洞第一讲：从内省查询到 IDOR 全攻击面",
+    "urls": [
+      "https://mp.weixin.qq.com/s/lrnmIpOioi0UplWC5tKcTQ"
+    ]
+  },
+  {
+    "index": 57,
+    "path": "doc/2026-10/Ivanti Connect Secure 未认证 RCE 与提权漏洞链分析：VackBot 已实现检测覆盖.md",
+    "title": "Ivanti Connect Secure 未认证 RCE 与提权漏洞链分析：VackBot 已实现检测覆盖",
+    "urls": [
+      "https://mp.weixin.qq.com/s/eI-M08PhpbUsYp8YGuA2yg"
+    ]
+  },
+  {
+    "index": 58,
+    "path": "doc/2026-10/Juice Shop 靶场实战：现代全栈应用中的业务逻辑漏洞攻防.md",
+    "title": "Juice Shop 靶场实战：现代全栈应用中的业务逻辑漏洞攻防",
+    "urls": [
+      "https://mp.weixin.qq.com/s/tX81WRy6YEnwMRTRzCYG2w"
+    ]
+  },
+  {
+    "index": 59,
+    "path": "doc/2026-10/LMCache 严重远程代码执行漏洞仍未修复，公开的 PoC 漏洞利用程序已发布.md",
+    "title": "LMCache 严重远程代码执行漏洞仍未修复，公开的 PoC 漏洞利用程序已发布",
+    "urls": [
+      "https://mp.weixin.qq.com/s/IeNckCVu-Dgtj2C4jYyzqg"
+    ]
+  },
+  {
+    "index": 60,
+    "path": "doc/2026-10/Linux vhost 漏洞 PoC 公开，虚拟化边界需要重新核对.md",
+    "title": "Linux vhost 漏洞 PoC 公开，虚拟化边界需要重新核对",
+    "urls": [
+      "https://mp.weixin.qq.com/s/8-Urepp7voEW992Hf-6kQQ"
+    ]
+  },
+  {
+    "index": 61,
+    "path": "doc/2026-10/Linux vhost高危漏洞PoC公开，可致root提权与虚拟机逃逸.md",
+    "title": "Linux vhost高危漏洞PoC公开，可致root提权与虚拟机逃逸",
+    "urls": [
+      "https://mp.weixin.qq.com/s/YdZl7jQJWQ-kb5teskb9rQ"
+    ]
+  },
+  {
+    "index": 62,
+    "path": "doc/2026-10/Linux 内核曝出严重漏洞：可导致虚拟机逃逸并获取宿主机控制权.md",
+    "title": "Linux 内核曝出严重漏洞：可导致虚拟机逃逸并获取宿主机控制权",
+    "urls": [
+      "https://mp.weixin.qq.com/s/yayaoL2lXOzVFyoKt2OOWQ"
+    ]
+  },
+  {
+    "index": 63,
+    "path": "doc/2026-10/Linux内核IPv4校验和处理缺陷曝光(CVE-2026-99999)，恶意数据包或影响虚拟机隔离.md",
+    "title": "Linux内核IPv4校验和处理缺陷曝光(CVE-2026-99999)，恶意数据包或影响虚拟机隔离",
+    "urls": [
+      "https://mp.weixin.qq.com/s/RQ3prr9FtqJjBt1UGWSIAQ"
+    ]
+  },
+  {
+    "index": 64,
+    "path": "doc/2026-10/MCP通道零校验直接RCE：Langflow一波四洞，自托管凭据库可解密（CVE-2026-105740∕9205·附PoC）.md",
+    "title": "MCP通道零校验直接RCE：Langflow一波四洞，自托管凭据库可解密（CVE-2026-105740/9205·附PoC）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ueHmSh0H9AF00JGBYwLr4Q"
+    ]
+  },
+  {
+    "index": 65,
+    "path": "doc/2026-10/NGINX 爆出 3 个高危漏洞！可远程使服务崩溃，特定条件下可代码执行.md",
+    "title": "NGINX 爆出 3 个高危漏洞！可远程使服务崩溃，特定条件下可代码执行",
+    "urls": [
+      "https://mp.weixin.qq.com/s/0HDWNmL-9UqowHDK00cXcg"
+    ]
+  },
+  {
+    "index": 66,
+    "path": "doc/2026-10/NVIDIA曝高危漏洞，超2000台GPU监控主机暴露公网.md",
+    "title": "NVIDIA曝高危漏洞，超2000台GPU监控主机暴露公网",
+    "urls": [
+      "https://mp.weixin.qq.com/s/nvW5weuC2KdEjDTakP23rA"
+    ]
+  },
+  {
+    "index": 67,
+    "path": "doc/2026-10/Nacos 综合漏洞利用工具（重构版）.md",
+    "title": "Nacos 综合漏洞利用工具（重构版）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/uddPSvCaNinql5Z7tcONjA"
+    ]
+  },
+  {
+    "index": 68,
+    "path": "doc/2026-10/Next.js next∕og 未授权 RCE（CVE-2026-94545）：一张图片换来服务器 Shell.md",
+    "title": "Next.js next/og 未授权 RCE（CVE-2026-94545）：一张图片换来服务器 Shell",
+    "urls": [
+      "https://mp.weixin.qq.com/s/zkKFNj81YY_iQqRWsG4e9g"
+    ]
+  },
+  {
+    "index": 69,
+    "path": "doc/2026-10/Next.js 曝出严重漏洞：可导致未授权远程代码执行 (RCE).md",
+    "title": "Next.js 曝出严重漏洞：可导致未授权远程代码执行 (RCE)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/HXQ8io4JvsQorAVk9Z-fug"
+    ]
+  },
+  {
+    "index": 70,
+    "path": "doc/2026-10/Next.js 紧急修复两个严重的 RCE 漏洞.md",
+    "title": "Next.js 紧急修复两个严重的 RCE 漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Rb_Tq5UQddQYbrIObmPn6Q"
+    ]
+  },
+  {
+    "index": 71,
+    "path": "doc/2026-10/Next.js 通过紧急带外更新修复两个严重的未经身份验证远程代码执行漏洞.md",
+    "title": "Next.js 通过紧急带外更新修复两个严重的未经身份验证远程代码执行漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/-qqqGzVCTMF4qGo-ofFGcQ"
+    ]
+  },
+  {
+    "index": 72,
+    "path": "doc/2026-10/OSCP百日备考14｜Web漏洞利用入门：XSS、CSRF、命令注入，从弹框到拿Shell的完整路径.md",
+    "title": "OSCP百日备考14｜Web漏洞利用入门：XSS、CSRF、命令注入，从弹框到拿Shell的完整路径",
+    "urls": [
+      "https://mp.weixin.qq.com/s/JiNa382sS_91DJ-Sy04i5A"
+    ]
+  },
+  {
+    "index": 73,
+    "path": "doc/2026-10/OpenAI 失控 AI 代理对 Wikimedia 发起异常操作，海量流量诱发服务中断风险；CNVD两期周报：收录866个漏洞，0day占比达88% 牛览.md",
+    "title": "OpenAI 失控 AI 代理对 Wikimedia 发起异常操作，海量流量诱发服务中断风险；CNVD两期周报：收录866个漏洞，0day占比达88%| 牛览",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Ep_EQO7DkJwY9KlHlKypdQ"
+    ]
+  },
+  {
+    "index": 74,
+    "path": "doc/2026-10/OpenCode session 命令执行漏洞(CVE-2026-22812).md",
+    "title": "OpenCode session 命令执行漏洞(CVE-2026-22812)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/z3tQtAWZjlB8Fam5FkztZw"
+    ]
+  },
+  {
+    "index": 75,
+    "path": "doc/2026-10/Palo Alto Networks警告称：PAN-OS远程代码执行漏洞已被攻击者利用.md",
+    "title": "Palo Alto Networks警告称：PAN-OS远程代码执行漏洞已被攻击者利用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/vjV1C9QRBZ5w0JOzbK1KGA"
+    ]
+  },
+  {
+    "index": 76,
+    "path": "doc/2026-10/Palo Alto：PAN-OS RCE 漏洞已遭利用.md",
+    "title": "Palo Alto：PAN-OS RCE 漏洞已遭利用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ol3DAgd2ptMXGZiWp5-DdQ"
+    ]
+  },
+  {
+    "index": 77,
+    "path": "doc/2026-10/REA逆向一切！渗透逆向新利器、MCP 驱动全栈逆向方案，解析原生二进制、EXE、APK，高效挖掘程序底层漏洞.md",
+    "title": "REA逆向一切！渗透逆向新利器、MCP 驱动全栈逆向方案，解析原生二进制、EXE、APK，高效挖掘程序底层漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/KLTabsyKBHVfbJxbEzeoRg"
+    ]
+  },
+  {
+    "index": 78,
+    "path": "doc/2026-10/SDC2026议题预告  ZeroMDASH：领域自适应的Agent-Native通用漏洞挖掘工程.md",
+    "title": "SDC2026议题预告 | ZeroMDASH：领域自适应的Agent-Native通用漏洞挖掘工程",
+    "urls": [
+      "https://mp.weixin.qq.com/s/L8B0JcF9u0qjDj5qXgK4Aw"
+    ]
+  },
+  {
+    "index": 79,
+    "path": "doc/2026-10/SRC与红队宏观信息收集思路，大规模资产梳理、POC 筛选、批量扫描脚本内网横向与真实攻防案例.md",
+    "title": "SRC与红队宏观信息收集思路，大规模资产梳理、POC 筛选、批量扫描脚本内网横向与真实攻防案例",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ipwnxXpXr0Q_To8-qDa6Tg"
+    ]
+  },
+  {
+    "index": 80,
+    "path": "doc/2026-10/SYSTEM 权限之上还有高手？深度拆解 Windows SmartScreen 飞地代码执行漏洞（CVE-2026-83498）.md",
+    "title": "SYSTEM 权限之上还有高手？深度拆解 Windows SmartScreen 飞地代码执行漏洞（CVE-2026-83498）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/eoDPyclYfp_N0PE9fVQjpg"
+    ]
+  },
+  {
+    "index": 81,
+    "path": "doc/2026-10/Skill研发漏洞挖掘Skill从零到打包.md",
+    "title": "Skill研发:漏洞挖掘Skill从零到打包",
+    "urls": [
+      "https://mp.weixin.qq.com/s/DSfwy44fgwd-toHRbTBCXg"
+    ]
+  },
+  {
+    "index": 82,
+    "path": "doc/2026-10/SmarterMail 高危漏洞链公开：一封恶意邮件可拿下服务器 SYSTEM 权限.md",
+    "title": "SmarterMail 高危漏洞链公开：一封恶意邮件可拿下服务器 SYSTEM 权限",
+    "urls": [
+      "https://mp.weixin.qq.com/s/lR7JvlObBRCkIbEWALLwTQ"
+    ]
+  },
+  {
+    "index": 83,
+    "path": "doc/2026-10/SonicWall SMA 1000曝严重漏洞，补丁发布后遭135次攻击尝试.md",
+    "title": "SonicWall SMA 1000曝严重漏洞，补丁发布后遭135次攻击尝试",
+    "urls": [
+      "https://mp.weixin.qq.com/s/xc5fw9e9Gr7kJFVa7ixRPA"
+    ]
+  },
+  {
+    "index": 84,
+    "path": "doc/2026-10/Splunk爆出9.8分高危漏洞【PoC已公布】.md",
+    "title": "Splunk爆出9.8分高危漏洞【PoC已公布】",
+    "urls": [
+      "https://mp.weixin.qq.com/s/8p3thSsmkkPFFs7KZuzN-Q"
+    ]
+  },
+  {
+    "index": 85,
+    "path": "doc/2026-10/TOZED X300 5G路由器曝CVSS 10.0命令注入漏洞，未认证攻击者可获取Root权限，暂无修复补丁(CVE-2026-108576).md",
+    "title": "TOZED X300 5G路由器曝CVSS 10.0命令注入漏洞，未认证攻击者可获取Root权限，暂无修复补丁(CVE-2026-108576)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/tQ3NSlCGVf1mBtKwJl4SAg"
+    ]
+  },
+  {
+    "index": 86,
+    "path": "doc/2026-10/TanStack CVE-2026-102989（CVSS 9.3）反射型 XSS 漏洞波及月下载量达 9800 万的生态系统.md",
+    "title": "TanStack CVE-2026-102989（CVSS 9.3）反射型 XSS 漏洞波及月下载量达 9800 万的生态系统",
+    "urls": [
+      "https://mp.weixin.qq.com/s/haMcIXdH3bzHhVdqw8OcQg"
+    ]
+  },
+  {
+    "index": 87,
+    "path": "doc/2026-10/Veeam Agent 漏洞被积极利用，以获取 Windows 系统权限.md",
+    "title": "Veeam Agent 漏洞被积极利用，以获取 Windows 系统权限",
+    "urls": [
+      "https://mp.weixin.qq.com/s/S1BwyZirHF3JI8IHt63S5g"
+    ]
+  },
+  {
+    "index": 88,
+    "path": "doc/2026-10/Volexity 发现利用三个零日漏洞的隐秘 Ivanti VPN 攻击.md",
+    "title": "Volexity 发现利用三个零日漏洞的隐秘 Ivanti VPN 攻击",
+    "urls": [
+      "https://mp.weixin.qq.com/s/dAmz1N_7j5P8w0TVeqz_ww"
+    ]
+  },
+  {
+    "index": 89,
+    "path": "doc/2026-10/Web漏洞挖掘实战宝典：40 个必知技巧，全是看得到赏金的漏洞实操思路！.md",
+    "title": "Web漏洞挖掘实战宝典：40 个必知技巧，全是看得到赏金的漏洞实操思路！",
+    "urls": [
+      "https://mp.weixin.qq.com/s/R989TwSqm9JYaewgfBiHBA"
+    ]
+  },
+  {
+    "index": 90,
+    "path": "doc/2026-10/Windows BitLocker漏洞可让攻击者绕过安全防护并实现权限提升.md",
+    "title": "Windows BitLocker漏洞可让攻击者绕过安全防护并实现权限提升",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Owl-elYwuUTpw5CPXCN9kg"
+    ]
+  },
+  {
+    "index": 91,
+    "path": "doc/2026-10/WordPress CVE-2026-87902被用于主动远程代码执行攻击（附代码）.md",
+    "title": "WordPress CVE-2026-87902被用于主动远程代码执行攻击（附代码）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/T34I5fweW3G9HvdTB2vuNA"
+    ]
+  },
+  {
+    "index": 92,
+    "path": "doc/2026-10/Wukong_HRM曝双重严重漏洞，最高CVSS 9.8，未认证攻击者可直接获取HR管理员权限(CVE-2026-108707).md",
+    "title": "Wukong_HRM曝双重严重漏洞，最高CVSS 9.8，未认证攻击者可直接获取HR管理员权限(CVE-2026-108707)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/uLwvNp7vGbrz3EmD4OKd7Q"
+    ]
+  },
+  {
+    "index": 93,
+    "path": "doc/2026-10/XBOW联手GPT-5.6用6天拿下Chrome全链漏洞,Google付了25万美元赏金.md",
+    "title": "XBOW联手GPT-5.6用6天拿下Chrome全链漏洞,Google付了25万美元赏金",
+    "urls": [
+      "https://mp.weixin.qq.com/s/YNpIu78SlOmwn4iW6AxJwQ"
+    ]
+  },
+  {
+    "index": 94,
+    "path": "doc/2026-10/XXL-JOB 越权漏洞分析.md",
+    "title": "XXL-JOB 越权漏洞分析",
+    "urls": [
+      "https://mp.weixin.qq.com/s/dCg_rknpfkhy82eFYIUvEw"
+    ]
+  },
+  {
+    "index": 95,
+    "path": "doc/2026-10/Zigbee 近场打进网关：拆 Philips Hue Bridge 的 OTA 堆溢出（CVE-2026-3555）.md",
+    "title": "Zigbee 近场打进网关：拆 Philips Hue Bridge 的 OTA 堆溢出（CVE-2026-3555）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/EloyWJNgQI4qrRMFfiZ2Cg"
+    ]
+  },
+  {
+    "index": 96,
+    "path": "doc/2026-10/glances-CVE-2026-32596-信息泄露.md",
+    "title": "glances-CVE-2026-32596-信息泄露",
+    "urls": [
+      "https://mp.weixin.qq.com/s/sPmnFEHIB6JZg1UCrg7FFA"
+    ]
+  },
+  {
+    "index": 97,
+    "path": "doc/2026-10/react2shell漏洞分析(一).md",
+    "title": "react2shell漏洞分析(一)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/2p0Zs62HRJu5m5bhRVDW3A"
+    ]
+  },
+  {
+    "index": 98,
+    "path": "doc/2026-10/vulfocus∕tomcat漏洞复现.md",
+    "title": "vulfocus/tomcat漏洞复现",
+    "urls": [
+      "https://mp.weixin.qq.com/s/31gXLffDQhs9sECe1DV4GA"
+    ]
+  },
+  {
+    "index": 99,
+    "path": "doc/2026-10/「AI漏洞挖掘+SAST误报+Agentic安全：Capital One开源VulnHunter实测拆解」.md",
+    "title": "「AI漏洞挖掘+SAST误报+Agentic安全：Capital One开源VulnHunter实测拆解」",
+    "urls": [
+      "https://mp.weixin.qq.com/s/UI0oBpf867E-tXNU3APneQ"
+    ]
+  },
+  {
+    "index": 100,
+    "path": "doc/2026-10/「AI漏洞挖掘+漏洞赏金侦察+7问验证闸门：Agentic Bug Hunter开源拆解」.md",
+    "title": "「AI漏洞挖掘+漏洞赏金侦察+7问验证闸门：Agentic Bug Hunter开源拆解」",
+    "urls": [
+      "https://mp.weixin.qq.com/s/02GL2fVon90Z5ALCWISrcA"
+    ]
+  },
+  {
+    "index": 101,
+    "path": "doc/2026-10/「AI漏洞挖掘」AutoCVE拆解：多Agent自动审源码，一周提交30个CVE.md",
+    "title": "「AI漏洞挖掘」AutoCVE拆解：多Agent自动审源码，一周提交30个CVE",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Ma5fQIrcA9tCRmjAqyB9_Q"
+    ]
+  },
+  {
+    "index": 102,
+    "path": "doc/2026-10/「SRC漏洞」越权漏洞中：平行越权改ID，垂直越权改鉴权.md",
+    "title": "「SRC漏洞」越权漏洞中：平行越权改ID，垂直越权改鉴权",
+    "urls": [
+      "https://mp.weixin.qq.com/s/o6ITxWRZWBNkOi5npsLzzg"
+    ]
+  },
+  {
+    "index": 103,
+    "path": "doc/2026-10/「关键漏洞目录」新增「GitLab CE∕EE整数溢出漏洞(CVE-2026-97229)」等5个漏洞.md",
+    "title": "「关键漏洞目录」新增「GitLab CE/EE整数溢出漏洞(CVE-2026-97229)」等5个漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/B3APEhizoOF2zg7qEAI3Rg"
+    ]
+  },
+  {
+    "index": 104,
+    "path": "doc/2026-10/「关键漏洞目录」新增「Microsoft Windows Shell命令注入漏洞(CVE-2026-96951)」等2个漏洞.md",
+    "title": "「关键漏洞目录」新增「Microsoft Windows Shell命令注入漏洞(CVE-2026-96951)」等2个漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/YfjCU10apyTQ_fUZaHOWRA"
+    ]
+  },
+  {
+    "index": 105,
+    "path": "doc/2026-10/【勒索预警】万字溯源分析，weax勒索病毒利用国内代理IP对某ERP使用通杀0day攻击勒索，影响资产近4万（附IOC）.md",
+    "title": "【勒索预警】万字溯源分析，weax勒索病毒利用国内代理IP对某ERP使用通杀0day攻击勒索，影响资产近4万（附IOC）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/7_BwxxRjRdWcz6E30T6mvg"
+    ]
+  },
+  {
+    "index": 106,
+    "path": "doc/2026-10/【复现】GitLab正则表达式编译器未授权远程代码执行漏洞（CVE-2026-97229）.md",
+    "title": "【复现】GitLab正则表达式编译器未授权远程代码执行漏洞（CVE-2026-97229）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/dv66RLXRoEGxaea7oHaTbg"
+    ]
+  },
+  {
+    "index": 107,
+    "path": "doc/2026-10/【安全更新】微软10月安全更新多个产品高危漏洞通告.md",
+    "title": "【安全更新】微软10月安全更新多个产品高危漏洞通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/kNgZf6XrOsvaPDVYNYyUiA"
+    ]
+  },
+  {
+    "index": 108,
+    "path": "doc/2026-10/【安全速报】10月12日高危漏洞紧急预警.md",
+    "title": "【安全速报】10月12日高危漏洞紧急预警",
+    "urls": [
+      "https://mp.weixin.qq.com/s/13E2TG0B8UMbDSWMlEliWA"
+    ]
+  },
+  {
+    "index": 109,
+    "path": "doc/2026-10/【安全速报】10月14日高危漏洞紧急预警.md",
+    "title": "【安全速报】10月14日高危漏洞紧急预警",
+    "urls": [
+      "https://mp.weixin.qq.com/s/N2dHIBKI7kmL1RRSXXFuRQ"
+    ]
+  },
+  {
+    "index": 110,
+    "path": "doc/2026-10/【已复现】AnyDesk 预认证堆缓冲区溢出远程代码执行漏洞(CVE-2026-109390)安全风险通告.md",
+    "title": "【已复现】AnyDesk 预认证堆缓冲区溢出远程代码执行漏洞(CVE-2026-109390)安全风险通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/NaEuykNNL99OvDwK7rfN4w"
+    ]
+  },
+  {
+    "index": 111,
+    "path": "doc/2026-10/【已复现】CVE-2026-104935 Ivanti Connect Secure 命令执行漏洞.md",
+    "title": "【已复现】CVE-2026-104935 Ivanti Connect Secure 命令执行漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/JWxEa7A8ZkdrtUsO40U8Og"
+    ]
+  },
+  {
+    "index": 112,
+    "path": "doc/2026-10/【已复现】CVE-2026-110447 Nextcloud 内置 Collabora 未认证 命令执行漏洞.md",
+    "title": "【已复现】CVE-2026-110447 Nextcloud 内置 Collabora 未认证 命令执行漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/F-15fTyI12jVd-SRhb9sOw"
+    ]
+  },
+  {
+    "index": 113,
+    "path": "doc/2026-10/【已复现】CVE-2026-76519 Cisco Secure Email Gateway 任意文件写入漏洞.md",
+    "title": "【已复现】CVE-2026-76519 Cisco Secure Email Gateway 任意文件写入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/o1wouUrlAHCXUP6uX5fbUQ"
+    ]
+  },
+  {
+    "index": 114,
+    "path": "doc/2026-10/【已复现】GitLab 严重 RCE 漏洞，利用代码已公开.md",
+    "title": "【已复现】GitLab 严重 RCE 漏洞，利用代码已公开",
+    "urls": [
+      "https://mp.weixin.qq.com/s/7LRTPvCJ0rdLvs93hkDg_A"
+    ]
+  },
+  {
+    "index": 115,
+    "path": "doc/2026-10/【已复现】GitLab 正则表达式编译器未授权远程代码执行漏洞(CVE-2026-97229)安全风险通告.md",
+    "title": "【已复现】GitLab 正则表达式编译器未授权远程代码执行漏洞(CVE-2026-97229)安全风险通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/rZbCgLrCe4rTNE_YNrSldg"
+    ]
+  },
+  {
+    "index": 116,
+    "path": "doc/2026-10/【已复现】GitLab 远程代码执行漏洞（CVE-2026-97229）.md",
+    "title": "【已复现】GitLab 远程代码执行漏洞（CVE-2026-97229）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/hjaQwTvZOoj4i_y_dt6wAA",
+      "https://mp.weixin.qq.com/s/D3Qe3DUiCYqRMbhUtpMs_w"
+    ]
+  },
+  {
+    "index": 117,
+    "path": "doc/2026-10/【已复现】Ivanti Connect Secure 未认证 RCE 与提权漏洞链（CVE-2026-104935）.md",
+    "title": "【已复现】Ivanti Connect Secure 未认证 RCE 与提权漏洞链（CVE-2026-104935）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/PUI7M3fZ0WBEFfPC3jpOFg"
+    ]
+  },
+  {
+    "index": 118,
+    "path": "doc/2026-10/【已复现】Windows 健康与优化体验服务权限提升漏洞(CVE-2026-85884)安全风险通告.md",
+    "title": "【已复现】Windows 健康与优化体验服务权限提升漏洞(CVE-2026-85884)安全风险通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/GJiny4egNa6WEL3Bol3dhQ"
+    ]
+  },
+  {
+    "index": 119,
+    "path": "doc/2026-10/【已复现】搜狗输入法 Windows 版远程代码执行漏洞(CVE-2026-51990).md",
+    "title": "【已复现】搜狗输入法 Windows 版远程代码执行漏洞(CVE-2026-51990)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/kfTOZSdsAGDt1q1ynjosxw"
+    ]
+  },
+  {
+    "index": 120,
+    "path": "doc/2026-10/【已复现】未认证远程代码执行——AnyDesk Linux 堆缓冲区溢出漏洞（CVE-2026-109390）.md",
+    "title": "【已复现】未认证远程代码执行——AnyDesk Linux 堆缓冲区溢出漏洞（CVE-2026-109390）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/rmNQWqYV1aowzrQj_cbBng",
+      "https://mp.weixin.qq.com/s/xzXf8A6MzLR1ORN7SyGweQ"
+    ]
+  },
+  {
+    "index": 121,
+    "path": "doc/2026-10/【梆梆安全监测】安全隐私合规监管趋势及漏洞风险报告（0921-1004）.md",
+    "title": "【梆梆安全监测】安全隐私合规监管趋势及漏洞风险报告（0921-1004）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/0qMLs6WxvHJlpaEKVdHs-A"
+    ]
+  },
+  {
+    "index": 122,
+    "path": "doc/2026-10/【漏洞通告】AnyDesk Linux 预认证堆溢出漏洞(CVE-2026-109390).md",
+    "title": "【漏洞通告】AnyDesk Linux 预认证堆溢出漏洞(CVE-2026-109390)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ZGYR_RfC8kljUNFZz5pouQ"
+    ]
+  },
+  {
+    "index": 123,
+    "path": "doc/2026-10/【漏洞通告】GitLab正则表达式验证不足导致未授权远程代码执行漏洞（CVE-2026-97229).md",
+    "title": "【漏洞通告】GitLab正则表达式验证不足导致未授权远程代码执行漏洞（CVE-2026-97229)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/2Kki1jFFYFXSbrH2Xx2PAA"
+    ]
+  },
+  {
+    "index": 124,
+    "path": "doc/2026-10/【漏洞通告】GitLab远程代码执行漏洞（CVE-2026-97229）.md",
+    "title": "【漏洞通告】GitLab远程代码执行漏洞（CVE-2026-97229）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mBgFuxkiXVTm_zGChtmdDQ"
+    ]
+  },
+  {
+    "index": 125,
+    "path": "doc/2026-10/【漏洞通告】Next.js next∕og 未授权远程代码执行漏洞（CVE-2026-94545）.md",
+    "title": "【漏洞通告】Next.js next/og 未授权远程代码执行漏洞（CVE-2026-94545）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/KtShe4hqVbyBi0kPZzfanA"
+    ]
+  },
+  {
+    "index": 126,
+    "path": "doc/2026-10/【漏洞通告】Windows 健康与优化体验服务权限提升漏洞(CVE-2026-85884).md",
+    "title": "【漏洞通告】Windows 健康与优化体验服务权限提升漏洞(CVE-2026-85884)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/a2ommAMgmPiahK-mX-DURA"
+    ]
+  },
+  {
+    "index": 127,
+    "path": "doc/2026-10/【漏洞预警】AnyDesk Linux存在堆缓冲区溢出漏洞(POC已公开).md",
+    "title": "【漏洞预警】AnyDesk Linux存在堆缓冲区溢出漏洞(POC已公开)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/1nlLjhBv2YTG4WxlAqYv5A"
+    ]
+  },
+  {
+    "index": 128,
+    "path": "doc/2026-10/【漏洞预警】GitLab CI∕CD 正则表达式编译器未授权远程代码执行漏洞PoC已公开（CVE-2026-97229）.md",
+    "title": "【漏洞预警】GitLab CI/CD 正则表达式编译器未授权远程代码执行漏洞PoC已公开（CVE-2026-97229）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/aU7QxJA4uv0WWuUABxasag"
+    ]
+  },
+  {
+    "index": 129,
+    "path": "doc/2026-10/【漏洞预警】Nextcloud 已有服务器被写入后门.md",
+    "title": "【漏洞预警】Nextcloud 已有服务器被写入后门",
+    "urls": [
+      "https://mp.weixin.qq.com/s/MhHMsENNgDTSklcO39WT5Q"
+    ]
+  },
+  {
+    "index": 130,
+    "path": "doc/2026-10/【漏洞预警】macOS爆出路径穿越漏洞CVE-2026-84568(POC已公开).md",
+    "title": "【漏洞预警】macOS爆出路径穿越漏洞CVE-2026-84568(POC已公开)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/bISpSEjsCugWqPZD7z92SA"
+    ]
+  },
+  {
+    "index": 131,
+    "path": "doc/2026-10/【热点安全风险】10月15日｜Ivanti Connect Secure 曝认证绕过漏洞并遭在野利用，攻击者可绕过身份校验执行任意命令（CVE-2026-104935）.md",
+    "title": "【热点安全风险】10月15日｜Ivanti Connect Secure 曝认证绕过漏洞并遭在野利用，攻击者可绕过身份校验执行任意命令（CVE-2026-104935）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/SID7WpP7JppWHWbZL7qrzA"
+    ]
+  },
+  {
+    "index": 132,
+    "path": "doc/2026-10/【紧急漏洞预警】GitLab整数溢出导致RCE漏洞(POC已公开).md",
+    "title": "【紧急漏洞预警】GitLab整数溢出导致RCE漏洞(POC已公开)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/8eLsLmDxKtM36Djg-pCUbg"
+    ]
+  },
+  {
+    "index": 133,
+    "path": "doc/2026-10/【通知】关于陌陌安全暂停接收安全漏洞的通知.md",
+    "title": "【通知】关于陌陌安全暂停接收安全漏洞的通知",
+    "urls": [
+      "https://mp.weixin.qq.com/s/MH1ne7qF8b8CCbifdqr7DA"
+    ]
+  },
+  {
+    "index": 134,
+    "path": "doc/2026-10/【重要POC】金蝶产品线安全漏洞汇总.md",
+    "title": "【重要POC】金蝶产品线安全漏洞汇总",
+    "urls": [
+      "https://mp.weixin.qq.com/s/XmioDZX0SquMgir32tQKgg"
+    ]
+  },
+  {
+    "index": 135,
+    "path": "doc/2026-10/【风险通告】微软10月安全更新补丁和多个高危漏洞风险提示（上）.md",
+    "title": "【风险通告】微软10月安全更新补丁和多个高危漏洞风险提示（上）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/7wJo2cL8iAhC3y2pyVTzIw"
+    ]
+  },
+  {
+    "index": 136,
+    "path": "doc/2026-10/【风险通告】微软10月安全更新补丁和多个高危漏洞风险提示（下）.md",
+    "title": "【风险通告】微软10月安全更新补丁和多个高危漏洞风险提示（下）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/LvOa10rbAvDJPhAT4EqiwQ"
+    ]
+  },
+  {
+    "index": 137,
+    "path": "doc/2026-10/【高危漏洞预警】FortiMail未授权任意文件写入漏洞CVE-2026-104286.md",
+    "title": "【高危漏洞预警】FortiMail未授权任意文件写入漏洞CVE-2026-104286",
+    "urls": [
+      "https://mp.weixin.qq.com/s/E_0HUMHfETSRqnNinljMLQ"
+    ]
+  },
+  {
+    "index": 138,
+    "path": "doc/2026-10/【高危漏洞预警】GitLab CI∕CD正则编译器整数溢出远程代码执行漏洞CVE-2026-97229.md",
+    "title": "【高危漏洞预警】GitLab CI/CD正则编译器整数溢出远程代码执行漏洞CVE-2026-97229",
+    "urls": [
+      "https://mp.weixin.qq.com/s/qq8Lj_tTWvy4JGAm9nXKHQ"
+    ]
+  },
+  {
+    "index": 139,
+    "path": "doc/2026-10/【高危预警】GitLab未授权远程代码执行漏洞 CVE-2026-97229 通告.md",
+    "title": "【高危预警】GitLab未授权远程代码执行漏洞 CVE-2026-97229 通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/axXpMGD0kj0Q-q-RmfJ_eQ"
+    ]
+  },
+  {
+    "index": 140,
+    "path": "doc/2026-10/一周年回顾：深度剖析“漏洞工厂”，揭秘中国版Mythos的构建之路.md",
+    "title": "一周年回顾：深度剖析“漏洞工厂”，揭秘中国版Mythos的构建之路",
+    "urls": [
+      "https://mp.weixin.qq.com/s/LLTuVE8lSUEf2jIU5vwNug"
+    ]
+  },
+  {
+    "index": 141,
+    "path": "doc/2026-10/一条链不够，就上两条： 从默认弱口令到 www-data 的 RCE 复盘.md",
+    "title": "一条链不够，就上两条： 从默认弱口令到 www-data 的 RCE 复盘",
+    "urls": [
+      "https://mp.weixin.qq.com/s/166SvJe6W8EMC0GQI2UiTw"
+    ]
+  },
+  {
+    "index": 142,
+    "path": "doc/2026-10/一次未授权到 yudao RCE 的完整利用链复盘.md",
+    "title": "一次未授权到 yudao RCE 的完整利用链复盘",
+    "urls": [
+      "https://mp.weixin.qq.com/s/FZTvoZTm2U9LAuNpZ_oEzA"
+    ]
+  },
+  {
+    "index": 143,
+    "path": "doc/2026-10/一次较为简单的任意用户密码重置漏洞挖掘过程.md",
+    "title": "一次较为简单的任意用户密码重置漏洞挖掘过程",
+    "urls": [
+      "https://mp.weixin.qq.com/s/sJhnZdzceyhHFQbJo0Ugrw"
+    ]
+  },
+  {
+    "index": 144,
+    "path": "doc/2026-10/一行正则表达式触发 RCE：GitLab CI∕CD 漏洞风险通告.md",
+    "title": "一行正则表达式触发 RCE：GitLab CI/CD 漏洞风险通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/wXPnG7VSVtbGBkJExy_3SA"
+    ]
+  },
+  {
+    "index": 145,
+    "path": "doc/2026-10/万字长文学习云安全 STS Policy注入在漏洞挖掘中的妙用.md",
+    "title": "万字长文学习云安全 STS Policy注入在漏洞挖掘中的妙用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/wyuhs-MUZsFDWYGfmY89Ng"
+    ]
+  },
+  {
+    "index": 146,
+    "path": "doc/2026-10/上周关注度较高的产品安全漏洞(20260928-20261011).md",
+    "title": "上周关注度较高的产品安全漏洞(20260928-20261011)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Icn-NtJ8qYfAKtxcG4B4yQ"
+    ]
+  },
+  {
+    "index": 147,
+    "path": "doc/2026-10/两行代码打穿 1591星 国产悟空HRM：未授权看遍全员工资条（CVE-2026-108707∕108708·附PoC）.md",
+    "title": "两行代码打穿 1591星 国产悟空HRM：未授权看遍全员工资条（CVE-2026-108707/108708·附PoC）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/vq77aTGrYnBCbeqZdEE1mg"
+    ]
+  },
+  {
+    "index": 148,
+    "path": "doc/2026-10/中国版Mythos灵脉CodeAI：AI代码漏洞挖掘的智能进阶之路.md",
+    "title": "中国版Mythos|灵脉CodeAI：AI代码漏洞挖掘的智能进阶之路",
+    "urls": [
+      "https://mp.weixin.qq.com/s/t0uvc5ywro-TC_KocApdQw"
+    ]
+  },
+  {
+    "index": 149,
+    "path": "doc/2026-10/从0-1：AI自动化漏洞挖掘实战训练营.md",
+    "title": "从0-1：AI自动化漏洞挖掘实战训练营",
+    "urls": [
+      "https://mp.weixin.qq.com/s/1CiSfxVCO5joTdraYNg2mA",
+      "https://mp.weixin.qq.com/s/9pqzTUL8x_TEr8PXRjx_Pw",
+      "https://mp.weixin.qq.com/s/HAHC2fcKtG0kZFKvSk-ReQ"
+    ]
+  },
+  {
+    "index": 150,
+    "path": "doc/2026-10/从专有LLM API中窃取推理轨迹：跨会话、跨用户、跨模型的加密推理漏洞解析.md",
+    "title": "从专有LLM API中窃取推理轨迹：跨会话、跨用户、跨模型的加密推理漏洞解析",
+    "urls": [
+      "https://mp.weixin.qq.com/s/DjrNQ_ZOhToxfH4oR6GWgw"
+    ]
+  },
+  {
+    "index": 151,
+    "path": "doc/2026-10/从信息收集到 RCE：从登录框开始.md",
+    "title": "从信息收集到 RCE：从登录框开始",
+    "urls": [
+      "https://mp.weixin.qq.com/s/WcEtupkaNPVS_-QAMKRCtw"
+    ]
+  },
+  {
+    "index": 152,
+    "path": "doc/2026-10/从漏洞分析到网络防护：美国陆军“列克星敦特遣部队”推进AI代理实战化.md",
+    "title": "从漏洞分析到网络防护：美国陆军“列克星敦特遣部队”推进AI代理实战化",
+    "urls": [
+      "https://mp.weixin.qq.com/s/xD48Mnzg4pKPxyKmRHw4pQ"
+    ]
+  },
+  {
+    "index": 153,
+    "path": "doc/2026-10/从解密验签到任意用户登录漏洞的一次真实案例.md",
+    "title": "从解密验签到任意用户登录漏洞的一次真实案例",
+    "urls": [
+      "https://mp.weixin.qq.com/s/j7awGSQ-i4431p2S8Pv-Ug"
+    ]
+  },
+  {
+    "index": 154,
+    "path": "doc/2026-10/从边缘入口到内网rce.md",
+    "title": "从边缘入口到内网rce",
+    "urls": [
+      "https://mp.weixin.qq.com/s/G420Lis3p2F_JnPSGPlj-Q"
+    ]
+  },
+  {
+    "index": 155,
+    "path": "doc/2026-10/信息安全漏洞周报【第095期】.md",
+    "title": "信息安全漏洞周报【第095期】",
+    "urls": [
+      "https://mp.weixin.qq.com/s/zcT2UVRwqD9tcToKvufgnA"
+    ]
+  },
+  {
+    "index": 156,
+    "path": "doc/2026-10/免费试用期重置漏洞.md",
+    "title": "免费试用期重置漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/kM8e6a6yxuJ0F3a_uHzeQA"
+    ]
+  },
+  {
+    "index": 157,
+    "path": "doc/2026-10/全球具身智能应用创新挑战赛·漏洞挖掘挑战赛决赛晋级名单及优胜奖名单公布.md",
+    "title": "全球具身智能应用创新挑战赛·漏洞挖掘挑战赛决赛晋级名单及优胜奖名单公布",
+    "urls": [
+      "https://mp.weixin.qq.com/s/6TaIJHUOfWJa5wmQmhuJLw"
+    ]
+  },
+  {
+    "index": 158,
+    "path": "doc/2026-10/全网最全POC 可搭建漏洞库.md",
+    "title": "全网最全POC 可搭建漏洞库",
+    "urls": [
+      "https://mp.weixin.qq.com/s/zzGpGmXSSvHCxpKpEwMHwg"
+    ]
+  },
+  {
+    "index": 159,
+    "path": "doc/2026-10/关于双十一期间暂停授权测试及漏洞收录的通知.md",
+    "title": "关于双十一期间暂停授权测试及漏洞收录的通知",
+    "urls": [
+      "https://mp.weixin.qq.com/s/qoyWigfL25Yn96yUGUTS5A"
+    ]
+  },
+  {
+    "index": 160,
+    "path": "doc/2026-10/别让安全配置的疏漏，成为企业网络防御的致命漏洞.md",
+    "title": "别让安全配置的疏漏，成为企业网络防御的致命漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/aheZ8PlRLmitUjHchOaBTg"
+    ]
+  },
+  {
+    "index": 161,
+    "path": "doc/2026-10/华为终端安全奖励计划关于后续漏洞报告处置规则的公告.md",
+    "title": "华为终端安全奖励计划关于后续漏洞报告处置规则的公告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/oUpWLj0LrPObl8fW_z55lQ"
+    ]
+  },
+  {
+    "index": 162,
+    "path": "doc/2026-10/危险！投稿系统存在越权漏洞，竟能随意撤销别人的论文！.md",
+    "title": "危险！投稿系统存在越权漏洞，竟能随意撤销别人的论文！",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mBPRD6zAMdE7E-OaKsYPBQ"
+    ]
+  },
+  {
+    "index": 163,
+    "path": "doc/2026-10/只按漏洞评分打补丁，为什么会排错？从严重性排名到资产处置决策.md",
+    "title": "只按漏洞评分打补丁，为什么会排错？从严重性排名到资产处置决策",
+    "urls": [
+      "https://mp.weixin.qq.com/s/JI5NWcuiPZlyyw6SlXrmPg"
+    ]
+  },
+  {
+    "index": 164,
+    "path": "doc/2026-10/只按漏洞评分打补丁，为什么会排错？把严重性变成处置顺序还缺什么.md",
+    "title": "只按漏洞评分打补丁，为什么会排错？把严重性变成处置顺序还缺什么",
+    "urls": [
+      "https://mp.weixin.qq.com/s/XVHEpE-JEsE3tcN76mtpqw"
+    ]
+  },
+  {
+    "index": 165,
+    "path": "doc/2026-10/吃透 Web 漏洞！就看这 420 页权威指南！.md",
+    "title": "吃透 Web 漏洞！就看这 420 页权威指南！",
+    "urls": [
+      "https://mp.weixin.qq.com/s/2SuFuHnwABHRK4A3oMI3EA"
+    ]
+  },
+  {
+    "index": 166,
+    "path": "doc/2026-10/喜报｜海南世纪网安获国家级认证！跻身国家信息安全漏洞库（CNNVD）一级支撑单位.md",
+    "title": "喜报｜海南世纪网安获国家级认证！跻身国家信息安全漏洞库（CNNVD）一级支撑单位",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Z469Vpb_qUtj0WFde6_R-Q"
+    ]
+  },
+  {
+    "index": 167,
+    "path": "doc/2026-10/国民级远控沦陷：AnyDesk 预认证堆溢出可拿到 root（CVE-2026-109390·附PoC）.md",
+    "title": "国民级远控沦陷：AnyDesk 预认证堆溢出可拿到 root（CVE-2026-109390·附PoC）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/hFC4eJq4evYp7rFTAXiCfA"
+    ]
+  },
+  {
+    "index": 168,
+    "path": "doc/2026-10/大华智慧园区综合管理平台poi接口存在文件上传漏洞.md",
+    "title": "大华智慧园区综合管理平台poi接口存在文件上传漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/fhMjh8xbnW3vk-FH1tdXog"
+    ]
+  },
+  {
+    "index": 169,
+    "path": "doc/2026-10/学网络安全卡在第一步？这套资料库+靶场+6000份漏洞报告，全部免费领.md",
+    "title": "学网络安全卡在第一步？这套资料库+靶场+6000份漏洞报告，全部免费领",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ppr3knJHbGFz9Ei-ODYGkw"
+    ]
+  },
+  {
+    "index": 170,
+    "path": "doc/2026-10/安全预警  GitLab 正则表达式编译器远程代码执行漏洞（CVE-2026-97229）.md",
+    "title": "安全预警 | GitLab 正则表达式编译器远程代码执行漏洞（CVE-2026-97229）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/r4rdlhwbnKZVROslK49p-w"
+    ]
+  },
+  {
+    "index": 171,
+    "path": "doc/2026-10/山石安全能力中心｜微软2026年10月份漏洞补丁日安全通告.md",
+    "title": "山石安全能力中心｜微软2026年10月份漏洞补丁日安全通告",
+    "urls": [
+      "https://mp.weixin.qq.com/s/0he7Lqy4RG4nY_SeBnvF_g"
+    ]
+  },
+  {
+    "index": 172,
+    "path": "doc/2026-10/并发、重放、安全漏洞轻松到手.md",
+    "title": "并发、重放、安全漏洞轻松到手",
+    "urls": [
+      "https://mp.weixin.qq.com/s/5aQhZl_NQuf9DLRrg-PIeQ"
+    ]
+  },
+  {
+    "index": 173,
+    "path": "doc/2026-10/当漏洞挖掘遇上 AI Agent：主流企业防火墙 0day 挖掘实战.md",
+    "title": "当漏洞挖掘遇上 AI Agent：主流企业防火墙 0day 挖掘实战",
+    "urls": [
+      "https://mp.weixin.qq.com/s/OtN2kVEfiSai68TZdXuEaQ"
+    ]
+  },
+  {
+    "index": 174,
+    "path": "doc/2026-10/微软10月补丁日多个产品安全漏洞风险通告：1个在野利用、36个紧急漏洞.md",
+    "title": "微软10月补丁日多个产品安全漏洞风险通告：1个在野利用、36个紧急漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/O8BS-zv196FH2Vjz8fZbzw"
+    ]
+  },
+  {
+    "index": 175,
+    "path": "doc/2026-10/微软10月补丁星期二修复 1000 多个漏洞，含3个0day.md",
+    "title": "微软10月补丁星期二修复 1000 多个漏洞，含3个0day",
+    "urls": [
+      "https://mp.weixin.qq.com/s/713M5EgMsdQaSNzMy8BZ4w"
+    ]
+  },
+  {
+    "index": 176,
+    "path": "doc/2026-10/微软一个月修1413个漏洞 别慌真正要命的就两个数.md",
+    "title": "微软一个月修1413个漏洞 别慌真正要命的就两个数",
+    "urls": [
+      "https://mp.weixin.qq.com/s/0ouh_4jlNYnqEk_cq5GjBQ"
+    ]
+  },
+  {
+    "index": 177,
+    "path": "doc/2026-10/微软发布3个Active Directory漏洞预警，支持远程绕过安全防护.md",
+    "title": "微软发布3个Active Directory漏洞预警，支持远程绕过安全防护",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mH70UxF5sW0A3-YpBSVaqw"
+    ]
+  },
+  {
+    "index": 178,
+    "path": "doc/2026-10/思科警告：ISE 存在严重零日漏洞，已被攻击者利用.md",
+    "title": "思科警告：ISE 存在严重零日漏洞，已被攻击者利用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/HMUyySLGWsDUkhyXznwbDw"
+    ]
+  },
+  {
+    "index": 179,
+    "path": "doc/2026-10/扫过了，没发现漏洞——AI 供应链安全里，这句话为什么不再成立.md",
+    "title": "\"扫过了，没发现漏洞\"——AI 供应链安全里，这句话为什么不再成立",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Rxwb6q-r5BoKMcNMy69pYw"
+    ]
+  },
+  {
+    "index": 180,
+    "path": "doc/2026-10/技术分享  CVE-2026-87902 WordPress 页面模版路径穿越漏洞分析.md",
+    "title": "技术分享 | CVE-2026-87902 WordPress 页面模版路径穿越漏洞分析",
+    "urls": [
+      "https://mp.weixin.qq.com/s/i67fbHdgLZdaK6qs-OcX2g"
+    ]
+  },
+  {
+    "index": 181,
+    "path": "doc/2026-10/拉黑后消息重放漏洞.md",
+    "title": "拉黑后消息重放漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/7vmagRvK2kzZJIEnGvcxsw"
+    ]
+  },
+  {
+    "index": 182,
+    "path": "doc/2026-10/改一个数字就能看到别人的订单 越权漏洞凭什么20年没治好.md",
+    "title": "改一个数字就能看到别人的订单 越权漏洞凭什么20年没治好",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mshBkQtBZ3wZnBTQR9xiCw"
+    ]
+  },
+  {
+    "index": 183,
+    "path": "doc/2026-10/斗象科技谢忱：AI大模型改写漏洞攻防，旧规则已经失效.md",
+    "title": "斗象科技谢忱：AI大模型改写漏洞攻防，旧规则已经失效",
+    "urls": [
+      "https://mp.weixin.qq.com/s/LD2hB2pBs5LC1_i4vzuvKA"
+    ]
+  },
+  {
+    "index": 184,
+    "path": "doc/2026-10/日口令绕过到 RCE：拆 Danfoss 超市冷柜控制器三条 CVE.md",
+    "title": "日口令绕过到 RCE：拆 Danfoss 超市冷柜控制器三条 CVE",
+    "urls": [
+      "https://mp.weixin.qq.com/s/t73cbOuQ6JtUODCzgT5YDg"
+    ]
+  },
+  {
+    "index": 185,
+    "path": "doc/2026-10/智邦国际GetAllPrintTemplate存在SQL注入漏洞.md",
+    "title": "智邦国际GetAllPrintTemplate存在SQL注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Nda6nPXwZ_hIbVf93olCSw"
+    ]
+  },
+  {
+    "index": 186,
+    "path": "doc/2026-10/某教务管理系统_SQL注入漏洞.md",
+    "title": "某教务管理系统_SQL注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/C-ZdqRsLhuMRGfSNoOY5Fw"
+    ]
+  },
+  {
+    "index": 187,
+    "path": "doc/2026-10/每周网安资讯（10.9-10.12） D-Link路由器命令注入高危漏洞.md",
+    "title": "每周网安资讯（10.9-10.12）| D-Link路由器命令注入高危漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Ih6trz-LuznNY_5ZHkhrNA"
+    ]
+  },
+  {
+    "index": 188,
+    "path": "doc/2026-10/比起上班死磕内卷，我更建议年轻人试试挖漏洞.md",
+    "title": "比起上班死磕内卷，我更建议年轻人试试挖漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/yd2uAnRew19XnQEirU5LNA"
+    ]
+  },
+  {
+    "index": 189,
+    "path": "doc/2026-10/深科特 LEAN MES系统 SetDataSource.aspx 存在SQL注入漏洞.md",
+    "title": "深科特 LEAN MES系统 SetDataSource.aspx 存在SQL注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Gqa1CUglndPcc9nMY6JpTw"
+    ]
+  },
+  {
+    "index": 190,
+    "path": "doc/2026-10/深耕AI漏洞挖掘：标准认证落地，学术研究取得新进展.md",
+    "title": "深耕AI漏洞挖掘：标准认证落地，学术研究取得新进展",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mnOqDVhq29KkC9zKicmYxQ"
+    ]
+  },
+  {
+    "index": 191,
+    "path": "doc/2026-10/渗透测试从业者看过来：AutoCVE 一键挖 CVE，7天 30 个漏洞.md",
+    "title": "渗透测试从业者看过来：AutoCVE 一键挖 CVE，7天 30 个漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/xPYDR-iv5RHrZx5s4bVaWQ"
+    ]
+  },
+  {
+    "index": 192,
+    "path": "doc/2026-10/漏洞复现  天锐绿盾审批系统 findAllUser.do 信息泄露漏洞.md",
+    "title": "漏洞复现 | 天锐绿盾审批系统 findAllUser.do 信息泄露漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/2RJuCK8XnxjXy23mFQRF5A"
+    ]
+  },
+  {
+    "index": 193,
+    "path": "doc/2026-10/漏洞复现  用友U8 Cloud BusinessRefAction 存在SQL注入漏洞.md",
+    "title": "漏洞复现 | 用友U8 Cloud BusinessRefAction 存在SQL注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/1mg_E9KXpJ6rWrcAKkiapQ"
+    ]
+  },
+  {
+    "index": 194,
+    "path": "doc/2026-10/漏洞复现  紫光电子档案管理系统 downLoad 文件读取漏洞.md",
+    "title": "漏洞复现 | 紫光电子档案管理系统 downLoad 文件读取漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/3KahrEnTP35wz6boxK99cw"
+    ]
+  },
+  {
+    "index": 195,
+    "path": "doc/2026-10/漏洞复现｜Atlassian存在任意文件读取漏洞(CVE-2026-21589).md",
+    "title": "漏洞复现｜Atlassian存在任意文件读取漏洞(CVE-2026-21589)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/yiG0DaybrvIRdTLGKMdk2A"
+    ]
+  },
+  {
+    "index": 196,
+    "path": "doc/2026-10/漏洞复现｜CRMEB image_base64存在SSRF漏洞.md",
+    "title": "漏洞复现｜CRMEB image_base64存在SSRF漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/wfXUrVGUNRjE0yPbzpOR4w"
+    ]
+  },
+  {
+    "index": 197,
+    "path": "doc/2026-10/漏洞复现｜大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞.md",
+    "title": "漏洞复现｜大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/h4cypNVhMUHQSF8JKEaLdg"
+    ]
+  },
+  {
+    "index": 198,
+    "path": "doc/2026-10/漏洞复现｜西部数码 NAS login_mgr.cgi 存在命令执行漏洞.md",
+    "title": "漏洞复现｜西部数码 NAS login_mgr.cgi 存在命令执行漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/pTmMCIzHzVzN4T0ZubvRCQ"
+    ]
+  },
+  {
+    "index": 199,
+    "path": "doc/2026-10/漏洞扫描做完了：顺着一条“高危”往下查，验收才刚开始.md",
+    "title": "漏洞扫描做完了：顺着一条“高危”往下查，验收才刚开始",
+    "urls": [
+      "https://mp.weixin.qq.com/s/A32meosc9G-yGS4vIVjeMQ"
+    ]
+  },
+  {
+    "index": 200,
+    "path": "doc/2026-10/漏洞报告越积越多，整改究竟堵在补证、验证还是交接.md",
+    "title": "漏洞报告越积越多，整改究竟堵在补证、验证还是交接",
+    "urls": [
+      "https://mp.weixin.qq.com/s/tc31rSMQ1CR_d4DW3jvVGg"
+    ]
+  },
+  {
+    "index": 201,
+    "path": "doc/2026-10/漏洞预警  PostgreSQL符号链接跟随漏洞.md",
+    "title": "漏洞预警 | PostgreSQL符号链接跟随漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/DPdme7WEibuFwEglRtJG4A"
+    ]
+  },
+  {
+    "index": 202,
+    "path": "doc/2026-10/漏洞预警  Telegram Desktop IPC记录注入漏洞.md",
+    "title": "漏洞预警 | Telegram Desktop IPC记录注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Lr-v9zBJqmMPZoES6epLwQ"
+    ]
+  },
+  {
+    "index": 203,
+    "path": "doc/2026-10/漏洞预警GitLab 又曝高危远程代码执行漏洞 CVE-2026-97229 ，CVSS 10.0 ，直接RCE.md",
+    "title": "漏洞预警|GitLab 又曝高危远程代码执行漏洞 CVE-2026-97229 ，CVSS 10.0 ，直接RCE",
+    "urls": [
+      "https://mp.weixin.qq.com/s/BOwVCeBger_scte3X7vEYw"
+    ]
+  },
+  {
+    "index": 204,
+    "path": "doc/2026-10/热榜TOP1的「挖漏洞一人公司」：6661万人在看的闷声副业到底是什么.md",
+    "title": "热榜TOP1的「挖漏洞一人公司」：6661万人在看的闷声副业到底是什么",
+    "urls": [
+      "https://mp.weixin.qq.com/s/WpO2KS4ZvupGEEo2w4bbDw"
+    ]
+  },
+  {
+    "index": 205,
+    "path": "doc/2026-10/用友时空KSOA agent_work_report.jsp SQL延时注入漏洞.md",
+    "title": "用友时空KSOA agent_work_report.jsp SQL延时注入漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Zi-BDs8sd0m7rL__4dSJBA"
+    ]
+  },
+  {
+    "index": 206,
+    "path": "doc/2026-10/看了一下团队里新人挖洞过程，发现了一些问题，看看你是不是每次也这样挖不到高危漏洞的？？.md",
+    "title": "看了一下团队里新人挖洞过程，发现了一些问题，看看你是不是每次也这样挖不到高危漏洞的？？",
+    "urls": [
+      "https://mp.weixin.qq.com/s/blHewPNdHeK393-QT693Mw"
+    ]
+  },
+  {
+    "index": 207,
+    "path": "doc/2026-10/研究人员利用公开的OpenAI模型，在六天内构建了一个价值25万美元的Chrome全链漏洞利用.md",
+    "title": "研究人员利用公开的OpenAI模型，在六天内构建了一个价值25万美元的Chrome全链漏洞利用",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Q4lfmbuYxgDGRfSlXHHCVQ"
+    ]
+  },
+  {
+    "index": 208,
+    "path": "doc/2026-10/紧急预警｜Ivanti VPN 遭 3 个 0day 链式攻击！已窃取 AD 域凭证，完整补丁尚未全部发布.md",
+    "title": "紧急预警｜Ivanti VPN 遭 3 个 0day 链式攻击！已窃取 AD 域凭证，完整补丁尚未全部发布",
+    "urls": [
+      "https://mp.weixin.qq.com/s/0Q_f8WNs0yUiXVP7RzClyg"
+    ]
+  },
+  {
+    "index": 209,
+    "path": "doc/2026-10/红队实战指南：AI驱动的渗透测试、红队评估和漏洞挖掘.md",
+    "title": "红队实战指南：AI驱动的渗透测试、红队评估和漏洞挖掘",
+    "urls": [
+      "https://mp.weixin.qq.com/s/z8IFXcN5B4r7wLjKelFReQ"
+    ]
+  },
+  {
+    "index": 210,
+    "path": "doc/2026-10/组织删除后邀请链接残留漏洞.md",
+    "title": "组织删除后邀请链接残留漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/-R1GCCYkT2donCdHV_sKsw"
+    ]
+  },
+  {
+    "index": 211,
+    "path": "doc/2026-10/自动化挖掘驱动漏洞.md",
+    "title": "自动化挖掘驱动漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/CkkajPHxj83J0-p4LIKbCw"
+    ]
+  },
+  {
+    "index": 212,
+    "path": "doc/2026-10/航运公司和港口卷入大规模网络勒索——n0n一次性点名38家海事企业，共享漏洞疑云笼罩全球供应链.md",
+    "title": "航运公司和港口卷入大规模网络勒索——n0n一次性点名38家海事企业，共享漏洞疑云笼罩全球供应链",
+    "urls": [
+      "https://mp.weixin.qq.com/s/yaBmCoyYEaDt0yw2z-M3pA",
+      "https://mp.weixin.qq.com/s/uqW1LjrI1xr_xt7nMihMaQ"
+    ]
+  },
+  {
+    "index": 213,
+    "path": "doc/2026-10/西门子：注意未修复的八个 SIMATIC S7-1500 Web Server 漏洞.md",
+    "title": "西门子：注意未修复的八个 SIMATIC S7-1500 Web Server 漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ZjksfahwbM9OHhrYS-HTBg"
+    ]
+  },
+  {
+    "index": 214,
+    "path": "doc/2026-10/记一次SRC挖掘—审计js还原隐藏接口产出2个未授权漏洞.md",
+    "title": "记一次SRC挖掘—审计js还原隐藏接口产出2个未授权漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/j0XDdb1hkRB-lO_10WpgjA"
+    ]
+  },
+  {
+    "index": 215,
+    "path": "doc/2026-10/谷歌Chrome浏览器更新修复37个安全漏洞，含7个高危严重漏洞.md",
+    "title": "谷歌Chrome浏览器更新修复37个安全漏洞，含7个高危严重漏洞",
+    "urls": [
+      "https://mp.weixin.qq.com/s/fXFWd-9btx5Ks2kdOeObKA"
+    ]
+  },
+  {
+    "index": 216,
+    "path": "doc/2026-10/谷歌四倍上调Chrome漏洞赏金基础标准，沙箱逃逸最高奖2万美元.md",
+    "title": "谷歌四倍上调Chrome漏洞赏金基础标准，沙箱逃逸最高奖2万美元",
+    "urls": [
+      "https://mp.weixin.qq.com/s/Lth9nTHgm7BMQUYEvsA61A"
+    ]
+  },
+  {
+    "index": 217,
+    "path": "doc/2026-10/谷歌跳过 Gemini3.5，Gemini4 Argon 正式发布强化网络安全防御能力；CNCERT周报：后门网站与新增漏洞双升，仿冒攻击仍锁定银行政务 牛览.md",
+    "title": "谷歌跳过 Gemini3.5，Gemini4 Argon 正式发布强化网络安全防御能力；CNCERT周报：后门网站与新增漏洞双升，仿冒攻击仍锁定银行政务| 牛览",
+    "urls": [
+      "https://mp.weixin.qq.com/s/7alu9oDcoJwMxNXk0ZKBeQ"
+    ]
+  },
+  {
+    "index": 218,
+    "path": "doc/2026-10/赛博安全狗：GitPython远程辅助组件存在注入漏洞（CVE-2026-110857） (10.15).md",
+    "title": "赛博安全狗：GitPython远程辅助组件存在注入漏洞（CVE-2026-110857） (10.15)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/f31YdPqlvtSeoFcfU99iXw"
+    ]
+  },
+  {
+    "index": 219,
+    "path": "doc/2026-10/赛博安全狗：IBM i 7.3∕7.4∕7.5∕7.6存在非常严重的代码注入漏洞CVE-2026-93886 (10.13).md",
+    "title": "赛博安全狗：IBM i 7.3/7.4/7.5/7.6存在非常严重的代码注入漏洞CVE-2026-93886 (10.13)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/vU1_7w6GImYuSnDOueBr2g"
+    ]
+  },
+  {
+    "index": 220,
+    "path": "doc/2026-10/赛博安全狗：JeecgBoot存在未授权访问漏洞CVE-2026-108657 (10.11).md",
+    "title": "赛博安全狗：JeecgBoot存在未授权访问漏洞CVE-2026-108657 (10.11)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/8RFPkZNY9tOE_--xSohqpw"
+    ]
+  },
+  {
+    "index": 221,
+    "path": "doc/2026-10/赛博安全狗：X.Org Server XKB组件发现高危缓冲区溢出漏洞CVE-2026-93520 (10.16).md",
+    "title": "赛博安全狗：X.Org Server XKB组件发现高危缓冲区溢出漏洞CVE-2026-93520 (10.16)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/eLep5l4B5GfHljPJ1uXPRQ"
+    ]
+  },
+  {
+    "index": 222,
+    "path": "doc/2026-10/赛博安全狗：pH7Builder 旧版本存在硬编码 API 密钥绕过漏洞 (10.12).md",
+    "title": "赛博安全狗：pH7Builder 旧版本存在硬编码 API 密钥绕过漏洞 (10.12)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/m9UJaNZ2yT0Sr7qVlvu5DQ"
+    ]
+  },
+  {
+    "index": 223,
+    "path": "doc/2026-10/赛博安全狗：微软Windows高危漏洞CVE-2026-83688可致堆溢出 (10.14).md",
+    "title": "赛博安全狗：微软Windows高危漏洞CVE-2026-83688可致堆溢出 (10.14)",
+    "urls": [
+      "https://mp.weixin.qq.com/s/7AqTAcVMs7zyoRhBzRx5TQ"
+    ]
+  },
+  {
+    "index": 224,
+    "path": "doc/2026-10/远程代码执行漏洞利用分析.md",
+    "title": "远程代码执行漏洞利用分析",
+    "urls": [
+      "https://mp.weixin.qq.com/s/ZXphbwP2O8R2x_EpG4aqXA"
+    ]
+  },
+  {
+    "index": 225,
+    "path": "doc/2026-10/防火墙管理口被在野利用：Palo Alto PAN-OS root RCE当日入KEV（CVE-2026-0322）.md",
+    "title": "防火墙管理口被在野利用：Palo Alto PAN-OS root RCE当日入KEV（CVE-2026-0322）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/-jXI98HqniCdv2dGiBejFw"
+    ]
+  },
+  {
+    "index": 226,
+    "path": "doc/2026-10/雷神众测漏洞周报2026.9.21-2026.10.11.md",
+    "title": "雷神众测漏洞周报2026.9.21-2026.10.11",
+    "urls": [
+      "https://mp.weixin.qq.com/s/4Z28qytlWHIREiWhtXClEw"
+    ]
+  },
+  {
+    "index": 227,
+    "path": "doc/2026-10/震惊！百度安全这一利器让RASP漏洞检测效率提升1000%.md",
+    "title": "震惊！百度安全这一利器让RASP漏洞检测效率提升1000%",
+    "urls": [
+      "https://mp.weixin.qq.com/s/qjr9ei-3cW6lWRFUxFBhqA"
+    ]
+  },
+  {
+    "index": 228,
+    "path": "doc/2026-10/黑客利用思杰NetScaler 0Day漏洞，部署Platypus远控工具.md",
+    "title": "黑客利用思杰NetScaler 0Day漏洞，部署Platypus远控工具",
+    "urls": [
+      "https://mp.weixin.qq.com/s/puX4nw5nAjnky1RUUFz76g"
+    ]
+  },
+  {
+    "index": 229,
+    "path": "doc/2026-10/鼹鼠的焚诀全网最全的POC合集（来自圈内多个付费圈子）.md",
+    "title": "鼹鼠的焚诀全网最全的POC合集（来自圈内多个付费圈子）",
+    "urls": [
+      "https://mp.weixin.qq.com/s/mdwquh8mi584ltJNnkh_3Q"
+    ]
+  }
+]

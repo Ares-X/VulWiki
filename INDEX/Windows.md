@@ -216,6 +216,10 @@
 
 - [提权 最新 windows 提权 CVE-2024-35250](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E6%8F%90%E6%9D%83%20%E6%9C%80%E6%96%B0%20windows%20%E6%8F%90%E6%9D%83%20CVE-2024-35250.md) [vulnerability; not-reproduced; needs-review]
 
+## Windows Kernel-Mode Drivers / mskssrv
+
+- [Windows mskssrv 对象生命周期竞态源码分析 CVE-2026-83834](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20mskssrv%20%E5%AF%B9%E8%B1%A1%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AB%9E%E6%80%81%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20CVE-2026-83834.md) [analysis; source-claimed; active]
+
 ## Windows MSDT ms-msdt URI / Office触发
 
 - [Windows支持诊断工具(MSDT)远程代码执行漏洞(CVE-2022-30190)分析复现修复](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E6%94%AF%E6%8C%81%E8%AF%8A%E6%96%AD%E5%B7%A5%E5%85%B7%28MSDT%29%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28CVE-2022-30190%29%E5%88%86%E6%9E%90%E5%A4%8D%E7%8E%B0%E4%BF%AE%E5%A4%8D.md) [analysis; not-reproduced; needs-review]

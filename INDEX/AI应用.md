@@ -36,6 +36,7 @@
 ## Flowise
 
 - [CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/CVE-2025-26319%EF%BC%9AFlowiseAI%E6%9C%AA%E6%8E%88%E6%9D%83%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+- [Flowise OAuth2 回调反射 HTML 注入与模板修复边界](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Flowise/Flowise%20OAuth2%20%E5%9B%9E%E8%B0%83%E5%8F%8D%E5%B0%84%20HTML%20%E6%B3%A8%E5%85%A5%E4%B8%8E%E6%A8%A1%E6%9D%BF%E4%BF%AE%E5%A4%8D%E8%BE%B9%E7%95%8C.md) [vulnerability; source-claimed; needs-review]
 - [攻击者利用 Flowise 严重漏洞 CVE-2025-59528 实现远程代码执行](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Flowise/%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8%20Flowise%20%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%20CVE-2025-59528%20%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md) [advisory; not-reproduced; needs-review]
 
 ## Four-Faith
@@ -68,6 +69,7 @@
 
 ## Langflow OSS
 
+- [Langflow Fernet 弱密钥派生与第三方检测边界 CVE-2026-9205](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20Fernet%20%E5%BC%B1%E5%AF%86%E9%92%A5%E6%B4%BE%E7%94%9F%E4%B8%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A3%80%E6%B5%8B%E8%BE%B9%E7%95%8C%20CVE-2026-9205.md) [analysis; source-claimed; needs-review]
 - [Langflow 代码校验接口认证后代码执行（CVE-2026-7873）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20%E4%BB%A3%E7%A0%81%E6%A0%A1%E9%AA%8C%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E5%90%8E%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20CVE-2026-7873.md) [vulnerability; source-claimed; active]
 
 ## Langflow及Windows Shell

@@ -1,0 +1,170 @@
+[
+  {
+    "source_path": "2026/10/Atlassian存在任意文件读取漏洞(CVE-2026-21589)/Atlassian存在任意文件读取漏洞(CVE-2026-21589).md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/Atlassian%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E(CVE-2026-21589)/Atlassian%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E(CVE-2026-21589).md",
+    "source_sha": "2f67976a66062c7c54574680d86ef3c1ebf4e7ca",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "reason": "已存在同一CVE、Atlassian Web资源读取主入口",
+    "canonical": "Web安全/商业软件/Atlassian/Atlassian 多产品 Web 应用根目录文件读取 CVE-2026-21589.md",
+    "initial_assessment": "duplicate",
+    "decision": "duplicate"
+  },
+  {
+    "source_path": "2026/10/CRMEB image_base64存在SSRF漏洞/CRMEB image_base64存在SSRF漏洞.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/CRMEB%20image_base64%E5%AD%98%E5%9C%A8SSRF%E6%BC%8F%E6%B4%9E/CRMEB%20image_base64%E5%AD%98%E5%9C%A8SSRF%E6%BC%8F%E6%B4%9E.md",
+    "source_sha": "e733f39f86f819042beb91a11747d1beaf075d2d",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/商业软件/CRMEB/CRMEB image_base64 服务端请求及回环读取边界.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "asset_publication": "pending",
+    "asset_paths": [
+      "2026/10/CRMEB image_base64存在SSRF漏洞/assets/image-20261014111212219.png"
+    ],
+    "asset_reason": "响应截图日期为2026-10-13或14，隐私模式隐藏目标，含真实外观会话值；没有测试夹具或失效证据。不能凭Cookie名称判定有效权限，故仅暂停图像再发布，无值抄录、无脱敏、无现场验证；原创技术综述独立可用。",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "公开请求存在，但本批实例版本/分支与匿名认证条件无法对应 CNA；2023 原报告404，官方多商户文档是 /common/base64 路由，不能替 /api/image_base64 证明同一实现。回环HTTP不是任意本地文件读取。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/CRMEB image_base64存在任意文件读取漏洞/CRMEB image_base64存在任意文件读取漏洞.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/CRMEB%20image_base64%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E/CRMEB%20image_base64%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md",
+    "source_sha": "15d13b42197a9dbbc2943bb82b98f7025eed0f36",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "reason": "同一 image_base64 SSRF 表面；HTTP回环读取不等于任意本地文件读取，补充分析合入同一原创稿",
+    "draft": "Web安全/商业软件/CRMEB/CRMEB image_base64 服务端请求及回环读取边界.md",
+    "asset_publication": "pending",
+    "asset_paths": [
+      "2026/10/CRMEB image_base64存在任意文件读取漏洞/assets/image-20261014112847692.png"
+    ],
+    "asset_reason": "响应截图日期为2026-10-13或14，隐私模式隐藏目标，含真实外观会话值；没有测试夹具或失效证据。不能凭Cookie名称判定有效权限，故仅暂停图像再发布，无值抄录、无脱敏、无现场验证；原创技术综述独立可用。",
+    "initial_assessment": "duplicate-with-complement",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "公开请求存在，但本批实例版本/分支与匿名认证条件无法对应 CNA；2023 原报告404，官方多商户文档是 /common/base64 路由，不能替 /api/image_base64 证明同一实现。回环HTTP不是任意本地文件读取。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞/大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E5%A4%A7%E5%8D%8E-%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%20login_updateUserAdmOnlineStat%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/%E5%A4%A7%E5%8D%8E-%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%20login_updateUserAdmOnlineStat%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md",
+    "source_sha": "d8aa856ac9fd7d7c863a2e9e1cad38091b68d72b",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/商业软件/大华/大华智慧园区 login_updateUserAdmOnlineStat SQL注入.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "SQL错误支持表达式执行，但没有产品构建、认证边界或原代码对应；数据库5.7.15-log不是平台版本。厂商定向检索未找到匹配公告。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/快普M6 wsAutoComplete.asmx 存在SQL注入漏洞/快普M6 wsAutoComplete.asmx 存在SQL注入漏洞.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E5%BF%AB%E6%99%AEM6%20wsAutoComplete.asmx%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/%E5%BF%AB%E6%99%AEM6%20wsAutoComplete.asmx%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md",
+    "source_sha": "56ea70dfdd66d676e6867d0ef2b9cb92d8f6fa88",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/ERP企业/快普/快普M6 GetAccountTitleList prefixText SQL注入.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "Mrxn 原研究有 KPMIIS.Web.dll 方法片段与SOAP请求，但影响版本章节为空，没有构建/部署认证对应；不能仅靠相同方法名覆盖全部M6。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/西部数码 NAS login_mgr.cgi 存在命令执行漏洞/西部数码 NAS login_mgr.cgi 存在命令执行漏洞.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E8%A5%BF%E9%83%A8%E6%95%B0%E7%A0%81%20NAS%20login_mgr.cgi%20%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%A5%BF%E9%83%A8%E6%95%B0%E7%A0%81%20NAS%20login_mgr.cgi%20%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md",
+    "source_sha": "2933cb7233a4350c193561085adf637e39fe480a",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "IOT安全/Western Digital/Western Digital My Cloud login_mgr username命令注入.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "Exploitee.rs 原披露确认 My Cloud 的 wd_login username pre-auth 注入，但原文型号列表不等于逐型号影响列表，本批无固件号；不得套用同端点 pwd 溢出的PR4100版本。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/西部数码 NAS snmp_mgr.cgi 存在命令执行漏洞/西部数码 NAS snmp_mgr.cgi 存在命令执行漏洞.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E8%A5%BF%E9%83%A8%E6%95%B0%E7%A0%81%20NAS%20snmp_mgr.cgi%20%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%A5%BF%E9%83%A8%E6%95%B0%E7%A0%81%20NAS%20snmp_mgr.cgi%20%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md",
+    "source_sha": "f7e6c6aae72d730859a1c60364637ddd4175e30b",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "IOT安全/Western Digital/Western Digital My Cloud snmp_mgr uid命令注入.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "Mrxn 原研究有匹配disassembly与请求，声称≤2.11.153；仍缺具体型号与认证链的可核对应，通用已修复声明无精确厂商补丁。保留证据，不强行正文准入。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/金叶物联网-download-任意文件读取/金叶物联网-download-任意文件读取.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E9%87%91%E5%8F%B6%E7%89%A9%E8%81%94%E7%BD%91-download-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/%E9%87%91%E5%8F%B6%E7%89%A9%E8%81%94%E7%BD%91-download-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.md",
+    "source_sha": "4abbd6cb68d5dd2e68e688768dad6174e9355c2d",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/商业软件/金叶物联网/金叶物联网 download name路径遍历.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "下载响应支持该截图实例读取win.ini，但缺产品构建/实现与认证对应；厂商/原作者补充未定位。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/金蝶EAS WSExportPersonFacade 存在敏感信息泄露/金蝶EAS WSExportPersonFacade 存在敏感信息泄露.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E9%87%91%E8%9D%B6EAS%20WSExportPersonFacade%20%E5%AD%98%E5%9C%A8%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/%E9%87%91%E8%9D%B6EAS%20WSExportPersonFacade%20%E5%AD%98%E5%9C%A8%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2.md",
+    "source_sha": "a835fc39bb114f6cf8c9a301b096381618622232",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/ERP企业/金蝶/金蝶EAS WSExportPersonFacade人员数据导出边界.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "asset_publication": "pending",
+    "asset_paths": [
+      "2026/10/金蝶EAS WSExportPersonFacade 存在敏感信息泄露/assets/image-20261013111005126.png"
+    ],
+    "asset_reason": "响应截图日期为2026-10-13或14，隐私模式隐藏目标，含真实外观会话值；没有测试夹具或失效证据。不能凭Cookie名称判定有效权限，故仅暂停图像再发布，无值抄录、无脱敏、无现场验证；原创技术综述独立可用。",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "SOAP导出存在，但缺版本/模块构建与身份对照，不能证明这是授权缺陷而非正常导出功能。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/飞鱼星VW2100  MB3W202 系列无线路由器命令执行/飞鱼星VW2100  MB3W202 系列无线路由器命令执行.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E9%A3%9E%E9%B1%BC%E6%98%9FVW2100%20%20MB3W202%20%E7%B3%BB%E5%88%97%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E5%99%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/%E9%A3%9E%E9%B1%BC%E6%98%9FVW2100%20%20MB3W202%20%E7%B3%BB%E5%88%97%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E5%99%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md",
+    "source_sha": "76824a0c71ccac3ed3b5e5b150762d7dfd87e338",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/网络设备/飞鱼星/飞鱼星 del_expmac mac命令注入.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "VulDB CNA CVE-2026-94138是B-MB5E202-210322-r11656且PR:H；汇编VW2100/MB3W202匿名主张无法对应；原Feishu报告读取失败。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/飞鱼星VW2100  MB3W202 系列无线路由器未授权数据写入/飞鱼星VW2100  MB3W202 系列无线路由器未授权数据写入.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E9%A3%9E%E9%B1%BC%E6%98%9FVW2100%20%20MB3W202%20%E7%B3%BB%E5%88%97%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E5%99%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5/%E9%A3%9E%E9%B1%BC%E6%98%9FVW2100%20%20MB3W202%20%E7%B3%BB%E5%88%97%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E5%99%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5.md",
+    "source_sha": "789f9c71c2ab4a718316933a264d39e94dc685e7",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/网络设备/飞鱼星/飞鱼星 addmacfilter配置写入授权边界.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "请求和配置重复项存在，但没有固件/服务端权限检查或未登录对照；不能把无Cookie样例自动等同未授权写入。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  },
+  {
+    "source_path": "2026/10/飞鱼星VW2100  MB3W202 系列无线路由器未授权访问/飞鱼星VW2100  MB3W202 系列无线路由器未授权访问.md",
+    "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/5d8a80f483029ce800ad01de94ce5d43d799f377/2026/10/%E9%A3%9E%E9%B1%BC%E6%98%9FVW2100%20%20MB3W202%20%E7%B3%BB%E5%88%97%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E5%99%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/%E9%A3%9E%E9%B1%BC%E6%98%9FVW2100%20%20MB3W202%20%E7%B3%BB%E5%88%97%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E5%99%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE.md",
+    "source_sha": "2d9adcc44acf95b4b7ac24b23f739335910ffd4f",
+    "review": "全文与关联截图逐一阅读；未执行PoC、扫描、目标访问或依赖安装",
+    "draft": "Web安全/网络设备/飞鱼星/飞鱼星 request_para userinfo终端信息暴露.md",
+    "reason": "具体请求及已看截图；版本/权限等缺口按条说明，非复现门槛",
+    "initial_assessment": "eligible-original-synthesis",
+    "decision": "pending-primary-correspondence",
+    "final_reason": "userinfo返回终端网络信息，缺固件/身份对照；不得扩大成管理员密码泄露或已证明认证绕过。",
+    "body_review_complete": true,
+    "followup_review_date": "2026-10-19"
+  }
+]

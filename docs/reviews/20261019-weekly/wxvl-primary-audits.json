@@ -1,0 +1,552 @@
+[
+  {
+    "indices": [
+      31
+    ],
+    "product": "Apache Tomcat RewriteValve",
+    "status": "integrated",
+    "source_commit": "6e3874f20aff29ccc12492825f65ad5f31937168",
+    "repository": "abraxas/tomcat-rewrite-ns-loop",
+    "files_read": [
+      "README.md",
+      "tomcat-rewrite-ns-loop-Abraxas-Labs.py",
+      "lab/run.sh",
+      "lab/Dockerfile",
+      "lab/docker-compose.yml",
+      "lab/poc.py",
+      "lab/conf/server.xml",
+      "lab/conf/rewrite.config"
+    ],
+    "noncode_not_claimed_read": [
+      "header.png",
+      ".gitignore",
+      "full LICENSE legal text"
+    ],
+    "license": "AGPL-3.0 identified from repository/README; independent Chinese synthesis",
+    "fixes_read": [
+      "2da9fddb3acdc2d3d55cf3a7826c9541faad400e",
+      "8992dbdd46f397905f378a2eb68c6ef15785911e"
+    ],
+    "observations": "Opt-in RewriteValve and matching rule required. Only11.0.27 fixed build claimed. Docker image pull/build, local HTTP requests and compose down -v cleanup; base image not digest pinned. Python banner modifies builtins.print but no hidden network action seen. No execution.",
+    "access_gaps": [
+      "Research webpage inaccessible; fixed GitHub complete executable/config chain read instead",
+      "Released fix boundary not verified",
+      "No CVE assigned in source"
+    ]
+  },
+  {
+    "indices": [
+      52,
+      53
+    ],
+    "product": "Google DevSite",
+    "status": "integrated",
+    "source": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce",
+    "read_scope": "Full primary webpage, all snippets, controls, timeline",
+    "observations": "Correct endpoint /oauth2authorize; no version/CVE invented; original credential fields already placeholders. No code repository linked; static embedded code only. No target requests.",
+    "access_gaps": [
+      "Webpage not immutable commit",
+      "Reuse license not established; independent synthesis"
+    ]
+  },
+  {
+    "indices": [
+      45
+    ],
+    "product": "Docker Hub",
+    "status": "integrated",
+    "source": "https://www.docker.com/blog/docker-hub-security-advisory-cve-2026-105445/",
+    "cna_blob": "d2a721a9424ff690e8e5e236de2b655b244c4d8a",
+    "read_scope": "Full official advisory plus Docker CNA; vendor concrete four-step account-conversion flow",
+    "observations": "Requires own account/PAT, registry authorization within scopes, no full web-account takeover. No credential/target interaction.",
+    "access_gaps": [
+      "https://ghostpat.com/ inaccessible via web; not counted read",
+      "No executable code audited or copied"
+    ]
+  },
+  {
+    "indices": [
+      2
+    ],
+    "product": "AhsayCBS",
+    "status": "integrated-complementary",
+    "repository": "horizon3ai/AhsayCBS-Auth-Bypass-RCE",
+    "source_commit": "3f3f2f8b28f5e1af9a8e8c41aae0ef7ca0315652",
+    "files_read": [
+      {
+        "path": "README.md",
+        "sha": "0e2748948a05378f4223c4aa10660428b24b1b93"
+      },
+      {
+        "path": "ahsay_rce_poc.py",
+        "sha": "42b19575c64e36f1e476f1a152020d194e00fcd9"
+      }
+    ],
+    "tree_complete": true,
+    "observations": "Two primitives differ: admin creation default; replication upload needs licensed configuredReceiver. FromServlet bypass -> receiver creation -> X-RSW headers traversal; no confirmation of old article random-param command injection. Default TLSoff, dependenciesunlocked, recursive directory deletion/self-delete/removal cleanup can print success without checking HTTP results, no-cleanup leaves artifacts. No unrelated exfil/download logic found in read code; not safety certification. Newer vendor hotfix preserved.",
+    "sources": [
+      "https://horizon3.ai/attack-research/attack-blogs/ahsaycbs-cve-2026-105133-cve-2026-105134-technical-analysis/",
+      "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+    ],
+    "license": "No license file in complete tree; original synthesis",
+    "access_gaps": [
+      "Old random-param claim unverified, preserved with explicit correction note",
+      "Commercial product implementation/partner hotfix not downloaded or executed"
+    ]
+  },
+  {
+    "indices": [
+      29,
+      44
+    ],
+    "product": "curl",
+    "status": "held-primary-code-access-gap",
+    "sources": [
+      "https://curl.se/docs/CVE-2026-92392.html",
+      "https://daniel.haxx.se/blog/2026/10/14/a-uaf-turned-rce/",
+      "https://hackerone.com/reports/4030333"
+    ],
+    "observations": "Official affected8.12.0–8.22.0 exceptions8.20.2/8.16.2/8.14.3; fixed8.23.0. Malicious HTTP2 upload RST_STREAM path and special allocator/architecture/timing prereqs verified.",
+    "access_gaps": [
+      "HackerOne returns JS shell; .json inaccessible. Full exploit/Docker implementation not read; no executable admission"
+    ]
+  },
+  {
+    "indices": [
+      15
+    ],
+    "status": "held-trigger-version-correspondence-gap",
+    "dedupe": "Exact /jmreport/auto/export body search across tracked Web articles has no match. ShowDoc registerByVerify already has two dedicated entries; do not duplicate.",
+    "access_gaps": "JimuReport summary describes Aviator/Groovy and FunctionMissing mechanisms but lacks complete two-stage expression/request values or linked specific PoC. Vendor-authored 2.5.3 release announcement confirms Aviator pre-auth sandbox RCE fixed, but not exact linkage/ranges of both summarized routes. Do not construct missing payload or map to unrelated FreeMarker CVEs.",
+    "primary_sources_checked": [
+      "https://www.cnblogs.com/jeecg158/p/23016116"
+    ]
+  },
+  {
+    "indices": [
+      27
+    ],
+    "status": "unchanged-technical-body-held-component-correspondence",
+    "access_gaps": "Technical body unchanged from baseline. CreativeDream issue23 confirms default arbitrary upload class; fixed master d069f819fb144324b54f2823c794c4ff719f4d45 README says0.4, while wxvl claims0.2 at deployment-specific /Lib/uploadFile/php/upload.php. Exact0.2 artifact/deployment correspondence not established; no new technical correction and no inventedCVE mapping.",
+    "primary_sources_checked": [
+      "https://github.com/CreativeDream/php-uploader/issues/23",
+      "https://github.com/CreativeDream/php-uploader/blob/d069f819fb144324b54f2823c794c4ff719f4d45/README.md"
+    ]
+  },
+  {
+    "indices": [
+      36
+    ],
+    "status": "held-publication-possible-live-session",
+    "access_gaps": "Original issue12 fully read; identifies itsourcecode Sales and Inventory SystemV1.0, requires valid login, id parameter /pages/us_edit.php. Public POC fenced HTTP request contains a concrete public host and complete PHPSESSID whose validity is unknown. Hold publication without copying, altering or redacting source. Created2026-07-30, no execution.",
+    "primary_sources_checked": [
+      "https://github.com/ltranquility/submit_repository/issues/12"
+    ]
+  },
+  {
+    "indices": [
+      95
+    ],
+    "product": "Philips Hue Bridge",
+    "status": "integrated",
+    "sources": [
+      "https://www.synacktiv.com/en/publications/make-it-blink-over-the-air-exploitation-of-the-philips-hue-bridge",
+      "https://www.zerodayinitiative.com/advisories/ZDI-26-153/",
+      "https://www.philips-hue.com/en-ca/support/release-notes/bridge"
+    ],
+    "cna_blob": "5021e65c97c0e613b451721f61f4451eb1886b6d",
+    "read_scope": "Complete primary research body including all pseudocode, ZDI advisory, Philips release note and CNA",
+    "version": "Affected 1.73.1973146020; fixed Bridge v2 1975170000 released 2026-02-16",
+    "trigger": "Adjacent Zigbee attacker; user starts pairing; manufacturer 0x100B command 0xC1 reaches DownloadBlob REQUESTDATABLOCK. First small total_size allocates buffer; subsequent blob_size exceeds remaining allocation despite frame-local checks.",
+    "access_gaps": [
+      "Complete adapted exploit firmware not linked or audited",
+      "Images/video not independently reviewed"
+    ],
+    "license": "No reuse permission established; original Chinese synthesis",
+    "execution_performed": false
+  },
+  {
+    "indices": [
+      5
+    ],
+    "product": "librsvg / Next.js Image Optimization",
+    "status": "integrated",
+    "repository": "rafabd1/VectorFreed",
+    "source_commit": "67e5207cff096739ace95f3e68b9ca65f5303e11",
+    "files_read": [
+      {
+        "path": "README.md",
+        "sha": "e05c0152126245eeef63124707f2bef8617c2275"
+      },
+      {
+        "path": "pocs/README.md",
+        "sha": "9ef87dcb1796f3b0c384ebe49ad00946f811f7ca"
+      },
+      {
+        "path": "pocs/poc-uaf.py",
+        "sha": "edf43b21a870c407f80925111821d8b476d6cbc6"
+      }
+    ],
+    "tree_complete": true,
+    "sources": [
+      "https://rustsec.org/advisories/RUSTSEC-2026-0305.html",
+      "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw"
+    ],
+    "observations": "Repeated XML entity declaration via XInclude frees shared node while outer parser retains pointer. Generator only demonstrates UAF, not RCE. Full three-text-file tree read; standard-library encoding and file/stdout output only, output can overwrite. No network, subprocess or credential access. Next.js strict >16.0.0 lower bound preserved; glibc Linux/input reachability required. CVE94545 is distinct existing ImageResponse/Satori record.",
+    "access_gaps": [
+      "No independent renderer execution",
+      "README extra 2.56.6 fix not used because RustSec does not list it",
+      "External RCE implementation not audited or admitted"
+    ],
+    "license": "No license in complete tree; original Chinese synthesis",
+    "execution_performed": false
+  },
+  {
+    "indices": [
+      38
+    ],
+    "product": "Windows Kernel-Mode Drivers / mskssrv",
+    "status": "qualified-narrow-source-analysis-delivered",
+    "repository": "wkpwn/CVE-2026-83834",
+    "source_commit": "613a47761179f25c1fc91e21a9401410e5684d81",
+    "tree_complete": true,
+    "files_read": [
+      {
+        "path": "README.md",
+        "sha": "fc57518ef1879e149464a31c4e43f7c0f163bc77"
+      },
+      {
+        "path": "mskssrv-uaf.slnx",
+        "sha": "600ecdf0fc758a75aa4646e81ad73fdad82ccfa6"
+      },
+      {
+        "path": "mskssrv-uaf/common.h",
+        "sha": "04941e5ba0c73a4e7bc37ffa59389c0a3c4c50a1"
+      },
+      {
+        "path": "mskssrv-uaf/frameserver.h",
+        "sha": "89a2bb3c9860408ec220969f170df9e8cf7cb74c"
+      },
+      {
+        "path": "mskssrv-uaf/mskssrv-uaf.cpp",
+        "sha": "e1c6d810e2c4743f54697f998bab0947000f2b0a"
+      },
+      {
+        "path": "mskssrv-uaf/mskssrv-uaf.vcxproj",
+        "sha": "d1aa9cff177fe9d1ed4a41250699addb32375d21"
+      },
+      {
+        "path": "mskssrv-uaf/mskssrv-uaf.vcxproj.filters",
+        "sha": "de112ab73a0d961ed3cd39b26d71651b17740419"
+      },
+      {
+        "path": "mskssrv-uaf/mskssrv-uaf.vcxproj.user",
+        "sha": "0f14913f3c72094bb7b1e695e153ade04b17d5b0"
+      },
+      {
+        "path": "mskssrv-uaf/mskssrv.h",
+        "sha": "efb3e918c885e36bd1841ee6f545a12bf041808e"
+      },
+      {
+        "path": "mskssrv-uaf/prefetch_asm.asm",
+        "sha": "5e70e58c6c6096b14faf19b4791bc50f8e625746"
+      },
+      {
+        "path": "mskssrv-uaf/prefetch_leak.c",
+        "sha": "b01707e12fcb61a305c39a18deff217247a11bad"
+      },
+      {
+        "path": "mskssrv-uaf/prefetch_leak.h",
+        "sha": "eea7dd68b6a0195f92914fa964ed3876996ae633"
+      },
+      {
+        "path": "mskssrv-uaf/race.h",
+        "sha": "086181dc14a0b5054d5d7e61a1c643b26321fda9"
+      },
+      {
+        "path": "mskssrv-uaf/spray.h",
+        "sha": "8e66a450bc3c43eea27ec7ffc10cbc8395516b6a"
+      }
+    ],
+    "not_read": [
+      "x64/Release/mskssrv-uaf.exe",
+      "x64/Release/mskssrv-uaf.pdb"
+    ],
+    "cna_blob": "a2d515744cf6a8b95b8c15b3995c0ee6a819fc74",
+    "affected_matrix": [
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 1607",
+        "platforms": [
+          "32-bit Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.14393.0",
+            "lessThan": "10.0.14393.9612",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 1809",
+        "platforms": [
+          "32-bit Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.17763.0",
+            "lessThan": "10.0.17763.9376",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 21H2",
+        "platforms": [
+          "32-bit Systems",
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.19044.0",
+            "lessThan": "10.0.19044.7807",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 22H2",
+        "platforms": [
+          "32-bit Systems",
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.19045.0",
+            "lessThan": "10.0.19045.7807",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 version 23H2",
+        "platforms": [
+          "ARM64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.22631.0",
+            "lessThan": "10.0.22631.7652",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 23H2",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.22631.0",
+            "lessThan": "10.0.22631.7652",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 24H2",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26100.0",
+            "lessThan": "10.0.26100.9711",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 25H2",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26200.0",
+            "lessThan": "10.0.26200.9711",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 version 26H1",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.28000.0",
+            "lessThan": "10.0.28000.3231",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 26H2",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26300.0",
+            "lessThan": "10.0.26300.9711",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2016",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.14393.0",
+            "lessThan": "10.0.14393.9612",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2016 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.14393.0",
+            "lessThan": "10.0.14393.9612",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2019",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.17763.0",
+            "lessThan": "10.0.17763.9376",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2019 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.17763.0",
+            "lessThan": "10.0.17763.9376",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2022",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.20348.0",
+            "lessThan": "10.0.20348.5761",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2025",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26100.0",
+            "lessThan": "10.0.26100.33650",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2025 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26100.0",
+            "lessThan": "10.0.26100.33650",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "observations": "All 14 text/source/build files read, including full 16KB prefetch header. FrameServer camera setup followed by PublishRx versus close race. Main directly calls Intel prefetch leak, hard-coded kernel offsets have no build compatibility check. Named pipe spray, indefinite retry/resource pressure, kernel security-state modification, winlogon-parent cmd creation. MSVC/MASM/SDK build has no extra download/postbuild execution; no unrelated network exfiltration seen. Internal function root cause attributed to researcher, CNA only confirms local authorized UAF/TOCTOU.",
+    "access_gaps": [
+      "PoC tested Windows build unspecified; official affected matrix is NOT exploit compatibility",
+      "Prebuilt EXE/PDB not executed or disassembled; source/binary correspondence unknown",
+      "No product binary reverse-engineering verification"
+    ],
+    "license": "No license file in complete tree; original Chinese synthesis",
+    "execution_performed": false
+  }
+]
