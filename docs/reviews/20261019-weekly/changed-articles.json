@@ -1,0 +1,177 @@
+{
+  "base": "34eea13f87b846498780ebc83b350d32800506a7",
+  "new_articles": [
+    "IOT安全/打印机/Brother/Brother VC-500W CGI 与 CUPS 日志利用链分析.md",
+    "IOT安全/智能家居/Philips Hue Bridge Zigbee 分片长度校验缺失 CVE-2026-3555.md",
+    "IOT安全/芯片安全/Nordic nRF51822 RBPCONF 与调试单步读取固件分析.md",
+    "IOT安全/芯片安全/Nordic nRF52840 APPROTECT 启动窗口电压故障研究.md",
+    "IOT安全/芯片安全/Renesas RH850/P1M-E 编程器禁用检查的物理故障注入分析.md",
+    "IOT安全/路由器/COMFAST/COMFAST CF-N1-S V2 已认证 ping_config 命令注入.md",
+    "IOT安全/路由器/Cisco RV系列2023年管理接口命令注入分析.md",
+    "IOT安全/路由器/D-Link/D-Link COVR SetTriggerWPS PIN 命令注入.md",
+    "IOT安全/路由器/D-Link/D-Link DI-7400G+ NVRAM 配置链命令注入.md",
+    "IOT安全/路由器/D-Link/D-Link DI-8100 msp_info.htm 命令注入 CVE-2024-7436.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-601 B1 配置泄露与改密分析.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-816 Diagnosis sendNum 命令注入.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-820L cancelPing 的 nextPage 栈溢出分析.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-823 Pro 静态路由命令注入.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-825 B1 三处 CGI 命令注入分析.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-859 genacgi_main 栈溢出 CVE-2022-25106.md",
+    "IOT安全/路由器/D-Link/D-Link DIR-860L SSDP ST 命令注入.md",
+    "IOT安全/路由器/DCN/DCN DCME-720 ip_block.php 命令注入 CVE-2025-9387.md",
+    "IOT安全/路由器/DrayTek/DrayTek Vigor3910 配置导出与 GetCGI 溢出分析.md",
+    "IOT安全/路由器/H3C/H3C Magic R100 ajaxmsg 超长输入的拒绝服务记录.md",
+    "IOT安全/路由器/H3C/H3C Magic 路由器 FastCGI 命令注入边界分析.md",
+    "IOT安全/路由器/Linksys/Linksys WRT54G ui_language 二阶注入的历史分析.md",
+    "IOT安全/路由器/NETGEAR/NETGEAR DGN1000 setup.cgi 认证绕过与命令执行（CVE-2024-12847）.md",
+    "IOT安全/路由器/NETGEAR/NETGEAR R6900v2 mini_httpd 认证绕过资料核对（CVE-2021-34865）.md",
+    "IOT安全/路由器/NETGEAR/NETGEAR WNAP320 boardDataWW 参数命令注入.md",
+    "IOT安全/路由器/Ruckus/Ruckus vRIoT API 认证绕过与命令注入链（CVE-2020-26878、CVE-2020-26879）.md",
+    "IOT安全/路由器/TOTOLINK/TOTOLINK A3000RU setUpgradeFW 命令注入分析（CVE-2022-26210）.md",
+    "IOT安全/路由器/TOTOLINK/TOTOLINK NR1800X 三个 CGI 问题的公开触发与证据限制.md",
+    "IOT安全/路由器/TP-Link TL-WR740N v1 隐藏调试命令界面分析.md",
+    "IOT安全/路由器/TP-Link/TP-Link Archer AXE75 HomeShield 命令注入（CVE-2024-53375）.md",
+    "IOT安全/路由器/TP-Link/TP-Link Archer C20i WAN IPv6 参数命令注入（CVE-2021-44827）.md",
+    "IOT安全/路由器/TP-Link/TP-Link WR841N 字符串扩展与 ping_addr 溢出分析.md",
+    "IOT安全/路由器/Tenda AC6v2 已认证开启Telnet与固定凭据分析.md",
+    "IOT安全/路由器/Tenda/Tenda AC15 Cookie password 栈溢出与仿真边界.md",
+    "IOT安全/路由器/Tenda/Tenda AC15 addressNat page 溢出的仿真记录与编号边界.md",
+    "IOT安全/路由器/Tenda/Tenda AC6 WriteFacMac 参数注入的实机调试记录与边界.md",
+    "IOT安全/路由器/Wavlink/Wavlink NU516U1 两代固件的注入与溢出记录.md",
+    "IOT安全/路由器/Wavlink/Wavlink WL-NU516U1 GuestWifi 命令注入资料核对（CVE-2025-9149）.md",
+    "IOT安全/路由器/WayOS/WayOS WAM9900 USB 共享与 Telnet 的三类研究记录.md",
+    "IOT安全/路由器/ipTIME/ipTIME AX2004M 路径认证绕过与调试功能利用链（KVE-2023-0133）.md",
+    "IOT安全/路由器/ipTIME/ipTIME C200 调试 CGI 命令执行分析.md",
+    "IOT安全/路由器/小米/小米 AX9000 授权后 appid 命令注入 CVE-2023-26315.md",
+    "Web安全/AI应用/Flowise/Flowise OAuth2 回调反射 HTML 注入与模板修复边界.md",
+    "Web安全/AI应用/Langflow/Langflow Fernet 弱密钥派生与第三方检测边界 CVE-2026-9205.md",
+    "Web安全/中间件/Tomcat/Tomcat RewriteValve 非收敛规则导致工作线程占用.md",
+    "Web安全/人力资源/Wukong HRM/Wukong HRM 认证绕过与默认 HR 管理员授权问题.md",
+    "Web安全/代码托管/GitLab/GitLab CI正则编译整数溢出-CVE-2026-97229.md",
+    "Web安全/任务调度/XXL-JOB/XXL-JOB 任务操作与日志接口的对象级权限检查分析.md",
+    "Web安全/协作平台/4gaBoards/4gaBoards 普通用户越权读取账户信息 CVE-2026-53959.md",
+    "Web安全/协作平台/Nextcloud/Nextcloud 内置 CODE Server proxy.php 命令注入 CVE-2026-110447.md",
+    "Web安全/图像处理/librsvg/librsvg 重复 XML 实体释放与 Next.js 图像优化入口 CVE-2026-96889.md",
+    "Web安全/安全平台/OpenCTI/OpenCTI UUID 身份绕过与 notifier EJS 执行链 CVE-2026-27960、CVE-2026-39980.md",
+    "Web安全/开发者平台/Google DevSite/Google DevSite OAuth 会话签名密钥复用与反序列化链.md",
+    "Web安全/监控系统/Glances/Glances 默认无认证 API 信息暴露与补丁边界 CVE-2026-32596.md",
+    "Web安全/监控系统/Splunk/Splunk Enterprise Patroni REST API 缺少认证 CVE-2026-76268.md",
+    "Web安全/邮件系统/SmarterMail/SmarterMail 日历消息 XSS、旧角色令牌与 Volume Mount 代码执行链.md",
+    "Web安全/邮件系统/Zimbra/Zimbra EWS FindItem 跨账号邮箱读取（CVE-2026-10631）.md",
+    "Web安全/邮件系统/Zimbra/Zimbra GraphQL 认证失败计数绕过（CVE-2026-93637）.md",
+    "Web安全/邮件系统/Zimbra/Zimbra LDAP 模板替换注入与认证结果判别（CVE-2026-93635）.md",
+    "Web安全/邮件系统/Zimbra/Zimbra SaveDraft 委托身份混淆导致邮件冒发（CVE-2026-73571）.md",
+    "Web安全/邮件系统/Zimbra/Zimbra Sieve notify 绕过邮件转发限制（CVE-2026-50055）.md",
+    "Web安全/镜像仓库/Docker Hub/Docker Hub 账户转换错误转移 PAT 身份 CVE-2026-105445.md",
+    "系统安全/Linux内核/Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）.md",
+    "系统安全/Windows/Windows SFAPE enclave 初始化不可信指针写入 CVE-2026-83498.md",
+    "系统安全/Windows/Windows mskssrv 对象生命周期竞态源码分析 CVE-2026-83834.md"
+  ],
+  "updated_articles": [
+    {
+      "path": "IOT安全/D-Link/DLink 815 系列路由器栈溢出漏洞分析与复现.md",
+      "original_sha256": "a4905231d447f72210a25a8e2ec1d25e2f262e93f664cf66ea73713d2249db8b",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "IOT安全/Huawei/华为 HG532 系列路由器命令注入漏洞复现 CVE-2017-17215.md",
+      "original_sha256": "246853d1a366134b1eb40b6ec2e6df3829854eeee3a8d41a78fdce62ee3c9aa3",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "IOT安全/其他设备/Arcadyan固件-image-路径遍历漏洞-CVE-2021-20090.md",
+      "original_sha256": "957a24c3bcd59753723c272b34bd2055414ee4b871520555ab139dc7655a9602",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/Citrix-NetScaler-ADC-&-Gateway-信息泄露漏洞-CVE-2023-4966.md",
+      "original_sha256": "8159fd33ce24a5609fb3b944a3469aae48c507267b91c851373fcf21f98711af",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/(RV34X,160,260) 多漏洞攻击链研究.md",
+      "original_sha256": "1ca46c3a0745d9629b59abcd023b25403130a5c3f9eb5e7cac42823b9f2e9a67",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-8949漏洞复现技术分享.md",
+      "original_sha256": "f1eea1fdd3261fa190716db28a4d571c163c4414ccd0ff4b88c9ae84cca4639c",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/命令注入漏洞 CVE-2022-26258 复现.md",
+      "original_sha256": "5e87bc54b664d09ef62480b175d08dbbf909e476a9c25d05c2743d9ec01f3043",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/命令注入漏洞 CVE-2022-34527 复现.md",
+      "original_sha256": "65cd0da4a20955127e606aa4888b5c012e032c192ea9da745648f67201ef188a",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/商业软件/AhsayCBS/AhsayCBS 复制接收器未授权命令注入致RCE（CVE-2026-105133、CVE-2026-105134）.md",
+      "original_sha256": "e75721176850362f2ea8ceeada487f7cd547e5e07cb165a41cdb2e5d135295ea",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/原创Paper  Cisco IOS XE 系统 WebUI 未授权命令执行漏洞分析.md",
+      "original_sha256": "7c7758e53ac9e7236cf3f518603044409219001d55bdca35ecfb0c20e738597a",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+      "original_sha256": "47de4c559b5598ebaea7b393cc893b3c31d8b9d9416207fa9bcaed01e12667f2",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2023-4542：D-LINK-DAR-8000-10 远程命令执行 附 POC.md",
+      "original_sha256": "45f98bc4b6f3f3e2c4de366442eaca16672ec7fe626772ee464ea45cb94845a5",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/D-Link DIR-860L B1 DHCP Hostname 命令注入 CVE-2025-14659.md",
+      "original_sha256": "7e5d0bc1d1da8bc92c6126231869974191fc22da7810bd05d32ffab9a162512e",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/F5 BIG-IP/F5 BIG-IP 高危漏洞可导致拒绝服务和代码执行.md",
+      "original_sha256": "effec8285fe7572f18cb07be2ee6c2841eb29c2a4752be30a76ba195746fe95e",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/GL-iNet/原创 Paper  GL-iNet 路由器 CVE-2024-39226 漏洞分析.md",
+      "original_sha256": "3284025260f296cc2bbef049bba46dc778cd80be53a4b1177e7d7975066c2b65",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "original_sha256": "9475c38841182246933a460ec0913b90541f853af73e2fd87f8df7748a8b2078",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/Zyxel/Zyxel-硬编码后门账户漏洞-CVE-2020-29583.md",
+      "original_sha256": "7854a6cd2498800dfc03af3e7e396c2e9e774bbe6bd0d152f73162b00b70bc89",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/Zyxel/原创 Paper  Zyxel Telnet 漏洞分析(CVE-2025-0890、CVE‑2024‑40891).md",
+      "original_sha256": "3ce085ae4dc6cf2bc5147977746f2fdbcb52b6aae7cb445e0f4ecd37293ea0e1",
+      "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md",
+      "original_sha256": "ec43875795cd7d8f9c150b219732ddcade6d91693ae1dc6218137d5c53dbaacb",
+      "original_bytes_preserved_as_prefix": false,
+      "original_body_bytes_preserved_as_prefix": true,
+      "metadata_changes": [
+        "identifier_role: primary -> unknown",
+        "primary_identifiers -> identifier_candidates"
+      ],
+      "reason": "CNA fromAddressNat/page does not confirm archived setMacFilterCfg/deviceList body; preserve the article and candidate ID"
+    }
+  ],
+  "new_count": 65,
+  "updated_count": 19,
+  "original_pr_head": "164065de6be3412ce52ce37719eba46f6174549f",
+  "preservation_note": "18 original supplement files retain complete base prefixes. Additional Tenda changes only identifier roles and appends a dated note; its original technical body is intact."
+}
