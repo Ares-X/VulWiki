@@ -63,6 +63,7 @@
     "Web安全/邮件系统/Zimbra/Zimbra SaveDraft 委托身份混淆导致邮件冒发（CVE-2026-73571）.md",
     "Web安全/邮件系统/Zimbra/Zimbra Sieve notify 绕过邮件转发限制（CVE-2026-50055）.md",
     "Web安全/镜像仓库/Docker Hub/Docker Hub 账户转换错误转移 PAT 身份 CVE-2026-105445.md",
+    "系统安全/Linux内核/Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）.md",
     "系统安全/Windows/Windows SFAPE enclave 初始化不可信指针写入 CVE-2026-83498.md",
     "系统安全/Windows/Windows mskssrv 对象生命周期竞态源码分析 CVE-2026-83834.md"
   ],
@@ -158,6 +159,6 @@
       "original_bytes_preserved_as_prefix": true
     }
   ],
-  "new_count": 64,
+  "new_count": 65,
   "updated_count": 18
 }

@@ -54,5 +54,10 @@
     "duplicate-candidate": 2,
     "pending-trigger-source": 5,
     "excluded-unreviewed-bundle": 1
-  }
+  },
+  "status_counts_scope": "Original secondary-source dispositions; dated primary-source re-evaluations are separately recorded without replacing history.",
+  "reevaluated_source_records": 2,
+  "independent_primary_articles_from_reevaluation": [
+    "系统安全/Linux内核/Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）.md"
+  ]
 }

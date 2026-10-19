@@ -654,5 +654,14 @@
     "rendered_fenced_code_text_matches_in_order": true,
     "additional_indented_blocks": 0,
     "renderer": "pandoc 3.1.11.1, gfm to HTML5; HTMLParser text extraction; no scripts or requests executed"
+  },
+  {
+    "path": "系统安全/Linux内核/Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）.md",
+    "source_sha256": "0264b6635b0d1087ff65dc28051c55e2cbb6fd3c3dc259d012b3caf7db2a81c2",
+    "code_blocks": 2,
+    "rendered_fenced_code_text_matches_in_order": true,
+    "additional_indented_blocks": 0,
+    "renderer": "pandoc 3.1.11.1, gfm to HTML5; HTMLParser text extraction; no scripts or requests executed",
+    "source_command_fidelity": "All four command lines match fixed upstream README exactly"
   }
 ]
