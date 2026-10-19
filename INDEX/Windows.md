@@ -68,6 +68,10 @@
 
 - [Windows LNK 图标加载的公开结构与 WebDAV 触发边界（CVE-2010-2568）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20LNK%20%E5%9B%BE%E6%A0%87%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%85%AC%E5%BC%80%E7%BB%93%E6%9E%84%E4%B8%8E%20WebDAV%20%E8%A7%A6%E5%8F%91%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2010-2568%EF%BC%89.md) [vulnerability; not-reproduced; active]
 
+## Microsoft Windows Virtualization-Based Security (VBS) Enclave / SFAPE.dll
+
+- [Windows SFAPE enclave 初始化不可信指针写入（CVE-2026-83498）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20SFAPE%20enclave%20%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8D%E5%8F%AF%E4%BF%A1%E6%8C%87%E9%92%88%E5%86%99%E5%85%A5%20CVE-2026-83498.md) [vulnerability; source-claimed; active]
+
 ## Microsoft Windows fastfat.sys
 
 - [Windows FastFAT 簇计数溢出与 BSOD 证据边界（CVE-2025-24985）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20FastFAT%20%E7%B0%87%E8%AE%A1%E6%95%B0%E6%BA%A2%E5%87%BA%E4%B8%8E%20BSOD%20%E8%AF%81%E6%8D%AE%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2025-24985%EF%BC%89.md) [analysis; not-reproduced; active]
