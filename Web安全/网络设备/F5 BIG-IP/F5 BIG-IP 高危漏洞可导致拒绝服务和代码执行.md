@@ -154,3 +154,32 @@ Pixabay License
 ---
 
 > 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+
+
+## F5 BIG-IP iControl SOAP 格式化字符串的动态分析边界
+
+来源公开 /iControl/iControlPortal.cgi 的 WSDL=ASM.LoggingProfile 查询与格式说明符，沿 PortalDispatch::HandleWSDLRequest、syslog、__syslog_chk 到格式化输出过程追踪。请求字符串被当作格式而非普通数据，作者在本地日志 /var/log/ltm 观察结果。这补充了既有新闻稿，归为同 CVE 的分析资料。
+
+本地日志可见不等于远端攻击者可读地址。作者明确讨论 ASLR 与多次写入的困难，并未实现 RCE；其重复 %s 的崩溃尝试和潜在执行风险必须分开。%n 表达写入已输出字符数，不能不加限制地表述为任意地址任意值写入。
+
+F5 CNA 已列：17.0.0 至 17.1.0 前、16.1.2.2 至 16.1.3.4 前、15.1.5.1 至 15.1.8.2 前、14.1.4.6 至 14.1.5.4 前受影响，另列 13.1.5 及工程热修复。固定版本分别记录，不能保留 2023 新闻中的“尚无补丁”作为当前结论；EoTS 版本未评价不能视为安全。F5 的 16.1.3.4 发布说明亦列出该漏洞修复。
+
+
+### 逐项静态审计
+
+- 格式字符串可到达日志格式化链，但本地/有权限日志读取不等于远程信息泄露。
+- %n 写的是已输出字符数；原作者未完成RCE，且重复请求存在 ASLR 地址变化问题。
+- %s 崩溃方法只能按来源声称记录；未从格式符号推导新地址或新利用链。
+
+### 核验、风险与来源
+
+可使 iControl SOAP CGI 崩溃并写日志；不能将其标成只读检测。本次仅进行公开资料与既有文库的静态文字核对，未执行请求、载荷、固件、依赖安装或扫描，也未访问示例目标。来源中的成功或失败是作者记录；截图像素本轮未审，不将其升级为本库复现。
+
+本文为新写中文分析，不整篇复制原文章或图片。汇编库的 Apache-2.0 声明不能证明原作者文章及图片已按该许可授权。原始资料不作遮盖、替换或删除；本文没有转录为可运行脚本，也不补全来源省略的参数。
+
+- 研究来源：Pachimker，https://www.iotsec-zone.com/article/368；发布时间线索：unknown。本次仓库收录时间不等于新漏洞披露时间
+- 核对依据：https://github.com/CVEProject/cvelistV5/blob/main/cves/2023/22xxx/CVE-2023-22374.json
+- 核对依据：https://my.f5.com/manage/s/article/K000130415
+- 核对依据：https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/relnote-supplement-bigip-16-1-3-4.html
+
+- 固定汇编来源（仅固定所读版本，不代替原作者出处）：https://github.com/Mr-xn/Penetration_Testing_POC/blob/f33600e512f2ff654ec335102daf23b8a5218d24/iot/%E7%89%A9%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-BIG-IP%28CVE-2023-22374%29%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md

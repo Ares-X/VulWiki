@@ -1,0 +1,14 @@
+{
+  "scope": "historical original PR input only; not the corrected final tree",
+  "input_head": "164065de6be3412ce52ce37719eba46f6174549f",
+  "report": "render-copy-checks.json",
+  "sha256": "f32d54411e72dff6b5140e2620ca40c3e015e38ace4fa42907cd307986ac56df",
+  "articles": 83,
+  "renderer": "Pandoc 3.1.11.1",
+  "superseded_for_final_acceptance_by": [
+    "pr29-acceptance.md",
+    "pr29-fidelity.json",
+    "render-copy-final.json"
+  ],
+  "note": "Original rows are preserved. Final code-text acceptance uses Marked 4.3.0 and HTMLParser on 84 articles. No current Pandoc or browser visual pass is claimed."
+}

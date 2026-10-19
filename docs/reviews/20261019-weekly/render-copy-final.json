@@ -1,0 +1,426 @@
+{
+  "renderer": "Marked 4.3.0; HTMLParser text extraction; no HTML execution or network requests",
+  "trailing_newline_rule": "Marked default code renderer replaces one final newline then appends one newline; all other code text is exact",
+  "articles": [
+    {
+      "path": "IOT安全/D-Link/DLink 815 系列路由器栈溢出漏洞分析与复现.md",
+      "code_blocks": 19,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/Huawei/华为 HG532 系列路由器命令注入漏洞复现 CVE-2017-17215.md",
+      "code_blocks": 11,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/其他设备/Arcadyan固件-image-路径遍历漏洞-CVE-2021-20090.md",
+      "code_blocks": 2,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/打印机/Brother/Brother VC-500W CGI 与 CUPS 日志利用链分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/智能家居/Philips Hue Bridge Zigbee 分片长度校验缺失 CVE-2026-3555.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/芯片安全/Nordic nRF51822 RBPCONF 与调试单步读取固件分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/芯片安全/Nordic nRF52840 APPROTECT 启动窗口电压故障研究.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/芯片安全/Renesas RH850/P1M-E 编程器禁用检查的物理故障注入分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/COMFAST/COMFAST CF-N1-S V2 已认证 ping_config 命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Cisco RV系列2023年管理接口命令注入分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link COVR SetTriggerWPS PIN 命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DI-7400G+ NVRAM 配置链命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DI-8100 msp_info.htm 命令注入 CVE-2024-7436.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-601 B1 配置泄露与改密分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-816 Diagnosis sendNum 命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-820L cancelPing 的 nextPage 栈溢出分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-823 Pro 静态路由命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-825 B1 三处 CGI 命令注入分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-859 genacgi_main 栈溢出 CVE-2022-25106.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/D-Link/D-Link DIR-860L SSDP ST 命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/DCN/DCN DCME-720 ip_block.php 命令注入 CVE-2025-9387.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/DrayTek/DrayTek Vigor3910 配置导出与 GetCGI 溢出分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/H3C/H3C Magic R100 ajaxmsg 超长输入的拒绝服务记录.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/H3C/H3C Magic 路由器 FastCGI 命令注入边界分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Linksys/Linksys WRT54G ui_language 二阶注入的历史分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/NETGEAR/NETGEAR DGN1000 setup.cgi 认证绕过与命令执行（CVE-2024-12847）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/NETGEAR/NETGEAR R6900v2 mini_httpd 认证绕过资料核对（CVE-2021-34865）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/NETGEAR/NETGEAR WNAP320 boardDataWW 参数命令注入.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Ruckus/Ruckus vRIoT API 认证绕过与命令注入链（CVE-2020-26878、CVE-2020-26879）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/TOTOLINK/TOTOLINK A3000RU setUpgradeFW 命令注入分析（CVE-2022-26210）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/TOTOLINK/TOTOLINK NR1800X 三个 CGI 问题的公开触发与证据限制.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/TP-Link TL-WR740N v1 隐藏调试命令界面分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/TP-Link/TP-Link Archer AXE75 HomeShield 命令注入（CVE-2024-53375）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/TP-Link/TP-Link Archer C20i WAN IPv6 参数命令注入（CVE-2021-44827）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/TP-Link/TP-Link WR841N 字符串扩展与 ping_addr 溢出分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Tenda AC6v2 已认证开启Telnet与固定凭据分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Tenda/Tenda AC15 Cookie password 栈溢出与仿真边界.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Tenda/Tenda AC15 addressNat page 溢出的仿真记录与编号边界.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Tenda/Tenda AC6 WriteFacMac 参数注入的实机调试记录与边界.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Wavlink/Wavlink NU516U1 两代固件的注入与溢出记录.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/Wavlink/Wavlink WL-NU516U1 GuestWifi 命令注入资料核对（CVE-2025-9149）.md",
+      "code_blocks": 1,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/WayOS/WayOS WAM9900 USB 共享与 Telnet 的三类研究记录.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/ipTIME/ipTIME AX2004M 路径认证绕过与调试功能利用链（KVE-2023-0133）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/ipTIME/ipTIME C200 调试 CGI 命令执行分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "IOT安全/路由器/小米/小米 AX9000 授权后 appid 命令注入 CVE-2023-26315.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/AI应用/Flowise/Flowise OAuth2 回调反射 HTML 注入与模板修复边界.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/AI应用/Langflow/Langflow Fernet 弱密钥派生与第三方检测边界 CVE-2026-9205.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/中间件/Tomcat/Tomcat RewriteValve 非收敛规则导致工作线程占用.md",
+      "code_blocks": 1,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/Citrix-NetScaler-ADC-&-Gateway-信息泄露漏洞-CVE-2023-4966.md",
+      "code_blocks": 6,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/人力资源/Wukong HRM/Wukong HRM 认证绕过与默认 HR 管理员授权问题.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/代码托管/GitLab/GitLab CI正则编译整数溢出-CVE-2026-97229.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/任务调度/XXL-JOB/XXL-JOB 任务操作与日志接口的对象级权限检查分析.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/(RV34X,160,260) 多漏洞攻击链研究.md",
+      "code_blocks": 10,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-8949漏洞复现技术分享.md",
+      "code_blocks": 4,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/命令注入漏洞 CVE-2022-26258 复现.md",
+      "code_blocks": 8,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/命令注入漏洞 CVE-2022-34527 复现.md",
+      "code_blocks": 9,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/协作平台/4gaBoards/4gaBoards 普通用户越权读取账户信息 CVE-2026-53959.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/协作平台/Nextcloud/Nextcloud 内置 CODE Server proxy.php 命令注入 CVE-2026-110447.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/商业软件/AhsayCBS/AhsayCBS 复制接收器未授权命令注入致RCE（CVE-2026-105133、CVE-2026-105134）.md",
+      "code_blocks": 1,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/图像处理/librsvg/librsvg 重复 XML 实体释放与 Next.js 图像优化入口 CVE-2026-96889.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/安全平台/OpenCTI/OpenCTI UUID 身份绕过与 notifier EJS 执行链 CVE-2026-27960、CVE-2026-39980.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/开发者平台/Google DevSite/Google DevSite OAuth 会话签名密钥复用与反序列化链.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/监控系统/Glances/Glances 默认无认证 API 信息暴露与补丁边界 CVE-2026-32596.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/监控系统/Splunk/Splunk Enterprise Patroni REST API 缺少认证 CVE-2026-76268.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/原创Paper  Cisco IOS XE 系统 WebUI 未授权命令执行漏洞分析.md",
+      "code_blocks": 11,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+      "code_blocks": 17,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2023-4542：D-LINK-DAR-8000-10 远程命令执行 附 POC.md",
+      "code_blocks": 5,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/D-Link DIR-860L B1 DHCP Hostname 命令注入 CVE-2025-14659.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/F5 BIG-IP/F5 BIG-IP 高危漏洞可导致拒绝服务和代码执行.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/GL-iNet/原创 Paper  GL-iNet 路由器 CVE-2024-39226 漏洞分析.md",
+      "code_blocks": 17,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "code_blocks": 5,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/Zyxel/Zyxel-硬编码后门账户漏洞-CVE-2020-29583.md",
+      "code_blocks": 2,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/Zyxel/原创 Paper  Zyxel Telnet 漏洞分析(CVE-2025-0890、CVE‑2024‑40891).md",
+      "code_blocks": 3,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/邮件系统/SmarterMail/SmarterMail 日历消息 XSS、旧角色令牌与 Volume Mount 代码执行链.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/邮件系统/Zimbra/Zimbra EWS FindItem 跨账号邮箱读取（CVE-2026-10631）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/邮件系统/Zimbra/Zimbra GraphQL 认证失败计数绕过（CVE-2026-93637）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/邮件系统/Zimbra/Zimbra LDAP 模板替换注入与认证结果判别（CVE-2026-93635）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/邮件系统/Zimbra/Zimbra SaveDraft 委托身份混淆导致邮件冒发（CVE-2026-73571）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/邮件系统/Zimbra/Zimbra Sieve notify 绕过邮件转发限制（CVE-2026-50055）.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/镜像仓库/Docker Hub/Docker Hub 账户转换错误转移 PAT 身份 CVE-2026-105445.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "系统安全/Linux内核/Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）.md",
+      "code_blocks": 2,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "系统安全/Windows/Windows SFAPE enclave 初始化不可信指针写入 CVE-2026-83498.md",
+      "code_blocks": 1,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "系统安全/Windows/Windows mskssrv 对象生命周期竞态源码分析 CVE-2026-83834.md",
+      "code_blocks": 0,
+      "rendered_code_text_matches": true
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md",
+      "code_blocks": 16,
+      "rendered_code_text_matches": true
+    }
+  ]
+}

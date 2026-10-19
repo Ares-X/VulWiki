@@ -1,0 +1,12 @@
+{
+  "index": 114,
+  "decision": "integrated-original-analysis",
+  "primary_commit": "24881ec3c100e9763191f7c3575e8433f367e53a",
+  "primary_blob": "637882928e5844846f83c987786e115d8ab3c969",
+  "primary_read": "complete body including fullHTTP request",
+  "tree_scope": "154 entries untruncated; all blobsMarkdown/images; no rootfiles/install/dependencies/workflows; Wavlink contains Markdown+5images",
+  "trigger": "POST /cgi-bin/wireless.cgi; page=GuestWifi&guestEn=1&Guest_ssid=$(ps>/1.txt)",
+  "source_request_limits": "primaryContentLength269 with extra blank lines; mirrorContentLength48; no repair or execution",
+  "auth": "CNA PR:L vs NVD PR:N; source login and Cookie present; primary omittedCookie; retain authrequirement",
+  "static": "full visible commands andHTTP reviewed; /1.txtwrite andguestconfig; TAP/dummy/IP/mounts/functions.sh/varreplacement/TLSconfig changes; external binaries not audited"
+}

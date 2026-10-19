@@ -1,0 +1,164 @@
+{
+  "observed_at": "2026-10-19T01:17:42Z",
+  "baseline_repository_commit": "34eea13f",
+  "baseline_document": "docs/reviews/20261012-weekly/supplementary.json",
+  "baseline_window": [
+    "2026-10-04T00:00:00Z",
+    "2026-10-12T00:00:00Z"
+  ],
+  "prior_inventory_observed_at": "2026-10-19T00:08:00Z",
+  "prior_inventory_sha256": "b57271589fb635e02134ca6aa8af7acda593d82e9b045936dba1319e21e4525b",
+  "scope": "Read-only current root/head metadata verification and prior artifact coverage reconciliation. No candidate bodies re-reviewed; no stopped historical batches reopened. Counts from recovered inventory are not independently re-fetched.",
+  "sources": [
+    {
+      "repository": "nomi-sec/PoC-in-GitHub",
+      "baseline_head": "7cadb7273c96f5cff61a0952597376a759b07205",
+      "fixed_head": "526540d15c7c6c0559eb2f454dff84bc689be53d",
+      "live_head_verification": {
+        "source_url": "https://api.github.com/repos/nomi-sec/PoC-in-GitHub/branches/master",
+        "head": "526540d15c7c6c0559eb2f454dff84bc689be53d",
+        "date": "2026-10-18T19:44:00Z",
+        "author_date": "2026-10-18T19:44:00Z",
+        "branch": "master"
+      },
+      "matches_live_head": true,
+      "head_url": "https://github.com/nomi-sec/PoC-in-GitHub/commit/526540d15c7c6c0559eb2f454dff84bc689be53d",
+      "compare_url": "https://github.com/nomi-sec/PoC-in-GitHub/compare/7cadb7273c96f5cff61a0952597376a759b07205...526540d15c7c6c0559eb2f454dff84bc689be53d",
+      "prior_artifact_evidence": {
+        "dated_commit_count": 64,
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
+        "post_baseline_commits": 56,
+        "compare_file_count": 300,
+        "inventory_commit_count": 28,
+        "inventory_pages": 35,
+        "distinct_inventory_paths": 1075
+      },
+      "article_review_complete": false,
+      "path_inventory_complete_within_reported_scope": true,
+      "scope": "Non-README post-baseline commits",
+      "coverage_evidence": "Recovered per-commit page records terminate below 100 files for every inventoried commit; uniqueness counts recomputed locally."
+    },
+    {
+      "repository": "trickest/cve",
+      "baseline_head": "5efd89da02a389826ae9a4f6b949cc365d5d3ddf",
+      "fixed_head": "7a40b2cacd8df33f71dce21be856511e414576ed",
+      "live_head_verification": {
+        "source_url": "https://api.github.com/repos/trickest/cve/branches/main",
+        "head": "7a40b2cacd8df33f71dce21be856511e414576ed",
+        "date": "2026-10-16T12:59:57Z",
+        "author_date": "2026-10-16T12:59:57Z",
+        "branch": "main"
+      },
+      "matches_live_head": true,
+      "head_url": "https://github.com/trickest/cve/commit/7a40b2cacd8df33f71dce21be856511e414576ed",
+      "compare_url": "https://github.com/trickest/cve/compare/5efd89da02a389826ae9a4f6b949cc365d5d3ddf...7a40b2cacd8df33f71dce21be856511e414576ed",
+      "prior_artifact_evidence": {
+        "dated_commit_count": 6,
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
+        "post_baseline_commits": 5,
+        "compare_file_count": 300,
+        "inventory_commit_count": 5,
+        "inventory_pages": 37,
+        "distinct_inventory_paths": 3386
+      },
+      "article_review_complete": false,
+      "path_inventory_complete_within_reported_scope": true,
+      "scope": "All five post-baseline commits",
+      "coverage_evidence": "Recovered per-commit page records terminate below 100 files for every inventoried commit; uniqueness counts recomputed locally."
+    },
+    {
+      "repository": "projectdiscovery/nuclei-templates",
+      "baseline_head": "5db11240bf1210e236e16752d18ab53a802ed1d4",
+      "fixed_head": "17f5725dc10ced09f464dd2d255c19957aad51e7",
+      "live_head_verification": {
+        "source_url": "https://api.github.com/repos/projectdiscovery/nuclei-templates/branches/main",
+        "head": "17f5725dc10ced09f464dd2d255c19957aad51e7",
+        "date": "2026-10-17T03:13:58Z",
+        "author_date": "2026-10-17T03:13:58Z",
+        "branch": "main"
+      },
+      "matches_live_head": true,
+      "head_url": "https://github.com/projectdiscovery/nuclei-templates/commit/17f5725dc10ced09f464dd2d255c19957aad51e7",
+      "compare_url": "https://github.com/projectdiscovery/nuclei-templates/compare/5db11240bf1210e236e16752d18ab53a802ed1d4...17f5725dc10ced09f464dd2d255c19957aad51e7",
+      "prior_artifact_evidence": {
+        "dated_commit_count": 264,
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
+        "post_baseline_commits": 305,
+        "compare_file_count": 300,
+        "inventory_commit_count": 90,
+        "inventory_pages": 90,
+        "distinct_inventory_paths": 92
+      },
+      "article_review_complete": false,
+      "path_inventory_complete_within_reported_scope": false,
+      "scope": "Non-chore commits dated Oct12 onward only; no stopped historical batches reopened",
+      "limitation": "Overall compare returned exactly 300 files for 305 post-baseline commits; completeness unresolved. Recovered 90-page/92-path non-chore subset does not establish full change inventory. Historical stopped batches untouched.",
+      "new_window_follow_up": {
+        "since": "2026-10-12T00:00:00Z",
+        "until": "2026-10-19T00:00:00Z",
+        "dated_commits": 253,
+        "pagination": [
+          100,
+          100,
+          53
+        ],
+        "new_commit_pages": 34,
+        "fully_enumerated_additional_commits": 4,
+        "additional_distinct_paths_seen": 3002,
+        "capped_commit": "8c71a662975daef0f35d9f90e23da544d6242b38",
+        "capped_commit_pages": 30,
+        "capped_commit_files_seen": 3000,
+        "fallback_diff_result": "HTTP 403 Forbidden; no alternate route after access failure",
+        "complete": false,
+        "details": "nuclei-new-window-partial-paths-20261019.json"
+      }
+    },
+    {
+      "repository": "rapid7/metasploit-framework",
+      "baseline_head": "2d664636002d3bfee1451c6832469f2756c54d4a",
+      "fixed_head": "b22ce1fbae63e8caeb3a773366a6d3336bd66fb8",
+      "live_head_verification": {
+        "source_url": "https://api.github.com/repos/rapid7/metasploit-framework/branches/master",
+        "head": "b22ce1fbae63e8caeb3a773366a6d3336bd66fb8",
+        "date": "2026-10-16T13:36:30Z",
+        "author_date": "2026-10-16T13:36:30Z",
+        "branch": "master"
+      },
+      "matches_live_head": true,
+      "head_url": "https://github.com/rapid7/metasploit-framework/commit/b22ce1fbae63e8caeb3a773366a6d3336bd66fb8",
+      "compare_url": "https://github.com/rapid7/metasploit-framework/compare/2d664636002d3bfee1451c6832469f2756c54d4a...b22ce1fbae63e8caeb3a773366a6d3336bd66fb8",
+      "prior_artifact_evidence": {
+        "dated_commit_count": 20,
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
+        "post_baseline_commits": 66,
+        "compare_file_count": 38,
+        "inventory_commit_count": 0,
+        "inventory_pages": 0,
+        "distinct_inventory_paths": 0,
+        "distinct_compare_paths": 38
+      },
+      "article_review_complete": false,
+      "path_inventory_complete_within_reported_scope": true,
+      "scope": "Post-baseline compare path list",
+      "coverage_evidence": "Recovered compare contains 38 files, below 300-file cap; prior inventory recorded complete."
+    },
+    {
+      "repository": "Exploit-DB official GitLab",
+      "baseline_head": "12879ca774a9d7543907d24a7bc1cebb47959afe",
+      "fixed_head": "12879ca774a9d7543907d24a7bc1cebb47959afe",
+      "head_date": "2026-10-02T00:16:12.000+00:00",
+      "matches_baseline": true,
+      "head_url": "https://gitlab.com/exploit-database/exploitdb/-/commit/12879ca774a9d7543907d24a7bc1cebb47959afe",
+      "live_head_source": "https://gitlab.com/api/v4/projects/exploit-database%2Fexploitdb/repository/branches/main",
+      "new_date_window_source": "https://gitlab.com/api/v4/projects/exploit-database%2Fexploitdb/repository/commits?since=2026-10-11T00%3A00%3A00Z&per_page=100",
+      "new_date_window_start": "2026-10-11T00:00:00Z",
+      "new_date_window_count": 0,
+      "new_date_window_pagination_complete": true,
+      "verification": "Independently fetched official GitLab branch metadata and Oct11-onward commits API; empty list.",
+      "article_review_complete": false,
+      "limitation": "Only current branch metadata and genuinely new date window checked. No historical diff batch or site-wide content completeness claim."
+    }
+  ],
+  "follow_up_observed_at": "2026-10-19T01:56:43Z",
+  "prior_inventory_date_window_note": "Recovered supplementary-oct19-findings.md identifies inherited dated counts as Oct11 onward; original machine artifact omits query URLs. New independent Nuclei query deliberately starts Oct12 and has 253 commits."
+}
