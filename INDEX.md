@@ -2,7 +2,7 @@
 
 # 产品索引
 
-收录 5927 个主入口（另保留 6025 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5928 个主入口（另保留 6026 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
 - [AI应用（99 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
@@ -30,6 +30,7 @@
 - [JCG（2 篇）](INDEX/JCG.md)
 - [Linear eMerge（1 篇）](INDEX/Linear%20eMerge.md)
 - [Linux（93 篇）](INDEX/Linux.md)
+- [Linux内核（1 篇）](INDEX/Linux%E5%86%85%E6%A0%B8.md)
 - [Microsoft Azure（1 篇）](INDEX/Microsoft%20Azure.md)
 - [MikroTik（1 篇）](INDEX/MikroTik.md)
 - [Mitel（1 篇）](INDEX/Mitel.md)
