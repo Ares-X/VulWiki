@@ -157,8 +157,21 @@
       "path": "Web安全/网络设备/Zyxel/原创 Paper  Zyxel Telnet 漏洞分析(CVE-2025-0890、CVE‑2024‑40891).md",
       "original_sha256": "3ce085ae4dc6cf2bc5147977746f2fdbcb52b6aae7cb445e0f4ecd37293ea0e1",
       "original_bytes_preserved_as_prefix": true
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md",
+      "original_sha256": "ec43875795cd7d8f9c150b219732ddcade6d91693ae1dc6218137d5c53dbaacb",
+      "original_bytes_preserved_as_prefix": false,
+      "original_body_bytes_preserved_as_prefix": true,
+      "metadata_changes": [
+        "identifier_role: primary -> unknown",
+        "primary_identifiers -> identifier_candidates"
+      ],
+      "reason": "CNA fromAddressNat/page does not confirm archived setMacFilterCfg/deviceList body; preserve the article and candidate ID"
     }
   ],
   "new_count": 65,
-  "updated_count": 18
+  "updated_count": 19,
+  "original_pr_head": "164065de6be3412ce52ce37719eba46f6174549f",
+  "preservation_note": "18 original supplement files retain complete base prefixes. Additional Tenda changes only identifier roles and appends a dated note; its original technical body is intact."
 }

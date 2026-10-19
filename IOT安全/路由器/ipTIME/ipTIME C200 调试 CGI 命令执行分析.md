@@ -22,7 +22,7 @@ review_date: "2026-10-19"
 
 ## 对应关系
 
-[KRCERT CNA](https://www.cve.org/CVERecord?id=CVE-2021-26614)列明 ipTIME C200、1.058及此前版本，描述暴露 CGI 导致命令执行，并给出相邻网络、无需权限的评价。CNA 写作 ius_get.cgi，本文来源明确指出该拼写错误，分析对象为 iux_get.cgi；不静默混用两个路径。
+[KRCERT CNA](https://www.cve.org/CVERecord?id=CVE-2021-26614)列明 ipTIME C200、1.058及此前版本，描述暴露 CGI 导致命令执行，并给出相邻网络、无需权限的评价。CNA 写作 ius_get.cgi，本文来源明确指出该拼写错误，分析对象为 iux_get.cgi；不静默混用两个路径。这是来源对拼写的判断，本库未独立验证两个路径是否对应同一处理逻辑。
 
 来源对比1.058与1.060，称后者移除了 main 中的 debug 分支。进入 sub_409748 需要 cam、debug 键；后续处理 cmd，并检查 aaksjdkfj 的值为 11dnjsrurelqjrm22。以上具体键、值和执行函数构成公开分析步骤，但原文没有完整 HTTP 请求编码，本文不补造。
 
