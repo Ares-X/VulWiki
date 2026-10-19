@@ -26,7 +26,7 @@ review_date: "2026-10-19"
 
 xyh4ck 的分析将 `mng_platform.asp` 的 `addr` 参数写入 NVRAM 项 `ac_mng_srv_host`；`wayos_ac_server.asp` 对应处理函数再取出该项，构造 `proxy_client` 命令交给 `jhl_system`。CNA 明确对应 `sub_478D28`、`sub_4A12DC` 与这一 NVRAM 项，因而不是仅凭编号归类。
 
-来源采用 FirmAE 模拟 `DI_7400G+-19.12.25A1.trx`，先以 `admin/admin` 登录并启用 AC 服务，再植入配置并触发。必须同时保留 `opt=proxy`、`proxy_ac_status == "1"`、`ac_server_enable == "1"` 三项前提。其公开验证写入 `/tmp/poc.txt`，属于有状态配置链。不能把其他数据库的无权限评分直接解释为本实验已完成认证绕过。
+来源采用 FirmAE 模拟 `DI_7400G+-19.12.25A1.trx`，先以 `admin/admin` 登录并启用 AC 服务，再植入配置并触发。必须同时保留 `opt=proxy`、`proxy_ac_status == "1"`、`ac_server_enable == "1"` 三项前提。其公开验证写入 `/tmp/poc.txt`，属于有状态配置链。不能把其他数据库的无权限评分直接解释为本实验已完成认证绕过。该 CVE 的 CNA 容器未说明认证前提或提供 CVSS 向量；CISA ADP 容器则给出 PR:N。评分与来源先登录的实验流程分别保留，现有材料不足以确认真实设备匿名触发或认证绕过。
 
 ## 修复与代码边界
 

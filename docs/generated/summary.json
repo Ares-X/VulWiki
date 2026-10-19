@@ -17,6 +17,6 @@
   "primary_cve_identifiers": 3717,
   "primary_entries": 5928,
   "schema_version": 1,
-  "source_digest": "1d0473fc9d81a934ca16ccb440beb30e41023403c558f68d98fe30d6799bd641",
+  "source_digest": "bbf5ce8696c651ca583d36bef1bf0c5d152c39c9e8d940ae890ad23eaed2f962",
   "verification": "offline-static-only"
 }
