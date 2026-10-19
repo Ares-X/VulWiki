@@ -23,4 +23,4 @@ The initial write, range-cache corruption, plaintext zeroing, object-map pivot, 
 - Impact remains the author's own test enclave; no demonstrated general Secure Kernel compromise, LSASS instance compromise, or cross-enclave data extraction.
 
 ## Dedupe and integration handoff
-The coordinating maintenance worker reported full body plus source-index exact-CVE search returns zero existing matches before addition (substring-only false positives excluded). The candidate has a unique ID VW-20261019-sfape-83498. No index, baseline, other article, remote branch or PR was changed by this worker. Main maintenance worker owns whole-tree build, static validation, generated indexes, commit and publication decisions.
+Full body plus source-index exact-CVE search returned zero existing matches before addition (substring-only false positives excluded). The candidate has a unique ID VW-20261019-sfape-83498. Whole-tree document checks and publication verification are recorded separately in checks.md.

@@ -38,7 +38,7 @@ Current GitHub heads all match the recovered prior inventory. Counts below are r
 - Prior inventory: 20 dated commits; 66 post-baseline commits; 38 compare files
 - Per-commit inventory: 0 commits, 0 pages, 0 distinct paths
 - Scope: Post-baseline compare path list
-- Coverage: Recovered compare contains 38 files, below 300-file cap; prior worker reported complete.
+- Coverage: Recovered compare contains 38 files, below 300-file cap; prior inventory recorded complete.
 
 ## Exploit-DB official GitLab
 - Fixed head: [12879ca774a9d7543907d24a7bc1cebb47959afe](https://gitlab.com/exploit-database/exploitdb/-/commit/12879ca774a9d7543907d24a7bc1cebb47959afe)
@@ -48,3 +48,9 @@ Current GitHub heads all match the recovered prior inventory. Counts below are r
 - Only current branch metadata and genuinely new date window checked. No historical diff batch or site-wide content completeness claim.
 
 No full article-content review or safety certification is implied. No GitHub writes, PoC execution, dependency installation, or scans were performed.
+
+## Follow-up at 2026-10-19 01:56 UTC
+
+Nuclei fixed-head Oct12–Oct19 metadata pagination independently completed: 253 commits (100/100/53). Four additional commits fully enumerated; 34 additional commit pages yielded 3,002 distinct paths. Signing commit 8c71a662975daef0f35d9f90e23da544d6242b38 reached 3,000 files across 30 pages; completeness remains unresolved. Ordinary fixed-commit .diff read returned HTTP 403; no alternate route after that access failure. No historical batch reopened.
+
+Recovered human-readable prior findings identify the older 264-count query as Oct11 onward, whereas the independently verified 253 count starts Oct12. These are different windows, not contradictory counts.

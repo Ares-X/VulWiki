@@ -1,0 +1,50 @@
+{
+  "observed_at": "2026-10-19T01:59:23Z",
+  "vulwiki_dedupe_head": "8e07f2dd672ed2b336d450f8a14f5d89f0e15cbe",
+  "source_head": "b22ce1fbae63e8caeb3a773366a6d3336bd66fb8",
+  "static_only": true,
+  "candidates": [
+    {
+      "ids": [
+        "CVE-2026-53959"
+      ],
+      "decision": "admit-new-material-old-vulnerability",
+      "draft": "4gaboards-article-draft-20261019.md",
+      "module_blob": "6562df51d89882ab46434bedf118cb2f3f2013ff",
+      "doc_blob": "95a9f3c038a674ded36d442d1337ce173c296069",
+      "merge": "4e8d2c95994c01944994ac7affb5323f0ec9335b",
+      "merge_date": "2026-10-13T16:55:59Z",
+      "official": [
+        "https://github.com/RARgames/4gaBoards/security/advisories/GHSA-p77f-p47g-h72p"
+      ],
+      "full_module_and_doc_read": true,
+      "official_advisory_read": true,
+      "dedupe": "No exact CVE or product match in tracked Markdown; see supplementary-candidate-dedupe-20261019.json",
+      "draft_sha256": "70be1fb7f19a2c8f0c047b9b647cdbebca910143e7f9c276a20b59b954fc6553"
+    },
+    {
+      "ids": [
+        "CVE-2026-27960",
+        "CVE-2026-39980"
+      ],
+      "decision": "admit-new-notifier-chain-material-old-vulnerabilities",
+      "draft": "opencti-notifier-article-draft-20261019.md",
+      "module_blob": "d6124dde80389b9ed4cdf84acbc1124a1a54d904",
+      "doc_blob": "d7f7dac9a947ccbd0001b87b93a21f61deaec4d7",
+      "merge": "6bdcf0080aa31274a6ea2b963ff0fbdfcaed0daa",
+      "merge_date": "2026-10-14T18:27:59Z",
+      "official": [
+        "https://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-6vvv-vmfr-xhrx",
+        "https://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-jv9r-jw2f-rhrf"
+      ],
+      "full_module_and_doc_read": true,
+      "official_advisories_read": true,
+      "dedupe": "No exact paired CVE match in all tracked Markdown; no OpenCTI/safeEjs/JsonMapper/GHSA matches outside reviews. Retain shared39980 relationship to prior review lead.",
+      "draft_sha256": "9a2759f12cd1261cd1aeab652cc26a68e30b06e85f985da1f77a348bc1a3da7b"
+    }
+  ],
+  "other_sources": {
+    "nomi_trickest": "Index-only unmatched identifiers are leads, not admissions.",
+    "nuclei": "Incomplete path coverage: 3000-file commit cap and ordinary .diff403; no bypass or historical re-read."
+  }
+}

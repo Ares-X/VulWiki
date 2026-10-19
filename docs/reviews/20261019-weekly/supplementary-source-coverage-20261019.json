@@ -26,7 +26,7 @@
       "compare_url": "https://github.com/nomi-sec/PoC-in-GitHub/compare/7cadb7273c96f5cff61a0952597376a759b07205...526540d15c7c6c0559eb2f454dff84bc689be53d",
       "prior_artifact_evidence": {
         "dated_commit_count": 64,
-        "dated_query_window": "Not encoded in recovered artifact; count retained as prior-worker evidence, not independently established date-window coverage.",
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
         "post_baseline_commits": 56,
         "compare_file_count": 300,
         "inventory_commit_count": 28,
@@ -54,7 +54,7 @@
       "compare_url": "https://github.com/trickest/cve/compare/5efd89da02a389826ae9a4f6b949cc365d5d3ddf...7a40b2cacd8df33f71dce21be856511e414576ed",
       "prior_artifact_evidence": {
         "dated_commit_count": 6,
-        "dated_query_window": "Not encoded in recovered artifact; count retained as prior-worker evidence, not independently established date-window coverage.",
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
         "post_baseline_commits": 5,
         "compare_file_count": 300,
         "inventory_commit_count": 5,
@@ -82,7 +82,7 @@
       "compare_url": "https://github.com/projectdiscovery/nuclei-templates/compare/5db11240bf1210e236e16752d18ab53a802ed1d4...17f5725dc10ced09f464dd2d255c19957aad51e7",
       "prior_artifact_evidence": {
         "dated_commit_count": 264,
-        "dated_query_window": "Not encoded in recovered artifact; count retained as prior-worker evidence, not independently established date-window coverage.",
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
         "post_baseline_commits": 305,
         "compare_file_count": 300,
         "inventory_commit_count": 90,
@@ -92,7 +92,26 @@
       "article_review_complete": false,
       "path_inventory_complete_within_reported_scope": false,
       "scope": "Non-chore commits dated Oct12 onward only; no stopped historical batches reopened",
-      "limitation": "Overall compare returned exactly 300 files for 305 post-baseline commits; completeness unresolved. Recovered 90-page/92-path non-chore subset does not establish full change inventory. Historical stopped batches untouched."
+      "limitation": "Overall compare returned exactly 300 files for 305 post-baseline commits; completeness unresolved. Recovered 90-page/92-path non-chore subset does not establish full change inventory. Historical stopped batches untouched.",
+      "new_window_follow_up": {
+        "since": "2026-10-12T00:00:00Z",
+        "until": "2026-10-19T00:00:00Z",
+        "dated_commits": 253,
+        "pagination": [
+          100,
+          100,
+          53
+        ],
+        "new_commit_pages": 34,
+        "fully_enumerated_additional_commits": 4,
+        "additional_distinct_paths_seen": 3002,
+        "capped_commit": "8c71a662975daef0f35d9f90e23da544d6242b38",
+        "capped_commit_pages": 30,
+        "capped_commit_files_seen": 3000,
+        "fallback_diff_result": "HTTP 403 Forbidden; no alternate route after access failure",
+        "complete": false,
+        "details": "nuclei-new-window-partial-paths-20261019.json"
+      }
     },
     {
       "repository": "rapid7/metasploit-framework",
@@ -110,7 +129,7 @@
       "compare_url": "https://github.com/rapid7/metasploit-framework/compare/2d664636002d3bfee1451c6832469f2756c54d4a...b22ce1fbae63e8caeb3a773366a6d3336bd66fb8",
       "prior_artifact_evidence": {
         "dated_commit_count": 20,
-        "dated_query_window": "Not encoded in recovered artifact; count retained as prior-worker evidence, not independently established date-window coverage.",
+        "dated_query_window": "Not encoded in recovered artifact; count retained as prior inventory evidence, not independently established date-window coverage.",
         "post_baseline_commits": 66,
         "compare_file_count": 38,
         "inventory_commit_count": 0,
@@ -121,7 +140,7 @@
       "article_review_complete": false,
       "path_inventory_complete_within_reported_scope": true,
       "scope": "Post-baseline compare path list",
-      "coverage_evidence": "Recovered compare contains 38 files, below 300-file cap; prior worker reported complete."
+      "coverage_evidence": "Recovered compare contains 38 files, below 300-file cap; prior inventory recorded complete."
     },
     {
       "repository": "Exploit-DB official GitLab",
@@ -139,5 +158,7 @@
       "article_review_complete": false,
       "limitation": "Only current branch metadata and genuinely new date window checked. No historical diff batch or site-wide content completeness claim."
     }
-  ]
+  ],
+  "follow_up_observed_at": "2026-10-19T01:56:43Z",
+  "prior_inventory_date_window_note": "Recovered supplementary-oct19-findings.md identifies inherited dated counts as Oct11 onward; original machine artifact omits query URLs. New independent Nuclei query deliberately starts Oct12 and has 253 commits."
 }
