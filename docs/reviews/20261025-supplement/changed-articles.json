@@ -1,0 +1,38 @@
+[
+  {
+    "path": "Web安全/CMS内容/Drupal/Drupal Field UI 回调缺陷与人工 writer 配对实验（CVE-2026-108097）.md",
+    "bytes": 7723,
+    "sha256": "f64fa7cd4eabfd35d7e39ce88f3d613ea9207e583c1977ffac6936ab1aa9da08",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/开发框架/Echo/Echo 被拒绝的 WebSocket 升级绕过路由访问控制（GHSA-cxf3-9h37-7rr8）.md",
+    "bytes": 4439,
+    "sha256": "2dead712d6ff962d2f3d47045a550ae1a6e89e811152ccf12333cc86f56cc47e",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/开发框架/Laravel/Laravel TokenGuard 非字符串令牌认证绕过（CVE-2026-114509）.md",
+    "bytes": 6142,
+    "sha256": "fe73cfd4b6da4b5c10dc09d0a59cc2d6316d89cf303b0454a866147f074ce469",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/开发框架/Node.js/Node.js DNS NUL 截断与主机名白名单绕过（CVE-2026-105482）.md",
+    "bytes": 5388,
+    "sha256": "6032b3c1dc183ce58fe7c9981f327f8395e08c94d497c05d938da20fc8565d77",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/网络设备/Fortinet/FortiSIEM gRPC 路径穿越文件写入与定时脚本执行（CVE-2026-106173）.md",
+    "bytes": 5809,
+    "sha256": "244b4b75a9c8e35405a0a6bffafec83efba5e54074a39c745791af8093b1693e",
+    "change": "added"
+  },
+  {
+    "path": "系统安全/Android/Linux CPU timer UAF 与小米特定构建临时 root 研究（CVE-2026-64560）.md",
+    "bytes": 6988,
+    "sha256": "74c04a4048b1371da0cb7a7ee4ec75b3785ba7bfddeac33b562852c705da096f",
+    "change": "added"
+  }
+]

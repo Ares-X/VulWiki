@@ -334,6 +334,10 @@
 - [（CVE-2019-6339）Drupal 远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Drupal/%EF%BC%88CVE-2019-6339%EF%BC%89Drupal%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [（CVE-2019-6341）Drupal xss漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Drupal/%EF%BC%88CVE-2019-6341%EF%BC%89Drupal%20xss%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Drupal core Field UI
+
+- [Drupal Field UI 回调缺陷与人工 writer 配对实验（CVE-2026-108097）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Drupal/Drupal%20Field%20UI%20%E5%9B%9E%E8%B0%83%E7%BC%BA%E9%99%B7%E4%B8%8E%E4%BA%BA%E5%B7%A5%20writer%20%E9%85%8D%E5%AF%B9%E5%AE%9E%E9%AA%8C%EF%BC%88CVE-2026-108097%EF%BC%89.md) [analysis; source-claimed; active]
+
 ## Drupal6/7/8 family
 
 - [Drupal Drupalgeddon 2 远程代码执行漏洞 CVE-2018-7600](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Drupal/Drupal%20Drupalgeddon%202%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20CVE-2018-7600.md) [vulnerability; not-reproduced; needs-review]
