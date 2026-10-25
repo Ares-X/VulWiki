@@ -1,0 +1,276 @@
+{
+  "checked_on": "2026-10-25",
+  "method": "Static text retrieval only; no PoC, test from source, install script, binary, or asset interaction executed",
+  "repositories": [
+    {
+      "repository": "horizon3ai/CVE-2026-106173",
+      "commit": "e6f3976d181cff580e8025e24a36d0f6624e6e08",
+      "commit_author_date": "2026-10-20T12:43:34Z",
+      "commit_date": "2026-10-20T12:43:34Z",
+      "tree_truncated": false,
+      "retrieved_files": [
+        {
+          "path": "CVE-2026-106173.py",
+          "blob_sha": "ae2f97ab2210817adc170bc8dda0523d95bc5072",
+          "tree_bytes": 11399,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "a35f3a5c0416703ac053acf47e0abe7bcf041d3d",
+          "tree_bytes": 2148,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        }
+      ]
+    },
+    {
+      "repository": "hakaioffsec/CVE-2026-114509-PoC",
+      "commit": "fef3c946e78d32fba80973cdadcb100f3e548634",
+      "commit_author_date": "2026-10-23T19:12:31Z",
+      "commit_date": "2026-10-23T19:12:31Z",
+      "tree_truncated": false,
+      "retrieved_files": [
+        {
+          "path": "README.md",
+          "blob_sha": "fe85fb3fbb5215944b015dcf53b69d5315291e03",
+          "tree_bytes": 7094,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "docker-compose.yml",
+          "blob_sha": "d967cf1d03b48ad0241ef16186def4322b7ba92a",
+          "tree_bytes": 1087,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "harness/app.php",
+          "blob_sha": "c47d692eadebd1cb8b1ec012c0151c533470a6a6",
+          "tree_bytes": 1473,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "harness/db-init.php",
+          "blob_sha": "a7bf4979d18d68d2cfb11b0e56f62e3ab9ab91f9",
+          "tree_bytes": 1074,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "poc.py",
+          "blob_sha": "e511bf1c5313ac6a91dbdfcf058a9ecd52be61b9",
+          "tree_bytes": 3829,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        }
+      ]
+    },
+    {
+      "repository": "CaterMaoZi/CVE-2026-105482-POC",
+      "commit": "c9020255b2a524bbc8518ab36d2a0a40b6254b53",
+      "commit_author_date": "2026-10-24T03:44:47Z",
+      "commit_date": "2026-10-24T04:11:59Z",
+      "tree_truncated": false,
+      "retrieved_files": [
+        {
+          "path": "README.md",
+          "blob_sha": "291b3e885b37d8c08f9ffadcbdb4fff3beb948ae",
+          "tree_bytes": 10269,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "cve_2026_105482.py",
+          "blob_sha": "aee933df6dc9ef9606a666206971637b8a9dc7ca",
+          "tree_bytes": 29513,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "docs/WRITEUP.md",
+          "blob_sha": "53e8de63d4eda23e6da9f6b3af6eaa54055f8e1d",
+          "tree_bytes": 5520,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "docs/reachability-matrix.md",
+          "blob_sha": "c17dbb28d7d96f429c63c1ce6318de32dda0fa42",
+          "tree_bytes": 4729,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        }
+      ]
+    },
+    {
+      "repository": "labstack/echo",
+      "commit": "3fb0ba7e17645bb65611e2a08875d0a2f65c421f",
+      "commit_author_date": "2026-10-22T16:18:36Z",
+      "commit_date": "2026-10-22T16:18:36Z",
+      "tree_truncated": false,
+      "retrieved_files": [
+        {
+          "path": "middleware/proxy.go",
+          "blob_sha": "a619e9e2e51594bac66878a7ebfce249d0223f62",
+          "tree_bytes": 14429,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "middleware/proxy_security_test.go",
+          "blob_sha": "e95d5b0178787e6492cc362f34d0501b0aaaddbf",
+          "tree_bytes": 9245,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        }
+      ]
+    },
+    {
+      "repository": "fortbridge/cve-2026-108097-research",
+      "commit": "1b8509713064e440068b0561eaf4a2a458831b2b",
+      "commit_author_date": "2026-10-18T17:20:09Z",
+      "commit_date": "2026-10-18T17:20:09Z",
+      "tree_truncated": false,
+      "retrieved_files": [
+        {
+          "path": "README.md",
+          "blob_sha": "62394b97c3d56a7567c4c295ccf34597fccbc954",
+          "tree_bytes": 4636,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "docs/RCE-CAPABILITY-WITNESS.md",
+          "blob_sha": "4e1d5e02b91e1a62d150e65b57328be3c579459d",
+          "tree_bytes": 36054,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "docs/UPLOAD-STAGED-WITNESS.md",
+          "blob_sha": "e5c12fb29abb5765ebcf855aacff9301ee4863d3",
+          "tree_bytes": 3088,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "lab/README.md",
+          "blob_sha": "771f59cb8ff7a96852a1efdbdded48beeaac9eb9",
+          "tree_bytes": 4502,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "lab_bridge/src/Controller/ProbeController.php",
+          "blob_sha": "72f42290355291b5c9c3aa433b22eb60295d5d3f",
+          "tree_bytes": 12910,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "witnesses/rce_shell_witness.py",
+          "blob_sha": "0af3e3d28fbbba56e29a0b4e2b1f65c1cb61d2a1",
+          "tree_bytes": 6203,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        }
+      ]
+    },
+    {
+      "repository": "Feng1586/CVE-2026-64560-public",
+      "commit": "63b4f2b7b497d835c7cb1a43ff8851cd0d7a9ac8",
+      "commit_author_date": "2026-10-19T06:16:03Z",
+      "commit_date": "2026-10-19T06:16:03Z",
+      "tree_truncated": false,
+      "retrieved_files": [
+        {
+          "path": "README.md",
+          "blob_sha": "675040249079e6c87e1049580d0a876d51034db6",
+          "tree_bytes": 21862,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "device/deploy.sh",
+          "blob_sha": "7caadd00f724972070cc5c3315832369f3425ae1",
+          "tree_bytes": 2135,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "docs/00-链路总览.md",
+          "blob_sha": "5dbed72533cebca304e00b9b964a69d554548b26",
+          "tree_bytes": 5670,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "evidence/run-20261019/final-root.txt",
+          "blob_sha": "9941ec18d23a81cad316bdf27b7653e993c9a395",
+          "tree_bytes": 585,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "evidence/run-20261019/reproduce_ksu6.log",
+          "blob_sha": "ae0bb0ed061f76be083130749ce1f2a0d987761a",
+          "tree_bytes": 4984,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        },
+        {
+          "path": "src/posix64560/t64560_v40.c",
+          "blob_sha": "31928f20232968b374c29e364b5a208b8c83a804",
+          "tree_bytes": 20143,
+          "reading_scope": "See README actual scope; retrieval does not mean full review"
+        }
+      ]
+    }
+  ],
+  "cna_files": [
+    {
+      "path": "cves/2026/106xxx/CVE-2026-106173.json",
+      "repository": "CVEProject/cvelistV5",
+      "blob_sha": "75f34fcf613aae15239260de24733eee5cc8fb00",
+      "cveMetadata": {
+        "cveId": "CVE-2026-106173",
+        "assignerOrgId": "6abe59d8-c742-4dff-8ce8-9b0ca1073da8",
+        "state": "PUBLISHED",
+        "assignerShortName": "fortinet",
+        "dateReserved": "2026-10-06T16:19:45.747Z",
+        "datePublished": "2026-10-13T17:37:09.900Z",
+        "dateUpdated": "2026-10-21T03:56:09.329Z"
+      }
+    },
+    {
+      "path": "cves/2026/114xxx/CVE-2026-114509.json",
+      "repository": "CVEProject/cvelistV5",
+      "blob_sha": "44bb7c83474f4bfa67ba7168cd5ee693ded5f34c",
+      "cveMetadata": {
+        "cveId": "CVE-2026-114509",
+        "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+        "state": "PUBLISHED",
+        "assignerShortName": "GitHub_M",
+        "dateReserved": "2026-10-21T16:15:06.492Z",
+        "datePublished": "2026-10-21T21:49:29.486Z",
+        "dateUpdated": "2026-10-21T21:49:29.486Z"
+      }
+    },
+    {
+      "path": "cves/2026/64xxx/CVE-2026-64560.json",
+      "repository": "CVEProject/cvelistV5",
+      "blob_sha": "d9cc2c5307b9e551cc99e7076a35a04b3870bf26",
+      "cveMetadata": {
+        "cveId": "CVE-2026-64560",
+        "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "state": "PUBLISHED",
+        "assignerShortName": "Linux",
+        "dateReserved": "2026-07-19T15:36:31.796Z",
+        "datePublished": "2026-07-29T16:47:17.602Z",
+        "dateUpdated": "2026-10-19T20:48:41.511Z"
+      }
+    }
+  ],
+  "additional_sources": [
+    {
+      "repository": "laravel/framework",
+      "before": "0189a60b261bbd94bffe21bba4e43323cf6af051",
+      "after": "9b21ce0a9bb2b2599978bc0b0df4abea952ad31c",
+      "path": "src/Illuminate/Auth/TokenGuard.php"
+    },
+    {
+      "repository": "drupal/drupal",
+      "refs": [
+        "11.4.9",
+        "11.4.10"
+      ],
+      "path": "core/modules/field_ui/src/Element/FieldUiTable.php"
+    },
+    {
+      "repository": "fortbridge/cve-2026-108097-research",
+      "ref": "1b8509713064e440068b0561eaf4a2a458831b2b",
+      "path": "lab_bridge/src/LabBridgeMarker.php",
+      "blob_sha": "aa609717b01e460a77b91bf0c1f151813a756783"
+    }
+  ]
+}

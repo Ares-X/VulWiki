@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Web安全/开发框架/Node.js/Node.js Brotli 解码越界写与特定 Express 构建 RCE（CVE-2026-111497）.md",
+    "bytes": 6732,
+    "sha256": "2039f190c0688c10ad3a3fe4fab8d79c451d2919311c77570dca48cdf019dbb1",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/开发框架/PHP/PHP Session upload progress 序列化处理器切换对象注入（CVE-2026-115560）.md",
+    "bytes": 5308,
+    "sha256": "0067f9a082eb18be0c3173be893d706f3e9e96bf37979877f48977ea54e17c77",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/开发框架/PHP/PHP 请求清理 OOM 与跨请求悬空状态 RCE（CVE-2026-109618、CVE-2026-109619）.md",
+    "bytes": 7033,
+    "sha256": "c512dd3ca296fde167a81f820a4069043fdfa6973b2d911eb466780c4daed32f",
+    "change": "added"
+  },
+  {
+    "path": "Web安全/服务器软件/Plex/Plex Media Server Plex2Shell 未认证攻击链（CVE-2026-96652、96654、96655、96656）.md",
+    "bytes": 5710,
+    "sha256": "c10de13de613d963107528e3d2a446bed8e2399d3405e09eb4e151b5247def71",
+    "change": "added"
+  },
+  {
+    "path": "系统安全/Linux内核/Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）.md",
+    "bytes": 9086,
+    "sha256": "43268fc924306dd352fe3539da30e2be9df6823822a0fc041ad09ec90f58a81e",
+    "change": "updated"
+  }
+]

@@ -52,6 +52,10 @@
 
 - [新的“糟糕的”Linux内核漏洞让非特权用户获得Root，打击Android](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E6%96%B0%E7%9A%84%E2%80%9C%E7%B3%9F%E7%B3%95%E7%9A%84%E2%80%9DLinux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E8%AE%A9%E9%9D%9E%E7%89%B9%E6%9D%83%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97Root%EF%BC%8C%E6%89%93%E5%87%BBAndroid.md) [advisory; not-reproduced; needs-review]
 
+## Linux kernel POSIX CPU timers / Android vendor kernel
+
+- [Linux CPU timer UAF 与小米特定构建临时 root 研究（CVE-2026-64560）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Linux%20CPU%20timer%20UAF%20%E4%B8%8E%E5%B0%8F%E7%B1%B3%E7%89%B9%E5%AE%9A%E6%9E%84%E5%BB%BA%E4%B8%B4%E6%97%B6%20root%20%E7%A0%94%E7%A9%B6%EF%BC%88CVE-2026-64560%EF%BC%89.md) [analysis; source-claimed; active]
+
 ## Linux ping socket / Android
 
 - [Android系统内核漏洞利用技术入门](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%8A%80%E6%9C%AF%E5%85%A5%E9%97%A8.md) [vulnerability; not-reproduced; needs-review]
