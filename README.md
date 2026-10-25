@@ -28,14 +28,14 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 ## 内容范围
 
-当前统计（2026-10-19）：三大正文目录共6028篇Markdown，包含产品内README；生成目录为5928个主入口、6026份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
+当前统计（2026-10-25）：三大正文目录共6038篇Markdown，包含产品内README；生成目录为5938个主入口、6036份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
 
 | 分类 | 当前内容 Markdown |
 |---|---:|
-| Web安全 | 5500 |
-| 系统安全 | 248 |
+| Web安全 | 5509 |
+| 系统安全 | 249 |
 | IOT安全 | 280 |
-| 合计 | **6028** |
+| 合计 | **6038** |
 
 <details>
 <summary>查看2026-10-02历史文件快照</summary>
@@ -144,6 +144,18 @@ python scripts/wiki.py search CloudStack
 每篇应通过 `source` 字段或文末 `> 来源：` 脚注保留逐篇原始出处；只写补库批次不能替代来源，历史缺失项待补齐。引用内容仅作学习研究用途，严禁非法使用。
 
 ## Change Log
+
+以下按合并日期补记维护内容；不同批次的修订路径可能重叠，不累计为唯一文章数。收录和静态验收不表示漏洞已由维护者复现。
+
+* 2026-10-25（PR #30）新增10篇、修订1篇：整理PHP请求清理与Session、Node.js Brotli与DNS、Plex2Shell，并补充FortiSIEM、Laravel、Echo、Drupal及Linux/Android研究；追加既有PwnEscape条目的公开探针与完整逃逸链证据边界。保留特定构建、人工writer/gadget及失败对照等条件，不把DNS白名单实验写成完整SSRF或把临时root泛化为通用能力。详见[周维护记录](docs/reviews/20261025-weekly/README.md)与[六项研究补充](docs/reviews/20261025-supplement/README.md)。
+* 2026-10-19（PR #29）新增65篇、修订19篇：其中新增42篇IoT研究，另补充GitLab、Zimbra、Nextcloud、OpenCTI、Windows等资料，包括GitLab CI正则编译整数溢出（CVE-2026-97229）、Zimbra跨账号邮箱读取（CVE-2026-10631）和PwnEscape TAP泄露探针（CVE-2026-99999）。澄清认证、版本和编号对应关系，修正旧Tenda主CVE误关联，保留Glances、Langflow、Ahsay等资料的补丁与证据限制。详见[维护记录](docs/reviews/20261019-weekly/README.md)与[合并验收](docs/reviews/20261019-weekly/pr29-acceptance.md)。
+* 2026-10-13（PR #28）新增10篇、补充1篇：涵盖Magento StyleSmuggler、Discuz! X5.0、Joomla UP/AcyMailing、Trilium、AstronRPA、Docker AuthZ/CopyEscape、Linux AF_UNIX及EasyCVR；补核既有AnyDesk文章的编号与版本范围，纠正利用前提和修复边界。6篇重复新稿未进入主分支，未删除既有文章。详见[PR #28审阅记录](docs/reviews/20261013-pr28.md)。
+* 2026-10-12（PR #27）新增91篇、更新2篇：覆盖LMCache、Langflow、SGLang、vLLM、Sub2API、WordPress及路由器等资料；保留vLLM历史材料，修正版本、认证与配置前提，关联4对摘要与完整分析并统一Sub2API目录。94篇原始审阅稿中的Mooncake恢复基点，最终净改动为93篇。详见[PR #27复审与验收](docs/reviews/20261012-pr27/README.md)。
+* 2026-10-07（PR #25）合并10月5日开始的FrameVul来源核对批次，新增14篇、补充14篇：涵盖Gitea、Resin、GitLab、Jenkins、phpMyAdmin、MeterSphere等，补充GeoServer、Nacos、JumpServer等来源与条件说明，纠正phpMyAdmin文件包含性质和修复版本。详见[来源台账与最终复核](docs/reviews/20261005-framevul/README.md)。
+* 2026-10-05（PR #20、#21）新增Phproject、http4s、image-downloader及Loom四篇公开研究整理，并补核既有GitLab CVE-2026-85706文章的官方公告、分支和回移修复；保留历史正文与仍待核的技术说法。详见[每周维护记录](docs/reviews/20261005-weekly/README.md)。
+* 2026-10-05（PR #22、#23、#26）开展正文图片离线归档及后续恢复：首批修订2244篇，将18348处正文图片改为库内引用；随后修复16篇懒加载和损坏HTML图片，并为15篇恢复159处图片。当时仍缺101处正文图片，保留原引用与缺口说明。详见[离线归档](docs/reviews/20261005-offline-images/README.md)与[搜索恢复记录](docs/reviews/20261005-image-search/README.md)。
+* 2026-10-04（PR #11）合入KEV公开技术资料批次，新增135篇、补充95篇：涵盖Langflow、NetScaler、SharePoint、TeamCity、Oracle EBS及历年设备漏洞等；修正LiteLLM、Struts、PAN-OS与Magento的版本或条件说明，保留原始材料和未完成来源范围。详见[收录清单](docs/KEV-COLLECTION-20261003.md)及[PR #11审阅记录](docs/reviews/20261004-pr11/REVIEW.md)。
+* 2026-10-04（PR #14—#18）完成三轮保真检查，修订1101篇，恢复44个历史空PNG，纠正指纹、编号角色、排版和Ivanti乱码；后续补核22篇编号角色、恢复30条及追加3条原文FOFA表达式，纠正DedeCMS分类，并修正79篇Pandoc注释框、图片占位与文字恢复问题。详见[三轮验收](docs/reviews/2026-10-04-final-acceptance/README.md)、[编号补核](docs/reviews/2026-10-04-search-polish/README.md)、[FOFA恢复](docs/reviews/2026-10-04-fofa-literals/README.md)、[分类纠正](docs/reviews/2026-10-04-dedecms-category/README.md)及[排版修正](docs/reviews/2026-10-04-pandoc-format/README.md)。
 
 - 2026-10-03 完成进一步三轮整体检查及12篇局部修正，保留原始代码与测试值；机器覆盖、候选判读、独立保真验收及历史缺口分别记录，见[三轮检查报告与完整证据](docs/reviews/2026-10-03-three-rounds/README.md)。
 
