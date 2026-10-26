@@ -1,0 +1,212 @@
+{
+  "checked_at": "2026-10-26T00:29:00Z",
+  "rules_read": [
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "docs/CONTENT-SCHEMA.md",
+    "docs/reviews/20261019-weekly/README.md",
+    "docs/templates/ARTICLE.md"
+  ],
+  "sources": [
+    {
+      "repo": "wy876/POC",
+      "accessible": false,
+      "action": "GET https://api.github.com/repos/wy876/POC/commits?per_page=1",
+      "error": {
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#list-commits\",\"status\":\"404\"}",
+        "error_code": "NOT_FOUND",
+        "error_data": {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/commits/commits#list-commits",
+          "status": "404"
+        }
+      },
+      "disposition": "404 does not establish deletion or lack of updates; no bypass"
+    },
+    {
+      "repo": "DMW11525708/wiki",
+      "accessible": true,
+      "head": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "committer_date": "2025-02-26T08:54:01Z",
+      "checkpoint": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "unchanged": true,
+      "window_commit_count": 0,
+      "window_api": "https://api.github.com/repos/DMW11525708/wiki/commits?since=2026-10-18T00:00:00Z&until=2026-10-26T00:29:00Z&per_page=100&page=1",
+      "pagination": "First page fewer than 100; complete dated window, not historical full-text review"
+    },
+    {
+      "repo": "cvi-Qing/poc",
+      "accessible": true,
+      "head": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "committer_date": "2025-08-20T15:54:15Z",
+      "checkpoint": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "unchanged": true,
+      "window_commit_count": 0,
+      "window_api": "https://api.github.com/repos/cvi-Qing/poc/commits?since=2026-10-18T00:00:00Z&until=2026-10-26T00:29:00Z&per_page=100&page=1",
+      "pagination": "First page fewer than 100; complete dated window, not historical full-text review"
+    },
+    {
+      "repo": "SourByte05/Vulnerability-Wiki-PoC",
+      "accessible": true,
+      "head": "7d513a3462c0c65a6dfeba21ce40702dcf275119",
+      "committer_date": "2026-10-20T08:09:44Z",
+      "checkpoint": "5d8a80f483029ce800ad01de94ce5d43d799f377",
+      "unchanged": false,
+      "window_commit_count": 1,
+      "window_api": "https://api.github.com/repos/SourByte05/Vulnerability-Wiki-PoC/commits?since=2026-10-18T00:00:00Z&until=2026-10-26T00:29:00Z&per_page=100&page=1",
+      "pagination": "First page fewer than 100; complete dated window, not historical full-text review"
+    },
+    {
+      "repo": "Threekiii/Vulnerability-Wiki",
+      "accessible": true,
+      "head": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "committer_date": "2026-05-11T10:26:51Z",
+      "checkpoint": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "unchanged": true,
+      "window_commit_count": 0,
+      "window_api": "https://api.github.com/repos/Threekiii/Vulnerability-Wiki/commits?since=2026-10-18T00:00:00Z&until=2026-10-26T00:29:00Z&per_page=100&page=1",
+      "pagination": "First page fewer than 100; complete dated window, not historical full-text review"
+    },
+    {
+      "repo": "Threekiii/Awesome-POC",
+      "accessible": true,
+      "head": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "committer_date": "2026-05-11T10:27:00Z",
+      "checkpoint": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "unchanged": true,
+      "window_commit_count": 0,
+      "window_api": "https://api.github.com/repos/Threekiii/Awesome-POC/commits?since=2026-10-18T00:00:00Z&until=2026-10-26T00:29:00Z&per_page=100&page=1",
+      "pagination": "First page fewer than 100; complete dated window, not historical full-text review"
+    },
+    {
+      "repo": "BaizeSec/bylibrary",
+      "accessible": true,
+      "head": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "committer_date": "2023-10-12T08:51:28Z",
+      "checkpoint": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "unchanged": true,
+      "window_commit_count": 0,
+      "window_api": "https://api.github.com/repos/BaizeSec/bylibrary/commits?since=2026-10-18T00:00:00Z&until=2026-10-26T00:29:00Z&per_page=100&page=1",
+      "pagination": "First page fewer than 100; complete dated window, not historical full-text review"
+    }
+  ],
+  "changed_source": {
+    "repo": "SourByte05/Vulnerability-Wiki-PoC",
+    "compare_base": "5d8a80f483029ce800ad01de94ce5d43d799f377",
+    "head": "7d513a3462c0c65a6dfeba21ce40702dcf275119",
+    "compare_status": "ahead",
+    "total_commits": 1,
+    "file_count": 15,
+    "markdown_full_reads": 6,
+    "tree_entries": 4925,
+    "tree_truncated": false,
+    "compare_limit": "15 < 300 files; 1 < 100 commits; all changed paths enumerated",
+    "files": [
+      {
+        "path": "2026/10/Divi Plus svg_image存在任意文件读取漏洞CVE-2026-91136/Divi Plus svg_image存在任意文件读取漏洞CVE-2026-91136.md",
+        "status": "added",
+        "full_text_read": true,
+        "blob_sha": "91e40906ce631c79391e44fe32cc2175b1113700",
+        "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7d513a3462c0c65a6dfeba21ce40702dcf275119/2026/10/Divi%20Plus%20svg_image%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9ECVE-2026-91136/Divi%20Plus%20svg_image%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9ECVE-2026-91136.md",
+        "disposition": "Eligible original synthesis; official CNA/vendor correspondence read; current-master duplicate check delegated to parent"
+      },
+      {
+        "path": "2026/10/Divi Plus svg_image存在任意文件读取漏洞CVE-2026-91136/Divi Plus svg_image存在任意文件读取漏洞CVE-2026-91136.pdf",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/Divi Plus svg_image存在任意文件读取漏洞CVE-2026-91136/assets/image-20261016141447206.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/Divi Plus svg_image存在任意文件读取漏洞CVE-2026-91136/录制_2026_10_16_14_09_44_73.mp4",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/北京时空智友科技有限公司企业流程化管控系统存在任意文件上传漏洞/assets/image-20261020104410909.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/北京时空智友科技有限公司企业流程化管控系统存在任意文件上传漏洞/assets/image-20261020104422630.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/北京时空智友科技有限公司企业流程化管控系统存在任意文件上传漏洞/北京时空智友科技有限公司企业流程化管控系统存在任意文件上传漏洞.md",
+        "status": "added",
+        "full_text_read": true,
+        "blob_sha": "dfe97dc9577da3f0253afdb6d46740e4ff0980fc",
+        "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7d513a3462c0c65a6dfeba21ce40702dcf275119/2026/10/%E5%8C%97%E4%BA%AC%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E4%BC%81%E4%B8%9A%E6%B5%81%E7%A8%8B%E5%8C%96%E7%AE%A1%E6%8E%A7%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/%E5%8C%97%E4%BA%AC%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E4%BC%81%E4%B8%9A%E6%B5%81%E7%A8%8B%E5%8C%96%E7%AE%A1%E6%8E%A7%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md",
+        "disposition": "Hold: text upload does not demonstrate RCE; version/authentication/execution-chain evidence missing"
+      },
+      {
+        "path": "2026/10/安科瑞环保用电监管云平台 UploadNewsImg 存在任意文件上传漏洞/assets/image-20261020110556964.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/安科瑞环保用电监管云平台 UploadNewsImg 存在任意文件上传漏洞/安科瑞环保用电监管云平台 UploadNewsImg 存在任意文件上传漏洞.md",
+        "status": "added",
+        "full_text_read": true,
+        "blob_sha": "594f1db5ff10d9fe58feb5eac1a1438176013114",
+        "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7d513a3462c0c65a6dfeba21ce40702dcf275119/2026/10/%E5%AE%89%E7%A7%91%E7%91%9E%E7%8E%AF%E4%BF%9D%E7%94%A8%E7%94%B5%E7%9B%91%E7%AE%A1%E4%BA%91%E5%B9%B3%E5%8F%B0%20UploadNewsImg%20%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/%E5%AE%89%E7%A7%91%E7%91%9E%E7%8E%AF%E4%BF%9D%E7%94%A8%E7%94%B5%E7%9B%91%E7%AE%A1%E4%BA%91%E5%B9%B3%E5%8F%B0%20UploadNewsImg%20%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md",
+        "disposition": "Hold: ASPX extension with constant text does not prove execution; version/fix evidence missing"
+      },
+      {
+        "path": "2026/10/新视窗智慧物业管理系统uploadfile存在任意文件上传漏洞/assets/image-20261020112539031.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/新视窗智慧物业管理系统uploadfile存在任意文件上传漏洞/新视窗智慧物业管理系统uploadfile存在任意文件上传漏洞.md",
+        "status": "added",
+        "full_text_read": true,
+        "blob_sha": "2fef5904a5a3cf268f06a8d0f2c83f688cd3397e",
+        "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7d513a3462c0c65a6dfeba21ce40702dcf275119/2026/10/%E6%96%B0%E8%A7%86%E7%AA%97%E6%99%BA%E6%85%A7%E7%89%A9%E4%B8%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fuploadfile%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/%E6%96%B0%E8%A7%86%E7%AA%97%E6%99%BA%E6%85%A7%E7%89%A9%E4%B8%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fuploadfile%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md",
+        "disposition": "Hold: ASPX response-writing upload provided but response/access path only in unread image; version/fix evidence missing"
+      },
+      {
+        "path": "2026/10/朗速ERP DataInterfaceApi 存在SQL注入漏洞/assets/image-20261020111848863.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/朗速ERP DataInterfaceApi 存在SQL注入漏洞/朗速ERP DataInterfaceApi 存在SQL注入漏洞.md",
+        "status": "added",
+        "full_text_read": true,
+        "blob_sha": "9ab789ff1c3edcd891a685139064e8ba9d6f221f",
+        "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7d513a3462c0c65a6dfeba21ce40702dcf275119/2026/10/%E6%9C%97%E9%80%9FERP%20DataInterfaceApi%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/%E6%9C%97%E9%80%9FERP%20DataInterfaceApi%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md",
+        "disposition": "Hold: concrete time-delay SQL request; version/fix and control response evidence missing"
+      },
+      {
+        "path": "2026/10/玉帛软件租箱管理系统Index存在SQL注入漏洞/assets/image-20261020113200307.png",
+        "status": "added",
+        "full_text_read": false,
+        "disposition": "Asset enumerated only; no visual/binary content inspection"
+      },
+      {
+        "path": "2026/10/玉帛软件租箱管理系统Index存在SQL注入漏洞/玉帛软件租箱管理系统Index存在SQL注入漏洞.md",
+        "status": "added",
+        "full_text_read": true,
+        "blob_sha": "89bbf21472423dd7638bc9f5c1c7fc9b6fa2381d",
+        "source_url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7d513a3462c0c65a6dfeba21ce40702dcf275119/2026/10/%E7%8E%89%E5%B8%9B%E8%BD%AF%E4%BB%B6%E7%A7%9F%E7%AE%B1%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FIndex%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/%E7%8E%89%E5%B8%9B%E8%BD%AF%E4%BB%B6%E7%A7%9F%E7%AE%B1%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FIndex%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md",
+        "disposition": "Hold: concrete error SQL request; CNVD appears only in rule and unverified; version/authentication evidence missing"
+      }
+    ]
+  },
+  "dedup_limit": "Connector search index resolved dcf0607...; parent reports full current main 91136 no match. uploadimg/UploadNewsImg searches encountered 429, not treated as no match.",
+  "no_execution": true,
+  "no_redaction": true
+}

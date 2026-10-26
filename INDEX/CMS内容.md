@@ -1758,6 +1758,10 @@
 
 - [WordPress Ditty SSRF漏洞(CVE-2025-8085)](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Ditty%20SSRF%E6%BC%8F%E6%B4%9E%28CVE-2025-8085%29.md) [advisory; not-reproduced; needs-review]
 
+## WordPress Divi Plus
+
+- [Divi Plus SVG Animator 未认证文件读取（CVE-2026-91136）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Divi%20Plus%20SVG%20Animator%20%E6%9C%AA%E8%AE%A4%E8%AF%81%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%EF%BC%88CVE-2026-91136%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## WordPress Dokan Pro Moip integration
 
 - [WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922)](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Dokan%20Pro%E6%8F%92%E4%BB%B6%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28CVE-2024-3922%29.md) [vulnerability; not-reproduced; needs-review]

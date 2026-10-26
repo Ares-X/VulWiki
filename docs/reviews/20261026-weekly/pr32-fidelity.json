@@ -1,0 +1,70 @@
+{
+  "base": "dcf0607b87f46653d43aa0420de577f440d5aaae",
+  "original_pr_head": "a29de54d9b94824b9d52a52a6931a632bc8fa373",
+  "articles": [
+    {
+      "path": "Web安全/AI应用/Langflow/Langflow 公开流程构建 PythonCodeStructuredTool 代码执行（CVE-2026-10134）.md",
+      "original_input_sha256": "17f72369bfda8d8681405e7484e7fd582fe6c78cc73aaafb8139918903721b91",
+      "final_sha256": "acb4c04b5b6032c963d93218b1c396e9c3af86ba8ceeb835dcecb6e47549fd5c",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": null,
+      "original_urls_preserved": true
+    },
+    {
+      "path": "Web安全/AI应用/LiteLLM/LiteLLM user_config 嵌套路由绕过与SSRF（CVE-2026-59823）.md",
+      "original_input_sha256": "ecd2bb464e02de5de8f2faf8564833647c0a2c672cb9b00940508e796bef8da9",
+      "final_sha256": "70e353397a198ef816d12a40f795a721eb73910048edf257b420bccee40f062e",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": null,
+      "original_urls_preserved": true
+    },
+    {
+      "path": "Web安全/AI应用/LiteLLM/LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险.md",
+      "original_input_sha256": "44276df457ca5db89bd6554639e35cccebf7676b8ae1c10b79222924468aa17d",
+      "final_sha256": "44276df457ca5db89bd6554639e35cccebf7676b8ae1c10b79222924468aa17d",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": true,
+      "original_urls_preserved": true
+    },
+    {
+      "path": "Web安全/AI应用/piflow/piflow 聊天入口缺少认证与宿主命令工具调用链（CVE-2026-109442）.md",
+      "original_input_sha256": null,
+      "final_sha256": "613e442a675a52038d9f7336fb0cd98fd4ba841c268b8b76ec1a78ef42b47764",
+      "original_pr_code_bytes_preserved": null,
+      "base_file_prefix_preserved": null,
+      "original_urls_preserved": null
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Divi Plus SVG Animator 未认证文件读取（CVE-2026-91136）.md",
+      "original_input_sha256": "a9a3451a581d463a201cc6af34e35a1a9d3754c63e404f5417eb13de0e70db55",
+      "final_sha256": "a9a3451a581d463a201cc6af34e35a1a9d3754c63e404f5417eb13de0e70db55",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": null,
+      "original_urls_preserved": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Camel/Apache Camel Spring Redis 默认反序列化过滤缺失（CVE-2026-78165）.md",
+      "original_input_sha256": "411b6d18f47c4a7889dd6a3179447f0b43ac8fce15994d2ee5dcc00f879a3702",
+      "final_sha256": "411b6d18f47c4a7889dd6a3179447f0b43ac8fce15994d2ee5dcc00f879a3702",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": null,
+      "original_urls_preserved": true
+    },
+    {
+      "path": "Web安全/中间件/Traefik/Traefik digestAuth 未知用户空HA1认证绕过（CVE-2026-85595）.md",
+      "original_input_sha256": "f86e57fa6544c0c08c840061725f862c9faf7b289025cc36b1698891cedcf351",
+      "final_sha256": "f86e57fa6544c0c08c840061725f862c9faf7b289025cc36b1698891cedcf351",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": null,
+      "original_urls_preserved": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径.md",
+      "original_input_sha256": "731451faeaca36e3a9906a7ae11e0b47c63e2d21cc55443bc67c7add62f73561",
+      "final_sha256": "731451faeaca36e3a9906a7ae11e0b47c63e2d21cc55443bc67c7add62f73561",
+      "original_pr_code_bytes_preserved": true,
+      "base_file_prefix_preserved": true,
+      "original_urls_preserved": true
+    }
+  ]
+}

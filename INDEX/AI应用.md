@@ -71,6 +71,7 @@
 
 - [Langflow Fernet 弱密钥派生与第三方检测边界 CVE-2026-9205](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20Fernet%20%E5%BC%B1%E5%AF%86%E9%92%A5%E6%B4%BE%E7%94%9F%E4%B8%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A3%80%E6%B5%8B%E8%BE%B9%E7%95%8C%20CVE-2026-9205.md) [analysis; source-claimed; needs-review]
 - [Langflow 代码校验接口认证后代码执行（CVE-2026-7873）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20%E4%BB%A3%E7%A0%81%E6%A0%A1%E9%AA%8C%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E5%90%8E%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20CVE-2026-7873.md) [vulnerability; source-claimed; active]
+- [Langflow 公开流程构建中的 PythonCodeStructuredTool 代码执行（CVE-2026-10134）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20%E5%85%AC%E5%BC%80%E6%B5%81%E7%A8%8B%E6%9E%84%E5%BB%BA%20PythonCodeStructuredTool%20%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%88CVE-2026-10134%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Langflow及Windows Shell
 
@@ -86,6 +87,10 @@
 - [LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20%E9%81%AD%E5%8F%97%E6%94%BB%E5%87%BB%EF%BC%9A%E4%B8%89%E9%87%8D%E5%A8%81%E8%83%81%E6%BC%8F%E6%B4%9E%E4%BD%BF%20AI%20%E7%BD%91%E5%85%B3%E9%9D%A2%E4%B8%B4%E5%85%A8%E9%9D%A2%E6%8E%A5%E7%AE%A1%E9%A3%8E%E9%99%A9.md) [analysis; not-reproduced; needs-review]
 - [LiteLLM存在远程命令执行漏洞CVE-2026-42271 附POC](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9ECVE-2026-42271%20%E9%99%84POC.md) [advisory; not-reproduced; needs-review]
 - [我在 30 行 Python 里拿到 LiteLLM 的 root：CVE-2026-30623 实战 + 加固](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/%E6%88%91%E5%9C%A8%2030%20%E8%A1%8C%20Python%20%E9%87%8C%E6%8B%BF%E5%88%B0%20LiteLLM%20%E7%9A%84%20root%EF%BC%9ACVE-2026-30623%20%E5%AE%9E%E6%88%98%20%2B%20%E5%8A%A0%E5%9B%BA.md) [vulnerability; not-reproduced; needs-review]
+
+## LiteLLM Proxy
+
+- [LiteLLM Proxy user_config 嵌套路由参数绕过与 SSRF（CVE-2026-59823）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20user_config%20%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1%E7%BB%95%E8%BF%87%E4%B8%8ESSRF%EF%BC%88CVE-2026-59823%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Loom for AWS
 
@@ -197,6 +202,10 @@
 ## Vim
 
 - [Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Claude%20Code/Claude%20Code%2030%E5%88%86%E9%92%9F%E6%8C%96%E5%87%BAVim%E7%94%A8%E4%BA%86%E4%B8%89%E5%8D%81%E5%B9%B4%E7%9A%840Day%EF%BC%8C%E6%94%B6%E5%88%B0%E9%99%8C%E7%94%9F%E6%96%87%E4%BB%B6%E5%85%88%E5%88%AB%E6%80%A5%E7%9D%80%E6%89%93%E5%BC%80.md) [advisory; not-reproduced; needs-review]
+
+## cas-bigdatalab piflow
+
+- [piflow 聊天入口缺少认证与宿主命令工具调用链（CVE-2026-109442）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/piflow/piflow%20%E8%81%8A%E5%A4%A9%E5%85%A5%E5%8F%A3%E7%BC%BA%E5%B0%91%E8%AE%A4%E8%AF%81%E4%B8%8E%E5%AE%BF%E4%B8%BB%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E9%93%BE%EF%BC%88CVE-2026-109442%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## chatgpt-on-wechat
 

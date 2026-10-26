@@ -1,0 +1,67 @@
+[
+  {
+    "source": "Mr-xn/Penetration_Testing_POC",
+    "accessible": true,
+    "checkpoint": "f33600e512f2ff654ec335102daf23b8a5218d24",
+    "head": "64437677355191af561cdccea883219fbe9c5fdf",
+    "head_committer_date": "2026-10-25T11:03:47Z",
+    "dated_query_count": 18,
+    "dated_query_since": "2026-10-18T00:00:00Z",
+    "commits_since_checkpoint": 16,
+    "scope": "README only, 23 added lines / 24 links; no net deletions. Two mrxn article fetch failures; others not body-read.",
+    "api_truncation": "No observed commit list truncation; count <100.",
+    "source_url": "https://github.com/Mr-xn/Penetration_Testing_POC"
+  },
+  {
+    "source": "MrWQ/vulnerability-paper",
+    "accessible": true,
+    "checkpoint": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+    "head": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+    "head_committer_date": "2026-04-01T02:23:55Z",
+    "dated_query_count": 0,
+    "dated_query_since": "2026-10-18T00:00:00Z",
+    "commits_since_checkpoint": 0,
+    "scope": "Head unchanged; dated first page empty. No old body reread or external silent-revision guarantee.",
+    "api_truncation": "No observed commit list truncation; count <100.",
+    "source_url": "https://github.com/MrWQ/vulnerability-paper"
+  },
+  {
+    "source": "lal0ne/vulnerability",
+    "accessible": true,
+    "checkpoint": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+    "head": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+    "head_committer_date": "2025-07-27T13:14:37Z",
+    "dated_query_count": 0,
+    "dated_query_since": "2026-10-18T00:00:00Z",
+    "commits_since_checkpoint": 0,
+    "scope": "Head unchanged; dated first page empty. No old body reread or external silent-revision guarantee.",
+    "api_truncation": "No observed commit list truncation; count <100.",
+    "source_url": "https://github.com/lal0ne/vulnerability"
+  },
+  {
+    "source": "vulhub/vulhub",
+    "accessible": true,
+    "checkpoint": "9b90d4276f84feed6333286afeb7e1250379a1da",
+    "head": "9b90d4276f84feed6333286afeb7e1250379a1da",
+    "head_committer_date": "2026-10-17T20:59:35Z",
+    "dated_query_count": 0,
+    "dated_query_since": "2026-10-18T00:00:00Z",
+    "commits_since_checkpoint": 0,
+    "scope": "Head unchanged; dated first page empty. No old body reread or external silent-revision guarantee.",
+    "api_truncation": "No observed commit list truncation; count <100.",
+    "source_url": "https://github.com/vulhub/vulhub"
+  },
+  {
+    "source": "gelusus/wxvl",
+    "accessible": true,
+    "checkpoint": "59b51e8d9a3ffe28c04f535e457a178c89288f0d",
+    "head": "0ca04cb9e2986ac80a58dfd004051d9eeebeb025",
+    "head_committer_date": "2026-10-25T22:19:17Z",
+    "dated_query_count": 25,
+    "dated_query_since": "2026-10-18T00:00:00Z",
+    "commits_since_checkpoint": 25,
+    "scope": "454 touched paths: 451 added docs, 2 old docs modified, data.json modified. All per-commit file lists; partial body review only.",
+    "api_truncation": "Compare file list capped at 300; resolved by 25 per-commit calls, each 2–54 files; 489 events,454 unique paths. Patch material may be incomplete; body completeness not inferred.",
+    "source_url": "https://github.com/gelusus/wxvl"
+  }
+]
