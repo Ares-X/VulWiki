@@ -1,0 +1,16 @@
+[
+  {
+    "path": "Web安全/AI应用/LiteLLM/LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险.md",
+    "original_sha256": "9810a4d2d9146319b4518e3fb354e2317f9ec898d778c29ecda3449a6b33aa7c",
+    "original_bytes": 5172,
+    "prefix_preserved": true,
+    "change": "append-only"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径.md",
+    "original_sha256": "f9ae34eb5be780ae0a8b5368792aee0498bafe4271124b78499e6ed6c04541bb",
+    "original_bytes": 6350,
+    "prefix_preserved": true,
+    "change": "append-only"
+  }
+]

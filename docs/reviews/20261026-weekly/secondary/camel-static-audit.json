@@ -1,0 +1,123 @@
+{
+  "repo": "oscerd/CVE-2026-78165",
+  "commit": "042351b2de7ede17576f3ea54e06171148c54f15",
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha": "38491a8323c46a653b47b488fe31fda998a9550f",
+      "size": 57,
+      "read": "full text"
+    },
+    {
+      "path": "README.md",
+      "sha": "5991c333e6a3d4310d9d7b860ca11219bb19bfac",
+      "size": 5127,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/Dockerfile",
+      "sha": "2c401a94f58920bd770f95286fb39b22be4d0743",
+      "size": 288,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/README.md",
+      "sha": "c6bf0c1f4eb256db6de068db6f5496fd19f935dc",
+      "size": 1822,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/docker-compose.yml",
+      "sha": "6dc6412c80b8337566130614dca0a75d2299acf3",
+      "size": 268,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/pom.xml",
+      "sha": "f3ccba8fb080be118942fadc1ce08e45c4175004",
+      "size": 3007,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/src/main/java/com/example/ExploitResource.java",
+      "sha": "e8e52b3aa14b6a3838a0b0e8682ade56580239a2",
+      "size": 3299,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/src/main/java/com/example/PwnMarker.java",
+      "sha": "4e8148abb8ba2a641627f39df303d6cb2eed42f1",
+      "size": 1713,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/src/main/java/com/example/SubscribeRoutes.java",
+      "sha": "b8d88134cb9e9c96aeaae5b4f7b90fe3e1db6e73",
+      "size": 928,
+      "read": "full text"
+    },
+    {
+      "path": "camel-quarkus/src/main/resources/application.properties",
+      "sha": "ab7db695efc8c553ccb1266f5d937670eba12c04",
+      "size": 223,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/Dockerfile",
+      "sha": "0a8fec77cb213b8cf0d3525eed6c32f1a76707fb",
+      "size": 150,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/README.md",
+      "sha": "f686a35b251343b8cc2b93dc0fb2f7c134776287",
+      "size": 2295,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/docker-compose.yml",
+      "sha": "7efd7ea60d639ac15686ecc4ff7347537d07302b",
+      "size": 470,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/pom.xml",
+      "sha": "e5e1fbc7de7531292ed136b841adb5657af24581",
+      "size": 2319,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/src/main/java/com/example/Application.java",
+      "sha": "d43ac04352e6843ffef39b8c3e6970b6323cbba0",
+      "size": 302,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/src/main/java/com/example/ExploitController.java",
+      "sha": "7445f152a1dcc70013b6cd8404ada35ea0d96014",
+      "size": 3921,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/src/main/java/com/example/PwnMarker.java",
+      "sha": "4e8148abb8ba2a641627f39df303d6cb2eed42f1",
+      "size": 1713,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/src/main/java/com/example/SubscribeRoute.java",
+      "sha": "4ba9b5267e22a5b04529038a94f47f7a91b019b6",
+      "size": 895,
+      "read": "full text"
+    },
+    {
+      "path": "camel-spring-boot/src/main/resources/application.properties",
+      "sha": "84c7f511d62a7add9f2afa3dc703638b04dbe425",
+      "size": 295,
+      "read": "full text"
+    }
+  ],
+  "license": "No LICENSE in tree; original Chinese summary only",
+  "execution": "none"
+}

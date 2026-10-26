@@ -1,0 +1,98 @@
+[
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Public-GetGridHeadData-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Public-SaveCancelDefaultQueryConditionGroup-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Public-GetQueryConditionGroup-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Public-SaveQueryConditionGroup-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Public-SaveDefaultQueryConditionGroup-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Public-SaveQueryConditionGroupName-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Repair-GetNewStatusJJD-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/php-session-upload_progress-rce-fixes-ways.html",
+    "status": "PHP overlap; not re-audited here"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Repair-UpdateWayJJD-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Repair-GetProductStorNumber-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://github.com/junaire/CVE-2026-109618-exploit",
+    "status": "PHP overlap; not re-audited here"
+  },
+  {
+    "url": "https://github.com/ikow/php2shell-poc",
+    "status": "PHP overlap; not re-audited here"
+  },
+  {
+    "url": "https://mrxn.net/jswz/CDGServer3-UnInstallApplication-sqli.html",
+    "status": "web open Cache miss"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Report-GetBenYeClass-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Report-ReportClassAllHTMLANDDBInfo.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Report-ReportClassAll-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Saler-Unit_CreateDynamicGridHead-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-StorageInfo-UpdateProductListPrtTimes-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/php2shell-cve-2026-109618-php-session-state-uaf-rce.html",
+    "status": "PHP overlap; not re-audited here"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Sysconfig-downloadzt-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-env-setup-2.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Sysconfig-GetZtnameSet-file-read.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Sys-GetChildInfo-sqli.html",
+    "status": "not opened"
+  },
+  {
+    "url": "https://mrxn.net/jswz/youjiasoft-Sys-GetDefault-sqli.html",
+    "status": "web open inaccessible"
+  }
+]
