@@ -18,6 +18,7 @@
       "use": "Internal local review copies in evidence/, not intended for repository inclusion"
     }
   ],
-  "article_created": false,
-  "original_test_values_redacted": false
+  "article_created": true,
+  "original_test_values_redacted": false,
+  "article_scope": "Original Chinese factual analysis with evidence limits and necessary short canary quotations; no full article or source files redistributed."
 }

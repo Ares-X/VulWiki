@@ -5,19 +5,31 @@
     "copy_text_matches_with_renderer_final_newline": true,
     "code_sha256": [
       "ca49ca68766331ac735db5ba15fe1a92254cdc4778b2b03441c48a19d040d839"
-    ]
+    ],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   },
   {
     "path": "Web安全/AI应用/LiteLLM/LiteLLM user_config 嵌套路由绕过与SSRF（CVE-2026-59823）.md",
     "code_blocks": 0,
     "copy_text_matches_with_renderer_final_newline": true,
-    "code_sha256": []
+    "code_sha256": [],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   },
   {
     "path": "Web安全/AI应用/LiteLLM/LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险.md",
     "code_blocks": 0,
     "copy_text_matches_with_renderer_final_newline": true,
-    "code_sha256": []
+    "code_sha256": [],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
+  },
+  {
+    "path": "Web安全/AI应用/piflow/piflow 聊天入口缺少认证与宿主命令工具调用链（CVE-2026-109442）.md",
+    "code_blocks": 1,
+    "copy_text_matches_with_renderer_final_newline": true,
+    "code_sha256": [
+      "0ae8c45a76acf8301d26f44755d382444b1c21d3104ae7650c3c7b2cb988358b"
+    ],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   },
   {
     "path": "Web安全/CMS内容/WordPress/Divi Plus SVG Animator 未认证文件读取（CVE-2026-91136）.md",
@@ -25,13 +37,15 @@
     "copy_text_matches_with_renderer_final_newline": true,
     "code_sha256": [
       "efd597ffd2001c3df4bd000dec5d95917dd713ea2bda3f048c14516b822914b0"
-    ]
+    ],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   },
   {
     "path": "Web安全/中间件/Apache Camel/Apache Camel Spring Redis 默认反序列化过滤缺失（CVE-2026-78165）.md",
     "code_blocks": 0,
     "copy_text_matches_with_renderer_final_newline": true,
-    "code_sha256": []
+    "code_sha256": [],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   },
   {
     "path": "Web安全/中间件/Traefik/Traefik digestAuth 未知用户空HA1认证绕过（CVE-2026-85595）.md",
@@ -39,12 +53,14 @@
     "copy_text_matches_with_renderer_final_newline": true,
     "code_sha256": [
       "e7b34d31615ca85c0146ef2384d8b2bb746cad57e60a597bacd7c345d8e725cb"
-    ]
+    ],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   },
   {
     "path": "Web安全/其他软件/杂项/黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径.md",
     "code_blocks": 0,
     "copy_text_matches_with_renderer_final_newline": true,
-    "code_sha256": []
+    "code_sha256": [],
+    "renderer": "Marked 4.3.0 / HTMLParser; static only"
   }
 ]

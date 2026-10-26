@@ -28,14 +28,14 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 ## 内容范围
 
-当前统计（2026-10-25）：三大正文目录共6038篇Markdown，包含产品内README；生成目录为5938个主入口、6036份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
+当前统计（2026-10-26）：三大正文目录共6044篇Markdown，包含产品内README；生成目录为5944个主入口、6042份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
 
 | 分类 | 当前内容 Markdown |
 |---|---:|
-| Web安全 | 5509 |
+| Web安全 | 5515 |
 | 系统安全 | 249 |
 | IOT安全 | 280 |
-| 合计 | **6038** |
+| 合计 | **6044** |
 
 <details>
 <summary>查看2026-10-02历史文件快照</summary>
@@ -146,6 +146,8 @@ python scripts/wiki.py search CloudStack
 ## Change Log
 
 以下按合并日期补记维护内容；不同批次的修订路径可能重叠，不累计为唯一文章数。收录和静态验收不表示漏洞已由维护者复现。
+
+* 2026-10-26（PR #32）新增6篇、补充2篇：整理 Divi Plus、Camel Spring Redis、LiteLLM user_config、Langflow 公开流程及 Traefik digestAuth，补入 piflow 认证与命令工具调用链分析；保留其完整网络请求记录及修复状态待核的边界。既有两篇 LiteLLM 原文完整保留，追加不同编号的认证条件与修复版本说明。详见[周维护与验收记录](docs/reviews/20261026-weekly/README.md)。
 
 * 2026-10-25（PR #30）新增10篇、修订1篇：整理PHP请求清理与Session、Node.js Brotli与DNS、Plex2Shell，并补充FortiSIEM、Laravel、Echo、Drupal及Linux/Android研究；追加既有PwnEscape条目的公开探针与完整逃逸链证据边界。保留特定构建、人工writer/gadget及失败对照等条件，不把DNS白名单实验写成完整SSRF或把临时root泛化为通用能力。详见[周维护记录](docs/reviews/20261025-weekly/README.md)与[六项研究补充](docs/reviews/20261025-supplement/README.md)。
 * 2026-10-19（PR #29）新增65篇、修订19篇：其中新增42篇IoT研究，另补充GitLab、Zimbra、Nextcloud、OpenCTI、Windows等资料，包括GitLab CI正则编译整数溢出（CVE-2026-97229）、Zimbra跨账号邮箱读取（CVE-2026-10631）和PwnEscape TAP泄露探针（CVE-2026-99999）。澄清认证、版本和编号对应关系，修正旧Tenda主CVE误关联，保留Glances、Langflow、Ahsay等资料的补丁与证据限制。详见[维护记录](docs/reviews/20261019-weekly/README.md)与[合并验收](docs/reviews/20261019-weekly/pr29-acceptance.md)。

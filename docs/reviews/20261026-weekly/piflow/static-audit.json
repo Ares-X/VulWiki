@@ -1,6 +1,6 @@
 {
   "candidate": "CVE-2026-109442",
-  "decision": "HOLD_CONCRETE_SECURITY_BOUNDARY_TRIGGER_NOT_PUBLISHED",
+  "decision": "ADMITTED_AS_ANALYSIS_WITH_EXPLICIT_EVIDENCE_LIMITS",
   "date": "2026-10-26",
   "fixed_audit_revision": "ad8d0108a54a4257307d4946dc9250e26f24c63f",
   "revision_meaning": "Pinned review revision, NOT a security-fix commit",
@@ -16,9 +16,10 @@
         "sha": "04a7d190b86e42857b01bddf1b40a211b6427e32",
         "size": 5570,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/04a7d190b86e42857b01bddf1b40a211b6427e32",
-        "sha256": "896415b502b7c3ec424d5c44ada040963bf2bbdb12679a56fb88ca0e9d83d4b4",
+        "sha256": "11626937b5036dcb5761dffc17438d8a6f762f895545a61b02d52e7485f973b8",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "896415b502b7c3ec424d5c44ada040963bf2bbdb12679a56fb88ca0e9d83d4b4"
       },
       {
         "path": "agents/middleware.py",
@@ -27,9 +28,10 @@
         "sha": "77a2923b5f075a9fa7e392b542982bfe55b30a95",
         "size": 1153,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/77a2923b5f075a9fa7e392b542982bfe55b30a95",
-        "sha256": "fc9931867bf6975a04567c6388dca72f1fdd18d0c5dfec914df6b0115487cd4e",
+        "sha256": "d337a08d7250faae1400a5b4f6ab5fcd867a79b1ed87c5ebfb965e9d977728a5",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "fc9931867bf6975a04567c6388dca72f1fdd18d0c5dfec914df6b0115487cd4e"
       },
       {
         "path": "agents/tools.py",
@@ -38,9 +40,10 @@
         "sha": "a7133464b2ab5c5a2a9b0d6798f894896be42b4f",
         "size": 5433,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/a7133464b2ab5c5a2a9b0d6798f894896be42b4f",
-        "sha256": "10c863ee674002d11ebbaf6d946757183323c2594ee00e1c757bdb1a151b4250",
+        "sha256": "c4b49d1b542590bc60ae40926abb2c6c155877545377aed8048ea399c4d0d74b",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "10c863ee674002d11ebbaf6d946757183323c2594ee00e1c757bdb1a151b4250"
       },
       {
         "path": "docker/Dockerfile.app",
@@ -49,9 +52,10 @@
         "sha": "e9e8427d46a2aa8d2aae8169a5cbe44abd5d6afa",
         "size": 933,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/e9e8427d46a2aa8d2aae8169a5cbe44abd5d6afa",
-        "sha256": "ab7a818cb5b1db964720afbce039d2ec42b5d6f69fdf0f71b54b8232465d2bef",
+        "sha256": "6b9ae40b2d31a711d6565d8c4f44a3634dfa3d9013847acfcaa24d7ffd5d6794",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "ab7a818cb5b1db964720afbce039d2ec42b5d6f69fdf0f71b54b8232465d2bef"
       },
       {
         "path": "docker/docker-compose.yml",
@@ -60,9 +64,10 @@
         "sha": "739cb9ffa44ea2d97db981945a827b7c32a5f164",
         "size": 1190,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/739cb9ffa44ea2d97db981945a827b7c32a5f164",
-        "sha256": "458b2ab81ea5e2c670217584972cdc3dba6f1c54d7286528c0cd3e72d779005e",
+        "sha256": "c7925bb140f8a20310fbfe2bc88d220e29eadef793b44c2a2ae77a524de3a700",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "458b2ab81ea5e2c670217584972cdc3dba6f1c54d7286528c0cd3e72d779005e"
       },
       {
         "path": "docker/nginx.app.conf",
@@ -71,9 +76,10 @@
         "sha": "5adfb9fc54c938f6cd18d8161d12692878e03b8e",
         "size": 954,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/5adfb9fc54c938f6cd18d8161d12692878e03b8e",
-        "sha256": "de5dd3ab915c45f70c0188ef7cc37d09169f798523a9be6117ce9b736e613ef9",
+        "sha256": "fbf6b32b0415ecf5b3953a883f541b429b5b23621a62225be2a6560097bf91b1",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "de5dd3ab915c45f70c0188ef7cc37d09169f798523a9be6117ce9b736e613ef9"
       },
       {
         "path": "docker/start-app.sh",
@@ -82,9 +88,10 @@
         "sha": "f58f03f903fefcfb2c48a612b4dd6f659eb17354",
         "size": 529,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/f58f03f903fefcfb2c48a612b4dd6f659eb17354",
-        "sha256": "c985b37296953278852e4dc6ca878645142047e899e0e86aa182a8fee3d92e20",
+        "sha256": "debef754e72b9a98b5e87260d6133f371ab77c776dc22e19986b30a726878769",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "c985b37296953278852e4dc6ca878645142047e899e0e86aa182a8fee3d92e20"
       },
       {
         "path": "infra/config_loader.py",
@@ -93,9 +100,10 @@
         "sha": "16a7fb91c0627ea9542a4febaeeb65c07a87450e",
         "size": 2092,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/16a7fb91c0627ea9542a4febaeeb65c07a87450e",
-        "sha256": "1f4898df23450c407dab4fff149d098dbe7c2aacb7508b92aeecf7d304596fc4",
+        "sha256": "8df9d9c75fa1c72631b767ed0e4fb19f6aec7ad81e8ff358f956613489f9aeab",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "1f4898df23450c407dab4fff149d098dbe7c2aacb7508b92aeecf7d304596fc4"
       },
       {
         "path": "infra/env_loader.py",
@@ -104,9 +112,10 @@
         "sha": "b40d873cdc3a98337dc4b9ac84eef95c9acdcf3a",
         "size": 1045,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/b40d873cdc3a98337dc4b9ac84eef95c9acdcf3a",
-        "sha256": "77c613f60e3e324a10939f85ef709495bebfe3a726ee1fa82dea6f500155fef5",
+        "sha256": "414c435cff591fc32ec534e6763bb5afa21173fa7b0505a157e6ddbf82594f31",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "77c613f60e3e324a10939f85ef709495bebfe3a726ee1fa82dea6f500155fef5"
       },
       {
         "path": "requirements.txt",
@@ -115,9 +124,10 @@
         "sha": "51c9bbe1b1e426f5f92900642c16e594e1b8cde9",
         "size": 608,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/51c9bbe1b1e426f5f92900642c16e594e1b8cde9",
-        "sha256": "048d2bf88c3ef04865a7005f2cc9c056c2730b0c010d8fb4a1ff45ecde2e116d",
+        "sha256": "2f021d176d721f8bc9883711b81218055eb4f86273e21e6ede99120fab47ffb2",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "048d2bf88c3ef04865a7005f2cc9c056c2730b0c010d8fb4a1ff45ecde2e116d"
       },
       {
         "path": "routers/dag_panel_api.py",
@@ -126,9 +136,10 @@
         "sha": "1be08709fcd3274644b1dab40efb8043de919af5",
         "size": 10140,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/1be08709fcd3274644b1dab40efb8043de919af5",
-        "sha256": "6b3e86b93112e2cb252801f12d19b9d65885361ce276930fdd57b9656bda9e0c",
+        "sha256": "e457720a48b7bee2648296f288761ed9d7a70428a64b5c13002ef93ea14b15d7",
         "review_scope": "1–90 representative authenticated routes only",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "6b3e86b93112e2cb252801f12d19b9d65885361ce276930fdd57b9656bda9e0c"
       },
       {
         "path": "runtime/chat_store.py",
@@ -137,9 +148,10 @@
         "sha": "b666f2e523b449e30f705d877d82d79e9f7d610d",
         "size": 15005,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/b666f2e523b449e30f705d877d82d79e9f7d610d",
-        "sha256": "d8c6ec8a63bbbf86fccefdf5b017ca8c4f6e426cd26ba60580ec9015b1de772a",
+        "sha256": "c1ed57b1d7f0ac2d39c81bcc58d46227e1fafc7b481b1917b56e28d459e114bd",
         "review_scope": "167–215 ensure_thread_access only",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "d8c6ec8a63bbbf86fccefdf5b017ca8c4f6e426cd26ba60580ec9015b1de772a"
       },
       {
         "path": "runtime/engine.py",
@@ -148,9 +160,10 @@
         "sha": "c2c908908a8b0ef97c4b5865cba4888541aad444",
         "size": 43167,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/c2c908908a8b0ef97c4b5865cba4888541aad444",
-        "sha256": "125f194926fea102508e1543b9cc6fe835ff9bcfb90a681f41d1d74a2fffbafa",
+        "sha256": "76f8f0c1977c94110e8a9f83db982c9f68bae22ca38a38bd4ec507af9289f72d",
         "review_scope": "1–90, 480–625, 741–793, 860–912; other utilities/subagent branches not reviewed",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "125f194926fea102508e1543b9cc6fe835ff9bcfb90a681f41d1d74a2fffbafa"
       },
       {
         "path": "runtime/policy.py",
@@ -159,9 +172,10 @@
         "sha": "9778cd6c6f55907a64be85ffeb6e8a15c770f35a",
         "size": 816,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/9778cd6c6f55907a64be85ffeb6e8a15c770f35a",
-        "sha256": "f735d79b607d6bf7c5a090263c8afbd3f29da13ef7b5640fd6a9cd8b78a12403",
+        "sha256": "55e2a967ff7b4120e5e915623cd94de7f74d794beda3658fbdd56e2b19824ecc",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "f735d79b607d6bf7c5a090263c8afbd3f29da13ef7b5640fd6a9cd8b78a12403"
       },
       {
         "path": "scripts/package_release.sh",
@@ -170,9 +184,10 @@
         "sha": "06f4890c5c1cedbdca5475a3bdc065fde5bd634c",
         "size": 1525,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/06f4890c5c1cedbdca5475a3bdc065fde5bd634c",
-        "sha256": "7ac5730a624429e84418427fffb58befc07d257f7ec719b1b545cc0fe593bafc",
+        "sha256": "7e449e6f9ec2d6b00a865dee7a470f0789292a43745b1a87a0c89f74c2c0f6cf",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "7ac5730a624429e84418427fffb58befc07d257f7ec719b1b545cc0fe593bafc"
       },
       {
         "path": "security/auth_dependency.py",
@@ -181,9 +196,10 @@
         "sha": "722e0f3d429d616e6d4f6cbf5dec343cdf972d5f",
         "size": 605,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/722e0f3d429d616e6d4f6cbf5dec343cdf972d5f",
-        "sha256": "77ed0483936f80a8fa00a0d195295a2db27ceb5a0758bb85776bfd61a091cd0d",
+        "sha256": "c9988c77302a3bb6f827d8c0de2a4f362a2f36da54e0c34c8b2f0ea5c897fc62",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "77ed0483936f80a8fa00a0d195295a2db27ceb5a0758bb85776bfd61a091cd0d"
       },
       {
         "path": "server.py",
@@ -192,9 +208,10 @@
         "sha": "360acb77bfe31b0ec5a84df9204694a1a8ec4a48",
         "size": 62750,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/360acb77bfe31b0ec5a84df9204694a1a8ec4a48",
-        "sha256": "9c7a94239da1059329433bfa049ed825a5778341ee9c4be756d85d5ff347f414",
+        "sha256": "9107c0bdf8311620739573774cb5a20ca2f44a4ceba466f5947bfb952a38f594",
         "review_scope": "1–145, 615–765, 1930–1963; full-file keyword search of route/middleware/Depends; other handlers not reviewed",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "9c7a94239da1059329433bfa049ed825a5778341ee9c4be756d85d5ff347f414"
       },
       {
         "path": "vue-web/package.json",
@@ -203,9 +220,10 @@
         "sha": "e47a8ba51ab46f94c9427949aeafc4ade055902a",
         "size": 944,
         "url": "https://api.github.com/repos/cas-bigdatalab/piflow/git/blobs/e47a8ba51ab46f94c9427949aeafc4ade055902a",
-        "sha256": "5766503fac3604a359dd742309cb70b95c71b636654583471c4eaf8e6d20a601",
+        "sha256": "e2c282a0837ce98d809ffd2a58cdc2dfaad2dc9c64e89bb31e71b95e99ce875f",
         "review_scope": "full text",
-        "executed": false
+        "executed": false,
+        "previous_sha256": "5766503fac3604a359dd742309cb70b95c71b636654583471c4eaf8e6d20a601"
       }
     ]
   },
@@ -245,5 +263,7 @@
     "remote_tasks_created": false,
     "repository_modified": false
   },
-  "publication": "Do not publish evidence source copies or an article. Only ledger/audit/source links eligible at present."
+  "publication": "Original factual analysis admitted with CNA/source correspondence and explicit missing network-execution/fix evidence. Internal source copies are not redistributed.",
+  "previous_decision": "HOLD_CONCRETE_SECURITY_BOUNDARY_TRIGGER_NOT_PUBLISHED",
+  "sha256_recheck": "2026-10-26: Git blob and byte counts match all 18 files; corrected SHA-256 from downloaded raw bytes. Old SHA-256 values preserved; review scopes unchanged."
 }
