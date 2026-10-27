@@ -1,6 +1,6 @@
 {
   "candidate": "CVE-2026-109442",
-  "decision": "ADMITTED_AS_ANALYSIS_WITH_EXPLICIT_EVIDENCE_LIMITS",
+  "decision": "HOLD_CONCRETE_SECURITY_BOUNDARY_TRIGGER_NOT_PUBLISHED",
   "date": "2026-10-26",
   "fixed_audit_revision": "ad8d0108a54a4257307d4946dc9250e26f24c63f",
   "revision_meaning": "Pinned review revision, NOT a security-fix commit",
@@ -263,7 +263,26 @@
     "remote_tasks_created": false,
     "repository_modified": false
   },
-  "publication": "Original factual analysis admitted with CNA/source correspondence and explicit missing network-execution/fix evidence. Internal source copies are not redistributed.",
+  "publication": "Pending review only; complete former article archived byte-for-byte in pending-original.md outside content roots. See decision_history for previous admission.",
   "previous_decision": "HOLD_CONCRETE_SECURITY_BOUNDARY_TRIGGER_NOT_PUBLISHED",
-  "sha256_recheck": "2026-10-26: Git blob and byte counts match all 18 files; corrected SHA-256 from downloaded raw bytes. Old SHA-256 values preserved; review scopes unchanged."
+  "sha256_recheck": "2026-10-26: Git blob and byte counts match all 18 files; corrected SHA-256 from downloaded raw bytes. Old SHA-256 values preserved; review scopes unchanged.",
+  "decision_history": [
+    {
+      "date": "2026-10-26",
+      "decision": "HOLD_CONCRETE_SECURITY_BOUNDARY_TRIGGER_NOT_PUBLISHED",
+      "basis": "Original screening retained in README."
+    },
+    {
+      "date": "2026-10-26",
+      "decision": "ADMITTED_AS_ANALYSIS_WITH_EXPLICIT_EVIDENCE_LIMITS",
+      "publication": "Original factual analysis admitted with CNA/source correspondence and explicit missing network-execution/fix evidence. Internal source copies are not redistributed.",
+      "basis": "PR #32 analysis exception; superseded by 2026-10-27 correction."
+    },
+    {
+      "date": "2026-10-27",
+      "decision": "HOLD_CONCRETE_SECURITY_BOUNDARY_TRIGGER_NOT_PUBLISHED",
+      "basis": "admission-correction-20261027.json"
+    }
+  ],
+  "decision_updated_at": "2026-10-27"
 }
