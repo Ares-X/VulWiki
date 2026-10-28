@@ -1,0 +1,18 @@
+name: Assign new issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign Ares-X
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER/assignees" -f 'assignees[]=Ares-X'
