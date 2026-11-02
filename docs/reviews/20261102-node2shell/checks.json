@@ -1,0 +1,13 @@
+{
+  "baseline_markdown_including_resource_readme": 6061,
+  "unchanged": 6060,
+  "changed": "Web安全/开发框架/Node.js/Node.js Brotli 解码越界写与特定 Express 构建 RCE（CVE-2026-111497）.md",
+  "title_change": "Node2Shell： prefix only",
+  "complete_original_body_prefix_preserved": true,
+  "code_blocks": 2,
+  "copy_equal": true,
+  "new_render_candidates": 0,
+  "new_debt": 0,
+  "python_tests": 96,
+  "node_tests": 44
+}
