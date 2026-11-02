@@ -28,7 +28,7 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 ## 内容范围
 
-当前统计（2026-11-02）：三大正文目录共6060篇Markdown，包含产品内README；生成目录为5960个主入口、6058份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
+当前统计（2026-11-02）：三大正文目录共6060篇Markdown，包含产品内README，不含资源目录中的出处说明；生成目录为5960个主入口、6058份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
 
 | 分类 | 当前内容 Markdown |
 |---|---:|
@@ -146,6 +146,8 @@ python scripts/wiki.py search CloudStack
 ## Change Log
 
 以下按合并日期补记维护内容；不同批次的修订路径可能重叠，不累计为唯一文章数。收录和静态验收不表示漏洞已由维护者复现。
+
+* 2026-11-02（PR #36）新增10篇、补充1篇：整理 node-forge、Linux timer/TCP、Wasmtime、svg-hush/xml、AEM、MLflow、Flowise、OAuthLib 和 imgproxy 的公开研究；为已有 Brotli 文追加固定 WordPress 镜像的响应解码入口及分支回移修复边界。区分原始披露、修复和详细材料发布时间，保留版本冲突、失败对照与作者结果的限制。详见[补漏记录](docs/reviews/20261102-gap-review/README.md)和[集成复核](docs/reviews/20261102-gap-review/integration-review.md)。
 
 * 2026-11-02（PR #35）新增6篇、补充1篇：整理 The Grid、sanitize-svg、FreeSWITCH、pypdf、Flyimg 和 SOCFortress CoPilot 的公开研究；区分触发前提、探针误判、不同修复版本与证据缺口，追加 GitLab 的特定构建例外及清理风险。PiFlow 既有分析继续以 needs-review 保留原地址和查询入口，不采用 PR #33 的移出方案。详见[周维护记录](docs/reviews/20261102-weekly/README.md)和[合并复核](docs/reviews/20261102-weekly/integration-review.md)。
 
