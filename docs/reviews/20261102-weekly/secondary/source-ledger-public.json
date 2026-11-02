@@ -1,0 +1,121 @@
+{
+  "checked_at": "2026-11-02T00:59:00Z",
+  "window_overlap": "2026-10-24T00:00:00Z..2026-11-02T00:00:00Z",
+  "sources": [
+    {
+      "repository": "gelusus/wxvl",
+      "previous_head": "0ca04cb9e2986ac80a58dfd004051d9eeebeb025",
+      "head": "31632ad3a32467b7837fe87d93fa186c48616030",
+      "access": "success",
+      "overlap_commits": 25,
+      "new_commits": 18,
+      "new_commit_file_counts": [
+        3,
+        26,
+        3,
+        9,
+        11,
+        4,
+        21,
+        28,
+        24,
+        24,
+        9,
+        11,
+        6,
+        8,
+        11,
+        9,
+        7,
+        12
+      ],
+      "pagination": "commit list page1 per_page100 returned25; each of25 commit detail page1 returned<100 files, so no endpoint truncation; not broad compare capped3000",
+      "file_events": {
+        "added": 202,
+        "modified": 24,
+        "removed": 0,
+        "renamed": 0
+      },
+      "unique_body_paths": 206,
+      "new_bodies": 202,
+      "old_bodies_updated": 4,
+      "body_modify_events": 6,
+      "metadata_modify_events": 18,
+      "body_downloaded": 206,
+      "fetch_recovered": "Claude Linux article initially RemoteProtocolError; one same-API retry successful and included in sorted-bodies manifest",
+      "current_review_split": "1–60 parent;61–140 upstream_research_web;141–206 this agent. Actual receipts separate.",
+      "previous_unread_debt": "Prior451 body backlog is separately assigned; do not infer closed by this206 review.",
+      "images": "Image references preserved; pixels unviewed by this agent",
+      "updates": [
+        {
+          "path": "当漏洞挖掘遇上 AI Agent：主流企业防火墙 0day 挖掘实战.md",
+          "change": "date only Oct16→Oct31"
+        },
+        {
+          "path": "【成功复现】WordPress Visual Composer Website Builder任意本地文件包含漏洞(CVE-2026-12227).md",
+          "change": "date and contact advertisement removed upstream; technical material unchanged"
+        },
+        {
+          "path": "记一次SRC挖掘—审计js还原隐藏接口产出2个未授权漏洞.md",
+          "change": "date/headings/author spacing and imageURL replacements; generic endpoints unchanged; pixels unviewed"
+        },
+        {
+          "path": "信息安全漏洞周报（2026年第42期）.md",
+          "change": "period Oct12–18→Oct19–25, metrics and advisory list replaced, PHP section added; no actual trigger"
+        },
+        {
+          "path": "PHP重大漏洞引发全球关注：AI时代，网络安全防线如何升级？.md",
+          "change": "addedwithinwindow thenpublisher andmarketing rewrite; notpreexistingoldbody"
+        },
+        {
+          "path": "【$175,000】人类技艺巅峰之作：纯逻辑漏洞构筑的Edge全链条攻击深度解析！.md",
+          "change": "addedwithinwindow thenpublisher/date/advert/headerformat changes; technicalchain unchanged"
+        }
+      ]
+    },
+    {
+      "repository": "Mr-xn/Penetration_Testing_POC",
+      "previous_head": "64437677355191af561cdccea883219fbe9c5fdf",
+      "head": "4531268278f7f5dc37417dfe9e7e187eb57d91ce",
+      "access": "repositorysuccess; externalbodyfailures",
+      "overlap_commits": 9,
+      "new_commits": 5,
+      "paths": [
+        "README.md"
+      ],
+      "patches_read": 5,
+      "external_links_added": 6,
+      "removed": 0,
+      "external_results": [
+        {
+          "url": "https://mrxn.net/jswz/wordpress-StagedInstaller-rce.html",
+          "result": "web.open Cache miss; bodyunread; no alternate-transport bypass"
+        },
+        {
+          "url": "https://mrxn.net/jswz/youjiasoft-Report-Upload-UploadFormImg-rce-2.html",
+          "result": "web.open Cache miss; bodyunread; no alternate-transport bypass"
+        },
+        {
+          "url": "https://mrxn.net/jswz/youjiasoft-Api-Default-GetApiParams-data-leak.html",
+          "result": "web.open Cache miss; bodyunread; no alternate-transport bypass"
+        },
+        {
+          "url": "https://mrxn.net/jswz/youjiasoft-HttpUploadHandler-rce.html",
+          "result": "web.open Cache miss; bodyunread; no alternate-transport bypass"
+        },
+        {
+          "url": "https://mrxn.net/jswz/youjiasoft-VIPCard-GetVIPCodeByKey-sqli.html",
+          "result": "web.open Cache miss; bodyunread; no alternate-transport bypass"
+        },
+        {
+          "url": "https://mrxn.net/jswz/youjiasoft-VIPCard-GetVIPCardCode-sqli.html",
+          "result": "web.open Cache miss; bodyunread; no alternate-transport bypass"
+        }
+      ],
+      "previous_unread_debt": 24,
+      "pagination": "commit list page1<100, percommitfilesonlyREADME; noapi truncation"
+    }
+  ],
+  "publication_boundary": "Do not publish inventory.json or sorted-bodies.json wholesale; raw external bodies include paused candidate204. These private originals are unchanged.",
+  "execution": "No PoC/dependency execution, target requests, public scanning, or external writes"
+}

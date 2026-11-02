@@ -1,0 +1,605 @@
+{
+  "head": "31632ad3a32467b7837fe87d93fa186c48616030",
+  "range": [
+    141,
+    206
+  ],
+  "count": 66,
+  "scope": "本文件仅本agent分片；1–60父agent、61–140web agent另交。外链并非全读。",
+  "rows": [
+    {
+      "number": 141,
+      "path": "doc/2026-10/漏洞复现｜TheGrid admin-ajax存在代码执行漏洞(CVE-2026-94169).md",
+      "body_sha256": "095abf9b0fee6b60fb58f392635f92b303d20af100f89dbc5c3204dcd1b50c55",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "含TheGrid请求，来源链与SourByte候选重合；需原始产品版本/nonce前提核对，移交primary去重"
+    },
+    {
+      "number": 142,
+      "path": "doc/2026-10/漏洞预警  Cisco FMC反序列化漏洞.md",
+      "body_sha256": "02a6b572fdf37738f32a7fa4ff714d937e96b1e8af120ed6b1801c7712a3c240",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Cisco FMC预警无具体触发载荷"
+    },
+    {
+      "number": 143,
+      "path": "doc/2026-10/漏洞预警  Drupal远程代码执行漏洞.md",
+      "body_sha256": "95030cca8dc1639e92bc1ae04a54e8fae55d0318aec7362894a5f87bc1e5e9b8",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Drupal预警只有原理无具体触发"
+    },
+    {
+      "number": 144,
+      "path": "doc/2026-10/漏洞预警  Flowise服务器端请求伪造漏洞.md",
+      "body_sha256": "27ff8113e6e055afe38af5affd0381910bab0fe02e6cde8857e99b16aedd098d",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Flowise预警无具体触发"
+    },
+    {
+      "number": 145,
+      "path": "doc/2026-10/漏洞预警  H3C Magic NX15命令注入漏洞.md",
+      "body_sha256": "6b480e3222ac34b2070cafe2c36854eb35dff711dd2c272c0ddd52d3fab1d7e5",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "H3C仅端点无命令载荷"
+    },
+    {
+      "number": 146,
+      "path": "doc/2026-10/漏洞预警  Nodejs Brotli远程代码执行漏洞.md",
+      "body_sha256": "12c76dcf4769e66a5b828fdcd5720e3830a93d418317fc1aa22f68bc836ad6ba",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Brotli预警无触发流"
+    },
+    {
+      "number": 147,
+      "path": "doc/2026-10/漏洞预警  PHP代码执行漏洞.md",
+      "body_sha256": "8ad654789cc08f00fe60b28b74a59ac41df03ce0344d76949729a843d0de369a",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "PHP预警无具体请求"
+    },
+    {
+      "number": 148,
+      "path": "doc/2026-10/漏洞预警CVE-2026-97631 一个存在约16年的缓冲区溢出漏洞,影响绝大多数服务器，还能执行代码, cvss9.5.md",
+      "body_sha256": "2202821a5daba7c6d471ae7f3940a2d6343c4f39ecfcf94f163831b1946f784e",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "EDKII只描述ICMP超长条件无具体包"
+    },
+    {
+      "number": 149,
+      "path": "doc/2026-10/漏洞预警｜Linux内核 TCP IP选项远程代码执行漏洞（CVE-2026-98432）.md",
+      "body_sha256": "2ad71e3aa2c7df2317a1338257c0596341119b6d3ca8c032e5b26ded50dfc635",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Linux预警主要图片，像素未读"
+    },
+    {
+      "number": 150,
+      "path": "doc/2026-10/研究员凭PHP2Shell漏洞赢得比特币挑战赛，获两千美元奖金并发布PoC.md",
+      "body_sha256": "c31e962c44a392b4c8d0a84de2ef2b46081b6da5fd897c76dc9ab5dc5b733155",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "PHP2Shell竞赛报道，未提供具体PoC地址或触发"
+    },
+    {
+      "number": 151,
+      "path": "doc/2026-10/破防！PHP2Shell 漏洞首现实战利用，无认证 RCE 拿下服务器权限.md",
+      "body_sha256": "9cb720bcedd190d2b0407ffdf46ccb848a713260d129b0ccfaa691f76e0c802d",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "PHP2Shell片段分析明确不提供完整payload，原作者待核"
+    },
+    {
+      "number": 152,
+      "path": "doc/2026-10/程序员注意：思源笔记连曝高危漏洞 发布模式默认就能拖库.md",
+      "body_sha256": "439f1c26965b956a0abd06a743d37df6b7a773c5251c665c5628057bf31f4e9b",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "SiYuan SQLi原理无具体payload"
+    },
+    {
+      "number": 153,
+      "path": "doc/2026-10/突发！1day漏洞致使大量NAS用户文件被加密.md",
+      "body_sha256": "17744f2c8d0899da536212c157d2c0272aef5d50b28f38f7e02169f248cae019",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "NAS勒索事件/IOC无漏洞触发材料"
+    },
+    {
+      "number": 154,
+      "path": "doc/2026-10/第114篇 AI全栈 · 逻辑漏洞背后隐藏的刷票总结.md",
+      "body_sha256": "7943f2d688ad32d18b52f5d7ca691d8589b417c846e9e4674f103a72ed7adb4c",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "通用刷票逻辑方法，不对应已确认产品漏洞"
+    },
+    {
+      "number": 155,
+      "path": "doc/2026-10/第177篇：Struts2全版本漏洞检测工具v20.11（内存马版）+新增注入内存马功能.md",
+      "body_sha256": "22463696eec72c0872b1b641252775f3a5dda75a42dca2d0160a4615bd4f58aa",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Struts工具广告/付费二进制，未作源码审计，不荐用"
+    },
+    {
+      "number": 156,
+      "path": "doc/2026-10/紧急预警｜PHP php2shell高危漏洞，无需认证可RCE！.md",
+      "body_sha256": "d643584294e1c97c25e3363eee6c86c4cd4d05e49a20d39a758d53f5c9f257ee",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "PHP预警无触发材料"
+    },
+    {
+      "number": 157,
+      "path": "doc/2026-10/纯逻辑漏洞攻破Edge沙箱：Orange Tsai披露Pwn2Own 17.5万美元漏洞链.md",
+      "body_sha256": "78f0599d3359f6d586219b6fae7ac8ff477ed453929e162465c5b47a13a94897",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Edge纯逻辑链二手概述，原作者材料需核"
+    },
+    {
+      "number": 158,
+      "path": "doc/2026-10/网站漏洞源码合集 可做漏洞训练平台.md",
+      "body_sha256": "05a2d05360d744d6d9fe1339af9b3ae12eb5b218df657dc9bd8fb46c7ab927e3",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "网盘训练合集未提供可核对应漏洞材料"
+    },
+    {
+      "number": 159,
+      "path": "doc/2026-10/美国国土安全部人员数据遭窃取，CBP 与 ICE 大量特工信息泄露；CNNVD周报：新增3806个安全漏洞，PHP高危漏洞可导致远程代码执行 牛览.md",
+      "body_sha256": "b8c2f3d25474fc5567732101a5fda14e92cbfaa6a8fc24548c9c2b5585f449a1",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "新闻聚合，Intelbras Securelist研究仅作待核线索"
+    },
+    {
+      "number": 160,
+      "path": "doc/2026-10/老设备也不放过！苹果紧急修复高危漏洞，带你硬核拆解越界写入（OOB Write）.md",
+      "body_sha256": "db29c959e4eea6aa9b4a75b18fe794aa7afc8b3ccb7ffd2bbee7c688d05c27d6",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Apple越界写概述无具体触发"
+    },
+    {
+      "number": 161,
+      "path": "doc/2026-10/能信安：安全漏洞.md",
+      "body_sha256": "f1ae0e54f9fda601c20f7da8a176e9959d4467f9b3179240bb810a9ce49cdbb3",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "厂商漏洞汇总无具体触发"
+    },
+    {
+      "number": 162,
+      "path": "doc/2026-10/船舶和港口也有漏洞库了！海事网络安全，不能再靠“事后补洞”.md",
+      "body_sha256": "45f7930a28b660de56b0d4dfbcdc45a60c278490a2332e9130f2efc524e0f92d",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "海事漏洞管理推广无具体触发"
+    },
+    {
+      "number": 163,
+      "path": "doc/2026-10/补丁地狱：PaperCut 三次修补三次被绕过的漏洞挖掘全记录.md",
+      "body_sha256": "d8e3005d4ef8fbb4427663b138f4284c3e453edf3d382c3c54e6b0f418adec59",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "duplicate-source-chain",
+      "reason": "PaperCut WT0143/0144原理与请求已覆盖库内2026-10-12补充，来源链去重"
+    },
+    {
+      "number": 164,
+      "path": "doc/2026-10/被同一个白帽子连续破防4次？详解GitLab最新10.0高危漏洞.md",
+      "body_sha256": "75af03942bd25d6540c1e491da92547eec3fce2d681532720dba438bb399eaf3",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "GitLab概述无实际正则触发"
+    },
+    {
+      "number": 165,
+      "path": "doc/2026-10/记一次SRC挖掘—审计js还原隐藏接口产出2个未授权漏洞.md",
+      "body_sha256": "397748dd629886874b4991c216fdc20dafde0e0fdce49f4bfe3430fb3ad1dd2d",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "旧文图片/排版更新；产品接口仍占位，截图未核"
+    },
+    {
+      "number": 166,
+      "path": "doc/2026-10/记一次学员ai挖洞不知道原理经过深度分析之挖掘通杀0day过程.md",
+      "body_sha256": "7bd1982f4ba6107f6efa8308ac074a56f91934dde39a9c1cbafceadeaa62d66a",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "匿名教育系统有参数和注入片段但产品/版本对应不明，不能推定通杀"
+    },
+    {
+      "number": 167,
+      "path": "doc/2026-10/资产侦察与漏洞管理平台 -- 4zreark（10月26日更新）.md",
+      "body_sha256": "47e7e498a537c7c09313734d14c411b0927a27b2edbcae5862c8bb265a3fb5f8",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "4zreark工具推广无具体漏洞材料，下载未审"
+    },
+    {
+      "number": 168,
+      "path": "doc/2026-10/赏金猎人实战：喂一段压缩数据，官方 Node.js 就被打成 RCE.md",
+      "body_sha256": "02c1815d37a03a36526487254f09d60b5539fe93440b12975e4d9d48d48c7813",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Imperva Brotli研究二手概述无完整触发流，原作者待核"
+    },
+    {
+      "number": 169,
+      "path": "doc/2026-10/赛博安全狗：Veeam Management Pack曝严重远程代码执行漏洞CVE-2023-22793 (10.30).md",
+      "body_sha256": "7b7d60f9f38aaae7e31d94cd9761a32b4dc1473808ba663646d2739f54221379",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Veeam及新闻预警无具体触发"
+    },
+    {
+      "number": 170,
+      "path": "doc/2026-10/赛博安全狗：Wasmtime沙箱逃逸漏洞CVE-2026-115893获评9.9分，多分支版本已修复 (10.24).md",
+      "body_sha256": "900d7b503b27a69f28c34b8f9577c0233a7ccd7a636940e5e5cbfa9a644c4d15",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Wasmtime等预警无具体Wasm触发"
+    },
+    {
+      "number": 171,
+      "path": "doc/2026-10/赛博安全狗：node-forge修复AES-GCM认证绕过漏洞CVE-2026-119186 (10.31).md",
+      "body_sha256": "9215a43e69dfeaac9df6818a8b402a02025d0de114ad20b9340c2278879dd842",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "node-forge/Nuxt线索待原作者核；不以概念说明作已审PoC"
+    },
+    {
+      "number": 172,
+      "path": "doc/2026-10/这个仓库把 14 套主流 CMS 的 34 个高危漏洞全做成了可一键复现的 PoC，看完我服了！.md",
+      "body_sha256": "aad02ece6c5c5a7547411cc01f25e36a63b721ff4ff704b67a386e30b9f358d8",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "SecWiki/CMS-Hunter历史仓库推介非新漏洞；未审所荐代码"
+    },
+    {
+      "number": 173,
+      "path": "doc/2026-10/邮箱预占与双向锁定漏洞.md",
+      "body_sha256": "6d67e620106c634085599eed9d23b61ed705de675b55b7fd57459012c88a6076",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "通用邮箱业务逻辑流程，无产品版本对应"
+    },
+    {
+      "number": 174,
+      "path": "doc/2026-10/雷神众测漏洞周报2026.10.19-2026.10.25.md",
+      "body_sha256": "f9050c1459013ec74a1c5974d5d4cbdbbb07abda36a811e985ebfff64e44b36d",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "漏洞周报仅预警，无具体触发"
+    },
+    {
+      "number": 175,
+      "path": "doc/2026-10/震撼！3 行代码接入 86 个漏洞 POC，这个 Go 动态链接库让扫描器的开发周期直接归零.md",
+      "body_sha256": "0616db522fa668f8332095f1061c56fb92079f3806556237df604220da8e0303",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Kunpeng检测框架广告，未审外部插件，非新漏洞文章"
+    },
+    {
+      "number": 176,
+      "path": "doc/2026-10/首次！PHP2Shell漏洞已被成功利用，实现远程命令执行.md",
+      "body_sha256": "83e5a9e289a8a73ddcbd1441a5dda10acde51e23587992f9a9f82fa6cfa0220b",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "PHP2Shell在野报道无请求或代码"
+    },
+    {
+      "number": 177,
+      "path": "doc/2026-10/高危漏洞接连出现，企业真正该警惕什么？.md",
+      "body_sha256": "9af23498a9367e4f8cb61c69e2d1f0f9415f21f1aa1212df4ba9f3724d091a87",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "安恒风险管理推广无具体触发"
+    },
+    {
+      "number": 178,
+      "path": "doc/2026-10/黑客利用思科SD-WAN严重0Day漏洞，部署KeyDrift窃取加密密钥.md",
+      "body_sha256": "9ed19eec4bea78719bef2ba40ea0810c7129fb86e95cd11722ed97d9aac6cd23",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Cisco KeyDrift事件无漏洞触发材料"
+    },
+    {
+      "number": 179,
+      "path": "doc/2026-10/黑客扫网站漏洞？护卫神一键拦截.md",
+      "body_sha256": "f3b7854ab2cd70da3d02fb75b980eb6189a1df327458d049ac0ce5c1090153a1",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "护卫神防护广告"
+    },
+    {
+      "number": 180,
+      "path": "doc/2026-11/11月1日高危漏洞汇总：6 个在野利用、32 个紧急.md",
+      "body_sha256": "47d8043af14f4c65acf5f18749516a715eb242986817feeef586101fb3e04b47",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "6在野32紧急汇总，未给具体触发"
+    },
+    {
+      "number": 181,
+      "path": "doc/2026-11/4 千星项目把安全研究做成流水线：一个浏览器标签页装下 616 篇漏洞复现、CTF 赛题与红队全流程.md",
+      "body_sha256": "f203bf615daec734e45c3333b336aae4f13c4b742d0c01758b96cc459713d262",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "PeiQi历史知识库推介，无本次新披露材料"
+    },
+    {
+      "number": 182,
+      "path": "doc/2026-11/AI 智能体漏洞挖掘：让 Agent 跑通一个 SQLi 到 RCE 的复盘.md",
+      "body_sha256": "9dac8ab899c689b246cbb8f5d352f5d149325c13147ff94ae9363f617f1efd63",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "AI方法论未命名产品/CVE、无实际SQL触发"
+    },
+    {
+      "number": 183,
+      "path": "doc/2026-11/AI赋能漏洞挖掘案例分享1-某系统从sql到登录绕过再到后台getshell.md",
+      "body_sha256": "b2a52293dd29ee8e0fca0d413cf3b99f153551623c3db9317c8fcd66305608db",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "ThinkPHP数组参数及php-uploader上传步骤具体，但匿名系统映射/原始版本未核；不承诺所有3.2.3应用必然受影响"
+    },
+    {
+      "number": 184,
+      "path": "doc/2026-11/Agent安全——记一次XTHP漏洞本地复现.md",
+      "body_sha256": "cc3c57aec4ed3992619019457d0142a8011e25e0b1165c09bf1de8668d21b7b6",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "XTHP本地模拟业务实验，有用户提示词但恶意MCP代码/配置在未读图片；不据此归因平台通用产品漏洞"
+    },
+    {
+      "number": 185,
+      "path": "doc/2026-11/CVE-2026-111497：Node.js Brotli 解码器堆越界写，RCE 已被独立验证但并非“一键接管”-C.md",
+      "body_sha256": "bfb770eb851e6b2ba16b1113388c432a6c73cb01a83cf9191aeb4dc1a061e56f",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Brotli只有版本指纹脚本，不满足触发门槛"
+    },
+    {
+      "number": 186,
+      "path": "doc/2026-11/CVE-2026-98432：Linux 内核 TCP 释放后重用漏洞，CVSS 9.8 但补丁覆盖极不均衡-C博.md",
+      "body_sha256": "e4ef6b0442615712181826c2f6f0b3ce8a0abde3f2d1dcd9563e5ff71f4f93b9",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Linux98432版本/MPTCP检查与防火墙规则非触发PoC"
+    },
+    {
+      "number": 187,
+      "path": "doc/2026-11/Linux Kernel IPv4 TCP 释放后重用漏洞(CVE-2026-98432).md",
+      "body_sha256": "724b0b6acf0cc354d8501f1e96e29c24d22d0bd7338d51c2609238d027a50fdf",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Linux98432代码竞态解释，明确完整利用未公开，无具体包/程序"
+    },
+    {
+      "number": 188,
+      "path": "doc/2026-11/RCE 拿到了，却只会用 netcat？这才是真正的反弹 Shell 与 TTY 升级手册.md",
+      "body_sha256": "d6bee89cf6ff8d7cff3a32f8acc1404a52446cd86773895b728d77d30af29245",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "付费反弹Shell预览非漏洞材料"
+    },
+    {
+      "number": 189,
+      "path": "doc/2026-11/TeamViewer 高危漏洞：被你连上的那台机器，反手拿下你的电脑.md",
+      "body_sha256": "f11d1b716940e6e03a5fd7ebc98d52d47e899b6a8b79121a87a8638009ffb1cb",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "TeamViewer技术概述参数，但公开触发程序未提供，图片未读，原作者待核"
+    },
+    {
+      "number": 190,
+      "path": "doc/2026-11/WAF 拦截 + Java 11 强防御？Log4j2 绝境下的 Bypass 与 RCE.md",
+      "body_sha256": "1bba0f0b3f10803ee4a13937495298b52e64f6e1e9c885d58491b128fb9e94dc",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "付费Log4j预览无实际绕过材料"
+    },
+    {
+      "number": 191,
+      "path": "doc/2026-11/WordPress 请更新7.1.4，已经有多漏洞.md",
+      "body_sha256": "d0daff3d184a11d96c7a25e87e37a0a5847a0bc270faf015d731e86a869f0aac",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "WordPress7.1.4预警无具体请求/代码"
+    },
+    {
+      "number": 192,
+      "path": "doc/2026-11/WordPress远程代码执行漏洞正遭活跃攻击，已拦截超58000次漏洞利用尝试.md",
+      "body_sha256": "53fc90ab8b112e15fa5a133a63ffa46ccd6df74e40d777d42323caf7d85f9239",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "WordPress在野新闻无触发"
+    },
+    {
+      "number": 193,
+      "path": "doc/2026-11/【CVE-2026-98432】TCP爆出释放后重用漏洞，CVSS 评分9.8！.md",
+      "body_sha256": "b3a206bf48dfbc8eee4afad7fa98792a08ef99c6e09cfce0c8da99e78d78aec6",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Linux98432原理/缓解；所称6PoC未给链接，不视已读"
+    },
+    {
+      "number": 194,
+      "path": "doc/2026-11/【安全圈】24小时内超6万次攻击针对WordPress RCE漏洞，更新过程无需登录就可以利用.md",
+      "body_sha256": "d0f2a9c337039056fb448af900831051fd82002be96379c8126a7b8a2b740e7e",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "WordPress在野新闻无触发"
+    },
+    {
+      "number": 195,
+      "path": "doc/2026-11/【安全圈】黑客利用 Cisco SD-WAN 漏洞部署定制的 KeyDrift 恶意软件.md",
+      "body_sha256": "8398033eb3ae9c271482042d1edd34090d6518a8b8ee6f4a116c337cac1aaa37",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Cisco KeyDrift事件无漏洞触发"
+    },
+    {
+      "number": 196,
+      "path": "doc/2026-11/【已复现】hello Mrs. Router. CVE-2026-102764 BeyondTrust Remote Support 未认证文件写入漏洞.md",
+      "body_sha256": "86a02b597afdc98709a76547e6bf2881351ade7f827fe8f3f48a99e89c43cbfb",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "BeyondTrust102764宣称复现，未给具体报文/代码"
+    },
+    {
+      "number": 197,
+      "path": "doc/2026-11/一个 IDOR 漏洞能走多远？从普通用户到服务器权限的完整利用链拆解.md",
+      "body_sha256": "a7f2eca0f35636326fec6f8de8b1ea03c51e7c269f2026153a94db424bd1c49a",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "付费IDOR预览无产品/触发材料"
+    },
+    {
+      "number": 198,
+      "path": "doc/2026-11/一条聊天消息接管整台电话交换机：FreeSWITCH 9.8分命令执行（CVE-2026-116779，附PoC）.md",
+      "body_sha256": "b513ff27ee8dd238ecf230588950f353aff8fd947a8823ed7be7340c2df0a019",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "candidate-draft",
+      "reason": "FreeSWITCH公开脚本+官方补丁链已核，原创稿待父集成；保留UDP错误与401/407误判"
+    },
+    {
+      "number": 199,
+      "path": "doc/2026-11/六个漏洞翻完，问题都出在同一个地方.md",
+      "body_sha256": "abc528b69e84112bd18d641829485871ff51ca31a8248909f0ca90352796fd23",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "candidate-draft",
+      "reason": "CoPilot61730/61738公开请求与CNA已核，原创稿待父集成；其他4条未完成原作者核查"
+    },
+    {
+      "number": 200,
+      "path": "doc/2026-11/匿名结账折扣码重复使用漏洞.md",
+      "body_sha256": "240eeeb49ca32de5a4ef5f931cc39680fd81701e739057a60d0cf67feebfda6b",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "匿名结账通用逻辑流程无产品版本对应"
+    },
+    {
+      "number": 201,
+      "path": "doc/2026-11/固件盲区：16年漏洞绕过安全启动 CVE-2026-97631.md",
+      "body_sha256": "7943c71c9bee313bddcf7c0bba14b817aded07c4e4b7c796d8b0de63b0da80e3",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "EDKII原理/缓解，无公开包/触发程序"
+    },
+    {
+      "number": 202,
+      "path": "doc/2026-11/币安 63 亿美元失窃,朝鲜黑客组织被点名，真正的漏洞仍未查明.md",
+      "body_sha256": "ac9d1c35595cb8c8b46dc9d8f9160d233b06742fd36018b60699502882b90386",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "币安事件入口未明，非漏洞收录材料"
+    },
+    {
+      "number": 203,
+      "path": "doc/2026-11/微软Authenticator翻车实录：我是如何利用0权限App窃取全量Token的 (CVE-2026-80097).md",
+      "body_sha256": "442c4bfc2d11e8ae668fb87bcba1123e232ff0e45e095e9558fbcf68e2b98904",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "Authenticator80097二手原理/交互条件冲突，缺实际Intent构造，待原作者核"
+    },
+    {
+      "number": 204,
+      "path": "doc/2026-11/某WordPress付费插件严重漏洞在野攻击分析以及漏洞复现.md",
+      "body_sha256": "2819cc940ed24ad20f5df9ea73e2d2574de05d5d5f1e4fc2a07dc74e5cb68959",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "paused-secret",
+      "reason": "暂停发布：§四真实站点日志密码重置key无法确认失效；原文不改、不复制值到新台账。产品版本亦不明"
+    },
+    {
+      "number": 205,
+      "path": "doc/2026-11/漏洞复现  医药商品信息发布系统 Faclist.aspx 存在SQL注入漏洞.md",
+      "body_sha256": "883e7719743411e328d8d42de57965ee5c0f6181e056e643e112be21babd08a0",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "医药Faclist SQLi请求/模板仅图片，像素未读，待核"
+    },
+    {
+      "number": 206,
+      "path": "doc/2026-11/赛博安全狗：锐捷多款交换机固件升级接口缓冲区溢出漏洞CVE-2026-120241可远程利用 (11.01).md",
+      "body_sha256": "b3651daf87260c50d02a13af9d53641b75fedc7c335228bd58700aaece7b611a",
+      "text_review": "full substantive text read; HTML style attributes not interpreted; original raw bytes retained privately",
+      "image_pixels_reviewed": false,
+      "decision": "hold-or-exclude",
+      "reason": "锐捷/WAVLINK/AJ-Report预警只有概述，没有实际触发材料"
+    }
+  ]
+}

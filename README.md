@@ -28,14 +28,14 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 ## 内容范围
 
-当前统计（2026-10-26）：三大正文目录共6044篇Markdown，包含产品内README；生成目录为5944个主入口、6042份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
+当前统计（2026-11-02）：三大正文目录共6050篇Markdown，包含产品内README；生成目录为5950个主入口、6048份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
 
 | 分类 | 当前内容 Markdown |
 |---|---:|
-| Web安全 | 5515 |
+| Web安全 | 5521 |
 | 系统安全 | 249 |
 | IOT安全 | 280 |
-| 合计 | **6044** |
+| 合计 | **6050** |
 
 <details>
 <summary>查看2026-10-02历史文件快照</summary>
@@ -146,6 +146,8 @@ python scripts/wiki.py search CloudStack
 ## Change Log
 
 以下按合并日期补记维护内容；不同批次的修订路径可能重叠，不累计为唯一文章数。收录和静态验收不表示漏洞已由维护者复现。
+
+* 2026-11-02（PR #35）新增6篇、补充1篇：整理 The Grid、sanitize-svg、FreeSWITCH、pypdf、Flyimg 和 SOCFortress CoPilot 的公开研究；区分触发前提、探针误判、不同修复版本与证据缺口，追加 GitLab 的特定构建例外及清理风险。PiFlow 既有分析继续以 needs-review 保留原地址和查询入口，不采用 PR #33 的移出方案。详见[周维护记录](docs/reviews/20261102-weekly/README.md)和[合并复核](docs/reviews/20261102-weekly/integration-review.md)。
 
 * 2026-10-26（PR #32）新增6篇、补充2篇：整理 Divi Plus、Camel Spring Redis、LiteLLM user_config、Langflow 公开流程及 Traefik digestAuth，补入 piflow 认证与命令工具调用链分析；保留其完整网络请求记录及修复状态待核的边界。既有两篇 LiteLLM 原文完整保留，追加不同编号的认证条件与修复版本说明。详见[周维护与验收记录](docs/reviews/20261026-weekly/README.md)。
 

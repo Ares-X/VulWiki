@@ -1,0 +1,70 @@
+{
+  "commit": "ea4ac663133f1b3de1d7a8f2e6fa239802fde79e",
+  "tree_entries": 347,
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "git_blob": "ec733a00aa3eb1243a276f649f5cf3f8923333cd",
+      "scope": "full text static read"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "ab327d0312875458ba74983867f1b2622b6de39d",
+      "scope": "full text static read"
+    },
+    {
+      "path": "tests/conftest.py",
+      "git_blob": "7e33bce26a533574050b42ab5899cbf70170ea76",
+      "scope": "full text static read"
+    },
+    {
+      "path": ".github/workflows/github-ci.yaml",
+      "git_blob": "e944171ca3c9c7e623a476b31919eba166ddcac6",
+      "scope": "full text static read"
+    },
+    {
+      "path": ".github/workflows/publish-to-pypi.yaml",
+      "git_blob": "6c7427ce1303150b71565881d1f1d3c76f466c3d",
+      "scope": "full text static read"
+    },
+    {
+      "path": "requirements/ci.in",
+      "git_blob": "fec5ce44d0dc2412a5f627fea1e41777934dadc5",
+      "scope": "full text static read"
+    },
+    {
+      "path": "pypdf/__init__.py",
+      "git_blob": "e6025002804e329f68a5f03daf081295e063a3c9",
+      "scope": "full text static read"
+    },
+    {
+      "path": "tests/__init__.py",
+      "git_blob": "6fc353a969744ffe221da12f62c8bd3429bf698a",
+      "scope": "full text static read"
+    }
+  ],
+  "patch_files": [
+    {
+      "path": "pypdf/_configuration.py",
+      "sha": "1a4a6db9d49a990c5ceb7ea22145d0b0d6674fc9",
+      "scope": "complete patch"
+    },
+    {
+      "path": "pypdf/_doc_common.py",
+      "sha": "d852c0bea53e832c3152a63d836aaac48ac1788c",
+      "scope": "complete patch"
+    },
+    {
+      "path": "tests/test_doc_common.py",
+      "sha": "2ec8e9e1fa234719fb6f89825c3d070da2379e85",
+      "scope": "complete patch"
+    }
+  ],
+  "limitations": [
+    "test_doc_common.py only imports and new full regression test plus patch read, not all unrelated tests",
+    "runtime and build dependencies not installed or transitively source-audited",
+    "CI and publish workflows read; other workflows inventoried only",
+    "No PDF generated or parsed; repository document checks only"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "articles": [
+    {
+      "path": "Web安全/CMS内容/WordPress/The Grid 未认证 AJAX 皮肤路径控制与本地文件包含（CVE-2026-94169）.md",
+      "code_blocks": 1,
+      "copy_equal": true
+    },
+    {
+      "path": "Web安全/安全设备/SOCFortress CoPilot/ScoutSuite 报告暴露与已认证路径穿越写入（CVE-2026-61730、61738）.md",
+      "code_blocks": 0,
+      "copy_equal": true
+    },
+    {
+      "path": "Web安全/服务器软件/Flyimg/Flyimg webpm 与 tm 参数命令注入及不同修复版本.md",
+      "code_blocks": 1,
+      "copy_equal": true
+    },
+    {
+      "path": "Web安全/服务器软件/FreeSWITCH/FreeSWITCH SIP MESSAGE api 聊天协议命令执行与公开探针的判定边界（CVE-2026-116779）.md",
+      "code_blocks": 0,
+      "copy_equal": true
+    },
+    {
+      "path": "Web安全/开发框架/sanitize-svg/sanitize-svg 0.4.1 根节点事件检查遗漏嵌套 SVG onload.md",
+      "code_blocks": 1,
+      "copy_equal": true
+    },
+    {
+      "path": "Web安全/开发框架/pypdf/pypdf 共享页面重复物化导致内存耗尽（CVE-2026-119204）.md",
+      "code_blocks": 0,
+      "copy_equal": true
+    },
+    {
+      "path": "Web安全/代码托管/GitLab/GitLab CI正则编译整数溢出-CVE-2026-97229.md",
+      "code_blocks": 0,
+      "copy_equal": true
+    }
+  ],
+  "append_preserved": {
+    "path": "Web安全/代码托管/GitLab/GitLab CI正则编译整数溢出-CVE-2026-97229.md",
+    "bytes": 6417,
+    "sha256": "bf9ffc3f934eb8be03c0e5d24edb5937413f0ed834fd2028e0797070f4923140"
+  }
+}

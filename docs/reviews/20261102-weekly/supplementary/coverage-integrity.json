@@ -1,0 +1,6 @@
+{
+  "format": "gzip; decompress yields complete unmodified JSON source ledger",
+  "uncompressed_bytes": 14237597,
+  "uncompressed_sha256": "d88c57b327065eb529af820fc55840e623c0e63477d3bb6e3ec2a358c42ab76e",
+  "compressed_sha256": "756f1bd6a814b94c448793339090c435eb71a67466ebec802c6be841f170184c"
+}

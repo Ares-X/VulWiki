@@ -1,0 +1,236 @@
+{
+  "review_date": "2026-11-02",
+  "commit": "830d2de34cbebf4ffc0ead33a4382a3d0e3b853d",
+  "method": "static source reading only; no PHP, dependency installer, workflow, container, PoC or target request executed",
+  "files": [
+    {
+      "path": "src/Core/Entity/OptionsBag.php",
+      "git_blob": "16b9d9d98c1226723f98494460d526ebb49d8b22",
+      "chars": 4009,
+      "scope": "full text read",
+      "sha256_utf8": "baebafec2ae07a3333683a6446c2d1f42299c3c727b001b93245e1a0afd7c630",
+      "bytes_utf8": 4009
+    },
+    {
+      "path": "config/parameters.yml",
+      "git_blob": "7692ae4c3767731bbe0fc3064851a485841050ef",
+      "chars": 6482,
+      "scope": "full text read",
+      "sha256_utf8": "ec460dbe3958beab9f20d989a7f21a3fddbf5fc68f6f761e6b3bad5a9957985f",
+      "bytes_utf8": 6482
+    },
+    {
+      "path": "src/Core/Controller/DefaultController.php",
+      "git_blob": "4610d2c7a0f7bbccffc9c3e18bfeca7c1a171158",
+      "chars": 2244,
+      "scope": "full text read",
+      "sha256_utf8": "a90e6705a6e45567534d523949b57959e50aac7b8a868a1992956b59cc7786dd",
+      "bytes_utf8": 2244
+    },
+    {
+      "path": "src/Core/Handler/SecurityHandler.php",
+      "git_blob": "0a4df5a88096ab67b582b42200fb47ee2eadf99f",
+      "chars": 5012,
+      "scope": "full text read",
+      "sha256_utf8": "f283675285e1b93cf9db38d8ec550bf20ebf854c7c8ec1be79cba10f9c6396e0",
+      "bytes_utf8": 5012
+    },
+    {
+      "path": "src/Core/Processor/Processor.php",
+      "git_blob": "da48a98e3c54329ea4c71e27494ee63548efdd5d",
+      "chars": 2798,
+      "scope": "full text read",
+      "sha256_utf8": "d053db6ca45e5c0bf128e4772044cc7c639ea4fad274cbebc3c9236ad41ea23f",
+      "bytes_utf8": 2798
+    },
+    {
+      "path": "config/routes.yml",
+      "git_blob": "10abbb0aa84b70bd2825b78487c6569001d74e84",
+      "chars": 651,
+      "scope": "full text read",
+      "sha256_utf8": "5d024a883734f0df7174bc7bfb8c743bdce4935ab858023395ec86aa8e8d7586",
+      "bytes_utf8": 651
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "6c604dc3eaf4fe1aa1567358b8dc1e0e0ffc3ada",
+      "chars": 2184,
+      "scope": "full text read",
+      "sha256_utf8": "e5dccd1fa0bfedfa5dd90421e74638d0def78730af7c91ee0e005b5198ec311e",
+      "bytes_utf8": 2184
+    },
+    {
+      "path": "benchmark.sh",
+      "git_blob": "c7b11afd19c67a698f0697becb791c24cd2434c1",
+      "chars": 1572,
+      "scope": "full text read",
+      "sha256_utf8": "ba65f628590797338e4b37a7ad002ba26770637c5edb0284e0bf96d4ec4d0831",
+      "bytes_utf8": 1572
+    },
+    {
+      "path": "Dockerfile",
+      "git_blob": "0be69fc5b2484dedc0d6b10bbeb3d7defa2c7e47",
+      "chars": 409,
+      "scope": "full text read",
+      "sha256_utf8": "1a45613ec29e9bfad43b3472b291392caa7f6709b86987ae1dc788c6a1ba0ae0",
+      "bytes_utf8": 409
+    },
+    {
+      "path": "cleanup-tmp.sh",
+      "git_blob": "8257b85135ddf6514d0643f33283159ea2970090",
+      "chars": 1363,
+      "scope": "full text read",
+      "sha256_utf8": "ebb03f62cf8272dea1d5dbad550929d130ef3e44463548ce5d66139ef68f9503",
+      "bytes_utf8": 1363
+    },
+    {
+      "path": "src/Core/Entity/Image/InputImage.php",
+      "git_blob": "97a9e763c99b6f08034d1555fd8735b3ca5eaec1",
+      "chars": 14643,
+      "scope": "full text read",
+      "sha256_utf8": "144f5174dd1730348623cd7178abbfebebaa1471673f5a74ccf96fbc3a4bc8b5",
+      "bytes_utf8": 14643
+    },
+    {
+      "path": "composer.lock",
+      "git_blob": "72184a54233e5afbd076e39e9ed263a81055cabd",
+      "chars": 173215,
+      "scope": "complete JSON parse / metadata inventory (34 runtime +33 dev; no composer-plugin or scripts entries); dependency source not reviewed",
+      "sha256_utf8": "b11c372464ef7fa18219c23ffc730e29b0ea5d47d3847c0125257eae7ae6dd82",
+      "bytes_utf8": 173225
+    },
+    {
+      "path": "python/requirements.txt",
+      "git_blob": "0e0e70e95eecd5bb484c56007fafee8074e54a25",
+      "chars": 165,
+      "scope": "full text read",
+      "sha256_utf8": "5ade05a1f16e18701b1f1201e3f492eea93eee41492ae60d84d6346222c39e10",
+      "bytes_utf8": 165
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "git_blob": "08764e208b672695094efa3ffea03686694e2964",
+      "chars": 878,
+      "scope": "full text read",
+      "sha256_utf8": "515d75722ff160246d39209486d39826f0f35e575c068eb67ce1ed8f833b6297",
+      "bytes_utf8": 878
+    },
+    {
+      "path": ".github/workflows/branch-dev-deploy.yml",
+      "git_blob": "9984d9ddd96669aee04d3ee070c63d154447988c",
+      "chars": 2440,
+      "scope": "full text read",
+      "sha256_utf8": "651c12bd55efd80d3ba84ebea64ba70b77ed01b87e2f3d1770372aed344e03e8",
+      "bytes_utf8": 2440
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "bae94e189e62df1b8d5bd11435d954b25bee9d7b",
+      "chars": 34522,
+      "scope": "AGPL-3.0 license identity checked",
+      "sha256_utf8": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b",
+      "bytes_utf8": 34522
+    },
+    {
+      "path": ".github/workflows/cd.yml",
+      "git_blob": "0f52c8177df8219b5cf3a384d22302ffeb66162c",
+      "chars": 5849,
+      "scope": "full text read",
+      "sha256_utf8": "339645ad8dd9421407d7ad122731f604489f013f317e269c77f15c61ff5451f5",
+      "bytes_utf8": 5849
+    },
+    {
+      "path": ".github/workflows/close_inactive_issues.yml",
+      "git_blob": "9c3dc35b3fb7806c7e84286a76bda030f94227f3",
+      "chars": 660,
+      "scope": "full text read",
+      "sha256_utf8": "c7b91e6145e8e7e8a5bc45bf47033a71f8acc5ba9d951c84e36ddd8cff0fe40f",
+      "bytes_utf8": 660
+    },
+    {
+      "path": "src/Core/Entity/Command.php",
+      "git_blob": "c3693643ab0d21f0e4adbe2a7980bd2e9c672026",
+      "chars": 858,
+      "scope": "full text read",
+      "sha256_utf8": "a02d28893e8d6573cb729993d8bd7161abe3725a47827467fd939830853cfc82",
+      "bytes_utf8": 858
+    },
+    {
+      "path": "src/Core/Entity/ImageMetaInfo.php",
+      "git_blob": "d98c4b815650404f0313cc6d4141cc1dfcf5c6b6",
+      "chars": 6059,
+      "scope": "full text read",
+      "sha256_utf8": "134a58aa85d0b071c8cbe3ff27574a1557881a9ac536dac05e589229e51afdc9",
+      "bytes_utf8": 6059
+    },
+    {
+      "path": "src/Core/Processor/ImageProcessor.php",
+      "git_blob": "bf0907d6ca3cdb162c79d9747c2bd625a31bbe3b",
+      "chars": 12766,
+      "scope": "full text read",
+      "sha256_utf8": "d72df389eb9e3531a0008bf517128eec4c189a841f500207dddba3fd41afd29f",
+      "bytes_utf8": 12769
+    },
+    {
+      "path": "src/Core/Processor/VideoProcessor.php",
+      "git_blob": "83c6f422fe0864be56c33d076764234b4f12c2df",
+      "chars": 2219,
+      "scope": "full text read",
+      "sha256_utf8": "42f77f8b3b3c4e6a36fc2651c986ad1a37a422e30c2df4b16bdb6a7035e5aae2",
+      "bytes_utf8": 2219
+    },
+    {
+      "path": "composer.json",
+      "git_blob": "f2c248c5dbcb50910287d10102f0b116375e807d",
+      "chars": 1245,
+      "scope": "full text read",
+      "sha256_utf8": "982cefd0587f192e19c78395a38864ef9a60ac583158c4f06db21f29bd5d6964",
+      "bytes_utf8": 1245
+    },
+    {
+      "path": "docs/security.md",
+      "git_blob": "f8f97b6ea5679e9a1b95ffa7dfc53c606381083c",
+      "chars": 1724,
+      "scope": "full text read",
+      "sha256_utf8": "f419d86dbd322edcf1a0ec2eb47490568639c77176754f5206aa2604631a4476",
+      "bytes_utf8": 1724
+    },
+    {
+      "path": "src/Core/Handler/ImageHandler.php",
+      "git_blob": "515d8291dc72692f9cf7383832e35b8ce580a1df",
+      "chars": 8604,
+      "scope": "full text read",
+      "sha256_utf8": "656f3996de9b68794dbe7f3208780a05a1b26758923c254a19498b5ba6f163e9",
+      "bytes_utf8": 8604
+    }
+  ],
+  "fixes": [
+    {
+      "version": "1.12.3",
+      "date": "2026-07-27T08:57:32Z",
+      "commit": "6e75b63080818ca501d4768fb95274a67448921b",
+      "scope": "both changed file patches read"
+    },
+    {
+      "version": "1.12.11",
+      "date": "2026-10-28T09:42:30Z",
+      "commit": "f9ee323e3b458d51b88e46676f9ff3367cbb0c05",
+      "scope": "ten changed file patches read incl regression tests; not executed"
+    }
+  ],
+  "risks": [
+    "Docker base image and third-party package/action source not audited",
+    "cleanup-tmp.sh installs cron and deletes >60-minute temporary files, documented application maintenance not evidence of malicious persistence",
+    "benchmark downloads Wikimedia test image, starts Docker, issues ab requests, removes named container/image/test picture",
+    "workflows install packages, upload coverage, publish Docker images and SSH-deploy; mutable actions, not a safe execution recommendation",
+    "source claimed second execution is not established by nonzero exit trace since Processor throws"
+  ],
+  "admission": "eligible original Chinese synthesis; concrete public tm request and matching official fixed code; no CVE/GHSA assigned from guesses",
+  "failed_access": [
+    {
+      "url": "https://api.github.com/repos/flyimg/flyimg/security-advisories?per_page=100",
+      "error": "400 INVALID_ARGUMENT: not an allowed public GitHub repository or search endpoint",
+      "outcome": "not retried or bypassed"
+    }
+  ]
+}
