@@ -1,0 +1,16 @@
+{
+  "publication_status": "PAUSED_ENTIRE_IMAGE_ARTIFACTS",
+  "position": "固定上游文章第5.6节的两张/result实验截图；Listener身份材料/X-Implant-Token展示位置",
+  "basis": "审阅者确认截图出现本地实验Listener Token；未验证其失效，不假定可安全再发布。未对任何服务验证凭据。",
+  "action": "原图原字节保留，不遮罩、不替换、不删值；两张完整图片不加入本次发布集。独立原创正文只含原文已有<TOKEN>占位说明与固定源码/来源链接，不复制该token值。",
+  "images": [
+    {
+      "artifact": "result-0.png",
+      "sha256": "88d1b06f631deaf28e733cd6056a9b9c667a2e981a0a9db8d3c85ee8b3887015"
+    },
+    {
+      "artifact": "result-1.png",
+      "sha256": "413d7fa45db9b782b5867bc64d2123a76a027198a6915e9f55980b5058946955"
+    }
+  ]
+}

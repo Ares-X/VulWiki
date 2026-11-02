@@ -25,6 +25,10 @@
 
 - [Crawl4AI PDF图片落盘的目录控制与认证边界（CVE-2026-91940）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Crawl4AI/Crawl4AI%20PDF%E5%9B%BE%E7%89%87%E8%90%BD%E7%9B%98%E7%9A%84%E7%9B%AE%E5%BD%95%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%AE%A4%E8%AF%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-91940%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
 
+## CyberStrikeAI HTTP/HTTPS Beacon Listener
+
+- [CyberStrikeAI 1.7.11 已认证 result 回传路径穿越文件写入](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/CyberStrikeAI/CyberStrikeAI%201.7.11%20%E5%B7%B2%E8%AE%A4%E8%AF%81%20result%20%E5%9B%9E%E4%BC%A0%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5.md) [vulnerability; source-claimed; active]
+
 ## EDDI
 
 - [EDDI ZIP导入路径穿越与延迟类加载利用链（CVE-2025-32779）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/EDDI/EDDI%20ZIP%E5%AF%BC%E5%85%A5%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E4%B8%8E%E5%BB%B6%E8%BF%9F%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%88%A9%E7%94%A8%E9%93%BE%20CVE-2025-32779.md) [analysis; source-claimed; needs-review]
@@ -92,6 +96,10 @@
 
 - [LiteLLM Proxy user_config 嵌套路由参数绕过与 SSRF（CVE-2026-59823）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20user_config%20%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1%E7%BB%95%E8%BF%87%E4%B8%8ESSRF%EF%BC%88CVE-2026-59823%EF%BC%89.md) [vulnerability; source-claimed; active]
 - [LiteLLM 存储密文跨上下文重放导致管理员会话伪造（CVE-2026-114612）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20%E5%AD%98%E5%82%A8%E5%AF%86%E6%96%87%E8%B7%A8%E4%B8%8A%E4%B8%8B%E6%96%87%E9%87%8D%E6%94%BE%E5%AF%BC%E8%87%B4%E7%AE%A1%E7%90%86%E5%91%98%E4%BC%9A%E8%AF%9D%E4%BC%AA%E9%80%A0%EF%BC%88CVE-2026-114612%EF%BC%89.md) [vulnerability; source-claimed; active]
+
+## LocalAI
+
+- [LocalAI 模型配置下载 SSRF：公开请求、4.6.0 修复与错误补丁引用（CVE-2026-59707）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LocalAI/LocalAI%20%E6%A8%A1%E5%9E%8B%E9%85%8D%E7%BD%AE%E4%B8%8B%E8%BD%BD%20SSRF%20%E4%B8%8E%E4%BF%AE%E5%A4%8D%E6%98%A0%E5%B0%84%EF%BC%88CVE-2026-59707%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Loom for AWS
 
@@ -185,6 +193,10 @@
 ## OpenVPN
 
 - [AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AiPy/AiPy%20%E5%86%8D%E8%8E%B7%20OpenVPN%20%E5%AE%98%E6%96%B9%E8%87%B4%E8%B0%A2%EF%BC%9A%E5%8F%91%E7%8E%B0%E5%B9%B6%E5%8D%8F%E5%8A%A9%E4%BF%AE%E5%A4%8D%E5%A4%9A%E4%B8%AA%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
+
+## PentestCode（pentestcode-ai）
+
+- [PentestCode 报告外部目录写入绕过与隧道命令拼接注入](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/PentestCode/PentestCode%20%E6%8A%A5%E5%91%8A%E5%A4%96%E9%83%A8%E7%9B%AE%E5%BD%95%E5%86%99%E5%85%A5%E7%BB%95%E8%BF%87%E4%B8%8E%E9%9A%A7%E9%81%93%E5%91%BD%E4%BB%A4%E6%8B%BC%E6%8E%A5%E6%B3%A8%E5%85%A5.md) [vulnerability; source-claimed; active]
 
 ## Pipecat
 
