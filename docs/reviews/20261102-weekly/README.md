@@ -2,7 +2,7 @@
 
 基线为本轮读取的 master `104c9204d56d0a4f2cbe51fe3b4a95683007703a`，维护分支 `docs/weekly-maintenance-20261102`。开始时唯一开放维护 PR 为 [#33](https://github.com/Ares-X/VulWiki/pull/33)，PiFlow 准入纠正仍未合并；本轮不重做该纠正，也不将其描述为已生效。保留 master 已有的内容修复及 issue 自动分配工作流。
 
-先读当前 AGENTS、CONTRIBUTING、CONTENT-SCHEMA、README 来源/补档历史及上轮记录。上轮没有全源成功检查点：本轮逐库比较上轮固定 head，并用 2026-10-24 至 2026-11-02 00:00 UTC 的重叠窗口交叉核对；历史未读仍保留，不以提交枚举冒充正文审读。当前用户明确要求具体触发材料，故不采用仓库旧文允许无 PoC 的 analysis 例外。
+先读当前 AGENTS、CONTRIBUTING、CONTENT-SCHEMA、README 来源/补档历史及上轮记录。上轮没有全源成功检查点：本轮逐库比较上轮固定 head，并用 2026-10-24 至 2026-11-02 00:00 UTC 的重叠窗口交叉核对；历史未读仍保留，不以提交枚举冒充正文审读。本批初筛优先核对具体公开触发材料；这不改变 CONTRIBUTING.md 允许收录独立分析及带明确待核提醒材料的规则，也不构成移出既有文章的依据。
 
 ## 正文处置
 
@@ -36,4 +36,6 @@
 
 ## 检查与权限边界
 
-实际验收见 [checks.md](checks.md)。复用既有稀疏工作树，未复制完整图片/网站或新建 Codex/Work 任务。脚本、测试和 baseline 不变，审阅后仅运行文档单测、离线质量与惰性渲染；完整资源验收依最终精确 head 的完整 checkout CI。没有合并、默认分支写入或站点发布操作。
+草稿提交时的验收见 [checks.md](checks.md)。复用既有稀疏工作树，未复制完整图片/网站或新建 Codex/Work 任务。脚本、测试和 baseline 不变，审阅后仅运行文档单测、离线质量与惰性渲染；完整资源验收依最终精确 head 的完整 checkout CI。没有合并、默认分支写入或站点发布操作。
+
+以上为提交草稿时的操作范围。2026-11-02 的集成复核、完整本地资源检查及 PR #33 处置另见 [integration-review.md](integration-review.md)；PiFlow 原正文、状态与索引入口保留。
