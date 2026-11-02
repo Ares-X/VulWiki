@@ -1,0 +1,202 @@
+[
+  {
+    "path": "doc/2026-10/OpenAI智能体利用零日漏洞逃逸沙箱，访问宿主机系统.md",
+    "sha": "cb67685d74c1809734c567871a08a7ff4e51e507",
+    "sha256": "167702359c059e0a03312e9df576e0841c8750e9e55e263aa9446b11e521f90c",
+    "chars": 1545,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/OpenAI%E6%99%BA%E8%83%BD%E4%BD%93%E5%88%A9%E7%94%A8%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%E9%80%83%E9%80%B8%E6%B2%99%E7%AE%B1%EF%BC%8C%E8%AE%BF%E9%97%AE%E5%AE%BF%E4%B8%BB%E6%9C%BA%E7%B3%BB%E7%BB%9F.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 0
+    },
+    "status": "HOLD_NO_TRIGGER",
+    "number": 1,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "OpenAI内部沙箱事件转述，Kata24834/gVisor/Docker与侧信道概述，无具体触发请求/代码/步骤；未把内测报道算公开PoC。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/极客赛场纠错，企业为何偏要捂住漏洞？.md",
+    "sha": "922e0eff248190c56735da0e0779a5f895b33305",
+    "sha256": "be5b03d9a64f1c1c41055968b9ddcb22b1d17750ff3a51f16ce1e6e9c08a4913",
+    "chars": 1867,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/%E6%9E%81%E5%AE%A2%E8%B5%9B%E5%9C%BA%E7%BA%A0%E9%94%99%EF%BC%8C%E4%BC%81%E4%B8%9A%E4%B8%BA%E4%BD%95%E5%81%8F%E8%A6%81%E6%8D%82%E4%BD%8F%E6%BC%8F%E6%B4%9E%EF%BC%9F.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 0
+    },
+    "status": "EXCLUDE_COMMENTARY",
+    "number": 2,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "GeekCon停赛评论，非具体漏洞技术公开。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/安天发布PHP2Shell漏洞专项系列加固工具.md",
+    "sha": "00def081f0c73982716fd20b381d476aa89e0f16",
+    "sha256": "4ce60034d379217e94e4bd25bc3879d0c09dc35313ff819b82cf40bf34fa74a4",
+    "chars": 3121,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/%E5%AE%89%E5%A4%A9%E5%8F%91%E5%B8%83PHP2Shell%E6%BC%8F%E6%B4%9E%E4%B8%93%E9%A1%B9%E7%B3%BB%E5%88%97%E5%8A%A0%E5%9B%BA%E5%B7%A5%E5%85%B7.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 5
+    },
+    "status": "EXCLUDE_HARDENING_ONLY",
+    "number": 3,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "PHP2Shell加固工具发布，配置项与下载说明，无触发材料；未下载二进制，纯本地/无联网为作者主张未认证。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/安天PHP2Shell漏洞专项加固工具新增银河麒麟、统信UOS适配版本.md",
+    "sha": "43e424b675cedbb271567fac0a45c8cc711de6d5",
+    "sha256": "8700306118662f9d131b527325a992465aaf27a646f832c4f365222022268fc4",
+    "chars": 23149,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/%E5%AE%89%E5%A4%A9PHP2Shell%E6%BC%8F%E6%B4%9E%E4%B8%93%E9%A1%B9%E5%8A%A0%E5%9B%BA%E5%B7%A5%E5%85%B7%E6%96%B0%E5%A2%9E%E9%93%B6%E6%B2%B3%E9%BA%92%E9%BA%9F%E3%80%81%E7%BB%9F%E4%BF%A1UOS%E9%80%82%E9%85%8D%E7%89%88%E6%9C%AC.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 2
+    },
+    "status": "EXCLUDE_HARDENING_ONLY",
+    "number": 4,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "麒麟/UOS配置工具说明；15/212规则、权限/回滚/适配边界，无漏洞触发；远程压缩包未下载。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/【攻击检测规则与迹象排查】PHP 远程代码执行漏洞(CVE-2026-109618、CVE-2026-109619)安全风险通告.md",
+    "sha": "a9f1c127d0bd4edef7b71591fa639321c9686d67",
+    "sha256": "093d5ca25b5679e68bdf8c8e482ea99c02b4108adf243748bff94b0c44ee4dee",
+    "chars": 78990,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/%E3%80%90%E6%94%BB%E5%87%BB%E6%A3%80%E6%B5%8B%E8%A7%84%E5%88%99%E4%B8%8E%E8%BF%B9%E8%B1%A1%E6%8E%92%E6%9F%A5%E3%80%91PHP%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E(CVE-2026-109618%E3%80%81CVE-2026-109619)%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 44,
+      "markdown_images": 4
+    },
+    "status": "EXCLUDE_NO_NEW_TRIGGER",
+    "number": 5,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "109618/109619已有实体；本篇新增日志/ModSecurity/Falco/auditd检测配置，无完整实际触发；零误报及exec=确认RCE的泛化未经证实，不能直接收入为可靠检测。列出Ademking/ikow线索但未全审二仓。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/解压即入口：Brotli解码器越界写入影响Node.js（CVE-2026-111497）.md",
+    "sha": "8421e08fe8e487cb63ec08fda9ac64d0dfd97de4",
+    "sha256": "fcc8e4566c6af1490e23d5569a441d5708e96c82d7015b0f894fcb4d8efee2d2",
+    "chars": 2949,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/%E8%A7%A3%E5%8E%8B%E5%8D%B3%E5%85%A5%E5%8F%A3%EF%BC%9ABrotli%E8%A7%A3%E7%A0%81%E5%99%A8%E8%B6%8A%E7%95%8C%E5%86%99%E5%85%A5%E5%BD%B1%E5%93%8DNode.js%EF%BC%88CVE-2026-111497%EF%BC%89.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 5
+    },
+    "status": "EXCLUDE_UNSUPPORTED_POC_CLAIM",
+    "number": 6,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "Brotli已有实体；跟进其hypnguyen1209来源六文件全读，只有错误码启发式，无RCE链且OOB判据不充分，网络全失败会输出PATCHED。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/【已复现】Node.js Brotli 解码器越界写漏洞（CVE-2026-111497）.md",
+    "sha": "66c4d66156c40faa2157af0afbd3c783be9f93ea",
+    "sha256": "98c3a25f17c1a391abaa1791ee30a48dad0299444c26e2b3b2e5774a94de8360",
+    "chars": 12006,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/%E3%80%90%E5%B7%B2%E5%A4%8D%E7%8E%B0%E3%80%91Node.js%20Brotli%20%E8%A7%A3%E7%A0%81%E5%99%A8%E8%B6%8A%E7%95%8C%E5%86%99%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2026-111497%EF%BC%89.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 2
+    },
+    "status": "EXCLUDE_NO_NEW_TRIGGER",
+    "number": 7,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "360称已执行id仅截图和产品更新；全文无公开载荷/请求/实现。截图未看，不凭图名补细节。Brotli主文已有更具体证据。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/Web框架漏洞盘点那些年拖垮无数网站的经典漏洞.md",
+    "sha": "a6d041b5822f56401050fa0616b21907a1703b84",
+    "sha256": "7351ae08325f8be9a2900596dbe4ece5cfc053e8ac77f853333f6e65e1377e48",
+    "chars": 8261,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/Web%E6%A1%86%E6%9E%B6%E6%BC%8F%E6%B4%9E%E7%9B%98%E7%82%B9%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%8B%96%E5%9E%AE%E6%97%A0%E6%95%B0%E7%BD%91%E7%AB%99%E7%9A%84%E7%BB%8F%E5%85%B8%E6%BC%8F%E6%B4%9E.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 4,
+      "markdown_images": 2
+    },
+    "status": "EXCLUDE_HISTORICAL_SURVEY",
+    "number": 8,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "ThinkPHP/Struts/Spring/Laravel/Django/Flask/Shiro历史概览及指纹、学习路径，无本窗口新触发；版本/插件说法未全部一手核实，不能整篇作为准确漏洞条目。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/PHP后Oracle发布多个安全漏洞.md",
+    "sha": "5ac6692b63a6654ff504e738347ec566c84550c8",
+    "sha256": "08753d20fff46e107f513e1da3a73ea8067ab022675ca231b6a8dca6015232d6",
+    "chars": 3728,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/PHP%E5%90%8EOracle%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 9
+    },
+    "status": "EXCLUDE_ALERT_IMAGE_GAP",
+    "number": 9,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "Oracle季度补丁汇总，主要为未查看图片，文字只有补丁数量/公告链接，无具体触发；不把图片未读视作无内容。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  },
+  {
+    "path": "doc/2026-10/Nextcloud 命令注入 9.2 分落 Webshell CVE-2026-110447.md",
+    "sha": "2e1f828bdbdd06bb8415d9572bda296e1c4734c7",
+    "sha256": "3af7a02ce2a9d55bf3afe056034d6ad364a52bbac50efe261acbbbf5e17fbb09",
+    "chars": 2418,
+    "url": "https://github.com/gelusus/wxvl/blob/0ca04cb9e2986ac80a58dfd004051d9eeebeb025/doc/2026-10/Nextcloud%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%209.2%20%E5%88%86%E8%90%BD%20Webshell%20CVE-2026-110447.md",
+    "body_fetched": true,
+    "human_full_text_read": false,
+    "machine_markers": {
+      "fence_markers": 0,
+      "markdown_images": 0
+    },
+    "status": "DUPLICATE_WEAKER",
+    "number": 10,
+    "reviewed_narrative": true,
+    "raw_code_fences_read": true,
+    "images_viewed": false,
+    "reason": "Nextcloud110447已收；重读现有主文并打开官方GHSA-g3vx-3m76-fghh核对<26.4.303、CODE停止条件、独立部署不影响；转载明确无PoC，本次无互补触发。",
+    "scope": "Full narrative text; original raw fenced code separately read. HTML style markup not security-audited; no images or linked executable demos viewed. Original complete raw body preserved in selected-1-10.json body field, view is auxiliary only and not publication evidence."
+  }
+]

@@ -7,3 +7,8 @@
 ## Linux kernel IPv4 networking
 
 - [Linux IPv4 延迟校验和写入与 PwnEscape TAP 泄露探针（CVE-2026-99999）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux%E5%86%85%E6%A0%B8/Linux%20IPv4%20%E5%BB%B6%E8%BF%9F%E6%A0%A1%E9%AA%8C%E5%92%8C%E5%86%99%E5%85%A5%E4%B8%8E%20PwnEscape%20TAP%20%E6%B3%84%E9%9C%B2%E6%8E%A2%E9%92%88%EF%BC%88CVE-2026-99999%EF%BC%89.md) [analysis; source-claimed; active]
+
+## Linux kernel io_uring
+
+- [Linux io_uring provided-buffer bundle 扩容回滚 UAF 与修复回归](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux%E5%86%85%E6%A0%B8/Linux%20io_uring%20provided-buffer%20bundle%20%E6%89%A9%E5%AE%B9%E5%9B%9E%E6%BB%9A%20UAF%20%E4%B8%8E%E4%BF%AE%E5%A4%8D%E5%9B%9E%E5%BD%92.md) [vulnerability; source-claimed; active]
+- [Linux io_uring ring resize 与延迟 task work 竞态（CVE-2026-23275）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux%E5%86%85%E6%A0%B8/Linux%20io_uring%20ring%20resize%20%E4%B8%8E%E5%BB%B6%E8%BF%9F%20task%20work%20%E7%AB%9E%E6%80%81%EF%BC%88CVE-2026-23275%EF%BC%89.md) [vulnerability; source-claimed; active]

@@ -1,0 +1,136 @@
+{
+  "decision": "HOLD this cycle, not claim no PoC",
+  "candidate": "CyberStrikeAI /result authenticated path traversal file write; XSS chain separate",
+  "vulnerable_tag": "v1.7.11",
+  "vulnerable_commit": "a6b3773f0036d3394032b2fa0c67fe88c8f0357d",
+  "fixed_tag": "v1.7.24",
+  "fixed_commit": "4ca8b7d33663cd4ba8213f4afa8194ae1928ef16",
+  "confirmed": [
+    "old handleResult checks X-Implant-Token before JSON/AES fallback, NOT unauthenticated",
+    "old IngestTaskResult requires an existing task but does not bind listener/session; failed blob write only logs warning then may return success",
+    "old saveResultBlob prefixes dot but accepts traversal separators; request in article5.6 contains concrete task id, base64 and /../../../../VULN_POC_test suffix",
+    "v1.7.24 requires successful AES decode, authenticates task session/listener, constrains suffix regexp and ensures path in results dir",
+    "No inference all versions <=1.7.11 or universal root; process filesystem permissions apply"
+  ],
+  "remaining": [
+    "Original referenced article complete HTML/code and images not read; text extraction loses some HTML payload syntax",
+    "Full fake_beacon.py/x.js allegedly referenced under vuln-poc not present in either fixed tree; article itself acknowledges non-public scripts",
+    "Installation/dependency/workflow anti-poisoning not completed for proposed reproduction environment; downloaded go.mod/go.sum and product source are not complete audited package",
+    "Earliest fix and full affected release range not determined; named tags only verified",
+    "No CNA/CVE correspondence confirmed"
+  ],
+  "files": [
+    {
+      "version": "old",
+      "path": "internal/c2/manager.go",
+      "git_blob_sha": "d620c87b3029fff01190790756b7f7c5058f2b00",
+      "sha256": "5901d8d2d4f332ce887a29ed2e62e9dcbae1413952c92f2862b97b839a91de2d",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/types.go",
+      "git_blob_sha": "a6fb4acfdb92d6840132ad6fcb94e265e7f6835e",
+      "sha256": "eb374e09a53375235e06069f41b9d3013eb8eee735465aa45c74eb698ebb9087",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "web/static/js/c2.js",
+      "git_blob_sha": "4abaa3dc4e3d2ebdfbeec3fbb772f8684026f3e2",
+      "sha256": "f2d6a87b93fa0ef5cc3e0c499cfcb0355bc82e8bb4bdf357df48be87bf65ce5f",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "go.sum",
+      "git_blob_sha": "95a82311278ac407cce55b08bf756e293f299916",
+      "sha256": "d22c8f707eb06450e9c4f6aa704a6c8bdcbe5e99c186d4e0a96553e82628d966",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "internal/handler/terminal.go",
+      "git_blob_sha": "3c3c53fb0b84d73433f911e27e1a1bf540c2f99a",
+      "sha256": "273ea83f9cb1cda87cffe8f40f2f384e1d73f5e83c8ebb37f43132d7173c5566",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/listener_http.go",
+      "git_blob_sha": "22fef3289a6c5e2f0fc9c6bafbda394fe3f24392",
+      "sha256": "414c94c20030e5f9e31c705c4aa205816883f7cda927bb28afcf3b6a0a8414a8",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "go.mod",
+      "git_blob_sha": "721ded9188b6beac6bfc6f0122a5ffcbccf021aa",
+      "sha256": "f742e9070e9512b257871e9d35f7517980378fe767dba2d7fab3d66b434dcb50",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "old",
+      "path": "LICENSE",
+      "git_blob_sha": "7dada6d1fda5ab2b85d11ecde126c0d8038f9dd2",
+      "sha256": "c5e886b33279f16172f906d2ec7fb23425b816c8a63b684159daa77628256f76",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "web/static/js/c2.js",
+      "git_blob_sha": "96f7143f22452da210014d0afc482630c5ca5b1d",
+      "sha256": "2b320df5198c556a6017bd273a8b4fe8567f18d287bcdc120c4870b62bf49751",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "LICENSE",
+      "git_blob_sha": "7dada6d1fda5ab2b85d11ecde126c0d8038f9dd2",
+      "sha256": "c5e886b33279f16172f906d2ec7fb23425b816c8a63b684159daa77628256f76",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "internal/handler/terminal.go",
+      "git_blob_sha": "3c3c53fb0b84d73433f911e27e1a1bf540c2f99a",
+      "sha256": "273ea83f9cb1cda87cffe8f40f2f384e1d73f5e83c8ebb37f43132d7173c5566",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "go.mod",
+      "git_blob_sha": "7d319ebdf9b4a20121220b0d39519125148ae702",
+      "sha256": "bf97ba0f5d6664536b78b813b43da73be0cfe9bb1b382d0a02c7a60563805fe8",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "go.sum",
+      "git_blob_sha": "cc4267ea8ab7ac50c5539ddf19e52cadd0dbdd33",
+      "sha256": "0b0d6b38698f3e1f128bdd3d1b3d78a5dc534772c915207a5bccfe1c07942ae9",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "internal/c2/listener_http.go",
+      "git_blob_sha": "22f9cd80e65e372afd16067ead402d02e1ad991e",
+      "sha256": "34ba03c06153b282f2523f777c358b034175fdb32ded78a394ccd87befcbe7a7",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "internal/c2/manager.go",
+      "git_blob_sha": "585a4b68f5797b66d192dfeeaca31c019cee0319",
+      "sha256": "be807b884dbdb15e0ce4b71014957afc353a3123e01acb40c81a81270903f681",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    },
+    {
+      "version": "fixed",
+      "path": "internal/c2/types.go",
+      "git_blob_sha": "a6fb4acfdb92d6840132ad6fcb94e265e7f6835e",
+      "sha256": "eb374e09a53375235e06069f41b9d3013eb8eee735465aa45c74eb698ebb9087",
+      "scope": "download/hash verified; relevant manager/listener result functions manually read; other downloaded files not fully read"
+    }
+  ]
+}

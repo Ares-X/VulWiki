@@ -2305,6 +2305,10 @@
 
 - [YXcmsApp 1.4.3任意用户密码重置漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/YXCMS/YXcmsApp%201.4.3%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
 
+## YesWiki
+
+- [YesWiki raw inclusion 语法经匿名 render 入口触发 SSRF（CVE-2026-116205）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/YesWiki/YesWiki%20raw%20inclusion%20%E5%8C%BF%E5%90%8D%20render%20SSRF%EF%BC%88CVE-2026-116205%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## YouDianCMS/友点CMS
 
 - [友点CMS GetSpecial SQL注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E5%8F%8B%E7%82%B9/%E5%8F%8B%E7%82%B9CMS%20GetSpecial%20SQL%E6%B3%A8%E5%85%A5.md) [unknown; not-reproduced; needs-review]
