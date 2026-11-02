@@ -1,0 +1,232 @@
+{
+  "checked_at": "2026-11-02T00:50:00Z",
+  "window": {
+    "since": "2026-10-24T00:00:00Z",
+    "until": "2026-11-02T00:00:00Z"
+  },
+  "sources": [
+    {
+      "repo": "wy876/POC",
+      "window_api": "https://api.github.com/repos/wy876/POC/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": false,
+      "error": {
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#list-commits\",\"status\":\"404\"}",
+        "error_code": "NOT_FOUND",
+        "error_data": {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/commits/commits#list-commits",
+          "status": "404"
+        }
+      }
+    },
+    {
+      "repo": "DMW11525708/wiki",
+      "window_api": "https://api.github.com/repos/DMW11525708/wiki/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "head_date": "2025-02-26T08:54:01Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "2e97a3a15827b8daa45b4fa9f437bcf13cbc41fc",
+      "head_unchanged": true
+    },
+    {
+      "repo": "cvi-Qing/poc",
+      "window_api": "https://api.github.com/repos/cvi-Qing/poc/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "head_date": "2025-08-20T15:54:15Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "8f7611d46a8e90cb69b40671f55ee6f7336b557d",
+      "head_unchanged": true
+    },
+    {
+      "repo": "SourByte05/Vulnerability-Wiki-PoC",
+      "window_api": "https://api.github.com/repos/SourByte05/Vulnerability-Wiki-PoC/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 1,
+      "head": "240643cbeb4c1d793e7decff2fadd2ac0d0ab5b5",
+      "head_date": "2026-10-27T10:44:28Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "7d513a3462c0c65a6dfeba21ce40702dcf275119",
+      "head_unchanged": false
+    },
+    {
+      "repo": "Threekiii/Vulnerability-Wiki",
+      "window_api": "https://api.github.com/repos/Threekiii/Vulnerability-Wiki/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "head_date": "2026-05-11T10:26:51Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "b32b83c01eabac4d6b4b334852be9cff76ba67ee",
+      "head_unchanged": true
+    },
+    {
+      "repo": "Threekiii/Awesome-POC",
+      "window_api": "https://api.github.com/repos/Threekiii/Awesome-POC/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "head_date": "2026-05-11T10:27:00Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "0f9e22b660cb1ea12c1c3668f9128d93e08da412",
+      "head_unchanged": true
+    },
+    {
+      "repo": "BaizeSec/bylibrary",
+      "window_api": "https://api.github.com/repos/BaizeSec/bylibrary/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "head_date": "2023-10-12T08:51:28Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "dee1fbaa831df860c6905f80de8700211ba63098",
+      "head_unchanged": true
+    },
+    {
+      "repo": "MrWQ/vulnerability-paper",
+      "window_api": "https://api.github.com/repos/MrWQ/vulnerability-paper/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+      "head_date": "2026-04-01T02:23:55Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "fcbdb421b62aef6ccac59a1887d94687f4faf9d6",
+      "head_unchanged": true
+    },
+    {
+      "repo": "lal0ne/vulnerability",
+      "window_api": "https://api.github.com/repos/lal0ne/vulnerability/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+      "head_date": "2025-07-27T13:14:37Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "5b9f397c1970203b1764fb7a66a0ffac39bef4cc",
+      "head_unchanged": true
+    },
+    {
+      "repo": "vulhub/vulhub",
+      "window_api": "https://api.github.com/repos/vulhub/vulhub/commits?since=2026-10-24T00:00:00Z&until=2026-11-02T00:00:00Z&per_page=100&page=1",
+      "accessible": true,
+      "window_commit_count": 0,
+      "head": "9b90d4276f84feed6333286afeb7e1250379a1da",
+      "head_date": "2026-10-17T20:59:35Z",
+      "pagination": "Window page1 <100: dated collection complete; not historical full-text review",
+      "checkpoint": "9b90d4276f84feed6333286afeb7e1250379a1da",
+      "head_unchanged": true
+    }
+  ],
+  "sourbyte": {
+    "base": "7d513a3462c0c65a6dfeba21ce40702dcf275119",
+    "head": "240643cbeb4c1d793e7decff2fadd2ac0d0ab5b5",
+    "compare_status": "ahead",
+    "commits": 1,
+    "files": [
+      {
+        "path": "2026/10/Go-fastdfs reload 存在未授权访问漏洞/Go-fastdfs reload 存在未授权访问漏洞.md",
+        "status": "added",
+        "blob": "c3cbd3b94e214dc2d317c2cd19927ba7132c9896",
+        "full_text_read": true,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/Go-fastdfs reload 存在未授权访问漏洞/assets/image-20261027174035962.png",
+        "status": "added",
+        "blob": "2fe755c396616e63bb03fa9f86b07693ce2d0a72",
+        "full_text_read": false,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/TheGrid admin-ajax存在代码执行漏洞(CVE-2026-94169)/TheGrid admin-ajax存在代码执行漏洞(CVE-2026-94169).md",
+        "status": "added",
+        "blob": "6fe7b9d30e4d7e5bc497f94ec5ef508814e20ef6",
+        "full_text_read": true,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/TheGrid admin-ajax存在代码执行漏洞(CVE-2026-94169)/assets/image-20261027172953779.png",
+        "status": "added",
+        "blob": "04bf7a588898e32477174434e7bf9a23b48c2658",
+        "full_text_read": false,
+        "image_viewed": true
+      },
+      {
+        "path": "2026/10/大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞/assets/image-20261027183805406.png",
+        "status": "added",
+        "blob": "e3458819c304b8334f5d0b5bc38e1d897e084190",
+        "full_text_read": false,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞/大华-智慧园区综合管理平台 login_updateUserAdmOnlineStat 存在SQL注入漏洞.md",
+        "status": "modified",
+        "blob": "295d7eda0ec5506968133c44ffd1cf2d925e5805",
+        "full_text_read": true,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/拇指达人科技自适应任务拉新分销系统 fileupload.php 存在文件上传漏洞/assets/image-20261027182652708.png",
+        "status": "added",
+        "blob": "783a4b259e1bdb34686ce148d6cbef57d35894c1",
+        "full_text_read": false,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/拇指达人科技自适应任务拉新分销系统 fileupload.php 存在文件上传漏洞/assets/image-20261027182701635.png",
+        "status": "added",
+        "blob": "4ff5696d9f7a5391cd9c160e0241021a0256d679",
+        "full_text_read": false,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/拇指达人科技自适应任务拉新分销系统 fileupload.php 存在文件上传漏洞/拇指达人科技自适应任务拉新分销系统 fileupload.php 存在文件上传漏洞.md",
+        "status": "added",
+        "blob": "13bdd8d1cabfd49092dff27938f2e1bc87d3fbcb",
+        "full_text_read": true,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/朗速ERP ModuleAjaxApi.ashx 存在SQL注入漏洞/assets/image-20261027175711964.png",
+        "status": "added",
+        "blob": "4fb7ef8e3ffba2f9c905d1f1e7e947642dd02639",
+        "full_text_read": false,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/朗速ERP ModuleAjaxApi.ashx 存在SQL注入漏洞/朗速ERP ModuleAjaxApi.ashx 存在SQL注入漏洞.md",
+        "status": "added",
+        "blob": "82fded2943ac0f94a53776da1db9089e13c9eb14",
+        "full_text_read": true,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/玉帛软件仓库管理系统DownloadFile存在任意文件读取漏洞/assets/image-20261027182011740.png",
+        "status": "added",
+        "blob": "edc734a4a3175c6e251abac5a2ce34f00ef457ef",
+        "full_text_read": false,
+        "image_viewed": false
+      },
+      {
+        "path": "2026/10/玉帛软件仓库管理系统DownloadFile存在任意文件读取漏洞/玉帛软件仓库管理系统DownloadFile存在任意文件读取漏洞.md",
+        "status": "added",
+        "blob": "e1c142d83afabd211c4c1d1ad4335cc51c36244b",
+        "full_text_read": true,
+        "image_viewed": false
+      }
+    ],
+    "tree_entries": 4947,
+    "tree_truncated": false,
+    "changed_path_count": 13,
+    "markdown_count": 6,
+    "no_deleted_paths": true
+  },
+  "limitations": [
+    "404 does not prove repository deletion/private status/no changes",
+    "No unchanged repositories historical content reread; external linked pages may silently change",
+    "Only TheGrid new image pixels inspected; other six images enumerated only",
+    "No source checkpoint advanced for historical coverage gaps"
+  ]
+}

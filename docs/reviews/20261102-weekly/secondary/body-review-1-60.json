@@ -1,0 +1,547 @@
+{
+  "date": "2026-11-02",
+  "manifest_sha256": "a80c111d840910ff9b5a2f6d686e3390d875c0b31340f4e9a5febe6118834335",
+  "scope": "本轮 wxvl 稳定排序 1–60 的全部正文文字判读，非图片与全部外链全读；逐项范围见 rows。",
+  "rows": [
+    {
+      "number": 1,
+      "path": "doc/2026-10/2026护网行动红队高危漏洞排查通知｜附自查清单.md",
+      "body_sha256": "ad462d4ad50e0743c9103bb6de4a2d161ab5a44d81827a7ba12cd051998652cb",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "纯预警/自查清单，无具体触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 2,
+      "path": "doc/2026-10/2026最新 Pikachu 漏洞练习平台通关教程.md",
+      "body_sha256": "4b86bd976a3c2706049c6d63ca67ae7b852c7dadf138d19bd4576ab35fa76cfa",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_TRAINING",
+      "reason": "Pikachu 44 个教学靶场，不是新产品漏洞披露。",
+      "admitted": false
+    },
+    {
+      "number": 3,
+      "path": "doc/2026-10/360图龙锋攻破“逻辑漏洞”难题！研究成果再斩国际顶会.md",
+      "body_sha256": "59e370729188e58a7706de0a41ecf53fa9a02671c90370206c5da0ab6fb185fb",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "会议研究介绍，未给出准入所需具体 PoC。",
+      "admitted": false
+    },
+    {
+      "number": 4,
+      "path": "doc/2026-10/360漏洞云亮相看雪峰会｜人机共智·重构安全.md",
+      "body_sha256": "10bb4b16992185439923fc9fce2c1899ddc6228be9901ef5bb98c4043cae3df4",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_EVENT",
+      "reason": "360 SDC 十场演讲综述，无具体触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 5,
+      "path": "doc/2026-10/500+ 漏洞的环境搭建、POC 与原理全塞进一个开源仓库：这个漏洞文库把复现周期从几天压缩到几分钟.md",
+      "body_sha256": "e47f83ed902333385dca250cb7c77206d5cfa538de63af331fe3009f5c3a7130",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_CATALOG_PROMO",
+      "reason": "PeiQi 项目介绍；tools.cgi 示例未绑定产品和版本，不作新增漏洞。",
+      "admitted": false
+    },
+    {
+      "number": 6,
+      "path": "doc/2026-10/AI挖洞实战 11  Workbuddy+Skill技能库，SQL注入漏洞.md",
+      "body_sha256": "79e4bc7323ed7678e4ced02800c4a50c2cafab504d150d4c856c657b42013b2d",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_GENERIC_TUTORIAL",
+      "reason": "Workbuddy SQL 布尔盲注教程，示例接口没有确定产品版本。",
+      "admitted": false
+    },
+    {
+      "number": 7,
+      "path": "doc/2026-10/AI挖洞实战 11  Workbuddy+Skill技能库，任意文件读取漏洞.md",
+      "body_sha256": "53a10ff1caca2fccf3ce258ef92e09f2392fd6df80675c8268692b878e06f2e5",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_GENERIC_TUTORIAL",
+      "reason": "Workbuddy 文件下载路径遍历通用教程，没有确定产品版本。",
+      "admitted": false
+    },
+    {
+      "number": 8,
+      "path": "doc/2026-10/Anthropic安全高管警告：“漏洞海啸”数月内来袭，关基设施漏洞或来不及修复.md",
+      "body_sha256": "6f78cbca5ba3f5b2a654db306e675f0f81acee7dc3ec1d65f8de8d0c83bf511b",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_NEWS",
+      "reason": "Anthropic Clinton 漏洞发现新闻，没有具体触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 9,
+      "path": "doc/2026-10/Backuply存在SQL注入漏洞(CVE-2026-93953).md",
+      "body_sha256": "83b179d300ce8d3a674b7977d9a3af707e49eb4c8db535cb9268743cf5d642de",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "Backuply 预警，无具体触发；版本表述仍待核。",
+      "admitted": false
+    },
+    {
+      "number": 10,
+      "path": "doc/2026-10/Brotli 漏洞暴露严重，HTTP2Shell 漏洞触发紧急补丁.md",
+      "body_sha256": "948cd485cc44d6754ae2f89c4042da4d8225613c11b5b82f38b8ee059940c442",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "Brotli 历史漏洞概述，已有覆盖，无新增实际代码。",
+      "admitted": false
+    },
+    {
+      "number": 11,
+      "path": "doc/2026-10/C3RB3R勒索软件利用DSM漏洞CVE-2026-13639和CVE-2026-13684攻击群晖NAS设备.md",
+      "body_sha256": "3a0615ce2966c4020e538d00f2553660cdddd4b5f814fb7900ef3229a223f235",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "C3RB3R DSM 13639/13684 事件与恢复工具介绍，未给实际漏洞触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 12,
+      "path": "doc/2026-10/CISA：Linux 严重漏洞已用于 PHP2Shell 攻击活动.md",
+      "body_sha256": "541d48f5aeb21ed8ea8ec15c2801f28273317bccadecc951d938b215755ac4ee",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Fragnesia 46300 与 PHP2Shell 链事件新闻，无可核对的原始触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 13,
+      "path": "doc/2026-10/CNVD漏洞周报2026年第42期.md",
+      "body_sha256": "68a52afe57dc9d687a85048c3465c308bcdfdebc37bc7d6cdc69ad63eeb9d351",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_PRIMARY_LEAD",
+      "reason": "CNVD 周报。Leave Management login.php user_email SQL 注入指向 Relax-1626/submit/issues/1；Tenda AC19 SetFirewallCfg 亦仅线索，主源未核。",
+      "admitted": false
+    },
+    {
+      "number": 14,
+      "path": "doc/2026-10/CVE-2026-110264：GitLab Onigmo 正则引擎整数溢出未授权 RCE 漏洞分析.md",
+      "body_sha256": "c8ab37688b05c60d4a7fcd61e6cdbe0bf9cff6dc46f11d2c7fd86453899199bd",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_VERSION_ONLY",
+      "reason": "GitLab 110264 Python/YAML 为版本指纹，不是漏洞触发；正则可包含已修版本，不能当作漏洞验证。",
+      "admitted": false
+    },
+    {
+      "number": 15,
+      "path": "doc/2026-10/CVE-2026-112611∕112610：CoreGraphics PDF 越界写入漏洞 POC.md",
+      "body_sha256": "d51843937d9f174e50b035bf9cbcd5710b9d6869459807131055b359e01cde30",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。原作者固定仓库完整静态审阅另见 coregraphics-hold.md。",
+      "decision": "HOLD_MAPPING_CONFLICT",
+      "reason": "CoreGraphics Type5 具体生成器已另行固定源码全审；112611/112610 映射仍 probable，CMap 路径已被作者证伪。见 coregraphics-hold.md。",
+      "admitted": false
+    },
+    {
+      "number": 16,
+      "path": "doc/2026-10/CVE-2026-49176 BOF.md",
+      "body_sha256": "2d8253181e1d65817a2e4b64bc90c449663070774fb3c09dbbf701d824051798",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "WalletService BOF 已有正文覆盖，见 primary/wallet-bof-dedup.md。",
+      "admitted": false
+    },
+    {
+      "number": 17,
+      "path": "doc/2026-10/CVE-2026-98260 内核 UAF 提权复现.md",
+      "body_sha256": "385f494dfa0df394dc08006c84b13f3c86ca0b9bf07f1f98d41959dcc06ee629",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_PRIMARY_AUDIT",
+      "reason": "InfinityCore CVE-2026-98260 有 Ubuntu 26.04/kernel 7.0.0-27 generic 利用叙述及编译运行命令；完整固定源码、许可、补丁版本对应尚未审，不能凭成功截图准入。",
+      "admitted": false
+    },
+    {
+      "number": 18,
+      "path": "doc/2026-10/Claude研究模型生成Linux内核漏洞利用链，实验环境可远程获取Root权限.md",
+      "body_sha256": "84b67e42b0d50c60800ec9cfe31fa06208fb7b7148fafcb90f7e4394a5b18646",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Anthropic 98432/MPTCP 新闻未公开完整利用材料，文章也承认内核记录未点名 MPTCP。",
+      "admitted": false
+    },
+    {
+      "number": 19,
+      "path": "doc/2026-10/Composer 2.11.0 和 2.2.31 修复路径遍历和令牌泄露漏洞.md",
+      "body_sha256": "f679f6f68f1e0a79db84661ccf650dd69b2e238f244970fb3a1f7e5f3513f8a7",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_PRIMARY",
+      "reason": "Composer GHSA-fm2w-xgf2-f9fh 与 GHSA-c968-33g3-wh7p；机制与修复版本而无完整恶意元数据样本，需原公告核验。",
+      "admitted": false
+    },
+    {
+      "number": 20,
+      "path": "doc/2026-10/CyberStrikeAI C2 控制台代码审计：存储型 XSS 链式 RCE 与 ∕result 任意文件写入.md",
+      "body_sha256": "3267d7308884d97c56fb42302af88dd068063c85d1465a722ede6ba0d43c641e",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。另已逐块读取原始 body 全部 fenced code blocks；未运行、未改原字节。",
+      "decision": "HOLD_STRONG_PRIMARY",
+      "reason": "CyberStrikeAI v1.7.11 XSS→同源 terminal/run 及 /result 任意写文件有实际请求。全部 43 个原始代码围栏另读，但主源固定代码/依赖/工作流与修复版本未核。不能把 plaintext AES fallback 等于无 token；task 必须存在，写文件成功需实际落盘确认。",
+      "admitted": false
+    },
+    {
+      "number": 21,
+      "path": "doc/2026-10/EDK II曝16年高危漏洞，攻击者可在Secure Boot前执行代码.md",
+      "body_sha256": "089a42b15c5c91ed804d532fedd561c5c29ecee4f8089033c1de4f55f3e8ea93",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "EDK II 97631 PXE ICMP 超长包描述及补丁，无完整构造包/代码。",
+      "admitted": false
+    },
+    {
+      "number": 22,
+      "path": "doc/2026-10/Freut mich, Nürnberg（幸会，纽伦堡）！飞天诚信亮相it-sa Expo & Congress 2026.md",
+      "body_sha256": "bf24bb8463468894ab45a035edd0cb9031972d98714382036eff296d5acba576",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_EVENT_PROMO",
+      "reason": "飞天诚信 it-sa FIDO 产品活动，无漏洞材料。",
+      "admitted": false
+    },
+    {
+      "number": 23,
+      "path": "doc/2026-10/HPE Aruba AOS-8 存在严重漏洞，黑客可绕过 SSH 身份验证并接管系统.md",
+      "body_sha256": "4991407961f82fb5c8eeee324ac2da14292aa188f4d5df4e784088840c5806b3",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "HPE Aruba 79855 等 72 项公告表，无具体绕过请求；正文时间存在 2020/2026 疑点。",
+      "admitted": false
+    },
+    {
+      "number": 24,
+      "path": "doc/2026-10/HTTP2Shell 漏洞扩大了 Node2Shell 风险.md",
+      "body_sha256": "fbc8d368335e8521beb005878eb437810c23ff9f7c3e39253333413c4edb09bd",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "HTTP2Shell 是 Brotli 111497 命名及生态影响新闻，没有新编号或公开触发载荷。",
+      "admitted": false
+    },
+    {
+      "number": 25,
+      "path": "doc/2026-10/JavaSecLab：别再搭那些“一键弹窗”的靶场了，这个平台逼你从源码里理解漏洞.md",
+      "body_sha256": "cc9543f3a4d32a81ffbb8a6df8830a1511c75ac1a9597b87bbeca3801b7f31bd",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_TRAINING",
+      "reason": "JavaSecLab 刻意脆弱教学应用介绍，非新漏洞披露。",
+      "admitted": false
+    },
+    {
+      "number": 26,
+      "path": "doc/2026-10/Jenkins 修复 15 个漏洞，其中包括远程代码执行漏洞.md",
+      "body_sha256": "0727bb2f35f89d5a397a7af2bf204ed1889a216941282856f7a62c17b57c0a3b",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Jenkins 15 项公告摘要，没有具体 XStream 载荷等触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 27,
+      "path": "doc/2026-10/Linux Kernel IPv4 TCP 释放后重用漏洞(CVE-2026-98432)安全风险通告.md",
+      "body_sha256": "d2e77fb37341aa2ef03e2a14a4474026cc79a24ae16080d3f5b93331096ff331",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。版本表仅文字初筛，未作逐单元格原字节核验。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "98432 风险简报声称公开 PoC 但正文未给实际代码/包，仅补丁与研究线索；发行版和版本表未据原公告验证。",
+      "admitted": false
+    },
+    {
+      "number": 28,
+      "path": "doc/2026-10/Linux 中被发现Zero-click远程代码执行漏洞，来看看Claude最近发现和利用的真实软件中的漏洞，关键是用的是未发布的内部模型.md",
+      "body_sha256": "e5e8b3af259b77626a9ce66daa2128525a6aebdd48c6c962030b2189bfd9b618",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Anthropic 五条利用链译介，无代码/请求，不能以链概述替代准入材料。",
+      "admitted": false
+    },
+    {
+      "number": 29,
+      "path": "doc/2026-10/Linux内核TCP漏洞，CVSS评分9.8，影响Ubuntu、Red Hat及其他发行版.md",
+      "body_sha256": "f9b93fb36eecfbc0680b6d45c98899edd8629494818efa005c13ea4bd22afee1",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "98432 发行版与 CVSS 风险差异报道，无实际利用材料。",
+      "admitted": false
+    },
+    {
+      "number": 30,
+      "path": "doc/2026-10/Node.js Brotli 解码器越界写入漏洞（Node2Shell CVE-2026-111497） 通告.md",
+      "body_sha256": "355b7ad07f947cfa558347afe2fc85d3b38a87f64281f80eb380787ff8486350",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Brotli 111497 原理与版本矩阵，无特制压缩流。",
+      "admitted": false
+    },
+    {
+      "number": 31,
+      "path": "doc/2026-10/Node.js 的远程命令执行漏洞，不在你的业务代码里，在压缩库里.md",
+      "body_sha256": "1a74ce0264d8b7f16a8ac36bb28d6ba7d77dec9866d8be788624f58ba76595b0",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_UNAVAILABLE_MATERIAL",
+      "reason": "声称 Node 24.9 x86 worker RCE，但工具/PoC 需私信获取；仅运行未公开 poc.py 的命令和 PASS 文本不满足公开材料门槛。",
+      "admitted": false
+    },
+    {
+      "number": 32,
+      "path": "doc/2026-10/Opti-Behavior=1.9.2.1-通过'targetUrl'参数导致的未认证存储型基于DOM的跨站脚本攻击 (CVE-2026-95686).md",
+      "body_sha256": "7ae98d6d914322af40da5c1058689c88b920923c2127e524837b3f42f74101d8",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "OptiBehavior 预警混用 WPConsent 修复建议，产品/日期对应不可靠。",
+      "admitted": false
+    },
+    {
+      "number": 33,
+      "path": "doc/2026-10/Oracle发布1295个安全补丁，修复多个产品中的关键漏洞.md",
+      "body_sha256": "dac76843bd3bb839f44d814c791731155bd22326d39b0310338d48fc58c3066f",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_PATCH_DIGEST",
+      "reason": "Oracle 1295 补丁摘要，无具体 PoC。",
+      "admitted": false
+    },
+    {
+      "number": 34,
+      "path": "doc/2026-10/PHP 双高危漏洞来袭：全场景防护规则同步升级，手把手做好补丁前安全兜底.md",
+      "body_sha256": "377f315ccf3e04373ea3387b7001ef170e7ad0e9595dbc819bd8aacdf851adfd",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_PROMO_CONFLICT",
+      "reason": "PHP 两漏洞推广稿，没有明确 CVE 对应触发；建议旧修复版本与当前 PHP2Shell 版本线索冲突。",
+      "admitted": false
+    },
+    {
+      "number": 35,
+      "path": "doc/2026-10/PHP2SHELL漏洞事件启示：攻击来了，补丁还没打，AI蜜罐守零日窗口期.md",
+      "body_sha256": "78a5840d890e0fa335643654b5b894b435bab4d56c41bf8badcf3376383da916",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_PROMO",
+      "reason": "安恒 AI 蜜罐产品宣传，无新漏洞触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 36,
+      "path": "doc/2026-10/PHP2Shell 已被用于攻击 PAN-OS 管理接口：从 PHP RCE 到防火墙 Root.md",
+      "body_sha256": "9b79bc20d0aabd8ec8406be62d23fe442bb0abf43a16b25828d525a63fbdbb34",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_INCIDENT_ONLY",
+      "reason": "PAN-OS PHP2Shell/Fragnesia 事件与 IoC 路径，未给完整触发链，不按纯事件正文收录。",
+      "admitted": false
+    },
+    {
+      "number": 37,
+      "path": "doc/2026-10/PHP代码审计-PHPCMS 前台RCE漏洞.md",
+      "body_sha256": "f9c3c4a0f5ab6c458bc4a2563ed098ae6742873d84134324f6ec83d45de7919b",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_INCOMPLETE_SOURCE",
+      "reason": "PHPCMS 编辑器/下载/URL 扩展名链，镜像代码围栏为空且截图未视读，产品版本不明；不能假称无 PoC 或已全读图像。",
+      "admitted": false
+    },
+    {
+      "number": 38,
+      "path": "doc/2026-10/PHP远程代码执行漏洞(CVE-2026-109618、CVE-2026-109619)通告.md",
+      "body_sha256": "7dea476fc8b4382b5b9c8bcddcd936f86a4f2a503ee71b3051b9c73c3e160a04",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_ADVISORY_ONLY",
+      "reason": "PHP2Shell 修复/配置摘要，无新增触发材料；原文标识符存在排版损失，不猜补。",
+      "admitted": false
+    },
+    {
+      "number": 39,
+      "path": "doc/2026-10/PHP重大漏洞引发全球关注：AI时代，网络安全防线如何升级？.md",
+      "body_sha256": "7a77581884d7af0f7c8d756c9618f6f1a5376f61b56c558c2e94660eddcb8741",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_PROMO",
+      "reason": "安全牛 AI 数字员工宣传，无触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 40,
+      "path": "doc/2026-10/PoC 满天飞的十月：PHP2Shell、NetScaler、Atlassian…….md",
+      "body_sha256": "15b639992620359e175fa8f46f0f42183528f3d52404cc3318b4f26b646c4a2f",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_PROMO_DIGEST",
+      "reason": "多产品漏洞摘要转雷池安装宣传，无实际触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 41,
+      "path": "doc/2026-10/Ruoyi框架漏洞复现总结.md",
+      "body_sha256": "eae63495ae03bacf42ffbf1d59dfde7ec14648330adbbff95acec4747d99a87c",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_DEDUP_PRIMARY",
+      "reason": "RuoYi 4.5/4.7.5 老漏洞集合有请求，部分绕过原作者也未验证；已有 CNVD-2021-01931 文件读取文章候选重复，但不能把其余内容一并当完全重复。版本与原始载荷待核。",
+      "admitted": false
+    },
+    {
+      "number": 42,
+      "path": "doc/2026-10/SLUB 的丰收季：从 io_uring 漏洞到基于 sheaf 的全新利用技术.md",
+      "body_sha256": "85d62928561be2d1d97d0925de3a5eea2f0f34685bbc017a69d25e03c2420024",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。另已逐块读取原始 body 全部 fenced code blocks；未运行、未改原字节。",
+      "decision": "HOLD_STRONG_RESEARCH",
+      "reason": "arxiv 2609.37608 sheaf/io_uring 研究译介，含五个 HackMD PoC/EXP 链接和补丁；全部 38 个原始代码围栏另读。完整原作者代码/许可未核，部分技术基于刻意脆弱驱动，不作为额外真实 0day。",
+      "admitted": false
+    },
+    {
+      "number": 43,
+      "path": "doc/2026-10/ShinyHunters利用的PeopleSoft 0Day，实为三漏洞链式攻击.md",
+      "body_sha256": "26409c8c9483ae7b35e612d96eb11b37139aabc042cdfccf968c11eaa2bac035",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_PRIMARY_TRIGGER",
+      "reason": "PeopleSoft 35273 PSIGW→PSEMHUB 链，ZDI 原文待核，当前正文未给完整触发消息。",
+      "admitted": false
+    },
+    {
+      "number": 44,
+      "path": "doc/2026-10/Strix AI 自动化渗透测试工具实战：安装部署、配置与漏洞挖掘教程.md",
+      "body_sha256": "a5048c30bc42e74b1c1e3d4e694d6332d09b7346a6f6140338a06507c1752e4f",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_TOOL_TUTORIAL",
+      "reason": "Strix 安装和靶场扫描教程，不是具体产品漏洞披露；未执行安装命令。",
+      "admitted": false
+    },
+    {
+      "number": 45,
+      "path": "doc/2026-10/Tailscale SSH 漏洞可导致提权至 root.md",
+      "body_sha256": "87a0506578168f814806460ba068ae6e4f215c7d863b928ab986b5f51c077004",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "Tailscale 新闻介绍；本镜像不足以完成原作者代码固定审计，留待查。",
+      "admitted": false
+    },
+    {
+      "number": 46,
+      "path": "doc/2026-10/TeamViewer CVE-2026-111585 深度分析.md",
+      "body_sha256": "bd6960a8266ff45f6f1e963c1012245daf3dd8fc1d08a03a898d688db1fc4999",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_PRIMARY_TRIGGER",
+      "reason": "TeamViewer 111585 Remedio 尺寸溢出研究线索；区分网络 DoS 与替换分配器/hook 的 RCE 演示。小尺寸算术与正文数值不一致，原作者触发代码及产品版本待核。",
+      "admitted": false
+    },
+    {
+      "number": 47,
+      "path": "doc/2026-10/TeamViewer 严重漏洞：恶意主机可借远程支持会话反向控制技术人员电脑.md",
+      "body_sha256": "c47fc765ce4558b3625a8122184c4edfd90b096042be245d1a75d825f842d6da",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_DUPLICATE_LEAD",
+      "reason": "同 TeamViewer Remedio 来源链新闻，不增加新的具体材料，与 46 合并核验。",
+      "admitted": false
+    },
+    {
+      "number": 48,
+      "path": "doc/2026-10/Telegram 贴纸也能成为攻击入口？研究人员称发现零点击漏洞，可串联实现 iOS 代码执行.md",
+      "body_sha256": "545d0d9e204fe1dece588e0db2c2beedd3fb62cb4c2fcfe782724729159b1fa0",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Telegram Aziz 新链未公开；不可与 rlottie 111105 的已知 269 字节样本混作同一漏洞。",
+      "admitted": false
+    },
+    {
+      "number": 49,
+      "path": "doc/2026-10/UEFI 严重漏洞潜伏16年，可绕过 Secure Boot 在网络启动服务器上执行代码.md",
+      "body_sha256": "509319818bc6a886744eb8600b8ae28e870cd3493d5096a29282a0d949adfc7b",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_DUPLICATE_LEAD",
+      "reason": "同 EDK II 97631 新闻，没有新增构造数据，与 21 合并核验。",
+      "admitted": false
+    },
+    {
+      "number": 50,
+      "path": "doc/2026-10/USRC金秋赏金狂欢｜漏洞膨胀激励计划活动.md",
+      "body_sha256": "74f6e04c1bc8de7596963ff389ef15544619901d49aa7521d503738dde5eb19c",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_EVENT",
+      "reason": "USRC 七日众测活动，不是已披露漏洞。",
+      "admitted": false
+    },
+    {
+      "number": 51,
+      "path": "doc/2026-10/VMware ESX 日志绕过，在野利用已进 KEV CVE-2026-41709.md",
+      "body_sha256": "896379088fe5355e0b99df36236243824cb3406f28cd67535469a2989953db96",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "ESXi 41709 日志绕过报道明确无公开 PoC；版本/syslog 配置命令不是漏洞触发。",
+      "admitted": false
+    },
+    {
+      "number": 52,
+      "path": "doc/2026-10/Veeam 修复企业备份和监控软件中的多个严重漏洞.md",
+      "body_sha256": "9a1accafe56b9111d24b63a8d7ecadb2638cac1b1611d9386e09f9ee51c2328e",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_NO_TRIGGER",
+      "reason": "Veeam 五漏洞公告明确无 PoC，未满足准入。",
+      "admitted": false
+    },
+    {
+      "number": 53,
+      "path": "doc/2026-10/Volt Typhoon 在四次零日漏洞利用活动中使用隐蔽 Silent Train 网络.md",
+      "body_sha256": "619aa86d9b78b37be8bc0c0eb92b3eaa866390fca6db927d89128fd9ed7ececb",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_INCIDENT_DIGEST",
+      "reason": "SilentTrain/VoltTyphoon/ORB 事件及新闻合集，无具体触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 54,
+      "path": "doc/2026-10/WPConsent = 1.1.9 - 通过Simple HTML DOM Parser噪声键恢复（mXSS）经由评论内容的未授权存储型跨站脚本漏洞（CVE-2026-97640）.md",
+      "body_sha256": "cae9ba0a1815b768dc9a2d4c20a3d5ce2771a38193468d3027446c1c7119945c",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "WPConsent 预警未给出具体双评论触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 55,
+      "path": "doc/2026-10/itC 中心管理服务器 actionUser.do 敏感信息泄露漏洞.md",
+      "body_sha256": "e9859abb3b4b3372b7d76433c56eb843a7652a991c352d4023a7baac102f2df3",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "itC 产品请求依赖未看截图，版本与前提未核实，留待查。",
+      "admitted": false
+    },
+    {
+      "number": 56,
+      "path": "doc/2026-10/php2shell-scanner：拿到新工具后，怎样在一台 PHP 上分清“真漏洞”和“被探针打崩”.md",
+      "body_sha256": "8fa58dbf0accea21c46ab6e9a827fb50a0d89e54d394e13701f0e6f583fc16a7",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "HOLD_TOOL_CORRECTION",
+      "reason": "assetnote/php2shell-scanner 低内存误报与 DoS 副作用纠错线索；原镜像 8 个代码围栏为空。固定原仓库尚未在本片审查，不能推荐为可信无害检测器。",
+      "admitted": false
+    },
+    {
+      "number": 57,
+      "path": "doc/2026-10/php2shell：CVE-2026-109618 ∕ 109619：PHP 的各类部署的修复方案.md",
+      "body_sha256": "fdf6ce4cb0f429c48017372ea69dc20f64937e6a548a62d0dc63249a70eee1b7",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_REMEDIATION_ONLY",
+      "reason": "PHP 部署升级与场景修复指南，无新增触发材料；uploadprogress 115560 不应混入 PHP2Shell 编号。",
+      "admitted": false
+    },
+    {
+      "number": 58,
+      "path": "doc/2026-10/pypdf 一个 PDF 吃光内存，CVE-2026-119204.md",
+      "body_sha256": "8edf463ce81e0358970d7061153cf12a36cfdd1147b1c60d4ad4e492011f8b87",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "ADMIT",
+      "reason": "pypdf 官方回归测试与补丁固定源码已另行核对，本轮准入。",
+      "admitted": true
+    },
+    {
+      "number": 59,
+      "path": "doc/2026-10/“黑色十月”之后：企业最大的风险不是漏洞，是不知道自己暴露在哪.md",
+      "body_sha256": "fbde43b5efb7ca12ea3cb44bbbaa5a2738f7a0e779415370500e7c98a85e9b5f",
+      "read_scope": "已人工读完镜像正文的提取文字；图片像素未审。HTML 排版提取仅供判读，不作为原始代码完整性证明。未追完外链，不是完整上游源码静态反投毒审计。",
+      "decision": "EXCLUDE_PROMO",
+      "reason": "亚信 EASM/AI 渗透测试推广，无具体触发材料。",
+      "admitted": false
+    },
+    {
+      "number": 60,
+      "path": "doc/2026-10/「关键漏洞目录」新增「GitLab CE∕EE整数溢出漏洞(CVE-2026-97229)」等2个漏洞.md",
+      "body_sha256": "9db675c5be7b620f1b4c509d38444f9b6b2b7dfb0a7ef95adb443811836c7f03",
+      "read_scope": "本镜像正文文字完整判读；图片及全部外链不计为已读。合格候选另有固定源码审计。",
+      "decision": "HOLD_OR_EXCLUDE",
+      "reason": "目录型预警：GitLab 已有覆盖，Cisco DoS 无具体请求。",
+      "admitted": false
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "path": "Web安全/CMS内容/WordPress/The Grid 未认证 AJAX 皮肤路径控制与本地文件包含（CVE-2026-94169）.md",
+    "sha256": "125c73b7b38a26804ea96e22174fed45dbe7a005637f45f54d7f92768e4a99ea",
+    "bytes": 7224,
+    "new": true
+  },
+  {
+    "path": "Web安全/安全设备/SOCFortress CoPilot/ScoutSuite 报告暴露与已认证路径穿越写入（CVE-2026-61730、61738）.md",
+    "sha256": "f4ffc3c372e9e44d726f50aba07a5d3ba6cac246eb25b41821f1402aa4014ef1",
+    "bytes": 7252,
+    "new": true
+  },
+  {
+    "path": "Web安全/服务器软件/Flyimg/Flyimg webpm 与 tm 参数命令注入及不同修复版本.md",
+    "sha256": "af5e8d78a63cb5d598705798403a041d6e49b598fa4ad4d770d7099de2a635a9",
+    "bytes": 6713,
+    "new": true
+  },
+  {
+    "path": "Web安全/服务器软件/FreeSWITCH/FreeSWITCH SIP MESSAGE api 聊天协议命令执行与公开探针的判定边界（CVE-2026-116779）.md",
+    "sha256": "d78bffc181420b191177aeb2f9f18f9125d7611fbbce04df701dd4bb44f77863",
+    "bytes": 7530,
+    "new": true
+  },
+  {
+    "path": "Web安全/开发框架/sanitize-svg/sanitize-svg 0.4.1 根节点事件检查遗漏嵌套 SVG onload.md",
+    "sha256": "ac216cea18a7a9f4a921658e06fe3eaebe06b2f2c6193f82f1ed62263519a5a0",
+    "bytes": 4282,
+    "new": true
+  },
+  {
+    "path": "Web安全/开发框架/pypdf/pypdf 共享页面重复物化导致内存耗尽（CVE-2026-119204）.md",
+    "sha256": "774fafb94ee36bf5a1f19fb2602395563589168589bf2866ed52eea67038bde0",
+    "bytes": 4687,
+    "new": true
+  },
+  {
+    "path": "Web安全/代码托管/GitLab/GitLab CI正则编译整数溢出-CVE-2026-97229.md",
+    "sha256": "73da5980938c6202dabb1207886e75a1ddf39ff41efc19479748fb8196f37af6",
+    "bytes": 10624,
+    "new": false
+  }
+]

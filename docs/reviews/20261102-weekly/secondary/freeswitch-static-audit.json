@@ -1,0 +1,34 @@
+{
+  "candidate": "CVE-2026-116779",
+  "checked_at": "2026-11-02",
+  "source_repo": "Rubby2001/CVE-POCS",
+  "commit": "c7f2e4e375b66946710f4c57c88651ee8eeff673",
+  "path": "CVE-2026-116779/poc.py",
+  "blob": "a1157e4c647a00c9e15cc03c554b23001cab2846",
+  "bytes": 9344,
+  "tree_truncated": false,
+  "coverage": "完整目标脚本、根README、完整树；目标目录只有poc.py，根和目标目录未列安装脚本/依赖清单/工作流/二进制/许可证。不是全库其他CVE代码审计。",
+  "dependencies": [
+    "Python标准库argparse/hashlib/random/re/socket/sys/urllib.parse"
+  ],
+  "findings": [
+    "目标脚本未见与漏洞无关的本地搜集、第三方外传、持久化、破坏、混淆、远程下载或二进制",
+    "默认UDP未connect但调用sock.send，可能先本地报错；TCP分支有connect",
+    "401/407被脚本称VULNERABLE(auth-gated)，不成立：修补后sofia_presence.c先认证再校验api协议",
+    "403可能其他拒绝，200/202仅消息接受非API执行证据",
+    "可选REGISTER改变注册状态并留日志，不能统称只读"
+  ],
+  "vendor": {
+    "advisory": "https://github.com/signalwire/freeswitch/security/advisories/GHSA-mg63-h38w-8p9p",
+    "old": "3f13ad1b1d323e435757fc43a2bb829d4ea5b9a8",
+    "fixed": "ef32e205295e29f034f1453ad245ba5efb07b94a",
+    "files": [
+      "src/mod/endpoints/mod_sofia/sofia_presence.c",
+      "src/mod/applications/mod_dptools/mod_dptools.c"
+    ],
+    "read_scope": "完整文件获取；MESSAGE认证/路由相关段及api_chat_send调用switch_api_execute段静态阅读",
+    "cve_record": "cvelistV5目标记录404；未推断撤回"
+  },
+  "license": "目标仓库无LICENSE，原创中文综述，链接固定脚本而不整份转载",
+  "execution": "未执行任何候选代码、依赖安装、目标请求或扫描"
+}

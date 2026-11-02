@@ -1999,6 +1999,10 @@
 - [（CVE-2026-78006）The Events Calendar未授权对象注入RCE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%EF%BC%88CVE-2026-78006%EF%BC%89The%20Events%20Calendar%E6%9C%AA%E6%8E%88%E6%9D%83%E5%AF%B9%E8%B1%A1%E6%B3%A8%E5%85%A5RCE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 - [（CVE-2026-78159）The Events Calendar未授权远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%EF%BC%88CVE-2026-78159%EF%BC%89The%20Events%20Calendar%E6%9C%AA%E6%8E%88%E6%9D%83%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
 
+## WordPress The Grid
+
+- [The Grid 未认证 AJAX 皮肤路径控制与本地文件包含（CVE-2026-94169）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/The%20Grid%20%E6%9C%AA%E8%AE%A4%E8%AF%81%20AJAX%20%E7%9A%AE%E8%82%A4%E8%B7%AF%E5%BE%84%E6%8E%A7%E5%88%B6%E4%B8%8E%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%EF%BC%88CVE-2026-94169%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## WordPress Time Clock / Time Clock Pro
 
 - [WordPress Time Clock插件存在命令执行漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/WordPress%20Time%20Clock%E6%8F%92%E4%BB%B6%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]

@@ -1,0 +1,11 @@
+{
+  "scope": "HTTP request-line and Host line characters; Markdown source trailing two-space hard-break formatting is not copied into fenced code. No decoded/reencoded URL or value substitution. Not a claim of complete article byte equality.",
+  "request_line": "GET /upload/tm_%3Bid,w_100,h_100,c_1/data:video/mp4;base64,AAAAFGZ0eXBtcDQyAAAAAG1wNDI= HTTP/1.1",
+  "request_line_utf8_sha256": "ff7b33d895e2101e7a09007d094c8f12e8e6288196025dd236c08a94306bd2a7",
+  "request_line_exact_substring_of_source": true,
+  "host_line": "Host: 192.0.2.70:8080",
+  "host_line_exact_substring_of_source": true,
+  "source_after_request_line": "'  \\n'",
+  "draft_request_line_bytes": 96,
+  "source_fixed_commit": "0ca04cb9e2986ac80a58dfd004051d9eeebeb025"
+}

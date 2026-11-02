@@ -1,0 +1,42 @@
+{
+  "candidate": [
+    "CVE-2026-61730",
+    "CVE-2026-61738"
+  ],
+  "fixed_source": "a31782e5791c0f7ce9e0e2faa80bc6a05a4a907b",
+  "tree_entries": 2766,
+  "tree_truncated": false,
+  "full_read": [
+    "GHSA-pm2w-mmc3-h8hc inline PoC",
+    "GHSA-q3g8-3cf7-744f inline PoC",
+    "backend/app/integrations/scoutsuite/routes/scoutsuite.py",
+    "backend/app/integrations/scoutsuite/services/scoutsuite.py",
+    "backend/app/integrations/scoutsuite/schema/scoutsuite.py",
+    "backend/Dockerfile",
+    "backend/requirements.in",
+    ".github/workflows/docker.yml",
+    ".github/workflows/docs-pages.yml",
+    ".github/workflows/pre-commit.yml",
+    "bfa630b65d554670c7462a32ce6fd4e3cbd0254c fullpatch",
+    "1881ef8d28bc7f45ffa88d7ba4fcca7302355508 fullpatch"
+  ],
+  "scope": "inlinePoCs no externalinstall dependencies; product build reviewed for context, not wholeproductsecurityaudit",
+  "findings": [
+    "PoC requests send onlytoexplicitlocalhost target; filewrite is necessary exploit effect and startsScoutSuitebackgroundtask",
+    "No unrelated operatorsecret harvesting or secondaryexfilendpoint ininlinePoC",
+    "ProductDockerfile remote uvinstaller curlpipe shell and Playwrightbrowser download, compilationwith apppydeletion; not executed or endorsed",
+    "ProductworkflowbuildpushGHCR/Discordnotification; secretsnamesonly, no actualsecrets observed",
+    "61738 requiresadmin/analyst despitePR:Nscore; JSONcontentrestriction precludesclaimingunconditionalRCE",
+    "61730 0.1.77 isolatescredentials butreportaccessfullfixnotestablished"
+  ],
+  "not_reviewed": [
+    "externalinstaller",
+    "transitivedependencyimplementations",
+    "fullrequirementslock",
+    "binaryimages",
+    "frontendrepositoryimplementation",
+    "screenshotpixels"
+  ],
+  "license": "sourceLICENSE AGPLv3 identified; no longsource reproduction, originalChineseanalysis",
+  "executed": false
+}
