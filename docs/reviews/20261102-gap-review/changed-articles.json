@@ -1,0 +1,35 @@
+[
+  {
+    "path": "Web安全/开发框架/node-forge/node-forge AES-GCM 零长度标签认证绕过及默认配置边界（CVE-2026-119186）.md"
+  },
+  {
+    "path": "系统安全/Linux/Linux POSIX CPU timer 在 exec 失败路径释放后使用（CVE-2026-98260）.md"
+  },
+  {
+    "path": "Web安全/开发框架/Wasmtime/Wasmtime aarch64 超大 br_table 错误跳转与沙箱逃逸（CVE-2026-115893）.md"
+  },
+  {
+    "path": "Web安全/开发框架/svg-hush/svg-hush 与 xml 命名空间再序列化注入及修复版本边界.md"
+  },
+  {
+    "path": "Web安全/CMS内容/Adobe Experience Manager/AEM XmlSchemaReader 的 XSD 外部实体读取（CVE-2026-48359）.md"
+  },
+  {
+    "path": "Web安全/开发框架/MLflow/MLflow 第三方 TruLens scorer 参数导致 SSRF（CVE-2026-115886）.md"
+  },
+  {
+    "path": "Web安全/开发框架/Flowise/Flowise 密码重置令牌泄露导致账户接管（CVE-2025-58434）.md"
+  },
+  {
+    "path": "系统安全/Linux/Linux IPv4 TCP 请求选项释放后使用（CVE-2026-98432）.md"
+  },
+  {
+    "path": "Web安全/开发框架/OAuthLib/OAuthLib 客户端身份与令牌授权身份不一致（CVE-2026-118669）.md"
+  },
+  {
+    "path": "Web安全/服务器软件/imgproxy/imgproxy ICO 小缓冲区重建 BMP 头越界（GHSA-494m-4556-wf5p）.md"
+  },
+  {
+    "path": "Web安全/开发框架/Node.js/Node.js Brotli 解码越界写与特定 Express 构建 RCE（CVE-2026-111497）.md"
+  }
+]

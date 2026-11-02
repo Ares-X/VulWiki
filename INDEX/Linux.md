@@ -126,6 +126,10 @@
 
 - [Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20OVS%E5%85%B1%E4%BA%AB%E9%A1%B5%E6%A0%87%E8%AE%B0%E4%B8%A2%E5%A4%B1%E4%B8%8E%E4%B8%89%E5%A4%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BF%AE%E5%A4%8D%EF%BC%88CVE-2026-89487%E7%AD%89%EF%BC%89.md) [analysis; not-reproduced; active]
 
+## Linux kernel / POSIX CPU timers
+
+- [Linux POSIX CPU timer 在 exec 失败路径释放后使用（CVE-2026-98260）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20POSIX%20CPU%20timer%20%E5%9C%A8%20exec%20%E5%A4%B1%E8%B4%A5%E8%B7%AF%E5%BE%84%E9%87%8A%E6%94%BE%E5%90%8E%E4%BD%BF%E7%94%A8%EF%BC%88CVE-2026-98260%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## Linux kernel / Reliable Datagram Sockets
 
 - [Linux RDS 本地提权的原始C源码与内核状态副作用（CVE-2010-3904）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20RDS%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%8E%9F%E5%A7%8BC%E6%BA%90%E7%A0%81%E4%B8%8E%E5%86%85%E6%A0%B8%E7%8A%B6%E6%80%81%E5%89%AF%E4%BD%9C%E7%94%A8%EF%BC%88CVE-2010-3904%EF%BC%89.md) [analysis; not-reproduced; active]
@@ -146,6 +150,10 @@
 
 - [CVE-2026-23111_ Linux nf_tables Flaw Enables Root Exploits](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2026-23111_%20Linux%20nf_tables%20Flaw%20Enables%20Root%20Exploits.md) [analysis; source-claimed; needs-review]
 - [Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Old%20Linux%20Kernel%20flaw%20CVE-2024-1086%20resurfaces%20in%20ransomware%20attacks.md) [incident; source-claimed; needs-review]
+
+## Linux kernel IPv4 TCP
+
+- [Linux IPv4 TCP 请求选项释放后使用（CVE-2026-98432）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20IPv4%20TCP%20%E8%AF%B7%E6%B1%82%E9%80%89%E9%A1%B9%E9%87%8A%E6%94%BE%E5%90%8E%E4%BD%BF%E7%94%A8%EF%BC%88CVE-2026-98432%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Linux kernel nf_tables
 
