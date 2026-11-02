@@ -91,6 +91,7 @@
 ## LiteLLM Proxy
 
 - [LiteLLM Proxy user_config 嵌套路由参数绕过与 SSRF（CVE-2026-59823）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20user_config%20%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1%E7%BB%95%E8%BF%87%E4%B8%8ESSRF%EF%BC%88CVE-2026-59823%EF%BC%89.md) [vulnerability; source-claimed; active]
+- [LiteLLM 存储密文跨上下文重放导致管理员会话伪造（CVE-2026-114612）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20%E5%AD%98%E5%82%A8%E5%AF%86%E6%96%87%E8%B7%A8%E4%B8%8A%E4%B8%8B%E6%96%87%E9%87%8D%E6%94%BE%E5%AF%BC%E8%87%B4%E7%AE%A1%E7%90%86%E5%91%98%E4%BC%9A%E8%AF%9D%E4%BC%AA%E9%80%A0%EF%BC%88CVE-2026-114612%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Loom for AWS
 

@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-02",
+  "repository": "googlesky/CVE-2026-115560",
+  "fixed_commit": "450adfa033d7764b43327ff8071b418a4c695225",
+  "current_main_same": true,
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "read": "complete static text",
+      "chars": 19,
+      "lines": 1,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".gitignore",
+      "read": "complete static text",
+      "chars": 54,
+      "lines": 6,
+      "sha256": "80e3410242772046ab8d212378aa16568f75a9cdfa51de9e9ce12b3fec600a41"
+    },
+    {
+      "path": "CITATION.cff",
+      "read": "complete static text",
+      "chars": 712,
+      "lines": 21,
+      "sha256": "b223b4882f528090470a306dc09953ac252f21c465c8767690bb496e0ce270cd"
+    },
+    {
+      "path": "LICENSE",
+      "read": "complete static text",
+      "chars": 1064,
+      "lines": 21,
+      "sha256": "c9099a5df24462e8910b6684594dcbb82990f66c6cb5be993ea1c78d43f91af8"
+    },
+    {
+      "path": "README.md",
+      "read": "complete static text",
+      "chars": 7122,
+      "lines": 137,
+      "sha256": "9226a13c6e7217cc795ddc8194675ef50dacb1be1379453be97d3de11f045f1e"
+    },
+    {
+      "path": "SECURITY.md",
+      "read": "complete static text",
+      "chars": 368,
+      "lines": 8,
+      "sha256": "73c013dd5d153a85fde2d6446f32a18671487ae1475ac7c4c796f72ce39ce924"
+    },
+    {
+      "path": "lab.sh",
+      "read": "complete static text",
+      "chars": 847,
+      "lines": 27,
+      "sha256": "2fc7e66b41517221f3ffe7b26a40885a00c1e6a1b73b07be955297d21fa1c819"
+    },
+    {
+      "path": "lab/Dockerfile",
+      "read": "complete static text",
+      "chars": 470,
+      "lines": 10,
+      "sha256": "42e4ecacaf710b12358f9cc86ddcbe513867af3a9ee09a4de18c15bb996b22de"
+    },
+    {
+      "path": "lab/conf/99-mitigated.ini",
+      "read": "complete static text",
+      "chars": 420,
+      "lines": 15,
+      "sha256": "fb519fa890a5e6a4fbf045767f71064870496f8b96f267a5eeb9729a6ba5b175"
+    },
+    {
+      "path": "lab/conf/99-vuln.ini",
+      "read": "complete static text",
+      "chars": 927,
+      "lines": 22,
+      "sha256": "2214da716ded6bd7d23505cf078b7c1885564b6977b1241b2f6eb219d0c70e8b"
+    },
+    {
+      "path": "lab/docker-compose.yml",
+      "read": "complete static text",
+      "chars": 1138,
+      "lines": 36,
+      "sha256": "8f810648ec80b2330c0588261629f078d371aa7e8994ebfc1d2e07ae35dcbec1"
+    },
+    {
+      "path": "lab/src/index.php",
+      "read": "complete static text",
+      "chars": 1001,
+      "lines": 26,
+      "sha256": "78afc92c3e7fd4e88435710e71b8c97e5d1b9676a95b48556e90a79cfc030581"
+    },
+    {
+      "path": "lab/src/info.php",
+      "read": "complete static text",
+      "chars": 1058,
+      "lines": 18,
+      "sha256": "c1ebc64fc2ea8ac34d4915f582a2c542da1617f88a14b6e80e31eb5673fcde29"
+    },
+    {
+      "path": "lab/src/noswitch.php",
+      "read": "complete static text",
+      "chars": 610,
+      "lines": 19,
+      "sha256": "7d89ea37e8fc6c8eaa745561cf7d4d3b41cf2d58ced8c4e6520d6f65a0464338"
+    },
+    {
+      "path": "poc.py",
+      "read": "complete static text",
+      "chars": 10374,
+      "lines": 253,
+      "sha256": "3511950a5af0efa86f877083dfd6fcc6b61038da118ede974b916c7d892ecebf"
+    }
+  ],
+  "total_lines": 620,
+  "execution": "NONE: no PoC, dependencies, container, requests to demo targets",
+  "admission": "SUPPLEMENT_EXISTING: concrete complete trigger already admitted; full source review and exact result boundaries now closed",
+  "scope_limits": [
+    "No complete PHP source or container image internals audit",
+    "README result table source-claimed; no separate raw experiment logs in tree",
+    "No badges/screenshots viewed",
+    "No exact fixed PHP version identified at php.net archive/change log; not proof no unpublished patch exists"
+  ],
+  "official_sources": [
+    {
+      "url": "https://www.php.net/archive/2026.php#2026-10-23-1",
+      "result": "200; full relevant Oct23 advisory and Oct26 package rebuild text read; planned next regular bugfix unchanged"
+    },
+    {
+      "url": "https://www.php.net/ChangeLog-8.php",
+      "result": "200; newest section8.5.12 Oct22; find115560 none; not entire8350line historical changelog read"
+    },
+    {
+      "url": "https://api.github.com/repos/CVEProject/cvelistV5/contents/cves/2026/115xxx/CVE-2026-115560.json",
+      "result": "404 twice; no additional retry; publication not determined"
+    }
+  ],
+  "findings": [
+    "check is lab-specific config inspection, not runtime/gadget verification",
+    "RCE CONFIRMED uses HTTP200 at random proof path only; content not verified",
+    "consumer has no throttle; counts completed reads not exploitation",
+    "default fourMiB/16KiB/.15s; timeout90 excludes some socket/join overhead",
+    "no TLS despite https scheme stripping; naive host parsing; unicode serialization length boundary",
+    "arbitrary cmd on target artificial gadget; proof/session not cleaned by PoC",
+    "teardown removes compose project volumes/orphans and fixed image",
+    "lab.sh header8095 disagrees with operative8097",
+    "MIT; no workflows/submodule/binary; tag-onlyPHP image; image internals unreviewed"
+  ]
+}
