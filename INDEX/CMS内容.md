@@ -65,6 +65,10 @@
 
 - [Magento StyleSmuggler 未授权 RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/Magento%20StyleSmuggler%20%E6%9C%AA%E6%8E%88%E6%9D%83%20RCE%EF%BC%88CVE-2026-75650%EF%BC%89.md) [vulnerability; source-claimed; active]
 
+## Adobe Experience Manager
+
+- [AEM XmlSchemaReader 的 XSD 外部实体读取（CVE-2026-48359）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Adobe%20Experience%20Manager/AEM%20XmlSchemaReader%20%E7%9A%84%20XSD%20%E5%A4%96%E9%83%A8%E5%AE%9E%E4%BD%93%E8%AF%BB%E5%8F%96%EF%BC%88CVE-2026-48359%EF%BC%89.md) [vulnerability; source-claimed; needs-review]
+
 ## Artifex Ghostscript
 
 - [CVE-2024-29509：Artifex Ghostscript PDFPassword 处理期间的堆缓冲区溢出 _](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Artifex%20Ghostscript/CVE-2024-29509%EF%BC%9AArtifex%20Ghostscript%20PDFPassword%20%E5%A4%84%E7%90%86%E6%9C%9F%E9%97%B4%E7%9A%84%E5%A0%86%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%20_.md) [analysis; not-reproduced; needs-review]
