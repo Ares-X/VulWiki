@@ -115,12 +115,13 @@ IOT安全/   # 摄像头/路由器/工控
 
 ```sh
 python -m unittest discover -s tests -v
-python scripts/wiki.py check --baseline docs/quality-baseline.json
+python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
+python scripts/resource-audit.py --require-local --report /tmp/wiki-resource-audit.json
 python scripts/wiki.py build --check
 python scripts/wiki.py search CloudStack
 ```
 
-只需 Python 3.10+ 标准库。检查离线，不执行文章内代码。`docs/generated/records.jsonl` 是主入口投影，`sources.jsonl` 保留来源元数据，`entities.jsonl` 仅包含人工实体关系。同 CVE 和重复候选不会自动删除文章；详见[字段说明](docs/CONTENT-SCHEMA.md)。
+上述检查只需 Python 3.10+ 标准库，离线运行，不执行文章内代码。资源检查是独立门禁，文章质量基线不能豁免缺失、空文件、HTML 错误页或远程图片；完整检查范围及本地渲染测试见[维护与验收流程](docs/REVIEW-WORKFLOW.md)。`docs/generated/records.jsonl` 是主入口投影，`sources.jsonl` 保留来源元数据，`entities.jsonl` 仅包含人工实体关系。同 CVE 和重复候选不会自动删除文章；详见[字段说明](docs/CONTENT-SCHEMA.md)。
 
 带 baseline 检查成功只代表没有新增非致命问题，不表示历史质量债消失、外部事实已核对或漏洞已复现。fatal 与活动 HTML 问题不能通过重建 baseline 放行。严格全库检查用 `python scripts/wiki.py check`，尚存问题会返回非零。
 
