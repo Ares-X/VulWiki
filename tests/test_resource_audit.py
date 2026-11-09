@@ -265,6 +265,70 @@ class ResourceAuditTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 0)
 
+    def test_svg_presentation_attributes_cannot_load_external_resources(self):
+        attributes = ('fill', 'stroke', 'filter', 'clip-path', 'mask', 'marker',
+                      'marker-start', 'marker-mid', 'marker-end', 'cursor')
+        values = ('url(https://images.example.invalid/defs.svg#paint)',
+                  "URL( '//images.example.invalid/defs.svg#paint' )",
+                  'url(&quot;https://images.example.invalid/defs.svg?part=one&amp;mode=two#paint&quot;)')
+        report = self.root / 'report.json'
+        for attribute in attributes:
+            for value in values:
+                with self.subTest(attribute=attribute, value=value):
+                    source = ('<svg xmlns="http://www.w3.org/2000/svg"><rect '
+                              + attribute + '="' + value + '"/></svg>').encode()
+                    resource = self.resource_dir / 'local.svg'
+                    resource.write_bytes(source)
+                    self.article('![svg](.resource/local.svg)\n')
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        code = audit_tool.main(['--root', str(self.root), '--report',
+                                                str(report), '--require-local'])
+                    result = json.loads(report.read_text())
+                    self.assertEqual(code, 1)
+                    self.assertEqual(result['counts']['external_image_dependencies'], 1)
+                    self.assertEqual(resource.read_bytes(), source)
+                    self.assertEqual(result['files'][0]['sha256'], hashlib.sha256(source).hexdigest())
+
+    def test_svg_definition_and_path_references_are_resource_dependencies(self):
+        elements = ('linearGradient', 'radialGradient', 'pattern', 'textPath', 'mpath')
+        for element in elements:
+            for attribute in ('href', 'xlink:href'):
+                with self.subTest(element=element, attribute=attribute):
+                    source = ('<svg xmlns="http://www.w3.org/2000/svg" '
+                              'xmlns:xlink="http://www.w3.org/1999/xlink"><' + element + ' '
+                              + attribute + '="https://images.example.invalid/defs.svg#example"/></svg>')
+                    (self.resource_dir / 'local.svg').write_text(source)
+                    self.article('![svg](.resource/local.svg)\n')
+                    result = audit_tool.audit(self.root)
+                    self.assertEqual(result['counts']['external_image_dependencies'], 1)
+
+    def test_svg_fragment_paint_and_definition_references_stay_offline(self):
+        (self.resource_dir / 'local.svg').write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg">'
+            '<defs><linearGradient id="paint"/><linearGradient href="#paint"/>'
+            '<radialGradient href="#paint"/><pattern href="#pattern"/></defs>'
+            '<rect fill="url(#paint)" stroke="url(\'#paint\')" filter="url(#filter)" '
+            'clip-path="url(#clip)" mask="url(#mask)" marker-start="url(#marker)"/>'
+            '<textPath href="#path"/><mpath href="#motion"/>'
+            '<image href="data:image/png;base64,fixture"/></svg>')
+        self.article('![svg](.resource/local.svg)\n')
+        report = self.root / 'report.json'
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 0)
+
+    def test_svg_descriptive_attributes_are_not_resource_dependencies(self):
+        (self.resource_dir / 'local.svg').write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg">'
+            '<!-- <rect fill="url(https://images.example.invalid/comment.svg#paint)"/> -->'
+            '<rect data-example="url(https://images.example.invalid/example.svg#paint)" '
+            'aria-label="url(https://images.example.invalid/label.svg#paint)"/>'
+            '<a href="https://author.example.invalid/article"><text>source</text></a></svg>')
+        self.article('![svg](.resource/local.svg)\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual(result['counts']['external_image_dependencies'], 0)
+
     def test_svg_source_anchor_and_url_example_text_are_not_loaded_images(self):
         (self.resource_dir / 'local.svg').write_text(
             '<svg><text>fill:url(https://images.example.invalid/example.png)</text>'

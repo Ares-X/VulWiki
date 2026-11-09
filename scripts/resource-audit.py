@@ -138,6 +138,17 @@ EXT_FORMATS = {
     ".avif": {"AVIF/HEIF"}, ".heic": {"AVIF/HEIF"},
 }
 
+# Only resource-bearing hrefs and URL-valued presentation attributes belong
+# here. Navigation links, descriptive text and arbitrary data-* values do not.
+SVG_RESOURCE_ELEMENTS = {
+    "image", "feimage", "use", "script", "font-face-uri", "link",
+    "lineargradient", "radialgradient", "pattern", "textpath", "mpath",
+}
+SVG_URL_ATTRIBUTES = {
+    "fill", "stroke", "filter", "clip-path", "mask", "marker",
+    "marker-start", "marker-mid", "marker-end", "cursor",
+}
+
 
 def inspect_file(root: Path, relative: str) -> dict:
     path = root / relative
@@ -184,14 +195,16 @@ def inspect_file(root: Path, relative: str) -> dict:
             for element in svg.iter():
                 name = element.tag.rsplit("}", 1)[-1].lower()
                 attrs = {key.rsplit("}", 1)[-1].lower(): value for key, value in element.attrib.items()}
-                if name in {"image", "feimage", "use", "script", "font-face-uri", "link"}:
+                if name in SVG_RESOURCE_ELEMENTS:
                     if any(re.match(r"(?:https?:|//)", attrs.get(key, "").strip(), re.I)
                            for key in ("href", "src")):
                         flags.append("external_image_dependency")
-                css = attrs.get("style", "")
+                css_values = [value for key, value in attrs.items()
+                              if key == "style" or key in SVG_URL_ATTRIBUTES]
                 if name == "style":
-                    css += "".join(element.itertext())
-                if re.search(r'''(?:url\s*\(\s*["']?\s*|@import\s*["']\s*)(?:https?:|//)''', css, re.I):
+                    css_values.append("".join(element.itertext()))
+                if any(re.search(r'''(?:url\s*\(\s*["']?\s*|@import\s*["']\s*)(?:https?:|//)''', css, re.I)
+                       for css in css_values):
                     flags.append("external_image_dependency")
         except ET.ParseError as error:
             flags.append("svg_xml_parse_error: " + str(error))
