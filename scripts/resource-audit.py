@@ -42,6 +42,42 @@ def load_wiki():
 wiki = load_wiki()
 
 
+def srcset_urls(value: str):
+    """Collect URL tokens, including local paths, without rewriting URL bytes.
+
+    Follow the HTML srcset token boundaries: ASCII whitespace ends a URL;
+    trailing commas separate candidates, but commas inside a URL (including
+    data URLs) are significant. Descriptor parentheses may contain commas.
+    This conservatively audits candidates, not descriptor validity or which
+    image a particular browser will choose.
+    """
+    whitespace = "\t\n\f\r "
+    position = 0
+    while position < len(value):
+        while position < len(value) and value[position] in whitespace + ",":
+            position += 1
+        start = position
+        while position < len(value) and value[position] not in whitespace:
+            position += 1
+        target = value[start:position]
+        if not target:
+            break
+        if target.endswith(","):
+            yield target.rstrip(",")
+            continue
+        yield target
+        in_parentheses = False
+        while position < len(value):
+            character = value[position]
+            position += 1
+            if character == "," and not in_parentheses:
+                break
+            if character == "(":
+                in_parentheses = True
+            elif character == ")":
+                in_parentheses = False
+
+
 class ResponsiveImageSources(HTMLParser):
     """Additional browser image candidates outside the ordinary img src."""
     def __init__(self):
@@ -55,9 +91,7 @@ class ResponsiveImageSources(HTMLParser):
             self.picture_depth += 1
         if tag != "img" and not (tag == "source" and self.picture_depth):
             return
-        if tag == "img" and not any(key in {"src", "srcset"} and value and value.strip()
-                                    for key, value in attrs):
-            self.unusable_images.append((self.get_starttag_text(), self.getpos()[0]))
+        has_source = any(key == "src" and value and value.strip() for key, value in attrs)
         for key, value in attrs:
             if not value:
                 continue
@@ -66,10 +100,11 @@ class ResponsiveImageSources(HTMLParser):
             if tag == "img" and key == "data-src":
                 self.links.append((value, True, self.getpos()[0]))
             if key == "srcset":
-                # Remote candidates have no unescaped spaces/commas. Embedded
-                # data-image candidates remain local and are not requested.
-                for match in re.finditer(r"(?:https?://|//)[^\s,]+", value, re.I):
-                    self.links.append((match[0], True, self.getpos()[0]))
+                candidates = list(srcset_urls(value))
+                has_source = has_source or bool(candidates)
+                self.links.extend((target, True, self.getpos()[0]) for target in candidates)
+        if tag == "img" and not has_source:
+            self.unusable_images.append((self.get_starttag_text(), self.getpos()[0]))
 
     def handle_endtag(self, tag):
         if tag == "picture":
