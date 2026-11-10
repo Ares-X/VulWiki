@@ -28,14 +28,14 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 ## 内容范围
 
-当前统计（2026-11-02）：三大正文目录共6060篇Markdown，包含产品内README，不含资源目录中的出处说明；生成目录为5960个主入口、6058份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
+当前统计（2026-11-10）：三大正文目录共6071篇Markdown，包含产品内README，不含资源目录中的出处说明；生成目录为5971个主入口、6069份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
 
 | 分类 | 当前内容 Markdown |
 |---|---:|
-| Web安全 | 5529 |
-| 系统安全 | 251 |
+| Web安全 | 5538 |
+| 系统安全 | 253 |
 | IOT安全 | 280 |
-| 合计 | **6060** |
+| 合计 | **6071** |
 
 <details>
 <summary>查看2026-10-02历史文件快照</summary>
@@ -147,6 +147,8 @@ python scripts/wiki.py search CloudStack
 ## Change Log
 
 以下按合并日期补记维护内容；不同批次的修订路径可能重叠，不累计为唯一文章数。收录和静态验收不表示漏洞已由维护者复现。
+
+* 2026-11-10（PR #37）新增11篇、补充2篇：整理LiteLLM密文重放、YesWiki、SiYuan、两项独立io_uring研究、Pillow EPS/FlashPix、Ruby Onigmo、PentestCode、LocalAI及CyberStrikeAI的公开资料；为既有Node.js Brotli文补充Node2Shell别名、利用实现与探测判据差异，为PHP Session文补充静态审阅和适用条件。保留认证、特定构建、失败对照、修复映射及图片证据缺口，不把探测结果或本地崩溃泛化为通用RCE。修复离线资源检查对本地srcset候选和SVG资源依赖的遗漏，并按实际CI覆盖更新维护说明；质量baseline未变。详见[Node2Shell专项](docs/reviews/20261102-node2shell/README.md)、[第二批补漏](docs/reviews/20261102-secondwave/README.md)及[第三批来源复核](docs/reviews/20261102-thirdwave/README.md)。
 
 * 2026-11-02（PR #36）新增10篇、补充1篇：整理 node-forge、Linux timer/TCP、Wasmtime、svg-hush/xml、AEM、MLflow、Flowise、OAuthLib 和 imgproxy 的公开研究；为已有 Brotli 文追加固定 WordPress 镜像的响应解码入口及分支回移修复边界。区分原始披露、修复和详细材料发布时间，保留版本冲突、失败对照与作者结果的限制。详见[补漏记录](docs/reviews/20261102-gap-review/README.md)和[集成复核](docs/reviews/20261102-gap-review/integration-review.md)。
 

@@ -35,4 +35,3 @@ Nuclei同固定版本MIT及两工作流此前本轮已审；文件在../vulwiki-
 YesWiki不带v的4.7.0引用不可用，随后用v4.7.0成功解析；Ruoyi根recursive tree和错误猜测的yudao-module-system-biz路径未获得内容，随后contents确认模块实际直接src布局；不把错误路径失败算源码不存在。Ruoyi依赖的Java链尚未继续读取，本批按父任务要求保留待查。
 
 正文为原创中文总结，源例字段未脱敏、未替换；不整篇翻译未单列许可GHSA。evidence/保留本批获取的15份原始模板、产品源码与CNA资料；抓取不等于全部逐行审计。没有远端提交或CI结论。
-
