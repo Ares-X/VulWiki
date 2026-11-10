@@ -1,0 +1,36 @@
+{
+  "stage": "second-wave",
+  "base_master": "09fb76eca271fb9419cbbc92c527616f8bc2d6a3",
+  "previous_remote_head": "31ee47f2afd2bc92873a098af3ed19c7094abab6",
+  "new_articles": 5,
+  "updated_articles": 2,
+  "fidelity": {
+    "new_articles": [
+      "Web安全/桌面软件/思源笔记/SiYuan 授权页 to 参数登录后脚本执行（CVE-2026-116167）.md",
+      "Web安全/AI应用/LiteLLM/LiteLLM 存储密文跨上下文重放导致管理员会话伪造（CVE-2026-114612）.md",
+      "Web安全/CMS内容/YesWiki/YesWiki raw inclusion 匿名 render SSRF（CVE-2026-116205）.md",
+      "系统安全/Linux内核/Linux io_uring ring resize 与延迟 task work 竞态（CVE-2026-23275）.md",
+      "系统安全/Linux内核/Linux io_uring provided-buffer bundle 扩容回滚 UAF 与修复回归.md"
+    ],
+    "updated_articles": [
+      "Web安全/开发框架/PHP/PHP Session upload progress 序列化处理器切换对象注入（CVE-2026-115560）.md",
+      "Web安全/开发框架/Node.js/Node.js Brotli 解码越界写与特定 Express 构建 RCE（CVE-2026-111497）.md"
+    ],
+    "old_articles_prefix_preserved": true,
+    "unchanged_existing": 6059
+  },
+  "python_tests": 96,
+  "node_tests": 44,
+  "new_quality_issues": 0,
+  "historical_warnings": 4093,
+  "baseline_changed": false,
+  "deterministic_build": true,
+  "render_files": 6066,
+  "render_candidates": 33,
+  "render_structural_failures": 0,
+  "changed_article_candidates": 0,
+  "copy_code_blocks": 2,
+  "copy_text_equal": true,
+  "resources": "Sparse checkout; complete inventory validation requires remote CI. No new images.",
+  "remote_ci": "Pending new head; first-stage CI receipt is not evidence for this commit."
+}

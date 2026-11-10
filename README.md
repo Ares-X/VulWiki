@@ -28,14 +28,14 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 ## 内容范围
 
-当前统计（2026-11-02）：三大正文目录共6060篇Markdown，包含产品内README，不含资源目录中的出处说明；生成目录为5960个主入口、6058份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
+当前统计（2026-11-10）：三大正文目录共6071篇Markdown，包含产品内README，不含资源目录中的出处说明；生成目录为5971个主入口、6069份可检索来源、2份隔离材料。文件数不等于独立漏洞数或已验证漏洞数。
 
 | 分类 | 当前内容 Markdown |
 |---|---:|
-| Web安全 | 5529 |
-| 系统安全 | 251 |
+| Web安全 | 5538 |
+| 系统安全 | 253 |
 | IOT安全 | 280 |
-| 合计 | **6060** |
+| 合计 | **6071** |
 
 <details>
 <summary>查看2026-10-02历史文件快照</summary>
@@ -115,12 +115,13 @@ IOT安全/   # 摄像头/路由器/工控
 
 ```sh
 python -m unittest discover -s tests -v
-python scripts/wiki.py check --baseline docs/quality-baseline.json
+python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
+python scripts/resource-audit.py --require-local --report /tmp/wiki-resource-audit.json
 python scripts/wiki.py build --check
 python scripts/wiki.py search CloudStack
 ```
 
-只需 Python 3.10+ 标准库。检查离线，不执行文章内代码。`docs/generated/records.jsonl` 是主入口投影，`sources.jsonl` 保留来源元数据，`entities.jsonl` 仅包含人工实体关系。同 CVE 和重复候选不会自动删除文章；详见[字段说明](docs/CONTENT-SCHEMA.md)。
+上述检查只需 Python 3.10+ 标准库，离线运行，不执行文章内代码。资源检查是独立门禁，文章质量基线不能豁免缺失、空文件、HTML 错误页或远程图片；完整检查范围及本地渲染测试见[维护与验收流程](docs/REVIEW-WORKFLOW.md)。`docs/generated/records.jsonl` 是主入口投影，`sources.jsonl` 保留来源元数据，`entities.jsonl` 仅包含人工实体关系。同 CVE 和重复候选不会自动删除文章；详见[字段说明](docs/CONTENT-SCHEMA.md)。
 
 带 baseline 检查成功只代表没有新增非致命问题，不表示历史质量债消失、外部事实已核对或漏洞已复现。fatal 与活动 HTML 问题不能通过重建 baseline 放行。严格全库检查用 `python scripts/wiki.py check`，尚存问题会返回非零。
 
@@ -146,6 +147,8 @@ python scripts/wiki.py search CloudStack
 ## Change Log
 
 以下按合并日期补记维护内容；不同批次的修订路径可能重叠，不累计为唯一文章数。收录和静态验收不表示漏洞已由维护者复现。
+
+* 2026-11-10（PR #37）新增11篇、补充2篇：整理LiteLLM密文重放、YesWiki、SiYuan、两项独立io_uring研究、Pillow EPS/FlashPix、Ruby Onigmo、PentestCode、LocalAI及CyberStrikeAI的公开资料；为既有Node.js Brotli文补充Node2Shell别名、利用实现与探测判据差异，为PHP Session文补充静态审阅和适用条件。保留认证、特定构建、失败对照、修复映射及图片证据缺口，不把探测结果或本地崩溃泛化为通用RCE。修复离线资源检查对本地srcset候选和SVG资源依赖的遗漏，并按实际CI覆盖更新维护说明；质量baseline未变。详见[Node2Shell专项](docs/reviews/20261102-node2shell/README.md)、[第二批补漏](docs/reviews/20261102-secondwave/README.md)及[第三批来源复核](docs/reviews/20261102-thirdwave/README.md)。
 
 * 2026-11-02（PR #36）新增10篇、补充1篇：整理 node-forge、Linux timer/TCP、Wasmtime、svg-hush/xml、AEM、MLflow、Flowise、OAuthLib 和 imgproxy 的公开研究；为已有 Brotli 文追加固定 WordPress 镜像的响应解码入口及分支回移修复边界。区分原始披露、修复和详细材料发布时间，保留版本冲突、失败对照与作者结果的限制。详见[补漏记录](docs/reviews/20261102-gap-review/README.md)和[集成复核](docs/reviews/20261102-gap-review/integration-review.md)。
 

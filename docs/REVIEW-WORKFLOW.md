@@ -10,23 +10,27 @@
 
 ## 运行可重复的检查
 
-在仓库运行已有 Python 检查：
+在仓库根运行与 [Content quality 工作流](../.github/workflows/content-quality.yml) 对应的 Python 检查：
 
 ```sh
 python -m unittest discover -s tests -v
 python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
-python scripts/wiki.py build
+python scripts/resource-audit.py --require-local --report /tmp/wiki-resource-audit.json
 python scripts/wiki.py build --check
 ```
+
+`build --check` 只比较派生产物，不写入文件。正文或元数据的预期改动需要更新索引时，先运行 `python scripts/wiki.py build`，审阅生成差异，再重跑上述检查；纯维护文档变更不需要重建索引。不得先重建再把原先的生成不一致描述为从未发生。
+
+CI 使用完整检出；稀疏工作树中的资源树确认不等于已读取文件字节、识别容器或完成图片解码。本地报告缺少资源时，须保留缺口，并核实同一提交的完整检出结果。报告分别记录最终提交、每条命令的退出码、已生成报告和未运行步骤。前一步失败而跳过的后续步骤不能算作通过。
 
 渲染检查使用现有博客的 Marked 依赖，无需为内容库安装新依赖。在本地博客检出目录内的 VulWiki 子目录运行：
 
 ```sh
-node --test tests/render-audit.test.cjs
+node --test tests/render-audit.test.cjs tests/image-inventory.test.cjs
 node scripts/render-audit.cjs --root . --out /tmp/wiki-render-audit
 ```
 
-独立检出时，可用 `--marked-module` 指向已经安装的 Marked CommonJS 模块；测试同样需要已有 Marked 可被 Node 解析。记录报告中的实际版本，升级解析器时重新检查差异。本工具只对字符串运行 lexer/parser，不将 HTML 加载到 DOM。为保证比较稳定，关闭 Marked 的随机邮箱编码；该结果不能替代浏览器的实际展示检查。
+这两组 Node 测试与后续渲染检查需单独运行；当前 Content quality CI 不执行它们，不能用 Python 单测或 CI 成功替代。独立检出时，可用 `--marked-module` 指向已经安装的 Marked CommonJS 模块；测试同样需要已有 Marked 可被 Node 解析。记录报告中的实际版本，升级解析器时重新检查差异。本工具只对字符串运行 lexer/parser，不将 HTML 加载到 DOM。为保证比较稳定，关闭 Marked 的随机邮箱编码；该结果不能替代浏览器的实际展示检查。
 
 工具输出 `inventory.jsonl`、`candidates.jsonl` 和 `summary.json`，包含完整候选原文、文件 SHA、候选 ID、可定位时的行号和渲染哈希。无法精确定位的嵌套 Markdown 行号为 `null`，不能假设为第一行。输出目录应在仓库之外，保留完整诊断，不脱敏。
 

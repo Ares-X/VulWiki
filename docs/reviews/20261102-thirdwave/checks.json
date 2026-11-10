@@ -1,0 +1,44 @@
+{
+  "baseline_markdown_unchanged": 6066,
+  "new_articles": 6,
+  "python_tests": 96,
+  "node_tests": 44,
+  "new_quality_issues": 0,
+  "historical_quality_warnings": 4093,
+  "build_check_different_files": [],
+  "offline_render_structural_failures": 0,
+  "new_article_render_candidates": [],
+  "copy_text_checks": [
+    {
+      "path": "Web安全/AI应用/CyberStrikeAI/CyberStrikeAI 1.7.11 已认证 result 回传路径穿越文件写入.md",
+      "fenced_code_blocks": 0,
+      "copy_text_equal": true
+    },
+    {
+      "path": "Web安全/AI应用/LocalAI/LocalAI 模型配置下载 SSRF 与修复映射（CVE-2026-59707）.md",
+      "fenced_code_blocks": 1,
+      "copy_text_equal": true
+    },
+    {
+      "path": "Web安全/AI应用/PentestCode/PentestCode 报告外部目录写入绕过与隧道命令拼接注入.md",
+      "fenced_code_blocks": 0,
+      "copy_text_equal": true
+    },
+    {
+      "path": "Web安全/开发框架/Pillow/Pillow EPS 文件名被 Ghostscript 解释为参数（CVE-2026-112900）.md",
+      "fenced_code_blocks": 0,
+      "copy_text_equal": true
+    },
+    {
+      "path": "Web安全/开发框架/Pillow/Pillow FlashPix JPEG 解码堆溢出（CVE-2026-112398）.md",
+      "fenced_code_blocks": 0,
+      "copy_text_equal": true
+    },
+    {
+      "path": "Web安全/开发框架/Ruby/Ruby Onigmo 重复编号溢出与本地崩溃（CVE-2026-110264）.md",
+      "fenced_code_blocks": 0,
+      "copy_text_equal": true
+    }
+  ],
+  "local_resources": "Sparse checkout; full resource verification requires remote CI. No new image files."
+}

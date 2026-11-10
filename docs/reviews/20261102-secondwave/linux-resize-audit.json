@@ -1,0 +1,10 @@
+{
+  "fetched_at": "2026-11-02",
+  "page_url": "https://hackmd.io/epHcDaB_Tr6RZWmLobJY0g/download",
+  "page_sha256": "5b3328a03b97aa134b85aa5fd83fdc4f0dc388852f575de231b25eb4fb08cef9",
+  "vulnerability1_code_bytes": 8879,
+  "vulnerability1_code_lines": 270,
+  "vulnerability1_code_sha256": "bae13b017a39f8ceb53e76f598ab4b82a2233665f74c5ccf675fab71e679d071",
+  "read_scope": "Entire first C code block manually read; paper section2 full text; complete four-file upstream patch and CNA version inventory. Rest of page code NOT fully read. No execute/install/scan.",
+  "paper_sha256": "6a62d3c21c4495245d21f74b6da991d4acf013afe502730e89d2cffe78f847a4"
+}

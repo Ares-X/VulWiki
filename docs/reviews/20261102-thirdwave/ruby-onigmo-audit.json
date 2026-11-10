@@ -1,0 +1,87 @@
+{
+  "repo": "TahuCryptsi/poc-gitlab-onigmo-cve-2026-110264",
+  "sha": "8ebfcf72b0ac9366bb4b569ff93a5609085c203b",
+  "tree_truncated": false,
+  "blob_count": 10,
+  "files": [
+    {
+      "path": ".gitignore",
+      "blob_sha": "c123e7e68674ee547f0e8644bd1c615ab0732858",
+      "chars": 36,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "LICENSE",
+      "blob_sha": "ed18c408d48fc93145e70e07709ef246278802a7",
+      "chars": 1068,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "0ce0038e5382ad835e63208dcd7f8f7a77aaaba9",
+      "chars": 6457,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "UPDATE-heap-corruption.md",
+      "blob_sha": "8d21615b4e9f8caed14ff9085f2a59dc41c2ad08",
+      "chars": 1297,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "evidence/HEAP-ANALYSIS.md",
+      "blob_sha": "09d8f7cda1675b799979b4c1e3ac4074fb56db35",
+      "chars": 2519,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "evidence/crash-ruby3411.txt",
+      "blob_sha": "f3e0c1b1995d5cc68cafff2c1d3ebcace1f30457",
+      "chars": 23372,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "evidence/patched-4.0-note.txt",
+      "blob_sha": "73d1d336758ecd54d278f40aebb6317dc21d0082",
+      "chars": 121,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "lab/docker-compose.yml",
+      "blob_sha": "42e1341beeb0833951490b491b956c93e85951ed",
+      "chars": 621,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "poc.py",
+      "blob_sha": "a3cedf5704fcb157ffda4c79af34b4d8a74b5dc4",
+      "chars": 3540,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    },
+    {
+      "path": "src/groom-measured.rb",
+      "blob_sha": "36d9570157016154f2a6d9d9cb2fabc65f92b07c",
+      "chars": 418,
+      "review": "full text read; evidence memory map is data, not a reproduced result"
+    }
+  ],
+  "admission": "QUALIFIED_NARROW_LOCAL_CRASH_POC_PENDING_INDEPENDENT_REVIEW",
+  "vendor_sources": [
+    "https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/",
+    "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+  ],
+  "fixed_source": "493d26dcdea8b2f0ac5d28e057b401bc809e7fae",
+  "risks": [
+    "mutable Docker image tags",
+    "apt-get dependency fetch in optional compose",
+    "local crash/CPU/memory consumption",
+    "generic RegexpError classification is not an exact guard proof",
+    "author Oct22 only-master-fixed statement superseded Oct23"
+  ],
+  "not_reviewed": [
+    "Docker image contents",
+    "distribution package internals",
+    "googlesky main executable code"
+  ],
+  "executed": false
+}

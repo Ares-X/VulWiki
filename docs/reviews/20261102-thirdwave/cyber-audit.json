@@ -1,0 +1,205 @@
+{
+  "scope": "Original /result curl request bytes full; article section5.6 and supporting issue explanations;2 screenshots viewed. Relevant auth/result/blob/type functions old/fixed manually read;old run.sh(501),upgrade.sh(411),main.go,go.mod,requirements.txt full;go.sum structured inventory;fixed3 workflows full;entiretrees inventoried not allproductsource read.",
+  "license": "Apache2.0 source;article/images unknown reuse permission;onlyoriginalsummary",
+  "decision": "admit authenticated/result filewrite only;XSS separate not admitted",
+  "wxvl_commit": "31632ad3a32467b7837fe87d93fa186c48616030",
+  "old_commit": "a6b3773f0036d3394032b2fa0c67fe88c8f0357d",
+  "fixed_commit": "4ca8b7d33663cd4ba8213f4afa8194ae1928ef16",
+  "go_sum_inventory": {
+    "lines": 420,
+    "malformed_or_non_h1": [],
+    "require_entries": 96,
+    "external_package_sources_reviewed": false
+  },
+  "limitations": [
+    "OriginalWeChat returns195byteSiteUnavailable",
+    "No earliestfix/allversions/CVE mapping",
+    "No wholeproduct or externaldependency audit",
+    "NoPoC/install/build/scan executed",
+    "Screenshots kept local only no republishing; visiblylocal labtoken notverifiedagainstanyservice"
+  ],
+  "files": [
+    {
+      "version": "old",
+      "path": "README.md",
+      "blob": "50773efbcd56de2f7210f0feb0a5277c1d6c2eb3",
+      "sha256": "0489249475af62b086a7adf9291c59a7e7cf8bc59302915b45bc6fbdaa0e5052",
+      "size": 20306
+    },
+    {
+      "version": "old",
+      "path": "cmd/server/main.go",
+      "blob": "d45619a704f73482414f00f550f9f6c625b5e151",
+      "sha256": "d76eb151344a27e4eae8c1ebed149c397e385426dbc96cde8c8a4d9e3a4a0e3d",
+      "size": 5663
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/types.go",
+      "blob": "a6fb4acfdb92d6840132ad6fcb94e265e7f6835e",
+      "sha256": "eb374e09a53375235e06069f41b9d3013eb8eee735465aa45c74eb698ebb9087",
+      "size": 10588
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/crypto.go",
+      "blob": "bf4c5dddd3f2e28c7023aa78b540dfebdf7e1dfc",
+      "sha256": "1b26822114ccee671d802f6cc81100703074fbf06e6de504d58b0c74d4c63bff",
+      "size": 4435
+    },
+    {
+      "version": "old",
+      "path": "requirements.txt",
+      "blob": "2997f703e76ccb137698d0f01a5f40840bb0a1db",
+      "sha256": "694ed5ab5610408a2e4190dfc268886baa5b8b9fcced6b8ea554ca658d87c9ab",
+      "size": 396
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/io.go",
+      "blob": "b916a07e2834cf322616d7f6813838c7687ea14a",
+      "sha256": "4460c2ebfd47179d4320029883fda8f719f6c7dc79bdedf11311fa5598ed0519",
+      "size": 559
+    },
+    {
+      "version": "old",
+      "path": "go.mod",
+      "blob": "721ded9188b6beac6bfc6f0122a5ffcbccf021aa",
+      "sha256": "f742e9070e9512b257871e9d35f7517980378fe767dba2d7fab3d66b434dcb50",
+      "size": 5419
+    },
+    {
+      "version": "old",
+      "path": "upgrade.sh",
+      "blob": "99cd3714a880a46d1f9b6bc5346d3737e38cfc25",
+      "sha256": "3f2b6c22eb4fa72ae2fc3daff5aa72be2b1c5a7356364a437926796080e576d6",
+      "size": 11411
+    },
+    {
+      "version": "old",
+      "path": "go.sum",
+      "blob": "95a82311278ac407cce55b08bf756e293f299916",
+      "sha256": "d22c8f707eb06450e9c4f6aa704a6c8bdcbe5e99c186d4e0a96553e82628d966",
+      "size": 39554
+    },
+    {
+      "version": "old",
+      "path": "config.example.yaml",
+      "blob": "d75bbb3a1de86e3a6b3ded162e3f584e54a76374",
+      "sha256": "011ada1fb1dd50c8fac1b8b625ff5c4b29aa3e3890ad60d401c5d793dd0ae8b4",
+      "size": 31454
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/listener_http.go",
+      "blob": "22fef3289a6c5e2f0fc9c6bafbda394fe3f24392",
+      "sha256": "414c94c20030e5f9e31c705c4aa205816883f7cda927bb28afcf3b6a0a8414a8",
+      "size": 16506
+    },
+    {
+      "version": "old",
+      "path": "internal/c2/manager.go",
+      "blob": "d620c87b3029fff01190790756b7f7c5058f2b00",
+      "sha256": "5901d8d2d4f332ce887a29ed2e62e9dcbae1413952c92f2862b97b839a91de2d",
+      "size": 26674
+    },
+    {
+      "version": "old",
+      "path": "LICENSE",
+      "blob": "7dada6d1fda5ab2b85d11ecde126c0d8038f9dd2",
+      "sha256": "c5e886b33279f16172f906d2ec7fb23425b816c8a63b684159daa77628256f76",
+      "size": 11337
+    },
+    {
+      "version": "old",
+      "path": "run.sh",
+      "blob": "81e0df75bed1adfde8fe45bd04935d8fa980d641",
+      "sha256": "a5266211a797381b6a9f370a4fe84f44f59d9f344a33b9c97ff16e0d2a9d830d",
+      "size": 16346
+    },
+    {
+      "version": "old",
+      "path": "SECURITY.md",
+      "blob": "8f0b2d68c0a351c92f7e65861bffa642b9f56b16",
+      "sha256": "62d593b6e90c62daf69cf8a0adf46af3efc43f04a6eb660b00d8a71bd69624fd",
+      "size": 5685
+    },
+    {
+      "version": "fixed",
+      "path": "internal/c2/listener_http.go",
+      "blob": "22f9cd80e65e372afd16067ead402d02e1ad991e",
+      "sha256": "34ba03c06153b282f2523f777c358b034175fdb32ded78a394ccd87befcbe7a7",
+      "size": 18125
+    },
+    {
+      "version": "fixed",
+      "path": "SECURITY.md",
+      "blob": "8f0b2d68c0a351c92f7e65861bffa642b9f56b16",
+      "sha256": "62d593b6e90c62daf69cf8a0adf46af3efc43f04a6eb660b00d8a71bd69624fd",
+      "size": 5685
+    },
+    {
+      "version": "fixed",
+      "path": "internal/c2/types.go",
+      "blob": "a6fb4acfdb92d6840132ad6fcb94e265e7f6835e",
+      "sha256": "eb374e09a53375235e06069f41b9d3013eb8eee735465aa45c74eb698ebb9087",
+      "size": 10588
+    },
+    {
+      "version": "fixed",
+      "path": ".github/workflows/self-update.yml",
+      "blob": "582cb0eb3e2b42c17315989c7086025b723e55e7",
+      "sha256": "4eec952c3a5c4551eda49cb78095336c8e02232b18d8daebf377b3a28a11f137",
+      "size": 1499
+    },
+    {
+      "version": "fixed",
+      "path": ".github/workflows/context-memory.yml",
+      "blob": "6f18b5aa9255e94c7cbf34bf323587bc5bc831f9",
+      "sha256": "72fa07c6edc30029510f664871bec4d1f7102248884e453e8620b9ef1839edc3",
+      "size": 1278
+    },
+    {
+      "version": "fixed",
+      "path": "README.md",
+      "blob": "e63dcb1213382973cf8b48a1c16f53a1f84492dd",
+      "sha256": "740184626cadc9ec37e13a329e5611dce8ebbbaa9b028b383a6bb50973275fe3",
+      "size": 21855
+    },
+    {
+      "version": "fixed",
+      "path": "internal/c2/manager.go",
+      "blob": "585a4b68f5797b66d192dfeeaca31c019cee0319",
+      "sha256": "be807b884dbdb15e0ce4b71014957afc353a3123e01acb40c81a81270903f681",
+      "size": 29913
+    },
+    {
+      "version": "fixed",
+      "path": "go.sum",
+      "blob": "cc4267ea8ab7ac50c5539ddf19e52cadd0dbdd33",
+      "sha256": "0b0d6b38698f3e1f128bdd3d1b3d78a5dc534772c915207a5bccfe1c07942ae9",
+      "size": 58674
+    },
+    {
+      "version": "fixed",
+      "path": ".github/workflows/process-isolation.yml",
+      "blob": "82782ccb95a28931f5a896431c7d4fba49f73eae",
+      "sha256": "9904c2d776404ff8097ccb47d4cf568aa2f03faf99aee4f9952e090c24a251ee",
+      "size": 2368
+    },
+    {
+      "version": "fixed",
+      "path": "go.mod",
+      "blob": "7d319ebdf9b4a20121220b0d39519125148ae702",
+      "sha256": "bf97ba0f5d6664536b78b813b43da73be0cfe9bb1b382d0a02c7a60563805fe8",
+      "size": 8023
+    },
+    {
+      "version": "fixed",
+      "path": "LICENSE",
+      "blob": "7dada6d1fda5ab2b85d11ecde126c0d8038f9dd2",
+      "sha256": "c5e886b33279f16172f906d2ec7fb23425b816c8a63b684159daa77628256f76",
+      "size": 11337
+    }
+  ]
+}

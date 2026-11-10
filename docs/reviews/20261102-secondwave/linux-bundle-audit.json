@@ -1,0 +1,12 @@
+{
+  "source_url": "https://hackmd.io/epHcDaB_Tr6RZWmLobJY0g/download",
+  "page_sha256": "5b3328a03b97aa134b85aa5fd83fdc4f0dc388852f575de231b25eb4fb08cef9",
+  "code_block_sha256": "7c0f8f9d2e4fb7a9f8a861ee9bef1614bafdbf832266431aba5219add432cc69",
+  "code_block_lines": 979,
+  "scope": "Entire second C code block manually read. Paper section3 full. Three patch diffs and associated io_ring_buffers_peek function full. Not technique1/2/3/drivers. No executing/compiling/installing.",
+  "introduced": "46800585ae04863c623b1563b03d12e9381089f1",
+  "first_fix": "cd053d788c3f13b3eaf16672d427ee828fda16ed",
+  "regression_fix": "f1596ba3e6b390aa0fef8466afce44efecf39d8d",
+  "identifier": "CVE mapping not confirmed; do not reuse23275",
+  "original_version_check": true
+}

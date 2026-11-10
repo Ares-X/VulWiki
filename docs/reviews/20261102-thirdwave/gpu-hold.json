@@ -1,0 +1,755 @@
+{
+  "repo": "Zagitta/gpu-unlock",
+  "head": "7eb51bccae0a0b7e599e084d971170e9a1e82d0c",
+  "date": "2026-10-28T22:31:16Z",
+  "tree": {
+    "sha": "7eb51bccae0a0b7e599e084d971170e9a1e82d0c",
+    "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/7eb51bccae0a0b7e599e084d971170e9a1e82d0c",
+    "tree": [
+      {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3d013ab24acd34bbc66d317c2710e781b5c3aae0",
+        "size": 339,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/3d013ab24acd34bbc66d317c2710e781b5c3aae0"
+      },
+      {
+        "path": ".github",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f5bce4f3d24bc4b2e0092fc1faacd956d75d44f3",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/f5bce4f3d24bc4b2e0092fc1faacd956d75d44f3"
+      },
+      {
+        "path": ".github/FUNDING.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d78970d93072a5350085ef0403c4b3aae8e43d5f",
+        "size": 41,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/d78970d93072a5350085ef0403c4b3aae8e43d5f"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "96daff4719f1fed65881096d9f24d1da370ffb14",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/96daff4719f1fed65881096d9f24d1da370ffb14"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2e839aa524c1397feba26e4b6c5c081235485d96",
+        "size": 1435,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/2e839aa524c1397feba26e4b6c5c081235485d96"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/config.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b4fe2f4712ffcc5216e72480defd9dab501f1bfc",
+        "size": 361,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/b4fe2f4712ffcc5216e72480defd9dab501f1bfc"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/unlock-failure.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c5f22a8bbb3940b988d8ec3551f6ee16b12061e",
+        "size": 4945,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/2c5f22a8bbb3940b988d8ec3551f6ee16b12061e"
+      },
+      {
+        "path": ".github/ci",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "eea2a4ac5bb6300880c8ab33328cb129ea9af215",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/eea2a4ac5bb6300880c8ab33328cb129ea9af215"
+      },
+      {
+        "path": ".github/ci/module.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "cbb43e317b945f7eec80d84340758ec17e08328f",
+        "size": 1587,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/cbb43e317b945f7eec80d84340758ec17e08328f"
+      },
+      {
+        "path": ".github/ci/package.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "78d0e7deae4298d3ee29da865d586b1c0cdd8c18",
+        "size": 916,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/78d0e7deae4298d3ee29da865d586b1c0cdd8c18"
+      },
+      {
+        "path": ".github/workflows",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1fa5a46b5e840c7285dfd53cd600c7ecdf4c0e16",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/1fa5a46b5e840c7285dfd53cd600c7ecdf4c0e16"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c2f644a5d3d51e508a50156deed55d73099157c",
+        "size": 4037,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/6c2f644a5d3d51e508a50156deed55d73099157c"
+      },
+      {
+        "path": ".github/workflows/unraid.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "73ec3d513471cc7183a762bfe5b095c04ca9d6be",
+        "size": 3687,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/73ec3d513471cc7183a762bfe5b095c04ca9d6be"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "981cef4f62d0a004a35914a6d17a6ab547b8d137",
+        "size": 408,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/981cef4f62d0a004a35914a6d17a6ab547b8d137"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dea898272d5a1465b2e23f3275ae18dc3b470c5c",
+        "size": 743,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/dea898272d5a1465b2e23f3275ae18dc3b470c5c"
+      },
+      {
+        "path": "Makefile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9aa4937771fe25690663ce7983b145b93d820f17",
+        "size": 5762,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/9aa4937771fe25690663ce7983b145b93d820f17"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46199d5eef4e30ca526eba7f12b535afaa24264c",
+        "size": 13069,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/46199d5eef4e30ca526eba7f12b535afaa24264c"
+      },
+      {
+        "path": "VERSION",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "227cea215648b1af34a87c9acf5b707fe02d2072",
+        "size": 6,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/227cea215648b1af34a87c9acf5b707fe02d2072"
+      },
+      {
+        "path": "assets",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "99bf32d72bfff55b516660e7366e907445b52eaf",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/99bf32d72bfff55b516660e7366e907445b52eaf"
+      },
+      {
+        "path": "assets/banner.svg",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd2f99206aaf3ffa4166c8270433c5a0deeace4f",
+        "size": 2772,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/fd2f99206aaf3ffa4166c8270433c5a0deeace4f"
+      },
+      {
+        "path": "debian",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e393ea752d962f183f962cec35665403b8476440",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/e393ea752d962f183f962cec35665403b8476440"
+      },
+      {
+        "path": "debian/changelog",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e61cd15267d3a45a21321424bb5da595e16e59ed",
+        "size": 301,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/e61cd15267d3a45a21321424bb5da595e16e59ed"
+      },
+      {
+        "path": "debian/clean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6def0d86a39ca8254b432a76f8e2740016939c4",
+        "size": 25,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/c6def0d86a39ca8254b432a76f8e2740016939c4"
+      },
+      {
+        "path": "debian/control",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5eae7f778935dea0f7b91f75f07a79fde4cf2e7e",
+        "size": 765,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/5eae7f778935dea0f7b91f75f07a79fde4cf2e7e"
+      },
+      {
+        "path": "debian/copyright",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d0a96558e80af438fb130b0fa6ef249e25e8de42",
+        "size": 331,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/d0a96558e80af438fb130b0fa6ef249e25e8de42"
+      },
+      {
+        "path": "debian/gpu-unlock-dkms.dkms",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f687470007561135927892fc6fff72f357e13ede",
+        "size": 28,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/f687470007561135927892fc6fff72f357e13ede"
+      },
+      {
+        "path": "debian/gpu-unlock-dkms.install",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1bdde78393a15a9569aee87fb12511cc7e9ff49c",
+        "size": 74,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/1bdde78393a15a9569aee87fb12511cc7e9ff49c"
+      },
+      {
+        "path": "debian/gpu-unlock-dkms.postinst",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "73cc724e13b18078b33d6449ad9440c21c5a6781",
+        "size": 354,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/73cc724e13b18078b33d6449ad9440c21c5a6781"
+      },
+      {
+        "path": "debian/gpu-unlock-dkms.postrm",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c54a2369484158962bbe2a3c313dfde79ce230fa",
+        "size": 234,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/c54a2369484158962bbe2a3c313dfde79ce230fa"
+      },
+      {
+        "path": "debian/gpu-unlock-firmware.install",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "616cd4060922d8b1df14ce2e1d569805e5735e2a",
+        "size": 92,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/616cd4060922d8b1df14ce2e1d569805e5735e2a"
+      },
+      {
+        "path": "debian/gpu-unlock-firmware.lintian-overrides",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d467ac79751475d1a2d78c8d12e6c3c74fac74e7",
+        "size": 198,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/d467ac79751475d1a2d78c8d12e6c3c74fac74e7"
+      },
+      {
+        "path": "debian/rules",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "918e3506e1708bcb972a4497dfd83cb8c2184494",
+        "size": 611,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/918e3506e1708bcb972a4497dfd83cb8c2184494"
+      },
+      {
+        "path": "debian/source",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "129524e88fb0975a283935006185a1dd2abf48e7",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/129524e88fb0975a283935006185a1dd2abf48e7"
+      },
+      {
+        "path": "debian/source/format",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "89ae9db8f88b823b6a7eabf55e203658739da122",
+        "size": 13,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/89ae9db8f88b823b6a7eabf55e203658739da122"
+      },
+      {
+        "path": "docs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b2e284421a374058c2a622b6e513644b82826610",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/b2e284421a374058c2a622b6e513644b82826610"
+      },
+      {
+        "path": "docs/How Ampere was unlocked.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "68ed6814ebe6ea661d98eda986f7ff3eed537cb6",
+        "size": 9071,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/68ed6814ebe6ea661d98eda986f7ff3eed537cb6"
+      },
+      {
+        "path": "firmware",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "76e54a42f3321a53b2a089b3da982db1a096fcc8",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/76e54a42f3321a53b2a089b3da982db1a096fcc8"
+      },
+      {
+        "path": "firmware/NOTICE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e95e6fb30e131b8f2f0a6e69707a0151e2181d93",
+        "size": 2459,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/e95e6fb30e131b8f2f0a6e69707a0151e2181d93"
+      },
+      {
+        "path": "firmware/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e318f659340fea7a3a3f20477d1a2e504e543c2d",
+        "size": 1038,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/e318f659340fea7a3a3f20477d1a2e504e543c2d"
+      },
+      {
+        "path": "firmware/extract_boot_assets.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c986c63e007722e6e8f15904158aac2ad1f9c2c",
+        "size": 8105,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/8c986c63e007722e6e8f15904158aac2ad1f9c2c"
+      },
+      {
+        "path": "firmware/extract_gsp.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fdc669833d1c1b9c920acbbbca193e4a96a5a756",
+        "size": 3618,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/fdc669833d1c1b9c920acbbbca193e4a96a5a756"
+      },
+      {
+        "path": "firmware/fetch_artifacts.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "74553ad3799272fb28a27571d4ca94cc06426534",
+        "size": 2613,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/74553ad3799272fb28a27571d4ca94cc06426534"
+      },
+      {
+        "path": "kernel",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7c687037a3bba1571e098b73f86faf7eefc2c472",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/7c687037a3bba1571e098b73f86faf7eefc2c472"
+      },
+      {
+        "path": "kernel/gpu_unlock",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4f5b4844e7b9039bf803902bc0675d9a17761ff4",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/4f5b4844e7b9039bf803902bc0675d9a17761ff4"
+      },
+      {
+        "path": "kernel/gpu_unlock/Kbuild",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c0ce572a5694157a7440f4f161dbe086d5bbcbeb",
+        "size": 192,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/c0ce572a5694157a7440f4f161dbe086d5bbcbeb"
+      },
+      {
+        "path": "kernel/gpu_unlock/Makefile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1bccac4917c1bd88120fe133ce5d667255592571",
+        "size": 250,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/1bccac4917c1bd88120fe133ce5d667255592571"
+      },
+      {
+        "path": "kernel/gpu_unlock/device.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "36186b8c5eb225df5a225d62b9db65dfaa775261",
+        "size": 418,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/36186b8c5eb225df5a225d62b9db65dfaa775261"
+      },
+      {
+        "path": "kernel/gpu_unlock/diagnostic.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec28c5fe59d4891a80a16c4fbb827438f4152b5d",
+        "size": 1133,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/ec28c5fe59d4891a80a16c4fbb827438f4152b5d"
+      },
+      {
+        "path": "kernel/gpu_unlock/dkms.conf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d747dc3719f4821927ce5d651191c0f5ab029c28",
+        "size": 489,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/d747dc3719f4821927ce5d651191c0f5ab029c28"
+      },
+      {
+        "path": "kernel/gpu_unlock/falcon.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6abf17dffc6483cebc2986677593b23d60736ee8",
+        "size": 16034,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/6abf17dffc6483cebc2986677593b23d60736ee8"
+      },
+      {
+        "path": "kernel/gpu_unlock/falcon.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b079edc6eacdd02dafa80c42fdf3242aebe06086",
+        "size": 2817,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/b079edc6eacdd02dafa80c42fdf3242aebe06086"
+      },
+      {
+        "path": "kernel/gpu_unlock/firmware_610.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6d94e751c2740fbb2823c42280056ca55a0d2bea",
+        "size": 8244,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/6d94e751c2740fbb2823c42280056ca55a0d2bea"
+      },
+      {
+        "path": "kernel/gpu_unlock/firmware_610.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65323332b0e3369eec57ca07c97ccced736487c0",
+        "size": 2287,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/65323332b0e3369eec57ca07c97ccced736487c0"
+      },
+      {
+        "path": "kernel/gpu_unlock/gfw_eval.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a72352ec39601fa4244a0ad3644c8383a8fc2218",
+        "size": 935,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/a72352ec39601fa4244a0ad3644c8383a8fc2218"
+      },
+      {
+        "path": "kernel/gpu_unlock/gfw_eval.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "502315b22b83a74c5d2917b5744df70011c6ee18",
+        "size": 1291,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/502315b22b83a74c5d2917b5744df70011c6ee18"
+      },
+      {
+        "path": "kernel/gpu_unlock/layout_610.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0c91328b496e43001457a96563c5a0b28b3e8251",
+        "size": 2807,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/0c91328b496e43001457a96563c5a0b28b3e8251"
+      },
+      {
+        "path": "kernel/gpu_unlock/layout_610.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "67d9203c67bc5842ba42cbb7e291ab70bc62866a",
+        "size": 815,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/67d9203c67bc5842ba42cbb7e291ab70bc62866a"
+      },
+      {
+        "path": "kernel/gpu_unlock/main.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "723d65c8e42e5ca3fb5b01144a923015b7445933",
+        "size": 6155,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/723d65c8e42e5ca3fb5b01144a923015b7445933"
+      },
+      {
+        "path": "kernel/gpu_unlock/payload.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04efbfe8150656c37b2dc985777786ed715bced6",
+        "size": 1969,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/04efbfe8150656c37b2dc985777786ed715bced6"
+      },
+      {
+        "path": "kernel/gpu_unlock/payload.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a799a8565fc38dc008bedf15fd018c2681814fca",
+        "size": 2343,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/a799a8565fc38dc008bedf15fd018c2681814fca"
+      },
+      {
+        "path": "kernel/gpu_unlock/prep_610.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccc9e5f8c3ba0a26faeaa130ac6632f2fe719fb2",
+        "size": 8404,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/ccc9e5f8c3ba0a26faeaa130ac6632f2fe719fb2"
+      },
+      {
+        "path": "kernel/gpu_unlock/prep_610.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e54ae287b8e3320269d7dbaf442586046320487",
+        "size": 2237,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/0e54ae287b8e3320269d7dbaf442586046320487"
+      },
+      {
+        "path": "kernel/gpu_unlock/recipes.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "21e4aca7af17fb1e3118901f1bc4f9ad96b17db9",
+        "size": 16596,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/21e4aca7af17fb1e3118901f1bc4f9ad96b17db9"
+      },
+      {
+        "path": "kernel/gpu_unlock/recipes.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "99e08292988bdbdde6397f90629695bacc36fee5",
+        "size": 2898,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/99e08292988bdbdde6397f90629695bacc36fee5"
+      },
+      {
+        "path": "kernel/gpu_unlock/registers.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "97b1ba869af48d359d46e8dfd7f6a32f3a3e6d76",
+        "size": 4711,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/97b1ba869af48d359d46e8dfd7f6a32f3a3e6d76"
+      },
+      {
+        "path": "kernel/gpu_unlock/unlock_610.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8849cd73216e57e53f75733f70e592ba195cc3d8",
+        "size": 65418,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/8849cd73216e57e53f75733f70e592ba195cc3d8"
+      },
+      {
+        "path": "kernel/gpu_unlock/unlock_610.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f94a146a290081a53793ecf93041261da76eceda",
+        "size": 994,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/f94a146a290081a53793ecf93041261da76eceda"
+      },
+      {
+        "path": "kernel/gpu_unlock/vbios_610.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cb04a0b975ec9c2ed8e974ae0bc5fd14b6e99231",
+        "size": 13353,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/cb04a0b975ec9c2ed8e974ae0bc5fd14b6e99231"
+      },
+      {
+        "path": "kernel/gpu_unlock/vbios_610.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "05b4f33b1673212eed3272584a14dbff3552b655",
+        "size": 991,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/05b4f33b1673212eed3272584a14dbff3552b655"
+      },
+      {
+        "path": "licenses",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "776be459f7572100b04400d5ff241e27ab4cc3a1",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/776be459f7572100b04400d5ff241e27ab4cc3a1"
+      },
+      {
+        "path": "licenses/CMP40HX-MIT.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8a9ddcfd7aa3a16823219c871e2c86786ced226",
+        "size": 1057,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/e8a9ddcfd7aa3a16823219c871e2c86786ced226"
+      },
+      {
+        "path": "licenses/GPL-2.0.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d159169d1050894d3ea3b98e1c965c4058208fe1",
+        "size": 18092,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/d159169d1050894d3ea3b98e1c965c4058208fe1"
+      },
+      {
+        "path": "licenses/NVIDIA-MIT.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "56baef3d002d0fd04ae634b7439bf316bd4df779",
+        "size": 1219,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/56baef3d002d0fd04ae634b7439bf316bd4df779"
+      },
+      {
+        "path": "packaging",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "160e57dac0e8ebf2f6aa35e0998376caab13db29",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/160e57dac0e8ebf2f6aa35e0998376caab13db29"
+      },
+      {
+        "path": "packaging/arch",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ea7f6fa3bbae0fb07940a59a313f8daa91285570",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/ea7f6fa3bbae0fb07940a59a313f8daa91285570"
+      },
+      {
+        "path": "packaging/arch/PKGBUILD",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04d758530d1157aace1a1e7c110b824d0b63d02f",
+        "size": 2333,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/04d758530d1157aace1a1e7c110b824d0b63d02f"
+      },
+      {
+        "path": "packaging/arch/gpu-unlock.install",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ea86c0348178af687ac85b6f0b95d839c521330",
+        "size": 422,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/1ea86c0348178af687ac85b6f0b95d839c521330"
+      },
+      {
+        "path": "packaging/boot",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5bfab69ff7c8aab4f69b709b0709e52ae31d9094",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/5bfab69ff7c8aab4f69b709b0709e52ae31d9094"
+      },
+      {
+        "path": "packaging/boot/dracut.conf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "58e46e3b67788ca7f4ed08956177907564f0d385",
+        "size": 200,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/58e46e3b67788ca7f4ed08956177907564f0d385"
+      },
+      {
+        "path": "packaging/boot/initramfs-tools-init-top",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "1efc5e64daf567b5beec4f65cda77daf8f6fceab",
+        "size": 343,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/1efc5e64daf567b5beec4f65cda77daf8f6fceab"
+      },
+      {
+        "path": "packaging/boot/initramfs-tools.conf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98b30c7acaa7d2244b8a47f6170c4903cb2b590d",
+        "size": 139,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/98b30c7acaa7d2244b8a47f6170c4903cb2b590d"
+      },
+      {
+        "path": "packaging/boot/mkinitcpio.conf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1fcf6f9e334b1fb7e920edf0c3de29797ca0fdf2",
+        "size": 1113,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/1fcf6f9e334b1fb7e920edf0c3de29797ca0fdf2"
+      },
+      {
+        "path": "packaging/rpm",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e9adc65b2bbf168f6781043f5ce259702c46b0df",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/e9adc65b2bbf168f6781043f5ce259702c46b0df"
+      },
+      {
+        "path": "packaging/rpm/gpu-unlock.rpmlintrc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3907866596ab00134bdc8898e12bb667b2570a90",
+        "size": 439,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/3907866596ab00134bdc8898e12bb667b2570a90"
+      },
+      {
+        "path": "packaging/rpm/gpu-unlock.spec",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9568336467168075232f97bd5955707acc7ce3dc",
+        "size": 4759,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/9568336467168075232f97bd5955707acc7ce3dc"
+      },
+      {
+        "path": "packaging/snapshot.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "6422aa6c60314ac323ddea02cb744ab85971ab24",
+        "size": 1130,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/6422aa6c60314ac323ddea02cb744ab85971ab24"
+      },
+      {
+        "path": "packaging/unraid",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e9b37f4565456d1eb92833be7567c8c32de92d8d",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/e9b37f4565456d1eb92833be7567c8c32de92d8d"
+      },
+      {
+        "path": "packaging/unraid/build.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "2a1aa532d968ab984658f7c8a09ebb45bad419a0",
+        "size": 2759,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/2a1aa532d968ab984658f7c8a09ebb45bad419a0"
+      },
+      {
+        "path": "packaging/unraid/discover.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "3cadbeea9a5ce6fc86fd2632a8e935c14e90e4a1",
+        "size": 750,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/3cadbeea9a5ce6fc86fd2632a8e935c14e90e4a1"
+      },
+      {
+        "path": "packaging/unraid/gpu-unlock-firmware",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "baed9189e09c549cd6d6a64ab6c03fc9719142be",
+        "size": 1381,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/baed9189e09c549cd6d6a64ab6c03fc9719142be"
+      },
+      {
+        "path": "packaging/unraid/gpu-unlock.plg",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d0e38db42e48debd2d48042d3b33153d2517c2da",
+        "size": 2539,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/d0e38db42e48debd2d48042d3b33153d2517c2da"
+      },
+      {
+        "path": "tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5c8aa0646f826e158df9de00294de41f394d98b4",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/5c8aa0646f826e158df9de00294de41f394d98b4"
+      },
+      {
+        "path": "tests/docker.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "688bf9864a4a9846d412ed964b7a58a46f0c4192",
+        "size": 1738,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/688bf9864a4a9846d412ed964b7a58a46f0c4192"
+      },
+      {
+        "path": "tests/packaging",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "24b3326cb5d0aefad14ee000b63b25ac2c3d32c0",
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/trees/24b3326cb5d0aefad14ee000b63b25ac2c3d32c0"
+      },
+      {
+        "path": "tests/packaging/install.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "e540b42255bba89512f36b6ca6d6b150a46f687a",
+        "size": 1195,
+        "url": "https://api.github.com/repos/Zagitta/gpu-unlock/git/blobs/e540b42255bba89512f36b6ca6d6b150a46f687a"
+      }
+    ],
+    "truncated": false
+  },
+  "status": "HOLD_STATIC_REVIEW",
+  "coverage": "README via public source and complete tree only; executable source, workflows, dependencies, firmware and install scripts NOT fully read"
+}
