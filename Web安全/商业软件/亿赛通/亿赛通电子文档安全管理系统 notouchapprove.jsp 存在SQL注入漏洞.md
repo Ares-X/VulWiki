@@ -77,7 +77,7 @@ Content-Type: application/x-www-form-urlencoded
 id=1'WAITFOR+DELAY'0%3a0%3a5'--
 ```
 
-![image](../../../.resource/remote/f90422411e35c24d8e9a09016f42993d1ea87e3b640c2a26046d4f60591d8a2d.png)
+![image](../../../.resource/remote/.resource/remote/f90422411e35c24d8e9a09016f42993d1ea87e3b640c2a26046d4f60591d8a2d.png)
 
 **sonrt规则：**
 

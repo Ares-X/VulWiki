@@ -77,7 +77,7 @@ Accept: */*
 
 ```
 
-![image](../../../.resource/remote/f43b655f9e35d3a4a49ddceb76b3fe7f124b6d06e745988d729483142103d4ef.png)
+![image](../../../.resource/remote/.resource/remote/f43b655f9e35d3a4a49ddceb76b3fe7f124b6d06e745988d729483142103d4ef.png)
 
 **sonrt规则：**
 

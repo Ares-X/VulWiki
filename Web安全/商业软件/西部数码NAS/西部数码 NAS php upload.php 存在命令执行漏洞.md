@@ -77,7 +77,7 @@ Cookie: isAdmin=1;username=a" `sleep 5` "
 
 ```
 
-​![image](../../../.resource/remote/8a2aa70ff190c3ce94fbfc53c207b7aa41c4dd36dc4014e2d2aeb7a39d920cde.png)​
+​![image](../../../.resource/remote/.resource/remote/8a2aa70ff190c3ce94fbfc53c207b7aa41c4dd36dc4014e2d2aeb7a39d920cde.png)​
 
 **sonrt规则：**
 

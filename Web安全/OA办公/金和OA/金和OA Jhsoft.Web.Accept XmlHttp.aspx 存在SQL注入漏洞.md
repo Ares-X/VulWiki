@@ -86,7 +86,7 @@ Content-Type: application/xml
 </root>
 ```
 
-​![image](../../../.resource/remote/3d8e77164ceb3381382effb924bdd8def54549d6cf2aeb14fb7cdf925726f4f5.png)​
+​![image](../../../.resource/remote/.resource/remote/3d8e77164ceb3381382effb924bdd8def54549d6cf2aeb14fb7cdf925726f4f5.png)​
 
 **sonrt规则：**
 

@@ -80,7 +80,7 @@ Content-Length: 0
 
 ```
 
-​![image](../../../.resource/remote/14467ba2a87dda5117447da880cf4a211dc2131578e68442ece07b99cdd0ad98.png)​
+​![image](../../../.resource/remote/.resource/remote/14467ba2a87dda5117447da880cf4a211dc2131578e68442ece07b99cdd0ad98.png)​
 
 **sonrt规则：**
 

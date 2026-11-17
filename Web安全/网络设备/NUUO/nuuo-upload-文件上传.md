@@ -82,7 +82,7 @@ Content-Type: application/octet-stream
 ------WebKitFormBoundary7s9KfD2gX8cR4nZ1--
 ```
 
-![image](../../../.resource/remote/4195a1519e69163d67fda479fefc3f36078467b4f2897e83a518b553f558a5ce.png)
+![image](../../../.resource/remote/.resource/remote/4195a1519e69163d67fda479fefc3f36078467b4f2897e83a518b553f558a5ce.png)
 
 **step2**  验证
 
@@ -94,7 +94,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![image](../../../.resource/remote/beb37580389970a4369e3ea1b5f8e9be43e65c68118ab7a19335e7d467c827cf.png)
+![image](../../../.resource/remote/.resource/remote/beb37580389970a4369e3ea1b5f8e9be43e65c68118ab7a19335e7d467c827cf.png)
 
 **sonrt规则：**
 
