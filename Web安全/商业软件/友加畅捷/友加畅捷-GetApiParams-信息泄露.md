@@ -77,7 +77,7 @@ Content-Type: application/x-www-form-urlencoded
 fullName=CnSub.MallApi.ApiControllers.OpenController&methodName=PostUnitAuditQuery
 ```
 
-![image](../../../.resource/remote/.resource/remote/345727423c5cb8bef1471c63447bdd43f9284222390f8129f164f0bab56f4ed6.png)
+![image](../../.resource/remote/345727423c5cb8bef1471c63447bdd43f9284222390f8129f164f0bab56f4ed6.png)
 
 **sonrt规则：**
 

@@ -78,7 +78,7 @@ Connection: close
 
 ```
 
-​![image](../../../.resource/remote/.resource/remote/a85e6a1fa57ad2cac7a0b22d15b2249e515f9557f73bd13411264e1f275db44c.png)​
+​![image](../../.resource/remote/a85e6a1fa57ad2cac7a0b22d15b2249e515f9557f73bd13411264e1f275db44c.png)​
 
 **sonrt规则：**
 

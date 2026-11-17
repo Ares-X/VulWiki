@@ -77,7 +77,7 @@ X-Forwarded-for: 127.0.0.1
 
 ```
 
-​![image](../../../.resource/remote/.resource/remote/929033eec0b0956e3ac41d2095f4c40d59dce8a885f97ee6c67918de1f61aa18.png)​
+​![image](../../.resource/remote/929033eec0b0956e3ac41d2095f4c40d59dce8a885f97ee6c67918de1f61aa18.png)​
 
 **sonrt规则：**
 

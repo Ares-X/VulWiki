@@ -76,7 +76,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-​![image](../../../.resource/remote/.resource/remote/4c53095413a43d02eea8c52910df6b594c6bf8650add105847e088668f4d6ead.png)​
+​![image](../../.resource/remote/4c53095413a43d02eea8c52910df6b594c6bf8650add105847e088668f4d6ead.png)​
 
 **sonrt规则：**
 

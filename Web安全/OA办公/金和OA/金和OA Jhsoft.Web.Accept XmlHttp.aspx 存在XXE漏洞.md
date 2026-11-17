@@ -81,7 +81,7 @@ Content-Type: application/x-www-form-urlencoded
 <root/>
 ```
 
-​![image](../../../.resource/remote/.resource/remote/968a5e812875446773a53ac728e21f6415d4fba3bac49a2ff0488ea8899d1d85.png)​
+​![image](../../.resource/remote/968a5e812875446773a53ac728e21f6415d4fba3bac49a2ff0488ea8899d1d85.png)​
 
 **sonrt规则：**
 

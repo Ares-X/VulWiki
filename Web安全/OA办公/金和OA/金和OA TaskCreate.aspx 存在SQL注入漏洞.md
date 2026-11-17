@@ -77,7 +77,7 @@ Content-Type: application/x-www-form-urlencoded
 taskID='WAITFOR DELAY '0:0:5'--
 ```
 
-​![image](../../../.resource/remote/.resource/remote/6441a47f4bcdfb227d5acbad8e3ad916c4aa64bb9192c5b91814f23b134359a5.png)​
+​![image](../../.resource/remote/6441a47f4bcdfb227d5acbad8e3ad916c4aa64bb9192c5b91814f23b134359a5.png)​
 
 **sonrt规则：**
 
