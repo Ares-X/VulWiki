@@ -626,6 +626,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2017-11882",
+    "paths": [
+      "Web安全/CMS内容/WordPress/一个修了九个月的洞，和一个不会攻击的 PoC：CVE-2026-21509 结构样本解剖.md",
+      "Web安全/其他软件/杂项/CVE-2017-11882 office缓存溢出漏洞复现.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2017-12149",
     "paths": [
       "Web安全/中间件/JBoss/JBoss 5.x 6.x 反序列化漏洞 CVE-2017-12149.md",
@@ -2617,6 +2626,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2021-40444",
+    "paths": [
+      "Web安全/CMS内容/WordPress/一个修了九个月的洞，和一个不会攻击的 PoC：CVE-2026-21509 结构样本解剖.md",
+      "Web安全/桌面软件/Windows/CVE-2021-40444：Microsoft MSHTML RCE.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2021-41277",
     "paths": [
       "Web安全/数据库/Metabase/Metabase 信息泄露漏洞.md",
@@ -3948,6 +3966,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2025-3248",
+    "paths": [
+      "Web安全/AI应用/Langflow/Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248.md",
+      "Web安全/AI应用/MindSearch/MindSearch-RCE复现：AI搜索一句提问直接拿shell （CVE-2026-105135）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2025-39682",
     "paths": [
       "系统安全/Linux/(7.1分) CVE-2025-39682：Linux内核TLS UAF本地提权.md",
@@ -4270,6 +4297,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2026-123158",
+    "paths": [
+      "系统安全/OpenSSH/CVE-2026-123158 · OpenSSH∕musl 密码认证绕过.md",
+      "系统安全/OpenSSH/【已复现】OpenSSH∕musl密码认证绕过漏洞（CVE-2026-123158）.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2026-1281",
     "paths": [
       "Web安全/网络设备/Ivanti/Ivanti EPMM RCE CVE-2026-1340-1281完整分析.md",
@@ -4496,6 +4532,15 @@
     "paths": [
       "Web安全/桌面软件/Webkit/苹果修复了iOS、macOS和Safari的30多个漏洞，其中包括人工智能发现的WebKit漏洞.md",
       "Web安全/桌面软件/macOS/CVE-2026-39868：公开概念验证代码披露 macOS 与 iOS 内核内存损坏漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-40933",
+    "paths": [
+      "Web安全/AI应用/MindSearch/MindSearch-RCE复现：AI搜索一句提问直接拿shell （CVE-2026-105135）.md",
+      "Web安全/其他软件/杂项/【漏洞复现】Flowise 中通过 MCP 适配器实现远程代码执行漏洞（CVE-2026-40933）.md"
     ]
   },
   {
