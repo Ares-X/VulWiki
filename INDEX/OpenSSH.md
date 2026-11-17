@@ -4,9 +4,6 @@
 
 产品按显式元数据分组；未确认产品不从目录自动推断。
 
-## OpenSSH
+## OpenSSH sshd regreSSHion
 
-- [CVE-2026-123158 · OpenSSH∕musl 密码认证绕过](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/OpenSSH/CVE-2026-123158%20%C2%B7%20OpenSSH%E2%88%95musl%20%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87.md) [vulnerability; not-reproduced; needs-review]
-- [OpenSSH sshd authorized_keys restrict关键字绕过漏洞复现(CVE-2026-73283)](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/OpenSSH/OpenSSH%20sshd%20authorized_keys%20restrict%E5%85%B3%E9%94%AE%E5%AD%97%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%28CVE-2026-73283%29.md) [vulnerability; not-reproduced; needs-review]
-- [OpenSSH sshd最小认证延迟绕过漏洞复现(CVE-2026-60001)](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/OpenSSH/OpenSSH%20sshd%E6%9C%80%E5%B0%8F%E8%AE%A4%E8%AF%81%E5%BB%B6%E8%BF%9F%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%28CVE-2026-60001%29.md) [vulnerability; not-reproduced; needs-review]
-- [【已复现】OpenSSH∕musl密码认证绕过漏洞（CVE-2026-123158）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/OpenSSH/%E3%80%90%E5%B7%B2%E5%A4%8D%E7%8E%B0%E3%80%91OpenSSH%E2%88%95musl%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2026-123158%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
+- [OpenSSH regreSSHion CVE-2024-6387 信号处理器竞态远程代码执行](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/OpenSSH/OpenSSH%20regreSSHion%20CVE-2024-6387%20%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E5%99%A8%E7%AB%9E%E6%80%81%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md) [analysis; not-reproduced; needs-review]
