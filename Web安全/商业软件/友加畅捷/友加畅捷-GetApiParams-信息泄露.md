@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "当前已发所有版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/友加畅捷-GetApiParams-信息泄露/友加畅捷-GetApiParams-信息泄露.md"
 ---
 
@@ -77,7 +77,7 @@ Content-Type: application/x-www-form-urlencoded
 fullName=CnSub.MallApi.ApiControllers.OpenController&methodName=PostUnitAuditQuery
 ```
 
-![image](assets/image-20261110004428-dqi9ue6.png)
+![image](../../../.resource/remote/345727423c5cb8bef1471c63447bdd43f9284222390f8129f164f0bab56f4ed6.png)
 
 **sonrt规则：**
 

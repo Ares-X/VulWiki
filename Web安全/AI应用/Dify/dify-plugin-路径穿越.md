@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "dify <= 1.14.1"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/dify-plugin-路径穿越/dify-plugin-路径穿越.md"
 ---
 
@@ -76,7 +76,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-​![image](assets/image-20261103223335-ds8ieiy.png)​
+​![image](../../../.resource/remote/4c53095413a43d02eea8c52910df6b594c6bf8650add105847e088668f4d6ead.png)​
 
 **sonrt规则：**
 

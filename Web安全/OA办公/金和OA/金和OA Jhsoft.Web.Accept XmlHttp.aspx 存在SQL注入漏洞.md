@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "**金和OA C6**"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/金和OA Jhsoft.Web.Accept XmlHttp.aspx 存在SQL注入漏洞/金和OA Jhsoft.Web.Accept XmlHttp.aspx 存在SQL注入漏洞.md"
 ---
 
@@ -86,7 +86,7 @@ Content-Type: application/xml
 </root>
 ```
 
-​![image](assets/image-20261103234811-pobt2a0.png)​
+​![image](../../../.resource/remote/3d8e77164ceb3381382effb924bdd8def54549d6cf2aeb14fb7cdf925726f4f5.png)​
 
 **sonrt规则：**
 

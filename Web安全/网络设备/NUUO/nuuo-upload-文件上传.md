@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "当前已发所有版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "上传/写文件"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/nuuo-upload-文件上传/nuuo-upload-文件上传.md"
 ---
 
@@ -82,7 +82,7 @@ Content-Type: application/octet-stream
 ------WebKitFormBoundary7s9KfD2gX8cR4nZ1--
 ```
 
-![image](assets/image-20261110002125-e3z3ork.png)
+![image](../../../.resource/remote/4195a1519e69163d67fda479fefc3f36078467b4f2897e83a518b553f558a5ce.png)
 
 **step2**  验证
 
@@ -94,7 +94,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![image](assets/image-20261110002201-yixgan9.png)
+![image](../../../.resource/remote/beb37580389970a4369e3ea1b5f8e9be43e65c68118ab7a19335e7d467c827cf.png)
 
 **sonrt规则：**
 

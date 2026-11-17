@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "目前已发布版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "上传/写文件；命令执行类"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/西部数码 NAS php upload.php 存在命令执行漏洞/西部数码 NAS php upload.php 存在命令执行漏洞.md"
 ---
 
@@ -77,7 +77,7 @@ Cookie: isAdmin=1;username=a" `sleep 5` "
 
 ```
 
-​![image](assets/image-20261104000632-d7hmgxb.png)​
+​![image](../../../.resource/remote/8a2aa70ff190c3ce94fbfc53c207b7aa41c4dd36dc4014e2d2aeb7a39d920cde.png)​
 
 **sonrt规则：**
 

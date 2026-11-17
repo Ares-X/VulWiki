@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "当前已发所有版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/和丰多媒体信息发布系统QH.aspx存在任意文件读取漏洞/和丰多媒体信息发布系统QH.aspx存在任意文件读取漏洞.md"
 ---
 
@@ -76,7 +76,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-![image](assets/image-20261110115326-m3tyvlt.png)
+![image](../../../.resource/remote/26ce0196e12fe04238067e37e60fa932ededa21dd146b93a34a1208adc6461aa.png)
 
 **sonrt规则：**
 

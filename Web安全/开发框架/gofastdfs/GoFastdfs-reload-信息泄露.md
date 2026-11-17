@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "目前已发布版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/GoFastdfs-reload-信息泄露/GoFastdfs-reload-信息泄露.md"
 ---
 
@@ -77,7 +77,7 @@ X-Forwarded-for: 127.0.0.1
 
 ```
 
-​![image](assets/image-20261103201933-bw1n6lp.png)​
+​![image](../../../.resource/remote/929033eec0b0956e3ac41d2095f4c40d59dce8a885f97ee6c67918de1f61aa18.png)​
 
 **sonrt规则：**
 

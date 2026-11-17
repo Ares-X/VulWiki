@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "**汉王e脸通综合管理平台 V1.6.x**"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/汉王e脸通综合管理平台 getEmployeeByTeamId.do 存在SQL注入漏洞/汉王e脸通综合管理平台 getEmployeeByTeamId.do 存在SQL注入漏洞.md"
 ---
 
@@ -76,7 +76,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-​![image](assets/image-20261103235707-kj490yg.png)​
+​![image](../../../.resource/remote/231f402a6044cff48c0d40e486b37d3d3fd42a599a5dc64569ca153d00402e5d.png)​
 
 **sonrt规则：**
 

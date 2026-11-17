@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "Metasoft MetaCRM  **≤ 6.4.0** 版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/MetaCRM6客户关系管理系统sql.jsp存在SQL注入漏洞/MetaCRM6客户关系管理系统sql.jsp存在SQL注入漏洞.md"
 ---
 
@@ -77,7 +77,7 @@ Accept: */*
 
 ```
 
-![image](assets/image-20261110111623-8cpao1w.png)
+![image](../../../.resource/remote/f43b655f9e35d3a4a49ddceb76b3fe7f124b6d06e745988d729483142103d4ef.png)
 
 **sonrt规则：**
 

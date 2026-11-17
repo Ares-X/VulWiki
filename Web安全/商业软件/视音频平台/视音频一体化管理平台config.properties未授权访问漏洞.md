@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "**4.0** 版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/视音频一体化管理平台config.properties未授权访问漏洞/视音频一体化管理平台config.properties未授权访问漏洞.md"
 ---
 
@@ -78,7 +78,7 @@ Connection: close
 
 ```
 
-​![image](assets/image-20261104014612-tt2zbed.png)​
+​![image](../../../.resource/remote/a85e6a1fa57ad2cac7a0b22d15b2249e515f9557f73bd13411264e1f275db44c.png)​
 
 **sonrt规则：**
 

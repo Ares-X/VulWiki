@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "目前已发布版本"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/新视窗智慧物业管理系统XMLCall存在SQL注入漏洞/新视窗智慧物业管理系统XMLCall存在SQL注入漏洞.md"
 ---
 
@@ -76,7 +76,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 ```
 
-​![image](assets/image-20261104013359-e2zd0im.png)​
+​![image](../../../.resource/remote/b95be26216b01ce52792c8d2fc60bc382dbce4f6d4fd761259ed984b8983eed7.png)​
 
 **sonrt规则：**
 

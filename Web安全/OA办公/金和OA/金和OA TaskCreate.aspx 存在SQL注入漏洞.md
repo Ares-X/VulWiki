@@ -10,12 +10,12 @@ content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_status: "unknown"
-identifier_role: ""
+identifier_role: "unknown"
 version: "**金和OA C6**"
 prerequisites: "来源未完整说明认证/角色/配置前提；不假定匿名可达；FOFA 指纹已在原文"
 side_effects: "unknown；复现前核对写入、凭据、出网与恢复要求"
 source: "SourByte05/Vulnerability-Wiki-PoC"
-source_status: "archived-verified"
+source_status: "recorded"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/main/2026/11/金和OA TaskCreate.aspx 存在SQL注入漏洞/金和OA TaskCreate.aspx 存在SQL注入漏洞.md"
 ---
 
@@ -77,7 +77,7 @@ Content-Type: application/x-www-form-urlencoded
 taskID='WAITFOR DELAY '0:0:5'--
 ```
 
-​![image](assets/image-20261103233254-mp6ws9a.png)​
+​![image](../../../.resource/remote/6441a47f4bcdfb227d5acbad8e3ad916c4aa64bb9192c5b91814f23b134359a5.png)​
 
 **sonrt规则：**
 
