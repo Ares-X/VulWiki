@@ -3,6 +3,3 @@
 # 待核与隔离文档
 
 原始文档保留用于纠错追溯，不属于有效产品/CVE/指纹检索结果。
-
-- [（CVE-2018-3191）](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/WebLogic/%EF%BC%88CVE-2018-3191%EF%BC%89Weblogic%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [quarantined]
-- [宝塔 Phpmyadmin 未授权访问漏洞](../Web%E5%AE%89%E5%85%A8/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%AE%9D%E5%A1%94%20Phpmyadmin/%E5%AE%9D%E5%A1%94%20Phpmyadmin%20%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md) [quarantined]
